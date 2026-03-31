@@ -29,3 +29,32 @@ Use the scripts in `08_Zotero_Sync` to pull latest citations from Zotero (Group/
 
 ## Maintenance & Clean-up
 Refer to `/09_Python_Scripts` for tools to automatically resolve and uniformly rename incoming loose PDFs.
+
+## Quick Start for Daily Use
+
+If you are using this system as an economist rather than as a developer, the simplest workflow is:
+
+1. Start from `900-Dashboard` to see the current pipeline status, active projects, and recent updates.
+2. When reading a paper, save your structured note under `100-Literature`.
+3. When exploring a new idea, start in `200-Concepts/240-Brainstorming-Lab`.
+4. When an idea becomes serious, move it into `300-Projects`.
+5. Keep data in `400-Data`, methods in `500-Methods`, and outputs in `700-Analysis-Output` or `700-Submissions`.
+
+## Practical Rule
+
+Do not treat every idea as a confirmed result.
+
+- Use `Working Hypotheses` for ideas, expectations, and early interpretations.
+- Use `Verified Findings` only after literature, data, and empirical checks are completed.
+
+## Folder Guide
+
+- `100-Literature`: paper notes, Zotero collections, JEL-based literature organization
+- `200-Concepts`: brainstorming, idea generation, method comparison
+- `300-Projects`: active paper ideas and project-level organization
+- `400-Data`: datasets and update logs
+- `500-Methods`: equations, econometric methods, analysis structure
+- `600-Templates`: ready-to-use templates for notes and analysis
+- `700-Submissions`: paper-by-paper production folders
+- `800-Bibliography`: bibliography outputs
+- `900-Dashboard`: the best place to start each day
