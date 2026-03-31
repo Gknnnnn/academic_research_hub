@@ -1,5 +1,5 @@
 ---
-title: "Küresel Tarımsal Katma Değerde Yapısal Taban Analizi ve 2030 Projeksiyonu"
+title: "KÜRESEL TARIMSAL KATMA DEĞERDE YAPISAL TABAN ANALİZİ VE 2030 PROJEKSİYONU"
 subtitle: "105 Ülke Üzerine Kısaltılmış Kongre Bildirisi Sürümü"
 author:
   - name: "Prof. Dr. Hacı Bayram IŞIK"
@@ -35,23 +35,25 @@ The results imply that agriculture should be interpreted not merely as a shrinki
 
 Tarım sektörü, gıda güvenliği, kırsal istihdam ve sürdürülebilir kalkınma açısından stratejik önemini korumaktadır. Klasik yapısal dönüşüm teorileri, ekonomiler sanayileştikçe tarımın GSYİH içindeki payının azalacağını öngörmektedir (Lewis, 1954; Kuznets, 1955). Ancak güncel küresel koşullar, bu gerilemenin sınırsız olup olmadığı sorusunu yeniden gündeme getirmektedir. Bu çalışma, tarımsal katma değerin modern belirleyicilerini yapay sinir ağları yaklaşımıyla incelemekte ve küresel tarımın belirli bir alt eşikte dengelenip dengelenmediğini test etmektedir.
 
-# LİTERATÜR ÖZETİ
+# GELİŞME
+
+## Kısa Literatür Çerçevesi
 
 Yapay sinir ağları, doğrusal olmayan ve karmaşık ilişkileri tanımlama kapasitesi nedeniyle ekonomi literatüründe giderek daha fazla kullanılmaktadır (Kuan & White, 1994; Chen, 2005). Büyüme, enflasyon ve makroekonomik projeksiyon alanlarında YSA temelli modellerin geleneksel doğrusal modellere göre daha yüksek tahmin performansı sunduğu gösterilmiştir (Aminian vd., 2006; Alamsyah & Permana, 2018; Yurdakul, 2024). Tarım ekonomisi açısından bu yöntemsel dönüşüm özellikle önemlidir; çünkü tarımsal yapı yalnızca emek ve toprakla değil, verimlilik, mekanizasyon ve dış ticaret gibi doğrusal olmayan etkilerle şekillenmektedir. Bu çalışma, küresel tarımı 105 ülkelik tam dengeli panel üzerinden modelleyerek tarımsal daralmanın sıfıra değil, bir yapısal tabana yöneldiğini ileri sürmektedir.
 
-# MATERYAL VE YÖNTEM
+## Veri ve Yöntem
 
 Araştırmada Dünya Bankası Açık Veri ve FAOSTAT kaynaklarından derlenen 2000-2020 dönemi verileri kullanılmıştır. Örneklem, her ülke için 21 yıllık kesintisiz gözlem içeren 105 ülkeden oluşmaktadır. Bağımlı değişken tarım sektörünün GSYİH içindeki payıdır. Bağımsız değişkenler tarımsal istihdam, tarımsal arazi, gübre kullanımı, verim, gıda ihracatı payı ve ekipman varlığıdır. Tüm değişkenler Min-Max yöntemi ile normalize edilmiştir. Tahmin modeli, Resilient Backpropagation algoritmasıyla kurulan 6-7-5-1 mimarili çok katmanlı algılayıcı yapısına dayanmaktadır. Modelin yorumlanabilirliğini artırmak için Olden ve SHAP analizleri, ekonometrik tutarlılığı sınamak için ise panel birim kök, eşbütünleşim, Dumitrescu-Hurlin nedensellik ve System GMM testleri kullanılmıştır.
 
-# BULGULAR
+## Temel Bulgular
 
 Model sonuçları, seçilen altı değişkenin tarımsal katma değeri yüksek doğrulukla açıkladığını göstermektedir. YSA modelinin açıklayıcılık gücü %91,42, ortalama kare hata düzeyi ise 0,0011 olarak hesaplanmıştır. Değişken önem analizleri, gübre ve ekipman değişkenlerinin tarımsal pay üzerinde negatif yönlü baskı oluşturduğunu, verim ve toprak değişkenlerinin ise dengeleyici etki yarattığını ortaya koymaktadır. 2030 projeksiyonları, küresel tarım payının yaklaşık %6,13 düzeyinde bir direnç hattı oluşturduğunu göstermektedir. Yüksek gelirli ülkelerde bu sınır %2,17 düzeyinde, orta gelirli ülkelerde ise iyimser senaryoda %8,74 düzeyindedir. Bu tablo, tarımın uzun dönemde ortadan kaybolan değil, daha düşük ama kalıcı bir payda dengelenen bir sektör olduğunu düşündürmektedir.
 
-# SONUÇ VE POLİTİKA ÇIKARIMLARI
+# SONUÇ
 
 Bu çalışma, küresel tarımsal katma değerin uzun dönemde sıfıra yaklaşmadığını; aksine teknoloji, verimlilik ve ticaret bileşimleri altında bir yapısal tabanda dengelendiğini göstermektedir. Politika açısından temel sonuç, tarım politikalarının yalnızca istihdamı korumaya değil, verimliliği ve teknoloji uyumunu artırmaya odaklanması gerektiğidir. Özellikle orta ve düşük gelirli ülkelerde dış ticaret entegrasyonu ile desteklenen üretkenlik stratejileri, tarımsal payın daha sağlıklı bir dengede korunmasına katkı sağlayabilir. Bu bildirinin temel sınırlılığı, verilerin 2020 yılında sona ermesidir; dergi sürümünde bu çerçeve daha geniş robustness analizleri ve güncel veri uzantılarıyla güçlendirilecektir.
 
-# SEÇİLMİŞ KAYNAKÇA
+# KAYNAKÇA
 
 Alamsyah, A., & Permana, M. F. (2018). Artificial neural network for predicting Indonesian economic growth using macroeconomics indicators.
 
