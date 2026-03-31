@@ -1,0 +1,1493 @@
+---
+type: jel-code-index
+code: Q56
+family: Q
+item_count: 1484
+---
+
+# Q56
+
+- ..| Mimarlık Dergisi |.. (n.d.) | Unknown
+- 10 Reasons to Study in Turkey - Study in Turkey (n.d.) | Unknown
+- 1980 Sonrası Türkiye'de Sosyal Politikalar v e Uygulamalar (n.d.) | Bitmez
+- 1980 Sonrası İstikrar Politikaları Işığında Türkiye Ekonomisinin Trend Analizi Yardımıyla Değerlendirilmesi (n.d.) | Karaçor, Zeynep, Alptekin, Volkan
+- 2014 İnsani Gelişme Raporu | United Nations Development Programme (n.d.) | Unknown
+- 403 Forbidden (n.d.) | Unknown
+- 69% of people get this question wrong (n.d.) | Unknown
+- A brief introduction to bibliometrix (n.d.) | Aria Massimo, Cuccurullo, Corrado
+- AG TFP (n.d.) | Unknown
+- ARDL ve NARDL Eş Bütünleşme Analizi: Adım Adım Eviews Uygulaması (n.d.) | Göksu, Serkan, Balkı, Ali
+- About UNCTAD | UNCTAD (n.d.) | Unknown
+- About the Secretariat | UNFCCC (n.d.) | Unknown
+- Academic Phrase Bank (n.d.) | Unknown
+- AgTFPInternational2020.xlsx (n.d.) | Unknown
+- Agriculture Climate Change Data | Climate Watch (n.d.) | Unknown
+- Application gallery — Climate Data Store Toolbox 1.1.5 documentation (n.d.) | Unknown
+- Aqueduct 4.0 Current and Future Global Maps Data (n.d.) | Unknown
+- Aqueduct Floods (n.d.) | Unknown
+- Atmospheric Soundings (n.d.) | Unknown
+- Azerbaijan Feels Pressure to Join Moscow-Dominated Eurasian Economic Union (n.d.) | Unknown
+- BDT’de Medeni Boşanma, GUAM ve Beyaz Rusya (n.d.) | Unknown
+- BeckerGuides: Tools for Authors: What is the h index? (n.d.) | Sarli, Cathy
+- COP26 İklim Zirvesi’nde varılan anlaşma neler öngörüyor? (n.d.) | Unknown
+- COP26: Together for our planet | United Nations (n.d.) | Unknown
+- CRU CY v4.04 Variables (n.d.) | Unknown
+- Cereal_supply_and_demand_data_jul282.xls (n.d.) | Unknown
+- Climate Analytics — Climate Impact Explorer (n.d.) | Unknown
+- Climate Change - NASA Science (n.d.) | Unknown
+- Climate Change Data (n.d.) | Unknown
+- Climate Change Data | Climate Watch (n.d.) | Unknown
+- Climate Change Impacts on Crop Production (n.d.) | Vizzuality
+- Climate Change Indicators Dashboard (n.d.) | Unknown
+- Climate Change Indicators Dashboard (n.d.) | Unknown
+- Climate Change Threatens Turkey’s Role as a Food Supplier to Europe and the Middle East (n.d.) | Unknown
+- Climate Change: A Wicked Problem (n.d.) | Incropera, Frank P
+- Climate Neutral Now | UNFCCC (n.d.) | Unknown
+- Climate Variability, Predictability and Climate Risks: A European Perspective (n.d.) | Unknown
+- Climate data in R with the raster package (n.d.) | Unknown
+- Climate spirals | Climate Lab Book (n.d.) | Unknown
+- Country summary: Türkiye (n.d.) | Unknown
+- Crop Explorer - Middle East and Turkey (n.d.) | Unknown
+- Data Science and Statistics for Environmental Professionals (n.d.) | Unknown
+- Data download | ASTI (n.d.) | Unknown
+- Data viewer (n.d.) | Unknown
+- Data | WorldCereal (n.d.) | Unknown
+- DataViz - Turkey (n.d.) | Unknown
+- DataViz - Turkey (n.d.) | Unknown
+- Datasets on Climate Change Adaptation | UNDP Climate Change Adaptation (n.d.) | Unknown
+- Definition of Verified Emission Reductions (n.d.) | Unknown
+- Designing and implementing national determined contributions under the Paris Agreement (n.d.) | Guerreiro Teixeira, Rita
+- Documentation - Data (n.d.) | Unknown
+- Download Data // Notre Dame Global Adaptation Initiative // University of Notre Dame (n.d.) | Dame, Marketing Communications: Web // University of Notre
+- Download and Explore Data | Systems Change Lab (n.d.) | Unknown
+- Downloads | Environmental Performance Index (n.d.) | Unknown
+- Düşünce Ustasının El Kitabı: Ya ratıcı ve Stratejik Düşünceye Giriş (n.d.) | de Bono, Edward
+- EAEU: Introduction (n.d.) | Michigan State University
+- EU & Eurasian Economic Union: a Common Chinese Challenge (n.d.) | @ClingendaelInstitute, @Clingendaelorg, @clingendael-institute
+- Ecological Footprint - Global Footprint Network (n.d.) | Unknown
+- Economic Integration (n.d.) | Unknown
+- Economics for People and the Planet (n.d.) | Boyce, James
+- Economist_Impact_GFSI_2022_Model_Sep_2022.xlsm (n.d.) | Unknown
+- Effectivity of STEAM Education in Physics Learning and Impact to Support SDGs (n.d.) | Awwalina, Denissa Putri, Dawana, Irgy Redityo, Rizki, Iqbal Ainur
+- Effects of climate change (n.d.) | Unknown
+- Elif Ömürlü Uyar - Çok İnsan Anlayamaz Eski Mûsikîmizden - YouTube (n.d.) | Unknown
+- Elsevier Developer Portal (n.d.) | Unknown
+- Emergent Macroeconomics: An Agent-Based Approach to Business Fluctuations (n.d.) | Gatti Domenico, Gaffeo Edoardo, Gallegati Mauro
+- Emerging markets’ spreads and global ﬁnancial conditions (n.d.) | Ciarlone, Alessio, Piselli, Paolo, Trebeschi, Giorgio
+- Employment - Employment rate - OECD Data (n.d.) | Unknown
+- English (n.d.) | Unknown
+- Eurasian Economic Union, Belt and Road Initiative 'need to deepen cooperation': China (n.d.) | Unknown
+- European State of the Climate 2022 | Copernicus (n.d.) | Unknown
+- Event: UN Climate Change Conference 2022 (UNFCCC COP 27) | SDG Knowledge Hub | IISD (n.d.) | Hub, IISD's SDG Knowledge
+- Explore Impacts (n.d.) | Unknown
+- FAO CRTB (n.d.) | Unknown
+- FAO Country Profiles:Turkey (n.d.) | Unknown
+- FAO Strategy on Climate Change 2022–2031 (n.d.) | Unknown
+- FAOSTAT (n.d.) | Unknown
+- FAQ: What is the greenhouse effect? (n.d.) | NASA
+- FP Summit: Food+ 2022 (n.d.) | Griffiths, Adam
+- Free Public Data Set (n.d.) | Unknown
+- Free data for smart decisions | Copernicus (n.d.) | Unknown
+- GADAS (n.d.) | Unknown
+- GADAS (n.d.) | Unknown
+- GEOGLAM (n.d.) | Unknown
+- Gelişmiş ve Gelişmekte Olan Ülkelerde Ekonomik Karmaşıklık (Complexity) ile CO2 Emisyonları Arasındaki İlişki: 2003-2022 Yılları İçin Panel Veri Analizi (n.d.) | Durusoy, Ömer Tanju
+- Gezegensel Baskılara Uyarlanmış İnsani Gelişme Endeksi (GİGE (n.d.) | UNDP
+- Global Crop Monitoring (n.d.) | Unknown
+- Global Set of Climate Change  Statistics and Indicators (n.d.) | Unknown
+- Global climate and weather data — WorldClim 1 documentation (n.d.) | Unknown
+- Global temperature trend monitor (n.d.) | Unknown
+- Goal 13 | Department of Economic and Social Affairs (n.d.) | Unknown
+- Goal 7 | Department of Economic and Social Affairs (n.d.) | Unknown
+- Harvest (n.d.) | Unknown
+- Health Care in Turkey | All About Turkey (n.d.) | Unknown
+- History of Turkey (n.d.) | Unknown
+- Home (n.d.) | Unknown
+- Home // Notre Dame Global Adaptation Initiative // University of Notre Dame (n.d.) | Dame, Marketing Communications: Web // University of Notre
+- Homo Economicus vs. Homo Reciprocans (n.d.) | Unknown
+- Human Development Report 1998 | Human Development Reports (n.d.) | Unknown
+- IGC (n.d.) | Unknown
+- IMF’s Work on Encouraging International Policy Cooperation (n.d.) | Klein, Michael
+- IPCC — Intergovernmental Panel on Climate Change (n.d.) | Unknown
+- Identities and Equations in Macroeconomics (n.d.) | Abraham, Dr Siby
+- Industry employment (n.d.) | Unknown
+- Informing scalability for social innovation: Evidence from a recycling initiative (n.d.) | Gibovic, Denisa, Bikfalvi, Andrea
+- International Grains Council (n.d.) | Unknown
+- Investigating the subsistence of Environmental Kuznets Curve in the midst of economic development, population, and energy consumption in Bangladesh: imminent of ARDL model | Elsevier Enhanced Reader (n.d.) | Unknown
+- Key Highlights: Country Climate and Development Report for Türkiye (n.d.) | Unknown
+- Key Highlights: Country Climate and Development Report for Türkiye (n.d.) | Unknown
+- KeyWords Plus generation, creation, and changes (n.d.) | Unknown
+- Keynote (n.d.) | Unknown
+- Landsat Missions - Data | U.S. Geological Survey (n.d.) | Unknown
+- Landsat Missions - Data | U.S. Geological Survey (n.d.) | Unknown
+- Language (n.d.) | Unknown
+- Language (n.d.) | Unknown
+- Leon Clarke (n.d.) | Unknown
+- Levels of Economic Integration | The Geography of Transport Systems (n.d.) | Unknown
+- LibGuides: Systematic Reviews: What is a systematic review? (n.d.) | Booth, Debbie
+- LibGuides: Systematic Reviews: What is a systematic review? (n.d.) | Librarian, Health Sciences Faculty
+- Library Genesis (n.d.) | Unknown
+- Living National Treasures: Turkey (n.d.) | Unknown
+- Macroeconomics- Everything You Need to Know - YouTube (n.d.) | Unknown
+- Mathematics for Economists - YouTube (n.d.) | Unknown
+- Mean Temperature — English (n.d.) | Unknown
+- Mehmet Songur (@mehmetsongur_) / Twitter (n.d.) | Unknown
+- Meteoroloji Lab. (n.d.) | Unknown
+- Museum Pass Türkiye (n.d.) | Unknown
+- Myth 10: ‘The Eurasian Economic Union is a genuine and meaningful counterpart to the EU’ (n.d.) | Wolczuk, Katarina
+- Myth 13: ‘Liberal market reform in the 1990s was bad for Russia’ (n.d.) | Hanson, Philip
+- Nationally Determined Contributions (NDCs) | UNFCCC (n.d.) | Unknown
+- Natura non facit saltum (n.d.) | Unknown
+- News - The Russian Government (n.d.) | Unknown
+- No Title (n.d.) | Care, Elder
+- No 主観的健康感を中心とした在宅高齢者における 健康関連指標に関する共分散構造分析Title (n.d.) | Sataloff, Robert T, Johns, Michael M, Kost, Karen M
+- OECD Environment Director (n.d.) | Lacy, Rodolfo
+- Open Data Platform (n.d.) | Ecological footprint network
+- Open Data Platform (n.d.) | Unknown
+- Open Knowledge Repository (n.d.) | Unknown
+- Outliers detection in R (n.d.) | Unknown
+- Overview (n.d.) | Unknown
+- POWER | Data Access Viewer (n.d.) | Unknown
+- Paris Anlaşması - İklim Değişikliği Başkanlığı (n.d.) | iklim.gov.tr
+- Policies & action (n.d.) | Unknown
+- Political Map of Turkey (n.d.) | nationsonline.org, klaus kästle-
+- Posta - Mehmet Gökhan Özdemir-Akademik - Outlook (n.d.) | Unknown
+- Posta - Mehmet Gökhan Özdemir-Akademik - Outlook (n.d.) | Unknown
+- Publications (n.d.) | Unknown
+- R Markdown: The Definitive Guide (n.d.) | Grolemund, Yihui Xie, J. J. Allaire, Garrett
+- R'a excel dosyası ve paket yükleme (n.d.) | Unknown
+- Regional Economic Integration - an overview | ScienceDirect Topics (n.d.) | Unknown
+- Regional Integration (n.d.) | Unknown
+- Report: How can research help the world hit net zero by 2050? (n.d.) | Elsevier
+- Republic of Türkiye (n.d.) | Unknown
+- Resource Watch (n.d.) | Vizzuality
+- Rice (Turkey) (n.d.) | Unknown
+- Rome Declaration and Plan of Action (n.d.) | Unknown
+- Russia to boost trade, economic ties with Asian countries amid sanctions, says ministry (n.d.) | Unknown
+- SDG Country Profiles (n.d.) | Unknown
+- Search results (n.d.) | Unknown
+- Sectoral Impacts Around the World (Part I) (n.d.) | Unknown
+- Selçuk Üniversitesi (n.d.) | Yazılım, A. E.
+- Sign in to terrascope (n.d.) | Unknown
+- Solid Waste Management (n.d.) | Unknown
+- SpatialDashboard (n.d.) | Unknown
+- Statistical Annex | READ online (n.d.) | Unknown
+- Strategic Intelligence | World Economic Forum (n.d.) | Forum, World Economic
+- Su Ayak İzi Ve Sanal Su | Akademik Sunum (n.d.) | Unknown
+- Su, İklim Değişikliği ve Ortak Geleceğimiz (n.d.) | Su Enstitüsü
+- Submission guidelines | Economic Change and Restructuring | Springer Nature Link (n.d.) | Unknown
+- Submission guidelines | Economic Change and Restructuring | Springer Nature Link (n.d.) | Unknown
+- Supersymmetry (n.d.) | Unknown
+- Sustainability and Innovation (n.d.) | Horbach, Jens, Feess, Eberhard, Hemmelskamp, Jens
+- T O B B - Ticaret Borsaları Ürün Fiyat Bilgileri (n.d.) | Unknown
+- TARIM SAYIMI İÇİN İLK ADIM ATILDI TARIM VE ORMAN BAKANLIĞI İLE TÜİK ARASINDA GENEL TARIM SAYIMI YAPILMASINA İLİŞKİN PROTOKOL İMZALANDI (n.d.) | Unknown
+- TARIMSAL EKONOMİ ARAŞTIRMA ENSTİTÜSÜ (n.d.) | Çel, S Ahmet, Anaç, Hakan
+- TARIMSAL EKONOMİ ARAŞTIRMA ENSTİTÜSÜ (n.d.) | Çel, S Ahmet, Anaç, Hakan
+- THE 17 GOALS | Sustainable Development (n.d.) | Unknown
+- TMO - Toprak Mahsulleri Ofisi (n.d.) | Unknown
+- TURKSTAT Corporate (n.d.) | Unknown
+- TURKSTAT: Greenhouse Gas Emissions Statistics, 1990-2019 (n.d.) | Unknown
+- Tarımsal Ekonomi Araştırma Enstitüsü +90 312 287 58 07-33 (n.d.) | Unknown
+- Temperatures (n.d.) | Unknown
+- Tez Yazım Klavuzu (n.d.) | Unknown
+- The Big Three in Economics ADAM SMITH K A R L M A R X (n.d.) | Unknown
+- The Doha Climate Gateway | UNFCCC (n.d.) | Unknown
+- The Law and Economics of Marriage and Divorce (n.d.) | Dnes, Antony W, Rowthorn, Robert
+- The New Wave of Defensive Trade Policy Measures in the European Union: Design, Structure, and Trade Effects | (n.d.) | Unknown
+- The overvaluation of Renminbi undervaluation (n.d.) | Cheung, Yin-Wong, Chinn, Menzie D, Fujii, Eiji
+- The rise of altmetrics: Shaping new ways of evaluating research | Labs Explorer (n.d.) | Unknown
+- Tools | Climate Change Resource Center (n.d.) | Unknown
+- Topic: Food inflation (n.d.) | Statista
+- Towards a Greener and More Resilient Türkiye (n.d.) | Unknown
+- Traditions You Should Know About Turkish Culture | MELARES (n.d.) | Unknown
+- Treaty on Eurasian Economic Union (2014) | International Investment Agreements Navigator | UNCTAD Investment Policy Hub (n.d.) | Unknown
+- Turkey (n.d.) | Unknown
+- Turkey Demographics 2020 (Population, Age, Sex, Trends) - Worldometer (n.d.) | Unknown
+- Turkey Economic Monitor: Sailing Against the Tide (n.d.) | Unknown
+- Turkey Economy: Population, GDP, Inflation, Business, Trade, FDI, Corruption (n.d.) | Unknown
+- Turkey Wheat Area, Yield and Production (n.d.) | Unknown
+- Turkey | Environmental Performance Index (n.d.) | Unknown
+- Turkey's Sustainable Development Goals: 2nd VNR 2019: Strong Grounds Towards Common Goals (n.d.) | Unknown
+- Turkey. 2022 National Inventory Report (NIR) | UNFCCC (n.d.) | Unknown
+- Turkish Architecture | All About Turkey (n.d.) | Unknown
+- Turkish Arts | All About Turkey (n.d.) | Unknown
+- Turkish language | Alphabet, Basics, & Origins | Britannica (n.d.) | Unknown
+- TÜRKİYE' DE GELİR DAĞILIMI (n.d.) | Acar, İlhan
+- TÜRKİYE'NİN İLK İKLİM KANUNU GELİYOR (n.d.) | iklim.gov.tr
+- TÜRKİYE’NİN KARBONSUZLAŞMA YOL HARİTASI: (n.d.) | Şahin, Ümit, Tör, Osman Bülent, Kat, Bora
+- TÜİK - Veri Portalı (n.d.) | Unknown
+- TÜİK Kurumsal (n.d.) | Unknown
+- Tüketimin Karşı Devrimi: Türkiye'de 1980 Sonrası Uygulanan İktisat Politikalarının Toplumsal Sonuçlarına Eleştirel Bir Bakış (n.d.) | Öcal Tella, Derya
+- Türkiye Climate Change Data | Emissions and Policies | Climate Watch (n.d.) | Unknown
+- Türkiye Climate Change Data | Emissions and Policies | Climate Watch (n.d.) | Unknown
+- Türkiye Climate Resilience Policy Indicator – Analysis (n.d.) | Unknown
+- Türkiye Economic Snapshot - OECD (n.d.) | Unknown
+- Türkiye Ziraat Odaları Birliği (n.d.) | Unknown
+- Türkiye | United Nations Development Programme (n.d.) | Unknown
+- Türkiye — English (n.d.) | Unknown
+- Türkiye'de Dışa Açıklık ve Ekonomik Büyümenin Çevre Kirliliği Üzerine Etkisi: Fourier ADL Yaklaşımından Kanıtlar (n.d.) | Yurtkuran, Süleyman, Pata, Ugur Korkut
+- Türkiye'de aşırı hava olayları 2023'te rekor kırdı (n.d.) | Bloomberght
+- Türkiye'nin Karbonsuzlaşma Yol Haritası: 2050'de Net Sıfır (n.d.) | Tör, Osman Bülent, Kat, Bora, Teimourzadeh, Saeed
+- Türkiye'nin Onayladığı ILO Sözleşmeleri (ILO-Ankara) (n.d.) | Unknown
+- UN Climate Change Conference (COP26) at the SEC – Glasgow 2021 (n.d.) | Unknown
+- UNDP 2018 teknik not (n.d.) | Unknown
+- UNSD — Environment Statistics (n.d.) | Unknown
+- Unemployment rate (n.d.) | Unknown
+- United Nations online platform for voluntary cancellation of certified emission reductions (CERs). Why cancel certified emission reductions (CERs)? (n.d.) | Unknown
+- Universal Declaration of Human Rights (n.d.) | United Nations
+- WASDE Report (n.d.) | Unknown
+- WILEY SERIES IN PROBABILITY AND STATISTICS (n.d.) | Shewhart, Walter A, Wilks, Samuel S, Balding, David J
+- WMO Station Explorer (USDA-FAS-GMA-IPAD) (n.d.) | Unknown
+- WTO | Preferential Trade Arrangements (n.d.) | Unknown
+- WTO | Regional trade agreements (n.d.) | Unknown
+- What are greenhouse gases? | GHGs explained | National Grid Group (n.d.) | Unknown
+- What is the Right to Food? | Right to food (n.d.) | Unknown
+- Wheat Landraces in Farmers' Fields in Turkey: National Survey, Collection and Conservation, 2009-2014 (n.d.) | Unknown
+- Wilberforce Nuwagira (n.d.) | Unknown
+- Workbook: Proteus_index_2017_NC (n.d.) | Unknown
+- World Bank Climate Change Knowledge Portal (n.d.) | Unknown
+- World Bank Climate Change Knowledge Portal (n.d.) | Unknown
+- World Cereals Price Index - July 2022 Data - 1990-2021 Historical - August Forecast (n.d.) | Unknown
+- World Development Indicators | DataBank (n.d.) | Unknown
+- World Food Price Index - February 2023 Data - 1990-2022 Historical - March Forecast (n.d.) | Unknown
+- World Greenhouse Gas Emissions: 2020 (n.d.) | Unknown
+- World Greenhouse Gas Emissions: 2020 (n.d.) | Unknown
+- World economy set to lose up to 18% GDP from climate change if no action taken, reveals Swiss Re Institute's stress-test analysis | Swiss Re (n.d.) | Unknown
+- World | Total including LUCF | Greenhouse Gas (GHG) Emissions | Climate Watch (n.d.) | climatewatchdata.org
+- WorldCereal | Statistics (n.d.) | Unknown
+- WorldCover Viewer (n.d.) | Unknown
+- Yönetim ve Ekonomi Dergisi » Submission » Türkiye’de İşsizliğin Nedenleri: İstihdam Politikaları Üzerine Bir Değerlendirme (n.d.) | Unknown
+- https://mail.google.com/mail/u/0/#spam/FMfcgzQXKNJmwSxkLTbBMNXXdtZnBrhQ (n.d.) | Unknown
+- https://sbb.gov.tr/wp-content/uploads/2018/11/T%C3%BCrkiye_Ekonomisinde_Sermaye-Birikimi_Buyume_ve_Verimlilik_1972-2003.pdf (n.d.) | Unknown
+- https://www.inovasyon.org/images/makaleler/pdf/ET.Verimlilik.pdf (n.d.) | Unknown
+- | Greenhouse Gas (GHG) Emissions | Climate Watch (n.d.) | Unknown
+- İdeoloji Üzerine: Eleştirel İdeoloji Analizleri (n.d.) | Mc Donough, Roisin, Bluhm, William, Gustafsson, Bo
+- İklim değişikliği gölgesinde su krizi: Türkiye'de kuraklık riski nasıl önlenebilir? (n.d.) | Maden, Tuğba Evrim, Anadolu Ajansı
+- İstihdam (n.d.) | Unknown
+- Евразийский экономический союз (ЕАЭС) (n.d.) | Unknown
+- Human Development Report 1990 ('199) | United Nations
+- Human Development Report 1994 ('199) | United Nations
+- Human Development Report 1998 ('199) | United Nations
+- Human Development Report 2005 ('200) | United Nations
+- Human Development Report 2010 ('201) | United Nations Development Programme
+- Bibliographic coupling between scientific papers (01/1) | Kessler, M. M.
+- A GIS-based multi-criteria decision-making method for the selection of potential municipal solid waste disposal sites in Mersin, Turkey (01/2) | Bilgilioglu, Suleyman Sefa, Gezgin, Cemil, Orhan, Osman
+- Addressing sustainable development and climate change together using sustainomics (01/2) | Munasinghe, Mohan
+- Circular Economy: The Concept and its Limitations (01/2) | Korhonen, Jouni, Honkasalo, Antero, Seppälä, Jyri
+- Climate change impact and adaptation for wheat protein (01/2) | Asseng, Senthold, Martre, Pierre, Maiorano, Andrea
+- Dynamic Metafrontier Malmquist–Luenberger Productivity Index in Network DEA: An Application to Banking Data (01/2) | Bansal, Pooja, Mehra, Aparna, Kumar, Sunil
+- Evaluation of GIS-based multi-criteria decision-making methods for sanitary landfill site selection: the case of Sivas city, Turkey (01/2) | Karakuş, Can Bülent, Demiroğlu, Demet, Çoban, Ayşen
+- Food Rights, Food Frugality, and Climate Change (01/2) | Vincentnathan, Lynn
+- Food loss and waste management in Turkey (01/2) | Salihoglu, Guray, Salihoglu, Nezih Kamil, Ucaroglu, Selnur
+- Forest, agriculture, renewable energy, and CO2 emission (01/2) | Waheed, Rida, Chang, Dongfeng, Sarwar, Suleman
+- General diagnostic tests for cross-sectional dependence in panels (01/2) | Pesaran, M. Hashem
+- Landfill siting for municipal solid waste using remote sensing and geographic information system integrated analytic hierarchy process and simple additive weighting methods from the point of view of a fast-growing metropolitan area in GAP area of Turkey (01/2) | Karabulut, Abdullah İzzeddin, Yazici-Karabulut, Benan, Derin, Perihan
+- Linkages between climate change and sustainable development (01/2) | Beg, Noreen, Morlot, Jan Corfee, Davidson, Ogunlade
+- Mathematical Optimization and Economic Theory (01/2) | Intriligator, Michael D.
+- Municipal solid waste management with cost minimization and emission control objectives: A case study of Ankara (01/2) | Mohsenizadeh, Melika, Tural, Mustafa Kemal, Kentel, Elçin
+- On the meaningful and non-meaningful use of reference sets in bibliometrics (01/2) | Bornmann, Lutz, Leydesdorff, Loet
+- Optimal Climate Change: Economics and Climate Science Policy Histories (from Heuristic to Normative) (01/2) | Randalls, Samuel
+- Renewable and non-renewable energy consumption, economic complexity, CO2 emissions, and ecological footprint in the USA: testing the EKC hypothesis with a structural break (01/2) | Pata, Ugur Korkut
+- Renewable, non-renewable energy consumption, economic growth, trade openness and ecological footprint: Evidence from organisation for economic Co-operation and development countries (01/2) | Destek, Mehmet Akif, Sinha, Avik
+- Rights-based approaches to addressing food poverty and food insecurity in Ireland and UK (01/2) | Dowler, Elizabeth A., O’Connor, Deirdre
+- Soil organic matter and biological soil quality indicators after 21 years of organic and conventional farming (01/2) | Fließbach, Andreas, Oberholzer, Hans-Rudolf, Gunst, Lucie
+- Solid waste disposal methodology selection using multi-criteria decision making methods and an application in Turkey (01/2) | Arıkan, Emre, Şimşit-Kalender, Zeynep Tuğçe, Vayvay, Özalp
+- Solid waste management challenges for cities in developing countries (01/2) | Guerrero, Lilliana Abarca, Maas, Ger, Hogland, William
+- Storage and sequestration potential of topsoil organic carbon in China's paddy soils: TOPSOIL ORGANIC CARBON IN CHINA'S PADDY SOILS (01/2) | Pan, Genxing, Li, Lianqing, Wu, Laosheng
+- Sustainable design modifications municipal solid waste management network and better optimization for risk reduction analyses (01/2) | Mamashli, Zakie, Javadian, Nikbakhsh
+- Sustainable development and climate change: lessons from country studies (01/2) | Halsnæs, Kirsten, Shukla, P. R., Garg, Amit
+- The Economics-Environment Relationship: Neoclassical, Institutional, and Marxist Approaches (01/2) | Adaman, Fikret, Özkaynak, Begüm
+- Towards an equitable global climate change regime: compatibility with Article 2 of the Climate Change Convention and the link with sustainable development (01/2) | Metz, Bert, Berk, Marcel, den Elzen, Michel
+- Twenty years of research on performance management in business and public administration domains (01/2) | Cuccurullo, Corrado, Aria, Massimo, Sarto, Fabrizia
+- Value-based adaptation to climate change and divergent developmentalisms in Turkish agriculture (01/2) | Turhan, Ethemcan
+- Bibliometrics/Theory, Practice and Problems (02/1) | Narin, Francis, Olivastro, Dominic, Stevens, Kimberly A.
+- Irrational Behavior and Economic Theory (02/1) | Becker, Gary S.
+- A heuristic approach to author name disambiguation in bibliometrics databases for large-scale research assessments (02/2) | D'Angelo, Ciriaco Andrea, Giuffrida, Cristiano, Abramo, Giovanni
+- A review on circular economy: the expected transition to a balanced interplay of environmental and economic systems (02/2) | Ghisellini, Patrizia, Cialani, Catia, Ulgiati, Sergio
+- An endeavor to achieve sustainable development goals through floral waste management: A short review (02/2) | Srivastav, Arun Lal, Kumar, Ashok
+- Assessing environmentally sensitive productivity growth: incorporating externalities and heterogeneity into water sector evaluations (02/2) | Ananda, Jayanath, Oh, Dong-hyun
+- Assessing the effect of climate change and financial development on agricultural production in ASEAN-4: the role of renewable energy, institutional quality, and human capital as moderators (02/2) | Chandio, Abbas Ali, Shah, Muhammad Ibrahim, Sethi, Narayan
+- Assessing the transition of municipal solid waste management by combining material flow analysis and life cycle assessment (02/2) | Wang, Dan, Tang, Yu-Ting, Sun, Yong
+- Avoiding self-organized extinction: Toward a co-evolutionary economics of sustainability (02/2) | Gowdy, John
+- Do Emission Trading Systems, Green Technology, and Environmental Governance Matter for Environmental Quality? Evidence from the European Union (02/2) | Radulescu, Magdalena, Hossain, Mohammad Razib, Alofaysan, Hind
+- Does financial inclusion, renewable and non-renewable energy utilization accelerate ecological footprints and economic growth? Fresh evidence from 15 highest emitting countries (02/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad, Kousar, Rakhshanda
+- Dynamic association between ICT, renewable energy, economic complexity and ecological footprint: Is there any difference between E-7 (developing) and G-7 (developed) countries? (02/2) | Huang, Yongming, Haseeb, Mohammad, Usman, Muhammad
+- ECONOMICS AND THE MODELING OF WATER RESOURCES AND POLICIES: ECONOMICS AND THE MODELING OF WATER (02/2) | Booker, James F., Howitt, Richard E., Michelsen, Ari M.
+- Exploring Economic Green Complexity in the Load Capacity of G20 Countries: Do Environmental Policy and Public Debt Matter? (02/2) | Zeraibi, Ayoub, Zhao, Xin, Liu, Ye
+- Extensions of the Pesaran, Shin and Smith (2001) bounds testing procedure (02/2) | Bertsatos, Georgios, Sakellaris, Plutarchos, Tsionas, Mike G.
+- Food access in crisis: Food security and COVID-19 (02/2) | O'Hara, Sabine, Toussaint, Etienne C.
+- How economic growth, renewable electricity and natural resources contribute to CO2 emissions? (02/2) | Balsalobre-Lorente, Daniel, Shahbaz, Muhammad, Roubaud, David
+- Investigation of environmental Kuznets curve for ecological footprint: The role of energy and financial development (02/2) | Destek, Mehmet Akif, Sarkodie, Samuel Asumadu
+- Modeling the impact of climatic and non-climatic factors on cereal production: evidence from Indian agricultural sector (02/2) | Chandio, Abbas Ali, Jiang, Yuansheg, Amin, Asad
+- Monetary policy and food inflation in South Africa: A quantile regression analysis (02/2) | Iddrisu, Abdul-Aziz, Alagidede, Imhotep Paul
+- Onset of spring starting earlier across the Northern Hemisphere: ONSET OF NH SPRING STARTING EARLIER (02/2) | Schwartz, Mark D., Ahas, Rein, Aasa, Anto
+- Quantitative analysis of nonlinear climate change impact on drought based on the standardized precipitation and evapotranspiration index (02/2) | Zhao, Ruxin, Wang, Huixiao, Chen, Ji
+- Redefining innovation — eco-innovation research and the contribution from ecological economics (02/2) | Rennings, Klaus
+- Role of environmental degradation and energy use for agricultural economic growth: Sustainable implications based on ARDL estimation (02/2) | Wang, Hongwei
+- Sustainable maize production and climatic change in Nepal: robust role of climatic and non-climatic factors in the long-run and short-run (02/2) | Chandio, Abbas Ali, Akram, Waqar, Bashir, Uzma
+- Terrestrial biosphere models need better representation of vegetation phenology: results from the North American Carbon Program Site Synthesis (02/2) | Richardson, Andrew D., Anderson, Ryan S., Arain, M. Altaf
+- The impact of temperature variability on wheat yields: Impact of Temperature Variablility on Wheat Yields (02/2) | Asseng, Senthold, Foster, Ian, Turner, Neil C.
+- Waste to energy technologies for municipal solid waste management in Gaziantep (02/2) | Tozlu, Alperen, Özahi, Emrah, Abuşoğlu, Ayşegül
+- What should we call the Levant mole? Unravelling the systematics and demography of Talpa levantis Thomas, 1906 sensu lato (Mammalia: Talpidae) (02/2) | Demırtaş, Sadık, Silsüpür, Metin, Searle, Jeremy B.
+- Climate and global change in relation to sustainable development: The challenge to science (03/1) | Obasi, G. O. P.
+- Efficient Inference in a Random Coefficient Regression Model (03/1) | Swamy, P. A. V. B.
+- From translations to problematic networks: An introduction to co-word analysis (03/1) | Callon, Michel, Courtial, Jean-Pierre, Turner, William A.
+- Juan Martinez-Alier. Ecological Economics. Basil Blackwell, Oxford, 1987. Pp. ix + 286. ISBN 0-631-15739-5. £29.50. (03/1) | Falk, Jim
+- Property Rules, Liability Rules, and Environmental Economics (03/1) | Bromley, Daniel W.
+- Resource Economics: An Economic Approach to Natural Resources and Environmental Policy (03/1) | Libby, Lawrence W.
+- Rethinking Environmental Economics: Missing Links between Economic Theory and Environmental Policy (03/1) | Dietz, Frank J., van der Straaten, Jan
+- Teaching the Economics of the Environment (03/1) | Schug, Mark C.
+- The Economics of Environmental Quality. (03/1) | Lecomber, Richard, Mills, Edwin S.
+- Welfare economics and environmental problems (03/1) | Torres, Santiago A., Pearce, David W.
+- A tale of three paradigms: Realising the revolutionary potential of ecological economics (03/2) | Spash, Clive L.
+- A tale of three paradigms: Realising the revolutionary potential of ecological economics (03/2) | Spash, Clive L.
+- Climate change and agriculture in the Sudan: Impact pathways beyond changes in mean rainfall and temperature (03/2) | Siddig, Khalid, Stepanyan, Davit, Wiebelt, Manfred
+- Desiccation and crack behavior of modified waste materials–clay mixture as landfill liner: a systematic review (03/2) | Puspita, A. S., Budihardjo, M. A., Samadikun, B. P.
+- Determinants of the ecological footprint: Role of renewable energy, natural resources, and urbanization (03/2) | Danish, Ulucak, Recep, Khan, Salah Ud-Din
+- Discounting and divergence of opinion (03/2) | Jouini, Elyès, Marin, Jean-Michel, Napp, Clotilde
+- Does globalization matter for ecological footprint in Turkey? Evidence from dual adjustment approach (03/2) | Kirikkaleli, Dervis, Adebayo, Tomiwa Sunday, Khan, Zeeshan
+- Environmental economics and policy (03/2) | Willis, Ken, Ozdemiroglu, Ece, Campbell, Danny
+- Eurasian Economic Union: Current state and preliminary results (03/2) | Vinokurov, Evgeny
+- GHG Targets as Insurance Against Catastrophic Climate Damages (03/2) | Weitzman, Martin L.
+- Geomorphometric soil erosion modelling in Sub-Saharan Africa: A systematic review of model applicability, validation gaps, and policy integration (03/2) | Boroko, Koketso Carl, Mashao, Frederick Mokibelo, Thamaga, Kgabo Humphrey
+- Geomorphometric soil erosion modelling in Sub-Saharan Africa: A systematic review of model applicability, validation gaps, and policy integration (03/2) | Boroko, Koketso Carl, Mashao, Frederick Mokibelo, Thamaga, Kgabo Humphrey
+- How to analyze percentile citation impact data meaningfully in bibliometrics: The statistical analysis of distributions, percentile rank classes, and top-cited papers (03/2) | Bornmann, Lutz
+- Navigating the Future: AI, Global Supply Chains, and ESG for Sustainable Development (03/2) | Tiwari, Sunil, Tzeremes, Panayiotis, Kazemzadeh, Emad
+- Navigating the Future: AI, Global Supply Chains, and ESG for Sustainable Development (03/2) | Tiwari, Sunil, Tzeremes, Panayiotis, Kazemzadeh, Emad
+- Progress in carbon capture technologies (03/2) | Wilberforce, Tabbi, Olabi, A.G., Sayed, Enas Taha
+- Review of LCA studies of solid waste management systems – Part I: Lessons learned and perspectives (03/2) | Laurent, Alexis, Bakas, Ioannis, Clavreul, Julie
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- Road transportation green productivity and its threshold effects from environmental regulation (03/2) | Xu, Hao, Wang, Yeqing, Gao, Chenchen
+- The interplay between agriculture, greenhouse gases, and climate change in Sub-Saharan Africa (03/2) | Omotoso, Abeeb Babatunde, Omotayo, Abiodun Olusola
+- The interplay between agriculture, greenhouse gases, and climate change in Sub-Saharan Africa (03/2) | Omotoso, Abeeb Babatunde, Omotayo, Abiodun Olusola
+- The need for ecological ethics in a new ecological economics (03/2) | Washington, Haydn, Maloney, Michelle
+- The role of renewable energy and agriculture in reducing CO 2 emissions: Evidence for North Africa countries (03/2) | Ben Jebli, Mehdi, Ben Youssef, Slim
+- Understanding farmers’ intention and willingness to install renewable energy technology: A solution to reduce the environmental emissions of agriculture (03/2) | Elahi, Ehsan, Khalid, Zainab, Zhang, Zhixin
+- Environment and Development: Theory and International Evidence (04/1) | Antle, John M., Heidebrink, Gregg
+- Towards an ecological theory of unequal exchange: articulating world system theory and ecological economics (04/1) | Hornborg, Alf
+- A New Data Set of Educational Attainment in the World, 1950-2010 (04/2) | Barro, Robert, Lee, Jong-Wha
+- Adaptation to Climate Change in Rainfed Agriculture in the Global South: Soil Biodiversity as Natural Insurance (04/2) | Sidibé, Yoro, Foudi, Sébastien, Pascual, Unai
+- Crop yield response to climate change varies with cropping intensity (04/2) | Challinor, Andrew J., Parkes, Ben, Ramirez-Villegas, Julian
+- Drought impact on forest growth and mortality in the southeast USA: an analysis using Forest Health and Monitoring data (04/2) | Klos, Ryan J., Wang, G. Geoff, Bauerle, William L.
+- Ecological Macroeconomic Models: Assessing Current Developments (04/2) | Hardt, Lukas, O'Neill, Daniel W.
+- Economics of climate change adaptation at the local scale under conditions of uncertainty and resource constraints: the case of Durban, South Africa (04/2) | Cartwright, Anton, Blignaut, James, De Wit, Martin
+- Elevated <span style="font-variant:small-caps;">CO</span> <sub>2</sub> induces substantial and persistent declines in forage quality irrespective of warming in mixedgrass prairie (04/2) | Augustine, David J., Blumenthal, Dana M., Springer, Tim L.
+- Empirical Analysis of Farmers' Drought Risk Perception: Objective Factors, Personal Circumstances, and Social Influence: Empirical Analysis of Farmers' Drought Risk Perception (04/2) | Duinen, Rianne van, Filatova, Tatiana, Geurts, Peter
+- Empirical analysis of climate change factors affecting cereal yield: evidence from Turkey (04/2) | Chandio, Abbas Ali, Ozturk, Ilhan, Akram, Waqar
+- Green supply chain management: A review and bibliometric analysis (04/2) | Fahimnia, Behnam, Sarkis, Joseph, Davarzani, Hoda
+- Human and biophysical influences on fire occurrence in the United States (04/2) | Hawbaker, Todd J., Radeloff, Volker C., Stewart, Susan I.
+- Industrial green total factor productivity based on an MML index in the Yangtze River Economic Belt (04/2) | Zhong, Shen, Wang, Lang, Yao, Fengge
+- Measurement of green total factor productivity on Chinese pig breeding: from the perspective of regional differences (04/2) | Zhong, Shen, Li, Junwei, Zhang, Dehua
+- Methods for the generation of normalized citation impact scores in bibliometrics: Which method best reflects the judgements of experts? (04/2) | Bornmann, Lutz, Marx, Werner
+- Municipal solid waste management via multi-criteria decision making methods: A case study in Istanbul, Turkey (04/2) | Coban, Asli, Ertis, Irem Firtina, Cavdaroglu, Nur Ayvaz
+- Oil price shocks, stock market returns, and volatility spillovers: a bibliometric analysis and its implications (04/2) | Bashir, Muhammad Farhan
+- Power source roadmaps using bibliometrics and database tomography (04/2) | Kostoff, R, Tshiteya, R, Pfeil, K
+- Renewable energy consumption in economic sectors in the EU-27. The impact on economics, environment and conventional energy sources. A 20-year perspective (04/2) | Tutak, Magdalena, Brodny, Jarosław
+- Social Ecological Economics: Understanding the Past to See the Future: Social Ecological Economics (04/2) | Spash, Clive L.
+- The PRISMA 2020 statement: An updated guideline for reporting systematic reviews (04/2) | Page, Matthew J., McKenzie, Joanne E., Bossuyt, Patrick M.
+- The environmental Kuznets curve hypothesis for Bangladesh: the importance of natural gas, liquefied petroleum gas, and hydropower consumption (04/2) | Murshed, Muntasir, Alam, Risana, Ansarin, Adiba
+- The nexus between greenhouse gas emission, electricity production, renewable energy and agriculture in Pakistan (04/2) | Khan, Muhammad Tariq Iqbal, Ali, Qamar, Ashfaq, Muhammad
+- The role of renewable energy in the global energy transformation (04/2) | Gielen, Dolf, Boshell, Francisco, Saygin, Deger
+- Küreselleşmenin Türkiye Ekonomisine Etkileri (05.2) | Türkiye Cumhuriyet Merkez Bankası
+- A Behavioral Approach to Law and Economics (05/1) | Jolls, Christine, Sunstein, Cass R., Thaler, Richard
+- Stoking the fires? CO2 emissions and economic growth (05/1) | Holtz-Eakin, Douglas, Selden, Thomas M.
+- The Use of Economics in Environmental Decision-Making (05/1) | Stallworth, Holly
+- Threshold Externalities in Economic Development (05/1) | Azariadis, Costas, Drazen, Allan
+- Application of life cycle assessment (LCA) for municipal solid waste management: a case study of Sakarya (05/2) | Erses Yay, A. Suna
+- Bounds testing approaches to the analysis of level relationships (05/2) | Pesaran, M. Hashem, Shin, Yongcheol, Smith, Richard J.
+- Climate change and adaptation in agriculture: Evidence from US cropping patterns (05/2) | Cui, Xiaomeng
+- Climate change and broadacre livestock production across southern Australia. 1. Impacts of climate change on pasture and livestock productivity, and on sustainable levels of profitability (05/2) | Moore, Andrew D., Ghahramani, Afshin
+- Climate-induced Land Use Change in France: Impacts of Agricultural Adaptation and Climate Change Mitigation (05/2) | Lungarska, Anna, Chakir, Raja
+- Crime, weather, and climate change (05/2) | Ranson, Matthew
+- Exploring the role of green investment, energy intensity and economic complexity in balancing the relationship between growth and environmental degradation (05/2) | Ullah, Obaid, Zeb, Ali, Shuhai, Niu
+- Irrigated agriculture and climate change: The influence of water supply variability and salinity on adaptation (05/2) | Connor, Jeffery D., Schwabe, Kurt, King, Darran
+- New foundations for ecological economics (05/2) | Spash, Clive L.
+- On the economic foundations of green growth discourses: the case of climate change mitigation and macroeconomic dynamics in economic modeling: Economic foundations of green growth discourses (05/2) | Scrieciu, S., Rezai, A., Mechler, R.
+- The scholar’s best friend: research trends in dog cognitive and behavioral studies (05/2) | Aria, Massimo, Alterisio, Alessandra, Scandurra, Anna
+- Tracking the effect of climatic and non-climatic elements on rice production in Pakistan using the ARDL approach (05/2) | Gul, Amber, Xiumin, Wu, Chandio, Abbas Ali
+- Weather shocks (05/2) | Gallic, Ewen, Vermandel, Gauthier
+- Ecological Economics: Energy, Environment and Society. (06/1) | Common, Michael, Martinez-Alier, Juan, Schlupmann, Klaus
+- Economic evaluation of environmental goods (06/1) | Green, C H, Tunstall, S M, N'Jai, A
+- Mercantilism, Physiocracy and Population Theory (06/1) | Overbeek, J.
+- National natural capital accounting with the ecological footprint concept (06/1) | Wackernagel, Mathis, Onisto, Larry, Bello, Patricia
+- Breaking down the complexity of sustainable development: A focus on resources, economic complexity, and innovation (06/2) | Safi, Adnan, Wei, Xin, Sansaloni, Eduard Montesinos
+- Breaking down the complexity of sustainable development: A focus on resources, economic complexity, and innovation (06/2) | Safi, Adnan, Wei, Xin, Sansaloni, Eduard Montesinos
+- Carbon Capture and Utilization Update (06/2) | Al-Mamoori, Ahmed, Krishnamurthy, Anirudh, Rownaghi, Ali A.
+- Challenges and opportunities of utilizing municipal solid waste as alternative building materials for sustainable development goals: A review (06/2) | Soni, Ashish, Das, Pankaj Kumar, Hashmi, Abdul Wahab
+- Do Agriculture Technologies Influence Carbon Emissions in Pakistan? Evidence based on ARDL technique (06/2) | Ali, Rafaqet, Ishaq, Rabia, Bakhsh, Khuda
+- Environmental Economics: An Introduction, 6th edition, by Barry C. Field and Martha K. Field (McGraw-Hill, New York, 2012), pp. 458. (06/2) | Nepal, Rabindra
+- Environmental economics and ecological economics: antagonistic approaches? (06/2) | Müller, Frank G.
+- Farmers’ preference and willingness to pay for weather forecast services in Benin (West Africa) (06/2) | Hounnou, Fèmi E., Houessou, Albertine M., Dedehouanou, Houinsou
+- Farmers’ preference and willingness to pay for weather forecast services in Benin (West Africa) (06/2) | Hounnou, Fèmi E., Houessou, Albertine M., Dedehouanou, Houinsou
+- Mapping the Evolution of Social Research and Data Science on 30 Years of Social Indicators Research (06/2) | Aria, Massimo, Misuraca, Michelangelo, Spano, Maria
+- No right to food and nutrition in the SDGs: mistake or success? (06/2) | Vivero Pol, Jose Luis, Schuftan, Claudio
+- Power-Electronic Systems for the Grid Integration of Renewable Energy Sources: A Survey (06/2) | Carrasco, J.M., Franquelo, L.G., Bialasiewicz, J.T.
+- Revisiting the role of renewable and non-renewable energy consumption on Turkey’s ecological footprint: Evidence from Quantile ARDL approach (06/2) | Sharif, Arshian, Baris-Tuzemen, Ozge, Uzuner, Gizem
+- Sustainable development and climate change: Beyond mitigation and adaptation (06/2) | Harry, S, Morad, M
+- Text mining methodologies with R: An application to central bank texts (06/2) | Benchimol, Jonathan, Kazinnik, Sophia, Saadon, Yossi
+- The Brave New World of Carbon Trading (06/2) | Spash, Clive L.
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- The linkages between natural resources, human capital, globalization, economic growth, financial development, and ecological footprint: The moderating role of technological innovations (06/2) | Jahanger, Atif, Usman, Muhammad, Murshed, Muntasir
+- Toward Farsightedly Stable International Environmental Agreements (06/2) | Osmani, Dritan, Tol, Richard
+- Weather effects on avian breeding performance and implications of climate change (06/2) | Skagen, Susan K., Adams, Amy A. Yackel
+- Co-citation in the scientific literature: A new measure of the relationship between two documents (07/1) | Small, Henry
+- The Political Economy of European Monetary Unification (07/1) | Eichengreen, Barry, Frieden, Jeffry
+- Accounting for externalities in cross-sectional economic models of climate change impacts (07/2) | Moretti, Michele, Vanschoenwinkel, Janka, Van Passel, Steven
+- Achieving ecological sustainability through technological innovations, financial development, foreign direct investment, and energy consumption in developing European countries (07/2) | Wang, Rong, Usman, Muhammad, Radulescu, Magdalena
+- Can monetary policy stabilise food inflation? Evidence from advanced and emerging economies (07/2) | Bhattacharya, Rudrani, Jain, Richa
+- Digitalization's contribution towards sustainable development and climate change mitigation: An empirical evidence from EU economies (07/2) | Arshad, Zeeshan, Madaleno, Mara, Lillebø, Ana I.
+- Discovering the evolution of Pollution Haven Hypothesis: A literature review and future research agenda (07/2) | Bashir, Muhammad Farhan
+- Does economic complexity reduce output volatility in developing countries? (07/2) | Güneri, Barbaros, Yalta, A. Yasemin
+- Effects of climate change and wildfire on stream temperatures and salmonid thermal habitat in a mountain river network (07/2) | Isaak, Daniel J., Luce, Charles H., Rieman, Bruce E.
+- Estimation and Inference in Large Heterogeneous Panels with a Multifactor Error Structure (07/2) | Pesaran, M. Hashem
+- Eurasian Economic Union: Evolution, challenges and possible future directions (07/2) | Mostafa, Golam, Mahmood, Monowar
+- Examining the environmental aspect of economic complexity outlook and environmental-related technologies in the Nordic states (07/2) | Alola, Andrew Adewale, Celik, Ali, Awan, Usama
+- Global Climate Change and Sustainable Energy Development: Focus on Emerging Issues and Strategies for the Asia-Pacific Region (07/2) | Sarkar, A. N.
+- Global research trends in complex oral sensitivity disorder: A systematic bibliometric analysis of the structures of knowledge (07/2) | Fortuna, Giulio, Aria, Massimo, Piscitelli, Alfonso
+- Growth and structure of authorship and co-authorship network in the strategic management realm: Evidence from the Strategic Management Journal (07/2) | Koseoglu, Mehmet Ali
+- Innovation and the dynamics of global warming (07/2) | Winter, Ralph A.
+- Mitigation pathways towards climate change: Modelling the impact of climatological factors on wheat production in top six regions of China (07/2) | Chandio, Abbas Ali, Dash, Devi Prasad, Nathaniel, Solomon Prince
+- Multi-criteria decision analysis to mitigate the impact of municipal solid waste management services during floods (07/2) | Phonphoton, Nuchcha, Pharino, Chanathip
+- Predicting forage quality of species-rich pasture grasslands using vis-NIRS to reveal effects of management intensity and climate change (07/2) | Berauer, Bernd J., Wilfahrt, Peter A., Reu, Björn
+- The ERA5 global reanalysis (07/2) | Hersbach, Hans, Bell, Bill, Berrisford, Paul
+- The GDP-Temperature relationship: Implications for climate change damages (07/2) | Newell, Richard G., Prest, Brian C., Sexton, Steven E.
+- The effect of agricultural total factor productivity on environmental degradation in sub-Saharan Africa (07/2) | Alhassan, Hamdiyah
+- The underpinnings of land-use history: three centuries of global gridded land-use transitions, wood-harvest activity, and resulting secondary lands: THE UNDERPINNINGS OF LAND-USE HISTORY (07/2) | Hurtt, G. C., Frolking, S., Fearon, M. G.
+- Ethics and Environmental Attitudes With Implications for Economic Valuation (08/1) | Spash, Clive L.
+- Technology Adoption in the Presence of Network Externalities (08/1) | Katz, Michael L., Shapiro, Carl
+- A sustainable development pathway for climate action within the UN 2030 Agenda (08/2) | Soergel, Bjoern, Kriegler, Elmar, Weindl, Isabelle
+- Aqueduct 4.0: Updated Decision-Relevant Global Water Risk Indicators (08/2) | Kuzma, Samantha, Bierkens, Marc F.P., Lakshman, Shivani
+- Aqueduct 4.0: Updated Decision-Relevant Global Water Risk Indicators (08/2) | Kuzma, Samantha, Bierkens, Marc F.P., Lakshman, Shivani
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Determinants of trade of mineral resources between China and ASEAN (08/2) | Wang, Bo, Yang, Haoting, Tian, Wenjuan
+- Energy efficiency and environmental regulations for mitigating carbon emissions in Chinese Provinces (08/2) | Radulescu, Magdalena, Cifuentes-Faura, Javier, Si Mohammed, Kamel
+- Evaluation of municipal solid waste options in Turkey: Scenarios for energy recovery, carbon mitigation and consequent financial strategies (08/2) | Yılmaz, İbrahim Halil, Abdulvahitoğlu, Aslı
+- Hotspots of climate change impacts in sub‐Saharan Africa and implications for adaptation and development (08/2) | Müller, Christoph, Waha, Katharina, Bondeau, Alberte
+- Inflation and the NAIRU: assessing the role of long-term unemployment as a cause of hysteresis (08/2) | Paternesi Meloni, Walter, Romaniello, Davide, Stirati, Antonella
+- Linking renewable energy, globalization, agriculture, CO2 emissions and ecological footprint in BRIC countries: A sustainability perspective (08/2) | Pata, Ugur Korkut
+- Measuring eco-efficiency and its convergence: empirical analysis from China (08/2) | Tang, Jianyang, Tang, Liwei, Li, Yi
+- Moving towards a sustainable environment: The dynamic linkage between natural resources, human capital, urbanization, economic growth, and ecological footprint in China (08/2) | Ahmed, Zahoor, Asghar, Muhammad Mansoor, Malik, Muhammad Nasir
+- On underestimation of global vulnerability to tree mortality and forest die-off from hotter drought in the Anthropocene (08/2) | Allen, Craig D., Breshears, David D., McDowell, Nate G.
+- Public-private partnerships as a policy response to climate change (08/2) | Buso, Marco, Stenger, Anne
+- Quantifying variety‐specific heat resistance and the potential for adaptation to climate change (08/2) | Tack, Jesse, Barkley, Andrew, Rife, Trevor W.
+- Re-establishing an ecological discourse in the policy debate over how to value ecosystems and biodiversity (08/2) | Spash, Clive L., Aslaksen, Iulie
+- Remote sensing and GIS applications for municipal waste management (08/2) | Singh, Ajay
+- Research on the dynamic relationship between China's renewable energy consumption and carbon emissions based on ARDL model (08/2) | Wang, Liping
+- Sustainable Corporate Finance (08/2) | Soppe, Aloy
+- The link between ‘green’ and economic success: environmental management as the crucial trigger between environmental and economic performance (08/2) | Schaltegger, Stefan, Synnestvedt, Terje
+- A synthesis of current knowledge on forests and carbon storage in the United States (09/2) | McKinley, Duncan C., Ryan, Michael G., Birdsey, Richard A.
+- Beyond environmental and ecological economics: Proposal for an economic sociology of the environment (09/2) | Gendron, Corinne
+- Beyond environmental and ecological economics: Proposal for an economic sociology of the environment (09/2) | Gendron, Corinne
+- Can forest management be used to sustain water-based ecosystem services in the face of climate change? (09/2) | Ford, Chelcy R., Laseter, Stephanie H., Swank, Wayne T.
+- Does the Kyoto Protocol as an International Environmental Policy Promote Forest Carbon Sinks?: (09/2) | Ge, Jiamin, Lin, Boqiang
+- Ecological deficit tax: A tax design and simulation of compensation for ecosystem service value based on ecological footprint in China (09/2) | Xiong, Zhenxing, Li, Hong
+- Economic performance of Indonesia amidst CO2 emissions and agriculture: a time series analysis (09/2) | Adebayo, Tomiwa Sunday, Akinsola, Gbenga Daniel, Kirikkaleli, Dervis
+- Economywide impacts of climate change on agriculture in Sub-Saharan Africa (09/2) | Calzadilla, Alvaro, Zhu, Tingju, Rehdanz, Katrin
+- Effects of agriculture, renewable energy, and economic growth on carbon dioxide emissions: Evidence of the environmental Kuznets curve (09/2) | Ridzuan, Nur Hilfa Awatif Mohamad, Marwan, Nur Fakhzan, Khalid, Norlin
+- Evaluation of Climate Change Adaptation Alternatives for Smallholder Farmers in the Upper Blue-Nile Basin (09/2) | Nigussie, Yalemzewd, van der Werf, Edwin, Zhu, Xueqin
+- Examining the impact of climate change on cereal production in India: Empirical evidence from ARDL modelling approach (09/2) | Singh, Arshdeep, Arora, Kashish, Chandra Babu, Suresh
+- Examining the impact of climate change on cereal production in India: Empirical evidence from ARDL modelling approach (09/2) | Singh, Arshdeep, Arora, Kashish, Chandra Babu, Suresh
+- Feasibility analysis and techno-economic design of grid-isolated hybrid renewable energy system for electrification of agriculture and irrigation area: A case study in Dongola, Sudan (09/2) | Elkadeem, M.R., Wang, Shaorong, Sharshir, Swellam W.
+- Food Technology forecasting: A based bibliometric update in functional chocolates (09/2) | Balcázar-Zumaeta, César R., Castro-Alayo, Efraín M., Muñoz-Astecker, Lucas D.
+- How to conduct a bibliometric analysis: An overview and guidelines (09/2) | Donthu, Naveen, Kumar, Satish, Mukherjee, Debmalya
+- Impacts of climate change mitigation on agriculture water use: A provincial analysis in China (09/2) | Guo, Chaoyi, Dai, Hancheng, Liu, Xiaorui
+- Modelling pastoral farm agro‐ecosystems: A review (09/2) | Bryant, J. R., Snow, V. O.
+- Modelling the effects of energy taxes on ecological footprint transfers in China's foreign trade (09/2) | Sun, Yuanyuan, Mao, Xianqiang, Liu, Gengyuan
+- Multi-purpose reverse logistics network design for medical waste management in a megacity: Istanbul, Turkey (09/2) | Balci, Esin, Balci, Sezin, Sofuoglu, Aysun
+- Pathways to achieve a set of ambitious global sustainability objectives by 2050: Explorations using the IMAGE integrated assessment model (09/2) | van Vuuren, Detlef P., Kok, Marcel, Lucas, Paul L.
+- Reassessing Food Security: How a Data‐Efficient <span style="font-variant:small-caps;">4As</span> Framework and Machine Learning Uncover Hidden Patterns Across <span style="font-variant:small-caps;">G20</span> Nations (09/2) | Shang, Linmei, Lin, Changfeng, Ye, Ruike
+- Reassessing Food Security: How a Data‐Efficient <span style="font-variant:small-caps;">4As</span> Framework and Machine Learning Uncover Hidden Patterns Across <span style="font-variant:small-caps;">G20</span> Nations (09/2) | Shang, Linmei, Lin, Changfeng, Ye, Ruike
+- The ecological economics of land degradation: Impacts on ecosystem service values (09/2) | Sutton, Paul C., Anderson, Sharolyn J., Costanza, Robert
+- The shallow or the deep ecological economics movement? (09/2) | Spash, Clive L.
+- Toward more robust projections of forest landscape dynamics under novel environmental conditions: Embedding PnET within LANDIS-II (09/2) | de Bruijn, Arjan, Gustafson, Eric J., Sturtevant, Brian R.
+- Transformation archetypes in global food systems (09/2) | Dornelles, André Zuanazzi, Boonstra, Wiebren J., Delabre, Izabela
+- Structuring scientific activities by co-author analysis: An expercise on a university faculty level (1/19) | Peters, H. P. F., Van Raan, A. F. J.
+- Accounting for demand and supply of the biosphere's regenerative capacity: The National Footprint Accounts’ underlying methodology and framework (1/20) | Borucke, Michael, Moore, David, Cranston, Gemma
+- Climate change and its marginalizing effect on agriculture (1/20) | Mestre-Sanchís, Fernando, Feijóo-Bello, María Luisa
+- Dynamics of renewable energy consumption and economic activities across the agriculture, industry, and service sectors: evidence in the perspective of sustainable development (1/20) | Paramati, Sudharshan Reddy, Apergis, Nicholas, Ummalla, Mallesh
+- Homo reciprocans (1/20) | Bowles, Samuel, Gintis, Herbert
+- Impact of bibliometrics upon the science system: Inadvertent consequences? (1/20) | Weingart, Peter
+- Life cycle assessment of solid waste management options for Eskisehir, Turkey (1/20) | Banar, Mufide, Cokaygil, Zerrin, Ozkan, Aysun
+- Medical waste management in Turkey: A case study of Istanbul (1/20) | Birpınar, Mehmet Emin, Bilgili, Mehmet Sinan, Erdoğan, Tuğba
+- Municipal solid waste management strategies in Turkey (1/20) | Turan, N. Gamze, Çoruh, Semra, Akdemir, Andaç
+- Renewable energy for sustainable agriculture (1/20) | Chel, A., Kaushik, G.
+- Solid waste management practices and review of recovery and recycling operations in Turkey (1/20) | Metin, E, Eröztürk, A, Neyim, C
+- Testing slope homogeneity in large panels (1/20) | Pesaran, M. Hashem, Yamagata, Takashi
+- Testing slope homogeneity in large panels (1/20) | Pesaran, M. Hashem, Yamagata, Takashi
+- The Welfare Economic Theory of Green National Accounts (1/20) | Dasgupta, Partha
+- The effects of forest harvest intensity in combination with wind disturbance on carbon dynamics in Lake States Mesic Forests (1/20) | Scheller, Robert M., Hua, Dong, Bolstad, Paul V.
+- The proposal of a broadening of perspective in evaluative bibliometrics by complementing the times cited with a cited reference analysis (1/20) | Bornmann, Lutz, Marx, Werner
+- Transshipment site selection using the AHP and TOPSIS approaches under fuzzy environment (1/20) | Önüt, Semih, Soner, Selin
+- Ecological footprints and appropriated carrying capacity: what urban economics leaves out (10/1) | Rees, William E.
+- Global climate change (10/1) | Gall, Graham A.E., Kreith, Marcia, Staton, Mary
+- The Structure of Scientific Theories. (10/1) | Day, J. P., Suppe, Frederick
+- The economics of the environment (10/1) | Dasgupta, Partha
+- A Third Wave in the Economics of Climate Change (10/2) | Farmer, J. Doyne, Hepburn, Cameron, Mealy, Penny
+- Addressing the long- and short-run effects of climate change on major food crops production in Turkey (10/2) | Chandio, Abbas Ali, Gokmenoglu, Korhan K., Ahmad, Fayyaz
+- Addressing the long- and short-run effects of climate change on major food crops production in Turkey (10/2) | Chandio, Abbas Ali, Gokmenoglu, Korhan K., Ahmad, Fayyaz
+- Agriculture, climate change and sustainability: The case of EU-28 (10/2) | Agovino, Massimiliano, Casaccia, Mariaconcetta, Ciommi, Mariateresa
+- Climate Change and Agriculture: Do Environmental Preservation and Ecosystem Services Matter? (10/2) | Maia, Alexandre Gori, Miyamoto, Bruno César Brito, Garcia, Junior Ruiz
+- Conceptualising multi-regime interactions: The role of the agriculture sector in renewable energy transitions (10/2) | Sutherland, Lee-Ann, Peter, Sarah, Zagata, Lukas
+- Evolution and economic complexity: an overview (10/2) | Foster, John, Metcalfe, Stan J.
+- Forecasting emerging technologies: Use of bibliometrics and patent analysis (10/2) | Daim, Tugrul U., Rueda, Guillermo, Martin, Hilary
+- Green growth of cereal food production under the constraints of agricultural carbon emissions: A new insights from ARDL and VECM models (10/2) | Koondhar, Mansoor Ahmed, Aziz, Noshaba, Tan, Zhixiong
+- Impact of climate change on cereal production: evidence from lower-middle-income countries (10/2) | Kumar, Pushp, Sahu, Naresh Chandra, Kumar, Siddharth
+- Intercomparison, interpretation, and assessment of spring phenology in North America estimated from remote sensing for 1982-2006 (10/2) | White, Michael A., de BEURS, Kirsten M., Didan, Kamel
+- Monetary, financial and fiscal fragility in 2020s (10/2) | El-Shagi, Makram, Turcu, Camélia
+- Pollination services at risk: Bee habitats will decrease owing to climate change in Brazil (10/2) | Giannini, Tereza C., Acosta, André L., Garófalo, Carlos A.
+- Review of greenhouse gas emissions from crop production systems and fertilizer management effects (10/2) | Snyder, C.S., Bruulsema, T.W., Jensen, T.L.
+- State of Climate Action 2022 (10/2) | Boehm, Sophie, Jeffery, Louise, Levin, Kelly
+- The Awareness of Consequences Scale: An Exploration, Empirical Analysis, and Reinterpretation: Awareness of Consequences Scale (10/2) | Ryan, Anthony M., Spash, Clive L.
+- The Ecological Economics of Economic Democracy (10/2) | Akbulut, Bengi, Adaman, Fikret
+- The impact of renewable energy and agriculture on carbon dioxide emissions: Investigating the environmental Kuznets curve in four selected ASEAN countries (10/2) | Liu, Xuyi, Zhang, Shun, Bae, Junghan
+- The nexus of renewable energy-agriculture-environment in BRICS (10/2) | Liu, Xuyi, Zhang, Shun, Bae, Junghan
+- Towards long-term sustainable environment: does agriculture and renewable energy consumption matter? (10/2) | Chandio, Abbas Ali, Akram, Waqar, Ozturk, Ilhan
+- Understanding carbon lock-in (10/2) | Unruh, Gregory C
+- Environmental economics in theory and practice (11/1) | Neumayer, Eric
+- Marshallian factor market externalities and the dynamics of industrial localization (11/1) | David, Paul A., Rosenbloom, Joshua L.
+- New methodology for the ecological footprint with an application to the New Zealand economy (11/1) | Bicknell, Kathryn B, Ball, Richard J, Cullen, Ross
+- Robert Costanza, ed. <i>Ecological Economics the Science and Management of Sustainability</i> . Columbia University Press, 1991, xiv + 525 pp., paper $@@‐@@18.50 ISBN 0‐231‐07563‐4 (11/1) | English, Burton C.
+- The Measurement of Government Size: Implications for the Study of Government Growth (11/1) | Berry, William D., Lowery, David
+- Toward a definition of “bibliometrics” (11/1) | Broadus, R. N.
+- A bibliometric review analysis into environmental kuznets curve phenomenon: A retrospect and future direction (11/2) | Ajmi, Ahdi Noomen, Bekun, Festus Victor, Gyamfi, Bright Akwasi
+- A review of waste management in Brazil and Portugal: Waste-to-energy as pathway for sustainable development (11/2) | Ferraz de Campos, Victor Arruda, Silva, Valter Bruno, Cardoso, João Sousa
+- Advancing sustainability science for the SDGs (11/2) | Smith, Mark Stafford, Cook, Christina, Sokona, Youba
+- Agricultural environmental total factor productivity in China under technological heterogeneity: characteristics and determinants (11/2) | Han, Haibin, Zhong, Zhangqi, Wen, Changcun
+- Agricultural environmental total factor productivity in China under technological heterogeneity: characteristics and determinants (11/2) | Han, Haibin, Zhong, Zhangqi, Wen, Changcun
+- An Intellectual History of Environmental Economics (11/2) | Pearce, David
+- Bibliometric Analysis of Monitoring and Mapping of Soil Salinity Using Remote Sensing Approaches: Reports from the Past Three Decades (11/2) | Ozdemir, E., Kulak, M., Sekertekin, A.
+- Bibliometric Analysis of Monitoring and Mapping of Soil Salinity Using Remote Sensing Approaches: Reports from the Past Three Decades (11/2) | Ozdemir, E., Kulak, M., Sekertekin, A.
+- Climate change and sustainable development (11/2) | DiSano, JoAnne
+- Climate change and sustainable development (11/2) | Banuri, Tariq
+- Combining AHP with GIS for landfill site selection: A case study in the Lake Beyşehir catchment area (Konya, Turkey) (11/2) | Şener, Şehnaz, Şener, Erhan, Nas, Bilgehan
+- Discounting the Discount Rate: Ecocentrism and Environmental Economics (11/2) | Barkin, J. Samuel
+- Economic Methodology: Understanding Economics as a Science, Marcel Boumans and John B. Davis (with contributions from Mark Blaug, Harro Maas and Andrej Svorencik), Palgrave Macmillan, 2010, x + 209 pages. (11/2) | Peacock, Mark
+- Environmentally sensitive productivity growth and its decompositions in China: a metafrontier Malmquist–Luenberger productivity index approach (11/2) | Choi, Yongrok, Oh, Dong-hyun, Zhang, Ning
+- Exploring Development Futures in a Changing Climate: Frontiers for Development Policy and Practice (11/2) | Boyd, Emily, Grist, Natasha, Juhola, Sirkku
+- Exploring the nexus between agriculture and greenhouse gas emissions in BIMSTEC region: The role of renewable energy and human capital as moderators (11/2) | Sharma, Gagan Deep, Shah, Muhammad Ibrahim, Shahzad, Umer
+- How does power technology innovation affect carbon productivity? A spatial perspective in China (11/2) | Deng, Yating, Guang, Fengtao, Hong, Shuifeng
+- Impact of carbon footprint of bank loans and fossil fuel subsidies on ecological footprint in Tunisia: A contingency and asymmetric analysis (11/2) | Iyke-Ofoedu, Maureen Ifeoma, Nwonye, Nnenna G., Abner, Ishaku Prince
+- Price and quantity regulation in general equilibrium (11/2) | Kelly, David L.
+- Rainfall seasonality changes and underlying climatic causes in global land monsoon regions (11/2) | Deng, Shulin, Lu, Chunhua, Chen, Hao
+- Rainfall seasonality changes and underlying climatic causes in global land monsoon regions (11/2) | Deng, Shulin, Lu, Chunhua, Chen, Hao
+- Sustainability indicators for urban solid waste management in large and medium-sized worldwide cities (11/2) | Da Silva, Luciana, Marques Prietto, Pedro Domingos, Pavan Korf, Eduardo
+- Sustainability indicators, policy and governance: Issues for ecological economics (11/2) | Hezri, Adnan A., Dovers, Stephen R.
+- Sustainable development and climate change (11/2) | Matthew, Richard A., Hammill, Anne
+- The Eurasian Economic Union: a case of reproductive integration? (11/2) | Roberts, Sean P., Moshes, Arkady
+- The dynamic impact of biomass and natural resources on ecological footprint in BRICS economies: A quantile regression evidence (11/2) | Awosusi, Abraham Ayobamiji, Adebayo, Tomiwa Sunday, Altuntaş, Mehmet
+- The evolution of the environmental Kuznets curve hypothesis assessment: A literature review under a critical analysis perspective (11/2) | Leal, Patrícia Hipólito, Marques, António Cardoso
+- The nexus between renewable energy, CO2 emissions, and economic growth: Empirical evidence from African oil-producing countries (11/2) | İnal, Veysel, Addi, Haman Mahamat, Çakmak, Eyüp Ensar
+- The role of non-cognitive skills in farmers' adoption of climate change mitigation measures (11/2) | Kreft, Cordelia, Huber, Robert, Wuepper, David
+- Turkish Greenhouse Gas Inventory 1990 - 2022 (11/2) | Turkish Statistical Institute
+- bibliometrix : An R-tool for comprehensive science mapping analysis (11/2) | Aria, Massimo, Cuccurullo, Corrado
+- "Economics of the environment: Theory and policy"- Book review (12/1) | Lazo, Jeffrey K.
+- Climate Change and Society: Speculation, Construction and Scientific Investigation (12/1) | Rosa, Eugene A., Dietz, Thomas
+- Environmental economics: Two schools of thought (12/1) | Dietz, Frank J.
+- The Customs Union Issue. By Jacob Viner. (New York: Carnegie Endowment for International Peace. 1950. Pp. viii, 221. $2.50.) (12/1) | Piquet, Howard S.
+- A global Malmquist-Luenberger productivity index (12/2) | Oh, Dong-hyun
+- A hydro-economic model for the assessment of climate change impacts and adaptation in irrigated agriculture (12/2) | Esteve, Paloma, Varela-Ortega, Consuelo, Blanco-Gutiérrez, Irene
+- A road to enhancements in natural gas use in Iran: A multivariate modelling approach (12/2) | Balsalobre-Lorente, Daniel, Bekun, Festus Victor, Etokakpan, Mfonobong Udom
+- Alfred Marshall's Idea of Progress and Sustainable Development (12/2) | Caldari, Katia
+- Beyond Homo economicus: evidence from experimental economics (12/2) | Gintis, Herbert
+- Bibliometric analysis of peer-reviewed literature on food security in the context of climate change from 1980 to 2019 (12/2) | Sweileh, Waleed M.
+- Climate Change, the Economy, and Conflict (12/2) | Koubi, Vally
+- Consequences of future climate change and changing climate variability on maize yields in the midwestern United States (12/2) | Southworth, Jane, Randolph, J.C., Habeck, M.
+- Cross Malmquist Productivity Index in Data Envelopment Analysis (12/2) | Homayoni, Ali, Fallahnejad, Reza, Hosseinzadeh Lotfi, Farhad
+- Ecological economics: The next 30 years (12/2) | Farley, Joshua, Kish, Kaitlin
+- Ecosystem services and dis-services to agriculture (12/2) | Zhang, Wei, Ricketts, Taylor H., Kremen, Claire
+- Effects of thinning on drought vulnerability and climate response in north temperate forest ecosystems (12/2) | D'Amato, Anthony W., Bradford, John B., Fraver, Shawn
+- Efficient water management policies for irrigation adaptation to climate change in Southern Europe (12/2) | Kahil, Mohamed Taher, Connor, Jeffery D., Albiac, Jose
+- Evidence summaries: the evolution of a rapid review approach (12/2) | Khangura, Sara, Konnyu, Kristin, Cushman, Rob
+- Going away or going green in NAFTA nations? Linking natural resources, energy utilization, and environmental sustainability through the lens of the EKC hypothesis (12/2) | Jahanger, Atif, Yu, Yang, Hossain, Mohammad Razib
+- Governance of sustainability in the German biogas sector—adaptive management of the Renewable Energy Act between agriculture and the energy sector (12/2) | Thrän, Daniela, Schaubach, Kay, Majer, Stefan
+- Invasive species distribution modeling (iSDM): Are absence data and dispersal constraints needed to predict actual distributions? (12/2) | Václavík, Tomáš, Meentemeyer, Ross K.
+- Investigations on the phylogenetic position of the ditypic genus <i>Froriepia</i> reveal <i>Yildirimlia</i> , a new genus of Apiaceae (12/2) | Doğru‐Koca, Aslı, Bagheri, Ali, Moradi, Aiuob
+- Local impacts of climate change and agronomic practices on dry land crops in Southern Africa (12/2) | Zinyengere, Nkulumo, Crespo, Olivier, Hachigonta, Sepo
+- Mapping global development potential for renewable energy, fossil fuels, mining and agriculture sectors (12/2) | Oakleaf, James R., Kennedy, Christina M., Baruch-Mordo, Sharon
+- Method and appraisal in economics, 1976–20061 (12/2) | Mäki, Uskali
+- Political economy of climate change, ecological destruction and uneven development (12/2) | O'Hara, Phillip Anthony
+- Second-Best Pigouvian Taxation: A Clarification (12/2) | Gahvari, Firouz
+- Self-preservation strategy for approaching global warming targets in the post-Paris Agreement era (12/2) | Wei, Yi-Ming, Han, Rong, Wang, Ce
+- Simulating dynamic and mixed-severity fire regimes: A process-based fire extension for LANDIS-II (12/2) | Sturtevant, Brian R., Scheller, Robert M., Miranda, Brian R.
+- Solid waste collection optimization objectives, constraints, modeling approaches, and their challenges toward achieving sustainable development goals (12/2) | Hannan, M.A., Hossain Lipu, M.S., Akhtar, Mahmuda
+- Solid waste management practices in Turkey (12/2) | Berkun, Mehmet, Aras, Egemen, Anılan, Tugce
+- Supplemental irrigation water rights and climate change adaptation (12/2) | Bigelow, Daniel P., Zhang, Hongliang
+- Systematic review or scoping review? Guidance for authors when choosing between a systematic or scoping review approach (12/2) | Munn, Zachary, Peters, Micah D. J., Stern, Cindy
+- Temperature variability and the yield of annual crops (12/2) | Wheeler, Timothy R, Craufurd, Peter Q, Ellis, Richard H
+- The 2030 Agenda for Sustainable Development: Bringing Climate Justice to Climate Action (12/2) | de Loma-Osorio, Gabriel Ferrero y
+- United Nations Sustainable Development Goals 2030 and environmental sustainability: race against time (12/2) | Arora, Naveen Kumar, Mishra, Isha
+- What abates ecological footprint in BRICS-T region? Exploring the influence of renewable energy, non-renewable energy, agriculture, forest area and financial development (12/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad
+- Wildland fire deficit and surplus in the western United States, 1984–2012 (12/2) | Parks, Sean A., Miller, Carol, Parisien, Marc-André
+- (Utilitarianism) Faydacılık (1861) | Mill, John Stuart
+- Industry and Trade (1919) | Marshall, Alfred
+- Review Work of Industry and Trade by Alfred Marshall (1920) | M., H. W.
+- The Economics of Welfare (1920) | Pigou, Arthur Cecil
+- College Libraries and Chemical Education (1927) | Gross, P. L. K., Gross, E. M.
+- Principles of Economics (1961) | Marshall, Alfred
+- The Theory of Economic Externalities: The Control of Environmental Pollution and Similar Social Costs (1973) | Meade, James E.
+- Delineation of the intimate details of the backbone conformation of pyridine nucleotide coenzymes in aqueous solution (1975) | Bose, K. S., Sarma, R. H.
+- ENVIRONMENT PLANNING (1975) | Weber, W.
+- Outpatient phenothiazine use and bone marrow depression. A report from the drug epidemiology unit and the Boston collaborative drug surveillance program (1975) | Swett, C.
+- Regulation of citrate synthase activity of Saccharomyces cerevisiae (1975) | Coleman, J. S., Bhattacharjee, J. K.
+- Responsiveness of neurogenic hearts to octopamine (1975) | Grega, D. S., Sherman, R. G.
+- Method and Appraisal in Economics (1976) | Latsis
+- The Royal Free's 150th anniversary (1978) | Unknown
+- Toprak Ana (1980) | Aytmatov, Cengiz
+- Handbook of mathematical economics (1981) | Unknown
+- M. Friedman ve İktisatta varsayım sorunu (1982) | Görün, F.
+- Fundamental methods of mathematical economics (1984) | Chiang, Alpha C.
+- A Sociological Approach to the Measurement of Poverty--A Rejoinder to Professor Amartya Sen (1985) | Townsend, Peter
+- Fiction and Bibliometrics: Analyzing a Publishing House’s Stocklist (1986) | De Glas, Frank
+- Some Notes on Research in Bibliometrics (1987) | Broadus, Robert N.
+- Türkçede Anlamdaş ve Karşıt Kelimeler Sözlüğü (1987) | Tuğlacı, Pars
+- Macroeconomics and Politics (1988) | Alesina, Alberto F.
+- The Theory of Environmental Policy (1988) | Baumol, William J., Oates, Wallace E.
+- The theory of environmental policy (1988) | Baumol, William J., Oates, Wallace E.
+- Economic Prescriptions for Environmental Problems: How the Patient Followed the Doctor's Orders (1989) | Hahn, Robert W
+- Social Norms and Economic Theory (1989) | Elster, Jon
+- Assessment: Economic Policy Towards The Environment (1990) | Helm, Dieter, Pearce, David
+- Economic models and methodology (1990) | Unknown
+- Economics as Ideology (1990) | Heilbroner, Robert
+- Human Development Report (1990) | UNDP
+- The Ecological Economics of Sustainability: Making Local and Short-Term Goals Consistent with Global and Long-Term Goals (1990) | Costanza, Robert, Haskell, Ben, Cornwell, Laura
+- The Economics of Integration (1990) | Nevin, Edward
+- Environmental Economics: Can Economics Help Mother Earth? (1991) | Shaw, W. Douglass
+- Human Development Report (1991) | UNDP
+- Linking the Natural Environment and the Economy: Essays from the Eco-Eco Group (1991) | Unknown
+- Bibliometrics, Informetrics, Scientometrics and Librametrics: An Overview (1992) | Sengupta, I. N.
+- Environmental Economics and Responsibility (1992) | Sarokin, David, Schulkin, Jay
+- Environmentalism and political theory: toward an ecocentric approach (1992) | Eckersley, Robyn
+- Microeconomic analysis (1992) | Varian, Hal R.
+- Sosyal Bilimler Sözlüğü (1992) | Demir, Ömer, Acar, Mustafa
+- Evolutionary Economics as an Approach to Environmental Problems (1993) | Erdmann, Georg
+- The economics of food production (1993) | Upton, M.
+- Türkiye İktisat Tarihi: 1908-1985 (1993) | Boratav, , Korkut
+- Environmental Economics and Environmental Policy Instruments: Introduction and Overview (1994) | Turner, Kerry, Opschoor, Hans
+- Environmental economics: an elementary introduction (1994) | Unknown
+- Human Development Report (1994) | UNDP
+- Macroeconomics (1994) | Dornbusch, Rudiger, Fischer, Stanley
+- Pigou and Coase Reconsidered (1994) | Klink, Federico Aguilera
+- The Economics of Climate Change Proceedings of an Oecd/Iea Conference. (1994) | Unknown
+- Climate Change and Sustainable Development (1995) | Lemons, John, Heredia, Rudolf, Jamieson, Dale
+- Economic theory for environmentalists (1995) | Gowdy, John M., O'Hara, Sabine
+- Environmental Economics: Individual Incentives and Public Choices (1995) | Hodge, Ian
+- Public Economics and the Environment in an Imperfect World (1995) | Bovenberg, Lans, Cnossen, Sijbren
+- Sustainability and ‘the Market’: A Typology of Environmental Economics (1995) | Jacobs, Michael
+- The economics of pollution (1995) | Pearce, D. W.
+- A Regional Dynamic General-Equilibrium Model of Alternative Climate-Change Strategies (1996) | Nordhaous, William D., Yang, Zili
+- Advanced macroeconomics (1996) | Romer, David
+- Economic Theory and the Environment (1996) | Munday, Stephen C. R.
+- Foundations of international macroeconomics (1996) | Obstfeld, Maurice, Rogoff, Kenneth S.
+- Habitat II Konferansı Yazıları (1996) | Tekeli, İlhan
+- Productivity and the density of economic activity (1996) | Ciccone, A., Hall, RE.
+- Review of Cost Benefit Analysis and the Environment, by N. Hanley & C. L. Spash (1996) | Cowell, R.
+- Solutions manual to accompany Romer Advanced macroeconomics (1996) | Rohaly, Jeffrey, Romer, David, Romer, David
+- Critical economic methodology: a personal odyssey (1997) | Boland, Lawrence A.
+- Environmental Economics in Theory and Practice (1997) | Hanley, Nick, Shogren, Jason F., White, Ben
+- Environmental Economics in Theory and Practice (1997) | Hanley, Nick, Shogren, Jason F., White, Ben
+- Environmental Economics, Ecological Economics, and the Concept of Sustainable Development (1997) | Munda, Giuseppe
+- Environmental Economics, Ecological Economics, and the Concept of Sustainable Development (1997) | Munda, Giuseppe
+- Introduction: benefit-cost analysis and the environment in developing countries (1997) | Unknown
+- Türkiye'nin Tarım Politikası ve Çevre (1997) | Türkiye Çevre Vakfı
+- Water: economics, management and demand (1997) | Unknown
+- Long-Term Integration of Renewable Energy Sources into the European Energy System (1998) | The LTI-Research Group, The LTI-Research
+- New Economic Theories Impact on Environmental Economics (1998) | Carraro, Carlo
+- The Ecological Footprint: an Indicator of Progress Toward Regional Sustainability (1998) | Wackernagel, Mathis, Yount, J. David
+- The Economics of Regional Integration (1998) | Burfisher, Mary E
+- İşsizlik Sorununa Yeni Yaklaşımlar (1998) | Ataman, Berrin Ceylan
+- 1980 Sonrası ve Türkiye'de Büyüme ve İstihdam Politikaları (1999) | Öztürk, Süleyman
+- An Economic Theory of GATT (1999) | Bagwell, Kyle, Staiger, Robert W
+- Green Tax Reforms and the Double Dividend: an Updated Reader’s Guide (1999) | Bovenberg, A. Lans
+- Handbook of macroeconomics (1999) | Unknown
+- Right to food; right to feed; right to be fed. The intersection of women’s rights and the right to food (1999) | Esterik, Penny Van
+- The Development of Environmental Thinking in Economics (1999) | Spash, C.
+- The Impact Of Economics On Environmental Policy (1999) | Hahn, Robert W.
+- Allocative efficiency in public research funding: Can bibliometrics help? (2/20) | Abramo, Giovanni, D’Angelo, Ciriaco Andrea, Caprasecca, Alessandro
+- Climate change, agriculture and food security: a global partnership to link research and action for low-income agricultural producers and consumers (2/20) | Vermeulen, Sonja, Zougmoré, Robert, Wollenberg, Eva
+- Effects of exotic and translocated fish species in the inland waters of Turkey (2/20) | Innal, Deniz, Erkakan, Füsun
+- Global food markets, trade and the cost of climate change adaptation (2/20) | Mosnier, Aline, Obersteiner, Michael, Havlík, Petr
+- Moral Behaviour, Altruism and Environmental Policy (2/20) | Daube, Marc, Ulph, David
+- Nested externalities and polycentric institutions: must we wait for global solutions to climate change before taking actions at other scales? (2/20) | Ostrom, Elinor
+- Review on life cycle assessment of integrated solid waste management in some Asian countries (2/20) | Othman, Siti Nadzirah, Zainon Noor, Zainura, Abba, Ahmad Halilu
+- Solid waste disposal site selection with GIS and AHP methodology: a case study in Senirkent–Uluborlu (Isparta) Basin, Turkey (2/20) | Şener, Şehnaz, Sener, Erhan, Karagüzel, Remzi
+- Sustainable recycling of municipal solid waste in developing countries (2/20) | Troschinetz, Alexis M., Mihelcic, James R.
+- Linking adaptation and mitigation in climate change policy (2000) | Kane, Sally, Shogren, Jason F.
+- Macroeconomic essentials: understanding economics in the news (2000) | Kennedy, Peter
+- Resource economics (2000) | Conrad, Jon M
+- Semiotics and evaluative bibliometrics (2000) | Cronin, Blaise
+- The Economic Consequences of Increased Disclosure (2000) | Leuz, Christian, Verrecchia, Robert E.
+- The Environment as a  Commodity (2000) | Vatn, A.
+- The public economics of the environment (2000) | Sandmo, Agnar
+- Türk Anayasa Hukuku (2000) | Kemal, Gözler
+- 1980 Sonrası Borçlanma Politikaları (2001) | Derdiyok, Türkmen
+- Advances in the economics of environmental resources 3. 3. (2001) | Hall, Darwin C
+- Ecological economics: themes, approaches, and differences with environmental economics (2001) | van den Bergh, Jeroen C. J. M.
+- Eurasian Economic Community (EEC) Comes into Being (2001) | Zhalimbetova, Roza, Gleason, Gregory
+- Eğitim, İstihdam, Teknoloji (2001) | İçli, Gönül
+- National characteristics in international scientific co-authorship relations (2001) | Glanzel, Wolfgang
+- The Long-Term Economics of Climate Change: Beyond a Doubling of Greenhouse Gas Concentrations (Advances in the Economics of Environmental Resources, Vol 3) (2001) | Hall, Darwin C, Howarth, Richard B.
+- The microfinance revolution (2001) | Robinson, Marguerite S.
+- An encyclopedia of macroeconomics (2002) | Unknown
+- Economic Reasons for Conserving Wild Nature (2002) | Balmford, Andrew, Bruner, Aaron, Cooper, Philip
+- Environmental Economics for Environmental Protection (2002) | van Ierland, Ekko, Brink, Corjan, Hordijk, Leen
+- Environmental economics in theory and practice (2002) | Hanley, Nick, Shogren, Jason F., White, Benedict
+- Environmental justice and economic degrowth: An alliance between two movements (2002) | Martinez-Alier, Joan
+- Gelişmiş Ülkelerde İstihdam Politikaları,  Esneklik Arayışı ve Etkileri (2002) | Selamoğlu, Ahmet
+- Principles of macroeconomics (2002) | Mankiw, N. Gregory, Fortura, Peter, Manouchehri, Shahram
+- Routledge dictionary of economics (2002) | Rutherford, Donald
+- The Role of Economics in Climate Change Polic (2002) | McKibbin, Warwick J, Wilcoxen, Peter J
+- The Role of Economics in Climate Change Policy (2002) | McKibbin, Warwick J, Wilcoxen, Peter J
+- The foundations of modern macroeconomics (2002) | Heijdra, Ben J., Ploeg, Frederick van der
+- Environmental Economics and the International Economy (2003) | Unknown
+- Global climate change: the science, economics and politics (2003) | Unknown
+- Macroeconomics (2003) | Mankiw, N. Gregory
+- Macroeconomics for developing countries (2003) | Jha, Raghbendra
+- Microeconomics: Behavior, Institutions, and Evolution (2003) | Bowles, Samuel
+- Natural resource and environmental economics (2003) | Unknown
+- Social goals and the valuation of natural capital (2003) | Costanza, Robert
+- Solid waste management practices and review of recovery and recycling operations in Turkey (2003) | Metin, E., Eröztürk, A., Neyim, C.
+- The handbook of water economics principles and practice (2003) | Green, Colin H
+- Thinking ecologically: environmental thought, values and policy (2003) | Unknown
+- Çevre Sorunlarına Ekonomik Yaklaşımlar ve Optimal Politika Arayışları (2003) | Dağdemir, Özcan
+- Ecological economics: principles and applications (2004) | Unknown
+- General Diagnostic Tests for Cross Section Dependence in Panels (2004) | Pesaran, M. Hashem
+- The Economics of Climate Change (2004) | Hanley, Nick, Owen, Anthony D
+- The Institutional Economics of Market-Based Climate Policy (2004) | Woerdman, Edwin
+- The economics of climate change (2004) | Owen, Anthony David, Hanley, Nick
+- The economics of climate change (2004) | Unknown
+- The economics of the Kyoto Protocol (2004) | Grubb, Michael
+- The international climate change regime: a guide to rules, institutions and procedures (2004) | Yamin, Farhana, Depledge, Joanna
+- İşsizlikle mücadelede aktif istihdam politikaları (2004) | Biçerli, Mustafa Kemal
+- Aktif İşgücü Piyasası Politikaları (2005) | Kapar, Recep
+- An index to quantify an individual's scientific research output (2005) | Hirsch, J. E.
+- International economics (2005) | Carbaugh, Robert J.
+- Modern macroeconomics its origins, development and current state (2005) | Snowdon, Brian, Vane, Howard R, NetLibrary, Inc
+- Türkiye Ekonomisinde 1980 Sonrası Yaşanan Yapısal Dönüşümlerin GSMH, Dış Ticaret ve Dış Borçlar Bağlamında Teorik Bir Değerlendirmesi (2005) | Öztürk, Salih, Özyakışır, Deniz
+- Türkiye Ekonomisinde Sermaye Birikimi Verimlilik ve Büyüme: 1972-2003 (2005) | Saygılı, Şeref, Cihan, Cengiz, Yurtoğlu, Hasan
+- Türkiye'de Verimlilik, Büyüme ve Kriz (2005) | Taymaz, Erol, Suiçmez, Halit
+- Why Is Economic Theory Ignored in Environmental Policy Practice? (2005) | Schneider, Friedrich, Weck-Hannemann, Hannelore
+- İnsani Gelişme Kavramı ve Sağlıklı Yaşam Hakkı (2005) | Günsoy, Güler
+- Advances in mathematical economics (2006) | Kusuoka, Shigeo, Kusuoka, Shigeo, Yamazaki, Akira
+- Birleşmiş Milletler Kalkınma Programı İnsani Gelişme Endeksi ve Türkiye Açısından Değerlendirme (2006) | Demir Şeker, Sırma
+- Climate variability, predictability and climate risks: a European perspective (2006) | Unknown
+- Economic Integration In the Post-Soviet Space (2006) | Zhukov S.,, Reznikova O.
+- Frontiers in Water Resource Economics (2006) | Unknown
+- Modeling endogenous learning and imperfect competition effects in climate change economics (2006) | Viguier, Laurent, Barreto, Leonardo, Haurie, Alain
+- Philosophy Of Science (2006) | Bird, Alexander
+- Renewable energy resources (2006) | Twidell, John, Weir, Anthony D.
+- Resilience thinking: Sustaining ecosystems and people in a changing world (2006) | Walker, B., Salt, D.
+- Stability with growth: macroeconomics, liberalization and development (2006) | Stiglitz, Joseph E, Initiative for Policy Dialogue
+- The History and Meaning of the Journal Impact Factor (2006) | Garfield, Eugene
+- The RFF reader in environmental and resource policy (2006) | Unknown
+- The third chimpanzee: the evolution and future of the human animal (2006) | Diamond, Jared M.
+- Adapting agriculture to climate change (2007) | Howden, S. Mark, Soussana, Jean-François, Tubiello, Francesco N.
+- Aktif İstihdam Politikaları: Eleştirel Bir Yaklaşım (2007) | Dertli, Nail
+- An introductory note on the environmental economics of the circular economy (2007) | Andersen, Mikael Skou
+- Appropriate technologies to replenish soil fertility in southern Africa (2007) | Mafongoya, P. L., Bationo, A., Kihara, J.
+- Appropriate technologies to replenish soil fertility in southern Africa (2007) | Mafongoya, P. L., Bationo, A., Kihara, J.
+- Commentary: The Stern Review's Economics of Climate Change (2007) | Dasgupta, Partha
+- Money, distribution and economic policy: alternatives to orthodox macroeconomics (2007) | Unknown
+- Money, distribution and economic policy: alternatives to orthodox macroeconomics (2007) | Unknown
+- NBER International Seminar on Macroeconomics 2005 (2007) | National Bureau of Economic Research
+- Nature and the economy*: Nature and the economy (2007) | Dasgupta, Partha
+- Neoclassical economy in environmental protection (2007) | Slavík, Jan
+- Renewable energy: technology, economics, and environment (2007) | Unknown
+- Samuel Bowles’ “Microeconomics: Behavior, Institutions and Evolution” (2007) | Hollard, Guillaume
+- Sustainable development as a framework for developing country participation in international climate change policies (2007) | Halsnæs, Kirsten, Shukla, Priyadarshi
+- Uzun Süreli İşsizler ve Uzun Süreli İşsizliği Azaltmada İş-Kur'un Önemi (2007) | Alabaş, Aydın
+- Valuing ecosystem services as productive inputs (2007) | Barbier, E. B.
+- Waste Management in Turkey: National Regulations and Evolution of Implementation Results (2007) | Turkish Court of Accounts
+- A Cochrane pocketbook. Pregnancy and childbirth (2008) | Unknown
+- Changing the Political Climate on Climate Change (2008) | Daschle, Tom
+- ECOSYSTEM SERVICES AND ECONOMIC THEORY: INTEGRATION FOR POLICY-RELEVANT RESEARCH (2008) | Fisher, Brendan, Turner, Kerry, Zylstra, Matthew
+- Ecological Footprint (2008) | Wackernagel, M., Kitzes, J.
+- Economics and management of climate change: risks, mitigation and adaptation (2008) | Unknown
+- Economics and management of climate change: risks, mitigation and adaptation (2008) | Hansjürgens, Bernd, Antes, Ralf
+- Economics of the environment: theory and policy (2008) | Siebert, Horst
+- Global Food Price Inflation (2008) | Ahmed, Sadiq
+- Introductory Statistics with R (2008) | Dalgaard, Peter
+- Küresel İklim Değişikliği ve Türkiye (2008) | Kadıoğlu, Mikdat
+- The Economics of Climate Change (2008) | Stern, Nicholas
+- The Economics of Climate Change: American Economic Review Papers & Proceedings (2008) | Stern, Nicholas
+- The Theme Of Hunt In Cengiz Aytmatov's Pieces (2008) | Nemutlu, Özlem
+- The Theme Of Hunt In Cengiz Aytmatov's Pieces (2008) | Nemutlu, Özlem
+- The great contraction, 1929-1933 (2008) | Friedman, Milton, Schwartz, Anna J.
+- The invisible hand in economics: how economists explain unintended social consequences (2008) | Aydinonat, N. Emrah
+- Türkiye'de İşsizlik Sorunu ve Avrupa İstihdam Stratejisi (2008) | Eser, Araş Gör Burçin Yilmaz, Terzi̇, Prof Dr Harun
+- Türkiye'de İşsizliğin Özellikleri ve İşsizlikler Mücadele Politikaları (2008) | Bozdağlıoğlu Uyar, E. Yasemin
+- ULUSAL VARLIK FONLARI (2008) | Akbulak, Sevinç, Akbulak, Yavuz
+- İktisadi Büyüme (2008) | Taban, Sami
+- Carbon Capture and Storage: How Green Can Black Be? (2009) | Haszeldine, R. Stuart
+- Climate change and agriculture: an economic analysis of global impacts, adaptation and distributional effects (2009) | Mendelsohn, Robert O., Dinar, Ariel
+- Ekonomik Kalkınma ve İşbirliği Örgütüne Üye Ülkelelerin  2006 Yılı İnsani Gelişmişlik Düzeylerinin Analizi. (2009) | Karabulut, Tahsin, Kaya, Nurettin, Gürsoy, Zeynep
+- Environmental governance: an economic perspective (2009) | Lyon, Thomas P.
+- Resource and Environmental Economics (2009) | Neo, H.
+- Structural causes of the global financial crisis: a critical assessment of the 'new financial architecture' (2009) | Crotty, J.
+- THE RETURN OF DEPRESSION (2009) | Krugman, Paul
+- Tarımsal Fiyatlar, İstihdam ve Köylülüğün Kaderi (2009) | Boratav, Korkut
+- The Economic Effects of Climate Change (2009) | Tol, Richard S. J.
+- The Emergence of Natural Law and the Cosmopolis (2009) | Brown, Eric
+- The economics and politics of climate change (2009) | Unknown
+- The economics of climate change policies: macroeconomic effects, structural adjustments and technological change (2009) | Walz, Rainer, Schleich, Joachim
+- İktisadi Analiz (2009) | Akat, Asaf Savaş
+- İnsani Gelişme ve Türkiye (2009) | Gürses, Didem
+- 1980 Sonrası Türkiye'nin İşsizlik Yapısı ve Büyüme İlişkisi (2010) | Uyanık, Mehmet Ali
+- An Introduction to Sustainable Development (2010) | Elliott, J. A.
+- An introduction to climate change economics and policy (2010) | FitzRoy, Felix, Papyrakis, Elissaios
+- Assessment on vulnerability of sorghum to climate change in India (2010) | Srivastava, Aditi, Naresh Kumar, S., Aggarwal, P.K.
+- Climate Change and Food Security in Sub-Saharan Africa: A Systematic Literature Review (2010) | Thompson, Heather E., Berrang-Ford, Lea, Ford, James D.
+- Climate change and food security: adapting agriculture to a warmer world (2010) | Unknown
+- Climate change, water availability and future cereal production in China (2010) | Xiong, Wei, Holman, Ian, Lin, Erda
+- Ecological economics: Principles and applications (2010) | Daly, H. E., Farley, J.
+- Environmental Economics: Theory and Policy (2010) | Endres, Alfred
+- Governing climate change (2010) | Bulkeley, Harriet, Newell, Peter
+- Mathematical Optimization in Economics: Lectures given at the Centro Internazionale Matematico Estivo (C.I.M.E.) held in LÁquila, Italy, August 30 - September 7, 1965 (2010) | Unknown
+- Sustainable Finance and Banking (2010) | Jeucken, Marcel
+- Sürdürülebilir Gelişme Düşüncesinin Tarihsel Arka Planı (2010) | Bozlağan, Recep
+- The Routledge companion to philosophy of science (2010) | Unknown
+- Türkiye'de İşsizlik Sorunun Çözümlemesinde Uygulanan Ekonomi Politikalarının Analizi (2010) | Bekiroğlu, Cemil
+- Türkiye’de Okun Yasası, Asimetri  İlişkisi ve İstihdam Yaratmayan  Büyüme: Markov-Switching  Yaklaşımı (2010) | Barışık, Salih, Çevik, Emrah İsmail, Çevik Kırcı, Nüket
+- Understanding the Nature and Causes of Food Inflation (2010) | Chand, Ramesh
+- What Environmentalists Need to Know About Economics (2010) | Scorse, Jason
+- Biofuels: global impact on renewable energy, production agriculture and technological advancements (2011) | Unknown
+- Climate policy foundations: science and economics with lessons from monetary regulation (2011) | Whitesell, William C.
+- Ekonomik Krizler ve İşsizlik: 1980  Sonrası Türkiye Deneyimleri (2011) | Solmaz, E., Avcı, Mehmet
+- Managing Abundance to Avoid a Bust in Latin America (2011) | Kaufman, Martin, MKaufman@imf.org, Phillips, Steven
+- PARA POLİTİKASINDA ŞEFFAFLIK UYGULAMALARI: ÇEŞİTLİ ÜLKE ve TÜRKİYE DENEYİMLERİ (2011) | DEMİRHAN, Banu, DEMİRHAN, Erdal
+- Social Banks and the Future of Sustainable Finance (2011) | Weber, Olaf
+- Tarımsal Üretim Süreçlerindeki Değişimin Kırsal Alanda Kadın İstihdamına Etkileri: 1980 Sonrası Gelişmeler (2011) | Kulak, Esra
+- The Economics of Climate Change (2011) | Bhattacharyya, Subhes C.
+- The evolution of environmental thinking in economics (2011) | Halkos, George
+- Türkiye'de İktisadi Büyüme ve İstihdam: 1980-2008 (2011) | Haliloğlu, Arif
+- Türkiye'nin İnsani Gelişme Endeksi ve Endeks Sıralamasının Analizi (2011) | Demir Şeker, Sırma
+- 2001 Güçlü Ekonomiye Geçiş Programı ve İstihdam Üzerine Etkileri (2012) | Kol, Emine Nida, Karaçor, Zeynep
+- Authorship Trends and Collaboration Pattern in the Marine Sciences Literature : A Scientometric Study (2012) | Elango, B., Rajendran, P.
+- Basics of Environmental Economics (2012) | Wiesmeth, Hans
+- Climate Change (2012) | Fankhauser, Samuel
+- Climate management issues: economics, sociology, and politics (2012) | Gines, Julie K
+- Ecosystem Services in Biologically Diversified versus Conventional Farming Systems: Benefits, Externalities, and Trade-Offs (2012) | Kremen, Claire, Miles, Albie
+- Ekonomik Büyüme ve Çevresel Vergilerin Emisyon Miktarına Etkileri (2012) | Akar, Hakan
+- Ekonomik Büyüme ve İşsizlik Üzerine...Ekonomik Büyümenin Dinamikleri ve İstihdam: Kaynaklar ve Etkiler (2012) | Akkaya, Yüksel, Gürbüz, Rana
+- Handbook of the philosophy of science (2012) | Gabby, Dov M, Thagard, Paul, Woods, John
+- Hizmetler Sektörü İçinde Hizmet TicaretininYeri ve Karşılaştırmalı Bir Analiz (2012) | Özsağır, Arif, Akın, Aliye
+- International Trade Policies and Climate Change Governance (2012) | Rao, P. K.
+- Merkez Bankasi Borç Verme Faiz Oranlarinin Tüketici Kredisi Faiz Oranlari Üzerindeki Etkisinin Ampirik Analizi (2012) | İbicioğlu, Mustafa
+- The Right to Food (2012) | Golay, Christophe, Özden, Melik
+- The armchair economist: economics and everyday life (2012) | Landsburg, Steven E.
+- Turkey’s National Climate Change Adaptation Strategy and Action Plan 2011–2023 (2012) | Çevre ve Şehircilik Bakanlığı
+- Türkiye’de İşsizliğin Nedenleri: İstihdam Politikaları Üzerine Bir Değerlendirme (2012) | Ay, Sema
+- İktisat Metodolojisi (2012) | Demir, Ömer
+- İstihdamın Artırılmasında Aktif İşgücü Politikalarının Rolü (2012) | Çapar Diriöz, Sinem
+- Annex III, Glossary (2013) | Planton, Serge
+- Applications of mathematics in economics (2013) | Unknown
+- Bilim Felsefesi Işığında İktisat Metodolojisi (2013) | Kaymakçı, Özgün Burak
+- Climate Change, Climate Science and Economics: Prospects for an Alternative Energy Future (2013) | van Kooten, G. Cornelis
+- Climate Economics (2013) | Ackerman, Frank, Stanton, Elizabeth A
+- Climate economics: the state of the art (2013) | Ackerman, Frank, Stanton, Elizabeth A.
+- Creating a Eurasian Union. (2013) | Vymyatnina, Yulia, Antonova, Daria
+- Economic Analysis of Environmental Impacts (2013) | Dixon, John, Scura, Louise, Carpenter, Richard
+- Ekolojik Sorunların Çözümünde Derin Ekoloji Yaklaşımı (2013) | Kirişik, Fatih
+- Environmental Macroeconomics: Environmental Policy, Business Cycles, and Directed Technical Change (2013) | Fischer, Carolyn, Heutel, Garth
+- Environmental economics & management: theory, policy, and applications (2013) | Callan, Scott, Thomas, Janet M.
+- From Cost-Benefit to Institutional Analysis in The Economics of the Environment (2013) | Slavikova, Lenka
+- Genel jeoloji: temel ilkeleri (2013) | Lutgens, Frederick K, Tarbuck, Edward J, Tasa, Dennis
+- Gençlere Yönelik Aktif İstihdam Politikaları: Japonya, Kore, Çin ve Türkiye Örnekleri (2013) | Işık Erol, Sevgi
+- Human Development Report | United Nations Development Programme (2013) | Unknown
+- Human water consumption intensifies hydrological drought worldwide (2013) | Wada, Yoshihide, van Beek, Ludovicus P H, Wanders, Niko
+- Mathematical Modeling in Economics, Ecology and the Environment (2013) | Hritonenko, Natali, Yatsenko, Yuri
+- Mathematical statistics for economics and business (2013) | Mittelhammer, Ron
+- Reflections—Shaping Water Policy: What Does Economics Have to Offer? (2013) | Convery, Frank J.
+- Sustainable finance: A new paradigm (2013) | Fatemi, Ali M., Fooladi, Iraj J.
+- The New Energy Crisis (2013) | Unknown
+- The Theory of Economic Integration (Routledge Revivals) (2013) | Balassa, Bela
+- The climate casino: risk, uncertainty, and economics for a warming world (2013) | Nordhaus, William D.
+- The next economics: global cases in energy, environment, and climate change (2013) | Unknown
+- Theories of economic integration: A survey of the economic and political literature (2013) | Hosny, A. S.
+- Trade and the Environment: Theory and Evidence. (2013) | Copeland, Brian Richard, Taylor, Michael Scott
+- Türkiye işgücü piyasasında mesleklerin önemi: Hizmetler sektörü istihdamı, işgücü ve ücret kutuplaşması (2013) | Akçomak, Semih, Gürcihan, Burcu H.
+- Türkiye’de İstihdam-Büyüme İlişkisinin Analizi (1988-2011) (2013) | Altuntepe, Nihat, Güner, Tuğba
+- Türkiye’nin Genç İşsizlik Profili (2013) | Bayrakdar, Seda, İncekara, Ahmet
+- Used planet: A global history (2013) | Ellis, Erle C., Kaplan, Jed O., Fuller, Dorian Q.
+- Using Weather Data and Climate Model Output in Economic Analyses of Climate Change (2013) | Auffhammer, Maximilian, Hsiang, Solomon M., Schlenker, Wolfram
+- (11) Green Politics and the Concept of Nature: Heidegger, Nature and the Earth (2014) | Vaahtoranta, Reetta
+- 1980 Sonrası Türkiye Ekonomisinde  Büyümenin Kaynaklarının Ayrıştırılması (2014) | Kolsuz, Güneş, Yeldan, Alp Erinç
+- Author Index (2014) | Anthony, A
+- Carbon capture and storage update (2014) | Boot-Handford, Matthew E., Abanades, Juan C., Anthony, Edward J.
+- Challenging Assumptions: A sustainable view of sustainability (2014) | Maude, Alaric
+- Combating Climate Change through Improved Agronomic Practices and Input-Use Efficiency (2014) | Norton, Robert
+- ECON 307 19. SV Optimization in Economics (2014) | Unknown
+- Ekonomik Teori ve Analizin Tarihi (2014) | Ertuğrul, Ahmet
+- Eurasian Integration - The View from Within (2014) | Dutkiewicz, Piotr
+- Food and food poverty (2014) | Fitzpatrick, Tony
+- Foundations and Instruments of Environmental Economics (2014) | Bermejo, Roberto
+- How are excellent (highly cited) papers defined in bibliometrics? A quantitative analysis of the literature (2014) | Bornmann, L.
+- Innovative Approaches Towards Low Carbon Economics (2014) | Xu, Jiuping, Yao, Liming, Lu, Yi
+- Mathematical Methods in Economics and Social Choice (2014) | Schofield, Norman
+- Mathematical methods for economics (2014) | Klein, Michael W.
+- Oligopoller ve Tekelci Rekabet (Mikroekonomi / Rekabetin Çeşitleri) (2014) | Unknown
+- Population, Poverty, and Climate Change (2014) | Das Gupta, M.
+- Principles of Mathematical Economics (2014) | Vali, Shapoor
+- Reflections: Uncertainty and Decision Making in Climate Change Economics (2014) | Heal, Geoffrey, Millner, Antony
+- Routledge Handbook of Water Economics and Institutions (2014) | Unknown
+- Routledge Handbook of the Economics of Climate Change Adaptation (2014) | Markandya, Anil
+- Routledge handbook of the economics of climate change adaptation (2014) | Unknown
+- The Turkish Environmental Law No. 2872: An analysis (2014) | Erdoğdu, F.
+- Türkiye'de İşsizlik ve İşsizliği Azaltmaya Yönelik Politikalar: Tarihsel Bir Bakış (2014) | Durak, Şuayip, Kaya, Vedat
+- Avrasya Birliği'nin Türkiye İçin Alternatif Bir Entegrasyon Olabilirliğinin Etüdü (2015) | Özdemir, Mehmet Gökhan
+- Climate Change: Economics (2015) | Yohe, Gary W.
+- Climate Clubs: Overcoming Free-riding in International Climate Policy (2015) | Nordhaus, William
+- Climate change risks and adaptation: linking policy and economics (2015) | Unknown
+- Domestic microgeneration: renewable and distributed energy technologies, policies and economics (2015) | Unknown
+- Global Warming and the Green Paradox: A Review of Adverse Effects of Climate Policies (2015) | van der Ploeg, Frederick, Withagen, Cees
+- Global waste management outlook (2015) | DC Wilson, L Rodic, P Modak, R Soos, A Carpintero
+- Kalkınma İktisadının Yükselişi ve Düşüşü (2015) | Başkaya, Fikret
+- Mathematical Financial Economics: A Basic Introduction (2015) | Evstigneev, Igor V., Hens, Thorsten, Schenk-Hoppé, Klaus Reiner
+- Methodology and Economics (2015) | Pheby, John
+- Non-cooperative game theory (2015) | Fujiwara-Greve, Takako
+- Principles of Mathematical Economics II: Solutions Manual, Supplementary Materials and Supplementary Exercises (2015) | Vali, Shapoor
+- Research evaluation metrics (2015) | Das, Anup Kumar
+- Rising temperatures reduce global wheat production (2015) | Asseng, S., Ewert, F., Martre, P.
+- Routledge handbook of water economics and institutions (2015) | Unknown
+- Rural local institutions and climate change adaptation in forest communities in Cameroon (2015) | Peach Brown, H. Carolyn, Sonwa, Denis J.
+- The Superiority of Economists (2015) | Fourcade, Marion, Ollion, Etienne, Algan, Yann
+- The failure of neoclassical economics modelling and human behavioural ecology to satisfactorily explain the evolution of neolithic societies (2015) | Tisdell, Clement A., Svizzero, Serge
+- Türkiye ekonomisi (1838-2010): mali bagimlilik-büyüme-krizler ve siyasi sonuçları : zihniyet-borç-büyüme-istihdam : 1834-1914 ile 1980 sonrasi benzerlikler (2015) | Kurtoglu, Ramazan
+- Was verträgt unsere Erde noch? Wege in die Nachhaltigkeit (2015) | Jaeger, Jill
+- İnsani Gelişme Raporu | United Nations Development Programme (2015) | Unknown
+- A Glance to Renewable Energy Prospects: Unleashing Future Perspectives of Generating Energy with Potential Use of Renewables (2016) | Özdemir, Mehmet Gökhan
+- A comparative analysis of solid waste management in developed, developing and lesser developed countries (2016) | Mmereki, Daniel, Baldwin, Andrew, Li, Baizhan
+- Adaptation, Climate Change, Agriculture, and Water (2016) | Mendelsohn, Robert
+- Agrarian political economy and modern world capitalism: the contributions of food regime analysis (2016) | Bernstein, Henry
+- Agriculture and Environmental Kuznets Curves in the case of Turkey: evidence from the ARDL and bounds test (2016) | Dogan, Nezahat
+- Agriculture and Environmental Kuznets Curves in the case of Turkey: evidence from the ARDL and bounds test (2016) | Nezahat, Dogan
+- An introduction to climate change economics and policy (2016) | FitzRoy, Felix, Papyrakis, Elissaios
+- Climate change: a wicked problem: complexity and uncertainty at the intersection of science, economics, politics and human behavior (2016) | Incropera, Frank P.
+- Ecological Footprint Analysis of Canned Sweet Corn (2016) | Usubharatana, Phairat, Phungrassami, Harnpon
+- Economic Impacts of Climate Change in India’s Cities (2016) | Sridhar, Kala Seetharam
+- Eurasian Regionalisms and Russian Foreign Policy (2016) | Molchanov, Mikhail A.
+- Global Greenhouse Gas Emissions Data (2016) | US EPA, OAR
+- Influence of extreme weather disasters on global crop production (2016) | Lesk, Corey, Rowhani, Pedram, Ramankutty, Navin
+- Innovation, Agricultural Productivity and Sustainability in Turkey (2016) | OECD
+- Introduction to microeconomics (2016) | Dolan, Edwin G
+- Municipal Solid Waste Characterization According to Different Income Levels: A Case Study (2016) | Ozcan, Huseyin, Guvenc, Senem, Guvenc, Lokman
+- Our renewable future: laying the path for 100% clean energy (2016) | Heinberg, Richard, Fridley, David
+- Resolving the Climate Change Crisis (2016) | Lawn, Philip
+- Resolving the Climate Change Crisis: The Ecological Economics of Climate Change (2016) | Lawn, Philip
+- Resource economics: an economic approach to natural resource and environmental policy (2016) | Bergstrom, John C. (John Clark), Randall, Alan
+- Roads to Regionalism (2016) | Börzel, Tanja A., Goltermann, Lukas, Striebinger, Kai
+- Roads to regionalism genesis, design, and effects of regional organizations (2016) | Börzel, Tanja A
+- Role of Institutions, Infrastructures, and Technologies in Meeting Global Agricultural Water Challenge (2016) | Saleth, Rathinasamy Maria, Bassi, Nitin, Kumar, M. Dinesh
+- Sustainability assessment of renewables-based products: methods and case studies (2016) | Unknown
+- The Evaluation of Cereal Farms Using Ecological Footprint Method (2016) | Biekša, Kęstutis
+- The Use of Field Experiments in Environmental and Resource Economics (2016) | List, John A., Price, Michael K.
+- The book of R: a first course in programming and statistics (2016) | Davies, Tilman M.
+- The world’s road to water scarcity: shortage and stress in the 20th century and pathways towards sustainability (2016) | Kummu, M., Guillaume, J. H. A., de Moel, H.
+- Ulusal Atık Yönetimi ve Eylem Planı 2023 (2016) | T.C. Çevre ve Şehircilik Bakanlığı
+- Using climate information for drought planning (2016) | Finnessey, T, Hayes, M, Lukas, J
+- Water Futures and Solution (2016) | Burek, Peter, Satoh, Yusuke, Fischer, Günter
+- İktisadı Değiştirmek: Neoklasik İktisada Eleştirel Bir Yaklaşım (2016) | Acar, Tarık Gökmen
+- İnsani Gelişme Raporu 2016 | United Nations Development Programme (2016) | Unknown
+- A climate policy pathway for near- and long-term benefits (2017) | Shindell, D., Borgford-Parnell, N., Brauer, M.
+- A conceptual framework for ecological economics based on systemic principles of life (2017) | Capra, Fritjof, Jakobsen, Ove Daniel
+- Climate Change and Variability: What are the Risks for Nutrition, Diets, and Food Systems? (2017) | Fanzo, Jessica, McLaren, Rebecca, Davies, Claire
+- Complex Systems and Social Practices in Energy Transitions: Framing Energy Sustainability in the Time of Renewables (2017) | Unknown
+- European Central Bank -Conventional And/Or Unconventional Instruments For Monetary Policy (2017) | POPOSKA, Klimentina, MIHAJLOSKA, Elena, STANCHEVA-GİGOV, Iskra
+- Forecasting in Economics, Business, Finance and Beyond (2017) | Diebold, Francis X.
+- Homogeneous Catalysis with Renewables (2017) | Behr, Arno, Vorholt, Andreas J.
+- How to Write a Bibliometric Paper (2017) | Ebrahim, Nader Ale
+- Integrated Assessment Models of Climate Change Economics (2017) | Wang, Zheng, Wu, Jing, Liu, Changxin
+- Integrated Assessment Models of Climate Change Economics (2017) | Wang, Zheng, Gu, Gaoxiang, Liu, Changxin
+- Kenneth Arrow on Public Goods, Public Policy, and Environmental Economics (2017) | Dasgupta, Partha
+- Köppen-Geiger İklim Sınıflandırmasına Göre Türkiye’nin İklim Tipleri (2017) | Öztürk, Muhammed Zeynel, Çetinkaya, Gülden, Aydin, Selman
+- Lectures on Inequality, Poverty and Welfare (2017) | Villar, Antonio
+- Microeconomics (2017) | Roger, Arnold
+- Reconsidering the Impact of Climate Change on Global Water Supply, Use, and Management: (2017) | Unknown
+- Renewable Energy: Physics, Engineering, Environmental Impacts, Economics and Planning (2017) | Sørensen, Bent
+- Responses of crop yield growth to global temperature and socioeconomic changes (2017) | Iizumi, Toshichika, Furuya, Jun, Shen, Zhihong
+- Tabakalı İşgücü Piyasası Teorisine Göre Türkiye’de Özel-Hizmet Sektöründe İstihdamın Kalitesi (2017) | Kumaş, Handan, Çağlar, Atalay
+- Text mining in practice with R (2017) | Kwartler, Ted
+- Text mining with R: a tidy approach (2017) | Silge, Julia, Robinson, David
+- The Paris Agreement (2017) | Blau, Judith
+- Türkiye'de Kayıtdışı İstihdam ve Önlemeye Yönelik Stratejiler (2017) | Mahi̇roğullari, Adnan
+- Yeşil Düşünce (2017) | Şahin, Ümit
+- İklim Değişikliği ve Tarımsal Üretim Üzerine Etkileri (2017) | Erk, Nejat
+- 1980 sonrası Türkiye'de sosyal politikalar ve uygulamaları (2018) | Bitmez, Mehtap Nur
+- 2014 İnsani Gelişme Raporu | United Nations Development Programme (2018) | UNDP
+- A Common Sense Approach to the Right to Food (2018) | Hossain, Naomi, te Lintelo, Dolf
+- Achieving Sustainable Development Goals Through Effective Domestic Laws and Policies on Environment and Climate Change (2018) | Ladan, Muhammed Tawfiq
+- Adaptive and Inclusive Watershed Management: Assessing policy and institutional support in Kenya (2018) | Puzyreva, P.
+- Aktif İstihdam Politikaları ve Türkiye'de İş-Kur Tarafından Uygulanan Aktif İstihdam Politikalarına Güncel Bir Bakış (2018) | Kasapoğlu, Mehmet Muharrem, Murat, Sedat
+- Aktif İstihdam Politikaları ve Türkiye'de İş-Kur Tarafından Uygulanan Aktif İstihdam Politikalarına Güncel Bir Bakış (2018) | Kasapoğlu, Mehmet Muharrem
+- Building a Resilient and Sustainable Agriculture in Sub-Saharan Africa (2018) | Unknown
+- Carbon capture and storage (CCS): the way forward (2018) | Bui, Mai, Adjiman, Claire S., Bardow, André
+- Climate Change Science: The Facts (2018) | Armstrong, Anne K., Krasny, Marianne E., Schuldt, Jonathon P.
+- Climate Change, Agriculture, and Economic Development in Ethiopia (2018) | Yalew, Amsalu, Hirte, Georg, Lotze-Campen, Hermann
+- Climate Governance: Implementing Water Sector Adaptation Strategies in Pakistan (2018) | Kanwar, Muhammad Javed Iqbal, Khan, Muhammed Irfan
+- Climate and development: enhancing impact through stronger linkages in the implementation of the Paris Agreement and the Sustainable Development Goals (SDGs) (2018) | Gomez-Echeverri, Luis
+- Climate change and sustainable development issues: arguments and policy initiatives (2018) | Rasiah, Rajah, Kari, Fatimah, Sadoi, Yuri
+- Cost benefit analysis and the environment: further developments and policy use (2018) | Atkinson, Giles, Braathen, Nils Axel, Groom, Ben
+- Environmental and Natural Resource Economics (2018) | Tietenberg, Tom, Lewis, Lynne
+- Environmental and natural resource economics (2018) | Tietenberg, Thomas H., Lewis, Lynne
+- Evolving diversity and interdependence of capitalisms: transformations of regional integration in EU and Asia (2018) | Unknown
+- Evolving diversity and interdependence of capitalisms: transformations of regional integration in EU and Asia (2018) | Unknown
+- Eğitime Erişim, Yoksulluk ve Formel/Enformel İş-gücü Olarak Üniversite Gençliği: “İstihdam İçin mi Eğitim? Eğitim İçin mi İstihdam?” (2018) | Aygül, Hasan Hüseyin
+- Feed-in tariffs and the economics of renewable energy (2018) | Yamamoto, Yoshihiro
+- Front-matter (2018) | Unknown
+- Global supply chain and operations management: a decision-oriented introduction to the creation of value (2018) | Ivanov, Dimitry, Tsipoulanidis, Alexander, Schönberger, Jörn
+- Historical Perspective of Soil Research in Turkey (2018) | Günal, Hikmet, Haktanır, Koray, Kapur, Selim
+- Introduction to Earth Data Science Earth Lab CU Boulder (2018) | Unknown
+- Introduction to the Eurasian Economic Union (2018) | Vinokurov, E. Ju
+- Kayıt Dışı İstihdam ve Genç İşsizlik Ekonomik Büyüme ile İlişkili Olabilir Mi? Türkiye İçin Ekonometrik Bir Analiz (2018) | Bölükbaş, Mehmet
+- Lectures on microeconomics: the big questions approach (2018) | Pancs, Romans
+- Lectures on the mathematical method in analytical economics (2018) | Schwartz, Jacob T.
+- Linear models and time-series analysis: regression, ANOVA, ARMA and GARCH (2018) | Paolella, Marc S.
+- Linking climate policies to advance global mitigation (2018) | Mehling, Michael A., Metcalf, Gilbert E., Stavins, Robert N.
+- Microeconomics. (2018) | Colander, David
+- Oyun teorisi (2018) | Özari, Çiğdem, Erol, Esra Demir, Ulusoy, Veysel
+- Principles of environmental economics and sustainability: an integrated economic & ecological approach (2018) | Hussen, Ahmed M.
+- Quantifying Economic Damages from Climate Change (2018) | Auffhammer, Maximilian
+- Reframing the sustainable development goals to achieve sustainable development in the Anthropocene&#8212;a systems approach (2018) | Lim, Michelle M. L., Søgaard Jørgensen, Peter, Wyborn, Carina A.
+- Regional policies and european integration: from policy to identity (2018) | Braun, Julie Anna
+- Russian foreign policy in Eurasia: national interests and regional integration (2018) | Aṙak̕elyan, Lilia A.
+- Text mining: concepts, implementation, and big data challenge (2018) | Unknown
+- The Geopolitics of Renewables (2018) | Unknown
+- The New Palgrave Dictionary of Economics (2018) | Unknown
+- Türkiye’de Teknolojik İlerleme İle İstihdam  Yapısındaki Değişme Projeksiyonu: Endüstri 4.0  Bağlamında Ampirik Analiz (2018) | Aydın, Erdal
+- Water and the Private sector: Accelerating Sustainable Corporate Water Stewardship and Collective Action in Pakistan (2018) | Khalid, Imran Saqib, Batool, Samavia, Khaver, Ahmad Awais
+- What a Waste 2.0: A Global Snapshot of Solid Waste Management to 2050 (2018) | Kaza, Silpa, Yao, Lisa C., Bhada-Tata, Perinaz
+- İstanbul İklim Değişikliği Eylem Planı (2018) | İstanbul Büyükşehir Belediyesi
+- A Review of the Linkages between Climate Change, Agricultural Sustainability and Poverty in Malaysia (2019) | Siwar, Chamhuri, Alam, Md. Mahmudul, Murad, Wahid
+- AR4 WGI Annexes: (1)Glossary, (2)Authors, (3)Reviewers, (4)Acronyms - Annexes. Glossary A-D (2019) | Unknown
+- Agroclimatic indicators from 1951 to 2099 derived from climate projections (2019) | Copernicus Climate Change Service
+- Agrometeorological indicators from 1979 up to 2019 derived from reanalysis (2019) | Copernicus Climate Change Service
+- Ana Akım İktisat ve İktisadi Düşünceler Tarihi (2019) | Bocutoğlu, Ersan
+- Avrasya Birliği Projesi ve Türkiye İçin Alternatif Bir Entegrasyon Olabilirliği (2019) | Kaya, Nuray
+- Behavioural Economics of Climate Change: New Empirical Perspectives (2019) | Udalov, Vladimir
+- Behavioural Economics of Climate Change: New Empirical Perspectives (2019) | Udalov, Vladimir
+- Bibliometric Review of the Knowledge Base on Healthcare Management for Sustainability, 1994–2018 (2019) | Punnakitikashem, Prattana, Hallinger, Philip
+- Climate Change Impacts on Basin Agro-ecosystems (2019) | Unknown
+- Climate Change Impacts on Basin Agro-ecosystems (2019) | Unknown
+- Climate Change and Agriculture: A Historical Analysis (2019) | Uprety, Dinesh Chandra, Mura, Jyostna Devi, Reddy, V. R.
+- Climate Change and Food Security: A Test of U.S. Leadership in a Fragile World (2019) | Chase, Sova, Flowers, Kimberly, Man, Christian
+- Climate Change and Global Development: Market, Global Players and Empirical Evidence (2019) | Unknown
+- Climate Smart Agriculture Technologies for Environmental Management: The Intersection of Sustainability, Resilience, Wellbeing and Development (2019) | Venkatramanan, V., Shah, Shachi
+- Climate change and global development: market, global players and empirical evidence (2019) | Unknown
+- Climate change mitigation potential of carbon capture and utilization in the chemical industry (2019) | Kätelhön, Arne, Meys, Raoul, Deutz, Sarah
+- Climate economics: economic analysis of climate, climate change and climate policy (2019) | Tol, Richard S. J.
+- Connecting climate action with other Sustainable Development Goals (2019) | Fuso Nerini, Francesco, Sovacool, Benjamin, Hughes, Nick
+- Consequences of agricultural total factor productivity growth for the sustainability of global farming: accounting for direct and indirect land use effects (2019) | Villoria, Nelson
+- Defying the Footprint Oracle: Implications of Country Resource Trends (2019) | Wackernagel, Mathis, Lin, David, Evans, Mikel
+- Economics for people and the planet: inequality in the era of climate change (2019) | Boyce, James K.
+- Enhancing agricultural sustainability and productivity under changing climate conditions through improved agroforestry practices in smallholder farming systems in Sub-Saharan Africa (2019) | Nyong, P. Awazi, Martin, N. Tchamba
+- Evaluando los stakeholders de la Economía del Bien Común (2019) | Mora Rodríguez, Alejandro, López Monllor, Carlos, Hilliard, Ivan
+- Externality, Origins and Classifications (2019) | Boudreaux, Donald J., Meiners, Roger
+- Food Inequality, Injustice, and Rights (2019) | D’Odorico, Paolo, Carr, Joel A, Davis, Kyle F
+- Food and Earth Systems: Priorities for Climate Change Adaptation and Mitigation for Agriculture and Food Systems (2019) | Loboguerrero, Ana, Campbell, Bruce, Cooper, Peter
+- Foundations of Environmental Economics (2019) | Buchholz, Wolfgang, Rübbelke, Dirk
+- Foundations of environmental economics (2019) | Buchholz, Wolfgang, Rübbelke, Dirk T. G.
+- Gender and conservation agriculture in sub-Saharan Africa: a systematic review (2019) | Wekesah, Frederick M., Mutua, Edna N., Izugbara, Chimaraoke O.
+- Gender and conservation agriculture in sub-Saharan Africa: a systematic review (2019) | Wekesah, Frederick M., Mutua, Edna N., Izugbara, Chimaraoke O.
+- Impact of Climate Change on Agricultural Total Factor Productivity Based on Spatial Panel Data Model: Evidence from China (2019) | Zhong, Zhangqi, Hu, Yiqin, Jiang, Lei
+- Impact of Climate Change on Agricultural Total Factor Productivity Based on Spatial Panel Data Model: Evidence from China (2019) | Zhong, Zhangqi, Hu, Yiqin, Jiang, Lei
+- Increased atmospheric vapor pressure deficit reduces global vegetation growth (2019) | Yuan, Wenping, Zheng, Yi, Piao, Shilong
+- International Trade and Regional Economies: The Impacts of European Integration on the United States (2019) | Hayward, David J.
+- Introduction: Economics and Environmental Degradation (2019) | Buchholz, Wolfgang, Rübbelke, Dirk
+- Kadın İstihdamına Yönelik Uygulanan Sosyal Politikalar: 1980 Sonrası Türkiye Örneği (2019) | Ortaç, Merve
+- Kısa Vadeli Sermaye Hareketlerinin Seçili Makroekonomik Değişkenler Üzerindeki Etkileri (2019) | Kaçar, Ekrem
+- Mathematical economics: prelude to the neoclassical model (2019) | Yu, Kam
+- Microeconomics (2019) | Goolsbee, Austan, Levitt, Steven, Syverson, Chad
+- Microeconomics (2019) | Acemoglu, Daron, Laibson, David I., List, John A.
+- Microeconomics (2019) | Hubbard, R. Glenn, O'Brien, Anthony Patrick
+- National Climate Change Adaptation Strategy and Action Plan (2019) | Republic of Turkey Ministry of Environment and Urbanization
+- National Waste Management Strategy and Action Plan (2019) | Turkish Ministry of Environment and Urbanization
+- Neoliberalising the food regime ‘amongst its others’: the right to food and the state in India (2019) | Jakobsen, Jostein
+- Renewables for Energy Access and Sustainable Development in East Africa (2019) | Hafner, Manfred, Falchetta, Giacomo, Occhiali, Giovanni
+- Sanayi Strateji Belgesi 2023 (2019) | T.C. Sanayi ve Teknoloji Bakanlığı
+- Soil and Crop Management Strategies to Ensure Higher Crop Productivity within Sustainable Environments (2019) | Shah, Farooq, Wu, Wei
+- The Integrated Approach to Sustainable Development: The Case of Energy Efficiency and Solid Waste Management (2019) | Vertakova, Yulia V., Plotnikov, Vladimir A.
+- The Post Soviet Regional Integration Process (2019) | Ertürk, Muhsin
+- The economics of renewable energy in the Gulf (2019) | Unknown
+- The sustainable development goals and 1.5°C climate change (2019) | Motta, Raquel De Paiva Serôa Da
+- The technological and economic prospects for CO2 utilization and removal (2019) | Hepburn, Cameron, Adlen, Ella, Beddington, John
+- Theoretical and empirical analysis in environmental economics (2019) | Nakayama, Keiko
+- Turkey profile - Timeline (2019) | Unknown
+- Turkey’s National Climate Action Plan (2019) | United Nations Development Programme
+- Turkey’s Resilient Cities Programme (2019) | United Nations Development Programme.
+- Türkiye Tarım Sektöründe Emek Verimliliği ve İstihdam İlişkisinin İncelenmesi (2019) | Ağazade, Seymur, Eştürk, Özlem
+- Türkiye’de genç işsizlik sorunu ve bu sorunun çözümüne yönelik istihdam politikaları (2019) | Akgün, Mehtap
+- Uluslararası Sermaye Hareketleri, Ticaret ve Büyüme Üzerine Bir İnceleme (2019) | YÜCETÜRK, Hüseyin Cihan
+- Waiting, and Waiting, for the Global Renminbi (2019) | Unknown
+- Waste Mismanagement in Developing Countries: A Review of Global Issues (2019) | Ferronato, Navarro, Torretta, Vincenzo
+- Üretimin su ayak izinin incelenmesi: Diyarbakır ili için bir vaka çalışması (2019) | Muratoğlu, Abdullah
+- İSLAM İŞ BİRLİĞİ TEŞKİLATI VE RUSYA İKİLİ İLİŞKİLERİNİN EKONOMİK VE SİYASAL İLİŞKİLER AÇISINDAN TARİHSEL GELİŞİMİ (2019) | Kutval, Yunus, Özdemir, Mehmet Gökhan
+- İklim, İklim Değişikliği ve Su İlişkisi (2019) | Demircan, Mesut
+- İlinek Nedir, Ne Demektir? » Felsefe.Gen.TR (2019) | Unknown
+- İnsani Gelişme Raporu 2019: 21. Yüzyılda İnsani Gelişmedeki Eşitsizlikler | United Nations Development Programme (2019) | Unknown
+- İşsizliğin Çözümünde Uygulanan Aktif İstihdam Politikalarının Etkinliği Üzerine Genel Bir Değerlendirme (2019) | Bayrakdar, Seda
+- 2020 İnsani Gelişme Raporu (2020) | Unknown
+- A Fundamental Reformation of Neoclassical Economics (2020) | Nomidis, Dimitrios
+- A first course in mathematical economics (2020) | Roy, Sunanda
+- A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part II: synthesizing the insights (2020) | Haberl, Helmut, Wiedenhofer, Dominik, Virág, Doris
+- A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part II: synthesizing the insights (2020) | Haberl, Helmut, Wiedenhofer, Dominik, Virág, Doris
+- Agronomy-Food Security-Climate Change and the Sustainable Development Goals (2020) | Amanullah, Khalid, Shah
+- Behavioral economics and finance leadership: nudging and winking to make better choices (2020) | Puaschunder, Julia M.
+- Behavioral science and public policy (2020) | Sunstein, Cass R.
+- CO₂ and Greenhouse Gas Emissions (2020) | Ritchie, Hannah, Roser, Max, Rosado, Pablo
+- Climate Change Responses and Sustainable Development: Integration of Mitigation and Adaptation (2020) | Bangar, Vaibhav, Goyal, Rajat, Pandey, Rajiv
+- Davranışsal İktisat 101 | Bölüm 1 | Ekonomik Balonlar, Lale Çılgınlığı ve Diğerleri (2020) | Unknown
+- Designing for behavior change: applying psychology and behavioral economics (2020) | Wendel, Stephen
+- Drainage Practices in Turkey (2020) | Tas, Ismail, Yildirim, Yusuf Ersoy
+- Drivers of Food Price Inflation in Turkey (2020) | Worldbank
+- Ecological Thinking and Agricultural Sustainability (2020) | Raman, Anantanarayanan
+- Ecological-Economic Modelling for Biodiversity Conservation (2020) | Drechsler, Martin
+- Ecological-economic modelling for biodiversity conservation (2020) | Drechsler, Martin
+- Economics of climate change (2020) | Żylicz, Tomasz
+- Esnek İstihdam Genç İşsizliğin Çaresi mi? İşsizlik Göstergeleri Üzerinden Bir Tartışma (2020) | Ulukan, Umut
+- Food (2020) | Colosio, Valerio
+- Free trade agreements and global labour governance the european union's (2020) | Unknown
+- Global climate change and environmental policy: agriculture perspectives (2020) | Venkatramanan, V, Shah, Shachi, Prasad, Ram
+- How Can Sustainable Agriculture Increase Climate Resilience? A Systematic Review (2020) | El Chami, Daniel, Daccache, André, El Moujabber, Maroun
+- How Can Sustainable Agriculture Increase Climate Resilience? A Systematic Review (2020) | El Chami, Daniel, Daccache, André, El Moujabber, Maroun
+- How Can Sustainable Agriculture Increase Climate Resilience? A Systematic Review (2020) | El Chami, Daniel, Daccache, André, El Moujabber, Maroun
+- How effective is government spending on environmental protection in a developing country?: An empirical evidence from Iran (2020) | Moshiri, Saeed, Daneshmand, Arian
+- IMPLEMENTATION OF SUSTAINABLE DEVELOPMENT GOALS TO MAKASSAR ZERO WASTE AND ENERGY SOURCE (2020) | Saleh, Haeruddin, Surya, Batara, Hamsina, H.
+- Integrating Climate Change Adaptation and Mitigation into Sustainable Development Planning: The Policy Dimension (2020) | Alemaw, Berhanu F., Simatele, Danny
+- Introduction to Optimization Techniques (2020) | Unknown
+- Lecture notes on resource and environmental economics (2020) | Fisher, Anthony C.
+- Metaeconomics: tempering excessive greed (2020) | Lynne, Gary D.
+- Microeconomics (2020) | Besanko, David, Braeutigam, Ronald R., Gibbs, Michael
+- Modelling the Economics of the New Normal: A Discussion Paper on Methodology and Macro Modelling for a Post-Coronavirus World (2020) | Peña, Paul John
+- Nobel laureate William Nordhaus: The economics of climate change (2020) | Unknown
+- Oligopol Piyasalar Bölüm 1 Yapısı, Karşılıklı etkileşim ve Nash dengesi (2020) | Unknown
+- Oligopol Piyasalar Bölüm 2 Cournot , Bertrand, Stackelberg modelleri (2020) | Unknown
+- On measurement and continuity in neoclassical economics: The Pareto-Cassel controversy, 1899-1902 (2020) | Arthmar, Rogério, McLure, , Michael
+- Prices and quantities: fundamentals of microeconomics (2020) | Vohra, Rakesh V.
+- Principles of microeconomics (2020) | Case, Karl E., Fair, Ray C., Oster, Sharon M.
+- Principles of microeconomics (2020) | Mankiw, N. Gregory, Kneebone, Ronald D, McKenzie, Kenneth J
+- Refuge in a moving world: tracing refugee and migrant journeys across disciplines (2020) | Fiddian-Qasmiyeh, Elena
+- Renewable Energy Statistics 2019 (2020) | Republic of Turkey Ministry of Energy and Natural Resources
+- Renewables: a review of sustainable energy supply options (2020) | Elliott, David
+- Rethinking the economics of rural water in Africa (2020) | Hope, Rob, Thomson, Patrick, Koehler, Johanna
+- Rethinking the economics of water: an assessment (2020) | Garrick, Dustin E, Hanemann, Michael, Hepburn, Cameron
+- Seçilmiş OECD Ülkelerinde Çevre Vergilerinin Çevre Kirliliği Üzerindeki Etkileri: Yapısal Kırılmalı Nedensellik Testinden Kanıtlar (2020) | Aydin, Mücahit
+- State of the global climate 2020 : provisional report. (2020) | World Meteorological Organisation
+- Strategic priorities in competitive environments: multidimensional approaches for business success (2020) | Unknown
+- Sustainable Cities and Communities. (2020) | Ministry of Environment and Urbanization of the Republic of Turkey.
+- The Beginnings of Behavioral Economics (2020) | Unknown
+- The Economics of Climate Change (2020) | Chi, Joseph, Pellerin, Mathieu, Rodriguez, Jacobo
+- The Rise and Fall of the Carbon Dioxide Theory of Climate Change (2020) | Fleming, Rex J.
+- The ecological modernization capacity of Japan and Germany: comparing nuclear energy, renewables, automobility and rare earth policy (2020) | Unknown
+- The link between carbon emissions, agricultural output and industrial output: Evidence from south africa (2020) | Sibanda, Mabutho, Ndlela, Hlengiwe
+- The microeconomics of wellbeing and sustainability: recasting the economic process (2020) | Becchetti, Leonardo, Bruni, Luigino, Zamagni, Stefano
+- The new environmental economics: sustainability and justice (2020) | Laurent, Éloi
+- Towards zero carbon and zero poverty: integrating national climate change mitigation and sustainable development goals (2020) | Caetano, Tara, Winkler, Harald, Depledge, Joanna
+- Turkey’s Interest in Closer Relations with Russia: Global, Regional and Domestic Dynamics (2020) | Erşen, Emre, Köstem, Seçkin
+- Türkiye Ekonomisinde Toplam Faktör  Verimliliğinin Seyri: Sektörel Bakış, 1980-2018* (2020) | Bakış, Ozan, Acar, Uğurcan
+- Understanding Climate-Security Risks: A Mechanism-based Approach (2020) | Imran, Zafar
+- Waste Management (2020) | Ministry of Environment and Urbanization of the Republic of Turkey
+- Water and climate change (2020) | Unknown
+- Working Hours (2020) | Giattino, Charlie, Ortiz-Ospina, Esteban, Roser, Max
+- World of Change: Global Temperatures (2020) | Unknown
+- bibliometric analysis using Scopus database - workshop on zoom (2020) | Unknown
+- İstihdam Politikaları Bağlamında Geçmişten Günümüze İş-Kur'un Rolü ve Önemi İle İş-Kur İçin Öneriler (2020) | Burhan Göcen, Merve
+- 9 Traditional Festivals In Turkey To Experience A Positive Spell (2021) | Unknown
+- A Primer on Carbon Tax Relief for Farmers (2021) | Dobson, Sarah
+- Advanced microeconomics (2021) | Wiese, Harald
+- Agriculture 4.0: Is Sub-Saharan Africa Ready? (2021) | Jellason, Nugun P., Robinson, Elizabeth J. Z., Ogbaga, Chukwuma C.
+- Agriculture 4.0: Is Sub-Saharan Africa Ready? (2021) | Jellason, Nugun P., Robinson, Elizabeth J. Z., Ogbaga, Chukwuma C.
+- An introduction to international economics: new perspectives on the world economy (2021) | Reinert, Kenneth A.
+- Bibliometric Analysis of Islamic Finance Literature (2021) | Çürük, Suna AKTEN, Kaynar, Zülfiye
+- COP26 World Leaders Summit- Statement on the Breakthrough Agenda (2021) | Messetchkova, Iana
+- Changing patterns of capital flows (2021) | Unknown
+- Climate Change Economics between Europe and China: Long-Term Economic Development of Divergence and Convergence (2021) | Pei, Qing
+- Climate Change and Sustainability of Agriculture in Bangladesh (2021) | Khan, Nazmul Ahsan
+- Climate Change and the UN 2030 Agenda for Sustainable Development (2021) | Ermolina, Marina, Matveevskaya, Anna, Baranuk, Mikhail
+- Climate Change in Southeast Asia and Surrounding Areas (2021) | Yang, Song, Wu, Renguang, Jian, Maoqiu
+- Climate Crisis Economics (2021) | Mackintosh, Stuart P. M.
+- Climate Economics: A Call for More Pluralism And Responsibility (2021) | Roos, Michael, Hoffart, Franziska M.
+- Climate Smart Sustainable Agriculture: Integrated Steps Towards Resilient Farms (2021) | Loures, Luis, Ferreira, Paulo, Loures, Ana
+- Climate economics: a call for more pluralism and responsibility (2021) | Roos, Michael W. M., Hoffart, Franziska
+- Combating global challenges – climate change, biodiversity loss and poverty simultaneously: Unachievable goal or the only way forward? (2021) | Vasiliev, Denis
+- Econometric Analysis of the Impact of Climate Change on the Sustainability of Agricultural Production in Ukraine (2021) | Skrypnyk, Andriy, Zhemoyda, Oleksandr, Klymenko, Nataliia
+- Economics and climate emergency (2021) | Gills, Barry, Morgan, Jamie
+- Education at a Glance 2021: OECD Indicators (2021) | OECD
+- Escaping from bad decisions: a behavioral decision-theoretic perspective (2021) | Takemura, Kazuhisa
+- Eurasian Economic Union: Current Concept and Prospects (2021) | Kargina, Larisa, Masolletti, Mattia
+- Evidence of Climate Change Coping and Adaptation Practices by Smallholder Farmers in Northern Ghana (2021) | Antwi-Agyei, Philip, Nyantakyi-Frimpong, Hanson
+- First waste-to-energy plant in Turkey opens (2021) | United Nations Industrial Development Organization
+- Food Prices (2021) | Roser, Max, Ritchie, Hannah
+- Food for All: International Organizations and the Transformation of Agriculture (2021) | Lele, Uma, Agarwal, Manmohan, Baldwin, Brian C.
+- Food for All: International Organizations and the Transformation of Agriculture (2021) | Lele, Uma, Agarwal, Manmohan, Baldwin, Brian C.
+- Genç İşsizlik ve İstihdam, Eğitim veya Öğretimde Olmayan Gençler: AB ve Türkiye Açısından Bir Değerlendirme (2021) | Göl, Vicdan, Dural, Betül Yüce
+- Global Value Chains and Deep Integration (2021) | Baccini, Leonardo, Fiorini, Matteo, Hoekman, Bernard
+- Household Budget Survey 2020 (2021) | Turkish Statistical Institute.
+- How to use Bibliometric Analysis for Writing a Research Paper (2021) | Unknown
+- Impact of Climate Change on Agriculture and Its Mitigation Strategies: A Review (2021) | Malhi, Gurdeep Singh, Kaur, Manpreet, Kaushik, Prashant
+- Introduction to Climate Change Management: Transitioning to a Low-Carbon Economy (2021) | Shideler, John C., Hetzel, Jean
+- Introduction: economic methodology and philosophy of economics twenty years since the Millennium (2021) | Davis, John, Hands, D. Wade
+- Link between Technically Derived Energy Efficiency and Ecological Footprint: Empirical Evidence from the ASEAN Region (2021) | Khan, Dilawar, Nouman, Muhammad, Popp, József
+- Measuring the effectiveness of the Chinese Certified Emission Reduction scheme in mitigating CO2 emissions: A system dynamics approach (2021) | Ye, Fei, Xiong, Xueying, Li, Lixu
+- Mechanisms of Global Warming Impact on the Sustainable Development Goals (2021) | Krotova, Tatyana G., Zavyalova, Elena B.
+- Microeconomics (2021) | Perloff, Jeffrey
+- Microeconomics and behavior (2021) | Frank, Robert H.
+- Microeconomics for the critical mind: mainstream and heterodox analyses (2021) | Petri, Fabio
+- Municipal solid waste (2021) | Environmental Protection Agency
+- OECD Economic Surveys: Turkey 2021 (2021) | OECD
+- OECD PEER REVIEWS OF COMPETITION LAW AND POLICY: EURASIAN ECONOMIC UNION (2021) | Nasli, AOUKA
+- Renewable energy in India: economics and market dynamics (2021) | Deo, Pramod, Chatterjee, Sushanta K., Modak, Shrikant
+- Strategies for the global economic system for 2030 (2021) | Unknown
+- Sustainable Agricultural Total Factor Productivity and Its Spatial Relationship with Urbanization in China (2021) | Li, Jinkai, Chen, Jueying, Liu, Heguang
+- Sustainable Development Goal 13: Climate action (2021) | United Nations
+- Systematic review and meta-analysis of global food security projections to 2050 (2021) | Dijk, Michiel van, Morley, Tom, Rau, Marie Luise
+- Sürdürülebilirlik ve Gıda Güvenliği: Türkiye ve İİT Üye Ülkelerinin Karşılaştırmalı Analizi (2021) | Ezeroğlu, Erdoğan Burak
+- Tarımsal Üretim Etmenlerimizin Katma Değer ve Verimlilik Değerlendirmesi (2021) | Atabaş, Serkan
+- Teaching climate complacency: mainstream economics textbooks and the need for transformation in economics education (2021) | Gills, Barry, Morgan, Jamie
+- The Data Science + Climate Change Curriculum (2021) | Editors, T. D. S.
+- The Distributional Implications of Climate Policies Under Uncertainty (2021) | Eydam, Ulrich
+- The Eurasian Economic Union: Repaving Central Asia’s Road to Russia? (2021) | Madiyev, Oybek
+- The PRISMA 2020 statement: an updated guideline for reporting systematic reviews (2021) | Page, Matthew J, McKenzie, Joanne E, Bossuyt, Patrick M
+- The Palgrave handbook of international energy economics (2021) | Hafner, Manfred, Luciani, Giacomo
+- The Routledge Handbook of Philosophy of Economics (2021) | Heilmann, Conrad, Reiss, Julian
+- The appallingly bad neoclassical economics of climate change (2021) | Keen, Steve
+- The degrowth alternative: a path to address our environmental crisis? (2021) | Stuart, Diana, Gunderson, Ryan, Petersen, Brian
+- The degrowth alternative: a path to address our environmental crisis? (2021) | Stuart, Diana, Gunderson, Ryan, Petersen, Brian
+- The economics of climate change: no action not an option (2021) | Swiss Re
+- The history of pollution "externalities" in economic thought (2021) | Spash, Clive L.
+- The limits of Europe: membership norms and the contestation of regional integration (2021) | Thomas, Daniel C.
+- The right to food: the global campaign to end hunger and malnutrition (2021) | Adams, Francis
+- The road to a low emission society: Costs of interacting climate regulations (2021) | Bye, Brita, Kaushal, Kevin R., Rosnes, Orvika
+- Thriving, Not Just Surviving in Changing Times: How Sustainability, Agility and Digitalization Intertwine with Organizational Resilience (2021) | Miceli, Antonio, Hagen, Birgit, Riccardi, Maria Pia
+- Turkey (2021) | Unknown
+- Turkey Maps & Facts (2021) | Unknown
+- Türkiye'de Gıda Sistemlerinin Dönüşümüne Doğru: BM 2021 Sürdürülebilir Gıda Sistemleri Zirvesi Ulusal Diyalog Süreci (2021) | Avrupa Birliği Dış İlişkiler Genel Müdürlüğü, Tarım ve Orman Bakanlığı
+- Türkiye's Green Development Initiative (2021) | Türkiye Presidency's Directorate of Communications
+- Word migration report 2022 (2021) | Unknown
+- World Bank Group Climate Change Action Plan 2021–2025: Supporting Green, Resilient, and Inclusive Development (2021) | Group, World Bank
+- İKLİM DEĞİŞİKLİĞİNİN KIRSAL ALANDAKİ ETKİSİ VE ALTERNATİF ARAYIŞLAR: SOSYOLOJİK BİR YAKLAŞIM (2021) | Kızmaz, Zahir
+- İklim Değişikliğinin Akdeniz’deki Etkileri Endişe Verici (2021) | WWF
+- A global dataset for the projected impacts of climate change on four major crops (2022) | Hasegawa, Toshihiro, Wakatsuki, Hitomi, Ju, Hui
+- Alfred Marshall, Evolutionary Economics and Climate Change: Fourth Annual Tiziano Raffaelli Lecture, STOREP Conference, Rome, October 2020 (2022) | Dow, Sheila
+- An outlook on the development of renewable energy, policy measures to reshape the current energy mix, and how to achieve sustainable economic growth in the post COVID-19 era (2022) | Farhan Bashir, Muhammad, Sadiq, Muhammad, Talbi, Besma
+- Assessing the environmental impacts of hydropower projects (2022) | Zwahlen, Robert
+- CLIMATE RISK TOOLBOX Guiding material for climate risk screening (2022) | FOOD AND AGRICULTURE ORGANIZATION OF THE UNITED NATIONS
+- Can Digitalization Levels Affect Agricultural Total Factor Productivity? Evidence From China (2022) | Fu, Wenqiang, Zhang, Rongwu
+- Capitalism and crises: A comparative analysis of mainstream and heterodox perceptions and related ethical considerations (2022) | Kuehnlenz, Sophia, Andreoni, Valeria, Meyenburg, Imko
+- Carbon pricing a development and trade reality check (2022) | Unknown
+- Chinese President Xi on Pandemic, Global Economy, 'Cold War Mentality' (2022) | Unknown
+- Climate Change and Food Security: Are Asian Economies Tracking Sustainable Development Goals? (2022) | Zahid, Fahmida, Hanif, Uzma, Javed, Faiza
+- Climate change, sustainable development and cleantech: a pathway for developing countries (2022) | Xiang, Joy Y.
+- Climate crisis economics (2022) | Mackintosh, Stuart P. M.
+- Crop Prospects and Food Situation #2, July 2022 (2022) | Unknown
+- Decent Employment and the Future of Agriculture. How Dominant Narratives Prevent Addressing Structural Issues (2022) | Losch, Bruno
+- Decent Employment and the Future of Agriculture. How Dominant Narratives Prevent Addressing Structural Issues (2022) | Losch, Bruno
+- Do PTAs with environmental provisions reduce GHG emissions? Distinguishing the effectiveness of climate-related provisions (2022) | Sorgho, Zakaria, Tharakan, Joe
+- Download Historical and Future Climate Data (Temperature, Precipitation etc.) (2022) | Unknown
+- Econometric Approaches That Consider Farmers’ Adaptation in Estimating the Impacts of Climate Change on Agriculture: A Review (2022) | Su, Xun, Chen, Minpeng
+- Economic complexity–carbonization nexus in the European Union: A heterogeneous panel data analysis (2022) | Demiral, Mehmet, Akça, Emrah Eray
+- Electricity production from renewables (2022) | Castro, Rui
+- Encyclopedia of renewable energy (2022) | Speight, James G
+- Environmental Kuznets curve for biodiversity loss: evidence from South and Southeast Asian countries (2022) | Tan, Yan-Ling, Yiew, Thian-Hee, Lau, Lin-Sea
+- Environmental and natural resource cconomics (2022) | Aruga, Kentaka
+- Environmental economics: theory and policy in equilibrium (2022) | Wiesmeth, Hans
+- Food Outlook: Biannual Report on Global Food Markets (2022) | FAO
+- Food System Resilience: Concepts, Issues, and Challenges (2022) | Zurek, Monika, Ingram, John, Sanderson Bellamy, Angelina
+- Fundamentals of renewable energy processes (2022) | Da Rosa, Aldo Vieira, Ordóñez, Juan Carlos
+- Global crop yields can be lifted by timely adaptation of growing periods to climate change (2022) | Minoli, Sara, Jägermeyr, Jonas, Asseng, Senthold
+- Güncel Araştırmalar Çerçevesinde İklim Değişikliği (Nedenler, Sonuçlar ve Mücadele Politikaları) (2022) | Unknown
+- Handbook of Production Economics (2022) | Unknown
+- Handbook of Solid Waste Management: Sustainability through Circular Economy (2022) | Unknown
+- Handbook of climate change mitigation and adaptation (2022) | Unknown
+- Handbook of research on energy and environmental finance 4.0 (2022) | Unknown
+- Institutional decarbonization scenarios evaluated against the Paris Agreement 1.5 °C goal (2022) | Brecha, Robert J., Ganti, Gaurav, Lamboll, Robin D.
+- International ‘collaboration gap’ threatens to undermine climate progress and delay net zero by decades (2022) | Owen-Burge, Charlotte
+- Is product proximity a driver for better energy security? Global evidence of nonlinear relationships between product proximity and energy security (2022) | Le, Thanh Ha, Hoang, Phuong Dung, To, Trung Thanh
+- Managing Climate Change and Sustainability through Behavioural Transformation (2022) | Rishi, Parul
+- Microeconomics Graphs Review (2022) | Unknown
+- Modeling Socio-Economic Consequences of COVID-19: An Evidence From Bibliometric Analysis (2022) | Ansari, Yasmeen, Arwab, Mohd, Subhan, Mohammad
+- Natural disasters (2022) | Ritchie, Hannah, Rosado, Pablo, Roser, Max
+- Politics of Turkey (2022) | Unknown
+- Pricing carbon effectively: a pathway for higher climate change ambition (2022) | Dominioni, Goran
+- Principles of economics (2022) | Frank, Robert H., Bernanke, Ben
+- Principles of microeconomics: an integrative approach (2022) | Kolmar, Martin
+- Psychology and behavioral economics: applications for public policy (2022) | Unknown
+- Recipe for Survival: What You Can Do to Live a Healthier and More Environmentally Friendly Life (2022) | Hunnes, Dana Ellis
+- Reducing Carbon Footprint of Agriculture—Can Organic Farming Help to Mitigate Climate Change? (2022) | Holka, Małgorzata, Kowalska, Jolanta, Jakubowska, Magdalena
+- Renewable energy technologies for energy efficient sustainable development (2022) | Sinharoy, Arindam, Lens, P. N. L
+- Rethinking macroeconomics: a history of economic thought perspective (2022) | McDonald, John F.
+- Role of Financial Development, Green Technology Innovation, and Macroeconomic Dynamics Toward Carbon Emissions in China: Analysis Based on Bootstrap ARDL Approach (2022) | Yang, Jiayu, Sun, Yunpeng, Sun, Huaping
+- Su kaynakları alarm veriyor... "Böyle giderse su sorunu 2040'ta krize dönüşebilir" (2022) | Unknown
+- Sustainable Agro-Food Systems for Addressing Climate Change and Food Security (2022) | Wijerathna-Yapa, Akila, Pathirana, Ranjith
+- Sustainable cities through household waste management: an unexplored approach to challenges confronting private solid waste management (2022) | Ebekozien, Andrew, Aigbavboa, Clinton, Nwaole, Angeline Ngozika Chibuike
+- The Impacts of Climate Change, Carbon Dioxide Emissions (CO2) and Renewable Energy Consumption on Agricultural Economic Growth in South Africa: ARDL Approach (2022) | Tagwi, Aluwani
+- The philosophy of tacit knowledge: the tacit side of knowledge management in organizations (2022) | Johannessen, Jon-Arild
+- The role of climatic changes and financial development to the ASEAN agricultural output: a novel long-run evidence for sustainable production (2022) | Chandio, Abbas Ali, Abbas, Shujaat, Ozdemir, Dicle
+- The waste crisis: roadmap for sustainable waste management in developing countries (2022) | Hossain, Sahadat, Law, H. James, Asfaw, Araya
+- Theory and Practice of Carbon Pricing Observations from three Emission Trading Systems (ETS) (2022) | Mostert, Wolfgang
+- Time-varying causality between income inequality and ecological footprint in Turkey (2022) | Altıntaş, Nurullah, Kırca, Mustafa, Acar, Samet
+- Turkey (2022) | Unknown
+- Türkiye Your Resilient Partner (2022) | Invest in Türkiye
+- Urban waste management: The case of Turkey and Istanbul (2022) | Hoşoğlu, Fatih
+- Welcome | Environmental Performance Index (2022) | Wolf, M., Emerson, J. W., Esty, D. C.
+- Workbook for principles of microeconomics (2022) | Kolmar, Martin, Hoffmann, Magnus
+- İklim Değişikliğinin Yönetimi ve Tarım Sektörü (2022) | Kara, Kıvılcım Özge, Yereli̇, Ahmet Burçin
+- İklim değişikliğinin tarım sektörüne etkileri - Akıllı Tarım | 08.11.2022 (2022) | Unknown
+- A Comparative Bibliometric Analysis on Plastic Waste Recycling (2023) | Oyewale, Johnson A., Tartibu, Lagouge K., Okokpujie, Imhade P.
+- A Review and Bibliometric Analysis of Sorting and Recycling of Plastic Wastes (2023) | Oyewale, Johnson A., Tartibu, Lagouge K., Okokpujie, Imhade P.
+- A Systematic Review on Nexus Between Green Finance and Climate Change: Evidence from China and India (2023) | Shah, Shangram Bahadur, Sopin, Jirakiattikul, Techato, Kua-Anan
+- A history of ecological economic thought (2023) | Vianna Franco, Marco P., Missemer, Antoine
+- A history of ecological economic thought (2023) | Vianna Franco, Marco P., Missemer, Antoine
+- Bibliometric Analysis of Studies on Sustainable Waste Management (2023) | Yalçıntaş, Deniz, Oğuz, Suzan, Yaşa Özeltürkay, Eda
+- Business climate risk management: international perspectives and strategic determinants (2023) | Kouloukoui, Daniel, Da Silva Gomes, Sonia Maria, Torres, Felipe Andrade
+- Carbon capture nets 2 billion tonnes of CO2 each year — but it’s not enough (2023) | Naddaf, Miryam
+- Chingiz Aytmatov | Kyrgyz Novelist, Poet & Diplomat | Britannica (2023) | Unknown
+- Climate Change 2021 – The Physical Science Basis: Working Group I Contribution to the Sixth Assessment Report of the Intergovernmental Panel on Climate Change (2023) | Intergovernmental Panel On Climate Change
+- Climate Change Threatens Turkey’s Role as a Food Supplier to Europe and the Middle East (2023) | Tanchum, Michaël
+- Climate change, agriculture and society: approaches toward sustainability (2023) | Unknown
+- Complexity economics for environmental governance (2023) | Mercure, Jean-Francois
+- Data and Methodology (2023) | Küresel Ayak İzi Ağı
+- Editorial: Abiotic stress and plant immunity – a challenge in climate change (2023) | Tanaka, Kiwamu, Mudgil, Yashwanti, Tunc-Ozdemir, Meral
+- Ekonometri İçin Hangi Programı Öğrenmeliyiz? | Doç. Dr. Mehmet SONGUR (2023) | Unknown
+- Energy transition or energy diversification? Assessing the complexity of energy ecosystem towards transiting a climate neutral society (2023) | Andrei, Jean-Vasile, Zaharia, Alina, Graci, Giuseppe
+- Environmental Policy Stringency and Ecological Footprint Linkage: Mitigation Measures of Renewable Energy and Innovation (2023) | Sohag, Kazi, Husain, Shaiara, Soytas, Ugur
+- Environmental economics in developing countries: issues and challenges (2023) | Unknown
+- Examining the Relationship between Economic Growth, Financial Development, and Carbon Emissions: A Review of the Literature and Scientometric Analysis (2023) | Kayani, Umar Nawaz, Sadiq, Misbah, Rabbani, Mustafa Raza
+- Exergetic and Environmental Life Cycle Assessment of Integrated Municipal Solid Waste Management System: A Case Study of Kayseri Turkey (2023) | Taşkın, Akif, Demir, Nesrin
+- FAO Action Plan 2022–2025 for the implementation of the FAO Strategy on Climate Change (2023) | Unknown
+- FAO publications catalogue 2023 (2023) | Unknown
+- Global Carbon Budget 2023 (2023) | Friedlingstein, Pierre, O'Sullivan, Michael, Jones, Matthew W.
+- Global Food Security Index (GFSI) (2023) | Unknown
+- Going green: understanding the impacts of economic complexity, clean energy and natural resources on ecological footprint in complex economies (2023) | Abbas, Shujaat, Ghosh, Sudeshna, Sucharita, Sanhita
+- Greenhouse Effect 101 (2023) | Unknown
+- Greenhouse gas | Definition, Emissions, & Greenhouse Effect | Britannica (2023) | Unknown
+- How do environmental tax and renewable energy contribute to ecological sustainability? New evidence from top renewable energy countries (2023) | Shayanmehr, Samira, Radmehr, Riza, Ali, Ernest Baba
+- How does agricultural global value chain affect ecological footprint? The moderating role of environmental regulation (2023) | Xu, Yubing, Li, Cuixia, Wang, Jing
+- Kuraklık ve Türkiye Tarımına Etkileri (2023) | Kapluhan, Erol
+- NASA Scientific Visualization Studio | NASA Climate Spiral 1880-2022 (2023) | SubbaRao, Mark
+- Network Data Envelopment Analysis: Foundations and Extensions (2023) | Kao, Chiang
+- On-Farm Renewable Energy Systems: A Systematic Review (2023) | Pestisha, Albiona, Gabnai, Zoltán, Chalgynbayeva, Aidana
+- Productivity evaluation of urban water supply industry in China: a metafrontier-biennial cost Malmquist productivity index approach (2023) | Du, Minzhe, Wang, Bing, Chen, Zhongfei
+- Quantitative Models in Life Science Business: From Value Creation to Business Processes (2023) | Unknown
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis (2023) | Özdemir, Mehmet Gökhan
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis (2023) | Özdemir, Mehmet Gökhan
+- The first name that comes to mind when it comes to Kyrgyz Literature: Who is Chinghiz Aitmatov? (2023) | Unknown
+- The first name that comes to mind when it comes to Kyrgyz Literature: Who is Chinghiz Aitmatov? (2023) | Unknown
+- The impact of agroecosystem on ecological footprint: Fresh evidence in the perspective of existing agriculture and green Pakistan (2023) | Ullah, Arif, Salem, Sultan, Kang, Shijia
+- Toward a sustainable development in sub-Saharan Africa: do economic complexity and renewable energy improve environmental quality? (2023) | Abdi, Abdikafi Hassan
+- Toward a sustainable development in sub-Saharan Africa: do economic complexity and renewable energy improve environmental quality? (2023) | Abdi, Abdikafi Hassan
+- TÜRKIYE ADAPTATION AND RESILIENCE ASSESSMENT Türkiye Green Growth Analytical and Advisory Program Thematic Paper 2 A Whole-of-Economy Approach to Climate and Disaster Risks (2023) | Worldbank
+- İklim Değişikliği Tarım Sektörünü Nasıl Etkiliyor? Türkiye Ekonomisi Üzerine Ekonometrik Bir Uygulama (2023) | Oğul, Bahar
+- İstatistik Okur Yazarlığı (2023) | Unknown
+- A Comparative Study of the Environmental, Social, and Governance Impacts of Renewable Energy Investment on CO2 Emissions in Brazil, Russia, India, China, and South Africa (2024) | Bi, Zhaoming, Khan, Rabnawaz
+- A Spotlight on Environmental Sustainability in View of the European Green Deal (2024) | Stefanis, Christos, Stavropoulos, Agathangelos, Stavropoulou, Elisavet
+- Advances in Energy From Waste: Transformation Methods, Applications and (2024) | Unknown
+- Briefing: Stocktaking global warming: the outcomes of the 2023 Dubai Climate Summit (COP28) (2024) | Darby, Sarah J., Hammond, Geoffrey P., Wu, Jianzhong
+- Chicago Climate Exchange (CCX): The Origin and Evolution of Voluntary Efforts to Establish Carbon Markets (2024) | Sandor, Richard L., Diperna, Paula
+- Does Financial Development Matter for Economic Complexity? –Cross-Country Evidence (2024) | Low, Soo-Wah, Albada, Ali, Ghazali, Noor Azlan
+- Economic and environmental benefits of digital agricultural technologies in crop production: A review (2024) | Papadopoulos, George, Arduini, Simone, Uyar, Havva
+- Effects of climate change on plant pathogens and host-pathogen interactions (2024) | Lahlali, Rachid, Taoussi, Mohammed, Laasli, Salah-Eddine
+- Environmental regulation and green innovation efficiency: a revisit of the porter hypothesis based on Chinese cities (2024) | Xu, Liang, Luo, Yusen, Wu, Chao
+- Exploring the LCC Hypothesis in the Nordic Region: The Role of AI Innovation, Environmental Taxes, and Financial Accessibility via Panel ARDL (2024) | Hossain, Md Sibbir, Mohammad Ridwan, Akhter, Afsana
+- Exploring the energy-climate-agriculture (ECA) nexus: a roadmap toward agricultural sustainability in Asian countries (2024) | Chandio, Abbas Ali, Gokmenoglu, Korhan K., Dash, Devi Prasad
+- Green Innovation at the Crossroads of Financial Development, Resource Depletion, and Urbanization: Paving the Way to a Sustainable Future from the Perspective of an MM-QR Approach (2024) | Liu, Wen, Waqas, Muhammad
+- Impact of green finance on R&D of “two high and one surplus” enterprises against the greenwashing background: exploring the role of green credit (2024) | Ma, Wanwan, Zheng, Chenbin, Zhao, Xin
+- Systematic assessment of the achieved emission reductions of carbon crediting projects (2024) | Probst, Benedict S., Toetzke, Malte, Kontoleon, Andreas
+- Testing the impact of environmental taxation and IFRS adoption on consumption‐based carbon in European countries (2024) | Samour, Ahmed, Musah, Mohammed, Mati, Sagiru
+- The Effect of Environmental Smart Technology and Renewable Energy on Carbon Footprint: A Sustainability Perspective from the MENA Region (2024) | Alofaysan, Hind
+- The Most Economically Complex Regions First? A Map of Brazil's Green Economy (2024) | Dos Santos Robinson, Andrey Luis, Domingues Cechin, Andrei
+- The Role of Knowledge-Sharing in Improving Marine Living Resources Towards Sustainable Blue Economy (2024) | Ha, Nguyen Thi Thu, Huyen, Nguyen Thi Thanh, Hoa, Tran Thi Mai
+- Towards sustainable industrial development: modelling the quality, scaling potential and corrosivity of groundwater using GIS, spatial statistics, soft computing and index-based methods (2024) | Agbasi, Johnson C., Abu, Mahamuda, Egbueri, Johnbosco C.
+- TÜRK DEVLETLERİ TEŞKİLATI ÜLKELERİNDE KÜRESELLEŞME İLE EKONOMİK KARMAŞIKLIĞIN EKONOMİK BÜYÜME ÜZERİNE ETKİSİ (2024) | Ataklı Yavuz, Rüya, Bektaş, Selahattin
+- Unveiling greenwashing dynamics: exploring the nexus between transparent corporate practices, employee perspectives, and ethical leadership impact (2024) | Xie, Zhuyun, Liu, Yue, Liu, Yang
+- World Climate Programme (WCP) (2024) | World Meteorological Organisation
+- A Review of Smart Crop Technologies for Resource Constrained Environments: Leveraging Multimodal Data Fusion, Edge-to-Cloud Computing, and IoT Virtualization (2025) | Olatinwo, Damilola D., Myburgh, Herman C., De Freitas, Allan
+- A Review of Smart Crop Technologies for Resource Constrained Environments: Leveraging Multimodal Data Fusion, Edge-to-Cloud Computing, and IoT Virtualization (2025) | Olatinwo, Damilola D., Myburgh, Herman C., De Freitas, Allan
+- Birleşmiş Milletler İklim Değişikliği Çerçeve Sözleşmesi - İklim Değişikliği Başkanlığı (2025) | iklim.gov.tr
+- Bitkisel Üretim İstatistikleri, 2024 (2025) | Türkiye İstatistik Kurumu
+- Decoding Solar Adoption: A Systematic Review of Theories and Factors of Photovoltaic Technology Adoption in Households of Developing Countries (2025) | Oliva, Edison Jair Duque, Atehortua Santamaria, Rodrigo
+- Does Sustainability Orientation Drive Financial Success in a Non-Ergodic World? A Systematic Literature Review (2025) | Sedovs, Edgars, Volkova, Tatjana, Ludviga, Iveta
+- Examining the relationship between foreign direct investment and industrial carbon intensity in China: does economic complexity matter? (2025) | Wang, Xiuting, Jiang, Shixu
+- Fine-scale mapping of irrigation suitability in South Africa using ensemble modelling (2025) | Mpakairi, Kudzai S., Dube, Timothy, Sibanda, Mbulisi
+- Fine-scale mapping of irrigation suitability in South Africa using ensemble modelling (2025) | Mpakairi, Kudzai S., Dube, Timothy, Sibanda, Mbulisi
+- From complexity to resilience: clean innovation reshapes the load capacity curve dynamics (2025) | Satrovic, Elma, Razi, Ummara, Radulescu, Magdalena
+- G20 Climate Risk Atlas Impacts, policy, economics: Turkey (2025) | Centro Euro-Mediterraneo sui Cambiamenti Climatici
+- Global insights on validating environmental Kuznets curve using economic complexity and environmental efficiency scores (2025) | Singh, Amit Kumar, Jain, Srishti
+- Green complexity and its dual threshold effects: balancing environmental impact and economic growth (2025) | Maneejuk, Paravee, Yamaka, Woraphon
+- Mapping research trends on foreign direct investment and environmental sustainability (2025) | Zehouani, Nahid, Ababou, Mariame
+- State-of-art review and future prospects of autoclave aerated concrete for building a sustainable tomorrow (2025) | Dey, Palash, Paul, Ashim, Dhar, Mrinmoy
+- Structural transformation and sustainable development in sub-Saharan Africa (2025) | Olaoye, Olumide O., Zerihun, Mulatu Fekadu, Tabash, Mosab I.
+- Structural transformation and sustainable development in sub-Saharan Africa (2025) | Olaoye, Olumide O., Zerihun, Mulatu Fekadu, Tabash, Mosab I.
+- Sustainable Innovation Management Model (MGI) for Plantain Agroindustrial Chain (2025) | Zartha Sossa, Jhon Wilder, Gutiérrez Posada, Nolberto, Zuluaga Monsalve, Adriana María
+- Türkiye'de Gıda Enflasyonu Sorunsalı: Fourier Bootstrap ARDL (2025) | Bozkurt, Hatice, Mutlu Çamoğlu, Seval
+- Chapter 3 - The role of artificial intelligence in developing climate-resilient and smart agriculture (2026) | Tripathy, Simile, Das, Sheetal, Mahapatra, Sibasis
+- Eco‐Innovation, Economic Complexity, and Sustainability: A Bibliometric and Systematic Literature Review (2026) | De Moraes, Gregory Matheus Pereira, Ferraz, Diogo
+- Agricultural intensification, irrigation and the environment in South Asia: Issues and policy options (3/20) | Alauddin, Mohammad, Quiggin, John
+- Climate change and energy development: implications for developing countries (3/20) | Cao, Xia
+- Environmental economics and ecological economics: Where they can converge? (3/20) | Venkatachalam, L.
+- Farm-level Autonomous Adaptation of European Agricultural Supply to Climate Change (3/20) | Leclère, David, Jayet, Pierre-Alain, de Noblet-Ducoudré, Nathalie
+- On the economics of virtual water trade (3/20) | Reimer, Jeffrey J.
+- Pluralism and heterodoxy in economic methodology (3/20) | Holcombe, Randall G.
+- Regional Food Price Inflation Transmission (3/20) | Cachia, Franck
+- Sustainable Development Goals and climate change adaptation in cities (3/20) | Sanchez Rodriguez, Roberto, Ürge-Vorsatz, Diana, Barau, Aliyu Salisu
+- The Use (and Abuse) of Meta-Analysis in Environmental and Natural Resource Economics: An Assessment (3/20) | Nelson, Jon P., Kennedy, Peter E.
+- The interpretation of Bradford’s law in terms of geometric progression (3/20) | Yatsko, V. A.
+- The Necessity of Environmental Economics (4/19) | Sarokin, David, Schulkin, Jay
+- A study conducted to reduce construction waste generation in Turkey (4/20) | Esin, Tulay, Cosgun, Nilay
+- Climate change, irrigation, and Israeli agriculture: Will warming be harmful? (4/20) | Fleischer, Aliza, Lichtman, Ivgenia, Mendelsohn, Robert
+- Ecological economics at a crossroads (4/20) | Gowdy, John, Erickson, Jon
+- Global Value Chains over Business Cycles (4/20) | Wang, Zhi, Wei, Shang-Jin, Yu, Xinding
+- How to calculate the practical significance of citation impact differences? An empirical example from evaluative institutional bibliometrics using adjusted predictions and marginal effects (4/20) | Bornmann, Lutz, Williams, Richard
+- Squaring the circle? Some thoughts on the idea of sustainable development (4/20) | Robinson, John
+- The history of ecosystem services in economic theory and practice: From early notions to markets and payment schemes (4/20) | Gómez-Baggethun, Erik, de Groot, Rudolf, Lomas, Pedro L.
+- A bradford distribution for bibliometrics (5/19) | Peritz, Bluma C.
+- Patent bibliometrics (5/19) | Narin, F.
+- The value of the world's ecosystem services and natural capital (5/19) | Costanza, Robert, d'Arge, Ralph, de Groot, Rudolf
+- The value of the world's ecosystem services and natural capital (5/19) | Costanza, Robert, d'Arge, Ralph, de Groot, Rudolf
+- A coherent set of future land use change scenarios for Europe (5/20) | Rounsevell, M.D.A., Reginster, I., Araújo, M.B.
+- Designing payments for environmental services in theory and practice: An overview of the issues (5/20) | Engel, Stefanie, Pagiola, Stefano, Wunder, Sven
+- Integrating Ecological, Carbon and Water footprint into a “Footprint Family” of indicators: Definition and role in tracking human pressure on the planet (5/20) | Galli, Alessandro, Wiedmann, Thomas, Ercin, Ertug
+- Strategies to adapt to an uncertain climate change (5/20) | Hallegatte, Stéphane
+- Limits to substitution and irreversibility in production and consumption: A neoclassical interpretation of ecological economics (6/19) | Stern, David I.
+- Climate change and variability in Sub-Saharan Africa: a review of current and future trends and impacts on agriculture and food security (6/20) | Kotir, Julius H.
+- Climate change and variability in Sub-Saharan Africa: a review of current and future trends and impacts on agriculture and food security (6/20) | Kotir, Julius H.
+- Climate change mitigation: A spatial analysis of global land suitability for clean development mechanism afforestation and reforestation (6/20) | Zomer, Robert J., Trabucco, Antonio, Bossio, Deborah A.
+- Climate change: Can wheat beat the heat? (6/20) | Ortiz, Rodomiro, Sayre, Kenneth D., Govaerts, Bram
+- Coping better with current climatic variability in the rain-fed farming systems of sub-Saharan Africa: An essential first step in adapting to future climate change? (6/20) | Cooper, P.J.M., Dimes, J., Rao, K.P.C.
+- Evaluating research: from informed peer review to bibliometrics (6/20) | Abramo, Giovanni, D’Angelo, Ciriaco Andrea
+- New and old market-based instruments for climate change policy (6/20) | Goers, Sebastian R., Wagner, Alexander F., Wegmayr, Jürgen
+- The relationship between carbon dioxide and agriculture in Ghana: a comparison of VECM and ARDL model (6/20) | Asumadu-Sarkodie, Samuel, Owusu, Phebe Asantewaa
+- The relationship between carbon dioxide and agriculture in Ghana: a comparison of VECM and ARDL model (6/20) | Asumadu-Sarkodie, Samuel, Owusu, Phebe Asantewaa
+- Online bibliometrics. A research tool for every man (7/19) | Persson, O.
+- Urban ecological footprints: Why cities cannot be sustainable—And why they are a key to sustainability (7/19) | Rees, William, Wackernagel, Mathis
+- Ecological efficiency in China and its influencing factors—a super-efficient SBM metafrontier-Malmquist-Tobit model study (7/20) | Ma, Xiaojun, Wang, Changxin, Yu, Yuanbo
+- Economic value of weather forecasting: the role of risk aversion (7/20) | Cerdá Tena, Emilio, Quiroga Gómez, Sonia
+- Electrochemical power text mining using bibliometrics and database tomography (7/20) | Kostoff, Ronald N, Tshiteya, Rene, Pfeil, Kirstin M
+- Mitigating economic risk from climate variability in rain-fed agriculture through enterprise mix diversification (7/20) | Kandulu, John M., Bryan, Brett A., King, Darran
+- Review on carbon emissions, energy consumption and low-carbon economy in China from a perspective of global climate change (7/20) | Shen, Lei, Sun, Yanzhi
+- Sustainable de-growth: Mapping the context, criticisms and future prospects of an emergent paradigm (7/20) | Martínez-Alier, Joan, Pascual, Unai, Vivien, Franck-Dominique
+- Sustainable development and climate goals (7/20) | Yeeles, Adam
+- Tackling climate change to accelerate sustainable development (7/20) | Zhenmin, Liu, Espinosa, Patricia
+- The worth of a songbird: ecological economics as a post-normal science (8/19) | Funtowicz, Silvio O., Ravetz, Jerome R.
+- A tale of two market failures: Technology and environmental policy (8/20) | Jaffe, Adam B., Newell, Richard G., Stavins, Robert N.
+- Climate change, vulnerability and adaptation in North Africa with focus on Morocco (8/20) | Schilling, Janpeter, Freier, Korbinian P., Hertig, Elke
+- Environmental Kuznets Curve Hypothesis: A Survey (8/20) | Dinda, Soumyananda
+- Foundations and trends in performance management. A twenty-five years bibliometric analysis in business and public administration domains (8/20) | Cuccurullo, Corrado, Aria, Massimo, Sarto, Fabrizia
+- Fuzzy multicriteria disposal method and site selection for municipal solid waste (8/20) | Ekmekçioğlu, Mehmet, Kaya, Tolga, Kahraman, Cengiz
+- Human drivers of national greenhouse-gas emissions (8/20) | Rosa, Eugene A., Dietz, Thomas
+- Refining the ecological footprint (8/20) | Venetoulis, Jason, Talberth, John
+- Risk of increased food insecurity under stringent global climate change mitigation policy (8/20) | Hasegawa, Tomoko, Fujimori, Shinichiro, Havlík, Petr
+- The Rise and Fall of the Environmental Kuznets Curve (8/20) | Stern, David I
+- The great climate debate (8/20) | Sudhakara Reddy, B., Assenza, Gaudenz B.
+- Turning electricity into food: the role of renewable energy in the future of agriculture (8/20) | Bardi, Ugo, El Asmar, Toufic, Lavacchi, Alessandro
+- What are ecosystem services? The need for standardized environmental accounting units (8/20) | Boyd, James, Banzhaf, Spencer
+- The concept of agricultural sustainability (9/19) | Schaller, Neill
+- Weak comparability of values as a foundation for ecological economics (9/19) | Martinez-Alier, Joan, Munda, Giuseppe, O'Neill, John
+- Hydrological functions of tropical forests: not seeing the soil for the trees? (9/20) | Bruijnzeel, L.A.
+- بررسی تثیر تغییر اقلیم بر ارزش افزوده بخش کشاورزی کشورهای منتخب منا (Dece) | میقانی, سمیه, خداپرست مشهدی, مهدی, صالح نیا, نرگس
+- 10 Big Findings from the 2023 IPCC Report on Climate Change (Mon,) | Boehm, Sophie, Schumer, Clea
+- Food Inflation and Food and Nutrition Security Situation in Developing Asia During the COVID-19 Pandemic (Mon,) | Bank, Asian Development
+- Hangisi daha fazla karbondioksit salıyor: Volkanlar mı yoksa insan faaliyetleri mi? | NOAA Climate.gov (Wed,) | Scott, Michon, Lindsey, Rebecca

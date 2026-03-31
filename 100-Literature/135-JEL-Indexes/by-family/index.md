@@ -1,0 +1,16 @@
+# JEL Family Indexes
+
+- [[A - General Economics and Teaching/index|A - General Economics and Teaching]] (1 items)
+- [[B - History of Economic Thought and Methodology/index|B - History of Economic Thought and Methodology]] (7 items)
+- [[C - Mathematical and Quantitative Methods/index|C - Mathematical and Quantitative Methods]] (1493 items)
+- [[D - Microeconomics and Institutions/index|D - Microeconomics and Institutions]] (10 items)
+- [[E - Macroeconomics and Monetary Economics/index|E - Macroeconomics and Monetary Economics]] (2 items)
+- [[F - International Economics/index|F - International Economics]] (223 items)
+- [[G - Financial Economics/index|G - Financial Economics]] (2 items)
+- [[H - Public Economics/index|H - Public Economics]] (2 items)
+- [[M - Other/index|M - Other]] (2 items)
+- [[N - Economic History/index|N - Economic History]] (1 items)
+- [[O - Economic Development and Innovation/index|O - Economic Development and Innovation]] (1659 items)
+- [[P - Economic Systems/index|P - Economic Systems]] (6 items)
+- [[Q - Agricultural, Resource, Energy, Environmental Economics/index|Q - Agricultural, Resource, Energy, Environmental Economics]] (2968 items)
+- [[R - Urban, Rural, Regional Economics/index|R - Urban, Rural, Regional Economics]] (9 items)

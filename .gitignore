@@ -1,0 +1,43 @@
+# Data files (large)
+400-Data/*.rds
+400-Data/*.csv
+400-Data/*.xlsx
+
+# Environment variables
+.env
+.env.local
+
+# Local virtual environments
+venv/
+.venv/
+
+# LightRAG database
+lightrag_db/
+
+# Obsidian cache
+.obsidian/.cache/
+.obsidian/app.json
+.obsidian/workspace.json
+.obsidian/plugins/
+
+# n8n backups
+n8n_backup/
+
+# R/Python cache
+__pycache__/
+.Rhistory
+*.Rout
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Migration leftovers
+Akademik_Arastirma_v2/
+Araştırma Optimizasyon/
+
+# IDE
+.vscode/
+.idea/
+*.swp

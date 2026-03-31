@@ -1,0 +1,99 @@
+---
+type: jel-code-index
+code: O47
+family: O
+item_count: 90
+---
+
+# O47
+
+- ANALYSIS OF FOREX POLICY AND ITS IMPACT ON ECONOMIC GROWTH: THE CASE OF ETHIOPIA (n.d.) | Osman, Shakira Ahmed
+- EXCHANGE RATE MISALIGNMENT AND ECONOMIC GROWTH (n.d.) | Dubas, Justin
+- Essays on exchange rate behaviour in South Africa (n.d.) | Khomo, Melvin Muziwakhe
+- GEÇİŞ EKONOMİLERİNDE EKONOMİK KARMAŞIKLIK VE EKONOMİK BÜYÜME İLİŞKİSİ: ÇEK CUMHURİYETİ ÖRNEĞİ (n.d.) | Doru, Ömer, Düşünceli̇, Faruk
+- THE REAL EXCHANGE RATE AND ECONOMIC GROWTH (n.d.) | Eichengreen, Barry
+- Ecological economics and economic growtha: Ecological economics and economic growth (01/2) | Victor, Peter A.
+- Does financial inclusion, renewable and non-renewable energy utilization accelerate ecological footprints and economic growth? Fresh evidence from 15 highest emitting countries (02/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad, Kousar, Rakhshanda
+- Exploring Economic Green Complexity in the Load Capacity of G20 Countries: Do Environmental Policy and Public Debt Matter? (02/2) | Zeraibi, Ayoub, Zhao, Xin, Liu, Ye
+- How economic growth, renewable electricity and natural resources contribute to CO2 emissions? (02/2) | Balsalobre-Lorente, Daniel, Shahbaz, Muhammad, Roubaud, David
+- Role of environmental degradation and energy use for agricultural economic growth: Sustainable implications based on ARDL estimation (02/2) | Wang, Hongwei
+- Structural transformation and its relevance for economic growth in Sub‐Saharan Africa (02/2) | Busse, Matthias, Erdogan, Ceren, Mühlen, Henning
+- Structural transformation and its relevance for economic growth in Sub‐Saharan Africa (02/2) | Busse, Matthias, Erdogan, Ceren, Mühlen, Henning
+- Renewable energy consumption-economic growth nexus in emerging countries: A bootstrap panel causality test (04/2) | Ozcan, Burcu, Ozturk, Ilhan
+- Stoking the fires? CO2 emissions and economic growth (05/1) | Holtz-Eakin, Douglas, Selden, Thomas M.
+- Carbon emissions, energy consumption and economic growth: Evidence from the agricultural sector of China's main grain-producing areas (05/2) | Zhang, Lu, Pang, Jiaxing, Chen, Xingpeng
+- Structural Transformation and African Agriculture (05/2) | Binswanger-Mkhize, Hans P., McCalla, Alex F., Patel, Praful
+- Structural Transformation and African Agriculture (05/2) | Binswanger-Mkhize, Hans P., McCalla, Alex F., Patel, Praful
+- Climate change caused by renewable and non-renewable energy consumption and economic growth: A time series ARDL analysis for Turkey (06/2) | Acaroğlu, Hakan, Güllü, Mustafa
+- Real exchange rate misalignment and business cycle fluctuations in the <span style="font-variant:small-caps;">Asia‐Pacific</span> (06/2) | Ambaw, Dessie, Pundit, Madhavi, Ramayandi, Arief
+- The greenhouse effect of the agriculture-economic growth-renewable energy nexus: Evidence from G20 countries (06/2) | Qiao, Hui, Zheng, Fengtian, Jiang, Hongdian
+- The linkages between natural resources, human capital, globalization, economic growth, financial development, and ecological footprint: The moderating role of technological innovations (06/2) | Jahanger, Atif, Usman, Muhammad, Murshed, Muntasir
+- Climate change, growth in agriculture value-added, food availability and economic growth nexus in the Gambia: a Granger causality and ARDL modeling approach (07/2) | Ceesay, Ebrima K., Francis, Phillips C., Jawneh, Sama
+- Discovering the evolution of Pollution Haven Hypothesis: A literature review and future research agenda (07/2) | Bashir, Muhammad Farhan
+- Examining the environmental aspect of economic complexity outlook and environmental-related technologies in the Nordic states (07/2) | Alola, Andrew Adewale, Celik, Ali, Awan, Usama
+- Related Variety, Unrelated Variety and Regional Economic Growth (07/2) | Frenken, Koen, Van Oort, Frank, Verburg, Thijs
+- Moving towards a sustainable environment: The dynamic linkage between natural resources, human capital, urbanization, economic growth, and ecological footprint in China (08/2) | Ahmed, Zahoor, Asghar, Muhammad Mansoor, Malik, Muhammad Nasir
+- Effects of agriculture, renewable energy, and economic growth on carbon dioxide emissions: Evidence of the environmental Kuznets curve (09/2) | Ridzuan, Nur Hilfa Awatif Mohamad, Marwan, Nur Fakhzan, Khalid, Norlin
+- What Drives the Relationship Between Export Upgrading and Growth? The Role of Human Capital, Institutional Quality, and Economic Development (09/2) | Nouira, Ridha, Saafi, Sami
+- Financial development and economic growth nexus in the MENA countries: Bootstrap panel granger causality analysis (1/20) | Kar, Muhsin, Nazlıoğlu, Şaban, Ağır, Hüseyin
+- Climate change: north and south EU economies—an application of dynamic asymmetric panel data models (10/2) | Adam, Christos, Drakos, Periklis
+- Does Remittance Outflow Stimulate or Retard Economic Growth? (10/2) | Khan, Khalid, Su, Chi‐Wei, Tao, Ran
+- Global value chain participation and CO2 emissions: Does economic growth matter? New evidence from dynamic panel threshold regression (10/2) | Jithin, P., Ashraf, Sania
+- A bibliometric review analysis into environmental kuznets curve phenomenon: A retrospect and future direction (11/2) | Ajmi, Ahdi Noomen, Bekun, Festus Victor, Gyamfi, Bright Akwasi
+- An Intellectual History of Environmental Economics (11/2) | Pearce, David
+- Oil revenues for public investment in Africa: targeting urban or rural areas? (11/2) | Wiebelt, Manfred, Schweickert, Rainer, Breisinger, Clemens
+- Oil revenues for public investment in Africa: targeting urban or rural areas? (11/2) | Wiebelt, Manfred, Schweickert, Rainer, Breisinger, Clemens
+- The nexus between renewable energy, CO2 emissions, and economic growth: Empirical evidence from African oil-producing countries (11/2) | İnal, Veysel, Addi, Haman Mahamat, Çakmak, Eyüp Ensar
+- Does the twin growth catalyst of oil rent seeking and agriculture exhibit complementary or substitute role? New perspective from a West African country (12/2) | Osundina, Olawumi Abeni, Bekun, Festus Victor, Kirikkaleli, Dervis
+- Does the twin growth catalyst of oil rent seeking and agriculture exhibit complementary or substitute role? New perspective from a West African country (12/2) | Osundina, Olawumi Abeni, Bekun, Festus Victor, Kirikkaleli, Dervis
+- Exchange rate volatility, corruption, and economic growth (12/2) | Ramoni-Perazzi, Josefa, Romero, Héctor
+- Economic Growth and the Environment (1995) | Grossman, G. M., Krueger, A. B.
+- Financial Development and Economic Growth: Views and Agenda (1997) | Levine, Ross
+- Microeconomic aspects of Economic Growth in Eastern Europe and the Former Soviet Union, 1950-2000 (2000) | Guriev, Sergei, Ickes, Barry W.
+- Determinants of institutional quality and their impact on economic growth in the MENA region (2009) | Kandil, Magda
+- Real exchange rate misalignments and economic performance for the G20 countries: (2010) | Sallenave, Audrey
+- What is ecological economics? (2010) | Costanza, Robert
+- Real Exchange Rate Misalignment and Economic Growth: An Empirical Study for the Maghreb Countries (2011) | Abida, Zouheir
+- Ekonomik Büyüme ve Çevresel Vergilerin Emisyon Miktarına Etkileri (2012) | Akar, Hakan
+- Temperature Shocks and Economic Growth: Evidence from the Last Half Century (2012) | Dell, Melissa, Jones, Benjamin F, Olken, Benjamin A
+- Mathematical Modeling in Economics, Ecology and the Environment (2013) | Hritonenko, Natali, Yatsenko, Yuri
+- A Note: De-Growth Debate and New Scientific Analysis of Economic Growth (2014) | Kaivo-oja, Jari, Vehmas, Jarmo, Luukkanen, Jyrki
+- What Do We Learn from the Weather? The New Climate-Economy Literature (2014) | Dell, Melissa, Jones, Benjamin F., Olken, Benjamin A.
+- Macroeconomics- Everything You Need to Know (2017) | Unknown
+- Ekonomik Özgürlük, Turizm ve Ekonomik Büyüme: BRICST Ülkelerinde KÓnya Bootsrap Nedensellik Analizi (2018) | Gövdeli̇, Tuncer
+- Ekonomik Özgürlük, Turizm ve Ekonomik Büyüme: Brics-T Ülkelerinde Konya Bootsrap Nedensellik Analizi (2018) | Gövdeli̇, Tuncer
+- Agriculture, Aid, and Economic Growth in Africa (2019) | McArthur, John W, Sachs, Jeffrey D
+- Agriculture, Aid, and Economic Growth in Africa (2019) | McArthur, John W, Sachs, Jeffrey D
+- Analysis of the Nexus of CO2 Emissions, Economic Growth, Land under Cereal Crops and Agriculture Value-Added in Pakistan Using an ARDL Approach (2019) | Ali, Sajjad, Ying, Liu, Shah, Tariq
+- Behavioural Economics of Climate Change: New Empirical Perspectives (2019) | Udalov, Vladimir
+- EKONOMİK KARMAŞIKLIK İLE EKONOMİK BÜYÜME ARASINDAKİ İLİŞKİ: PANEL BOOTSTRAP GRANGER NEDENSELLİK ANALİZİ (2019) | Akbulut Yildiz, Gizem, Yildiz, Barış
+- A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part II: synthesizing the insights (2020) | Haberl, Helmut, Wiedenhofer, Dominik, Virág, Doris
+- A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part II: synthesizing the insights (2020) | Haberl, Helmut, Wiedenhofer, Dominik, Virág, Doris
+- Evaluating the role of renewable energy, economic growth and agriculture on CO <sub>2</sub> emission in E7 countries (2020) | Aydoğan, Berna, Vardar, Gülin
+- How effective is government spending on environmental protection in a developing country?: An empirical evidence from Iran (2020) | Moshiri, Saeed, Daneshmand, Arian
+- The economics of water scarcity and variability (2020) | Damania, Richard
+- Optimal government size and economic growth in developing and MENA countries: A dynamic panel threshold analysis (2021) | Nouira, R., Kouni, M.
+- The degrowth alternative: a path to address our environmental crisis? (2021) | Stuart, Diana, Gunderson, Ryan, Petersen, Brian
+- The degrowth alternative: a path to address our environmental crisis? (2021) | Stuart, Diana, Gunderson, Ryan, Petersen, Brian
+- The relationship of economic growth and carbon-dioxide emissions: an application on member countries of Organization of Islamic Cooperation (2021) | Kaya, Muhammed Veysel, Yilmaz, Suat Serhat, Özdemir, Mehmet Gökhan
+- An outlook on the development of renewable energy, policy measures to reshape the current energy mix, and how to achieve sustainable economic growth in the post COVID-19 era (2022) | Farhan Bashir, Muhammad, Sadiq, Muhammad, Talbi, Besma
+- Climate Change and Food Security: Are Asian Economies Tracking Sustainable Development Goals? (2022) | Zahid, Fahmida, Hanif, Uzma, Javed, Faiza
+- EKONOMİK KARMAŞIKLIK, AR-GE HARCAMALARI VE EKONOMİK BÜYÜME İLİŞKİSİ (2022) | Akar, Tuba
+- Effects of Exchange Rate Volatility on Economic Growth: Evidence from West Africa (2022) | Fofanah, Pabai
+- Exchange Rate Volatility Effect on Economic Growth under Different Exchange Rate Regimes: New Evidence from Emerging Countries Using Panel CS-ARDL Model (2022) | Ameziane, Karim, Benyacoub, Bouchra
+- Exchange Rate Volatility, Inflation and Economic Growth in Developing Countries: Panel Data Approach for SADC (2022) | Olamide, Ebenezer, Ogujiuba, Kanayo, Maredza, Andrew
+- Natural Resources, International Commodity Prices and Economic Performance in Sub-Saharan Africa (1990–2019) (2022) | Katoka, Ben, Dostal, Jörg Michael
+- Natural Resources, International Commodity Prices and Economic Performance in Sub-Saharan Africa (1990–2019) (2022) | Katoka, Ben, Dostal, Jörg Michael
+- Validity of Wagner Hypothesis in OECD Countries: Konya Panel Causality Test (2022) | Urfalıoğlu, Şeyda, Tatoğlu, Yerdelen, Ferda
+- Examining the Relationship between Economic Growth, Financial Development, and Carbon Emissions: A Review of the Literature and Scientometric Analysis (2023) | Kayani, Umar Nawaz, Sadiq, Misbah, Rabbani, Mustafa Raza
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis (2023) | Özdemir, Mehmet Gökhan
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis (2023) | Özdemir, Mehmet Gökhan
+- The Nexus between Environmental Quality, Economic Growth, and Trade Openness in Saudi Arabia (1990-2017) (2023) | Daly, Saida, Abdouli, Mohamed
+- İklim Değişikliğinin Gelişmişlik ve Bölgesel Farklılıklar Bağlamında Tarımsal Katma Değer Üzerine Etkisi: Akdeniz Ülkeleri Üzerine Bir Panel Veri Analizi (2023) | Erdi̇K, Sümeyye Şeyma, Temurlenk, Mehmet
+- Nexus between Economic Structural Changes, Foreign Investments, and Environmental Efficiency: Novel Findings from Global Regional Data (2024) | Kumar Singh, Amit, Jain, Srishti
+- Testing the impact of environmental taxation and IFRS adoption on consumption‐based carbon in European countries (2024) | Samour, Ahmed, Musah, Mohammed, Mati, Sagiru
+- Economic growth and deviations from the equilibrium exchange rate: a panel ARDL and panel NARDL approach (2025) | Ramos-Herrera, Maria Del Carmen
+- Green complexity and its dual threshold effects: balancing environmental impact and economic growth (2025) | Maneejuk, Paravee, Yamaka, Woraphon
+- BRICS-T Ekonomilerinde Büyümenin Dinamikleri: Ekonomik Karmaşıklık ve Dışa Açıklığın Yapısal Dönüşümdeki Rolü (2026) | Yilmaz, Ömer
+- Aid, Real Exchange Rate Misalignment, and Economic Growth in Sub-Saharan Africa (4/20) | Elbadawi, Ibrahim A., Kaltani, Linda, Soto, Raimundo
+- Economic growth, exports and foreign direct investment in Least Developed Countries: A panel Granger causality analysis (5/20) | Tekin, Rıfat Barış

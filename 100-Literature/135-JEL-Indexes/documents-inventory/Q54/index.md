@@ -1,0 +1,694 @@
+---
+type: documents-jel-index
+code: Q54
+item_count: 686
+---
+
+# Documents - Q54
+
+- (Advances in Global Change Research 37) David Lobell, Marshall Burke (auth.), David Lobell, Marshall Burke (eds.) - Climate Change and Food Security_ Adapting Agriculture to a Warmer World-Springer Ne.pdf | secondary: Q56, O13 | evidence: climate
+- (Atmospheric and Oceanographic Sciences Library 51) Manfred Mudelsee (auth.) - Climate Time Series Analysis_ Classical Statistical and Bootstrap Methods-Springer International Publishing (2014) copy.pdf | secondary: Q56, O13 | evidence: climate
+- (Atmospheric and Oceanographic Sciences Library 51) Manfred Mudelsee (auth.) - Climate Time Series Analysis_ Classical Statistical and Bootstrap Methods-Springer International Publishing (2014).pdf | secondary: Q56, O13 | evidence: climate
+- 14_impactofclimatechangeoncottonProduction (1).pdf | secondary: Q56, O13 | evidence: climate
+- 14_impactofclimatechangeoncottonProduction.pdf | secondary: Q56, O13 | evidence: climate
+- 2024.ClimateChangeSpecialIssue.pdf | secondary: Q56, O13 | evidence: climate
+- Asraful Alam, Rukhsana - Climate Change, Agriculture and Society_ Approaches Toward Sustainability-Springer (2023).pdf | secondary: Q56, O13 | evidence: climate
+- BiblioshinyReport-2026-02-10_climate_change_Sustainable_finance.xlsx | secondary: Q56, O13 | evidence: climate
+- Book The Economics of Climate Change_WebVersion.pdf | secondary: Q56, O13 | evidence: climate
+- Carbon capture/1-s2.0-S0048969720367346-main.pdf | secondary: Q56, Q58 | evidence: carbon
+- Carbon capture/c7ee02342a.pdf | secondary: Q56, Q58 | evidence: carbon
+- Carbon Storage.docx | secondary: Q56, Q58 | evidence: carbon
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/Climate Change.bib | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1001/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1005/Daube_Ulph_2016_Moral Behaviour, Altruism and Environmental Policy.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1020/Fourcade vd. - 2015 - The Superiority of Economists.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1021/Fourcade vd. - 2015 - The Superiority of Economists.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1033/Kaya vd. - 2021 - The relationship of economic growth and carbon-dio.pdf | secondary: Q56, Q58 | evidence: carbon
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1075/Frenken et al_2007_Related Variety, Unrelated Variety and Regional Economic Growth.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1099/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1121/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1168/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1198/Yalew et al_2018_Climate Change, Agriculture, and Economic Development in Ethiopia.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1224/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1241/Akar_2012_Ekonomik Büyüme ve Çevresel Vergilerin Emisyon Miktarına Etkileri.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1246/Dudu_Çakmak_2018_Climate change and agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1296/Stern_2004_The Rise and Fall of the Environmental Kuznets Curve.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1299/Engel et al_2008_Designing payments for environmental services in theory and practice.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1301/Balsalobre-Lorente et al_2018_How economic growth, renewable electricity and natural resources contribute to.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1303/Boyd_Banzhaf_2007_What are ecosystem services.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1374/Ellis et al_2013_Used planet.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1400/Page et al_2021_The PRISMA 2020 statement.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1510/Yatsko - 2012 - The interpretation of Bradford’s law in terms of g.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1512/Lal - 2004 - Soil Carbon Sequestration Impacts on Global Climat.pdf | secondary: Q56, Q58 | evidence: carbon
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1515/Bruijnzeel - 2004 - Hydrological functions of tropical forests not se.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1518/Snyder vd. - 2009 - Review of greenhouse gas emissions from crop produ.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1536/Kremen ve Miles - 2012 - Ecosystem Services in Biologically Diversified ver.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1537/Richardson vd. - 2012 - Terrestrial biosphere models need better represent.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1563/Calzadilla vd. - 2013 - Economywide impacts of climate change on agricultu.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1582/Wollenberg vd. - 2016 - Reducing emissions from agriculture to meet the 2 .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1583/Connor vd. - 2012 - Irrigated agriculture and climate change The infl.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1584/Sidibé vd. - 2018 - Adaptation to Climate Change in Rainfed Agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1585/Peach Brown ve Sonwa - 2015 - Rural local institutions and climate change adapta.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1586/Siddig vd. - 2020 - Climate change and agriculture in the Sudan Impac.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1587/Challinor vd. - 2015 - Crop yield response to climate change varies with .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1588/Nigussie vd. - 2018 - Evaluation of Climate Change Adaptation Alternativ.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1589/Aggarwal vd. - 2018 - The climate-smart village approach framework of a.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1590/Kahil vd. - 2015 - Efficient water management policies for irrigation.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1591/Campbell vd. - 2017 - Agriculture production as a major driver of the Ea.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1592/Moretti vd. - 2021 - Accounting for externalities in cross-sectional ec.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1593/Lungarska ve Chakir - 2018 - Climate-induced Land Use Change in France Impacts.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1594/Fleischer vd. - 2008 - Climate change, irrigation, and Israeli agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1595/Tack vd. - 2016 - Quantifying variety‐specific heat resistance and t.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1596/Maia vd. - 2018 - Climate Change and Agriculture Do Environmental P.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1597/Schilling vd. - 2012 - Climate change, vulnerability and adaptation in No.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1598/Srivastava vd. - 2010 - Assessment on vulnerability of sorghum to climate .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1599/Ogle vd. - 2014 - Reducing greenhouse gas emissions and adapting agr.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1600/Ortiz vd. - 2008 - Climate change Can wheat beat the heat.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1601/Mestre-Sanchís ve Feijóo-Bello - 2009 - Climate change and its marginalizing effect on agr.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1602/Xiong vd. - 2010 - Climate change, water availability and future cere.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1603/Niles vd. - 2015 - How limiting factors drive agricultural adaptation.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1604/Berauer vd. - 2020 - Predicting forage quality of species-rich pasture .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1605/Kreft vd. - 2021 - The role of non-cognitive skills in farmers' adopt.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1606/Bigelow ve Zhang - 2018 - Supplemental irrigation water rights and climate c.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1607/DeBano vd. - 2016 - Interactive influences of climate change and agric.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1608/Southworth vd. - 2000 - Consequences of future climate change and changing.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1609/Tinker vd. - 1996 - Effects of slash-and-burn agriculture and deforest.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1610/Smith vd. - 2000 - Meeting Europe's climate change commitments quant.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1611/Powlson vd. - 2016 - Does conservation agriculture deliver climate chan.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1612/Turhan - 2016 - Value-based adaptation to climate change and diver.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1613/Müller vd. - 2014 - Hotspots of climate change impacts in sub‐Saharan .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1614/Gall vd. - 1992 - Global climate change.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1615/Sanchez - 2000 - Linking climate change research with food security.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1616/Zinyengere vd. - 2014 - Local impacts of climate change and agronomic prac.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1617/Leclère vd. - 2013 - Farm-level Autonomous Adaptation of European Agric.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1618/Hamilton vd. - 2016 - Mitigating climate change through managing constru.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1640/Augustine vd. - 2018 - Elevated CO.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1641/D'Amato vd. - 2013 - Effects of thinning on drought vulnerability and c.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1642/Parks vd. - 2015 - Wildland fire deficit and surplus in the western U.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1643/Fleischer vd. - 2008 - Climate change, irrigation, and Israeli agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1644/Smith vd. - 2000 - Meeting Europe's climate change commitments quant.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1645/de Bruijn vd. - 2014 - Toward more robust projections of forest landscape.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1646/Giannini vd. - 2012 - Pollination services at risk Bee habitats will de.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1647/Leclère vd. - 2013 - Farm-level Autonomous Adaptation of European Agric.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1648/Ford vd. - 2011 - Can forest management be used to sustain water-bas.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1649/Scheller vd. - 2011 - The effects of forest harvest intensity in combina.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1650/Kandulu vd. - 2012 - Mitigating economic risk from climate variability .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1651/McKinley vd. - 2011 - A synthesis of current knowledge on forests and ca.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1652/Klos vd. - 2009 - Drought impact on forest growth and mortality in t.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1653/Skagen ve Adams - 2012 - Weather effects on avian breeding performance and .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1654/Sturtevant vd. - 2009 - Simulating dynamic and mixed-severity fire regimes.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1655/Hawbaker vd. - 2013 - Human and biophysical influences on fire occurrenc.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1656/Isaak vd. - 2010 - Effects of climate change and wildfire on stream t.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1657/Allen vd. - 2015 - On underestimation of global vulnerability to tree.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1679/Callon vd. - 1983 - From translations to problematic networks An intr.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1681/Glanzel - 2001 - [No title found].pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1683/Peters ve Van Raan - 1991 - Structuring scientific activities by co-author ana.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1716/Daim vd. - 2006 - Forecasting emerging technologies Use of bibliome.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1717/Weingart - 2005 - Impact of bibliometrics upon the science system I.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1718/Narin - 1994 - Patent bibliometrics.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1719/D'Angelo vd. - 2011 - A heuristic approach to author name disambiguation.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1720/Narin vd. - 1994 - BibliometricsTheory, Practice and Problems.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1721/Broadus - 1987 - Toward a definition of “bibliometrics”.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1722/Abramo vd. - 2009 - Allocative efficiency in public research funding .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1723/Sengupta - 1992 - Bibliometrics, Informetrics, Scientometrics and Li.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1724/Cronin - 2000 - Semiotics and evaluative bibliometrics.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1725/Kostoff vd. - 2002 - Electrochemical power text mining using bibliometr.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1726/Persson - 1986 - Online bibliometrics. A research tool for every ma.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1727/De Glas - 1986 - Fiction and Bibliometrics Analyzing a Publishing .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1728/Broadus - 1987 - Some Notes on Research in Bibliometrics.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1729/Bornmann ve Marx - 2015 - Methods for the generation of normalized citation .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1730/Bornmann - 2014 - How are excellent (highly cited) papers defined in.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1731/Bornmann - 2013 - How to analyze percentile citation impact data mea.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1732/Bornmann ve Williams - 2013 - How to calculate the practical significance of cit.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1733/Bornmann ve Marx - 2013 - The proposal of a broadening of perspective in eva.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1734/Bornmann ve Leydesdorff - 2014 - On the meaningful and non-meaningful use of refere.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1735/Peritz - 1990 - A bradford distribution for bibliometrics.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1736/Kostoff vd. - 2005 - Power source roadmaps using bibliometrics and data.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1737/Abramo ve D’Angelo - 2011 - Evaluating research from informed peer review to .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1738/Aria vd. - 2021 - The scholar’s best friend research trends in dog .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1739/Cuccurullo vd. - 2016 - Foundations and trends in performance management. .pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1740/Garfield - 2006 - The History and Meaning of the Journal Impact Fact.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1741/Hirsch - 2005 - An index to quantify an individual's scientific re.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1742/Gross ve Gross - 1927 - College Libraries and Chemical Education.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1743/Small - 1973 - Co-citation in the scientific literature A new me.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1746/Koseoglu - 2016 - Growth and structure of authorship and co-authorsh.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1750/Kessler - 1963 - Bibliographic coupling between scientific papers.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/1763/Punnakitikashem ve Hallinger - 2019 - Bibliometric Review of the Knowledge Base on Healt.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/3617/Glanzel - 2001 - [No title found].pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/3620/Peters and Van Raan - 1991 - Structuring scientific activities by co-author ana.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/3622/Callon et al. - 1983 - From translations to problematic networks An intr.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/3624/Çürük and Kaynar - 2021 - Bibliometric Analysis of Islamic Finance Literatur.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/487/Horbach vd. - Sustainability and Innovation.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/491/Walz ve Schleich - 2009 - The economics of climate change policies macroeco.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/514/Viguier vd. - 2006 - Modeling endogenous learning and imperfect competi.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/530/Sequeira ve Reis - 2019 - Climate change and global development market, glo.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/570/Boly vd. - 2018 - Building a Resilient and Sustainable Agriculture i.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/606/Climate Variability, Predictability and Climate Ri.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/631/Dudu ve Çakmak - 2018 - Climate change and agriculture an integrated appr.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/635/Carter vd. - 2018 - Identifying the Economic Impacts of Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/848/Holtz-Eakin ve Selden - 1995 - Stoking the fires CO2 emissions and economic grow.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/893/Munn et al_2018_Systematic review or scoping review.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/896/Khangura et al_2012_Evidence summaries.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/899/Jaffe et al_2005_A tale of two market failures.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/901/Alauddin_Quiggin_2008_Agricultural intensification, irrigation and the environment in South Asia.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/907/Böhringer vd. - 2021 - Trade in Carbon and Carbon Tariffs.pdf | secondary: Q56, Q58 | evidence: carbon
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/915/Ge ve Lin - 2022 - Does the Kyoto Protocol as an International Enviro.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/923/Slavík_2007_Neoclassical economy in environmental protection.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/934/Mora Rodríguez et al_2019_Evaluando los stakeholders de la Economía del Bien Común.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/945/Leuz_Verrecchia_2000_The Economic Consequences of Increased Disclosure.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/960/Nordhaus - 2015 - Climate Clubs Overcoming Free-riding in Internati.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/964/Spash_2010_The Brave New World of Carbon Trading.pdf | secondary: Q56, Q58 | evidence: carbon
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/967/McKibbin_Wilcoxen_2002_The Role of Economics in Climate Change Policy.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/970/Michaelowa et al_2019_Evolution of international carbon markets.pdf | secondary: Q56, Q58 | evidence: carbon
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/975/Weitzman_2012_GHG Targets as Insurance Against Catastrophic Climate Damages.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/981/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/993/Dasgupta_2007_Nature and the economy.pdf | secondary: Q56, O13 | evidence: climate
+- citavi_6_course_materials/İklim Değişikliği Citavi Materyal/Climate Change/files/998/Jouini et al_2010_Discounting and divergence of opinion.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/Exported Items.bib | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1005/Daube_Ulph_2016_Moral Behaviour, Altruism and Environmental Policy.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1006/Daube-Ulph2016_Article_MoralBehaviourAltruismAndEnvir.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1008/1-s2.0-S0308521X15000797-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1014/1-s2.0-S0301421518302787-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1020/Fourcade vd. - 2015 - The Superiority of Economists.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1024/1-s2.0-S0921800996001036-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1028/enviroValues.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1040/Holcombe2011_Article_PluralismAndHeterodoxyInEconom.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1044/jep.3.4.99.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1050/Suppe_2000.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1055/1229304.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1058/1-s2.0-S0921800907001462-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1060/1-s2.0-S092180090900456X-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1064/1-s2.0-S0959378008001192-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1066/Katz_Shapiro_1986_Technology Adoption in the Presence of Network Externalities.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1083/29729990.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1099/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1121/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1168/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1204/BSUY_Egitimi.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1216/Water Agriculture and Drought in the West under Changing Climat.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1218/frontiers-in-water-resource-economics-2006.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1224/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1231/adaptive-inclusive-watershed-management-kenya.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1233/vila-traver2020.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1241/Akar_2012_Ekonomik Büyüme ve Çevresel Vergilerin Emisyon Miktarına Etkileri.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1246/Dudu_Çakmak_2018_Climate change and agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1278/Sürdülebilirliğin Gelişimi.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1290/costanza1997.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1294/1-s2.0-S0921800904001570-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1296/Stern_2004_The Rise and Fall of the Environmental Kuznets Curve.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1297/The-Rise-and-Fall-of-the-Environmental-Kuznets-CurveWorld-Development.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1307/korhonen2018.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1314/Gintis_2000_Beyond Homo economicus.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1318/A-review-on-circular-economy-The-expected-transition-to-a-balanced-interplay-of-environmental-and-economic-systemsJournal-of-Cleaner-Production.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1320/Squaring-the-circle-Some-thoughts-on-the-idea-of-sustainable-developmentEcological-Economics.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1326/WP71.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1334/Tom Tietenberg, Lynne Lewis - Environmental and Natural Resource Economics-Routledge (2018).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1400/Page et al_2021_The PRISMA 2020 statement.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1401/page2021.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1518/Snyder vd. - 2009 - Review of greenhouse gas emissions from crop produ.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1537/Richardson vd. - 2012 - Terrestrial biosphere models need better represent.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1643/Fleischer vd. - 2008 - Climate change, irrigation, and Israeli agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/1657/Allen vd. - 2015 - On underestimation of global vulnerability to tree.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/491/Walz ve Schleich - 2009 - The economics of climate change policies macroeco.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/530/Sequeira ve Reis - 2019 - Climate change and global development market, glo.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/570/Boly vd. - 2018 - Building a Resilient and Sustainable Agriculture i.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/606/Climate Variability, Predictability and Climate Ri.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/631/Dudu ve Çakmak - 2018 - Climate change and agriculture an integrated appr.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/635/Carter vd. - 2018 - Identifying the Economic Impacts of Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/703/(Climate Change Management) Jiuping Xu, Liming Yao, Yi Lu (auth.) - Innovative Approaches Towards Low Carbon Economics_ Regional Development Cybernetics-Springer-Verlag Berlin Heidelberg (2014).pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Climate Change Economic Effects/Exported Items/files/705/(Developments in Environmental Economics 7) Edwin Woerdman (Eds.) - The Institutional Economics of Market-Based Climate Policy-Elsevier, Academic Press (2004).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/706/(EBL-Schweitzer) OECD - Climate Change Risks and Adaptation _ Linking Policy and Economics-OECD Publishing (2015).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/707/(Ecology, Biodiversity and Conservation) Martin Drechsler - Ecological-Economic Modelling for Biodiversity Conservation-Cambridge University Press (2020).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/708/(Lecture Notes in Economics and Mathematical Systems 685) Antonio Villar (auth.) - Lectures on Inequality, Poverty and Welfare-Springer International Publishing (2017).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/710/(New Horizons in Environmental Economics) James M. Griffin - Global Climate Change_ The Science, Economics, and Politics-Edward Elgar Publishing (2003).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/711/(New Horizons in Environmental Economics) Robert O. Mendelsohn, Ariel Dinar - Climate Change and Agriculture_ An Economic Analysis of Global Impacts, Adaptation and Distributional Effects-Edward Elgar.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/712/(Palgrave Studies in Sustainability, Environment and Macroeconomics) Michael Roos, Franziska M. Hoffart - Climate Economics_ A Call for More Pluralism And Responsibility-Palgrave Macmillan (2021).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/713/(Routledge explorations in environmental economics 3) Nick Hanley, Anthony D Owen - The Economics of Climate Change-Routledge (2004).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/714/(Routledge International Handbooks) Anil Markandya, Ibon Galarraga, Elisa Sainz de Murieta - Routledge Handbook of the Economics of Climate Change Adaptation-Routledge (2014).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/715/(Routledge Studies in Ecological Economics) Frank Ackerman, Elizabeth A. Stanton - Climate Economics_ The State of the Art-Routledge (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/716/(SpringerBriefs in Climate Studies) Vladimir Udalov - Behavioural Economics of Climate Change_ New Empirical Perspectives-Springer International Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/717/(SpringerBriefs in Economics) P.K. Rao (auth.) - International Trade Policies and Climate Change Governance-Springer-Verlag Berlin Heidelberg (2012).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/718/(The Anthropocene_ Politik—Economics—Society—Science 18) Tsugihiro Watanabe, Selim Kapur, Mehmet Aydın, Rıza Kanber, Erhan Akça - Climate Change Impacts on Basin Agro-ecosystems-Springer International.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/721/agovino2018.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/724/Bernd Hansjürgens, Ralf Antes - Economics and Management of Climate Change Risks, Mitigation and Adaptation-Springer (2008).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/725/Bhattacharyya2011_Chapter_TheEconomicsOfClimateChange.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/726/carter2018.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/728/Climate change and agriculture an integrated approach to evaluate economy wide effects for Turkey.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/730/Dieter Helm, Cameron Hepburn - The Economics and Politics of Climate Change-Oxford University Press (2010).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/731/Dinesh Chandra Uprety, V. R. Reddy, Jyostna Devi Mura - Climate Change and Agriculture_ A Historical Analysis-Springer Singapore (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/733/Felix R. FitzRoy, Elissaios Papyrakis - An introduction to climate change economics and policy-Routledge (2016).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/734/Food Secutity.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/736/G. Cornelis van Kooten (auth.) - Climate Change, Climate Science and Economics_ Prospects for an Alternative Energy Future-Springer Netherlands (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/737/Gines, Julie - Climate Management Issues _ Economics, Sociology, and Politics-CRC Press (2011).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/738/Grabowski-Haggblade2016_Chapter_TheEconomicsOfConservationAgri.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/742/K. Vohnout - Mathematical Modeling for System Analysis in Agricultural Research-Elsevier (2003).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/743/Philip Lawn (auth.) - Resolving the Climate Change Crisis_ The Ecological Economics of Climate Change-Springer Netherlands (2016).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/744/Qing Pei - Climate Change Economics between Europe and China_ Long-Term Economic Development of Divergence and Convergence-Springer (2021).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/745/Rajib Roychowdhury, Shuvasish Choudhury, Mirza Hasanuzzaman, Sangeeta Srivastava - Sustainable Agriculture in the Era of Climate Change-Springer International Publishing_Springer (2020).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/746/Richard S. J. Tol - Climate economics _ economic analysis of climate, climate change and climate policy-Edward Elgar Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/747/Stuart P. M. Mackintosh - Climate Crisis Economics-Routledge (2021).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/748/Türkiye'nin Karbonsuzlaşma Yol Haritası.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/749/V. Venkatramanan, Shachi Shah, Ram Prasad - Global Climate Change and Environmental Policy_ Agriculture Perspectives-Springer Singapore (2020).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/752/William C. Whitesell - Climate Policy Foundations_ Science and Economics with Lessons from Monetary Regulation  -Cambridge University Press (2011).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/753/William D. Nordhaus - The Climate Casino_ Risk, Uncertainty, and Economics for a Warming World-Yale University Press (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/754/Woodrow W. Clark II Ph.D., Woodrow W. Clark II Ph.D. (auth.), Woodrow W. Clark II (eds.) - The Next Economics_ Global Cases in Energy, Environment, and Climate Change-Springer-Verlag New York (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/856/3146538.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/896/Khangura et al_2012_Evidence summaries.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/901/Alauddin_Quiggin_2008_Agricultural intensification, irrigation and the environment in South Asia.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/902/Agricultural-intensification-irrigation-and-the-environment-in-South-Asia-Issues-and-policy-optionsEcological-Economics.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/911/cepa33.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/917/sre-disc-2021_01.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/920/44f5e229a907fa2ec153acaf9966d559.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/926/1-s2.0-030142079685063X-main (1).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/929/Horst Siebert - Economics of the Environment_ Theory and Policy-Springer (2008).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/939/CORE_DP_2022-12.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/942/cepa33.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/950/30301524.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/954/44378828.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/959/aer.15000001.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/960/Nordhaus - 2015 - Climate Clubs Overcoming Free-riding in Internati.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/962/Ostrom2012_Article_NestedExternalitiesAndPolycent.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/970/Michaelowa et al_2019_Evolution of international carbon markets.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Climate Change Economic Effects/Exported Items/files/971/WIREs Climate Change - 2019 - Michaelowa - Evolution of international carbon markets  lessons for the Paris Agreement.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Climate Change Economic Effects/Exported Items/files/973/1-s2.0-S0301421509002110-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/979/Burniaux-OliveiraMartins2012_Article_CarbonLeakagesAGeneralEquilibr.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Climate Change Economic Effects/Exported Items/files/984/1-s2.0-S0304380014003640-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/988/WIREs Energy   Environment - 2012 - Scrieciu - On the economic foundations of green growth discourses  the case of climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/996/1-s2.0-S0095069614000242-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/998/Jouini et al_2010_Discounting and divergence of opinion.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Climate Change Economic Effects/Exported Items/files/999/1-s2.0-S0022053110000037-main.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Ecological Economics/files/1360/Nicholas Stern - The Economics of Climate Change_ American Economic Review Papers & Proceedings  -American Economic Review_ Papers & Proceedings 2008, 98_2, –37 (2007) (2).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1001/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1003/The Brave New World of Carbon Trading (1).pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/1016/Shen-Sun2016_Article_ReviewOnCarbonEmissionsEnergyC.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/1033/Kaya vd. - 2021 - The relationship of economic growth and carbon-dio.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/1095/Adams et al_1998_Effects of global climate change on world agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1099/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1109/ElBilalietal._Climatechangeandfoodsecurity_AgricultureandForestry2020.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1113/climate-change-and-agriculture-worldwide-2016.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1116/Finnessey et al_2016_Using climate information for drought planning.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1121/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1136/Shayanmehr et al_2020_Drought, Climate Change, and Dryland Wheat Yield Response.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1139/Al Jbawi_2020_Effect of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1160/Burke_Emerick_2016_Adaptation to Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1164/Antwi-Agyei_Nyantakyi-Frimpong_2021_Evidence of Climate Change Coping and Adaptation Practices by Smallholder.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1168/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1177/191015_Flowers_ClimateChangeFood_WEB.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1184/Liu et al_2020_Changes in Climate Extremes in Central Asia under 1.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1192/Zilli et al_2020_The impact of climate change on Brazil's agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1196/Shayanmehr et al_2020_Drought, Climate Change, and Dryland Wheat Yield Response.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1198/Yalew et al_2018_Climate Change, Agriculture, and Economic Development in Ethiopia.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1224/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1235/Understanding_Climate_Security_risks_052920.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1246/Dudu_Çakmak_2018_Climate change and agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1248/Kilicarslan_Dumrul_2017_Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1273/Alfred Marshall Evolutionary Economics and Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1360/Nicholas Stern - The Economics of Climate Change_ American Economic Review Papers & Proceedings  -American Economic Review_ Papers & Proceedings 2008, 98_2, –37 (2007) (2).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1427/Bhanumurthy_Kumar_2018_Climate change and agriculture in India.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1432/Deschênes_Greenstone_2007_The economic impacts of climate change.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1434/Adinew_Gebresilasie_2019_Effect of Climate Change on Agricultural Output Growth in Ethiopia.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1435/Costa et al_2020_Climate Change and the Distribution of Agricultural Output.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1445/Auffhammer et al_2013_Using Weather Data and Climate Model Output in Economic Analyses of Climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1454/Chandio et al_2020_Short and long-run impacts of climate change on agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1465/Assunção_Chein_2016_Climate change and agricultural productivity in Brazil.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1467/Das Gupta_2014_Population, Poverty, and Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1480/Sibanda_Ndlela_2020_THE LINK BETWEEN CARBON EMISSIONS, AGRICULTURAL OUTPUT AND INDUSTRIAL OUTPUT.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/1512/Lal - 2004 - Soil Carbon Sequestration Impacts on Global Climat.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/1563/Calzadilla vd. - 2013 - Economywide impacts of climate change on agricultu.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1583/Connor vd. - 2012 - Irrigated agriculture and climate change The infl.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1584/Sidibé vd. - 2018 - Adaptation to Climate Change in Rainfed Agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1585/Peach Brown ve Sonwa - 2015 - Rural local institutions and climate change adapta.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1588/Nigussie vd. - 2018 - Evaluation of Climate Change Adaptation Alternativ.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1606/Bigelow ve Zhang - 2018 - Supplemental irrigation water rights and climate c.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1607/DeBano vd. - 2016 - Interactive influences of climate change and agric.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1608/Southworth vd. - 2000 - Consequences of future climate change and changing.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1643/Fleischer vd. - 2008 - Climate change, irrigation, and Israeli agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1644/Smith vd. - 2000 - Meeting Europe's climate change commitments quant.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1656/Isaak vd. - 2010 - Effects of climate change and wildfire on stream t.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/1752/Cartwright vd. - 2013 - Economics of climate change adaptation at the loca.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/2924/Gills and Morgan - 2021 - Teaching climate complacency mainstream economics.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/491/Walz ve Schleich - 2009 - The economics of climate change policies macroeco.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/530/Sequeira ve Reis - 2019 - Climate change and global development market, glo.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/606/Climate Variability, Predictability and Climate Ri.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/631/Dudu ve Çakmak - 2018 - Climate change and agriculture an integrated appr.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/635/Carter vd. - 2018 - Identifying the Economic Impacts of Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/700/(Advances in Global Change Research 37) David Lobell, Marshall Burke (auth.), David Lobell, Marshall Burke (eds.) - Climate Change and Food Security_ Adapting Agriculture to a Warmer World-Springer Ne.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/702/(Anthem frontiers of global political economy) Boyce, James K - Economics for people and the planet_ inequality in the era of climate change-Anthem Press (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/703/(Climate Change Management) Jiuping Xu, Liming Yao, Yi Lu (auth.) - Innovative Approaches Towards Low Carbon Economics_ Regional Development Cybernetics-Springer-Verlag Berlin Heidelberg (2014).pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/704/(Contributions to Economics) Tiago Sequeira, Liliana Reis - Climate Change and Global Development_ Market, Global Players and Empirical Evidence-Springer International Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/705/(Developments in Environmental Economics 7) Edwin Woerdman (Eds.) - The Institutional Economics of Market-Based Climate Policy-Elsevier, Academic Press (2004).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/706/(EBL-Schweitzer) OECD - Climate Change Risks and Adaptation _ Linking Policy and Economics-OECD Publishing (2015).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/710/(New Horizons in Environmental Economics) James M. Griffin - Global Climate Change_ The Science, Economics, and Politics-Edward Elgar Publishing (2003).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/711/(New Horizons in Environmental Economics) Robert O. Mendelsohn, Ariel Dinar - Climate Change and Agriculture_ An Economic Analysis of Global Impacts, Adaptation and Distributional Effects-Edward Elgar.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/712/(Palgrave Studies in Sustainability, Environment and Macroeconomics) Michael Roos, Franziska M. Hoffart - Climate Economics_ A Call for More Pluralism And Responsibility-Palgrave Macmillan (2021).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/713/(Routledge explorations in environmental economics 3) Nick Hanley, Anthony D Owen - The Economics of Climate Change-Routledge (2004).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/714/(Routledge International Handbooks) Anil Markandya, Ibon Galarraga, Elisa Sainz de Murieta - Routledge Handbook of the Economics of Climate Change Adaptation-Routledge (2014).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/715/(Routledge Studies in Ecological Economics) Frank Ackerman, Elizabeth A. Stanton - Climate Economics_ The State of the Art-Routledge (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/716/(SpringerBriefs in Climate Studies) Vladimir Udalov - Behavioural Economics of Climate Change_ New Empirical Perspectives-Springer International Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/717/(SpringerBriefs in Economics) P.K. Rao (auth.) - International Trade Policies and Climate Change Governance-Springer-Verlag Berlin Heidelberg (2012).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/718/(The Anthropocene_ Politik—Economics—Society—Science 18) Tsugihiro Watanabe, Selim Kapur, Mehmet Aydın, Rıza Kanber, Erhan Akça - Climate Change Impacts on Basin Agro-ecosystems-Springer International.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/722/Anita Wreford, Dominic Moran, Neil Adger - Climate Change and Agriculture_  Impacts, Adaptation and Mitigation-OECD Publishing (2010).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/724/Bernd Hansjürgens, Ralf Antes - Economics and Management of Climate Change Risks, Mitigation and Adaptation-Springer (2008).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/725/Bhattacharyya2011_Chapter_TheEconomicsOfClimateChange.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/728/Climate change and agriculture an integrated approach to evaluate economy wide effects for Turkey.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/730/Dieter Helm, Cameron Hepburn - The Economics and Politics of Climate Change-Oxford University Press (2010).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/731/Dinesh Chandra Uprety, V. R. Reddy, Jyostna Devi Mura - Climate Change and Agriculture_ A Historical Analysis-Springer Singapore (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/732/Farhana Yamin, Joanna Depledge - The International Climate Change Regime_ A Guide to Rules, Institutions and Procedures (2005).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/733/Felix R. FitzRoy, Elissaios Papyrakis - An introduction to climate change economics and policy-Routledge (2016).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/735/Frank P. Incropera - Climate Change_ A Wicked Problem_ Complexity and Uncertainty at the Intersection of Science, Economics, Politics, and Human Behavior-Cambridge University Press (2015).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/736/G. Cornelis van Kooten (auth.) - Climate Change, Climate Science and Economics_ Prospects for an Alternative Energy Future-Springer Netherlands (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/737/Gines, Julie - Climate Management Issues _ Economics, Sociology, and Politics-CRC Press (2011).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/739/H. Wanner (Editor), M. Grosjean (Editor), R. Rothlisberger (Editor), E. Xoplaki (Editor) - Climate Variability, Predictability and Climate Risks_ A European Perspective (2007).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/741/Jean-Marie Chevalier, Patrice Geoffron (eds.) - The New Energy Crisis_ Climate, Economics and Geopolitics-Palgrave Macmillan UK (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/743/Philip Lawn (auth.) - Resolving the Climate Change Crisis_ The Ecological Economics of Climate Change-Springer Netherlands (2016).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/744/Qing Pei - Climate Change Economics between Europe and China_ Long-Term Economic Development of Divergence and Convergence-Springer (2021).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/745/Rajib Roychowdhury, Shuvasish Choudhury, Mirza Hasanuzzaman, Sangeeta Srivastava - Sustainable Agriculture in the Era of Climate Change-Springer International Publishing_Springer (2020).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/746/Richard S. J. Tol - Climate economics _ economic analysis of climate, climate change and climate policy-Edward Elgar Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/747/Stuart P. M. Mackintosh - Climate Crisis Economics-Routledge (2021).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/749/V. Venkatramanan, Shachi Shah, Ram Prasad - Global Climate Change and Environmental Policy_ Agriculture Perspectives-Springer Singapore (2020).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/750/Walz-Schleich2009_Book_TheEconomicsOfClimateChangePol.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/752/William C. Whitesell - Climate Policy Foundations_ Science and Economics with Lessons from Monetary Regulation  -Cambridge University Press (2011).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/753/William D. Nordhaus - The Climate Casino_ Risk, Uncertainty, and Economics for a Warming World-Yale University Press (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/754/Woodrow W. Clark II Ph.D., Woodrow W. Clark II Ph.D. (auth.), Woodrow W. Clark II (eds.) - The Next Economics_ Global Cases in Energy, Environment, and Climate Change-Springer-Verlag New York (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/907/Böhringer vd. - 2021 - Trade in Carbon and Carbon Tariffs.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/908/Böhringer2021_Article_TradeInCarbonAndCarbonTariffs.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/960/Nordhaus - 2015 - Climate Clubs Overcoming Free-riding in Internati.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/964/Spash_2010_The Brave New World of Carbon Trading.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/965/The Brave New World of Carbon Trading.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/970/Michaelowa et al_2019_Evolution of international carbon markets.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/971/WIREs Climate Change - 2019 - Michaelowa - Evolution of international carbon markets  lessons for the Paris Agreement.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/975/Weitzman_2012_GHG Targets as Insurance Against Catastrophic Climate Damages.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/979/Burniaux-OliveiraMartins2012_Article_CarbonLeakagesAGeneralEquilibr.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renev/files/981/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renev/files/988/WIREs Energy   Environment - 2012 - Scrieciu - On the economic foundations of green growth discourses  the case of climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1113/climate-change-and-agriculture-worldwide-2016.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1136/Shayanmehr et al_2020_Drought, Climate Change, and Dryland Wheat Yield Response.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1164/Antwi-Agyei_Nyantakyi-Frimpong_2021_Evidence of Climate Change Coping and Adaptation Practices by Smallholder.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1177/191015_Flowers_ClimateChangeFood_WEB.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1192/Zilli et al_2020_The impact of climate change on Brazil's agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1196/Shayanmehr et al_2020_Drought, Climate Change, and Dryland Wheat Yield Response.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1248/Kilicarslan_Dumrul_2017_Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1454/Chandio et al_2020_Short and long-run impacts of climate change on agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1467/Das Gupta_2014_Population, Poverty, and Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1480/Sibanda_Ndlela_2020_THE LINK BETWEEN CARBON EMISSIONS, AGRICULTURAL OUTPUT AND INDUSTRIAL OUTPUT.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/722/Anita Wreford, Dominic Moran, Neil Adger - Climate Change and Agriculture_  Impacts, Adaptation and Mitigation-OECD Publishing (2010).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/749/V. Venkatramanan, Shachi Shah, Ram Prasad - Global Climate Change and Environmental Policy_ Agriculture Perspectives-Springer Singapore (2020).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1001/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1016/Shen-Sun2016_Article_ReviewOnCarbonEmissionsEnergyC.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1033/Kaya vd. - 2021 - The relationship of economic growth and carbon-dio.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1512/Lal - 2004 - Soil Carbon Sequestration Impacts on Global Climat.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/606/Climate Variability, Predictability and Climate Ri.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/700/(Advances in Global Change Research 37) David Lobell, Marshall Burke (auth.), David Lobell, Marshall Burke (eds.) - Climate Change and Food Security_ Adapting Agriculture to a Warmer World-Springer Ne.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/702/(Anthem frontiers of global political economy) Boyce, James K - Economics for people and the planet_ inequality in the era of climate change-Anthem Press (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/703/(Climate Change Management) Jiuping Xu, Liming Yao, Yi Lu (auth.) - Innovative Approaches Towards Low Carbon Economics_ Regional Development Cybernetics-Springer-Verlag Berlin Heidelberg (2014).pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/704/(Contributions to Economics) Tiago Sequeira, Liliana Reis - Climate Change and Global Development_ Market, Global Players and Empirical Evidence-Springer International Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/706/(EBL-Schweitzer) OECD - Climate Change Risks and Adaptation _ Linking Policy and Economics-OECD Publishing (2015).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/713/(Routledge explorations in environmental economics 3) Nick Hanley, Anthony D Owen - The Economics of Climate Change-Routledge (2004).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/714/(Routledge International Handbooks) Anil Markandya, Ibon Galarraga, Elisa Sainz de Murieta - Routledge Handbook of the Economics of Climate Change Adaptation-Routledge (2014).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/716/(SpringerBriefs in Climate Studies) Vladimir Udalov - Behavioural Economics of Climate Change_ New Empirical Perspectives-Springer International Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/717/(SpringerBriefs in Economics) P.K. Rao (auth.) - International Trade Policies and Climate Change Governance-Springer-Verlag Berlin Heidelberg (2012).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/722/Anita Wreford, Dominic Moran, Neil Adger - Climate Change and Agriculture_  Impacts, Adaptation and Mitigation-OECD Publishing (2010).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/724/Bernd Hansjürgens, Ralf Antes - Economics and Management of Climate Change Risks, Mitigation and Adaptation-Springer (2008).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/725/Bhattacharyya2011_Chapter_TheEconomicsOfClimateChange.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/730/Dieter Helm, Cameron Hepburn - The Economics and Politics of Climate Change-Oxford University Press (2010).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/731/Dinesh Chandra Uprety, V. R. Reddy, Jyostna Devi Mura - Climate Change and Agriculture_ A Historical Analysis-Springer Singapore (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/732/Farhana Yamin, Joanna Depledge - The International Climate Change Regime_ A Guide to Rules, Institutions and Procedures (2005).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/733/Felix R. FitzRoy, Elissaios Papyrakis - An introduction to climate change economics and policy-Routledge (2016).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/735/Frank P. Incropera - Climate Change_ A Wicked Problem_ Complexity and Uncertainty at the Intersection of Science, Economics, Politics, and Human Behavior-Cambridge University Press (2015).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/736/G. Cornelis van Kooten (auth.) - Climate Change, Climate Science and Economics_ Prospects for an Alternative Energy Future-Springer Netherlands (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/737/Gines, Julie - Climate Management Issues _ Economics, Sociology, and Politics-CRC Press (2011).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/741/Jean-Marie Chevalier, Patrice Geoffron (eds.) - The New Energy Crisis_ Climate, Economics and Geopolitics-Palgrave Macmillan UK (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/743/Philip Lawn (auth.) - Resolving the Climate Change Crisis_ The Ecological Economics of Climate Change-Springer Netherlands (2016).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/746/Richard S. J. Tol - Climate economics _ economic analysis of climate, climate change and climate policy-Edward Elgar Publishing (2019).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/747/Stuart P. M. Mackintosh - Climate Crisis Economics-Routledge (2021).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/749/V. Venkatramanan, Shachi Shah, Ram Prasad - Global Climate Change and Environmental Policy_ Agriculture Perspectives-Springer Singapore (2020).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/750/Walz-Schleich2009_Book_TheEconomicsOfClimateChangePol.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/752/William C. Whitesell - Climate Policy Foundations_ Science and Economics with Lessons from Monetary Regulation  -Cambridge University Press (2011).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/753/William D. Nordhaus - The Climate Casino_ Risk, Uncertainty, and Economics for a Warming World-Yale University Press (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/754/Woodrow W. Clark II Ph.D., Woodrow W. Clark II Ph.D. (auth.), Woodrow W. Clark II (eds.) - The Next Economics_ Global Cases in Energy, Environment, and Climate Change-Springer-Verlag New York (2013).pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/907/Böhringer vd. - 2021 - Trade in Carbon and Carbon Tariffs.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/908/Böhringer2021_Article_TradeInCarbonAndCarbonTariffs.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/960/Nordhaus - 2015 - Climate Clubs Overcoming Free-riding in Internati.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/964/Spash_2010_The Brave New World of Carbon Trading.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/965/The Brave New World of Carbon Trading.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/970/Michaelowa et al_2019_Evolution of international carbon markets.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/971/WIREs Climate Change - 2019 - Michaelowa - Evolution of international carbon markets  lessons for the Paris Agreement.pdf | secondary: Q56, Q58 | evidence: carbon
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/981/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/988/WIREs Energy   Environment - 2012 - Scrieciu - On the economic foundations of green growth discourses  the case of climate.pdf | secondary: Q56, O13 | evidence: climate
+- citaviii/Renewable/Renewable Energy/files/3025/(Energiepolitik und Klimaschutz. Energy Policy and Climate Protection) Lutz Mez, Lila Okamura, Helmut Weidner - The Ecological Modernization Capacity of Japan and Germany_ Comparing Nuclear Energy, Re.pdf | secondary: Q56, O13 | evidence: climate
+- Climate Change and Displacement .docx | secondary: Q56, O13 | evidence: climate
+- Climate Change and Displacement in the MENA Regio.docx | secondary: Q56, O13 | evidence: climate
+- Climate Change and Displacement in the MENA Region.docx | secondary: Q56, O13 | evidence: climate
+- Climate Change and Migration.pptx | secondary: Q56, O13 | evidence: climate
+- Climate Time Series Analysis copy.pdf | secondary: Q56, O13 | evidence: climate
+- climate-and-development-enhancing-impact-through-stronger-linkag-2018.pdf | secondary: Q56, O13 | evidence: climate
+- climate-related financial policy index/CRFPI1_dataset_v1.0.xlsx | secondary: Q56, O13 | evidence: climate
+- climate-related financial policy index/CRFPI2_dataset_v1.0.xlsx | secondary: Q56, O13 | evidence: climate
+- climate-related financial policy index/CRFPI3_dataset_v1.0.xlsx | secondary: Q56, O13 | evidence: climate
+- climate-related financial policy index/CRFPI4_dataset_v1.0.xlsx | secondary: Q56, O13 | evidence: climate
+- Climate-related_Disasters_Frequency.csv | secondary: Q56, O13 | evidence: climate
+- Climate.pdf | secondary: Q56, O13 | evidence: climate
+- Climate_Change_Sustainable_Finance_Rapor.docx | secondary: Q56, O13 | evidence: climate
+- climate_indicators_for_agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- DoClimateChangesinfluencetheAgricultureProductivityin.pdf | secondary: Q56, O13 | evidence: climate
+- EKC/A-review-of-the-global-climate-change-impacts-adaptation-and-sustainable-mitigation-measures_2022_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf | secondary: Q56, O13 | evidence: climate
+- EKC/Climate-change-impacts-on-global-food-security_2013_American-Association-for-the-Advancement-of-Science.pdf | secondary: Q56, O13 | evidence: climate
+- EKC/Does-carbon-dioxide-methane-nitrous-oxide-and-GHG-emissions-influence-the-agriculture-Evidence-from-China_2020_Springer.pdf | secondary: Q56, Q58 | evidence: carbon
+- EKC/Global-warming-of-15C-An-IPCC-Special-Report-on-the-impacts-of-global-warming-of-15C-above-preindustrial-levels-and-related-global-greenhouse-gas-emission-pathways-in-the-context-of-strengthening-the-global-response-to-the-threat-of-climate.pdf | secondary: Q56, O13 | evidence: climate
+- EKC/The-threat-to-climate-change-mitigation-posed-by-the-abundance-of-fossil-fuels_2019_Taylor-and-Francis-Ltd-michaelwagreichunivieacat.pdf | secondary: Q56, O13 | evidence: climate
+- Final-Climate-Smart-Agriculture-Report.pdf | secondary: Q56, O13 | evidence: climate
+- How-do-agricultural-trade-liberalization-climate-variability-and-change-and-governance-quality-influence-food-security-in-ASEAN_2026_Springer-Science-and-Business-Media-BV.pdf | secondary: Q56, O13 | evidence: climate
+- Impacts-of-climate-change-on-global-food-trade-networks_2022_Institute-of-Physics.pdf | secondary: Q56, O13 | evidence: climate
+- Informing-African-agricultural-health-integrating-human-population-dynamics-and-climate-change-into-banana-bunchy-top-disease-risk-assessment_2026_Frontiers-Media-SA.pdf | secondary: Q56, O13 | evidence: climate
+- IOM_GSSI_Migration-environment-and-climate-change-nexus.pdf | secondary: Q56, O13 | evidence: climate
+- Maize_yield_sensitivity_to_climate_.pdf | secondary: Q56, O13 | evidence: climate
+- Maximilian Lackner, Baharak Sajjadi, Wei-Yin Chen - Handbook of Climate Change Mitigation and Adaptation-Springer Nature Switzerland AG (2022).pdf | secondary: Q56, O13 | evidence: climate
+- metz_Vol_15_No_3_p259-263_World_Map_of_the_Koppen_Geiger_climate_classification_updated_55034.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1001/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1033/Kaya vd. - 2021 - The relationship of economic growth and carbon-dio.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/1095/Adams et al_1998_Effects of global climate change on world agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1099/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1116/Finnessey et al_2016_Using climate information for drought planning.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1121/Carter et al_2018_Identifying the Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1136/Shayanmehr et al_2020_Drought, Climate Change, and Dryland Wheat Yield Response.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1139/Al Jbawi_2020_Effect of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1160/Burke_Emerick_2016_Adaptation to Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1164/Antwi-Agyei_Nyantakyi-Frimpong_2021_Evidence of Climate Change Coping and Adaptation Practices by Smallholder.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1168/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1184/Liu et al_2020_Changes in Climate Extremes in Central Asia under 1.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1192/Zilli et al_2020_The impact of climate change on Brazil's agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1196/Shayanmehr et al_2020_Drought, Climate Change, and Dryland Wheat Yield Response.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1198/Yalew et al_2018_Climate Change, Agriculture, and Economic Development in Ethiopia.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1224/Hess et al_2020_Resilience of Primary Food Production to a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1246/Dudu_Çakmak_2018_Climate change and agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1248/Kilicarslan_Dumrul_2017_Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1427/Bhanumurthy_Kumar_2018_Climate change and agriculture in India.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1432/Deschênes_Greenstone_2007_The economic impacts of climate change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1434/Adinew_Gebresilasie_2019_Effect of Climate Change on Agricultural Output Growth in Ethiopia.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1435/Costa et al_2020_Climate Change and the Distribution of Agricultural Output.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1445/Auffhammer et al_2013_Using Weather Data and Climate Model Output in Economic Analyses of Climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1454/Chandio et al_2020_Short and long-run impacts of climate change on agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1465/Assunção_Chein_2016_Climate change and agricultural productivity in Brazil.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1467/Das Gupta_2014_Population, Poverty, and Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1480/Sibanda_Ndlela_2020_THE LINK BETWEEN CARBON EMISSIONS, AGRICULTURAL OUTPUT AND INDUSTRIAL OUTPUT.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/1512/Lal - 2004 - Soil Carbon Sequestration Impacts on Global Climat.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/1563/Calzadilla vd. - 2013 - Economywide impacts of climate change on agricultu.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1583/Connor vd. - 2012 - Irrigated agriculture and climate change The infl.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1584/Sidibé vd. - 2018 - Adaptation to Climate Change in Rainfed Agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1585/Peach Brown ve Sonwa - 2015 - Rural local institutions and climate change adapta.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1586/Siddig vd. - 2020 - Climate change and agriculture in the Sudan Impac.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1587/Challinor vd. - 2015 - Crop yield response to climate change varies with .pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1588/Nigussie vd. - 2018 - Evaluation of Climate Change Adaptation Alternativ.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1589/Aggarwal vd. - 2018 - The climate-smart village approach framework of a.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1593/Lungarska ve Chakir - 2018 - Climate-induced Land Use Change in France Impacts.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1594/Fleischer vd. - 2008 - Climate change, irrigation, and Israeli agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1596/Maia vd. - 2018 - Climate Change and Agriculture Do Environmental P.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1597/Schilling vd. - 2012 - Climate change, vulnerability and adaptation in No.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1598/Srivastava vd. - 2010 - Assessment on vulnerability of sorghum to climate .pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1600/Ortiz vd. - 2008 - Climate change Can wheat beat the heat.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1601/Mestre-Sanchís ve Feijóo-Bello - 2009 - Climate change and its marginalizing effect on agr.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1602/Xiong vd. - 2010 - Climate change, water availability and future cere.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1606/Bigelow ve Zhang - 2018 - Supplemental irrigation water rights and climate c.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1607/DeBano vd. - 2016 - Interactive influences of climate change and agric.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1608/Southworth vd. - 2000 - Consequences of future climate change and changing.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1610/Smith vd. - 2000 - Meeting Europe's climate change commitments quant.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1611/Powlson vd. - 2016 - Does conservation agriculture deliver climate chan.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1612/Turhan - 2016 - Value-based adaptation to climate change and diver.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1613/Müller vd. - 2014 - Hotspots of climate change impacts in sub‐Saharan .pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1614/Gall vd. - 1992 - Global climate change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1615/Sanchez - 2000 - Linking climate change research with food security.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1616/Zinyengere vd. - 2014 - Local impacts of climate change and agronomic prac.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1618/Hamilton vd. - 2016 - Mitigating climate change through managing constru.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1643/Fleischer vd. - 2008 - Climate change, irrigation, and Israeli agricultur.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1644/Smith vd. - 2000 - Meeting Europe's climate change commitments quant.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1650/Kandulu vd. - 2012 - Mitigating economic risk from climate variability .pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1656/Isaak vd. - 2010 - Effects of climate change and wildfire on stream t.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/1752/Cartwright vd. - 2013 - Economics of climate change adaptation at the loca.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/2924/Gills and Morgan - 2021 - Teaching climate complacency mainstream economics.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/3809/Vincentnathan - 2012 - Food Rights, Food Frugality, and Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/3821/Żylicz_2020_Economics of climate change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/3826/Farmer et al_2015_A Third Wave in the Economics of Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/3836/Stern_2008_The Economics of Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/3847/Bui et al. - 2018 - Carbon capture and storage (CCS) the way forward.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/3849/Boot-Handford et al_2014_Carbon capture and storage update.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/3851/Haszeldine_2009_Carbon Capture and Storage.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/3855/Markewitz et al_2012_Worldwide innovations in the development of carbon capture technologies and the.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/3857/Kätelhön et al_2019_Climate change mitigation potential of carbon capture and utilization in the.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/3900/Al-Mamoori et al_2017_Carbon Capture and Utilization Update.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/3911/Brecha et al. - 2022 - Institutional decarbonization scenarios evaluated .pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/3976/McCarl and Hertel - 2018 - Climate Change as an Agricultural Economics Resear.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/3985/Neupane et al_2022_Does Climate Change Affect the Yield of the Top Three Cereals and Food Security.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4003/O'Hara - 2009 - Political economy of climate change, ecological de.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4011/Boehm et al. - 2022 - State of Climate Action 2022.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4066/Tagwi - 2022 - The Impacts of Climate Change, Carbon Dioxide Emis.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/4070/Asumadu-Sarkodie and Owusu - 2016 - The relationship between carbon dioxide and agricu.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/4090/Deschênes and Greenstone - 2007 - The Economic Impacts of Climate Change Evidence f.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4100/Dominioni - 2022 - Pricing carbon effectively a pathway for higher c.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/4120/Malhi et al. - 2021 - Impact of Climate Change on Agriculture and Its Mi.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4128/Mccarl et al. - 2016 - THE CHALLENGE OF CLIMATE CHANGE ADAPTATION FOR AGR.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4130/Niles et al. - 2018 - Climate change mitigation beyond agriculture a re.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4441/Patle et al_2020_Climate-smart water technologies for sustainable agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4443/Panday_2012_Adapting Climate Change in Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4445/Nyong_Martin_2019_Enhancing agricultural sustainability and productivity under changing climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4450/El Chami et al_2020_How Can Sustainable Agriculture Increase Climate Resilience.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4452/Wijerathna-Yapa_Pathirana_2022_Sustainable Agro-Food Systems for Addressing Climate Change and Food Security.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4461/Fleming_Vanclay_2010_Farmer responses to climate change and sustainable agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4467/Howden et al_2007_Adapting agriculture to climate change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4469/Siwar et al_2019_A Review of the Linkages between Climate Change, Agricultural Sustainability.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4486/El Chami et al_2020_How Could Sustainable Agriculture Increase Climate Resilience.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4488/Zaman et al_2021_Climate-Smart Agriculture Practices for Mitigating Greenhouse Gas Emissions.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4499/Selvaraju et al_2011_Climate science in support of sustainable agriculture and food security.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4501/Holka et al_2022_Reducing Carbon Footprint of Agriculture—Can Organic Farming Help to Mitigate.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/4507/Branca et al_2013_Food security, climate change, and sustainable land management.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4509/Schmidhuber_Tubiello_2007_Global food security under climate change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4513/Farooq et al_2022_Uncovering the Research Gaps to Alleviate the Negative Impacts of Climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4515/Thompson et al_2010_Climate Change and Food Security in Sub-Saharan Africa.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4519/Wang_2010_Food Security, Food Prices and Climate Change in China.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4521/Brown_Funk_2008_Food Security Under Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4523/Zahid et al_2022_Climate Change and Food Security.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4532/Myers et al_2017_Climate Change and Global Food Systems.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4536/Richardson et al_2018_Food security outcomes under a changing climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4550/Noiret_2016_Food Security in a Changing Climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4556/Hasegawa et al_2018_Risk of increased food insecurity under stringent global climate change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4558/2010_Food Security, Farming, and Climate Change to 2050.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4567/Fuso Nerini et al. - 2019 - Connecting climate action with other Sustainable D.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4581/Gomez-Echeverri - 2018 - Climate and development enhancing impact through .pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4587/Soergel et al. - 2021 - A sustainable development pathway for climate acti.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4613/Vasiliev - 2021 - Combating global challenges – climate change, biod.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4630/Mehling et al. - 2018 - Linking climate policies to advance global mitigat.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4722/Asumadu-Sarkodie and Owusu - 2016 - The relationship between carbon dioxide and agricu.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/4728/Kilicarslan and Dumrul - 2017 - Economic Impacts of Climate Change on Agriculture.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4742/Chandio et al. - 2020 - Short and long-run impacts of climate change on ag.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4744/Zhang et al. - 2019 - Carbon emissions, energy consumption and economic .pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/4858/Yohe_2015_Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4864/Chandio et al_2021_Addressing the long- and short-run effects of climate change on major food.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4866/Kumar et al_2021_Impact of climate change on cereal production.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4870/Abd El Fatah - 2023 - An Econometrics analysis for the effect of climate.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4872/Sarker et al. - 2014 - Assessing the effects of climate change on rice yi.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4878/Shayanmehr et al. - 2020 - Drought, Climate Change, and Dryland Wheat Yield R.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4880/De Medeiros Silva et al. - 2019 - Effects of climate change on sugarcane production .pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4884/Skrypnyk et al. - 2021 - Econometric Analysis of the Impact of Climate Chan.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4886/Mérel and Gammans - 2021 - Climate Econometrics Can the Panel Approach Accou.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4890/Fisher et al. - 2012 - The Economic Impacts of Climate Change Evidence f.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4903/Adam and Drakos - 2022 - Climate change north and south EU economies—an ap.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4905/Chandio et al. - 2022 - Assessing the effect of climate change and financi.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/491/Walz ve Schleich - 2009 - The economics of climate change policies macroeco.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4920/Chandio et al. - 2020 - Empirical analysis of climate change factors affec.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4928/Chandio et al. - 2021 - Addressing the effect of climate change in the fra.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/4978/El Chami et al. - 2020 - How Can Sustainable Agriculture Increase Climate R.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5037/Group - 2021 - World Bank Group Climate Change Action Plan 2021–2.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5070/Global Set of Climate Change  Statistics and Indic.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5107/McCarl and Hertel - 2018 - Climate Change as an Agricultural Economics Resear.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5110/Iglesias - 2010 - Climate Change and Agriculture An Economic Analys.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5131/Bautista et al. - 2019 - Climate change indicators software for computing c.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5142/FAO Strategy on Climate Change 2022–2031.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5195/Çaltı and Somuncu - 2019 - The impact of climate change on agriculture in Tur.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5197/Agriculture and climate change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5296/Xiang et al. - 2022 - The Impact of Climate Change on Agricultural Total.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/530/Sequeira ve Reis - 2019 - Climate change and global development market, glo.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5300/Zhong et al. - 2019 - Impact of Climate Change on Agricultural Total Fac.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5373/Galli et al_2012_Integrating Ecological, Carbon and Water footprint into a “Footprint Family” of.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/5387/D'Orazio - 2023 - Dataset for the climate-related financial policy i.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5498/Zhang - 2018 - Multivariate Time Series Analysis in Climate and E.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5587/Zhang - 2018 - Multivariate Time Series Analysis in Climate and E.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5622/(Atmospheric and Oceanographic Sciences Library 51) Manfred Mudelsee (auth.) - Climate Time Series Analysis_ Classical Statistical and Bootstrap Methods-Springer International Publishing (2014) c.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5623/(Atmospheric and Oceanographic Sciences Library 51) Manfred Mudelsee (auth.) - Climate Time Series Analysis_ Classical Statistical and Bootstrap Methods-Springer International Publishing (2014).pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/5653/Mudelsee_2014_Climate Time Series Analysis.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/606/Climate Variability, Predictability and Climate Ri.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/631/Dudu ve Çakmak - 2018 - Climate change and agriculture an integrated appr.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/635/Carter vd. - 2018 - Identifying the Economic Impacts of Climate Change.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/907/Böhringer vd. - 2021 - Trade in Carbon and Carbon Tariffs.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/960/Nordhaus - 2015 - Climate Clubs Overcoming Free-riding in Internati.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/964/Spash_2010_The Brave New World of Carbon Trading.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/967/McKibbin_Wilcoxen_2002_The Role of Economics in Climate Change Policy.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/970/Michaelowa et al_2019_Evolution of international carbon markets.pdf | secondary: Q56, Q58 | evidence: carbon
+- My Library/files/975/Weitzman_2012_GHG Targets as Insurance Against Catastrophic Climate Damages.pdf | secondary: Q56, O13 | evidence: climate
+- My Library/files/981/Goers et al_2010_New and old market-based instruments for climate change policy.pdf | secondary: Q56, O13 | evidence: climate
+- Phillip_Adityaclimatechange.pdf | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/F9CF6F21/unsaved-notebooks/338B3691/1/c89gkrr98wpk8/00000f.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/F9CF6F21/unsaved-notebooks/338B3691/1/csetup_chunk/00000f.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/F9CF6F21/unsaved-notebooks/338B3691/1/cxabpkz9im8f0/000029.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/F9CF6F21/unsaved-notebooks/787CB7E1/1/csetup_chunk/000011.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/c7thmclk58ohq/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/c7thmclk58ohq/000004.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/ccinvwa9r9rps/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cep3f3vmd1eu1/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cep3f3vmd1eu1/000004.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/clnmtfzbtvgar/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/clnmtfzbtvgar/000004.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cme1y50qnrxic/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/coxo373u9s2mp/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/ctqy2p0fr697u/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cu4m9r6m0z13u/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cy5pg713kfywu/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cygsikj7542gf/000002.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cygsikj7542gf/000004.csv | secondary: Q56, O13 | evidence: climate
+- rticle/climate_change/.Rproj.user/shared/notebooks/3D7422DC-TimeSeriesAnalysis3/1/s/cz7hcf7l8l7s0/000002.csv | secondary: Q56, O13 | evidence: climate
+- Sentometrics_US_Media_Climate_Change_Index.xlsx | secondary: Q56, O13 | evidence: climate
+- swiss-re-institute-expertise-publication-economics-of-climate-change.pdf | secondary: Q56, O13 | evidence: climate
+- The Illusion of Decoupling in Global Food Regimes_ An Analysis of Dietary Transitions and Carbon Leakage Across 138 Countries (2010-2022).pdf | secondary: Q56, Q58 | evidence: carbon
+- The Macroeconomics of Climate Change/(Elgar Intellectual Property and Global Development) Joy Y. Xiang - Climate Change, Sustainable Development and Cleantech_ A Pathway for Developing Countries-Edward Elgar (2022).pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/(Springer Climate) John C. Shideler, Jean Hetzel - Introduction to Climate Change Management_ Transitioning to a Low-Carbon Economy-Springer (2021).pdf | secondary: Q56, Q58 | evidence: carbon
+- The Macroeconomics of Climate Change/(Sustainable Development Goals Series) Parul Rishi - Managing Climate Change and Sustainability through Behavioural Transformation-Palgrave Macmillan (2022).pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/ch3 copy.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/Climate_Carbon.xlsx | secondary: Q56, Q58 | evidence: carbon
+- The Macroeconomics of Climate Change/Course Overview - EABCN Training School - Hassler & Krusell 2022 (1) copy.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/Course Overview - EABCN Training School - Hassler & Krusell 2022.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/ecb.wp2500~f7a50c6f69.en copy.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/Environmental Macroeconomics.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/ESTC copy.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/KR2020English (1) copy.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/Link to Slides - EABCN Training School - Hassler & Krusell 2022.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/NatResJH.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/NetZeroby2050-ARoadmapfortheGlobalEnergySector_CORR copy.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/notesClass1_2.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/NotesDamages2022.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/NotesTechChange2022.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/pesetaiv_summary_final_report copy copy.pdf | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/Structure of the course.docx | secondary: Q56, O13 | evidence: climate
+- The Macroeconomics of Climate Change/suboptimal_CO2 copy.pdf | secondary: Q56, O13 | evidence: climate
+- The_Economics_of_Global_Climate_Change_1729071945.pdf | secondary: Q56, O13 | evidence: climate
+- The_Economics_of_Global_Climate_Change_1729072363.pdf | secondary: Q56, O13 | evidence: climate
+- The_History_of_the_Global_Climate_Change_Regime.pdf | secondary: Q56, O13 | evidence: climate
+- The_Impacts_of_Climate_Change_Carbon_Dioxide_Emiss.pdf | secondary: Q56, Q58 | evidence: carbon
+- Theoryandpracticeofcarbonpricingobservationsfromthreeemissiontradingsystems.pdf | secondary: Q56, Q58 | evidence: carbon
+- TodorovicandJovanovicClimatechangeandAgriculturewsts0177.pdf | secondary: Q56, O13 | evidence: climate
+- Towards zero carbon and zero poverty integrating national climate change mitigation and sustainable development goals.pdf | secondary: Q56, Q58 | evidence: carbon
+- Turkey_TR_All_Indicators/Above_Average_Production_Exposure_to_Climate_Hazards.csv | secondary: Q56, O13 | evidence: climate
+- Turkey_TR_All_Indicators/Bilateral_Trade_in_Low_Carbon_Technology_Products.csv | secondary: Q56, Q58 | evidence: carbon
+- Turkey_TR_All_Indicators/Carbon_Footprint_of_Bank_Loans.csv | secondary: Q56, Q58 | evidence: carbon
+- Turkey_TR_All_Indicators/Carbon_Tax_to_RevenuesAssets_in_Disclosing_Firms.csv | secondary: Q56, Q58 | evidence: carbon
+- Turkey_TR_All_Indicators/Climate-driven_INFORM_Risk.csv | secondary: Q56, O13 | evidence: climate
+- Turkey_TR_All_Indicators/Climate-related_Disasters_Frequency.csv | secondary: Q56, O13 | evidence: climate
+- Turkey_TR_All_Indicators/Forest_and_Carbon.csv | secondary: Q56, Q58 | evidence: carbon
+- Turkey_TR_All_Indicators/Potential_National_Income_Benefit_from_Avoided_Chronic_Climate_Damages.csv | secondary: Q56, O13 | evidence: climate
+- Turkey_TR_All_Indicators/Potential_National_Income_Loss_from_Chronic_Climate_Damages.csv | secondary: Q56, O13 | evidence: climate
+- Turkey_TR_All_Indicators/Preparedness_of_Countries_for_a_Low-carbon_Transition.csv | secondary: Q56, Q58 | evidence: carbon
+- Turkey_TR_All_Indicators/Trade_in_Low_Carbon_Technology_Products.csv | secondary: Q56, Q58 | evidence: carbon
+- Understanding+the+Effect+of+Climate+Change+and+Productivity+Factors+on+Maize+Production+-+AJASFR.Vol20.No1.pdf | secondary: Q56, O13 | evidence: climate
+- WOS_climate_change_displacement_1_500.bib | secondary: Q56, O13 | evidence: climate
+- Xiang et al. - 2022 - The Impact of Climate Change on Agricultural Total copy.pdf | secondary: Q56, O13 | evidence: climate
+- Xiang et al. - 2022 - The Impact of Climate Change on Agricultural Total.pdf | secondary: Q56, O13 | evidence: climate
+- YSA_GA_MGO/Assess_the_Impact_of_Climate_Change_on_Agricultural_Productivity_Using_GES_DISC_Data_on_Temperature_Precipitation_and_Drought_Indices.pdf | secondary: Q56, O13 | evidence: climate
+- YSA_GA_MGO/Predicting-climate-change-effects-on-agriculture-from-ecological-niche-modeling-Who-profits-who-loses_2013_Kluwer-Academic-Publishers.pdf | secondary: Q56, O13 | evidence: climate
+- Zotero/William D. Nordhaus - The Climate Casino_ Risk, Uncertainty, and Economics for a Warming World-Yale University Press (2013).pdf | secondary: Q56, O13 | evidence: climate

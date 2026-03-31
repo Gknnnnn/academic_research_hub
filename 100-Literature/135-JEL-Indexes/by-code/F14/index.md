@@ -1,0 +1,98 @@
+---
+type: jel-code-index
+code: F14
+family: F
+item_count: 89
+---
+
+# F14
+
+- ANALYSIS OF FOREX POLICY AND ITS IMPACT ON ECONOMIC GROWTH: THE CASE OF ETHIOPIA (n.d.) | Osman, Shakira Ahmed
+- DataViz - Export Data (n.d.) | Unknown
+- EAEU external trade volume 2020 (n.d.) | Unknown
+- EAEU trade balance with China 2020 (n.d.) | Unknown
+- EXCHANGE RATE MISALIGNMENT AND ECONOMIC GROWTH (n.d.) | Dubas, Justin
+- EXCHANGE RATES AND NON-LINEAR DYNAMICS IN OUTPUT: EVIDENCE FROM BULGARIA (n.d.) | Miteza, Ilir
+- Essays on exchange rate behaviour in South Africa (n.d.) | Khomo, Melvin Muziwakhe
+- Exchange rate management and manufactured exports in Sub-Saharan Africa (n.d.) | Sekkat, Khalid, Varoudakis, Aristomene
+- Russia dominates Eurasian Union trade. Here are the numbers | Eurasianet (n.d.) | Unknown
+- THE CONTRIBUTION OF DOMESTIC AND EXTERNAL FACTORS TO EMERGING MARKET DEVALUATION CRISES: AN EARLY WARNING SYSTEMS APPROACH (n.d.) | Kamin, Steven B, Schindler, John W, Samuel, Shawna L
+- THE REAL EXCHANGE RATE AND ECONOMIC GROWTH (n.d.) | Eichengreen, Barry
+- The Japanese trade balance: Recent history and future prospects (n.d.) | Backus, David
+- Trade in services (exports plus imports) as share of GDP (n.d.) | Unknown
+- Turkey Trade Balance 1962-2022 (n.d.) | Unknown
+- Indirect transfers in trade among former Soviet Union Republics: Sources, patterns and policy responses in the Post‐Soviet period (01/1) | Orlowski, Lucjan T.
+- Does greater financial openness promote external competitiveness in emerging markets? The role of institutional quality (01/2) | Aman, Zunaira, Granville, Brigitte, Mallick, Sushanta K.
+- Does greater financial openness promote external competitiveness in emerging markets? The role of institutional quality (01/2) | Aman, Zunaira, Granville, Brigitte, Mallick, Sushanta K.
+- Effects of real effective exchange rate volatility on export earnings in Ethiopia: Symmetric and asymmetric effect analysis (01/2) | Urgessa, Obsa
+- REAL EXCHANGE RATE, MONETARY POLICY, AND THE U.S. ECONOMY: EVIDENCE FROM A FAVAR MODEL (01/2) | Sun, Wei, De, Kuhelika
+- The impact of exchange rate volatility on Indonesia's top exports to the five main export markets (01/2) | Sugiharti, Lilik, Esquivias, Miguel Angel, Setyorani, Bekti
+- Exchange Rate Volatility and Exports: New Empirical Evidence from the Emerging East Asian Economies (02/2) | Chit, Myint Moe, Rizov, Marian, Willenbockel, Dirk
+- Gas price shocks, the current account, and the real exchange rate: An empirical analysis for the EU (02/2) | Cuestas, Juan Carlos, Monfort, Mercedes, Ordóñez, Javier
+- Openness and Real Exchange Rate Volatility: Evidence from China (02/2) | Yang, Yahui, Peng, Zhe
+- Fiscal stress and monetary policy stance in oil-exporting countries (03/2) | Jin, Hao, Xiong, Chen
+- Innovation, Energy Consumption and Trade Dynamic: Evidence from Developed and Developing Countries (03/2) | Asghar, Muhammad, Chaudhry, Imran Sharif, Ali, Sharafat
+- Investigating Export Determinants: A Time Series Evidence From Canada (04/2) | Hassan, Muhammad Shahid, Kausar, Amna, Arshed, Noman
+- Real exchange rate misalignment and business cycle fluctuations in the <span style="font-variant:small-caps;">Asia‐Pacific</span> (06/2) | Ambaw, Dessie, Pundit, Madhavi, Ramayandi, Arief
+- The link between trade openness, export diversification, institutions and output volatility in transition countries (06/2) | Balavac, Merima, Pugh, Geoff
+- Does economic complexity reduce output volatility in developing countries? (07/2) | Güneri, Barbaros, Yalta, A. Yasemin
+- Structural change and trade openness in sub‐Saharan African countries (07/2) | Kaba, Kabinet, Lin, Justin Yifu, Renard, Mary‐Françoise
+- Structural change and trade openness in sub‐Saharan African countries (07/2) | Kaba, Kabinet, Lin, Justin Yifu, Renard, Mary‐Françoise
+- Determinants of trade of mineral resources between China and ASEAN (08/2) | Wang, Bo, Yang, Haoting, Tian, Wenjuan
+- Does the Quality of Institutions Limit the MENA's Integration in the World Economy? (09/2) | Méon, Pierre‐Guillaume, Sekkat, Khalid
+- LARGE HOARDING OF INTERNATIONAL RESERVES AND THE EMERGING GLOBAL ECONOMIC ARCHITECTURE (09/2) | Aizenman, Joshua
+- What Drives the Relationship Between Export Upgrading and Growth? The Role of Human Capital, Institutional Quality, and Economic Development (09/2) | Nouira, Ridha, Saafi, Sami
+- Exchange rates, foreign currency exposure and sovereign risk (10/2) | Bernoth, Kerstin, Herwartz, Helmut
+- The real effects of exchange rate risk on corporate investment: International evidence (10/2) | Taylor, Mark P., Wang, Zigan, Xu, Qi
+- Exchange rate volatility and UK imports from developing countries: The effect of the global financial crisis (11/2) | Choudhry, Taufiq, Hassan, Syed S.
+- The Effect of Real Exchange Rate on Trade Balance in a Resource-Rich Economy: The Case of Mongolia (11/2) | Doojav, Gan-Ochir
+- Domestic Political Institutions and Exchange Rate Commitments in the Developing World (12/1) | Leblang, David A.
+- Exports and growth: Granger causality analysis on OECD countries with a panel data approach (12/2) | Kónya, László
+- Macroeconomic, institutional and financial determinants of current account balances: a panel data assessment (12/2) | Altayligil, Yasin Baris, Çetrez, Murat
+- Explaining Currency Crises (1998) | Esquivel, Gerardo, Larrain, Felipe
+- Living with Flexible Exchange Rates: Issues and Recent Experience in Inflation Targeting Emerging Market Economies (2003) | Ho, Corrinne, McCauley, Robert N.
+- Assessing China's exchange rate regime (2007) | Frankel, J. A., Wei, S.-J.
+- Distortions to Agricultural Incentives in Turkey (2007) | Burrell, Alison M., Kurzweil, Marianne, Burrell, Alison M.
+- 24 Ocak Kararları, Neo-Liberal Politikalar ve Türkiye Tarımı (2008) | Öztürk, Şinasi, Nas, Fethi, İçöz, Ergün
+- Effect of exchange‐rate volatility on foreign direct investment in Sub‐Saharan Africa: The case of Ghana (2008) | Kyereboah‐Coleman, Anthony, Agyire‐Tettey, Kwame F.
+- China's growing role in world trade (2010) | Feenstra, Robert C., Wei, Shang-Jin
+- International Trade Policies and Climate Change Governance (2012) | Rao, P. K.
+- Transmission of Real Exchange Rate Changes to the Manufacturing Sector Performance (2013) | Dhasmana, Anubha
+- The Global Economics of Water: Is Water a Source of Comparative Advantage? (2014) | Debaere, Peter
+- Exchange Rate Volatility, Financial Constraints, and Trade: Empirical Evidence from Chinese Firms (2015) | Héricourt, Jérôme, Poncet, Sandra
+- The potential for internal trade and regional integration in Africa (2015) | Geda, Alemayehu, Seid, Edris Hussein
+- FDI Inflows, Price and Exchange Rate Volatility: New Empirical Evidence from Latin America (2017) | Dal Bianco, Silvia, Loan, Nguyen
+- Global value chains and the exchange rate elasticity of exports (2017) | Ahmed, Swarnali, Appendino, Maximiliano, Ruta, Michele
+- Macroeconomics- Everything You Need to Know (2017) | Unknown
+- The Political Economy of Real Exchange Rate Behavior: Theory and Empirical Evidence for Developed and Developing Countries, 1960–2010 (2017) | Martínez-Hernández, Francisco A.
+- The Effect of Exchange Rate Volatility on International Trade and Foreign Direct Investment (FDI) in Developing Countries along “One Belt and One Road” (2018) | Latief, Rashid, Lefen, Lin
+- An inquiry into exchange rate misalignments as a cause of major global trade imbalances (2019) | Nasir, Muhammad Ali, Jackson, Karen
+- Defying the Footprint Oracle: Implications of Country Resource Trends (2019) | Wackernagel, Mathis, Lin, David, Evans, Mikel
+- EKONOMİK KARMAŞIKLIK İLE EKONOMİK BÜYÜME ARASINDAKİ İLİŞKİ: PANEL BOOTSTRAP GRANGER NEDENSELLİK ANALİZİ (2019) | Akbulut Yildiz, Gizem, Yildiz, Barış
+- Exchange Rate Volatility and Disaggregated Manufacturing Exports: Evidence from an Emerging Country (2019) | Vo, Duc Hong, Vo, Anh The, Zhang, Zhaoyong
+- Kısa Vadeli Sermaye Hareketlerinin Seçili Makroekonomik Değişkenler Üzerindeki Etkileri (2019) | Kaçar, Ekrem
+- Real exchange rate misalignment and economy (2019) | Wong, Hock Tsen
+- The Impact of Exchange Rate Volatility on Exports in Vietnam: A Bounds Testing Approach (2019) | Thuy, Vinh Nguyen Thi, Thuy, Duong Trinh Thi
+- COVID-19 risks to global food security (2020) | Laborde, David, Martin, Will, Swinnen, Johan
+- Exchange Rates Fluctuations and International Trade in a Mono-product Economy: Nigeria’s Experience, 1986-2018 (2020) | Kalu, Kalu, UKo, Mike, Anyanwaokoro,
+- Export Performance as a Measurement of Competitiveness (2020) | University of Economics in Bratislava, Faculty of Commerce, Ruzekova, Viera, Kittova, Zuzana
+- Currency regimes and external competitiveness: the role of institutions, trade agreements and monetary frameworks (2021) | Aman, Zunaira, Mallick, Sushanta, Nemlioglu, Ilayda
+- Does the Exchange Rate and Its Volatility Matter for International Trade in Ethiopia? (2021) | Nguse, Tiblets, Oshora, Betgilu, Fekete-Farkas, Maria
+- The Impact of Currency Misalignment on Trade Balance of Emerging Market Economies (2021) | Mamun, Abdullahil, Akça, Emrah Eray, Bal, Harun
+- EKONOMİK KARMAŞIKLIK, AR-GE HARCAMALARI VE EKONOMİK BÜYÜME İLİŞKİSİ (2022) | Akar, Tuba
+- Effects of Exchange Rate Volatility on Economic Growth: Evidence from West Africa (2022) | Fofanah, Pabai
+- Effects of Real Exchange Rate Volatility on Trade: Empirical Analysis of the United States Exports to BRICS (2022) | Ekanayake, E. M., Dissanayake, Amila
+- Exchange Rate Volatility Effect on Economic Growth under Different Exchange Rate Regimes: New Evidence from Emerging Countries Using Panel CS-ARDL Model (2022) | Ameziane, Karim, Benyacoub, Bouchra
+- Exchange Rate Volatility, Inflation and Economic Growth in Developing Countries: Panel Data Approach for SADC (2022) | Olamide, Ebenezer, Ogujiuba, Kanayo, Maredza, Andrew
+- Natural Resources, International Commodity Prices and Economic Performance in Sub-Saharan Africa (1990–2019) (2022) | Katoka, Ben, Dostal, Jörg Michael
+- Natural Resources, International Commodity Prices and Economic Performance in Sub-Saharan Africa (1990–2019) (2022) | Katoka, Ben, Dostal, Jörg Michael
+- Cassava (Manihot esculenta Crantz): a global scientific footprint—production, trade, and bibliometric insights (2024) | Otekunrin, Olutosin Ademola
+- Determinants of agricultural exports in Somalia: the impacts of exchange rates, foreign direct investment, and institutional quality (2025) | Abdi, Abdikafi Hassan, Mohamed, Amir Mohamud
+- EKONOMİK KARMAŞIKLIK VE İNSANİ GELİŞME ENDEKSLERİNİN EKONOMİK BÜYÜME ÜZERİNDEKİ ETKİSİ: MIKTA ÜLKELERİNDEN AMPİRİK KANITLAR (2025) | Atılgan, Dilek, Kütükçü, Esra
+- Effect of Exchange Rate Volatility on Export Competitiveness and National Trade Balances in Emerging Markets (2025) | Unknown
+- Who absorbs external shocks? foreign exchange intervention, monetary policy, and stabilization trade-offs: a DSGE study of ASEAN economies (2026) | Guindo, Tidiane
+- Economic growth, exports and foreign direct investment in Least Developed Countries: A panel Granger causality analysis (5/20) | Tekin, Rıfat Barış
+- Exchange Rate Management and Crisis Susceptibility: A Reassessment (5/20) | Ghosh, Atish R, Ostry, Jonathan D, Qureshi, Mahvash S
+- Understanding bilateral exchange rate volatility (5/20) | Devereux, Michael B, Lane, Philip R
+- Leading indicators of currency crises for emerging countries (6/20) | Burkart, Oliver, Coudert, Virginie
+- Exchange Rate Volatility and Growth in Emerging Europe and East Asia (9/20) | Schnabl, Gunther

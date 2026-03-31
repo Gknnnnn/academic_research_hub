@@ -1,0 +1,72 @@
+---
+type: jel-code-index
+code: Q54
+family: Q
+item_count: 63
+---
+
+# Q54
+
+- CLIMTRADE - Impacts of climate regulation on trade (n.d.) | Unknown
+- Gelişmiş ve Gelişmekte Olan Ülkelerde Ekonomik Karmaşıklık (Complexity) ile CO2 Emisyonları Arasındaki İlişki: 2003-2022 Yılları İçin Panel Veri Analizi (n.d.) | Durusoy, Ömer Tanju
+- Key Highlights: Country Climate and Development Report for Türkiye (n.d.) | Unknown
+- Key Highlights: Country Climate and Development Report for Türkiye (n.d.) | Unknown
+- The International Climate Change Regime: A Guide to Rules, Institutions and Procedures (n.d.) | Yamin, Farhana, Depledge, Joanna
+- Towards a Greener and More Resilient Türkiye (n.d.) | Unknown
+- Renewable and non-renewable energy consumption, economic complexity, CO2 emissions, and ecological footprint in the USA: testing the EKC hypothesis with a structural break (01/2) | Pata, Ugur Korkut
+- Do Emission Trading Systems, Green Technology, and Environmental Governance Matter for Environmental Quality? Evidence from the European Union (02/2) | Radulescu, Magdalena, Hossain, Mohammad Razib, Alofaysan, Hind
+- How economic growth, renewable electricity and natural resources contribute to CO2 emissions? (02/2) | Balsalobre-Lorente, Daniel, Shahbaz, Muhammad, Roubaud, David
+- Addressing the effect of climate change in the framework of financial and technological development on cereal production in Pakistan (03/2) | Chandio, Abbas Ali, Jiang, Yuansheng, Akram, Waqar
+- The Brave New World of Carbon Trading (04/2) | Beck, Cornelia
+- Towards a sustainable environment: The nexus between ISO 14001, renewable energy consumption, access to electricity, agriculture and CO2 emissions in SAARC countries (04/2) | Ikram, Muhammad, Zhang, Qingyu, Sroufe, Robert
+- Trade in Carbon and Carbon Tariffs (04/2) | Böhringer, Christoph, Schneider, Jan, Asane-Otoo, Emmanuel
+- Stoking the fires? CO2 emissions and economic growth (05/1) | Holtz-Eakin, Douglas, Selden, Thomas M.
+- Carbon emissions, energy consumption and economic growth: Evidence from the agricultural sector of China's main grain-producing areas (05/2) | Zhang, Lu, Pang, Jiaxing, Chen, Xingpeng
+- Exploring the role of green investment, energy intensity and economic complexity in balancing the relationship between growth and environmental degradation (05/2) | Ullah, Obaid, Zeb, Ali, Shuhai, Niu
+- Breaking down the complexity of sustainable development: A focus on resources, economic complexity, and innovation (06/2) | Safi, Adnan, Wei, Xin, Sansaloni, Eduard Montesinos
+- Breaking down the complexity of sustainable development: A focus on resources, economic complexity, and innovation (06/2) | Safi, Adnan, Wei, Xin, Sansaloni, Eduard Montesinos
+- Do Agriculture Technologies Influence Carbon Emissions in Pakistan? Evidence based on ARDL technique (06/2) | Ali, Rafaqet, Ishaq, Rabia, Bakhsh, Khuda
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- Digitalization's contribution towards sustainable development and climate change mitigation: An empirical evidence from EU economies (07/2) | Arshad, Zeeshan, Madaleno, Mara, Lillebø, Ana I.
+- Discovering the evolution of Pollution Haven Hypothesis: A literature review and future research agenda (07/2) | Bashir, Muhammad Farhan
+- Energy efficiency and environmental regulations for mitigating carbon emissions in Chinese Provinces (08/2) | Radulescu, Magdalena, Cifuentes-Faura, Javier, Si Mohammed, Kamel
+- Linking renewable energy, globalization, agriculture, CO2 emissions and ecological footprint in BRIC countries: A sustainability perspective (08/2) | Pata, Ugur Korkut
+- Research on the dynamic relationship between China's renewable energy consumption and carbon emissions based on ARDL model (08/2) | Wang, Liping
+- Economic performance of Indonesia amidst CO2 emissions and agriculture: a time series analysis (09/2) | Adebayo, Tomiwa Sunday, Akinsola, Gbenga Daniel, Kirikkaleli, Dervis
+- Global value chain participation and CO2 emissions: Does economic growth matter? New evidence from dynamic panel threshold regression (10/2) | Jithin, P., Ashraf, Sania
+- Green growth of cereal food production under the constraints of agricultural carbon emissions: A new insights from ARDL and VECM models (10/2) | Koondhar, Mansoor Ahmed, Aziz, Noshaba, Tan, Zhixiong
+- Understanding carbon lock-in (10/2) | Unruh, Gregory C
+- Evolution of international carbon markets: lessons for the Paris Agreement (11/2) | Michaelowa, Axel, Shishlov, Igor, Brescia, Dario
+- Impact of carbon footprint of bank loans and fossil fuel subsidies on ecological footprint in Tunisia: A contingency and asymmetric analysis (11/2) | Iyke-Ofoedu, Maureen Ifeoma, Nwonye, Nnenna G., Abner, Ishaku Prince
+- The nexus between renewable energy, CO2 emissions, and economic growth: Empirical evidence from African oil-producing countries (11/2) | İnal, Veysel, Addi, Haman Mahamat, Çakmak, Eyüp Ensar
+- Turkish Greenhouse Gas Inventory 1990 - 2022 (11/2) | Turkish Statistical Institute
+- Carbon leakages: a general equilibrium view (2/20) | Burniaux, Jean-Marc, Oliveira Martins, Joaquim
+- The institutional economics of market-based climate policy (2004) | Woerdman, Edwin
+- Climate Change and Energy Supply and Use (2014) | Wilbanks, Thomas J., Wilbanks, Thomas J.
+- Global Warming and the Green Paradox: A Review of Adverse Effects of Climate Policies (2015) | van der Ploeg, Frederick, Withagen, Cees
+- Analysis of the Nexus of CO2 Emissions, Economic Growth, Land under Cereal Crops and Agriculture Value-Added in Pakistan Using an ARDL Approach (2019) | Ali, Sajjad, Ying, Liu, Shah, Tariq
+- Climate Change and Food Security: A Test of U.S. Leadership in a Fragile World (2019) | Chase, Sova, Flowers, Kimberly, Man, Christian
+- Üretimin su ayak izinin incelenmesi: Diyarbakır ili için bir vaka çalışması (2019) | Muratoğlu, Abdullah
+- A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part II: synthesizing the insights (2020) | Haberl, Helmut, Wiedenhofer, Dominik, Virág, Doris
+- A systematic review of the evidence on decoupling of GDP, resource use and GHG emissions, part II: synthesizing the insights (2020) | Haberl, Helmut, Wiedenhofer, Dominik, Virág, Doris
+- The link between carbon emissions, agricultural output and industrial output: Evidence from south africa (2020) | Sibanda, Mabutho, Ndlela, Hlengiwe
+- Measuring the effectiveness of the Chinese Certified Emission Reduction scheme in mitigating CO2 emissions: A system dynamics approach (2021) | Ye, Fei, Xiong, Xueying, Li, Lixu
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (2021) | Yurtkuran, Suleyman
+- Institutional decarbonization scenarios evaluated against the Paris Agreement 1.5 °C goal (2022) | Brecha, Robert J., Ganti, Gaurav, Lamboll, Robin D.
+- Is product proximity a driver for better energy security? Global evidence of nonlinear relationships between product proximity and energy security (2022) | Le, Thanh Ha, Hoang, Phuong Dung, To, Trung Thanh
+- Reducing Carbon Footprint of Agriculture—Can Organic Farming Help to Mitigate Climate Change? (2022) | Holka, Małgorzata, Kowalska, Jolanta, Jakubowska, Magdalena
+- Role of Financial Development, Green Technology Innovation, and Macroeconomic Dynamics Toward Carbon Emissions in China: Analysis Based on Bootstrap ARDL Approach (2022) | Yang, Jiayu, Sun, Yunpeng, Sun, Huaping
+- The Impacts of Climate Change, Carbon Dioxide Emissions (CO2) and Renewable Energy Consumption on Agricultural Economic Growth in South Africa: ARDL Approach (2022) | Tagwi, Aluwani
+- Climate change and agriculture nexus in Bangladesh: Evidence from ARDL and ECM techniques (2023) | Ghosh, Bikash Chandra, Eyasmin, Farjana, Adeleye, Bosede Ngozi
+- Examining the Relationship between Economic Growth, Financial Development, and Carbon Emissions: A Review of the Literature and Scientometric Analysis (2023) | Kayani, Umar Nawaz, Sadiq, Misbah, Rabbani, Mustafa Raza
+- Global Carbon Budget 2023 (2023) | Friedlingstein, Pierre, O'Sullivan, Michael, Jones, Matthew W.
+- The Nexus between Environmental Quality, Economic Growth, and Trade Openness in Saudi Arabia (1990-2017) (2023) | Daly, Saida, Abdouli, Mohamed
+- İklim Değişikliği Tarım Sektörünü Nasıl Etkiliyor? Türkiye Ekonomisi Üzerine Ekonometrik Bir Uygulama (2023) | Oğul, Bahar
+- A Comparative Study of the Environmental, Social, and Governance Impacts of Renewable Energy Investment on CO2 Emissions in Brazil, Russia, India, China, and South Africa (2024) | Bi, Zhaoming, Khan, Rabnawaz
+- Chicago Climate Exchange (CCX): The Origin and Evolution of Voluntary Efforts to Establish Carbon Markets (2024) | Sandor, Richard L., Diperna, Paula
+- Testing the impact of environmental taxation and IFRS adoption on consumption‐based carbon in European countries (2024) | Samour, Ahmed, Musah, Mohammed, Mati, Sagiru
+- The Effect of Environmental Smart Technology and Renewable Energy on Carbon Footprint: A Sustainability Perspective from the MENA Region (2024) | Alofaysan, Hind
+- State-of-art review and future prospects of autoclave aerated concrete for building a sustainable tomorrow (2025) | Dey, Palash, Paul, Ashim, Dhar, Mrinmoy
+- Eco‐Innovation, Economic Complexity, and Sustainability: A Bibliometric and Systematic Literature Review (2026) | De Moraes, Gregory Matheus Pereira, Ferraz, Diogo
+- Review on carbon emissions, energy consumption and low-carbon economy in China from a perspective of global climate change (7/20) | Shen, Lei, Sun, Yanzhi

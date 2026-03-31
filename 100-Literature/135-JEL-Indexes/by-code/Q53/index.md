@@ -1,0 +1,91 @@
+---
+type: jel-code-index
+code: Q53
+family: Q
+item_count: 82
+---
+
+# Q53
+
+- A GIS-based multi-criteria decision-making method for the selection of potential municipal solid waste disposal sites in Mersin, Turkey (01/2) | Bilgilioglu, Suleyman Sefa, Gezgin, Cemil, Orhan, Osman
+- Assessing the impact of climate change on the agricultural economy in Thailand: an empirical study using panel data analysis (01/2) | Jatuporn, Chalermpon, Takeuchi, Kenji
+- Landfill siting for municipal solid waste using remote sensing and geographic information system integrated analytic hierarchy process and simple additive weighting methods from the point of view of a fast-growing metropolitan area in GAP area of Turkey (01/2) | Karabulut, Abdullah İzzeddin, Yazici-Karabulut, Benan, Derin, Perihan
+- Assessing the effect of climate change and financial development on agricultural production in ASEAN-4: the role of renewable energy, institutional quality, and human capital as moderators (02/2) | Chandio, Abbas Ali, Shah, Muhammad Ibrahim, Sethi, Narayan
+- Modeling the impact of climatic and non-climatic factors on cereal production: evidence from Indian agricultural sector (02/2) | Chandio, Abbas Ali, Jiang, Yuansheg, Amin, Asad
+- Role of environmental degradation and energy use for agricultural economic growth: Sustainable implications based on ARDL estimation (02/2) | Wang, Hongwei
+- Does globalization matter for ecological footprint in Turkey? Evidence from dual adjustment approach (03/2) | Kirikkaleli, Dervis, Adebayo, Tomiwa Sunday, Khan, Zeeshan
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- Road transportation green productivity and its threshold effects from environmental regulation (03/2) | Xu, Hao, Wang, Yeqing, Gao, Chenchen
+- Empirical analysis of climate change factors affecting cereal yield: evidence from Turkey (04/2) | Chandio, Abbas Ali, Ozturk, Ilhan, Akram, Waqar
+- Industrial green total factor productivity based on an MML index in the Yangtze River Economic Belt (04/2) | Zhong, Shen, Wang, Lang, Yao, Fengge
+- Measurement of green total factor productivity on Chinese pig breeding: from the perspective of regional differences (04/2) | Zhong, Shen, Li, Junwei, Zhang, Dehua
+- Oil price shocks, stock market returns, and volatility spillovers: a bibliometric analysis and its implications (04/2) | Bashir, Muhammad Farhan
+- Climate change and adaptation in agriculture: Evidence from US cropping patterns (05/2) | Cui, Xiaomeng
+- Crime, weather, and climate change (05/2) | Ranson, Matthew
+- Tracking the effect of climatic and non-climatic elements on rice production in Pakistan using the ARDL approach (05/2) | Gul, Amber, Xiumin, Wu, Chandio, Abbas Ali
+- Do Agriculture Technologies Influence Carbon Emissions in Pakistan? Evidence based on ARDL technique (06/2) | Ali, Rafaqet, Ishaq, Rabia, Bakhsh, Khuda
+- Discovering the evolution of Pollution Haven Hypothesis: A literature review and future research agenda (07/2) | Bashir, Muhammad Farhan
+- Innovation and the dynamics of global warming (07/2) | Winter, Ralph A.
+- The GDP-Temperature relationship: Implications for climate change damages (07/2) | Newell, Richard G., Prest, Brian C., Sexton, Steven E.
+- The effect of agricultural total factor productivity on environmental degradation in sub-Saharan Africa (07/2) | Alhassan, Hamdiyah
+- Addressing the long- and short-run effects of climate change on major food crops production in Turkey (10/2) | Chandio, Abbas Ali, Gokmenoglu, Korhan K., Ahmad, Fayyaz
+- Addressing the long- and short-run effects of climate change on major food crops production in Turkey (10/2) | Chandio, Abbas Ali, Gokmenoglu, Korhan K., Ahmad, Fayyaz
+- Climate change: north and south EU economies—an application of dynamic asymmetric panel data models (10/2) | Adam, Christos, Drakos, Periklis
+- Impact of climate change on cereal production: evidence from lower-middle-income countries (10/2) | Kumar, Pushp, Sahu, Naresh Chandra, Kumar, Siddharth
+- A bibliometric review analysis into environmental kuznets curve phenomenon: A retrospect and future direction (11/2) | Ajmi, Ahdi Noomen, Bekun, Festus Victor, Gyamfi, Bright Akwasi
+- Agricultural environmental total factor productivity in China under technological heterogeneity: characteristics and determinants (11/2) | Han, Haibin, Zhong, Zhangqi, Wen, Changcun
+- Agricultural environmental total factor productivity in China under technological heterogeneity: characteristics and determinants (11/2) | Han, Haibin, Zhong, Zhangqi, Wen, Changcun
+- How does power technology innovation affect carbon productivity? A spatial perspective in China (11/2) | Deng, Yating, Guang, Fengtao, Hong, Shuifeng
+- The theory of environmental policy (1988) | Baumol, William J., Oates, Wallace E.
+- Environmental Economics and Responsibility (1992) | Sarokin, David, Schulkin, Jay
+- Economic theory for environmentalists (1995) | Gowdy, John M., O'Hara, Sabine
+- Public Economics and the Environment in an Imperfect World (1995) | Bovenberg, Lans, Cnossen, Sijbren
+- Ecological economics: themes, approaches, and differences with environmental economics (2001) | van den Bergh, Jeroen C. J. M.
+- The economics of climate change (2004) | Unknown
+- The RFF reader in environmental and resource policy (2006) | Unknown
+- Economics and management of climate change: risks, mitigation and adaptation (2008) | Unknown
+- Economics of the environment: theory and policy (2008) | Siebert, Horst
+- Climate change and agriculture: an economic analysis of global impacts, adaptation and distributional effects (2009) | Mendelsohn, Robert O., Dinar, Ariel
+- The economics and politics of climate change (2009) | Unknown
+- Climate policy foundations: science and economics with lessons from monetary regulation (2011) | Whitesell, William C.
+- International Trade Policies and Climate Change Governance (2012) | Rao, P. K.
+- Environmental economics & management: theory, policy, and applications (2013) | Callan, Scott, Thomas, Janet M.
+- Mathematical Modeling in Economics, Ecology and the Environment (2013) | Hritonenko, Natali, Yatsenko, Yuri
+- The climate casino: risk, uncertainty, and economics for a warming world (2013) | Nordhaus, William D.
+- The next economics: global cases in energy, environment, and climate change (2013) | Unknown
+- Routledge handbook of the economics of climate change adaptation (2014) | Unknown
+- Routledge handbook of water economics and institutions (2015) | Unknown
+- Climate change: a wicked problem: complexity and uncertainty at the intersection of science, economics, politics and human behavior (2016) | Incropera, Frank P.
+- Influence of extreme weather disasters on global crop production (2016) | Lesk, Corey, Rowhani, Pedram, Ramankutty, Navin
+- Resolving the Climate Change Crisis: The Ecological Economics of Climate Change (2016) | Lawn, Philip
+- Resource economics: an economic approach to natural resource and environmental policy (2016) | Bergstrom, John C. (John Clark), Randall, Alan
+- The world’s road to water scarcity: shortage and stress in the 20th century and pathways towards sustainability (2016) | Kummu, M., Guillaume, J. H. A., de Moel, H.
+- Homogeneous Catalysis with Renewables (2017) | Behr, Arno, Vorholt, Andreas J.
+- Integrated Assessment Models of Climate Change Economics (2017) | Wang, Zheng, Gu, Gaoxiang, Liu, Changxin
+- Responses of crop yield growth to global temperature and socioeconomic changes (2017) | Iizumi, Toshichika, Furuya, Jun, Shen, Zhihong
+- Cost benefit analysis and the environment: further developments and policy use (2018) | Atkinson, Giles, Braathen, Nils Axel, Groom, Ben
+- Environmental and natural resource economics (2018) | Tietenberg, Thomas H., Lewis, Lynne
+- Principles of environmental economics and sustainability: an integrated economic & ecological approach (2018) | Hussen, Ahmed M.
+- Economics for people and the planet: inequality in the era of climate change (2019) | Boyce, James K.
+- Introduction: Economics and Environmental Degradation (2019) | Buchholz, Wolfgang, Rübbelke, Dirk
+- Ecological-economic modelling for biodiversity conservation (2020) | Drechsler, Martin
+- The new environmental economics: sustainability and justice (2020) | Laurent, Éloi
+- Global vulnerability of crop yields to climate change (2021) | Wing, Ian Sue, De Cian, Enrica, Mistry, Malcolm N.
+- An outlook on the development of renewable energy, policy measures to reshape the current energy mix, and how to achieve sustainable economic growth in the post COVID-19 era (2022) | Farhan Bashir, Muhammad, Sadiq, Muhammad, Talbi, Besma
+- Climate change, sustainable development and cleantech: a pathway for developing countries (2022) | Xiang, Joy Y.
+- Environmental Kuznets curve for biodiversity loss: evidence from South and Southeast Asian countries (2022) | Tan, Yan-Ling, Yiew, Thian-Hee, Lau, Lin-Sea
+- Fundamentals of renewable energy processes (2022) | Da Rosa, Aldo Vieira, Ordóñez, Juan Carlos
+- Handbook of research on energy and environmental finance 4.0 (2022) | Unknown
+- Renewable energy technologies for energy efficient sustainable development (2022) | Sinharoy, Arindam, Lens, P. N. L
+- The role of climatic changes and financial development to the ASEAN agricultural output: a novel long-run evidence for sustainable production (2022) | Chandio, Abbas Ali, Abbas, Shujaat, Ozdemir, Dicle
+- Time-varying causality between income inequality and ecological footprint in Turkey (2022) | Altıntaş, Nurullah, Kırca, Mustafa, Acar, Samet
+- A history of ecological economic thought (2023) | Vianna Franco, Marco P., Missemer, Antoine
+- A history of ecological economic thought (2023) | Vianna Franco, Marco P., Missemer, Antoine
+- Complexity economics for environmental governance (2023) | Mercure, Jean-Francois
+- Energy transition or energy diversification? Assessing the complexity of energy ecosystem towards transiting a climate neutral society (2023) | Andrei, Jean-Vasile, Zaharia, Alina, Graci, Giuseppe
+- Environmental economics in developing countries: issues and challenges (2023) | Unknown
+- Green complexity and its dual threshold effects: balancing environmental impact and economic growth (2025) | Maneejuk, Paravee, Yamaka, Woraphon
+- The relationship between carbon dioxide and agriculture in Ghana: a comparison of VECM and ARDL model (6/20) | Asumadu-Sarkodie, Samuel, Owusu, Phebe Asantewaa
+- The relationship between carbon dioxide and agriculture in Ghana: a comparison of VECM and ARDL model (6/20) | Asumadu-Sarkodie, Samuel, Owusu, Phebe Asantewaa
+- Ecological efficiency in China and its influencing factors—a super-efficient SBM metafrontier-Malmquist-Tobit model study (7/20) | Ma, Xiaojun, Wang, Changxin, Yu, Yuanbo

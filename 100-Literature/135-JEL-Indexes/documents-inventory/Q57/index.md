@@ -1,0 +1,67 @@
+---
+type: documents-jel-index
+code: Q57
+item_count: 59
+---
+
+# Documents - Q57
+
+- (Routledge Studies in Ecological Economics) Diana Stuart, Ryan Gunderson, Brian Petersen - The Degrowth Alternative_ A Path to Address our Environmental Crisis_-Routledge (2021).pdf | secondary: Q56 | evidence: ecological
+- Ahmed Hussen - Principles of environmental economics and sustainability _ an integrated economic and ecological approach (4th edition) (2019).pdf | secondary: Q56 | evidence: ecological
+- Certificate of Publication Ecological Thought in Economics.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/Ecological Economics.bib | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1330/Kirişik_2013_EKOLOJİK SORUNLARIN ÇÖZÜMÜNDE DERİN EKOLOJİ YAKLAŞIMI.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1346/1-s2.0-S0921800997001006-main.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1348/1-s2.0-S0921800919310298-main.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1352/1-s2.0-S0921800915301725-main.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1354/1-s2.0-S0921800919307554-main.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1356/1-s2.0-S0921800997001201-main.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1363/Funtowicz_Ravetz_1994_The worth of a songbird.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1365/1-s2.0-S092180090500529X-main.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Ecological Economics/files/1368/1-s2.0-S092180091200050X-main.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renev/files/1320/Squaring-the-circle-Some-thoughts-on-the-idea-of-sustainable-developmentEcological-Economics.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renev/files/1371/(Ecological Reviews) Sarah Gardner_ Stephen Ramsden_ Rosie Hails - Agricultural Resilience_ Perspectives from Ecology and Economics-Cambridge University Press (2019).pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renev/files/707/(Ecology, Biodiversity and Conservation) Martin Drechsler - Ecological-Economic Modelling for Biodiversity Conservation-Cambridge University Press (2020).pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renev/files/902/Agricultural-intensification-irrigation-and-the-environment-in-South-Asia-Issues-and-policy-optionsEcological-Economics.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1371/(Ecological Reviews) Sarah Gardner_ Stephen Ramsden_ Rosie Hails - Agricultural Resilience_ Perspectives from Ecology and Economics-Cambridge University Press (2019).pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1320/Squaring-the-circle-Some-thoughts-on-the-idea-of-sustainable-developmentEcological-Economics.pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/707/(Ecology, Biodiversity and Conservation) Martin Drechsler - Ecological-Economic Modelling for Biodiversity Conservation-Cambridge University Press (2020).pdf | secondary: Q56 | evidence: ecological
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/902/Agricultural-intensification-irrigation-and-the-environment-in-South-Asia-Issues-and-policy-optionsEcological-Economics.pdf | secondary: Q56 | evidence: ecological
+- Ecological Thought in Economics Exploring the Intersection of Environmentalism and Economic Theory-Mar-30-2023-0712.docx | secondary: Q56 | evidence: ecological
+- Ecological Thought in Economics_ Reviewer (1).docx | secondary: Q56 | evidence: ecological
+- Ecological Thought in Economics_ Reviewer.docx | secondary: Q56 | evidence: ecological
+- Ecological Thought in Economics_ Reviewer_last_version.docx | secondary: Q56 | evidence: ecological
+- Ecological Thought in Economics_ Revised_Version.docx | secondary: Q56 | evidence: ecological
+- Ecological_Thought_in_Economics__Exploring_the_Int.docx | secondary: Q56 | evidence: ecological
+- Ecological_Thought_in_Economics__Exploring_the_Int.pdf | secondary: Q56 | evidence: ecological
+- Ecological_Thought_in_Economics__Exploring_the_Int_v2.pdf | secondary: Q56 | evidence: ecological
+- EKC/Analyzing-the-environmental-Kuznets-curve-for-the-EU-countries-the-role-of-ecological-footprint_2018_Springer-Verlag-servicespringerde.pdf | secondary: Q56 | evidence: ecological
+- How do environmental tax and renewable energy contribute to ecological sustainability  New evidence from top renewable energy countries.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/3130/Rees and Wackernagel - 1996 - Urban ecological footprints Why cities cannot be .pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4345/Gendron_2014_Beyond environmental and ecological economics.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4637/Spash and Aslaksen - 2015 - Re-establishing an ecological discourse in the pol.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4643/van den Bergh - 2001 - Ecological economics themes, approaches, and diff.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4646/Gowdy - 2005 - The approach of ecological economics.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4654/Spash - 2011 - Social Ecological Economics Understanding the Pas.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4658/Gendron - 2014 - Beyond environmental and ecological economics Pro.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4671/Hardt and O'Neill - 2017 - Ecological Macroeconomic Models Assessing Current.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4675/Capra and Jakobsen - 2017 - A conceptual framework for ecological economics ba.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/4701/Spash - 2013 - The shallow or the deep ecological economics movem.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5273/Danish et al. - 2020 - Determinants of the ecological footprint Role of .pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5307/Biekša - 2016 - THE EVALUATION OF CEREAL FARMS USING ECOLOGICAL FO.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5321/Venetoulis_Talberth_2008_Refining the ecological footprint.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5323/Usubharatana_Phungrassami_2016_ECOLOGICAL FOOTPRINT ANALYSIS OF CANNED SWEET CORN.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5325/Ullah et al_2023_The impact of agroecosystem on ecological footprint.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5327/Khan et al_2021_Link between Technically Derived Energy Efficiency and Ecological Footprint.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5366/Rees_1992_Ecological footprints and appropriated carrying capacity.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5368/Wackernagel et al_1999_National natural capital accounting with the ecological footprint concept.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5376/Bicknell et al_1998_New methodology for the ecological footprint with an application to the New.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5382/Wackernagel_Kitzes_2008_Ecological Footprint.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5404/Xiong and Li - 2019 - Ecological deficit tax A tax design and simulatio.pdf | secondary: Q56 | evidence: ecological
+- My Library/files/5537/Ma et al. - 2018 - Ecological efficiency in China and its influencing.pdf | secondary: Q56 | evidence: ecological
+- Rees_1992_Ecological footprints and appropriated carrying capacity.pdf | secondary: Q56 | evidence: ecological
+- Rees_Wackernagel_1996_Urban ecological footprints.pdf | secondary: Q56 | evidence: ecological
+- Submission Ecological Thought.docx | secondary: Q56 | evidence: ecological
+- System_studies_total factor productivity AND ecological impact_2023-11-03.csv | secondary: Q56 | evidence: ecological
+- System_studies_total-factor-productivity-AND-ecological-impact_2023-11-03.xlsx | secondary: Q56 | evidence: ecological
+- The-ecological-economics-of-sustainability-making-local-and-short-term-goals-consistent-with-global-and-long-term-goals.pdf | secondary: Q56 | evidence: ecological

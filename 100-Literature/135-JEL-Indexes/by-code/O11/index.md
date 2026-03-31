@@ -1,0 +1,77 @@
+---
+type: jel-code-index
+code: O11
+family: O
+item_count: 68
+---
+
+# O11
+
+- EXCHANGE RATE MISALIGNMENT AND ECONOMIC GROWTH (n.d.) | Dubas, Justin
+- THE REAL EXCHANGE RATE AND ECONOMIC GROWTH (n.d.) | Eichengreen, Barry
+- Ecological economics and economic growtha: Ecological economics and economic growth (01/2) | Victor, Peter A.
+- Response and adaptation of agriculture to climate change: Evidence from China (01/2) | Chen, Shuai, Gong, Binlei
+- How economic growth, renewable electricity and natural resources contribute to CO2 emissions? (02/2) | Balsalobre-Lorente, Daniel, Shahbaz, Muhammad, Roubaud, David
+- Labor productivity and employment gaps in Sub-Saharan Africa (02/2) | McCullough, Ellen B.
+- Labor productivity and employment gaps in Sub-Saharan Africa (02/2) | McCullough, Ellen B.
+- Stoking the fires? CO2 emissions and economic growth (05/1) | Holtz-Eakin, Douglas, Selden, Thomas M.
+- Related Variety, Unrelated Variety and Regional Economic Growth (07/2) | Frenken, Koen, Van Oort, Frank, Verburg, Thijs
+- Inflation dynamics and food prices in Ethiopia (09/2) | Durevall, Dick, Loening, Josef L., Ayalew Birru, Yohannes
+- Financial development and economic growth nexus in the MENA countries: Bootstrap panel granger causality analysis (1/20) | Kar, Muhsin, Nazlıoğlu, Şaban, Ağır, Hüseyin
+- Does Remittance Outflow Stimulate or Retard Economic Growth? (10/2) | Khan, Khalid, Su, Chi‐Wei, Tao, Ran
+- Waking a sleeping giant: Realizing the potential of groundwater in Sub-Saharan Africa (10/2) | Cobbing, Jude, Hiller, Bradley
+- Waking a sleeping giant: Realizing the potential of groundwater in Sub-Saharan Africa (10/2) | Cobbing, Jude, Hiller, Bradley
+- An Intellectual History of Environmental Economics (11/2) | Pearce, David
+- Introduction – Understanding Structural Transformation in Africa (11/2) | McMillan, Margaret, Headey, Derek
+- Introduction – Understanding Structural Transformation in Africa (11/2) | McMillan, Margaret, Headey, Derek
+- Economic Growth and the Environment (1995) | Grossman, G. M., Krueger, A. B.
+- Financial Development and Economic Growth: Views and Agenda (1997) | Levine, Ross
+- Microeconomic aspects of Economic Growth in Eastern Europe and the Former Soviet Union, 1950-2000 (2000) | Guriev, Sergei, Ickes, Barry W.
+- Introduction: the provision of animal health services in a changing world: -EN- -FR- -ES- (2004) | De Haan, C.
+- Introduction: the provision of animal health services in a changing world: -EN- -FR- -ES- (2004) | De Haan, C.
+- Consumption structure and macroeconomics: structural change and the relationship between inequality and growth (2005) | Foellmi, Reto
+- Water resource economics and policy: an introduction (2005) | Shaw, W. Douglass
+- Water resource economics: the analysis of scarcity, policies, and projects (2006) | Griffin, Ronald C.
+- Development macroeconomics (2008) | Agénor, Pierre-Richard, Montiel, Peter J.
+- Determinants of institutional quality and their impact on economic growth in the MENA region (2009) | Kandil, Magda
+- What is ecological economics? (2010) | Costanza, Robert
+- Social banks and the future of sustainable finance (2011) | Unknown
+- Ekonomik Büyüme ve Çevresel Vergilerin Emisyon Miktarına Etkileri (2012) | Akar, Hakan
+- Temperature Shocks and Economic Growth: Evidence from the Last Half Century (2012) | Dell, Melissa, Jones, Benjamin F, Olken, Benjamin A
+- Mathematical Modeling in Economics, Ecology and the Environment (2013) | Hritonenko, Natali, Yatsenko, Yuri
+- A Note: De-Growth Debate and New Scientific Analysis of Economic Growth (2014) | Kaivo-oja, Jari, Vehmas, Jarmo, Luukkanen, Jyrki
+- Routledge handbook of the economics of climate change adaptation (2014) | Unknown
+- What Do We Learn from the Weather? The New Climate-Economy Literature (2014) | Dell, Melissa, Jones, Benjamin F., Olken, Benjamin A.
+- Complexity and the economy (2015) | Arthur, W. Brian
+- Routledge handbook of water economics and institutions (2015) | Unknown
+- Structural Transformation in Africa: Static Gains, Dynamic Losses (2015) | De Vries, Gaaitzen, Timmer, Marcel, De Vries, Klaas
+- Structural Transformation in Africa: Static Gains, Dynamic Losses (2015) | De Vries, Gaaitzen, Timmer, Marcel, De Vries, Klaas
+- Resolving the Climate Change Crisis: The Ecological Economics of Climate Change (2016) | Lawn, Philip
+- Homogeneous Catalysis with Renewables (2017) | Behr, Arno, Vorholt, Andreas J.
+- Integrated Assessment Models of Climate Change Economics (2017) | Wang, Zheng, Gu, Gaoxiang, Liu, Changxin
+- Macroeconomics- Everything You Need to Know (2017) | Unknown
+- Ekonomik Özgürlük, Turizm ve Ekonomik Büyüme: BRICST Ülkelerinde KÓnya Bootsrap Nedensellik Analizi (2018) | Gövdeli̇, Tuncer
+- Ekonomik Özgürlük, Turizm ve Ekonomik Büyüme: Brics-T Ülkelerinde Konya Bootsrap Nedensellik Analizi (2018) | Gövdeli̇, Tuncer
+- Economics for people and the planet: inequality in the era of climate change (2019) | Boyce, James K.
+- The economics of water scarcity and variability (2020) | Damania, Richard
+- The new environmental economics: sustainability and justice (2020) | Laurent, Éloi
+- Optimal government size and economic growth in developing and MENA countries: A dynamic panel threshold analysis (2021) | Nouira, R., Kouni, M.
+- The degrowth alternative: a path to address our environmental crisis? (2021) | Stuart, Diana, Gunderson, Ryan, Petersen, Brian
+- The degrowth alternative: a path to address our environmental crisis? (2021) | Stuart, Diana, Gunderson, Ryan, Petersen, Brian
+- Climate change, sustainable development and cleantech: a pathway for developing countries (2022) | Xiang, Joy Y.
+- Validity of Wagner Hypothesis in OECD Countries: Konya Panel Causality Test (2022) | Urfalıoğlu, Şeyda, Tatoğlu, Yerdelen, Ferda
+- World Food and Agriculture – Statistical Yearbook 2022 (2022) | FAO
+- A history of ecological economic thought (2023) | Vianna Franco, Marco P., Missemer, Antoine
+- A history of ecological economic thought (2023) | Vianna Franco, Marco P., Missemer, Antoine
+- Environmental economics in developing countries: issues and challenges (2023) | Unknown
+- Structural change in Africa: role of agriculture (2023) | Grabowski, Richard, Self, Sharmistha
+- Structural change in Africa: role of agriculture (2023) | Grabowski, Richard, Self, Sharmistha
+- Nexus between Economic Structural Changes, Foreign Investments, and Environmental Efficiency: Novel Findings from Global Regional Data (2024) | Kumar Singh, Amit, Jain, Srishti
+- Green complexity and its dual threshold effects: balancing environmental impact and economic growth (2025) | Maneejuk, Paravee, Yamaka, Woraphon
+- Prospects for cereal self-sufficiency in sub-Saharan Africa (2025) | Van Ittersum, Martin K., Alimagham, Seyyedmajid, Silva, João Vasco
+- Prospects for cereal self-sufficiency in sub-Saharan Africa (2025) | Van Ittersum, Martin K., Alimagham, Seyyedmajid, Silva, João Vasco
+- Sub-Saharan Africa’s development pattern (2025) | Grabowski, Richard, Self, Sharmistha
+- Sub-Saharan Africa’s development pattern (2025) | Grabowski, Richard, Self, Sharmistha
+- Aid, Real Exchange Rate Misalignment, and Economic Growth in Sub-Saharan Africa (4/20) | Elbadawi, Ibrahim A., Kaltani, Linda, Soto, Raimundo
+- Defining and estimating underground and informal economies: The new institutional economics approach (7/19) | Feige, Edgar L.
+- The Rise and Fall of the Environmental Kuznets Curve (8/20) | Stern, David I

@@ -1,0 +1,552 @@
+---
+type: jel-code-index
+code: Q10
+family: Q
+item_count: 543
+---
+
+# Q10
+
+- (2007). The economic impacts of climate change: evidence from agricultural output and random fluctuations in weather (n.d.) | Deschenes, O.
+- Acceleration of Digital Transformation in Agriculture Sector For Ensuring Sustainable Food Securit (n.d.) | Ministery of Agriculture and Forestry
+- Agricultural Exposure to Water Stress (n.d.) | Unknown
+- Agricultural Market Information System: detail (n.d.) | Unknown
+- Agricultural land (n.d.) | Unknown
+- Agriculture (n.d.) | Agency, Environmental Protection
+- Agriculture Climate Change Data | Climate Watch (n.d.) | Unknown
+- Agriculture and climate change (n.d.) | Unknown
+- Agriculture — English (n.d.) | Unknown
+- Agriculture — English (n.d.) | Unknown
+- Bir Bakışta Türkiye | FAO Türkiye | Food and Agriculture Organization of the United Nations (n.d.) | Unknown
+- Climate Change and Agricultural Output in Peru (n.d.) | Saldarriaga, Víctor
+- Corn Production by Country | World Agricultural Production 2022/2023 (n.d.) | Unknown
+- Data - OECD-FAO Agricultural Outlook (n.d.) | Unknown
+- Data Sets » Agriculture and Food Security | SEDAC (n.d.) | Unknown
+- Enhancing Climate Change Mitigation through Agriculture | en | OECD (n.d.) | Unknown
+- FAO Cereal Supply and Demand Brief | World Food Situation | Food and Agriculture Organization of the United Nations (n.d.) | Unknown
+- FAO Food Price Index | World Food Situation | Food and Agriculture Organization of the United Nations (n.d.) | Unknown
+- Food production is responsible for one-quarter of the world’s greenhouse gas emissions (n.d.) | Unknown
+- Forthcoming.“The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather: Comment.” (n.d.) | Fisher, Anthony C., Hanemann, W. Michael, Roberts, Michael J.
+- GIMMS | Global Agricultural Monitoring System (n.d.) | Unknown
+- Half of the world’s habitable land is used for agriculture (n.d.) | ourworldindata.org
+- Historical Wasde Report Data (n.d.) | Unknown
+- Homepage | CCAFS: CGIAR research program on Climate Change, Agriculture and Food Security (n.d.) | Unknown
+- If the world adopted a plant-based diet we would reduce global agricultural land use from 4 to 1 billion hectares (n.d.) | Unknown
+- NASA SVS | Climate Change Could Affect Global Agriculture within 10 Years (n.d.) | Unknown
+- OECD Data Explorer • OECD-FAO Agricultural Outlook 2022-2031 (n.d.) | Unknown
+- OECD-FAO Agricultural Outlook 2023-2032 (n.d.) | Unknown
+- Open Data | FAOLEX Database | Food and Agriculture Organization of the United Nations (n.d.) | Unknown
+- POLICIES TO STRENGTHEN TURKISH AGRICULTURE FOR ADAPTATION TO CLIMATE CHANGE (n.d.) | Dusunceli, F, Tekeli, I, Mermer, A
+- Price indices of agricultural products (apri_pi) (n.d.) | Unknown
+- Producer and Consumer Support Estimates (n.d.) | Unknown
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis - Article (Preprint v1) by Mehmet Gökhan Özdemir | Qeios (n.d.) | Unknown
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis - Article (Preprint v1) by Mehmet Gökhan Özdemir | Qeios (n.d.) | Unknown
+- Sustainable agriculture - Agricultural land - OECD Data (n.d.) | Unknown
+- The State of Food Security and Nutrition in the World 2020 | FAO | Food and Agriculture Organization of the United Nations (n.d.) | Unknown
+- Turkey - Employment In Agriculture (% Of Total Employment) - 2022 Data 2023 Forecast 1982-2020 Historical (n.d.) | Unknown
+- Turkey Agricultural land - data, chart (n.d.) | Unknown
+- Turkey GDP share of agriculture - data, chart (n.d.) | Unknown
+- USDA ERS - International Agricultural Productivity (n.d.) | ABD Tarım Bakanlığı
+- USDA ERS - International Agricultural Productivity (n.d.) | Unknown
+- İKLİM DEĞİŞİKLİĞİ’NİN ETKİLERİ: TARIM SEKTÖRÜ ÜZERİNE EKONOMETRİK BİR UYGULAMA (n.d.) | Başoğlu, Aykut
+- Agronomic Weather Measures in Econometric Models of Crop Yield with Implications for Climate Change (01/2) | Roberts, Michael J., Schlenker, Wolfram, Eyer, Jonathan
+- Assessing the impact of climate change on the agricultural economy in Thailand: an empirical study using panel data analysis (01/2) | Jatuporn, Chalermpon, Takeuchi, Kenji
+- Biochar addition to agricultural soil increased CH4 uptake and water holding capacity – Results from a short-term pilot field study (01/2) | Karhu, Kristiina, Mattila, Tuomas, Bergström, Irina
+- China's agricultural green total factor productivity based on carbon emission: An analysis of evolution trend and influencing factors (01/2) | Liu, Dongdong, Zhu, Xiaoyan, Wang, Yafei
+- Forecasting technological change in agriculture—An endogenous implementation in a global land use model (01/2) | Dietrich, Jan Philipp, Schmitz, Christoph, Lotze-Campen, Hermann
+- Forecasting technological change in agriculture—An endogenous implementation in a global land use model (01/2) | Dietrich, Jan Philipp, Schmitz, Christoph, Lotze-Campen, Hermann
+- Forest, agriculture, renewable energy, and CO2 emission (01/2) | Waheed, Rida, Chang, Dongfeng, Sarwar, Suleman
+- Greater Mitigation of Climate Change by Organic than Conventional Agriculture: A Review (01/2) | Goh, Kuan M.
+- Investigation of climate change impacts on agricultural production in Turkey using volumetric water footprint approach (01/2) | Pilevneli, Tolga, Capar, Goksen, Sánchez-Cerdà, Clara
+- Measuring agricultural total factor productivity in China: pattern and drivers over the period of 1978‐2016 (01/2) | Sheng, Yu, Tian, Xiaohui, Qiao, Weiqing
+- Mitigating climate change through managing constructed-microbial communities in agriculture (01/2) | Hamilton, Cyd E., Bever, James D., Labbé, Jessy
+- Reducing greenhouse gas emissions and adapting agricultural management for climate change in developing countries: providing the basis for action (01/2) | Ogle, Stephen M., Olander, Lydia, Wollenberg, Lini
+- Reducing greenhouse gas emissions and adapting agricultural management for climate change in developing countries: providing the basis for action (01/2) | Ogle, Stephen M., Olander, Lydia, Wollenberg, Lini
+- Response and adaptation of agriculture to climate change: Evidence from China (01/2) | Chen, Shuai, Gong, Binlei
+- The Global Supply and Demand for Agricultural Land in 2050: A Perfect Storm in the Making? <sup>1</sup> (01/2) | Hertel, Thomas W.
+- The New Normal? A Tighter Global Agricultural Supply and Demand Relation and Its Implications for Food Security (01/2) | Rosegrant, Mark W., Tokgoz, Simla, Bhandary, Prapti
+- The future of food demand: understanding differences in global economic models (01/2) | Valin, Hugo, Sands, Ronald D., van der Mensbrugghe, Dominique
+- Trade, policy, and food security (01/2) | Smith, Vincent H., Glauber, Joseph W.
+- Value-based adaptation to climate change and divergent developmentalisms in Turkish agriculture (01/2) | Turhan, Ethemcan
+- Which agricultural choices to meet transformation challenges in Africa? Debating small-scale versus large-scale (01/2) | Losch, Bruno, Fréguin-Gresh, Sandrine
+- Which agricultural choices to meet transformation challenges in Africa? Debating small-scale versus large-scale (01/2) | Losch, Bruno, Fréguin-Gresh, Sandrine
+- Adaptation of Russian agriculture to climatic variability: The role of federal and provincial policies (02/2) | Stupak, Nataliya
+- Assessing the effect of climate change and financial development on agricultural production in ASEAN-4: the role of renewable energy, institutional quality, and human capital as moderators (02/2) | Chandio, Abbas Ali, Shah, Muhammad Ibrahim, Sethi, Narayan
+- Climate change, agriculture and economic effects on different regions of Brazil (02/2) | Ferreira Filho, Joaquim Bento de Souza, Moraes, Gustavo Inácio de
+- How limiting factors drive agricultural adaptation to climate change (02/2) | Niles, Meredith T., Lubell, Mark, Brown, Margaret
+- Labor productivity and employment gaps in Sub-Saharan Africa (02/2) | McCullough, Ellen B.
+- Labor productivity and employment gaps in Sub-Saharan Africa (02/2) | McCullough, Ellen B.
+- Leveraging on the fourth industrial revolution by African accountants in the sustenance of <span style="font-variant:small-caps;">SDGs</span> and <span style="font-variant:small-caps;">AU</span> Agenda 2063 (02/2) | Makurumidze, Shepard, Sifile, Obert, Twesige, Daniel
+- Leveraging on the fourth industrial revolution by African accountants in the sustenance of <span style="font-variant:small-caps;">SDGs</span> and <span style="font-variant:small-caps;">AU</span> Agenda 2063 (02/2) | Makurumidze, Shepard, Sifile, Obert, Twesige, Daniel
+- Modeling the impact of climatic and non-climatic factors on cereal production: evidence from Indian agricultural sector (02/2) | Chandio, Abbas Ali, Jiang, Yuansheg, Amin, Asad
+- Role of environmental degradation and energy use for agricultural economic growth: Sustainable implications based on ARDL estimation (02/2) | Wang, Hongwei
+- Structural transformation and its relevance for economic growth in Sub‐Saharan Africa (02/2) | Busse, Matthias, Erdogan, Ceren, Mühlen, Henning
+- Structural transformation and its relevance for economic growth in Sub‐Saharan Africa (02/2) | Busse, Matthias, Erdogan, Ceren, Mühlen, Henning
+- Ten striking facts about agricultural input use in Sub-Saharan Africa (02/2) | Sheahan, Megan, Barrett, Christopher B.
+- Ten striking facts about agricultural input use in Sub-Saharan Africa (02/2) | Sheahan, Megan, Barrett, Christopher B.
+- The effect of development on the climate sensitivity of agriculture (02/2) | Mendelsohn, Robert, Dinar, Ariel, Sanghi, Apurva
+- Climate Change as an Agricultural Economics Research Topic (03/2) | McCarl, Bruce A, Hertel, Thomas W
+- Climate change and agriculture in the Sudan: Impact pathways beyond changes in mean rainfall and temperature (03/2) | Siddig, Khalid, Stepanyan, Davit, Wiebelt, Manfred
+- Climate change and industrialization as the main drivers of Spanish agriculture water stress (03/2) | Vila-Traver, J., Aguilera, E., Infante-Amate, J.
+- Does conservation agriculture deliver climate change mitigation through soil carbon sequestration in tropical agro-ecosystems? (03/2) | Powlson, David S., Stirling, Clare M., Thierfelder, Christian
+- Exploring the Path of Autonomous Development: the Development Dilemma and Coping Strategies of Sub-Saharan Africa in the Post-epidemic Era (03/2) | Bi, Mo, Zhang, Zhenke
+- Exploring the Path of Autonomous Development: the Development Dilemma and Coping Strategies of Sub-Saharan Africa in the Post-epidemic Era (03/2) | Bi, Mo, Zhang, Zhenke
+- Financial inclusion and agricultural total factor productivity growth in China (03/2) | Hu, Yue, Liu, Chang, Peng, Jiangang
+- Financial inclusion and agricultural total factor productivity growth in China (03/2) | Hu, Yue, Liu, Chang, Peng, Jiangang
+- Geomorphometric soil erosion modelling in Sub-Saharan Africa: A systematic review of model applicability, validation gaps, and policy integration (03/2) | Boroko, Koketso Carl, Mashao, Frederick Mokibelo, Thamaga, Kgabo Humphrey
+- Geomorphometric soil erosion modelling in Sub-Saharan Africa: A systematic review of model applicability, validation gaps, and policy integration (03/2) | Boroko, Koketso Carl, Mashao, Frederick Mokibelo, Thamaga, Kgabo Humphrey
+- Renewable ammonia for sustainable energy and agriculture: vision and systems engineering opportunities (03/2) | Palys, Matthew J, Wang, Hanchu, Zhang, Qi
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- Sustainable agricultural development in sub‐Saharan Africa: the case for a paradigm shift in land husbandry (03/2) | Gowing, J. W., Palmer, M.
+- Sustainable agricultural development in sub‐Saharan Africa: the case for a paradigm shift in land husbandry (03/2) | Gowing, J. W., Palmer, M.
+- The interplay between agriculture, greenhouse gases, and climate change in Sub-Saharan Africa (03/2) | Omotoso, Abeeb Babatunde, Omotayo, Abiodun Olusola
+- The interplay between agriculture, greenhouse gases, and climate change in Sub-Saharan Africa (03/2) | Omotoso, Abeeb Babatunde, Omotayo, Abiodun Olusola
+- The role of renewable energy and agriculture in reducing CO 2 emissions: Evidence for North Africa countries (03/2) | Ben Jebli, Mehdi, Ben Youssef, Slim
+- Understanding farmers’ intention and willingness to install renewable energy technology: A solution to reduce the environmental emissions of agriculture (03/2) | Elahi, Ehsan, Khalid, Zainab, Zhang, Zhixin
+- Youth Employment in Sub-Saharan Africa: Challenges, Constraints and Opportunities (03/2) | Fox, Louise, Senbet, Lemma W., Simbanegavi, Witness
+- Youth Employment in Sub-Saharan Africa: Challenges, Constraints and Opportunities (03/2) | Fox, Louise, Senbet, Lemma W., Simbanegavi, Witness
+- Adaptation to Climate Change in Rainfed Agriculture in the Global South: Soil Biodiversity as Natural Insurance (04/2) | Sidibé, Yoro, Foudi, Sébastien, Pascual, Unai
+- Climate change risk perceptions and agricultural adaptation strategies in vulnerable riverine char islands of Bangladesh (04/2) | Ahmed, Zobaer, Guha, Gauri S., Shew, Aaron M.
+- Climate-Smart Approach for Sustainable Agriculture: (04/2) | Suvorov, Nicolae, Stancu, Alina Mădălina
+- Conservation agriculture and ecosystem services: An overview (04/2) | Palm, Cheryl, Blanco-Canqui, Humberto, DeClerck, Fabrice
+- Increasing food production and mitigating agricultural greenhouse gas emissions in the European Union: impacts of carbon pricing and calorie production targeting (04/2) | Isbasoiu, Ancuta, Jayet, Pierre-Alain, De Cara, Stéphane
+- The nexus between greenhouse gas emission, electricity production, renewable energy and agriculture in Pakistan (04/2) | Khan, Muhammad Tariq Iqbal, Ali, Qamar, Ashfaq, Muhammad
+- Towards a sustainable environment: The nexus between ISO 14001, renewable energy consumption, access to electricity, agriculture and CO2 emissions in SAARC countries (04/2) | Ikram, Muhammad, Zhang, Qingyu, Sroufe, Robert
+- Carbon emissions, energy consumption and economic growth: Evidence from the agricultural sector of China's main grain-producing areas (05/2) | Zhang, Lu, Pang, Jiaxing, Chen, Xingpeng
+- Climate change and adaptation in agriculture: Evidence from US cropping patterns (05/2) | Cui, Xiaomeng
+- Climate change and its impacts on Vietnam agriculture: A macroeconomic perspective (05/2) | Anh, Dao Le Trang, Anh, Nguyen Tuan, Chandio, Abbas Ali
+- Climate change mitigation and agriculture (05/2) | Vandermeer, John
+- Climate-induced Land Use Change in France: Impacts of Agricultural Adaptation and Climate Change Mitigation (05/2) | Lungarska, Anna, Chakir, Raja
+- Irrigated agriculture and climate change: The influence of water supply variability and salinity on adaptation (05/2) | Connor, Jeffery D., Schwabe, Kurt, King, Darran
+- Structural Transformation and African Agriculture (05/2) | Binswanger-Mkhize, Hans P., McCalla, Alex F., Patel, Praful
+- Structural Transformation and African Agriculture (05/2) | Binswanger-Mkhize, Hans P., McCalla, Alex F., Patel, Praful
+- <i>Agriculture in Africa: Strategies to Improve and Sustain Smallholder Production Systems</i> (06/2) | Jama, Bashir, Pizarro, Gonzalo
+- <i>Agriculture in Africa: Strategies to Improve and Sustain Smallholder Production Systems</i> (06/2) | Jama, Bashir, Pizarro, Gonzalo
+- <i>Agriculture in Africa: Strategies to Improve and Sustain Smallholder Production Systems</i> (06/2) | Jama, Bashir, Pizarro, Gonzalo
+- <i>Agriculture in Africa: Strategies to Improve and Sustain Smallholder Production Systems</i> (06/2) | Jama, Bashir, Pizarro, Gonzalo
+- Characterizing the association between child malnutrition and protected areas in sub-Saharan Africa using unsupervised clustering (06/2) | Jouzi, Zeynab, Leung, Yu-Fai, Nelson, Stacy
+- Characterizing the association between child malnutrition and protected areas in sub-Saharan Africa using unsupervised clustering (06/2) | Jouzi, Zeynab, Leung, Yu-Fai, Nelson, Stacy
+- Climate change impacts on agriculture and soil carbon sequestration potential in the Huang-Hai Plain of China (06/2) | Thomson, Allison M., Izaurralde, R. César, Rosenberg, Norman J.
+- Climate change mitigation beyond agriculture: a review of food system opportunities and implications (06/2) | Niles, Meredith T., Ahuja, Richie, Barker, Todd
+- Do Agriculture Technologies Influence Carbon Emissions in Pakistan? Evidence based on ARDL technique (06/2) | Ali, Rafaqet, Ishaq, Rabia, Bakhsh, Khuda
+- FINANCIAL ACCESS AND VALUE ADDED IN SUB‐SAHARAN AFRICA: Empirical Evidence from the Agricultural, Manufacturing, and Service Sectors (06/2) | Asongu, Simplice A., Odhiambo, Nicholas M.
+- FINANCIAL ACCESS AND VALUE ADDED IN SUB‐SAHARAN AFRICA: Empirical Evidence from the Agricultural, Manufacturing, and Service Sectors (06/2) | Asongu, Simplice A., Odhiambo, Nicholas M.
+- Farmers’ preference and willingness to pay for weather forecast services in Benin (West Africa) (06/2) | Hounnou, Fèmi E., Houessou, Albertine M., Dedehouanou, Houinsou
+- Farmers’ preference and willingness to pay for weather forecast services in Benin (West Africa) (06/2) | Hounnou, Fèmi E., Houessou, Albertine M., Dedehouanou, Houinsou
+- Interactive influences of climate change and agriculture on aquatic habitat in a Pacific Northwestern watershed (06/2) | DeBano, Sandra J., Wooster, David E., Walker, Jonathan R.
+- Meeting Europe's climate change commitments: quantitative estimates of the potential for carbon mitigation by agriculture: AGRICULTURAL CARBON MITIGATION IN EUROPE (06/2) | Smith, Pete, Powlson, David S., Smith, Jo U.
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- The greenhouse effect of the agriculture-economic growth-renewable energy nexus: Evidence from G20 countries (06/2) | Qiao, Hui, Zheng, Fengtian, Jiang, Hongdian
+- The potential of irrigation for cereals production in Sub–Saharan Africa: A machine learning application for emulating crop growth at large scale (06/2) | Klinnert, Ana, Rogna, Marco, Barbosa, Ana Luisa
+- The potential of irrigation for cereals production in Sub–Saharan Africa: A machine learning application for emulating crop growth at large scale (06/2) | Klinnert, Ana, Rogna, Marco, Barbosa, Ana Luisa
+- Climate change, growth in agriculture value-added, food availability and economic growth nexus in the Gambia: a Granger causality and ARDL modeling approach (07/2) | Ceesay, Ebrima K., Francis, Phillips C., Jawneh, Sama
+- Reconfiguring agriculture through the relocation of production systems for water, environment and food security under climate change (07/2) | Mushtaq, S., White, N., Cockfield, G.
+- Structural change and trade openness in sub‐Saharan African countries (07/2) | Kaba, Kabinet, Lin, Justin Yifu, Renard, Mary‐Françoise
+- Structural change and trade openness in sub‐Saharan African countries (07/2) | Kaba, Kabinet, Lin, Justin Yifu, Renard, Mary‐Françoise
+- The effect of agricultural total factor productivity on environmental degradation in sub-Saharan Africa (07/2) | Alhassan, Hamdiyah
+- Transformational adaptation of agricultural systems to climate change (07/2) | Panda, Architesh
+- Agriculture and Structural Transformation in Africa: An Overview (08/2) | Senbet, Lemma W., Simbanegavi, Witness
+- Agriculture and Structural Transformation in Africa: An Overview (08/2) | Senbet, Lemma W., Simbanegavi, Witness
+- Assessing the spatiotemporal dynamics of seasonal and perennial surface water resources across Lesotho’s agroecological zones (08/2) | Singh, Kunwar K., Sayedi, Sayedeh Sara, BenYishay, Ariel
+- Assessing the spatiotemporal dynamics of seasonal and perennial surface water resources across Lesotho’s agroecological zones (08/2) | Singh, Kunwar K., Sayedi, Sayedeh Sara, BenYishay, Ariel
+- Climate Econometrics: Can the Panel Approach Account for Long‐Run Adaptation? (08/2) | Mérel, Pierre, Gammans, Matthew
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Climate change and variability in sub-Saharan Africa: A systematic review of trends and impacts on agriculture (08/2) | Omotoso, Abeeb Babatunde, Letsoalo, Simon, Olagunju, Kehinde Oluseyi
+- Effects of soil and water conservation techniques on crop yield, runoff and soil loss in Sub-Saharan Africa: A review (08/2) | Wolka, Kebede, Mulder, Jan, Biazin, Birhanu
+- Effects of soil and water conservation techniques on crop yield, runoff and soil loss in Sub-Saharan Africa: A review (08/2) | Wolka, Kebede, Mulder, Jan, Biazin, Birhanu
+- Effects of the German Renewable Energy Act on structural change in agriculture – The case of biogas (08/2) | Appel, Franziska, Ostermeyer-Wiethaup, Arlette, Balmann, Alfons
+- Linking renewable energy, globalization, agriculture, CO2 emissions and ecological footprint in BRIC countries: A sustainability perspective (08/2) | Pata, Ugur Korkut
+- Viewpoint: Climate impacts on agriculture: Searching for keys under the streetlight (08/2) | Hertel, Thomas W., de Lima, Cicero Z.
+- Assessing the economy–climate relationships for Brazilian agriculture (09/2) | Castro, Nicole Rennó, Spolador, Humberto Francisco Silva, Marin, Fábio Ricardo
+- Economic performance of Indonesia amidst CO2 emissions and agriculture: a time series analysis (09/2) | Adebayo, Tomiwa Sunday, Akinsola, Gbenga Daniel, Kirikkaleli, Dervis
+- Economywide impacts of climate change on agriculture in Sub-Saharan Africa (09/2) | Calzadilla, Alvaro, Zhu, Tingju, Rehdanz, Katrin
+- Effects of agriculture, renewable energy, and economic growth on carbon dioxide emissions: Evidence of the environmental Kuznets curve (09/2) | Ridzuan, Nur Hilfa Awatif Mohamad, Marwan, Nur Fakhzan, Khalid, Norlin
+- Feasibility analysis and techno-economic design of grid-isolated hybrid renewable energy system for electrification of agriculture and irrigation area: A case study in Dongola, Sudan (09/2) | Elkadeem, M.R., Wang, Shaorong, Sharshir, Swellam W.
+- Impacts of climate change mitigation on agriculture water use: A provincial analysis in China (09/2) | Guo, Chaoyi, Dai, Hancheng, Liu, Xiaorui
+- Reassessing Food Security: How a Data‐Efficient <span style="font-variant:small-caps;">4As</span> Framework and Machine Learning Uncover Hidden Patterns Across <span style="font-variant:small-caps;">G20</span> Nations (09/2) | Shang, Linmei, Lin, Changfeng, Ye, Ruike
+- Reassessing Food Security: How a Data‐Efficient <span style="font-variant:small-caps;">4As</span> Framework and Machine Learning Uncover Hidden Patterns Across <span style="font-variant:small-caps;">G20</span> Nations (09/2) | Shang, Linmei, Lin, Changfeng, Ye, Ruike
+- Reverse Dutch disease with trade costs: Prospects for agriculture in Africa's oil-rich economies (09/2) | Porteous, Obie
+- Reverse Dutch disease with trade costs: Prospects for agriculture in Africa's oil-rich economies (09/2) | Porteous, Obie
+- Transformation archetypes in global food systems (09/2) | Dornelles, André Zuanazzi, Boonstra, Wiebren J., Delabre, Izabela
+- Climate change and its marginalizing effect on agriculture (1/20) | Mestre-Sanchís, Fernando, Feijóo-Bello, María Luisa
+- Dynamics of renewable energy consumption and economic activities across the agriculture, industry, and service sectors: evidence in the perspective of sustainable development (1/20) | Paramati, Sudharshan Reddy, Apergis, Nicholas, Ummalla, Mallesh
+- Predicting climate change effects on agriculture from ecological niche modeling: who profits, who loses? (1/20) | Beck, Jan
+- Predicting climate change effects on agriculture from ecological niche modeling: who profits, who loses? (1/20) | Beck, Jan
+- Renewable energy for sustainable agriculture (1/20) | Chel, A., Kaushik, G.
+- Agriculture, climate change and sustainability: The case of EU-28 (10/2) | Agovino, Massimiliano, Casaccia, Mariaconcetta, Ciommi, Mariateresa
+- An economic theory-based explanatory model of agricultural land-use patterns: The Netherlands as a case study (10/2) | Diogo, V., Koomen, E., Kuhlman, T.
+- Climate Change and Agriculture: Do Environmental Preservation and Ecosystem Services Matter? (10/2) | Maia, Alexandre Gori, Miyamoto, Bruno César Brito, Garcia, Junior Ruiz
+- Climate change and agricultural productivity in Brazil: future perspectives (10/2) | Assunção, Juliano, Chein, Flávia
+- Conceptualising multi-regime interactions: The role of the agriculture sector in renewable energy transitions (10/2) | Sutherland, Lee-Ann, Peter, Sarah, Zagata, Lukas
+- Conservation agriculture and smallholder farming in Africa: The heretics’ view (10/2) | Giller, Ken E., Witter, Ernst, Corbeels, Marc
+- Conservation agriculture and smallholder farming in Africa: The heretics’ view (10/2) | Giller, Ken E., Witter, Ernst, Corbeels, Marc
+- GHG Emission Mitigation of Turkish Agriculture Sector: Potential and Cost Assessment (10/2) | Sarica, Kemal, Dellal, İlkay, Kollugil, Esin Tetik
+- Global food security in 2050: the role of agricultural productivity and climate change (10/2) | Baldos, Uris Lantz C., Hertel, Thomas W.
+- Green growth of cereal food production under the constraints of agricultural carbon emissions: A new insights from ARDL and VECM models (10/2) | Koondhar, Mansoor Ahmed, Aziz, Noshaba, Tan, Zhixiong
+- Potential net primary production footprint of agriculture: A global trade analysis (10/2) | Weinzettel, Jan, Vačkářů, Dava, Medková, Helena
+- The impact of climate change on Brazil's agriculture (10/2) | Zilli, Marcia, Scarabello, Marluce, Soterroni, Aline C.
+- The impact of renewable energy and agriculture on carbon dioxide emissions: Investigating the environmental Kuznets curve in four selected ASEAN countries (10/2) | Liu, Xuyi, Zhang, Shun, Bae, Junghan
+- The impacts of climate change on agriculture in sub-Saharan Africa: A spatial panel data approach (10/2) | Emediegwu, Lotanna E., Wossink, Ada, Hall, Alastair
+- The impacts of climate change on agriculture in sub-Saharan Africa: A spatial panel data approach (10/2) | Emediegwu, Lotanna E., Wossink, Ada, Hall, Alastair
+- The nexus of renewable energy-agriculture-environment in BRICS (10/2) | Liu, Xuyi, Zhang, Shun, Bae, Junghan
+- Towards long-term sustainable environment: does agriculture and renewable energy consumption matter? (10/2) | Chandio, Abbas Ali, Akram, Waqar, Ozturk, Ilhan
+- Traditional agriculture: a climate-smart approach for sustainable food production (10/2) | Singh, Rinku, Singh, G. S.
+- Waking a sleeping giant: Realizing the potential of groundwater in Sub-Saharan Africa (10/2) | Cobbing, Jude, Hiller, Bradley
+- Waking a sleeping giant: Realizing the potential of groundwater in Sub-Saharan Africa (10/2) | Cobbing, Jude, Hiller, Bradley
+- Women's work and agricultural productivity gaps in India (10/2) | Gulati, Kajal, Saha, Koustuv, Lybbert, Travis J.
+- Women's work and agricultural productivity gaps in India (10/2) | Gulati, Kajal, Saha, Koustuv, Lybbert, Travis J.
+- Women's work and agricultural productivity gaps in India (10/2) | Gulati, Kajal, Saha, Koustuv, Lybbert, Travis J.
+- Women's work and agricultural productivity gaps in India (10/2) | Gulati, Kajal, Saha, Koustuv, Lybbert, Travis J.
+- Robert Costanza, ed. <i>Ecological Economics the Science and Management of Sustainability</i> . Columbia University Press, 1991, xiv + 525 pp., paper $@@‐@@18.50 ISBN 0‐231‐07563‐4 (11/1) | English, Burton C.
+- Agricultural environmental total factor productivity in China under technological heterogeneity: characteristics and determinants (11/2) | Han, Haibin, Zhong, Zhangqi, Wen, Changcun
+- Agricultural environmental total factor productivity in China under technological heterogeneity: characteristics and determinants (11/2) | Han, Haibin, Zhong, Zhangqi, Wen, Changcun
+- Assessing the impacts of meteorological factors on soybean production in China: What role can agricultural subsidy play? (11/2) | Chandio, Abbas Ali, Akram, Waqar, Sargani, Ghulam Raza
+- Bibliometric Analysis of Monitoring and Mapping of Soil Salinity Using Remote Sensing Approaches: Reports from the Past Three Decades (11/2) | Ozdemir, E., Kulak, M., Sekertekin, A.
+- Bibliometric Analysis of Monitoring and Mapping of Soil Salinity Using Remote Sensing Approaches: Reports from the Past Three Decades (11/2) | Ozdemir, E., Kulak, M., Sekertekin, A.
+- Can improved agricultural technologies spur a green revolution in Africa? A multicountry analysis of seed and fertilizer delivery systems (11/2) | Ariga, Joshua, Mabaya, Edward, Waithaka, Michael
+- Can improved agricultural technologies spur a green revolution in Africa? A multicountry analysis of seed and fertilizer delivery systems (11/2) | Ariga, Joshua, Mabaya, Edward, Waithaka, Michael
+- Exploring the nexus between agriculture and greenhouse gas emissions in BIMSTEC region: The role of renewable energy and human capital as moderators (11/2) | Sharma, Gagan Deep, Shah, Muhammad Ibrahim, Shahzad, Umer
+- Human health and pesticide use in Sub‐Saharan Africa (11/2) | Sheahan, Megan, Barrett, Christopher B., Goldvale, Casey
+- Human health and pesticide use in Sub‐Saharan Africa (11/2) | Sheahan, Megan, Barrett, Christopher B., Goldvale, Casey
+- Introduction – Understanding Structural Transformation in Africa (11/2) | McMillan, Margaret, Headey, Derek
+- Introduction – Understanding Structural Transformation in Africa (11/2) | McMillan, Margaret, Headey, Derek
+- Oil revenues for public investment in Africa: targeting urban or rural areas? (11/2) | Wiebelt, Manfred, Schweickert, Rainer, Breisinger, Clemens
+- Oil revenues for public investment in Africa: targeting urban or rural areas? (11/2) | Wiebelt, Manfred, Schweickert, Rainer, Breisinger, Clemens
+- Rainfall seasonality changes and underlying climatic causes in global land monsoon regions (11/2) | Deng, Shulin, Lu, Chunhua, Chen, Hao
+- Rainfall seasonality changes and underlying climatic causes in global land monsoon regions (11/2) | Deng, Shulin, Lu, Chunhua, Chen, Hao
+- Spatial modeling of agricultural land use change at global scale (11/2) | Meiyappan, Prasanth, Dalton, Michael, O’Neill, Brian C.
+- The Challenge of Climate Change Adaptation For Agriculture: an Economically Oriented Review (11/2) | Mccarl, Bruce A., Thayer, Anastasia W., Jones, Jason P. H.
+- The impact of food inflation on urban poverty and its monetary cost: some back-of-the-envelope calculations (11/2) | Dessus, Sébastien, Herrera, Santiago, de Hoyos, Rafael
+- The socioeconomic impact of severe droughts on agricultural lands over different provinces of Iran (11/2) | Kheyruri, Yusef, Sharafati, Ahmad, Neshat, Aminreza
+- Towards sustainable food production: What role ICT and technological development can play for cereal production in Asian–7 countries? (11/2) | Ali Chandio, Abbas, Sethi, Narayan, Prasad Dash, Devi
+- A hydro-economic model for the assessment of climate change impacts and adaptation in irrigated agriculture (12/2) | Esteve, Paloma, Varela-Ortega, Consuelo, Blanco-Gutiérrez, Irene
+- Bibliometric analysis of peer-reviewed literature on food security in the context of climate change from 1980 to 2019 (12/2) | Sweileh, Waleed M.
+- Determinants of Agricultural Productivity in Ethiopia: ARDL Approach (12/2) | Shita, Aynalem, Kumar, Nand, Singh, Seema
+- Does the twin growth catalyst of oil rent seeking and agriculture exhibit complementary or substitute role? New perspective from a West African country (12/2) | Osundina, Olawumi Abeni, Bekun, Festus Victor, Kirikkaleli, Dervis
+- Does the twin growth catalyst of oil rent seeking and agriculture exhibit complementary or substitute role? New perspective from a West African country (12/2) | Osundina, Olawumi Abeni, Bekun, Festus Victor, Kirikkaleli, Dervis
+- Ecosystem services and dis-services to agriculture (12/2) | Zhang, Wei, Ricketts, Taylor H., Kremen, Claire
+- Governance of sustainability in the German biogas sector—adaptive management of the Renewable Energy Act between agriculture and the energy sector (12/2) | Thrän, Daniela, Schaubach, Kay, Majer, Stefan
+- Mapping global development potential for renewable energy, fossil fuels, mining and agriculture sectors (12/2) | Oakleaf, James R., Kennedy, Christina M., Baruch-Mordo, Sharon
+- Reducing emissions from agriculture to meet the 2 °C target (12/2) | Wollenberg, Eva, Richards, Meryl, Smith, Pete
+- The Impact of Climate Change on Agriculture: Findings from Households in Vietnam (12/2) | Trinh, Trong Anh
+- The economic impact of schistosomiasis (12/2) | Rinaldo, Daniele, Perez-Saez, Javier, Vounatsou, Penelope
+- The economic impact of schistosomiasis (12/2) | Rinaldo, Daniele, Perez-Saez, Javier, Vounatsou, Penelope
+- The impact of macroeconomic factors on food price inflation: an evidence from India (12/2) | Samal, Asharani, Ummalla, Mallesh, Goyari, Phanindra
+- What abates ecological footprint in BRICS-T region? Exploring the influence of renewable energy, non-renewable energy, agriculture, forest area and financial development (12/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad
+- What do the 235 estimates from the literature tell us about the impact of weather on agricultural and food trade flows? (12/2) | Magalhães Vital, Tauã, Dall'erba, Sandy, Ridley, William
+- Climate change and world agriculture (1990) | Parry, Martin L.
+- Environmental Economics and Responsibility (1992) | Sarokin, David, Schulkin, Jay
+- The economics of food production (1993) | Upton, M.
+- Effects of global climate change on world agriculture: an interpretive review (1998) | Adams, Rm, Hurd, Bh, Lenhart, S
+- Selected Papers (1999) | Unknown
+- Weather effects on European agricultural output, 1850-1913 (1999) | Solomou, S., Wu, W.
+- Climate change, agriculture and food security: a global partnership to link research and action for low-income agricultural producers and consumers (2/20) | Vermeulen, Sonja, Zougmoré, Robert, Wollenberg, Eva
+- Farmers and Their Languages: The First Expansions (2003) | Diamond, Jared, Bellwood, Peter
+- Mathematical modeling for system analysis in agricultural research (2003) | Vohnout, Karel D.
+- Determinants of Agricultural Output: Degree Days, Yields and Implications for Climate Change (2004) | Schlenker, Wolfram, Hanemann, W. Michael, Fisher, Anthony C.
+- Determinants of Agricultural Output: Degree Days, Yields and Implications for Climate Change (2004) | Schlenker, Wolfram, Hanemann, W. Michael, Fisher, Anthony C.
+- Soil Carbon Sequestration Impacts on Global Climate Change and Food Security (2004) | Lal, R.
+- A critical analysis of challenges and opportunities for soil fertility restoration in Sudano-Sahelian West Africa (2007) | Schlecht, E., Buerkert, A., Tielkes, E.
+- A critical analysis of challenges and opportunities for soil fertility restoration in Sudano-Sahelian West Africa (2007) | Schlecht, E., Buerkert, A., Tielkes, E.
+- Adapting agriculture to climate change (2007) | Howden, S. Mark, Soussana, Jean-François, Tubiello, Francesco N.
+- Distortions to Agricultural Incentives in Turkey (2007) | Burrell, Alison M., Kurzweil, Marianne, Burrell, Alison M.
+- The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather (2007) | Deschênes, Olivier, Greenstone, Michael
+- The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather: Dataset (2007) | Deschnes, Olivier, Greenstone, Michael
+- The economic impacts of climate change: evidence from agricultural output and random fluctuations in weather (2007) | Deschênes, Olivier, Greenstone, Michael
+- The economic impacts of climate change: evidence from agricultural output and random fluctuations in weather (2007) | Olivier, Deschenes, Michael, Greenstone, Jonathan, Guryan
+- Uncertainty, supra note 116 (quoting Olivier Deschenes & Michael Greenstone, The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather (2007) | Farber
+- 24 Ocak Kararları, Neo-Liberal Politikalar ve Türkiye Tarımı (2008) | Öztürk, Şinasi, Nas, Fethi, İçöz, Ergün
+- Anatomy of a crisis: the causes and consequences of surging food prices (2008) | Headey, Derek, Fan, Shenggen
+- Climate Change and Agriculture (2009) | Rosenzweig, Cynthia
+- Climate change and agriculture: an economic analysis of global impacts, adaptation and distributional effects (2009) | Mendelsohn, Robert O., Dinar, Ariel
+- Agricultural economics: new research (2010) | Unknown
+- Climate Change and Agriculture Impacts, Adaptation and Mitigation. (2010) | OECD, Wreford, Anita, Moran, Dominic
+- Climate Change and Agriculture: An Economic Analysis of Global Impacts, Adaptation and Distributional Effects (2010) | Iglesias, Ana
+- Climate change and food security: adapting agriculture to a warmer world (2010) | Unknown
+- Agriculture and food systems in sub-Saharan Africa in a 4<sup>°</sup> C+ world (2011) | Thornton, Philip K., Jones, Peter G., Ericksen, Polly J.
+- Agriculture and food systems in sub-Saharan Africa in a 4<sup>°</sup> C+ world (2011) | Thornton, Philip K., Jones, Peter G., Ericksen, Polly J.
+- Biofuels: global impact on renewable energy, production agriculture and technological advancements (2011) | Unknown
+- Climate science in support of sustainable agriculture and food security (2011) | Selvaraju, R, Gommes, R, Bernardi, M
+- Evaluation of Agricultural Policy Reforms in Turkey (2011) | OECD
+- Using Panel Data Models to Estimate the Economic Impacts of Climate Change on Agriculture (2011) | Deschenes, Olivier, Greenstone, Michael
+- Adapting Climate Change in Agriculture: The Sustainable Way in Nepalese Context (2012) | Panday, Dinesh
+- Agriculture and Climate Change (2012) | Liebig, Mark A., Franzluebbers, Alan J., Follett, Ronald F.
+- Temperature Shocks and Economic Growth: Evidence from the Last Half Century (2012) | Dell, Melissa, Jones, Benjamin F, Olken, Benjamin A
+- The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather: Comment (2012) | Fisher, Antony C., Haneman, Micheal W., Roberts, Michael J.
+- The Economic Impacts of Climate Change: Evidence from Agricultural Output and Random Fluctuations in Weather: Comment (2012) | Fisher, Anthony C, Hanemann, W. Michael, Roberts, Michael J
+- The economic impacts of climate change: evidence from agricultural output and random fluctuations in weather: reply (2012) | Deschnes, Olivier, Greenstone, Michael
+- Transformational adaptation: agriculture and climate change (2012) | Rickards, L., Howden, S. M.
+- Economic Diversification in Nigeria: Any Role for Solid Mineral Development? (2013) | Ayodele, Olumide .S., Akongwale, Sabastine, Nnadozie, Udefuna Patrick
+- Economic Diversification in Nigeria: Any Role for Solid Mineral Development? (2013) | Ayodele, Olumide .S., Akongwale, Sabastine, Nnadozie, Udefuna Patrick
+- Employment in Agriculture (2013) | Roser, Max
+- Global Agriculture and Climate Change (2013) | Kang, Manjit S., Banga, Surinder S.
+- Global Agriculture and Climate Change (2013) | Kang, Manjit S., Banga, Surinder S.
+- Impact of Population Growth and Climate Change in Lebanon on Water Scarcity, Agricultural Output and Food Security (2013) | Farajalla, N. S., Abou Haidar, C., Chnais, E.
+- Organic Farming For Crop Improvement and Sustainable Agriculture in the Era of Climate Change (2013) | Roychowdhury, Rajib
+- The effect of climate change and biofuel mandates on agricultural output and food prices (2013) | Schlenker, Wolfram
+- Climate change, tourism and water resources in the Mediterranean: A general equilibrium analysis (2014) | Roson, Roberto, Sartori, Martina
+- Produced and Flowback Water Recycling and Reuse: Economics, Limitations, and Technology (2014) | Boschee, Pam
+- Research into adaptive countermeasures to addressing the effects of climate change on agriculture (2014) | Qian, Fengkui, Wang, Wentao, Liu, Yanhua
+- Review of "Handbook on Climate Change and Agriculture" , by Ariel Dinar and Robert Mendelsohn (Eds.).: Cheltenham, UK: Edward Elgar Publishing, 2013. (2014) | Palumbo, Laura
+- What Do We Learn from the Weather? The New Climate-Economy Literature (2014) | Dell, Melissa, Jones, Benjamin F., Olken, Benjamin A.
+- A Review on Relationship between Climate Change and Agriculture (2015) | Yohannes H
+- Accounting for growth in global agriculture (2015) | Fuglie, Keith
+- Agricultural Total Factor Productivity Changes in the New and Old European Union (2015) | Kijek, Tomasz, Nowak, Anna, Kasztelan, Armand
+- Climate Change and Agricultural Productivity in Nigeria: An Econometric Analysis (2015) | Ekpenyong, Imoh Udom, Ogbuagu, Matthew Ikechukwu
+- Effect of warming temperatures on US wheat yields (2015) | Tack, Jesse, Barkley, Andrew, Nalley, Lawton Lanier
+- Structural Transformation in Africa: Static Gains, Dynamic Losses (2015) | De Vries, Gaaitzen, Timmer, Marcel, De Vries, Klaas
+- Structural Transformation in Africa: Static Gains, Dynamic Losses (2015) | De Vries, Gaaitzen, Timmer, Marcel, De Vries, Klaas
+- Water, Agriculture, and Drought in the West Under Changing Climate and Policy Regimes (2015) | Frisvold, George B.
+- Adaptation to Climate Change: Evidence from US Agriculture (2016) | Burke, Marshall, Emerick, Kyle
+- Adaptation, Climate Change, Agriculture, and Water (2016) | Mendelsohn, Robert
+- Agriculture and Environmental Kuznets Curves in the case of Turkey: evidence from the ARDL and bounds test (2016) | Dogan, Nezahat
+- Agriculture and Environmental Kuznets Curves in the case of Turkey: evidence from the ARDL and bounds test (2016) | Nezahat, Dogan
+- An Introduction to Climate Change Economics and Policy: Textbooks in Environmental and Agricultural Studies (2016) | FitzRoy, Felix R., Papyrakis, Elissaios
+- Can sub-Saharan Africa feed itself? (2016) | Van Ittersum, Martin K., Van Bussel, Lenny G. J., Wolf, Joost
+- Can sub-Saharan Africa feed itself? (2016) | Van Ittersum, Martin K., Van Bussel, Lenny G. J., Wolf, Joost
+- Climate Change and Agriculture (2016) | Lal, Rattan
+- Climate Change and Agriculture Worldwide (2016) | Unknown
+- Climate change and US agriculture: Opportunities for conservation to reduce and mitigate emissions and to support adaptation to rapid change (2016) | Manale, A., Hyberg, S., Key, N.
+- Development economics: the role of agriculture in development (2016) | Junankar, Pramod N.
+- Estimating provincial agricultural total factor productivity in Mainland China (2016) | Tan, Khee Giap, Suo, Haoran, Rajan, Ramkishen S.
+- Innovation, Agricultural Productivity and Sustainability in Turkey (2016) | OECD
+- Role of Institutions, Infrastructures, and Technologies in Meeting Global Agricultural Water Challenge (2016) | Saleth, Rathinasamy Maria, Bassi, Nitin, Kumar, M. Dinesh
+- The Economics of Conservation Agriculture in Africa: Implications of Climate Change (2016) | Grabowski, Philip, Haggblade, Steven
+- The Evaluation of Cereal Farms Using Ecological Footprint Method (2016) | Biekša, Kęstutis
+- Agriculture production as a major driver of the Earth system exceeding planetary boundaries (2017) | Campbell, Bruce M., Beare, Douglas J., Bennett, Elena M.
+- Climate Change and Global Food Systems: Potential Impacts on Food Security and Undernutrition (2017) | Myers, Samuel S., Smith, Matthew R., Guth, Sarah
+- Economic Impacts of Climate Change on Agriculture: Empirical Evidence From The ARDL Approach for Turkey (2017) | Kilicarslan, Zerrin, Dumrul, Yasemin
+- Economic Impacts of Climate Change on Agriculture: Empirical Evidence From The ARDL Approach for Turkey (2017) | Kilicarslan, Zerrin, Dumrul, Yasemin
+- Renewable energy consumption and agriculture: evidence for cointegration and Granger causality for Tunisian economy (2017) | Ben Jebli, Mehdi, Ben Youssef, Slim
+- Skilful prediction of Sahel summer rainfall on inter-annual and multi-year timescales (2017) | Sheen, K. L., Smith, D. M., Dunstone, N. J.
+- Skilful prediction of Sahel summer rainfall on inter-annual and multi-year timescales (2017) | Sheen, K. L., Smith, D. M., Dunstone, N. J.
+- Agricultural Adaptation to Climate Change in Africa: Food Security in a Changing Environment (2018) | Unknown
+- An Econometric Analysis of Food Security and Agricultural Credit Facilities in Nigeria (2018) | Osabohien, Romanus, Afolabi, Adesola, Godwin, Abigail
+- Building a Resilient and Sustainable Agriculture in Sub-Saharan Africa (2018) | Unknown
+- Building a Resilient and Sustainable Agriculture in Sub-Saharan Africa (2018) | Unknown
+- Building a Resilient and Sustainable Agriculture in Sub-Saharan Africa (2018) | Unknown
+- Building a Resilient and Sustainable Agriculture in Sub-Saharan Africa (2018) | Unknown
+- Climate Change as an Agricultural Economics Research Topic (2018) | McCarl, Bruce A, Hertel, Thomas W
+- Climate Change, Agriculture, and Economic Development in Ethiopia (2018) | Yalew, Amsalu, Hirte, Georg, Lotze-Campen, Hermann
+- Climate Governance: Implementing Water Sector Adaptation Strategies in Pakistan (2018) | Kanwar, Muhammad Javed Iqbal, Khan, Muhammed Irfan
+- Climate change and agriculture in India: studying long-term patterns in temperature, rainfall, and agricultural output (2018) | Bhanumurthy, K. V., Kumar, Lalit
+- Climate change and agriculture: an integrated approach to evaluate economy-wide effects for Turkey (2018) | Dudu, Hasan, Çakmak, Erol H.
+- Identifying the Economic Impacts of Climate Change on Agriculture (2018) | Carter, Colin, Cui, Xiaomeng, Ghanem, Dalia
+- Impacts of Climate Change on Agriculture and Food Security (2018) | Shankar, Shiv, Shikha
+- Increasing social-ecological resilience within small-scale agriculture in conflict-affected Guatemala (2018) | Hellin, Jon, Ratner, Blake D., Meinzen-Dick, Ruth
+- Socioeconomics of Agriculture (2018) | Mann, Stefan
+- The climate-smart village approach: framework of an integrative strategy for scaling up adaptation options in agriculture (2018) | Aggarwal, Pramod K., Jarvis, Andy, Campbell, Bruce M.
+- A Review of the Linkages between Climate Change, Agricultural Sustainability and Poverty in Malaysia (2019) | Siwar, Chamhuri, Alam, Md. Mahmudul, Murad, Wahid
+- Adaptation to Climate Change in Agriculture: Research and Practices (2019) | Unknown
+- Agricultural Policy Monitoring and Evaluation 2019 (2019) | OECD
+- Agricultural resilience: perspectives from ecology and economics (2019) | Unknown
+- Agriculture, Aid, and Economic Growth in Africa (2019) | McArthur, John W, Sachs, Jeffrey D
+- Agriculture, Aid, and Economic Growth in Africa (2019) | McArthur, John W, Sachs, Jeffrey D
+- Analysis of the Nexus of CO2 Emissions, Economic Growth, Land under Cereal Crops and Agriculture Value-Added in Pakistan Using an ARDL Approach (2019) | Ali, Sajjad, Ying, Liu, Shah, Tariq
+- Climate Change Impacts on Basin Agro-ecosystems (2019) | Unknown
+- Climate Change and Agriculture (2019) | Todorović, Mladen, Jovanović, Nebojša
+- Climate Change and Agriculture: A Historical Analysis (2019) | Uprety, Dinesh Chandra, Reddy, V. R., Mura, Jyostna Devi
+- Climate Change and Agriculture: A Historical Analysis (2019) | Uprety, Dinesh Chandra, Mura, Jyostna Devi, Reddy, V. R.
+- Climate Change and Food Security: A Test of U.S. Leadership in a Fragile World (2019) | Chase, Sova, Flowers, Kimberly, Man, Christian
+- Climate Change, Agriculture and Food Security (2019) | Wiebe, Keith, Robinson, Sherman, Cattaneo, Andrea
+- Climate Smart Agriculture Technologies for Environmental Management: The Intersection of Sustainability, Resilience, Wellbeing and Development (2019) | Venkatramanan, V., Shah, Shachi
+- Climate change indicators software for computing climate change indices for agriculture (2019) | Bautista, Francisco, Pacheco, Aristeo, Dubrovina, Inna
+- Climate change mitigation strategies for agriculture: an analysis of nationally determined contributions, biennial reports and biennial update reports (2019) | Hönle, Susanna Esther, Heidecke, Claudia, Osterburg, Bernhard
+- Climate change, adaptation, and agricultural output (2019) | Regan, Patrick M., Kim, Hyun, Maiden, Emily
+- Consequences of agricultural total factor productivity growth for the sustainability of global farming: accounting for direct and indirect land use effects (2019) | Villoria, Nelson
+- Effect of Climate Change on Agricultural Output Growth in Ethiopia: Co-Integration and Vector Error Correction Model Analysis (2019) | Adinew, Melaku, Gebresilasie, Gebrekirstos
+- Emerging Adaptation to Climate Change in Agriculture (2019) | Iizumi, Toshichika
+- Enhancing agricultural sustainability and productivity under changing climate conditions through improved agroforestry practices in smallholder farming systems in Sub-Saharan Africa (2019) | Nyong, P. Awazi, Martin, N. Tchamba
+- Enhancing the Mitigation of Climate Change though Agriculture: Policies, Economic Consequences, and Trade-offs (2019) | OECD
+- Food and Earth Systems: Priorities for Climate Change Adaptation and Mitigation for Agriculture and Food Systems (2019) | Loboguerrero, Ana, Campbell, Bruce, Cooper, Peter
+- Gender and conservation agriculture in sub-Saharan Africa: a systematic review (2019) | Wekesah, Frederick M., Mutua, Edna N., Izugbara, Chimaraoke O.
+- Gender and conservation agriculture in sub-Saharan Africa: a systematic review (2019) | Wekesah, Frederick M., Mutua, Edna N., Izugbara, Chimaraoke O.
+- Impact of Climate Change on Agricultural Total Factor Productivity Based on Spatial Panel Data Model: Evidence from China (2019) | Zhong, Zhangqi, Hu, Yiqin, Jiang, Lei
+- Impact of Climate Change on Agricultural Total Factor Productivity Based on Spatial Panel Data Model: Evidence from China (2019) | Zhong, Zhangqi, Hu, Yiqin, Jiang, Lei
+- On Promoting Policy-Science Dialogue for Adaptation Planning in Agricultural Sector (2019) | Fujisawa, Mariko, Kanamaru, Hideki
+- Soil and Crop Management Strategies to Ensure Higher Crop Productivity within Sustainable Environments (2019) | Shah, Farooq, Wu, Wei
+- Sustainable Agricultural Management Practices and Enterprise Development for Coping with Global Climate Change (2019) | Fakhrul Islam, S.M., Karim, Zahurul
+- Sustainable Agriculture and Climate Change (2019) | Xie, Liyong, Zhao, Hongliang
+- The Role of Land Use Consolidation in Improving Crop Yields among Farm Households in Rwanda (2019) | Nilsson, Pia
+- The Role of Land Use Consolidation in Improving Crop Yields among Farm Households in Rwanda (2019) | Nilsson, Pia
+- The impact of climate change on agriculture in Turkey and farmers’ ttitudes to climate change (2019) | Çaltı, Nuray, Somuncu, Mehmet
+- Üretimin su ayak izinin incelenmesi: Diyarbakır ili için bir vaka çalışması (2019) | Muratoğlu, Abdullah
+- A new agricultural drought index considering the irrigation water demand and water supply availability (2020) | Xing, Z., Ma, M., Wei, Y.
+- Agriculture, Landscape and Food Value Chain Transformation as Key Engines in Climate Change Mitigation: A Review of Some Low-Carbon Policy Options and Implementation Mechanisms (2020) | Bockel, Louis, Schiettecatte, Laure Sophie
+- COVID-19 risks to global food security (2020) | Laborde, David, Martin, Will, Swinnen, Johan
+- Changes in Climate Extremes in Central Asia under 1.5 and 2 °C Global Warming and their Impacts on Agricultural Productions (2020) | Liu, Yang, Geng, Xiu, Hao, Zhixin
+- Climate Change and the Distribution of Agricultural Output (2020) | Costa, Francisco, Forge, Fabien, Garred, Jason
+- Climate change and agricultural output in the ECOWAS region (2020) | Ogbuabor, Jonathan E., Orji, Anthony, Manasseh, Charles O.
+- Climate indicators for agriculture (2020) | Walsh, Margaret K., Backlund, Peter W., Buja, Lawrence
+- Climate-smart water technologies for sustainable agriculture: a review (2020) | Patle, G. T., Kumar, Mukesh, Khanna, Manoj
+- Drought Influences on Food Insecurity in Africa: A Systematic Literature Review (2020) | Ngcamu, Bethuel Sibongiseni, Chari, Felix
+- Drought influences on food insecurity in africa: A systematic literature review (2020) | Ngcamu, B.S., Chari, F.
+- Drought, Climate Change, and Dryland Wheat Yield Response: An Econometric Approach (2020) | Shayanmehr, Samira, Rastegari Henneberry, Shida, Sabouhi Sabouni, Mahmood
+- Drought, Climate Change, and Dryland Wheat Yield Response: An Econometric Approach (2020) | Shayanmehr, Samira, Rastegari Henneberry, Shida, Sabouhi Sabouni, Mahmood
+- Ecological Thinking and Agricultural Sustainability (2020) | Raman, Anantanarayanan
+- Effect of Climate Change on Agriculture (2020) | Al Jbawi, Entessar
+- Evaluating the role of renewable energy, economic growth and agriculture on CO <sub>2</sub> emission in E7 countries (2020) | Aydoğan, Berna, Vardar, Gülin
+- Exchange Rates Fluctuations and International Trade in a Mono-product Economy: Nigeria’s Experience, 1986-2018 (2020) | Kalu, Kalu, UKo, Mike, Anyanwaokoro,
+- Global Climate Change and Environmental Policy: Agriculture Perspectives (2020) | Unknown
+- Global climate change and environmental policy: agriculture perspectives (2020) | Venkatramanan, V, Shah, Shachi, Prasad, Ram
+- How Can Sustainable Agriculture Increase Climate Resilience? A Systematic Review (2020) | El Chami, Daniel, Daccache, André, El Moujabber, Maroun
+- How Can Sustainable Agriculture Increase Climate Resilience? A Systematic Review (2020) | El Chami, Daniel, Daccache, André, El Moujabber, Maroun
+- How Can Sustainable Agriculture Increase Climate Resilience? A Systematic Review (2020) | El Chami, Daniel, Daccache, André, El Moujabber, Maroun
+- How Could Sustainable Agriculture Increase Climate Resilience? A Systematic Review (2020) | El Chami, Daniel, Daccache, André, El Moujabber, Maroun
+- Impact of green water anomalies on global rainfed crop yields (2020) | Borgomeo, Edoardo, Khan, Hassaan F, Heino, Matias
+- Investigating the Nexus of Climate ChangeAnd Agricultural Production in Nigeria (2020) | Gershon, Obindah, Mbajekwe, Chinua
+- Resilience of Primary Food Production to a Changing Climate: On-Farm Responses to Water-Related Risks (2020) | Hess, Tim, Knox, Jerry, Holman, Ian
+- Short and long-run impacts of climate change on agriculture: an empirical evidence from China (2020) | Chandio, Abbas Ali, Jiang, Yuansheng, Rehman, Abdul
+- Short and long-run impacts of climate change on agriculture: an empirical evidence from China (2020) | Chandio, Abbas Ali, Jiang, Yuansheng, Rehman, Abdul
+- Sub-Saharan Africa’s Diverging Inequality Trends, 1991-2011: A Structuralist Interpretation: (2020) | Cornia, Giovanni Andrea
+- Sub-Saharan Africa’s Diverging Inequality Trends, 1991-2011: A Structuralist Interpretation: (2020) | Cornia, Giovanni Andrea
+- Sustainable Agriculture in the Era of Climate Change (2020) | Roychowdhury, Rajib, Choudhury, Shuvasish, Hasanuzzaman, Mirza
+- Sustainable Agriculture in the Era of Climate Change (2020) | Unknown
+- The Impact of Agricultural Trade Liberalization on Agricultural Total Factor Productivity Growth in Africa (2020) | Sunge, Regret, Ngepah, Nicholas
+- The Impact of Climate Change on Agriculture Sector in ASEAN (2020) | Nunti, Chonrada, Somboon, Kewalin, Intapan, Chanamart
+- The State of Food and Agriculture 2020 (2020) | Unknown
+- The economics of water scarcity and variability (2020) | Damania, Richard
+- The link between carbon emissions, agricultural output and industrial output: Evidence from south africa (2020) | Sibanda, Mabutho, Ndlela, Hlengiwe
+- World Food and Agriculture - Statistical Yearbook 2020 (2020) | Unknown
+- Acceleration of Digital Transformation in Agriculture Sector for Ensuring Sustainable Food Security (2021) | Comcec
+- Agriculture 4.0: Is Sub-Saharan Africa Ready? (2021) | Jellason, Nugun P., Robinson, Elizabeth J. Z., Ogbaga, Chukwuma C.
+- Agriculture 4.0: Is Sub-Saharan Africa Ready? (2021) | Jellason, Nugun P., Robinson, Elizabeth J. Z., Ogbaga, Chukwuma C.
+- Climate Change Could Affect Global Agriculture Within 10 Years (2021) | Unknown
+- Climate Change and Sustainability of Agriculture in Bangladesh (2021) | Khan, Nazmul Ahsan
+- Climate Change as a Global Challenge in Agricultural Economics (2021) | Zaloilo, Maxim V., Vlasova, Natalia V., Pashentsev, Dmitriy A.
+- Climate Smart Sustainable Agriculture: Integrated Steps Towards Resilient Farms (2021) | Loures, Luis, Ferreira, Paulo, Loures, Ana
+- Climate change and economics: engaging with future generations with action plans (2021) | Seo, Sungno Niggol
+- Climate-Smart Agriculture Practices for Mitigating Greenhouse Gas Emissions (2021) | Zaman, M., Kleineidam, K., Bakken, L.
+- District-level agricultural total factor productivity for the Karoo, South Africa: 1952–2002 (2021) | Conradie, Beatrice, Genis, Amelia, Greyling, Jan
+- Econometric Analysis of the Impact of Climate Change on the Sustainability of Agricultural Production in Ukraine (2021) | Skrypnyk, Andriy, Zhemoyda, Oleksandr, Klymenko, Nataliia
+- Evidence of Climate Change Coping and Adaptation Practices by Smallholder Farmers in Northern Ghana (2021) | Antwi-Agyei, Philip, Nyantakyi-Frimpong, Hanson
+- Food for All: International Organizations and the Transformation of Agriculture (2021) | Lele, Uma, Agarwal, Manmohan, Baldwin, Brian C.
+- Food for All: International Organizations and the Transformation of Agriculture (2021) | Lele, Uma, Agarwal, Manmohan, Baldwin, Brian C.
+- Impact of Climate Change on Agriculture and Its Mitigation Strategies: A Review (2021) | Malhi, Gurdeep Singh, Kaur, Manpreet, Kaushik, Prashant
+- Link between Technically Derived Energy Efficiency and Ecological Footprint: Empirical Evidence from the ASEAN Region (2021) | Khan, Dilawar, Nouman, Muhammad, Popp, József
+- NASA Scientific Visualization Studio | Impact of Climate Change on Global Wheat Yields (2021) | SVS
+- OECD-FAO Agricultural Outlook 2021-2030 (2021) | OECD, Food and Agriculture Organization of the United Nations
+- Protecting Half the Planet and Transforming Human Systems Are Complementary Goals (2021) | Crist, Eileen, Kopnina, Helen, Cafaro, Philip
+- Shocks, Resilience and Structural Transformation in Sub-Saharan Africa (2021) | Adelaja, Adesoji, George, Justin, Fox, Louise
+- Shocks, Resilience and Structural Transformation in Sub-Saharan Africa (2021) | Adelaja, Adesoji, George, Justin, Fox, Louise
+- Sustainable Agricultural Total Factor Productivity and Its Spatial Relationship with Urbanization in China (2021) | Li, Jinkai, Chen, Jueying, Liu, Heguang
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (2021) | Yurtkuran, Suleyman
+- Theoretical Underpinnings in Research Investigating Barriers for Implementing Environmentally Sustainable Farming Practices: Insights from a Systematic Literature Review (2021) | Anibaldi, Renata, Rundle-Thiele, Sharyn, David, Patricia
+- Theoretical Underpinnings in Research Investigating Barriers for Implementing Environmentally Sustainable Farming Practices: Insights from a Systematic Literature Review (2021) | Anibaldi, Renata, Rundle-Thiele, Sharyn, David, Patricia
+- Understanding the future of Koronivia Joint Work on Agriculture (2021) | Unknown
+- Vulnerability analysis of Nigeria's agricultural output growth and climate change (2021) | Adeosun, Oluyemi Theophilus, Asare-Nuamah, Peter, Mabe, Franklin Nantui
+- Agricultural Policy Monitoring and Evaluation 2022: Reforming Agricultural Policies for Climate Change Mitigation (2022) | OECD
+- Agricultural trade liberalisation, agricultural total factor productivity growth and food security in Africa (2022) | Sunge, Regret, Ngepah, Nicholas
+- Air pollution trajectories and life expectancy in Nigeria (2022) | Nwani, Stanley Emife
+- Air pollution trajectories and life expectancy in Nigeria (2022) | Nwani, Stanley Emife
+- Analysis Method of Agricultural Total Factor Productivity Based on Stochastic Block Model (SBM) and Machine Learning (2022) | Li, Yanzi, Chen, Cai, Liu, Fuqiang
+- Can Digitalization Levels Affect Agricultural Total Factor Productivity? Evidence From China (2022) | Fu, Wenqiang, Zhang, Rongwu
+- Climate Change and Food Security: Are Asian Economies Tracking Sustainable Development Goals? (2022) | Zahid, Fahmida, Hanif, Uzma, Javed, Faiza
+- Decent Employment and the Future of Agriculture. How Dominant Narratives Prevent Addressing Structural Issues (2022) | Losch, Bruno
+- Decent Employment and the Future of Agriculture. How Dominant Narratives Prevent Addressing Structural Issues (2022) | Losch, Bruno
+- Does Climate Change Affect the Yield of the Top Three Cereals and Food Security in the World? (2022) | Neupane, Dhurba, Adhikari, Pramila, Bhattarai, Dwarika
+- Econometric Approaches That Consider Farmers’ Adaptation in Estimating the Impacts of Climate Change on Agriculture: A Review (2022) | Su, Xun, Chen, Minpeng
+- Effects of climate change on agricultural sector in Turkey: ARDL bounds test approach (2022) | Necmettin Erbakan Universitesi, Uygulamali Bilimler Fakultesi, Uluslararasi Ticaret ve Finans Bolumu, Konya, Turkiye, Akcan, Ahmet Tayfun, Kurt, Unzule
+- Impacts of Climatic Variability on Agricultural Total Factor Productivity Growth in the Southern United States (2022) | Joshi, Kartik, Lachaud, Michée A., Solís, Daniel
+- Mitigating Low Agricultural Productivity of Smallholder Farms in Africa: Time-Series Forecasting for Environmental Stressors (2022) | Tabar, Maryam, Lee, Dongwon, Hughes, David P.
+- Mitigating Low Agricultural Productivity of Smallholder Farms in Africa: Time-Series Forecasting for Environmental Stressors (2022) | Tabar, Maryam, Lee, Dongwon, Hughes, David P.
+- Natural Resources, International Commodity Prices and Economic Performance in Sub-Saharan Africa (1990–2019) (2022) | Katoka, Ben, Dostal, Jörg Michael
+- Natural Resources, International Commodity Prices and Economic Performance in Sub-Saharan Africa (1990–2019) (2022) | Katoka, Ben, Dostal, Jörg Michael
+- OECD-FAO Agricultural Outlook 2022-2031 (2022) | OECD, Food and Agriculture Organization of the United Nations
+- Reducing Carbon Footprint of Agriculture—Can Organic Farming Help to Mitigate Climate Change? (2022) | Holka, Małgorzata, Kowalska, Jolanta, Jakubowska, Magdalena
+- Renewable energy technologies for energy efficient sustainable development (2022) | Sinharoy, Arindam, Lens, P. N. L
+- Research on the Policy Effect and Mechanism of Carbon Emission Trading on the Total Factor Productivity of Agricultural Enterprises (2022) | Hua, Junguo, Zhu, Di, Jia, Yunfei
+- Sustainable Agro-Food Systems for Addressing Climate Change and Food Security (2022) | Wijerathna-Yapa, Akila, Pathirana, Ranjith
+- The Economics of Climate Change in Agriculture (2022) | Kuriachen, Philip, Korekallu Srinivasa, Aditya, Sam, Anu Susan
+- The Economics of Climate Change in Agriculture (2022) | Kuriachen, Philip, Korekallu Srinivasa, Aditya, Sam, Anu Susan
+- The Impact of Climate Change on Agricultural Total Factor Productivity: A Cross-Country Panel Data Analysis, 1961–2013 (2022) | Xiang, Tao, Malik, Tariq H., Hou, Jack W.
+- The Impacts of Climate Change, Carbon Dioxide Emissions (CO2) and Renewable Energy Consumption on Agricultural Economic Growth in South Africa: ARDL Approach (2022) | Tagwi, Aluwani
+- The impacts of agricultural trade and support policy reform on climate change adaptation and environmental performance: A model-based analysis (2022) | Unknown
+- The importance of conserving crop wild relatives in preparing agriculture for climate change (2022) | Cockel, Christopher P., Guzzon, Filippo, Gianella, Maraeva
+- The role of climatic changes and financial development to the ASEAN agricultural output: a novel long-run evidence for sustainable production (2022) | Chandio, Abbas Ali, Abbas, Shujaat, Ozdemir, Dicle
+- Towards sustainable agriculture in SAARC countries: exploring the long-run impact of GHG emissions on agricultural productivity (2022) | Chandio, A. A., Gokmenoglu, K. K., Ahmad, F.
+- Towards sustainable agriculture in SAARC countries: exploring the long-run impact of GHG emissions on agricultural productivity (2022) | Chandio, A. A., Gokmenoglu, K. K., Ahmad, F.
+- Uncovering the Research Gaps to Alleviate the Negative Impacts of Climate Change on Food Security: A Review (2022) | Farooq, Muhammad Shahbaz, Uzair, Muhammad, Raza, Ali
+- What contribution of agroecology to job creation in sub-Saharan Africa? The case of horticulture in the Niayes, <i>Senegal</i> (2022) | Laske, Esther, Michel, Sandrine
+- What contribution of agroecology to job creation in sub-Saharan Africa? The case of horticulture in the Niayes, <i>Senegal</i> (2022) | Laske, Esther, Michel, Sandrine
+- World Food and Agriculture – Statistical Yearbook 2022 (2022) | FAO
+- 97% of Turkish Farmers Reported Diminishing Harvests and Yields Due to Climate Change-Related Impacts (2023) | Ergur, Semih
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Agricultural total factor productivity, digital economy and agricultural high-quality development (2023) | Gao, Dandan, Lyu, Xiaogang
+- Assessing the impact of digital financial inclusion on agricultural total factor productivity in China (2023) | Zhaia, Shixian, Peng, Chao, Sheng, Yu
+- CAP 2023-27 (2023) | Unknown
+- Climate change (2023) | European Union
+- Climate change and agriculture nexus in Bangladesh: Evidence from ARDL and ECM techniques (2023) | Ghosh, Bikash Chandra, Eyasmin, Farjana, Adeleye, Bosede Ngozi
+- Climate change impacts on crop yields (2023) | Rezaei, Ehsan Eyshi, Webber, Heidi, Asseng, Senthold
+- Climate change, agriculture and society: approaches toward sustainability (2023) | Unknown
+- Editorial:Ecological intensification and sustainable intensification: increasing benefits to and reducing impacts on the environment to improve future agricultural and food systems (2023) | Hoshide, Aaron Kinyu, Sarkar, Reshmi, Larkin, Robert
+- How does agricultural global value chain affect ecological footprint? The moderating role of environmental regulation (2023) | Xu, Yubing, Li, Cuixia, Wang, Jing
+- On-Farm Renewable Energy Systems: A Systematic Review (2023) | Pestisha, Albiona, Gabnai, Zoltán, Chalgynbayeva, Aidana
+- Structural change in Africa: role of agriculture (2023) | Grabowski, Richard, Self, Sharmistha
+- Structural change in Africa: role of agriculture (2023) | Grabowski, Richard, Self, Sharmistha
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis (2023) | Özdemir, Mehmet Gökhan
+- Sustainable Agriculture and Climate Resilience in Türkiye: A Comprehensive Analysis (2023) | Özdemir, Mehmet Gökhan
+- The impact of agroecosystem on ecological footprint: Fresh evidence in the perspective of existing agriculture and green Pakistan (2023) | Ullah, Arif, Salem, Sultan, Kang, Shijia
+- İklim Değişikliği Tarım Sektörünü Nasıl Etkiliyor? Türkiye Ekonomisi Üzerine Ekonometrik Bir Uygulama (2023) | Oğul, Bahar
+- İklim Değişikliğinin Gelişmişlik ve Bölgesel Farklılıklar Bağlamında Tarımsal Katma Değer Üzerine Etkisi: Akdeniz Ülkeleri Üzerine Bir Panel Veri Analizi (2023) | Erdi̇K, Sümeyye Şeyma, Temurlenk, Mehmet
+- Are the drivers of structural change different in Asia and Africa? (2024) | Grabowski, Richard, Self, Sharmistha
+- Are the drivers of structural change different in Asia and Africa? (2024) | Grabowski, Richard, Self, Sharmistha
+- Assess the Impact of Climate Change on Agricultural Productivity Using GES DISC Data on Temperature, Precipitation, and Drought Indices (2024) | Yu, Eugene G., Hegde, Mahabaleshwara S., Di, Liping
+- Assess the Impact of Climate Change on Agricultural Productivity Using GES DISC Data on Temperature, Precipitation, and Drought Indices (2024) | Yu, Eugene G., Hegde, Mahabaleshwara S., Di, Liping
+- Economic and environmental benefits of digital agricultural technologies in crop production: A review (2024) | Papadopoulos, George, Arduini, Simone, Uyar, Havva
+- Effects of climate change on plant pathogens and host-pathogen interactions (2024) | Lahlali, Rachid, Taoussi, Mohammed, Laasli, Salah-Eddine
+- Exploring the energy-climate-agriculture (ECA) nexus: a roadmap toward agricultural sustainability in Asian countries (2024) | Chandio, Abbas Ali, Gokmenoglu, Korhan K., Dash, Devi Prasad
+- Plant disease dynamics in a changing climate: impacts, molecular mechanisms, and climate-informed strategies for sustainable management (2024) | Hossain, Md. Motaher, Sultana, Farjana, Mostafa, Mahabuba
+- Structural transformation and poverty alleviation in Sub-Saharan Africa countries: sectoral value-added analysis (2024) | Enongene, Betrand Ewane
+- Structural transformation and poverty alleviation in Sub-Saharan Africa countries: sectoral value-added analysis (2024) | Enongene, Betrand Ewane
+- Turkey - Agriculture (2024) | Turkey Country Commercial Guide
+- A Review of Smart Crop Technologies for Resource Constrained Environments: Leveraging Multimodal Data Fusion, Edge-to-Cloud Computing, and IoT Virtualization (2025) | Olatinwo, Damilola D., Myburgh, Herman C., De Freitas, Allan
+- A Review of Smart Crop Technologies for Resource Constrained Environments: Leveraging Multimodal Data Fusion, Edge-to-Cloud Computing, and IoT Virtualization (2025) | Olatinwo, Damilola D., Myburgh, Herman C., De Freitas, Allan
+- Agricultural Productivity‐Driven Renewable Energy Adoption and Mechanisms in Developing Economies: A Double Machine Learning Approach (2025) | Xi, Jiancheng, Boateng, Seth Acquah, Agyei, Kelvin Dankwah
+- Agricultural Productivity‐Driven Renewable Energy Adoption and Mechanisms in Developing Economies: A Double Machine Learning Approach (2025) | Xi, Jiancheng, Boateng, Seth Acquah, Agyei, Kelvin Dankwah
+- Agriculture and Horticulture (2025) | ClimateChangePost
+- Challenges in Sub-Saharan Africa’s Food Systems and the Potential Role of AI (2025) | Chavula, Petros, Kayusi, Fredrick
+- Challenges in Sub-Saharan Africa’s Food Systems and the Potential Role of AI (2025) | Chavula, Petros, Kayusi, Fredrick
+- Climate change threatens crop diversity at low latitudes (2025) | Heikonen, Sara, Heino, Matias, Jalava, Mika
+- Determinants of agricultural exports in Somalia: the impacts of exchange rates, foreign direct investment, and institutional quality (2025) | Abdi, Abdikafi Hassan, Mohamed, Amir Mohamud
+- Enhancing Food Security With High-Quality Land-Use and Land-Cover Maps: A Local Model Approach (2025) | Tadesse, Girmaw Abebe, Robinson, Caleb, Mwangi, Charles
+- Enhancing Food Security With High-Quality Land-Use and Land-Cover Maps: A Local Model Approach (2025) | Tadesse, Girmaw Abebe, Robinson, Caleb, Mwangi, Charles
+- Fine-scale mapping of irrigation suitability in South Africa using ensemble modelling (2025) | Mpakairi, Kudzai S., Dube, Timothy, Sibanda, Mbulisi
+- Fine-scale mapping of irrigation suitability in South Africa using ensemble modelling (2025) | Mpakairi, Kudzai S., Dube, Timothy, Sibanda, Mbulisi
+- Impacts of climate change on global agriculture accounting for adaptation (2025) | Hultgren, Andrew, Carleton, Tamma, Delgado, Michael
+- Prospects for cereal self-sufficiency in sub-Saharan Africa (2025) | Van Ittersum, Martin K., Alimagham, Seyyedmajid, Silva, João Vasco
+- Prospects for cereal self-sufficiency in sub-Saharan Africa (2025) | Van Ittersum, Martin K., Alimagham, Seyyedmajid, Silva, João Vasco
+- Role of Agriculture in Green  Transition in Türkiye (2025) | Karakoç, Ulaş, Yeldan, Alp Erinç
+- Sub-Saharan Africa’s development pattern (2025) | Grabowski, Richard, Self, Sharmistha
+- Sub-Saharan Africa’s development pattern (2025) | Grabowski, Richard, Self, Sharmistha
+- The Extractive Resource Curse Revisited: Absolute Versus Relative De‐Industrialization in Africa (2025) | Goujon, Michaël, Mien, Edouard
+- The Extractive Resource Curse Revisited: Absolute Versus Relative De‐Industrialization in Africa (2025) | Goujon, Michaël, Mien, Edouard
+- When crops fail, forests follow: Agricultural shocks and deforestation in Zambia (2025) | Ordóñez, Pablo J., Hadunka, Protensia, Del Rossi, Gemma
+- When crops fail, forests follow: Agricultural shocks and deforestation in Zambia (2025) | Ordóñez, Pablo J., Hadunka, Protensia, Del Rossi, Gemma
+- When crops fail, forests follow: Agricultural shocks and deforestation in Zambia (2025) | Ordóñez, Pablo J., Hadunka, Protensia, Del Rossi, Gemma
+- When crops fail, forests follow: Agricultural shocks and deforestation in Zambia (2025) | Ordóñez, Pablo J., Hadunka, Protensia, Del Rossi, Gemma
+- Chapter 3 - The role of artificial intelligence in developing climate-resilient and smart agriculture (2026) | Tripathy, Simile, Das, Sheetal, Mahapatra, Sibasis
+- Agricultural intensification, irrigation and the environment in South Asia: Issues and policy options (3/20) | Alauddin, Mohammad, Quiggin, John
+- Farm-level Autonomous Adaptation of European Agricultural Supply to Climate Change (3/20) | Leclère, David, Jayet, Pierre-Alain, de Noblet-Ducoudré, Nathalie
+- Farmer responses to climate change and sustainable agriculture. A review (3/20) | Fleming, Aysha, Vanclay, Frank
+- Climate change, irrigation, and Israeli agriculture: Will warming be harmful? (4/20) | Fleischer, Aliza, Lichtman, Ivgenia, Mendelsohn, Robert
+- Climate change and agriculture: A perspective on priorities for economic policy (5/19) | Mount, Timothy D.
+- Future scenarios of European agricultural land use (5/20) | Ewert, F., Rounsevell, M.D.A., Reginster, I.
+- Future scenarios of European agricultural land use (5/20) | Rounsevell, M.D.A., Ewert, F., Reginster, I.
+- Effects of slash-and-burn agriculture and deforestation on climate change (6/19) | Tinker, P.Bernard, Ingram, John S.I., Struwe, Sten
+- Climate change and variability in Sub-Saharan Africa: a review of current and future trends and impacts on agriculture and food security (6/20) | Kotir, Julius H.
+- Climate change and variability in Sub-Saharan Africa: a review of current and future trends and impacts on agriculture and food security (6/20) | Kotir, Julius H.
+- The relationship between carbon dioxide and agriculture in Ghana: a comparison of VECM and ARDL model (6/20) | Asumadu-Sarkodie, Samuel, Owusu, Phebe Asantewaa
+- The relationship between carbon dioxide and agriculture in Ghana: a comparison of VECM and ARDL model (6/20) | Asumadu-Sarkodie, Samuel, Owusu, Phebe Asantewaa
+- Mitigating economic risk from climate variability in rain-fed agriculture through enterprise mix diversification (7/20) | Kandulu, John M., Bryan, Brett A., King, Darran
+- Impact of soil and water conservation practices on household vulnerability to food insecurity in eastern Ethiopia: endogenous switching regression and propensity score matching approach (8/20) | Sileshi, Million, Kadigi, Reuben, Mutabazi, Khamaldin
+- Impact of soil and water conservation practices on household vulnerability to food insecurity in eastern Ethiopia: endogenous switching regression and propensity score matching approach (8/20) | Sileshi, Million, Kadigi, Reuben, Mutabazi, Khamaldin
+- Turning electricity into food: the role of renewable energy in the future of agriculture (8/20) | Bardi, Ugo, El Asmar, Toufic, Lavacchi, Alessandro
+- The concept of agricultural sustainability (9/19) | Schaller, Neill

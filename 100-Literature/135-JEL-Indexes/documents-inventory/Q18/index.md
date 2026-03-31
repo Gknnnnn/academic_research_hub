@@ -1,0 +1,94 @@
+---
+type: documents-jel-index
+code: Q18
+item_count: 86
+---
+
+# Documents - Q18
+
+- citaviii/Renewable/Renev/files/1181/Sweileh_2020_Bibliometric analysis of peer-reviewed literature on food security in the.pdf | secondary: Q10, O13 | evidence: food
+- citaviii/Renewable/Renev/files/1190/Ngcamu_Chari_2020_Drought Influences on Food Insecurity in Africa.pdf | secondary: Q10, O13 | evidence: food
+- citaviii/Renewable/Renev/files/734/Food Secutity.pdf | secondary: Q10, O13 | evidence: food
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/734/Food Secutity.pdf | secondary: Q10, O13 | evidence: food
+- citaviii/Renewable/Renewable Energy/files/3077/Bardi et al. - 2013 - Turning electricity into food the role of renewab.pdf | secondary: Q10, O13 | evidence: food
+- COVID19-Disruptions-of-Food-Systems-and-Nutrition-Services-in-Ethiopia-Evidence-of-the-Impacts-and-Policy-Responses_2023_Ubiquity-Press.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Agrobiodiversity-for-food-security-health-and-income_2013_SpringerVerlag-France.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Crops-that-feed-the-world-Production-and-improvement-of-cassava-for-food-feed-and-industrial-uses_2017_Springer-Netherlands.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Food-Security-and-the-Dynamics-of-Wheat-and-Maize-Value-Chains-in-Africa-and-Asia_2021_Frontiers-Media-SA.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Food-security_2022_Cambridge-University-Press.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Global-food-demand-scenarios-for-the-21st-century_2015_Public-Library-of-Science.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Lessons-From-the-Aftermaths-of-Green-Revolution-on-Food-System-and-Health_2021_Frontiers-Media-SA.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Manufacturing-epidemics-The-role-of-global-producers-in-increased-consumption-of-unhealthy-commodities-including-processed-foods-alcohol-and-tobacco_2012_.pdf | secondary: Q10, O13 | evidence: food
+- EKC/Resilience-of-local-food-systems-and-links-to-food-security--A-review-of-some-important-concepts-in-the-context-of-COVID19-and-other-shocks_2020_Springer-editorialspringerpluscom.pdf | secondary: Q10, O13 | evidence: food
+- Enabling-trade-across-borders-and-food-security-in-Africa_2020_Springer-Science-and-Business-Media-BV-editorialspringerpluscom.pdf | secondary: Q10, O13 | evidence: food
+- food inflation research papers.xlsx | secondary: Q10, O13 | evidence: food
+- Food inflation/1-s2.0-S0264999318310265-main.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/1-s2.0-S0304387813000710-main (1).pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/1-s2.0-S0306919219306384-main.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/10.1.1.1079.473.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/25664159.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/AMIS-World-Maize-20220810103226.csv | secondary: Q10, O13 | evidence: food
+- Food inflation/Br-alim-A4-an.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/cb9427en.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/cc0868en.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/d5918cca-en.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/Document1672011310.3885004.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/Esterik1999_Article_RightToFoodRightToFeedRightToB.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/Food-Security-Update-LXVII-July-29-2022 copy.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/Francis Adams - The Right to Food_ The Global Campaign to End Hunger and Malnutrition-Springer International Publishing_Palgrave Macmillan (2021).pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/j.ctt1sq5vtd.13.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/j.ctv2gjwwnw.38.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/Right_to_food_food_security_and_food_sovereignty-sup.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/s43093-022-00127-7.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/SSRN-id1318130.pdf | secondary: Q10, O13 | evidence: food
+- Food inflation/world_tariff_profiles22_e.pdf | secondary: Q10, O13 | evidence: food
+- Food-Security-and-Plant-Variety-Protection-Seeding-Hope-for-the-African-Continental-Free-Trade-Area_2025_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf | secondary: Q10, O13 | evidence: food
+- Food_Security_Data_E_All_Data_(Normalized)/Food_Security_Data_E_All_Data_(Normalized).csv | secondary: Q10, O13 | evidence: food
+- Food_Security_Data_E_All_Data_(Normalized)/Food_Security_Data_E_AreaCodes.csv | secondary: Q10, O13 | evidence: food
+- Food_Security_Data_E_All_Data_(Normalized)/Food_Security_Data_E_Elements.csv | secondary: Q10, O13 | evidence: food
+- Food_Security_Data_E_All_Data_(Normalized)/Food_Security_Data_E_Flags.csv | secondary: Q10, O13 | evidence: food
+- Food_Security_Data_E_All_Data_(Normalized)/Food_Security_Data_E_ItemCodes.csv | secondary: Q10, O13 | evidence: food
+- FoodBalanceSheets_E_All_Data_(Normalized)/fao_fbs.csv.csv | secondary: Q10, O13 | evidence: food
+- FoodBalanceSheets_E_All_Data_(Normalized)/FoodBalanceSheets_E_AreaCodes.csv | secondary: Q10, O13 | evidence: food
+- FoodBalanceSheets_E_All_Data_(Normalized)/FoodBalanceSheets_E_Elements.csv | secondary: Q10, O13 | evidence: food
+- FoodBalanceSheets_E_All_Data_(Normalized)/FoodBalanceSheets_E_Flags.csv | secondary: Q10, O13 | evidence: food
+- FoodBalanceSheets_E_All_Data_(Normalized)/FoodBalanceSheets_E_ItemCodes.csv | secondary: Q10, O13 | evidence: food
+- Impact-of-trade-cost-on-ChinaEU-agrifood-trade_2018_Routledge-infotandfcouk.pdf | secondary: Q10, O13 | evidence: food
+- Informal-CrossBorder-Traders-and-Food-Trade-during-the-Global-Pandemic-in-Zimbabwe_2024_University-of-the-Western-Cape.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/1181/Sweileh_2020_Bibliometric analysis of peer-reviewed literature on food security in the.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/1190/Ngcamu_Chari_2020_Drought Influences on Food Insecurity in Africa.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3077/Bardi et al. - 2013 - Turning electricity into food the role of renewab.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3774/Samal et al_2022_The impact of macroeconomic factors on food price inflation.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3782/Durevall et al_2013_Inflation dynamics and food prices in Ethiopia.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3789/Dessus et al_2008_The impact of food inflation on urban poverty and its monetary cost.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3801/Cachia - 2017 - Regional Food Price Inflation Transmission.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3806/2022 - Crop Prospects and Food Situation #2, July 2022.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3811/Dowler and O’Connor - 2012 - Rights-based approaches to addressing food poverty.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3813/D’Odorico et al. - 2019 - Food Inequality, Injustice, and Rights.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3819/Godfray et al_2010_Food Security.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3862/Vivero Pol and Schuftan - 2016 - No right to food and nutrition in the SDGs mistak.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3864/Jakobsen - 2019 - Neoliberalising the food regime ‘amongst its other.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3872/Hossain and te Lintelo - 2018 - A Common Sense Approach to the Right to Food.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3874/Adams - 2021 - The right to food the global campaign to end hung.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3987/Béné_2020_Resilience of local food systems and links to food security – A review of some.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/3997/Savary et al. - 2022 - Revisiting food security in 2021 an overview of t.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4001/Zurek et al. - 2022 - Food System Resilience Concepts, Issues, and Chal.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4484/Loboguerrero et al_2019_Food and Earth Systems.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4534/Dijk et al_2021_Systematic review and meta-analysis of global food security projections to 2050.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4538/Baldos_Hertel_2014_Global food security in 2050.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4544/Godfray et al_2010_Food Security.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4546/Gazdar_Mallah_2013_Inflation and Food Security in Pakistan.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4724/Koondhar et al. - 2021 - Green growth of cereal food production under the c.pdf | secondary: Q10, O13 | evidence: food
+- My Library/files/4795/Salihoglu et al. - 2018 - Food loss and waste management in Turkey.pdf | secondary: Q10, O13 | evidence: food
+- New-directions-of-trade-for-the-agrifood-industry-A-disaggregated-approach-for-different-income-countries-19632000_2014_Springer-Science-and-Business-Media-Deutschland-GmbH-infospringersbmcom.pdf | secondary: Q10, O13 | evidence: food
+- New-evidence-in-the-relationship-between-trade-openness-and-food-security-in-SubSaharan-Africa_2023_BioMed-Central-Ltd.pdf | secondary: Q10, O13 | evidence: food
+- Regional-Water-and-Food-Security-Require-Joint-IsraeliPalestinian-Guidelines-for-Wastewater-Reuse-and-Food-Safety_2024_SAGE-Publications-Inc.pdf | secondary: Q10, O13 | evidence: food
+- The-impact-of-production-shocks-on-maize-markets-in-Ethiopia-implications-for-regional-trade-and-food-security_2020_Springer.pdf | secondary: Q10, O13 | evidence: food
+- The-role-of-distance-in-global-agrifood-trade_2021_Hungarian-Central-Statistical-Office.pdf | secondary: Q10, O13 | evidence: food
+- The-threat-of-alien-invasive-insect-and-mite-species-to-food-security-in-Africa-and-the-need-for-a-continentwide-response_2019_Springer-Science-and-Business-Media-BV.pdf | secondary: Q10, O13 | evidence: food
+- Urban-food-security-at-the-crossroads-between-metropolitan-food-planning-and-global-trade-the-case-of-the-AntwerpRotterdamDsseldorf-region_2017_Taylor-and-Francis-Inc-325-Chestnut-St-Suite-800-Philadelphia-PA-19106.pdf | secondary: Q10, O13 | evidence: food
+- When-borders-close-Social-networks-resilience-and-food-security-among-informal-crossborder-fish-traders-on-the-GhanaTogo-border_2024_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf | secondary: Q10, O13 | evidence: food
+- YSA_GA_MGO/Challenges-in-SubSaharan-Africas-Food-Systems-and-the-Potential-Role-of-AI_2025_AG-Editor-Uruguay.pdf | secondary: Q10, O13 | evidence: food
+- YSA_GA_MGO/Enhancing_Food_Security_With_High-Quality_Land-Use_and_Land-Cover_Maps_A_Local_Model_Approach.pdf | secondary: Q10, O13 | evidence: food
+- YSA_GA_MGO/Food and Energy Security - 2025 - Shang - Reassessing Food Security  How a Data‐Efficient 4As Framework and Machine.pdf | secondary: Q10, O13 | evidence: food
+- YSA_GA_MGO/Impact-of-soil-and-water-conservation-practices-on-household-vulnerability-to-food-insecurity-in-eastern-Ethiopia-endogenous-switching-regression-and-propensity-score-matching-approach_2019_Springer-Netherlands-rbklouisianaedu.pdf | secondary: Q10, O13 | evidence: food

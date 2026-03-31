@@ -1,0 +1,71 @@
+---
+type: jel-code-index
+code: Q43
+family: Q
+item_count: 62
+---
+
+# Q43
+
+- Energy Efficiency Statistics 2019 (n.d.) | Republic of Turkey Ministry of Energy and Natural Resources.
+- Investigating the subsistence of Environmental Kuznets Curve in the midst of economic development, population, and energy consumption in Bangladesh: imminent of ARDL model | Elsevier Enhanced Reader (n.d.) | Unknown
+- Renewable and non-renewable energy consumption, economic complexity, CO2 emissions, and ecological footprint in the USA: testing the EKC hypothesis with a structural break (01/2) | Pata, Ugur Korkut
+- Renewable, non-renewable energy consumption, economic growth, trade openness and ecological footprint: Evidence from organisation for economic Co-operation and development countries (01/2) | Destek, Mehmet Akif, Sinha, Avik
+- Innovation, Energy Consumption and Trade Dynamic: Evidence from Developed and Developing Countries (03/2) | Asghar, Muhammad, Chaudhry, Imran Sharif, Ali, Sharafat
+- Investigating Export Determinants: A Time Series Evidence From Canada (04/2) | Hassan, Muhammad Shahid, Kausar, Amna, Arshed, Noman
+- Modeling of energy consumption and environmental life cycle assessment for incineration and landfill systems of municipal solid waste management - A case study in Tehran Metropolis of Iran (04/2) | Nabavi-Pelesaraei, Ashkan, Bayat, Reza, Hosseinzadeh-Bandbafha, Homa
+- Renewable energy consumption in economic sectors in the EU-27. The impact on economics, environment and conventional energy sources. A 20-year perspective (04/2) | Tutak, Magdalena, Brodny, Jarosław
+- Renewable energy consumption-economic growth nexus in emerging countries: A bootstrap panel causality test (04/2) | Ozcan, Burcu, Ozturk, Ilhan
+- The environmental Kuznets curve hypothesis for Bangladesh: the importance of natural gas, liquefied petroleum gas, and hydropower consumption (04/2) | Murshed, Muntasir, Alam, Risana, Ansarin, Adiba
+- Towards a sustainable environment: The nexus between ISO 14001, renewable energy consumption, access to electricity, agriculture and CO2 emissions in SAARC countries (04/2) | Ikram, Muhammad, Zhang, Qingyu, Sroufe, Robert
+- Carbon emissions, energy consumption and economic growth: Evidence from the agricultural sector of China's main grain-producing areas (05/2) | Zhang, Lu, Pang, Jiaxing, Chen, Xingpeng
+- Do public environmental concerns promote new energy enterprises' development? Evidence from a quasi-natural experiment (05/2) | Gu, Yan, Ho, Kung-Cheng, Xia, Senmao
+- Macroeconomic outcomes of OPEC and non-OPEC oil supply shocks in the euro area (05/2) | Cai, Yifei, Zhang, Dongna, Chang, Tsangyao
+- The role of energy consumption in global carbon intensity change: A meta-frontier-based production-theoretical decomposition analysis (05/2) | Liu, Xiao, Hang, Ye, Wang, Qunwei
+- China’s government spending and global inflation dynamics: The role of the oil price channel (06/2) | Zhang, Wen
+- Climate change caused by renewable and non-renewable energy consumption and economic growth: A time series ARDL analysis for Turkey (06/2) | Acaroğlu, Hakan, Güllü, Mustafa
+- Oil discoveries and innovation (06/2) | Mhuru, Raviro Mercy, Daglish, Toby, Geng, Heng
+- Revisiting the role of renewable and non-renewable energy consumption on Turkey’s ecological footprint: Evidence from Quantile ARDL approach (06/2) | Sharif, Arshian, Baris-Tuzemen, Ozge, Uzuner, Gizem
+- Achieving ecological sustainability through technological innovations, financial development, foreign direct investment, and energy consumption in developing European countries (07/2) | Wang, Rong, Usman, Muhammad, Radulescu, Magdalena
+- Energy efficiency and environmental regulations for mitigating carbon emissions in Chinese Provinces (08/2) | Radulescu, Magdalena, Cifuentes-Faura, Javier, Si Mohammed, Kamel
+- Research on the dynamic relationship between China's renewable energy consumption and carbon emissions based on ARDL model (08/2) | Wang, Liping
+- The economics of climate change with endogenous preferences (08/2) | Mattauch, Linus, Hepburn, Cameron, Spuler, Fiona
+- Dynamics of renewable energy consumption and economic activities across the agriculture, industry, and service sectors: evidence in the perspective of sustainable development (1/20) | Paramati, Sudharshan Reddy, Apergis, Nicholas, Ummalla, Mallesh
+- Global value chain participation and CO2 emissions: Does economic growth matter? New evidence from dynamic panel threshold regression (10/2) | Jithin, P., Ashraf, Sania
+- Towards long-term sustainable environment: does agriculture and renewable energy consumption matter? (10/2) | Chandio, Abbas Ali, Akram, Waqar, Ozturk, Ilhan
+- The path to sustainable municipal solid waste management: Do human development, energy efficiency, and income inequality matter? (12/2) | Kocak, Emrah, Baglitas, Hayriye Hilal
+- Renewable energy resources (2006) | Twidell, John, Weir, Anthony D.
+- Renewable energy: technology, economics, and environment (2007) | Unknown
+- Biofuels: global impact on renewable energy, production agriculture and technological advancements (2011) | Unknown
+- The New Energy Crisis Climate, Economics and Geopolitics (2013) | Chevalier, Jean-Marie, Geoffron, Patrice
+- The next economics: global cases in energy, environment, and climate change (2013) | Unknown
+- Bridging the Energy Efficiency Gap: Policy Insights from Economic Theory and Empirical Evidence (2014) | Gillingham, Kenneth, Palmer, Karen
+- Climate Change and Energy Supply and Use (2014) | Wilbanks, Thomas J., Wilbanks, Thomas J.
+- Adaptation, Climate Change, Agriculture, and Water (2016) | Mendelsohn, Robert
+- Climate change: a wicked problem: complexity and uncertainty at the intersection of science, economics, politics and human behavior (2016) | Incropera, Frank P.
+- Role of Institutions, Infrastructures, and Technologies in Meeting Global Agricultural Water Challenge (2016) | Saleth, Rathinasamy Maria, Bassi, Nitin, Kumar, M. Dinesh
+- Sustainability assessment of renewables-based products: methods and case studies (2016) | Unknown
+- The Evaluation of Cereal Farms Using Ecological Footprint Method (2016) | Biekša, Kęstutis
+- Complex Systems and Social Practices in Energy Transitions: Framing Energy Sustainability in the Time of Renewables (2017) | Unknown
+- Renewable energy consumption and agriculture: evidence for cointegration and Granger causality for Tunisian economy (2017) | Ben Jebli, Mehdi, Ben Youssef, Slim
+- The Geopolitics of Renewables (2018) | Unknown
+- Renewables for Energy Access and Sustainable Development in East Africa (2019) | Hafner, Manfred, Falchetta, Giacomo, Occhiali, Giovanni
+- The Integrated Approach to Sustainable Development: The Case of Energy Efficiency and Solid Waste Management (2019) | Vertakova, Yulia V., Plotnikov, Vladimir A.
+- The economics of renewable energy in the Gulf (2019) | Unknown
+- IMPLEMENTATION OF SUSTAINABLE DEVELOPMENT GOALS TO MAKASSAR ZERO WASTE AND ENERGY SOURCE (2020) | Saleh, Haeruddin, Surya, Batara, Hamsina, H.
+- Investigating the Nexus of Climate ChangeAnd Agricultural Production in Nigeria (2020) | Gershon, Obindah, Mbajekwe, Chinua
+- Short and long-run impacts of climate change on agriculture: an empirical evidence from China (2020) | Chandio, Abbas Ali, Jiang, Yuansheng, Rehman, Abdul
+- Short and long-run impacts of climate change on agriculture: an empirical evidence from China (2020) | Chandio, Abbas Ali, Jiang, Yuansheng, Rehman, Abdul
+- Economic complexity–carbonization nexus in the European Union: A heterogeneous panel data analysis (2022) | Demiral, Mehmet, Akça, Emrah Eray
+- Effects of Digitalization on Natural Resource Use in European Countries: Does Economic Complexity Matter? (2022) | Mai, Ngô Thanh, Ha, Le Thanh, Hoa, Trần Thi Mai
+- Fundamentals of renewable energy processes (2022) | Da Rosa, Aldo Vieira, Ordóñez, Juan Carlos
+- Handbook of research on energy and environmental finance 4.0 (2022) | Unknown
+- How Food and Energy are Driving the Global Inflation Surge (2022) | Unknown
+- Is product proximity a driver for better energy security? Global evidence of nonlinear relationships between product proximity and energy security (2022) | Le, Thanh Ha, Hoang, Phuong Dung, To, Trung Thanh
+- Role of Financial Development, Green Technology Innovation, and Macroeconomic Dynamics Toward Carbon Emissions in China: Analysis Based on Bootstrap ARDL Approach (2022) | Yang, Jiayu, Sun, Yunpeng, Sun, Huaping
+- A Systematic Review on Nexus Between Green Finance and Climate Change: Evidence from China and India (2023) | Shah, Shangram Bahadur, Sopin, Jirakiattikul, Techato, Kua-Anan
+- Examining the Relationship between Economic Growth, Financial Development, and Carbon Emissions: A Review of the Literature and Scientometric Analysis (2023) | Kayani, Umar Nawaz, Sadiq, Misbah, Rabbani, Mustafa Raza
+- Going green: understanding the impacts of economic complexity, clean energy and natural resources on ecological footprint in complex economies (2023) | Abbas, Shujaat, Ghosh, Sudeshna, Sucharita, Sanhita
+- Briefing: Stocktaking global warming: the outcomes of the 2023 Dubai Climate Summit (COP28) (2024) | Darby, Sarah J., Hammond, Geoffrey P., Wu, Jianzhong
+- Discount rates, equity weights and the social cost of carbon (5/20) | Hope, Chris
+- Review on carbon emissions, energy consumption and low-carbon economy in China from a perspective of global climate change (7/20) | Shen, Lei, Sun, Yanzhi

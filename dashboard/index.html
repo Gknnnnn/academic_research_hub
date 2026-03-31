@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akademik Karargah | Dr. Mehmet Gökhan Özdemir</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="glass-container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-microchip"></i> Akademik Karargah</h1>
+                <p>Q1 Araştırma ve Otomasyon Dashboard</p>
+            </div>
+            <div id="system-status" class="status-badge">
+                <span class="pulse"></span> Sistem Çevrimiçi
+            </div>
+        </header>
+
+        <!-- The Silsile (Workflow) -->
+        <section class="workflow-section">
+            <h2><i class="fas fa-project-diagram"></i> Araştırma Silsilesi</h2>
+            <div class="silsile-container">
+                <div class="node" id="node-pop">
+                    <i class="fas fa-search"></i>
+                    <span>Discovery (PoP)</span>
+                </div>
+                <div class="connector"></div>
+                <div class="node" id="node-zotero">
+                    <i class="fas fa-book"></i>
+                    <span>Collection (Zotero)</span>
+                </div>
+                <div class="connector"></div>
+                <div class="node active" id="node-brain">
+                    <i class="fas fa-brain"></i>
+                    <span>Intelligence (RAG)</span>
+                </div>
+                <div class="connector"></div>
+                <div class="node" id="node-obsidian">
+                    <i class="fas fa-edit"></i>
+                    <span>Synthesis (Obsidian)</span>
+                </div>
+                <div class="connector"></div>
+                <div class="node" id="node-manuscript">
+                    <i class="fas fa-file-alt"></i>
+                    <span>Q1 Manuscript</span>
+                </div>
+            </div>
+        </section>
+
+        <main class="grid-layout">
+            <!-- Left: Chat Interface -->
+            <section class="card chat-card">
+                <h3><i class="fas fa-comments"></i> Kaynaklarla Sohbet</h3>
+                <div id="chat-box" class="chat-box">
+                    <div class="msg bot">Akademik kütüphaneniz hazır. Hangi makale veya teori üzerine derinleşelim hocam?</div>
+                </div>
+                <div class="chat-input-area">
+                    <input type="text" id="chat-input" placeholder="Sorgunuzu buraya yazın (Örn: EKC Hipotezi ve Türkiye)...">
+                    <button onclick="sendQuery()"><i class="fas fa-paper-plane"></i></button>
+                </div>
+            </section>
+
+            <!-- Right: Automation Hub -->
+            <section class="card automation-card">
+                <h3><i class="fas fa-cogs"></i> Otomasyon Merkezi</h3>
+                <div class="btn-group">
+                    <button class="btn" onclick="runTask('zotero_sync')">
+                        <i class="fas fa-sync"></i> Zotero & RAG Senkr.
+                    </button>
+                    <button class="btn" onclick="runTask('pdf_cleanup')">
+                        <i class="fas fa-broom"></i> PDF Temizlik & Düzen
+                    </button>
+                    <button class="btn btn-secondary" onclick="runTask('onedrive_sync')">
+                        <i class="fas fa-cloud-upload-alt"></i> OneDrive Bulut Senkr.
+                    </button>
+                    <button class="btn btn-primary" onclick="generateReport()" id="report-btn">
+                        <i class="fas fa-file-invoice"></i> Tam Rapor Oluştur (Ollama)
+                    </button>
+                </div>
+
+                <div class="tracker-links">
+                    <h3><i class="fas fa-globe"></i> Literatür Takip</h3>
+                    <div class="link-grid">
+                        <a href="https://annas-archive.org" target="_blank" class="track-link">Anna's Library</a>
+                        <a href="https://www.scopus.com" target="_blank" class="track-link">Scopus</a>
+                        <a href="https://scholar.google.com" target="_blank" class="track-link">Google Scholar</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        async function sendQuery() {
+            const input = document.getElementById('chat-input');
+            const chatBox = document.getElementById('chat-box');
+            const query = input.value;
+            if (!query) return;
+
+            // Add user message
+            chatBox.innerHTML += `<div class="msg user">${query}</div>`;
+            input.value = '';
+
+            try {
+                const response = await fetch('/query', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({query: query, mode: 'hybrid'})
+                });
+                const data = await response.json();
+                chatBox.innerHTML += `<div class="msg bot">${data.response || data.message}</div>`;
+                chatBox.scrollTop = chatBox.scrollHeight;
+            } catch (e) {
+                chatBox.innerHTML += `<div class="msg bot error">Hata: Sunucuya erişilemedi.</div>`;
+            }
+        }
+
+        async function runTask(task) {
+            alert(`${task} işlemi başlatıldı...`);
+            const response = await fetch(`/automation/${task}`, {method: 'POST'});
+            const data = await response.json();
+            console.log(data);
+        }
+
+        async function generateReport() {
+            const btn = document.getElementById('report-btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Rapor Oluşturuluyor...';
+            btn.disabled = true;
+
+            try {
+                const response = await fetch('/report/generate', {method: 'POST'});
+                const data = await response.json();
+                if (data.status === 'success') {
+                    alert(`Rapor başarıyla oluşturuldu: ${data.file}\nKullanılan veri: ${data.summary_used}`);
+                } else {
+                    alert(`Hata: ${data.message}`);
+                }
+            } catch (e) {
+                alert('Sunucu hatası veya zaman aşımı. Ollama modelinin (deepseek-r1:7b) yüklendiğinden ve Ollama servisinin çalıştığından emin olun.');
+            } finally {
+                btn.innerHTML = originalText;
+                btn.disabled = false;
+            }
+        }
+
+        // Live Status Update
+        setInterval(async () => {
+            try {
+                const res = await fetch('/system/status');
+                const data = await res.json();
+                const badge = document.getElementById('system-status');
+                if (data.status === 'online') {
+                    const ollamaStatus = data.apis.ollama_local === 'online' 
+                        ? '<span class="status-indicator online"></span> Ollama Hazır' 
+                        : '<span class="status-indicator offline"></span> Ollama Çevrimdışı';
+                    
+                    badge.innerHTML = `<span class="pulse"></span> Sistem Aktif | ${ollamaStatus}`;
+                    badge.className = 'status-badge online';
+                }
+            } catch (e) {
+                const badge = document.getElementById('system-status');
+                badge.innerHTML = '● Sistem Çevrimdışı';
+                badge.className = 'status-badge offline';
+            }
+        }, 5000);
+    </script>
+</body>
+</html>

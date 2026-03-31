@@ -1,0 +1,11 @@
+lightrag-hku
+anthropic
+openai
+fastapi
+uvicorn
+python-multipart
+python-dotenv
+pyzotero
+watchdog
+aiofiles
+httpx

@@ -1,0 +1,110 @@
+---
+type: jel-code-index
+code: C32
+family: C
+item_count: 101
+---
+
+# C32
+
+- A Little Book of R For Time Series (n.d.) | Coghlan, Avril
+- Climate Time Series Analysis using R (n.d.) | Mehan, S., Gitau, M. W.
+- Economic Time Series (n.d.) | McElroy, Tucker, Holan, Scott H, Bell, William R
+- Extract a time series and plot graph — Climate Data Store Toolbox 1.1.5 documentation (n.d.) | Unknown
+- Multivariate Time Series Analysis and Applications (n.d.) | Wei, William W S
+- Time Series Forecasting with R (n.d.) | Rajagopal, Dr Arunachalam
+- İKLİM DEĞİŞİKLİĞİ’NİN ETKİLERİ: TARIM SEKTÖRÜ ÜZERİNE EKONOMETRİK BİR UYGULAMA (n.d.) | Başoğlu, Aykut
+- Exploring Economic Green Complexity in the Load Capacity of G20 Countries: Do Environmental Policy and Public Debt Matter? (02/2) | Zeraibi, Ayoub, Zhao, Xin, Liu, Ye
+- Renewable energy consumption-economic growth nexus in emerging countries: A bootstrap panel causality test (04/2) | Ozcan, Burcu, Ozturk, Ilhan
+- Exploring the role of green investment, energy intensity and economic complexity in balancing the relationship between growth and environmental degradation (05/2) | Ullah, Obaid, Zeb, Ali, Shuhai, Niu
+- Geopolitical risk, economic policy uncertainty and global oil price volatility —an empirical study based on quantile causality nonparametric test and wavelet coherence (05/2) | Wang, Yijun, Wei, Meiyun, Bashir, Usman
+- Selecting appropriate methodological framework for time series data analysis (06/2) | Shrestha, Min B., Bhatta, Guna R.
+- Climate change, growth in agriculture value-added, food availability and economic growth nexus in the Gambia: a Granger causality and ARDL modeling approach (07/2) | Ceesay, Ebrima K., Francis, Phillips C., Jawneh, Sama
+- Testing for Granger non-causality in heterogeneous panels (07/2) | Dumitrescu, Elena-Ivona, Hurlin, Christophe
+- ARDL bounds test for cointegration: Replicating the Pesaran et al. (2001) results for the UK earnings equation using R (08/2) | Natsiopoulos, Kleanthis, Tzeremes, Nickolaos G.
+- Financial development and economic growth nexus in the MENA countries: Bootstrap panel granger causality analysis (1/20) | Kar, Muhsin, Nazlıoğlu, Şaban, Ağır, Hüseyin
+- Does Remittance Outflow Stimulate or Retard Economic Growth? (10/2) | Khan, Khalid, Su, Chi‐Wei, Tao, Ran
+- The ERA5 global reanalysis: Preliminary extension to 1950 (10/2) | Bell, Bill, Hersbach, Hans, Simmons, Adrian
+- Bootstrap cointegration tests in ARDL models (11/2) | Bertelli, Stefano, Vacca, Gianmarco, Zoia, Maria
+- Exports and growth: Granger causality analysis on OECD countries with a panel data approach (12/2) | Kónya, László
+- The impact of macroeconomic factors on food price inflation: an evidence from India (12/2) | Samal, Asharani, Ummalla, Mallesh, Goyari, Phanindra
+- Version 4 of the CRU TS monthly high-resolution gridded multivariate climate dataset (12/2) | Harris, Ian, Osborn, Timothy J., Jones, Phil
+- Time series analysis (1994) | Hamilton, James Douglas
+- An Autoregressive Distributed-Lag Modelling Approach to Cointegration Analysis (1998) | Pesaran, M. Hashem, Shin, Yongcheol
+- A course in time series analysis (2001) | Unknown
+- The econometric analysis of seasonal time series (2001) | Ghysels, Eric, Osborn, Denise R.
+- Applied time series econometrics (2004) | Unknown
+- Saving and Growth: Granger Causality Analysis with Bootstrapping on Panels of Countries (2004) | Kónya, László
+- Time series analysis and its applications: with R examples (2006) | Shumway, Robert H., Stoffer, David S.
+- Analysis of integrated and cointegrated time series with R (2008) | Pfaff, Bernhard
+- Time series analysis: with applications in R (2008) | Cryer, Jonathan D., Chan, Kung-sik
+- Introductory Time Series with R (2009) | Metcalfe, Andrew V., Cowpertwait, Paul S.P.
+- Introductory time series with R (2009) | Cowpertwait, Paul S. P., Metcalfe, Andrew V.
+- Time series analysis: with applications in R (2009) | Cryer, Jonathan D., Chan, Kung-Sik
+- Climate Time Series Analysis: Classical Statistical and Bootstrap Methods (2014) | Mudelsee, Manfred
+- Climate time series analysis: classical statistical and bootstrap methods (2014) | Mudelsee, Manfred
+- Time series analysis for the social sciences (2014) | Unknown
+- Applied econometric time series (2015) | Enders, Walter
+- Elements of time series econometrics: an applied approach (2015) | Kočenda, Evžen, Černý, Alexandr
+- Time Series Econometrics (2015) | Mills, Terence C.
+- Time Series Econometrics (2015) | Mills, Terence C.
+- Time Series Econometrics (2016) | Neusser, Klaus
+- Applied time series analysis with R (2017) | Woodward, Wayne A., Gray, Harry L., Elliott, Alan C.
+- Applied time series analysis, with R (2017) | Woodward, Wayne A., Gray, Henry L., Elliott, Alan C.
+- Multivariate modelling of non-stationary economic time series (2017) | Burke, Simon P., Hunter, John, Canepa, Alessandra
+- Nonlinear time series analysis with R (2017) | Huffaker, Ray G., Bittelli, Marco, Rosa, Rodolfo
+- Renewable energy consumption and agriculture: evidence for cointegration and Granger causality for Tunisian economy (2017) | Ben Jebli, Mehdi, Ben Youssef, Slim
+- Türkiye'de Kamu Yatırımlarının İstihdam Üzerindeki Etkisi: Bölgesel Bir Analiz (2017) | Topal, Mehmet Hanefi
+- Advances in Time Series Data Methods in Applied Economic Research: International Conference on Applied Economics (ICOAE) 2018 (2018) | Unknown
+- Advances in time series data methods in applied economic research (2018) | Unknown
+- Ekonomik Özgürlük, Turizm ve Ekonomik Büyüme: BRICST Ülkelerinde KÓnya Bootsrap Nedensellik Analizi (2018) | Gövdeli̇, Tuncer
+- Ekonomik Özgürlük, Turizm ve Ekonomik Büyüme: Brics-T Ülkelerinde Konya Bootsrap Nedensellik Analizi (2018) | Gövdeli̇, Tuncer
+- Multivariate Time Series Analysis in Climate and Environmental Research (2018) | Zhang, Zhihua
+- Multivariate Time Series Analysis in Climate and Environmental Research (2018) | Zhang, Zhihua
+- Time Series Econometrics: Learning Through Replication (2018) | Levendis, John D.
+- Advanced Environmental Monitoring with Remote Sensing Time Series Data and R (2019) | Gemitzi, Alexandra, Koutsias, Nikolaos, Lakshmi, Venkat
+- Analysis of the Nexus of CO2 Emissions, Economic Growth, Land under Cereal Crops and Agriculture Value-Added in Pakistan Using an ARDL Approach (2019) | Ali, Sajjad, Ying, Liu, Shah, Tariq
+- Applied time series analysis: a practical guide to modeling and forecasting (2019) | Mills, Terence C.
+- Applied time series analysis: a practical guide to modeling and forecasting (2019) | Mills, Terence C.
+- EKONOMİK KARMAŞIKLIK İLE EKONOMİK BÜYÜME ARASINDAKİ İLİŞKİ: PANEL BOOTSTRAP GRANGER NEDENSELLİK ANALİZİ (2019) | Akbulut Yildiz, Gizem, Yildiz, Barış
+- Econometrics in Theory and Practice: Analysis of Cross Section, Time Series and Panel Data with Stata 15.1 (2019) | Das, Panchanan
+- Hands-on time series analysis with R: perform time series analysis and forecasting using R (2019) | Krispin, Rami
+- The ARDL Method in the Energy-Growth Nexus Field; Best Implementation Strategies (2019) | Menegaki, Angeliki N.
+- The analysis of time series: an introduction with R (2019) | Chatfield, Christopher, Xing, Haipeng
+- How effective is government spending on environmental protection in a developing country?: An empirical evidence from Iran (2020) | Moshiri, Saeed, Daneshmand, Arian
+- Quantile Regression for Cross-Sectional and Time Series Data: Applications in Energy Markets Using R (2020) | Uribe, Jorge M., Guillen, Montserrat
+- Seçilmiş OECD Ülkelerinde Çevre Vergilerinin Çevre Kirliliği Üzerindeki Etkileri: Yapısal Kırılmalı Nedensellik Testinden Kanıtlar (2020) | Aydin, Mücahit
+- Theory and Applications of Time Series Analysis: Selected Contributions from ITISE 2019 (2020) | Unknown
+- Time Series in Economics and Finance (2020) | Cipra, Tomas
+- Version 4 of the CRU TS monthly high-resolution gridded multivariate climate dataset (2020) | Harris, Ian, Osborn, Timothy J., Jones, Phil
+- Handbook of research methods and applications in empirical microeconomics (2021) | Unknown
+- Handbook of research methods and applications in empirical microeconomics (2021) | Unknown
+- Link between Technically Derived Energy Efficiency and Ecological Footprint: Empirical Evidence from the ASEAN Region (2021) | Khan, Dilawar, Nouman, Muhammad, Popp, József
+- Modelling Trends and Cycles in Economic Time Series (2021) | Mills, Terence C.
+- Recent Advances in Time Series Forecasting (2021) | Bisht, Dinesh C. S., Ram, Mangey
+- The optimal government size in the kingdom of Saudi Arabia: an ARDL bounds testing approach to cointegration (2021) | Al-Abdulrazag, Bashier
+- The relationship of economic growth and carbon-dioxide emissions: an application on member countries of Organization of Islamic Cooperation (2021) | Kaya, Muhammed Veysel, Yilmaz, Suat Serhat, Özdemir, Mehmet Gökhan
+- Theory and applications of time series analysis: selected contributions from ITISE 2019 (2021) | Valenzuela, Olga, Rojas, Fernando, Herrera, Luis Javier
+- Theory and applications of time series analysis: selected contributions from ITISE 2019 (2021) | Valenzuela, Olga, Rojas, Fernando, Herrera, Luis Javier
+- Time Series Analysis in Climatology and Related Sciences (2021) | Privalsky, Victor
+- EKONOMİK KARMAŞIKLIK İNDEKSİ VE EKONOMİK BÜYÜME: CIVETS ÜLKELERİNDEN AMPİRİK KANITLAR (2022) | Bayar, İlyas
+- Economic complexity–carbonization nexus in the European Union: A heterogeneous panel data analysis (2022) | Demiral, Mehmet, Akça, Emrah Eray
+- Effects of Exchange Rate Volatility on Economic Growth: Evidence from West Africa (2022) | Fofanah, Pabai
+- Effects of Real Exchange Rate Volatility on Trade: Empirical Analysis of the United States Exports to BRICS (2022) | Ekanayake, E. M., Dissanayake, Amila
+- Exchange Rate Volatility Effect on Economic Growth under Different Exchange Rate Regimes: New Evidence from Emerging Countries Using Panel CS-ARDL Model (2022) | Ameziane, Karim, Benyacoub, Bouchra
+- Introduction to time series modeling with applications in R (2022) | Iquebal, Ashif S.
+- Role of Financial Development, Green Technology Innovation, and Macroeconomic Dynamics Toward Carbon Emissions in China: Analysis Based on Bootstrap ARDL Approach (2022) | Yang, Jiayu, Sun, Yunpeng, Sun, Huaping
+- The Impact of Climate Change on Agricultural Total Factor Productivity: A Cross-Country Panel Data Analysis, 1961–2013 (2022) | Xiang, Tao, Malik, Tariq H., Hou, Jack W.
+- Time-varying causality between income inequality and ecological footprint in Turkey (2022) | Altıntaş, Nurullah, Kırca, Mustafa, Acar, Samet
+- Validity of Wagner Hypothesis in OECD Countries: Konya Panel Causality Test (2022) | Urfalıoğlu, Şeyda, Tatoğlu, Yerdelen, Ferda
+- Climate change and agriculture nexus in Bangladesh: Evidence from ARDL and ECM techniques (2023) | Ghosh, Bikash Chandra, Eyasmin, Farjana, Adeleye, Bosede Ngozi
+- The Nexus between Environmental Quality, Economic Growth, and Trade Openness in Saudi Arabia (1990-2017) (2023) | Daly, Saida, Abdouli, Mohamed
+- Toward a sustainable development in sub-Saharan Africa: do economic complexity and renewable energy improve environmental quality? (2023) | Abdi, Abdikafi Hassan
+- Toward a sustainable development in sub-Saharan Africa: do economic complexity and renewable energy improve environmental quality? (2023) | Abdi, Abdikafi Hassan
+- Exploring the LCC Hypothesis in the Nordic Region: The Role of AI Innovation, Environmental Taxes, and Financial Accessibility via Panel ARDL (2024) | Hossain, Md Sibbir, Mohammad Ridwan, Akhter, Afsana
+- FOSTERING GREEN TRANSITION IN CENTRAL AND EASTERN EUROPE: CARBON DIOXIDE EMISSIONS, INDUSTRIALIZATION, FINANCIAL DEVELOPMENT, AND ELECTRICITY NEXUS (2024) | Mitić, Petar, Fedajev, Aleksandra, Radulescu, Magdalena
+- Structural transformation and poverty alleviation in Sub-Saharan Africa countries: sectoral value-added analysis (2024) | Enongene, Betrand Ewane
+- Structural transformation and poverty alleviation in Sub-Saharan Africa countries: sectoral value-added analysis (2024) | Enongene, Betrand Ewane
+- Sustainable Food Security: Balancing Desalination, Climate Change, and Population Growth in Five Arab Countries Using ARDL and VECM (2024) | Derouez, Faten, Ifa, Adel
+- Determinants of agricultural exports in Somalia: the impacts of exchange rates, foreign direct investment, and institutional quality (2025) | Abdi, Abdikafi Hassan, Mohamed, Amir Mohamud
+- Economic growth, exports and foreign direct investment in Least Developed Countries: A panel Granger causality analysis (5/20) | Tekin, Rıfat Barış

@@ -1,0 +1,81 @@
+---
+type: jel-code-index
+code: C10
+family: C
+item_count: 72
+---
+
+# C10
+
+- GEÇİŞ EKONOMİLERİNDE EKONOMİK KARMAŞIKLIK VE EKONOMİK BÜYÜME İLİŞKİSİ: ÇEK CUMHURİYETİ ÖRNEĞİ (n.d.) | Doru, Ömer, Düşünceli̇, Faruk
+- The Lagrange Multiplier Test and its Applications to Model Specification in Econometrics (01/1) | Breusch, T. S., Pagan, A. R.
+- Agronomic Weather Measures in Econometric Models of Crop Yield with Implications for Climate Change (01/2) | Roberts, Michael J., Schlenker, Wolfram, Eyer, Jonathan
+- Moderating Role of Knowledge-Sharing on the Nexus of Digital Business and Natural Resources (03/2) | Ha, Le Thanh, Hanh, Pham Thi Ngoc, Hang, Nguyen Thi Thu
+- Navigating the Future: AI, Global Supply Chains, and ESG for Sustainable Development (03/2) | Tiwari, Sunil, Tzeremes, Panayiotis, Kazemzadeh, Emad
+- Navigating the Future: AI, Global Supply Chains, and ESG for Sustainable Development (03/2) | Tiwari, Sunil, Tzeremes, Panayiotis, Kazemzadeh, Emad
+- The environmental Kuznets curve hypothesis for Bangladesh: the importance of natural gas, liquefied petroleum gas, and hydropower consumption (04/2) | Murshed, Muntasir, Alam, Risana, Ansarin, Adiba
+- Digitalization's contribution towards sustainable development and climate change mitigation: An empirical evidence from EU economies (07/2) | Arshad, Zeeshan, Madaleno, Mara, Lillebø, Ana I.
+- Climate Econometrics: Can the Panel Approach Account for Long‐Run Adaptation? (08/2) | Mérel, Pierre, Gammans, Matthew
+- Does the Quality of Institutions Limit the MENA's Integration in the World Economy? (09/2) | Méon, Pierre‐Guillaume, Sekkat, Khalid
+- Assessing the effects of climate change on rice yields: An econometric investigation using Bangladeshi panel data (10/2) | Sarker, Md. Abdur Rashid, Alam, Khorshed, Gow, Jeff
+- The impacts of climate change on agriculture in sub-Saharan Africa: A spatial panel data approach (10/2) | Emediegwu, Lotanna E., Wossink, Ada, Hall, Alastair
+- The impacts of climate change on agriculture in sub-Saharan Africa: A spatial panel data approach (10/2) | Emediegwu, Lotanna E., Wossink, Ada, Hall, Alastair
+- Testing for Cross-Sectional Dependence in Panel-Data Models (11/2) | De Hoyos, Rafael E., Sarafidis, Vasilis
+- Does the twin growth catalyst of oil rent seeking and agriculture exhibit complementary or substitute role? New perspective from a West African country (12/2) | Osundina, Olawumi Abeni, Bekun, Festus Victor, Kirikkaleli, Dervis
+- Does the twin growth catalyst of oil rent seeking and agriculture exhibit complementary or substitute role? New perspective from a West African country (12/2) | Osundina, Olawumi Abeni, Bekun, Festus Victor, Kirikkaleli, Dervis
+- Investigating causal relations by econometric models and crossspectral methods (1969) | Granger, C. W. J.
+- An introduction to econometrics (1977) | Walters, A. A.
+- Time-series-based econometrics: unit roots and co-integrations (1996) | Hatanaka, Michio
+- International macroeconomics and finance: theory and econometric methods (2001) | Mark, Nelson C.
+- The econometric analysis of seasonal time series (2001) | Ghysels, Eric, Osborn, Denise R.
+- Applied time series econometrics (2004) | Unknown
+- Introduction to the mathematical and statistical foundations of econometrics (2004) | Bierens, Herman J.
+- Applied Econometrics with R (2008) | Kleiber, Christian, Zeileis, Achim
+- Econometric Analysis (2008) | Greene, William H.
+- Innovative Approaches Towards Low Carbon Economics: Regional Development Cybernetics (2014) | Xu, Jiuping, Yao, Liming, Lu, Yi
+- Time series analysis for the social sciences (2014) | Unknown
+- Applied econometric time series (2015) | Enders, Walter
+- Climate Change and Agricultural Productivity in Nigeria: An Econometric Analysis (2015) | Ekpenyong, Imoh Udom, Ogbuagu, Matthew Ikechukwu
+- Econometrics by example (2015) | Gujarati, Damodar N.
+- Elements of time series econometrics: an applied approach (2015) | Kočenda, Evžen, Černý, Alexandr
+- Time Series Econometrics (2015) | Mills, Terence C.
+- Time Series Econometrics (2015) | Mills, Terence C.
+- Applied econometrics: an introduction (2016) | Marcellino, Massimiliano
+- Time Series Econometrics (2016) | Neusser, Klaus
+- A guide to modern econometrics (2017) | Verbeek, Marno
+- An Econometric Analysis of Food Security and Agricultural Credit Facilities in Nigeria (2018) | Osabohien, Romanus, Afolabi, Adesola, Godwin, Abigail
+- Identifying the Economic Impacts of Climate Change on Agriculture (2018) | Carter, Colin, Cui, Xiaomeng, Ghanem, Dalia
+- Time Series Econometrics: Learning Through Replication (2018) | Levendis, John D.
+- Conceptual econometrics using R (2019) | Unknown
+- Consequences of agricultural total factor productivity growth for the sustainability of global farming: accounting for direct and indirect land use effects (2019) | Villoria, Nelson
+- Econometrics in Theory and Practice: Analysis of Cross Section, Time Series and Panel Data with Stata 15.1 (2019) | Das, Panchanan
+- Reproducible econometrics using R (2019) | Racine, Jeffrey Scott
+- Drought, Climate Change, and Dryland Wheat Yield Response: An Econometric Approach (2020) | Shayanmehr, Samira, Rastegari Henneberry, Shida, Sabouhi Sabouni, Mahmood
+- Drought, Climate Change, and Dryland Wheat Yield Response: An Econometric Approach (2020) | Shayanmehr, Samira, Rastegari Henneberry, Shida, Sabouhi Sabouni, Mahmood
+- Export Performance as a Measurement of Competitiveness (2020) | University of Economics in Bratislava, Faculty of Commerce, Ruzekova, Viera, Kittova, Zuzana
+- Introduction to econometrics (2020) | Stock, James H., Watson, Mark W.
+- Using R for introductory econometrics (2020) | Heiss, Florian
+- Applied econometrics (2021) | Asteriou, Dimitrios, Hall, Stephen G.
+- Data science for financial econometrics (2021) | Unknown
+- Econometric Analysis of Panel Data (2021) | Baltagi, Badi H.
+- Econometric Analysis of the Impact of Climate Change on the Sustainability of Agricultural Production in Ukraine (2021) | Skrypnyk, Andriy, Zhemoyda, Oleksandr, Klymenko, Nataliia
+- Global vulnerability of crop yields to climate change (2021) | Wing, Ian Sue, De Cian, Enrica, Mistry, Malcolm N.
+- Handbook of research methods and applications in empirical microeconomics (2021) | Unknown
+- Handbook of research methods and applications in empirical microeconomics (2021) | Unknown
+- Recent econometric techniques for macroeconomic and financial data (2021) | Unknown
+- Recent econometric techniques for macroeconomic and financial data (2021) | Unknown
+- Theory and applications of time series analysis: selected contributions from ITISE 2019 (2021) | Valenzuela, Olga, Rojas, Fernando, Herrera, Luis Javier
+- Theory and applications of time series analysis: selected contributions from ITISE 2019 (2021) | Valenzuela, Olga, Rojas, Fernando, Herrera, Luis Javier
+- Advances in Econometrics, Operational Research, Data Science and Actuarial Studies: Techniques and Theories (2022) | Unknown
+- Econometric Approaches That Consider Farmers’ Adaptation in Estimating the Impacts of Climate Change on Agriculture: A Review (2022) | Su, Xun, Chen, Minpeng
+- Econometrics for Modelling Climate Change (2022) | Castle, Jennifer L., Hendry, David F.
+- Effects of Digitalization on Natural Resource Use in European Countries: Does Economic Complexity Matter? (2022) | Mai, Ngô Thanh, Ha, Le Thanh, Hoa, Trần Thi Mai
+- Is product proximity a driver for better energy security? Global evidence of nonlinear relationships between product proximity and energy security (2022) | Le, Thanh Ha, Hoang, Phuong Dung, To, Trung Thanh
+- The Impacts of Climate Change, Carbon Dioxide Emissions (CO2) and Renewable Energy Consumption on Agricultural Economic Growth in South Africa: ARDL Approach (2022) | Tagwi, Aluwani
+- The spatial spillover effect of environmental regulation on the total factor productivity of pharmaceutical manufacturing industry in China (2022) | Wu, Qijie, Li, Yuexin, Wu, Yufei
+- An Econometrics analysis for the effect of climate changes on productivity of Clover and Sugar Cane crops in Egypt (2023) | Abd El Fatah, Walaa
+- Going green: understanding the impacts of economic complexity, clean energy and natural resources on ecological footprint in complex economies (2023) | Abbas, Shujaat, Ghosh, Sudeshna, Sucharita, Sanhita
+- The impact of agroecosystem on ecological footprint: Fresh evidence in the perspective of existing agriculture and green Pakistan (2023) | Ullah, Arif, Salem, Sultan, Kang, Shijia
+- Sustainable Food Security: Balancing Desalination, Climate Change, and Population Growth in Five Arab Countries Using ARDL and VECM (2024) | Derouez, Faten, Ifa, Adel
+- Testing the impact of environmental taxation and IFRS adoption on consumption‐based carbon in European countries (2024) | Samour, Ahmed, Musah, Mohammed, Mati, Sagiru
+- EKONOMİK KARMAŞIKLIK VE İNSANİ GELİŞME ENDEKSLERİNİN EKONOMİK BÜYÜME ÜZERİNDEKİ ETKİSİ: MIKTA ÜLKELERİNDEN AMPİRİK KANITLAR (2025) | Atılgan, Dilek, Kütükçü, Esra

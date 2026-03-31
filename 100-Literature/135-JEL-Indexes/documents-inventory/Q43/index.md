@@ -1,0 +1,101 @@
+---
+type: documents-jel-index
+code: Q43
+item_count: 93
+---
+
+# Documents - Q43
+
+- 4.RenewableenergyproductionCO2emissionsandeconomicgrowthinMoroccoAnARDLApproach.pdf | secondary: Q42, Q54 | evidence: energy
+- Assessing-the-Impacts-of-Japans-Nuclear-Waste-and-Chemical-Discharge-in-the-China-Sector-and-Application-of-Energy-Production_2025_Iranian-Institute-of-Research-and-Development-in-Chemical-Industries.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/a.docx | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/Exported Items_2.bib | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1107/j.ctv941wjn.5.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1134/cb2373en.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1137/shayanmehr2020.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1141/kang2013.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1150/rickards2012.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1156/chen2020.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1166/goh2011.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1405/Dell et al_2014_What Do We Learn from the Weather.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1443/Hepburn et al_2019_The technological and economic prospects for CO2 utilization and removal.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/Exported Items_3.bib | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1008/1-s2.0-S0308521X15000797-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1024/1-s2.0-S0921800996001036-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1028/enviroValues.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1032/document.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1044/jep.3.4.99.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1050/Suppe_2000.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1060/1-s2.0-S092180090900456X-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1070/1-s2.0-S0301421500000707-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1081/resrep16372.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1083/29729990.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1208/cmsarticle_520.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1218/frontiers-in-water-resource-economics-2006.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1228/polipers.15.3.0139.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1290/costanza1997.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1301/Balsalobre-Lorente et al_2018_How economic growth, renewable electricity and natural resources contribute to.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1307/korhonen2018.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1536/Kremen ve Miles - 2012 - Ecosystem Services in Biologically Diversified ver.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1537/Richardson vd. - 2012 - Terrestrial biosphere models need better represent.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1657/Allen vd. - 2015 - On underestimation of global vulnerability to tree.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1716/Daim vd. - 2006 - Forecasting emerging technologies Use of bibliome.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1736/Kostoff vd. - 2005 - Power source roadmaps using bibliometrics and data.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/514/Viguier vd. - 2006 - Modeling endogenous learning and imperfect competi.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/721/agovino2018.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/899/Jaffe et al_2005_A tale of two market failures.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/913/DP972.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/915/Ge ve Lin - 2022 - Does the Kyoto Protocol as an International Enviro.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/939/CORE_DP_2022-12.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/959/aer.15000001.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/962/Ostrom2012_Article_NestedExternalitiesAndPolycent.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/982/Goers2010_Article_NewAndOldMarket-basedInstrumen.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/996/1-s2.0-S0095069614000242-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/1259/1-s2.0-S0959652622007090-main (1).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2966/Farhan Bashir et al. - 2022 - An outlook on the development of renewable energy,.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2967/FarhanBashir2022_Article_AnOutlookOnTheDevelopmentOfRen.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2969/John Twidell, Tony Weir - Renewable Energy Resources-Taylor & Francis (2005).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2971/Aldo Vieira da Rosa, Juan Carlos Ordonez - Fundamentals of Renewable Energy Processes-Academic Press (2021).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2973/10.1016@j.esr.2019.01.006.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2975/Carrasco et al. - 2006 - Power-Electronic Systems for the Grid Integration .pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2977/1-s2.0-S0960148121004870-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2981/1-s2.0-S0048969719313348-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2985/S0960148121010193.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2987/S0301479721013785.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2992/David Songstad, Prakash Lakshmanan, John Chen, William Gibbons, Stephen Hughes (auth.), Dwight Tomes, Prakash Lakshmanan, David Songstad (eds.) - Biofuels_ Global Impact on Renewable Energy, Productio.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/2998/James G. Speight - Encyclopedia of Renewable Energy-Wiley-Scrivener (2022).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3003/Richard Heinberg, David Fridley (auth.) - Our Renewable Future_ Laying the Path for 100% Clean Energy-Island Press_Center for Resource Economics (2016).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3009/Yoshihiro Yamamoto - Feed-in Tariffs and the Economics of Renewable Energy-Springer International Publishing (2018).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3012/Pramod Deo, Sushanta K. Chatterjee, Shrikant Modak - Renewable Energy in India_ Economics and Market Dynamics-SAGE Publications (2021).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3013/Iain Staffell (editor), Daniel J.L. Brett (editor), Nigel P. Brandon (editor), Adam D. Hawkes (editor) - Domestic Microgeneration_ Renewable and Distributed Energy Technologies, Policies and Economics.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3015/Rui Castro - Electricity Production from Renewables-Springer (2022).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3018/Scholten - 2018 - The Geopolitics of Renewables.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3030/(Catalysis by Metal Complexes 39) Arno Behr, Andreas J. Vorholt (auth.) - Homogeneous Catalysis with Renewables-Springer International Publishing (2017).pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3036/1-s2.0-S2352550920301044-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3038/1-s2.0-S0921344920301981-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3040/1-s2.0-S0196890419307563-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3042/Aziz2020_Article_RevisitingTheRoleOfForestryAgr.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3044/10.1080@14786451.2019.1686380.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3050/Khan et al. - 2018 - The nexus between greenhouse gas emission, electri.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3052/Paramati et al. - 2018 - Dynamics of renewable energy consumption and econo.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3054/yurtkuran2021.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3060/palys2021.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3065/Oakleaf et al. - 2019 - Mapping global development potential for renewable.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3069/Appel et al. - 2016 - Effects of the German Renewable Energy Act on stru.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3071/Sutherland et al. - 2015 - Conceptualising multi-regime interactions The rol.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3073/chandio2021.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/files/3075/1-s2.0-S0306261921016846-main.pdf | secondary: Q42, Q54 | evidence: energy
+- citaviii/Renewable/Renewable Energy/Renewable Energy.bib | secondary: Q42, Q54 | evidence: energy
+- International Journal of Energy Research - 2025 - Solmaz - Artificial Intelligence and Energy Efficiency in the EU  A.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/2966/Farhan Bashir et al. - 2022 - An outlook on the development of renewable energy,.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/3052/Paramati et al. - 2018 - Dynamics of renewable energy consumption and econo.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/3069/Appel et al. - 2016 - Effects of the German Renewable Energy Act on stru.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/3288/Gillingham and Palmer - 2014 - Bridging the Energy Efficiency Gap Policy Insight.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/4783/Tozlu et al. - 2016 - Waste to energy technologies for municipal solid w.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/5267/Destek and Sinha - 2020 - Renewable, non-renewable energy consumption, econo.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/5280/Pata - 2021 - Renewable and non-renewable energy consumption, ec.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/5304/Ozcan_Ozturk_2019_Renewable energy consumption-economic growth nexus in emerging countries.pdf | secondary: Q42, Q54 | evidence: energy
+- My Library/files/5406/Sun et al. - 2020 - Modelling the effects of energy taxes on ecologica.pdf | secondary: Q42, Q54 | evidence: energy
+- SWM Türkiye to Achieve the UN SDGs Waste to Energy, 28.4.23 (1).docx | secondary: Q42, Q54 | evidence: energy
+- Turkey_TR_All_Indicators/Energy_Transition.csv | secondary: Q42, Q54 | evidence: energy
+- WorldEnergyOutlook2023.pdf | secondary: Q42, Q54 | evidence: energy

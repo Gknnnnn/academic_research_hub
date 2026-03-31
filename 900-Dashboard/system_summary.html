@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Research Ops Summary</title>
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; background:#111; color:#f4f4f4; padding:2rem; }
+    h1 { color:#7ed321; }
+    section { border:1px solid #2f2f2f; padding:1rem; margin-bottom:1rem; border-radius:0.5rem; background:#171717; }
+    ul { margin:0; padding-left:1.2rem; }
+    .bar { height:0.6rem; background:#4a90e2; border-radius:0.3rem; margin-top:0.6rem; }
+    .bar span { display:block; height:100%; background:#50e3c2; border-radius:inherit; }
+  </style>
+</head>
+<body>
+  <h1>Research Automation Overview</h1>
+  <section>
+    <h2>AI Token / Usage Summary</h2>
+    <p>Burada Claude, Gemini, Codex ve Grok gibi hesapların token tüketimleri gösterilir (manuel güncelleme):</p>
+    <ul>
+      <li>Claude (Deep Research) — ???/250K token</li>
+      <li>Gemini (Idea exploration) — ???/200K token</li>
+      <li>Codex (Automation) — ???/300K token</li>
+      <li>Grok (Brainstorm) — ???/150K token</li>
+    </ul>
+    <div class="bar"><span style="width:45%"></span></div>
+  </section>
+  <section>
+    <h2>Pipeline Status</h2>
+    <ul>
+      <li>JEL sync: automated nightly 03:00 (scripts/jel-system).</li>
+      <li>Brainstorm workflow: daily n8n job + DeepSeek handoff.</li>
+      <li>Idea promotion: `roc-idea-promotion` @18:00 weekdays.</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Project Snapshot</h2>
+    <ul>
+      <li>Active paper: Green Innovation Structural Transformation (`300-Projects/310-Active-Papers/...`).</li>
+      <li>Data quality log: `900-Dashboard/data_quality_log.md` showing NA counts.</li>
+      <li>Submission templates: `700-Submissions/_templates/analysis_workflow_template.md`.</li>
+    </ul>
+  </section>
+  <p>Status tarih damgası: <strong><span id="timestamp"></span></strong></p>
+  <script>
+    document.getElementById("timestamp").textContent = new Date().toLocaleString("tr-TR");
+  </script>
+</body>
+</html>

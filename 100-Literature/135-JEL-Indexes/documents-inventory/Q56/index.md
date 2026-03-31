@@ -1,0 +1,2728 @@
+---
+type: documents-jel-index
+code: Q56
+item_count: 2720
+---
+
+# Documents - Q56
+
+- "1-*.pdf | secondary: O13, C23 | evidence: default-profile
+- (A Publications of the Egon-Sohmen-Foundation) Wilfred Beckerman (auth.), Prof. Dr. Herbert Giersch (eds.) - Economic Progress and Environmental Concerns-Springer Berlin Heidelberg (1993).pdf | secondary: Q53 | evidence: environment
+- (Cambridge Studies on Environment, Energy and Natural Resources Governance) Jean-François Mercure - Complexity Economics for Environmental Governance-Cambridge University Press (2022).pdf | secondary: Q53 | evidence: environment
+- (Complete Idiot's) Gary R McClain Gary R. Ph.D. - Complete Idiot's Guide to Zen Living-Unknown (2004) copy.pdf | secondary: O13, C23 | evidence: default-profile
+- (Ecology, Economy & Environment 1) Uno Svedin (auth.), Carl Folke, Tomas Kåberger (eds.) - Linking the Natural Environment and the Economy_ Essays from the Eco-Eco Group-Springer Netherlands (1991).pdf | secondary: Q53 | evidence: environment
+- (Economics Today) Ian Hodge (auth.) - Environmental Economics_ Individual Incentives and Public Choices-Macmillan Education UK (1995) (1).pdf | secondary: Q53 | evidence: environment
+- (Environmental Science and Technology Library 3) Donald A. Brown, John Lemons (auth.), John Lemons, Donald A. Brown (eds.) - Sustainable Development_ Science, Ethics, and Public Policy-Springer Nether.pdf | secondary: Q53 | evidence: environment
+- (FORM-ENS011) DOKTORA-SANATTA YETERLİK ÇALIŞMASI TEZ ARA RAPOR TUTANAK FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- (FORM-ENS017) TEZ TESLİM ve MEZUNİYET FORMU (1).doc | secondary: O13, C23 | evidence: default-profile
+- (FORM-ENS017) TEZ TESLİM ve MEZUNİYET FORMU (2).doc | secondary: O13, C23 | evidence: default-profile
+- (FORM-ENS017) TEZ TESLİM ve MEZUNİYET FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- (FORM-ENS023) DERS MUAFİYET BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- (Natural Resource Management and Policy 8) Lans Bovenberg, Sijbren Cnossen (auth.), Lans Bovenberg, Sijbren Cnossen (eds.) - Public Economics and the Environment in an Imperfect World-Springer Netherl.pdf | secondary: Q53 | evidence: environment
+- (Routledge Studies in Economic Theory, Method and Philosophy) Albert N. Link - The Economics and Science of Measurement_ A Study of Metrology-Routledge (2021).pdf | secondary: O13, C23 | evidence: default-profile
+- (Shambhala Library) Shunryu Suzuki - Zen Mind, Beginner's Mind-Shambhala (2006) copy.pdf | secondary: O13, C23 | evidence: default-profile
+- (Springer Nature Reference) Chinnappan Baskar, Seeram Ramakrishna, Shikha Baskar, Rashmi Sharma, Amutha Chinnappan, Rashmi Sehrawat - Handbook of Solid Waste Management_ Sustainability through Circula.pdf | secondary: O13 | evidence: sustainab
+- (Springer texts in business and economics) Hans Wiesmeth - Environmental economics _ theory and policy in equilibrium (2022).pdf | secondary: Q53 | evidence: environment
+- (Springer Texts in Business and Economics) Wolfgang Buchholz, Dirk Rübbelke - Foundations of Environmental Economics-Springer International Publishing (2019).pdf | secondary: Q53 | evidence: environment
+- (Sustainable Development Goals Series) Somnath Hazra, Anindya Bhukta - Sustainable Development Goals_ An Indian Perspective-Springer International Publishing_Springer (2020).pdf | secondary: O13 | evidence: sustainab
+- (The Economics of Non-Market Goods and Resources 16) Anthony C. Fisher - Lecture Notes on Resource and Environmental Economics-Springer International Publishing_Springer (2020).pdf | secondary: Q53 | evidence: environment
+- ++Harnessing digital=L_0.pdf | secondary: O13, C23 | evidence: default-profile
+- ,ÜĞİ.pdf | secondary: O13, C23 | evidence: default-profile
+- -ARDL_MPRA.pdf | secondary: O13, C23 | evidence: default-profile
+- -FİNANSAL YÖNETİM 1_2024-2025 BAHAR DÖNEMİ İKTİSAT BÖLÜMÜ_EK 1 SINAVI SORULARI copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 0018302.pdf | secondary: O13, C23 | evidence: default-profile
+- 0019264.pdf | secondary: O13, C23 | evidence: default-profile
+- 01-TÜRKİYE-TÜRKÇESİNDE-ADLARLA-ÖN-ADLARIN-BİRLİKTELİK-KULLANIMI-VE-EŞ-DİZİM-SÖZLÜĞÜ.pdf | secondary: O13, C23 | evidence: default-profile
+- 02-08.pdf | secondary: O13, C23 | evidence: default-profile
+- 02-İK 2023-2024 EĞİTİM ÖĞRETİM YILI KİTAP LİSTESİ-ANASINIFI ELMAS (5-6 YAŞ).pdf | secondary: O13, C23 | evidence: default-profile
+- 04-12-02-say.pdf | secondary: O13, C23 | evidence: default-profile
+- 05.05.2023 SWM  Chapter1.docx | secondary: O13, C23 | evidence: default-profile
+- 06 ds 6047.pdf | secondary: O13, C23 | evidence: default-profile
+- 06-2014-IGR-Turkce-Ozet.pdf | secondary: O13, C23 | evidence: default-profile
+- 07474939408800276.pdf | secondary: O13, C23 | evidence: default-profile
+- 0924.pdf | secondary: O13, C23 | evidence: default-profile
+- 1 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-0304387887900186-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0022199609000105-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0022199612002012-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0140988323006527-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S014481882100051X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0160791X21003286-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0161893824001546-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0264999312002921-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0264999318307843-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0264999319314099-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0301420722000204-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0305750X18302109-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0360544223007776-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0370157302006348-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S037843711630557X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0921344919300928-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0921344921005759-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0921800916303202-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0921800919320622-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0921800920312179-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0925231203004806-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0939362516300310-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0939362518302772-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0956053X12004205-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0956713525002841-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0959652619334079-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0959652623026112-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0959652623031840-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0960148121003633-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S0960148122006061-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1042443124000519-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1044028324000310-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1075425324000012-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1462901121002021-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1470160X23008221-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1517758020300357-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1544612325018318-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1574954122004101-main (1).pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1574954122004101-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S1877042811016491-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2110701722000737-mainext.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S221191242200044X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2212567115016196-main (1).pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2212567115016196-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2352484721014918-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2352550922003347-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2352554122001103-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2405844024124346-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2405918817300405-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-s2.0-S2666827022000202-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 1-SINAV PROGRAMI EXCEL DOSYASI FİNAL.xlsx | secondary: O13, C23 | evidence: default-profile
+- 1-SINAV PROGRAMI EXCEL DOSYASI FİNAL_vson.xlsx | secondary: O13, C23 | evidence: default-profile
+- 1-SINAV PROGRAMI EXCEL DOSYASI VİZE.xlsx | secondary: O13, C23 | evidence: default-profile
+- 1-SINAV PROGRAMI EXCEL DOSYASI- Bütünleme.xlsx | secondary: O13, C23 | evidence: default-profile
+- 1-SINAV PROGRAMI EXCEL DOSYASI- Bütünleme (E).xlsx | secondary: O13, C23 | evidence: default-profile
+- 1-SINAV PROGRAMI EXCEL DOSYASI- Bütünleme_vson.xlsx | secondary: O13, C23 | evidence: default-profile
+- 1-TEZSAVUNMASINAVIUSULESASLARI2021-2022bahar.docx | secondary: O13, C23 | evidence: default-profile
+- 1. Food-and-Agriculture-on-Social-Economic-and-Environmental-Linkages.pdf | secondary: Q53 | evidence: environment
+- 1.5.2872.pdf | secondary: O13, C23 | evidence: default-profile
+- 1.docx | secondary: O13, C23 | evidence: default-profile
+- 1.xlsx | secondary: O13, C23 | evidence: default-profile
+- 10-1108_F-09-2021-0078.pdf | secondary: O13, C23 | evidence: default-profile
+- 10-1108_IJSE-05-2016-0136.pdf | secondary: O13, C23 | evidence: default-profile
+- 10-1108_JADEE-11-2018-0164.pdf | secondary: O13, C23 | evidence: default-profile
+- 10-1108_JES-12-2018-0458.pdf | secondary: O13, C23 | evidence: default-profile
+- 10-1108_MF-11-2021-05611.pdf | secondary: O13, C23 | evidence: default-profile
+- 10. ege Programı son.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1007@978-3-030-31543-6.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1007@978-981-13-9570-3.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1007@978-981-15-1472-2.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1007@s11027-006-9079-9.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1016@j.ecolecon.2019.106478.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1016@j.ecolecon.2019.106518.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1038@s41558-019-0516-7.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1038@s41558-019-0519-4.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1080@00207230108711342.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1111@ajae.12200.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1126@science.abc4765.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.1257@aer.97.1.354.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.18825-irem.67309-266612.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.20979-ueyd.1491951-3964961.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.20990-kilisiibfakademik.1427932-3692478 (1).pdf | secondary: O13, C23 | evidence: default-profile
+- 10.20990-kilisiibfakademik.1427932-3692478.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.21105.joss.01686.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.24181-tarekoder.1113741-2415980.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.25229-beta.1504315-4019064.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.26650-ISTJECON2022-1213878-2809892.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.30784-epfad.1512266-4053203.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.30910-turkjans.1656274-4683829.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.3763@cpol.2007.0475.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.54132-akaf.1116949-2428904.pdf | secondary: O13, C23 | evidence: default-profile
+- 10.5772@intechopen.92690.pdf | secondary: O13, C23 | evidence: default-profile
+- 1041-4650-1-5-20221017.docx | secondary: O13, C23 | evidence: default-profile
+- 1041-4650-1-5-20221017_latest.docx | secondary: O13, C23 | evidence: default-profile
+- 1041-Article Text-4636-1-6-20220821_1-14_last_version.docx | secondary: O13, C23 | evidence: default-profile
+- 1041-Article Text-4678-1-10-20221020.pdf | secondary: O13, C23 | evidence: default-profile
+- 1041-Article Text-5073-1-10-20230101.pdf | secondary: O13, C23 | evidence: default-profile
+- 10865498_0_0.pdf | secondary: O13, C23 | evidence: default-profile
+- 11. Uluslararası Ekoloji Sempozyumu.pdf | secondary: O13, C23 | evidence: default-profile
+- 1155959_ext.pdf | secondary: O13, C23 | evidence: default-profile
+- 12093534RiskMerkeziRaporu.pdf | secondary: O13, C23 | evidence: default-profile
+- 125-132(1).pdf | secondary: O13, C23 | evidence: default-profile
+- 125981536.pdf | secondary: O13, C23 | evidence: default-profile
+- 12667-8390.pdf | secondary: O13, C23 | evidence: default-profile
+- 1288794.pdf | secondary: O13, C23 | evidence: default-profile
+- 12_Huseynov_article.pdf | secondary: O13, C23 | evidence: default-profile
+- 131439.pdf | secondary: O13, C23 | evidence: default-profile
+- 14_GOKHAN (1).pdf | secondary: O13, C23 | evidence: default-profile
+- 14_GOKHAN.pdf | secondary: O13, C23 | evidence: default-profile
+- 15208.pdf | secondary: O13, C23 | evidence: default-profile
+- 1605_69636976.pdf | secondary: O13, C23 | evidence: default-profile
+- 1640260328_715_903209_1514.pdf | secondary: O13, C23 | evidence: default-profile
+- 16867502322019bildiri-(1).pdf | secondary: O13, C23 | evidence: default-profile
+- 17.01.2024 KARBON EMİSYONU, GÖÇ MAKALE.docx | secondary: O13, C23 | evidence: default-profile
+- 17.01.2024 KARBON EMİSYONU^J GÖÇ MAKALE.docx | secondary: O13, C23 | evidence: default-profile
+- 17.01.2024 KARBON EMİSYONU^LJ GÖÇ MAKALE.docx | secondary: O13, C23 | evidence: default-profile
+- 1702678191672.pdf | secondary: O13, C23 | evidence: default-profile
+- 1703751528503.pdf | secondary: O13, C23 | evidence: default-profile
+- 1703751722927.pdf | secondary: O13, C23 | evidence: default-profile
+- 1703751779950.pdf | secondary: O13, C23 | evidence: default-profile
+- 1756272727_0.pdf | secondary: O13, C23 | evidence: default-profile
+- 18-kop_viiunikop_bolgesel_kalkinma_sempozyum_kitabi.pdf | secondary: O13, C23 | evidence: default-profile
+- 1_dr_tez.xlsx | secondary: O13, C23 | evidence: default-profile
+- 1_SELEN DEMIRTAS MUFREDAT_2.pdf | secondary: O13, C23 | evidence: default-profile
+- 2. 1041-Article Text-5073-1-10-20230101.pdf | secondary: O13, C23 | evidence: default-profile
+- 2. İİBF 2024 2025 BAHAR DERS GÖREVLENDİRMELER.docx | secondary: O13, C23 | evidence: default-profile
+- 2. Tutanak ve Belgeler copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 2003RiskMerkeziRaporu91349668 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 2003RiskMerkeziRaporu91349668.pdf | secondary: O13, C23 | evidence: default-profile
+- 2015LoftiHeraviPhd.pdf | secondary: O13, C23 | evidence: default-profile
+- 201_DERSLİKLERİN HAFTALIK DERS PROGRAMLARI.docx | secondary: O13, C23 | evidence: default-profile
+- 2022-2023 Bahar KKÜ İktisat Ders Programı(1).pdf | secondary: O13, C23 | evidence: default-profile
+- 2022-2023 Bahar KKÜ İktisat Ders Programı.pdf | secondary: O13, C23 | evidence: default-profile
+- 2022-23 Bahar İKTİSAT ARA SINAV PROGRAMI.doc | secondary: O13, C23 | evidence: default-profile
+- 2022-23 Bahar İKTİSAT BÜTÜNLEME SINAV PROGRAMI.doc | secondary: O13, C23 | evidence: default-profile
+- 2022-23 Bahar İKTİSAT MAZERET SINAV PROGRAMI.doc | secondary: O13, C23 | evidence: default-profile
+- 2022-23 Bahar İKTİSAT YIL SONU SINAV PROGRAMI.doc | secondary: O13, C23 | evidence: default-profile
+- 2022-ortalama-kar-ortulu.pdf | secondary: O13, C23 | evidence: default-profile
+- 2022-ortalama-sicaklik.pdf | secondary: O13, C23 | evidence: default-profile
+- 2022-yagis.pdf | secondary: O13, C23 | evidence: default-profile
+- 2022-Yili-Doga-Kaynakli-Olay-Istatistikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- 2022_Görev_Uzatma_MGÖ_AKADEMİK FAALİYET RAPORU.docx | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 BAHAR İİBF DERS İZLENCESİ copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 FAKÜLTE GÜZ DÖNEMİ BÜTÜNLEME GÖZETMEN ATAMALARI-2.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 FAKÜLTE GÜZ DÖNEMİ FİNAL İZLENCESİ (2) (1).doc | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 FAKÜLTE GÜZ DÖNEMİ GÖZETMEN ATAMALARI.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 GÜZ İİBF DERS PROGRAMI 22.09.2023.docx | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 Güz KKÜ İktisat Ders Programı-Mehmet MacBook Air.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 Güz KKÜ İktisat Ders Programı.docx | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 Güz KKÜ İktisat Ders Programı.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2023-2024 Güz KKÜ İktisat Ders Programı_6_9_23.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2023_24_BHR_KKÜ_İKT_DRS_PROG_SON.docx | secondary: O13, C23 | evidence: default-profile
+- 2023_24_İİBF_BAHAR_İKT_PRO_.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2023_akademik_Tesvik.pdf | secondary: O13, C23 | evidence: default-profile
+- 2023_yili_aralık_ayi_bordro_0.pdf | secondary: O13, C23 | evidence: default-profile
+- 2024 Bahar Dönemi Dersler 31.01.2024(Lisans).xlsx | secondary: O13, C23 | evidence: default-profile
+- 2024 Ödeme Planı.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 BAHAR İİBF  ÖĞRETİM ELEMANI GÖZETMENLİK SAYILARI VE YEDEK GÖZETMENLİK LİSTESİ.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 BAHAR İİBF DERS İZLENCESİ  29 ocak.docx | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 BAHAR İİBF DERS PROGRAMI.docx | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 BAHAR MUFREDATI copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 GÜZ İİBF DERS İZLENCESİ (2) (1)-1 - 30 Ağustos, 16_31 kopyası.docx | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 GÜZ İİBF DERS İZLENCESİ (2) (1)-1.docx | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 GÜZ İİBF FİNAL GÖZETMEN ATAMALARI (2) ss.pdf | secondary: O13, C23 | evidence: default-profile
+- 2024-2025 GÜZ  İİBF BÜTÜNLEME SINAV PROGRAMLARI (1).docx | secondary: O13, C23 | evidence: default-profile
+- 2024_T_rkiye_Bitkisel__retim__se_ilmi___r_nler_.csv | secondary: O13, C23 | evidence: default-profile
+- 2025 Yılı Akademik Çalışmalar ve Topluluk Faaliyetleri.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2025-01 Akademik Kurul ve EKLER.docx | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 BAHAR DÖNEMİ İİBF DERS PROGRAMLARI (11).docx | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 BAHAR DÖNEMİ İİBF DERS PROGRAMLARI.docx | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 Bahar Final Sinav Koordinatorleri_Yedek Gozetmen Gorevlendirilmesi Hakkinda.pdf | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 BAHAR VİZE EXCEL TABLOSU(Nihai).xlsx | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 Bahar Yariyili Final Sinav Programi ve Gorevlendirmeleri Hakkinda.pdf | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 GÜZ FİNAL GÖZETMEN ATAMALARI (1).xlsx | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 GÜZ İİBF DERS PROGRAMI 04.09.2025 .docx | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 GÜZ İİBF DERS PROGRAMI 29.08.2025.docx | secondary: O13, C23 | evidence: default-profile
+- 2025-2026 İİBF GÜZ  GÖZETMENLİK SAYILARI (TOPLAMLI) GÖKHAN.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2025091305-3569.pdf | secondary: O13, C23 | evidence: default-profile
+- 2025091305-3569_page1.pdf | secondary: O13, C23 | evidence: default-profile
+- 2026_BAHAR_YLS+DR_İKTİSAT_DERS LİSTESİ.xlsx | secondary: O13, C23 | evidence: default-profile
+- 2026_Görev_Uzatma_MGÖ_AKADEMİK FAALİYET RAPORU.docx | secondary: O13, C23 | evidence: default-profile
+- 2030_Raporu.pdf | secondary: O13, C23 | evidence: default-profile
+- 204_DERSLİKLERİN HAFTALIK DERS PROGRAMLARI.docx | secondary: O13, C23 | evidence: default-profile
+- 2100 Kaya Özdeşliği İklim Senaryoları.pdf | secondary: O13, C23 | evidence: default-profile
+- 211003ovEN.pdf | secondary: O13, C23 | evidence: default-profile
+- 21113358116_06_08_2022.pdf | secondary: O13, C23 | evidence: default-profile
+- 21113358116_06_08_2022_machinetranslation.pdf | secondary: O13, C23 | evidence: default-profile
+- 21113358116_07_03_2023.docx | secondary: O13, C23 | evidence: default-profile
+- 21113358116_21_08_2022.pdf | secondary: O13, C23 | evidence: default-profile
+- 21113358116_22_03_2022.pdf | secondary: O13, C23 | evidence: default-profile
+- 21113358116_24_10_2023 (English (American)).pdf | secondary: O13, C23 | evidence: default-profile
+- 21113358116_24_10_2023.pdf | secondary: O13, C23 | evidence: default-profile
+- 211332.ris | secondary: O13, C23 | evidence: default-profile
+- 211601625.pdf | secondary: O13, C23 | evidence: default-profile
+- 211_DERSLİKLERİN HAFTALIK DERS PROGRAMLARI.docx | secondary: O13, C23 | evidence: default-profile
+- 212_DERSLİKLERİN HAFTALIK DERS PROGRAMLARI.docx | secondary: O13, C23 | evidence: default-profile
+- 2209-A_arastirma_onerisi_formu_09102025.pdf | secondary: O13, C23 | evidence: default-profile
+- 2219_programi_burs_miktarlari_2023.pdf | secondary: O13, C23 | evidence: default-profile
+- 223211132.pdf | secondary: O13, C23 | evidence: default-profile
+- 22690418_RiskMerkeziRaporu.pdf | secondary: O13, C23 | evidence: default-profile
+- 2304_74577483.pdf | secondary: O13, C23 | evidence: default-profile
+- 23862Turkey_VNR_110719.pdf | secondary: O13, C23 | evidence: default-profile
+- 240161.pdf | secondary: O13, C23 | evidence: default-profile
+- 25_slide_webinar_presentation.pptx | secondary: O13, C23 | evidence: default-profile
+- 261825.pdf | secondary: O13, C23 | evidence: default-profile
+- 26617802.pdf | secondary: O13, C23 | evidence: default-profile
+- 266234.pdf | secondary: O13, C23 | evidence: default-profile
+- 270105319.pdf | secondary: O13, C23 | evidence: default-profile
+- 287747.pdf | secondary: O13, C23 | evidence: default-profile
+- 29.05.2023 Doktora Tezi (S.D.).docx | secondary: O13, C23 | evidence: default-profile
+- 299776.pdf | secondary: O13, C23 | evidence: default-profile
+- 2_SELEN DEMIRTAS TRANSKRIPT.pdf | secondary: O13, C23 | evidence: default-profile
+- 2a. Abdussamed Çelebi ÖDB-FRM-008 DGS İLE YERLEŞEN ÖĞRENCİLERİN MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- 3- Puan Tablosu - 2025.xlsx | secondary: O13, C23 | evidence: default-profile
+- 3-ArticleText-6-1-10-20200803.pdf | secondary: O13, C23 | evidence: default-profile
+- 3-s2.0-B9780080471631090160-main.pdf | secondary: O13, C23 | evidence: default-profile
+- 3. hafta (1) copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 3. ISTEC22_USTEK_22_SYMPOSIUM_ABSTRACT_BOOK.pdf | secondary: O13, C23 | evidence: default-profile
+- 3. TİK (FORM-ENS011) DOKTORA-SANATTA YETERLİK ÇALIŞMASI TEZ ARA RAPOR TUTANAK FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- 3. TİK Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- 3. TİK.pdf | secondary: O13, C23 | evidence: default-profile
+- 3. TİK.pptx | secondary: O13, C23 | evidence: default-profile
+- 30151830_basvuru-2022-2023.docx | secondary: O13, C23 | evidence: default-profile
+- 32019723q2_216_nengroo.pdf | secondary: O13, C23 | evidence: default-profile
+- 333308.pdf | secondary: O13, C23 | evidence: default-profile
+- 347222.pdf | secondary: O13, C23 | evidence: default-profile
+- 3485128.pdf | secondary: O13, C23 | evidence: default-profile
+- 363308.pdf | secondary: O13, C23 | evidence: default-profile
+- 377382.pdf | secondary: O13, C23 | evidence: default-profile
+- 381848.pdf | secondary: O13, C23 | evidence: default-profile
+- 39-Final+Article.pdf | secondary: O13, C23 | evidence: default-profile
+- 3aylık_tarım_gsyih_cari_ve_fiyat_endeksleri.xlsx | secondary: O13, C23 | evidence: default-profile
+- 3aylık_Tarım_gsyih_ve_ÜFE.xlsx | secondary: O13, C23 | evidence: default-profile
+- 3aylık_Tarım_gsyih_ve_ÜFE_vson.xlsx | secondary: O13, C23 | evidence: default-profile
+- 4-Mehmet Gökhan Özdemir copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 4. İklim Değişikliğinin Ekonomik Etkileri.pdf | secondary: O13, C23 | evidence: default-profile
+- 4. Koridor İktisat Böümü.docx | secondary: O13, C23 | evidence: default-profile
+- 4. Tik Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- 4. TİK.pptx | secondary: O13, C23 | evidence: default-profile
+- 4. TİK_kısa.pptx | secondary: O13, C23 | evidence: default-profile
+- 4. ve 5. Enerji Ekonomisi Araştırmaları.pdf | secondary: O13, C23 | evidence: default-profile
+- 40239459.pdf | secondary: O13, C23 | evidence: default-profile
+- 407358.pdf | secondary: O13, C23 | evidence: default-profile
+- 41408715.pdf | secondary: O13, C23 | evidence: default-profile
+- 415542.pdf | secondary: O13, C23 | evidence: default-profile
+- 44425.pdf | secondary: O13, C23 | evidence: default-profile
+- 445073.pdf | secondary: O13, C23 | evidence: default-profile
+- 446097.pdf | secondary: O13, C23 | evidence: default-profile
+- 4706-1-16735-1-10-20190226.pdf | secondary: O13, C23 | evidence: default-profile
+- 476691.pdf | secondary: O13, C23 | evidence: default-profile
+- 479604.pdf | secondary: O13, C23 | evidence: default-profile
+- 5. Tez İzleme Komitesi.pptx | secondary: O13, C23 | evidence: default-profile
+- 5. TIK Raporu-Mehmet MacBook Air.docx | secondary: O13, C23 | evidence: default-profile
+- 5. TIK Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- 509142737.pdf | secondary: O13, C23 | evidence: default-profile
+- 545673.pdf | secondary: O13, C23 | evidence: default-profile
+- 557090.pdf | secondary: O13, C23 | evidence: default-profile
+- 582360.pdf | secondary: O13, C23 | evidence: default-profile
+- 583182.pdf | secondary: O13, C23 | evidence: default-profile
+- 593483.pdf | secondary: O13, C23 | evidence: default-profile
+- 6-Üretici-Teorisi.pdf | secondary: O13, C23 | evidence: default-profile
+- 6. TIK Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- 6.tik.pptx | secondary: O13, C23 | evidence: default-profile
+- 6050_Zen_Kilavuzu_-_Katsuki_Sekida_Suat_Ertuzun_111 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 610466.pdf | secondary: O13, C23 | evidence: default-profile
+- 633482.pdf | secondary: O13, C23 | evidence: default-profile
+- 647988.ris | secondary: O13, C23 | evidence: default-profile
+- 661745.pdf | secondary: O13, C23 | evidence: default-profile
+- 663675.pdf | secondary: O13, C23 | evidence: default-profile
+- 684217.pdf | secondary: O13, C23 | evidence: default-profile
+- 685957.pdf | secondary: O13, C23 | evidence: default-profile
+- 688572.pdf | secondary: O13, C23 | evidence: default-profile
+- 691698.pdf | secondary: O13, C23 | evidence: default-profile
+- 697881.pdf | secondary: O13, C23 | evidence: default-profile
+- 6_Kaya_Yilmaz_Ozdemir.pdf | secondary: O13, C23 | evidence: default-profile
+- 7- İktisada_Giriş_Bölüm_7_Üretim_ve_Maliyetler.pptx | secondary: O13, C23 | evidence: default-profile
+- 7. TIK Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- 7.tik.pptx | secondary: O13, C23 | evidence: default-profile
+- 72-Article Text-147-2-10-20220328.pdf | secondary: O13, C23 | evidence: default-profile
+- 726716.pdf | secondary: O13, C23 | evidence: default-profile
+- 730262.pdf | secondary: O13, C23 | evidence: default-profile
+- 737709.pdf | secondary: O13, C23 | evidence: default-profile
+- 750851.ris | secondary: O13, C23 | evidence: default-profile
+- 755765036.pdf | secondary: O13, C23 | evidence: default-profile
+- 75701604_27nemutluozle.pdf | secondary: O13, C23 | evidence: default-profile
+- 75701604_27nemutluozlem.pdf | secondary: O13, C23 | evidence: default-profile
+- 765414.pdf | secondary: O13, C23 | evidence: default-profile
+- 779598.pdf | secondary: O13, C23 | evidence: default-profile
+- 782682.pdf | secondary: O13, C23 | evidence: default-profile
+- 783931.pdf | secondary: O13, C23 | evidence: default-profile
+- 792912.pdf | secondary: O13, C23 | evidence: default-profile
+- 7tik.pptx | secondary: O13, C23 | evidence: default-profile
+- 8 AI Prompts for Q1 article!  copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 8 AI Prompts for Q1 article! .pdf | secondary: O13, C23 | evidence: default-profile
+- 8- İktisada_Giriş_Bölüm_8_Tam Rekabet_Piyasası.pptx | secondary: O13, C23 | evidence: default-profile
+- 801594.pdf | secondary: O13, C23 | evidence: default-profile
+- 802555.pdf | secondary: O13, C23 | evidence: default-profile
+- 803608.pdf | secondary: O13, C23 | evidence: default-profile
+- 814176.pdf | secondary: O13, C23 | evidence: default-profile
+- 815539.pdf | secondary: O13, C23 | evidence: default-profile
+- 8186cdee2e1ad318499b970fe9af13cc.pdf | secondary: O13, C23 | evidence: default-profile
+- 822839.pdf | secondary: O13, C23 | evidence: default-profile
+- 823248.pdf | secondary: O13, C23 | evidence: default-profile
+- 833448774_mikro_iktisat_i.pdf | secondary: O13, C23 | evidence: default-profile
+- 8382-Zen_Yolu_Tasavvuf_Yolu-Osho-Metin_Bobaroghlu-2000-102s_ copy.pdf | secondary: O13, C23 | evidence: default-profile
+- 889626.pdf | secondary: O13, C23 | evidence: default-profile
+- 9. ULUSLARARASI GIDA, TARIM & VETERİNER BİLİMLERİ KONGRESİ; 03-05 Nisan 2026 _ Konya Gıda Tarım Üniversitesi, Konya.pdf | secondary: O13, C23 | evidence: default-profile
+- 9.pdf | secondary: O13, C23 | evidence: default-profile
+- 933419.pdf | secondary: O13, C23 | evidence: default-profile
+- 9725cfdd67beb51a1fa65a1afe0bf5a9682441e7d50924000b1502bd88b6c8e5.pdf | secondary: O13, C23 | evidence: default-profile
+- 973369.pdf | secondary: O13, C23 | evidence: default-profile
+- 978-3-319-57342-7.pdf | secondary: O13, C23 | evidence: default-profile
+- 9781464813290.pdf | secondary: O13, C23 | evidence: default-profile
+- 9781589060814-9781589060814.pdf | secondary: O13, C23 | evidence: default-profile
+- 9781668498385.pdf | secondary: O13, C23 | evidence: default-profile
+- _2025-2025 Bahar Ders Programı Reha YAŞAR.docx | secondary: O13, C23 | evidence: default-profile
+- __ktisad__ __ntihat Tarihimizin Ahlak ve Zihniyet Meseleleri[#8992]-8219.pdf | secondary: O13, C23 | evidence: default-profile
+- _K_kitap_b_l_m_.pdf | secondary: O13, C23 | evidence: default-profile
+- _KL_M_DE____KL___N_N_TARIMSAL_HASILA__ZER_NDEK__ET.pdf | secondary: O13, C23 | evidence: default-profile
+- _klim_De_i_ikli_i_ve_G____li_kisi__zerine_Sosyo_Ek (3).pdf | secondary: O13, C23 | evidence: default-profile
+- _Mehmet Gökhan Özdemir_ - _Google Akademik_.pdf | secondary: O13, C23 | evidence: default-profile
+- _stihdam__zerine_M_lahazalar.pdf | secondary: O13, C23 | evidence: default-profile
+- A review of theoretical frameworks of food system governance  and the search for food system sustainability.pdf | secondary: O13 | evidence: sustainab
+- a3.docx | secondary: O13, C23 | evidence: default-profile
+- A_Critical_Analysis_of_the_Effectiveness_of_Credit.pdf | secondary: O13, C23 | evidence: default-profile
+- AA_MGO_Relations between the European Union and Algeria after 2005_v2.docx | secondary: O13, C23 | evidence: default-profile
+- ABDULKADIR CAGLIN DERS MUAFİYET BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- ABDULLAH DOĞUHAN ÖZDEMİR - ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU-Mehmet MacBook Air.doc | secondary: O13, C23 | evidence: default-profile
+- ABDULLAH DOĞUHAN ÖZDEMİR - ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- ABDULLAH_DOĞUHAN_ÖZDEMİR_YAZ_OKULU.doc | secondary: O13, C23 | evidence: default-profile
+- Abdussamed Çelebi Ders İçerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Abdussamed Çelebi ÖDB-FRM-008 DGS İLE YERLEŞEN ÖĞRENCİLERİN MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- Abdussamed Çelebi Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- ABDÜLKADİR_YİĞİTEL_2_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- ABDÜLKADİR_YİĞİTEL_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- ABDÜLKADİR_YİĞİTEL_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU-Mehmet MacBook Air.docx | secondary: O13, C23 | evidence: default-profile
+- ABDÜLKADİR_YİĞİTEL_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- absolute-change-co2.csv | secondary: O13, C23 | evidence: default-profile
+- abstract.docx | secondary: O13, C23 | evidence: default-profile
+- Acceptance_LetteR_1077_SD.pdf | secondary: O13, C23 | evidence: default-profile
+- achieving-sustainable-development-goals-through-effective-domest-2018.pdf | secondary: O13 | evidence: sustainab
+- Achiransu Acharyya - Environmental Economics in Developing Countries_ Issues and Challenges-Routledge (2022).pdf | secondary: Q53 | evidence: environment
+- acpsa0425.xlsx | secondary: O13, C23 | evidence: default-profile
+- adaman2002.pdf | secondary: O13, C23 | evidence: default-profile
+- Adaptive_capacity_and_nutritional_status_of_househ.pdf | secondary: O13, C23 | evidence: default-profile
+- Adelheid Meutes-Judith Bossert-Gundelik Yaşamda Zen copy.pdf | secondary: O13, C23 | evidence: default-profile
+- AEYıldırım.pdf | secondary: O13, C23 | evidence: default-profile
+- Affiliation_over_Time.xlsx | secondary: O13, C23 | evidence: default-profile
+- AFSE_FEER_2010_2_.pdf | secondary: O13, C23 | evidence: default-profile
+- AG TFP BRICST.xlsx | secondary: O13, C23 | evidence: default-profile
+- AG_TFP_BRICST.xlsx | secondary: O13, C23 | evidence: default-profile
+- agtfp_ef.bib | secondary: O13, C23 | evidence: default-profile
+- AGTFP_EF_SON_SUNUM.xlsx | secondary: O13, C23 | evidence: default-profile
+- AGTFP_Türkiye_1990_2020.xlsx | secondary: O13, C23 | evidence: default-profile
+- AgTFPInternational2020.xlsx | secondary: O13, C23 | evidence: default-profile
+- AgTFPInternational2020_long.xlsx | secondary: O13, C23 | evidence: default-profile
+- AgTFPInternational2021_long.xlsx | secondary: O13, C23 | evidence: default-profile
+- ahlamahmaid.docx | secondary: O13, C23 | evidence: default-profile
+- Ahmet Gündoğdu Not Dilekçesi.docx | secondary: O13, C23 | evidence: default-profile
+- Aile Bütçesi.xlsx | secondary: O13, C23 | evidence: default-profile
+- airpod_fatura.pdf | secondary: O13, C23 | evidence: default-profile
+- Aissa.docx | secondary: O13, C23 | evidence: default-profile
+- Akademik Personel İletisim Bilgileri_İKTİSAT_Güz_2024.docx | secondary: O13, C23 | evidence: default-profile
+- Akademik Teşvik Puan Tablosu .xlsx | secondary: O13, C23 | evidence: default-profile
+- Akademik ve İdari Faaliyet Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- AKADEMİK TEŞVİK HUSUSUNDA DİKKAT EDİLECEK HUSUSLAR (6).pdf | secondary: O13, C23 | evidence: default-profile
+- AKADEMİK YAYIN TAKİP FORMU.xlsx | secondary: O13, C23 | evidence: default-profile
+- Akreditasyon Kurulu Değerlendirme Önerileri.docx | secondary: O13, C23 | evidence: default-profile
+- al-amin2016.pdf | secondary: O13, C23 | evidence: default-profile
+- Alan W.Watts-Zen Yolu copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Algeria/Algeria-Economic-Monitor-Restoring-the-Algerian-Economy-after-the-Pandemic copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Algeria/Benabdallah-Rabat07 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Algeria/CEZAYİR (1) copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Algeria/mpo-dza.pdf | secondary: O13, C23 | evidence: default-profile
+- Algeriaculture.pdf | secondary: O13, C23 | evidence: default-profile
+- Alindi-006266-b17UKJ19GNHP.pdf | secondary: O13, C23 | evidence: default-profile
+- ALİ OSMAN KILAVUZ YAZ OKULU NOT DONUSUMU.doc | secondary: O13, C23 | evidence: default-profile
+- ALPER EŞKİL YAZ OKULU NOT DONUSUMU.doc | secondary: O13, C23 | evidence: default-profile
+- ALPEREN_ÖZMEN_A_1_KURUMLAR ARASI YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- altinbas-universitesi-sertifika-sorgulama.pdf | secondary: O13, C23 | evidence: default-profile
+- American Economic Association_ JEL Codes.pdf | secondary: O13, C23 | evidence: default-profile
+- American Economic Association_ JEL Codes_vhiyerarşik.pdf | secondary: O13, C23 | evidence: default-profile
+- AMIS-2023122423_31_41.csv | secondary: O13, C23 | evidence: default-profile
+- AMIS-Türkiye-Wheat-2023062011_35_33.xlsx | secondary: O13, C23 | evidence: default-profile
+- AMIS-World-Maize-2023122423_34_43.xlsx | secondary: O13, C23 | evidence: default-profile
+- AMIS-World-Rice-2023122423_34_33.xlsx | secondary: O13, C23 | evidence: default-profile
+- AMIS-World-Soybean-2023122423_35_04.xlsx | secondary: O13, C23 | evidence: default-profile
+- AMIS-World-Wheat-2023122423_34_54.xlsx | secondary: O13, C23 | evidence: default-profile
+- An_Economic_Approach_on_Real_Estate_Acquisition_by.pdf | secondary: O13, C23 | evidence: default-profile
+- analizçıktı.docx | secondary: O13, C23 | evidence: default-profile
+- andersen2006.pdf | secondary: O13, C23 | evidence: default-profile
+- ANIL_TAŞYÜREK_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- ANINTR1.pdf | secondary: O13, C23 | evidence: default-profile
+- Annual Report-Mehmet Gokhan Ozdemir.pdf | secondary: O13, C23 | evidence: default-profile
+- Annual_Surface_Temperature_Change.csv | secondary: O13, C23 | evidence: default-profile
+- Annual_Total_Citations_per_Year.xlsx | secondary: O13, C23 | evidence: default-profile
+- Antalya_da_Yabanc_lar_n_Gayrimenkul_Edinimi__zerin.pdf | secondary: O13, C23 | evidence: default-profile
+- antle1995.pdf | secondary: O13, C23 | evidence: default-profile
+- anıl_transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- APznzaaZl24U2Hze8ZC4Ur0aDZHH59ye9bevwYtktkpcv8bsuThqpWUJL3g-x_n6KaB7Bmj5B8eum1LX0iswPX8bFGKZO7Q3qurIuzj4PvGu9SgSkWrmkL8ZimiNvv36aYIlheJ3eceyEXx0hpZ_mr5Z4qdBYTnMp0tTXwEYvR1MvW0raORv52tr_Cr-ct0vJz2Tpog7QmHa4URCzbRJJyEhuJVPdbR9vHNBBDQoU5s-3CSk.pdf | secondary: O13, C23 | evidence: default-profile
+- APznzabThhsdNAqe2Lf9L6juJPYqTvc0Bp_mnL-DGN6lqEA_VVyr2LLWv6PB1Yh6suGL1QA21aqFkptzqXl-ZFrlt5bALvkjUrZutyFEmhVuq1_q5AzqbmAlCGJARnsLD0g-HC1CavZlfCWAV_IHmtzzZ3e4Mi_ANCL7wMKTLZZKwRCZjYY8LKP_3SYwXCXvCkIkuJHQnZGQdW_TA6O8TTiJcdBf4v1iJ5AJ3EZmfUQG4K75.pdf | secondary: O13, C23 | evidence: default-profile
+- Aquaculture-in-coastal-urbanized-areas-A-comparative-review-of-the-challenges-posed-by-Harmful-Algal-Blooms_2022_Taylor-and-Francis-Ltd.pdf | secondary: O13, C23 | evidence: default-profile
+- ARA SINAV TASLAĞI.doc | secondary: O13, C23 | evidence: default-profile
+- Ara Sınav Toplantısı.docx | secondary: O13, C23 | evidence: default-profile
+- Arasınav DÖNEM.docx | secondary: O13, C23 | evidence: default-profile
+- Arasınav Programı Toplantısı .docx | secondary: O13, C23 | evidence: default-profile
+- Araştırmanın Amacı.docx | secondary: O13, C23 | evidence: default-profile
+- ARDL.bib | secondary: O13, C23 | evidence: default-profile
+- ARDL.pptx | secondary: O13, C23 | evidence: default-profile
+- ARDL_.pdf | secondary: O13, C23 | evidence: default-profile
+- ARDL_.pptx | secondary: O13, C23 | evidence: default-profile
+- ARDL_İklim_Değişikliği.pptx | secondary: O13, C23 | evidence: default-profile
+- ARDL_kriz_yılları.pptx | secondary: O13, C23 | evidence: default-profile
+- ardl_primary_consumption.pptx | secondary: O13, C23 | evidence: default-profile
+- ARDL_raporlanabilir.pptx | secondary: O13, C23 | evidence: default-profile
+- ARDL_Sustainability.pdf | secondary: O13 | evidence: sustainab
+- Aristotle_Cicero_and_cosmopolitan_political_though.pdf | secondary: O13, C23 | evidence: default-profile
+- Arş. Gör. M. Gökhan ÖZDEMİR copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Article ^N3.docx | secondary: O13, C23 | evidence: default-profile
+- article ^N4.docx | secondary: O13, C23 | evidence: default-profile
+- ARTICLE Integrating Environmental Economics into Economic Theory .docx | secondary: Q53 | evidence: environment
+- Aus J Agri   Res Econ - 2024 - Davies - A simple model of internal and external balance for resource‐rich developing.pdf | secondary: O13, C23 | evidence: default-profile
+- AUS_Country_Trends.csv | secondary: O13, C23 | evidence: default-profile
+- AUT_Country_Trends.csv | secondary: O13, C23 | evidence: default-profile
+- Author_Impact.xlsx | secondary: O13, C23 | evidence: default-profile
+- aylık_sıcaklık_cru-x0.5_timeseries_tas_timeseries_monthly_1901-2024_mean_historical_cru_ts4.09_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- BACH ÇİÇEKLERİ TESTİ (Esra Akyüz) copy.pdf | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y1995_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y1996_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y1997_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y1998_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y1999_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2000_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2001_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2002_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2003_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2004_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2005_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2006_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2007_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2008_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2009_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2010_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2011_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2012_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2013_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2014_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2015_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2016_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2017_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2018_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2019_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2020_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2021_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2022_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2023_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/BACI_HS92_Y2024_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/country_codes_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601 2/product_codes_HS92_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y1995_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y1996_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y1997_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y1998_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y1999_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2000_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2001_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2002_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2003_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2004_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2005_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2006_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2007_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2008_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2009_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2010_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2011_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2012_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2013_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2014_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2015_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2016_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2017_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2018_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2019_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2020_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2021_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2022_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2023_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/BACI_HS92_Y2024_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/country_codes_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- BACI_HS92_V202601/product_codes_HS92_V202601.csv | secondary: O13, C23 | evidence: default-profile
+- bahar dönemi derslik kullanımı.xlsx | secondary: O13, C23 | evidence: default-profile
+- BAHAR_KESKİN_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- BAHAR_KESKİN_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- baltagi2021.pdf | secondary: O13, C23 | evidence: default-profile
+- banuri2009.pdf | secondary: O13, C23 | evidence: default-profile
+- Baran Kartal 220306024.pptx | secondary: O13, C23 | evidence: default-profile
+- barbier2007.pdf | secondary: O13, C23 | evidence: default-profile
+- BARCA2023BOOKOFABSTRACTSDRAFT.pdf | secondary: O13, C23 | evidence: default-profile
+- BARCA2023FULLPAPERSERIESDRAFT.pdf | secondary: O13, C23 | evidence: default-profile
+- BARCA2023PROCEEDINGSBOOKOFABSTRACTS.pdf | secondary: O13, C23 | evidence: default-profile
+- BARCA2023PROCEEDINGSFULLPAPERSERIES (1).pdf | secondary: O13, C23 | evidence: default-profile
+- BARCA2023PROCEEDINGSFULLPAPERSERIES.pdf | secondary: O13, C23 | evidence: default-profile
+- barkan.pdf | secondary: O13, C23 | evidence: default-profile
+- barkin2006.pdf | secondary: O13, C23 | evidence: default-profile
+- basim_101329502.pdf | secondary: O13, C23 | evidence: default-profile
+- Başvurulan ÖDR - Kırıkkale Ün. İktisat Bölümü ÖDR 31.05.2025 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Baykoçlar_Qashqai.pdf | secondary: O13, C23 | evidence: default-profile
+- Baykoçlar_Qashqai_Plaka_tescil.pdf | secondary: O13, C23 | evidence: default-profile
+- beck2012.pdf | secondary: O13, C23 | evidence: default-profile
+- Bedavacılık ve İşbirliği İklim Değişikliği.pdf | secondary: O13, C23 | evidence: default-profile
+- beg2002.pdf | secondary: O13, C23 | evidence: default-profile
+- Belirsizlik Altında Salınım .docx | secondary: O13, C23 | evidence: default-profile
+- beril_transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- BERİL_ŞAHBAZ_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Beyza Uçar ders içerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Beyza Uçar_Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- Beyza Uçar ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- bfi-listen-for-forlag-2021.xlsx | secondary: O13, C23 | evidence: default-profile
+- Bibliometric Analysis on R  (Text Presentation).docx | secondary: O13, C23 | evidence: default-profile
+- Bibliometric Analysis on R by using Bibliometrix Package.docx | secondary: O13, C23 | evidence: default-profile
+- Bibliometric Analysis.docx | secondary: O13, C23 | evidence: default-profile
+- Bibliometric_Analysis_of_peer_reviewed_literature_ (1).pdf | secondary: O13, C23 | evidence: default-profile
+- Bibliometric_Analysis_of_peer_reviewed_literature_ (2.tarama).pdf | secondary: O13, C23 | evidence: default-profile
+- BiblioshinyReport-2023-11-29 (1).xlsx | secondary: O13, C23 | evidence: default-profile
+- BiblioshinyReport-2026-02-10.xlsx | secondary: O13, C23 | evidence: default-profile
+- bibtex litaratür.bib | secondary: O13, C23 | evidence: default-profile
+- bildiri2022.pdf | secondary: O13, C23 | evidence: default-profile
+- Bilgi Gönderimi _ Disiplin Soruşturması Sonucu _ Disiplin Cezası Verilmemesi (Doç. Dr. Seda BAYRAKDAR-Dr. Öğr. Üyesi Sara ONUR Ş.pdf | secondary: O13, C23 | evidence: default-profile
+- Bilgin, Özdemir ve Işık 2022 - Yenilenebilir Enerji ve Tarım.docx | secondary: O13, C23 | evidence: default-profile
+- Birlesmis-Milletler-Kalkinma-Programi-Insani-Gelisme-Endeksi-ve-Turkiye-Acisindan-Degerlendirme.pdf | secondary: O13, C23 | evidence: default-profile
+- BitcoinveAltcoinlerArasndakiliki.pdf | secondary: O13, C23 | evidence: default-profile
+- Bitkisel üretim toplam değeri.xlsx | secondary: O13, C23 | evidence: default-profile
+- blau2017.pdf | secondary: O13, C23 | evidence: default-profile
+- blei03a.pdf | secondary: O13, C23 | evidence: default-profile
+- book chapter ibrahim kaya.docx | secondary: O13, C23 | evidence: default-profile
+- BookChapter2023.pdf | secondary: O13, C23 | evidence: default-profile
+- boyd2009.pdf | secondary: O13, C23 | evidence: default-profile
+- bp-stats-review-2022-all-data.xlsx | secondary: O13, C23 | evidence: default-profile
+- Bradford_Law.xlsx | secondary: O13, C23 | evidence: default-profile
+- Bradford_Main_Information.xlsx | secondary: O13, C23 | evidence: default-profile
+- BRICS-T ÜLKELERİ EKOLOJİK AYAK İZİ ve TARIMSAL TOPLAM FAKTÖR VERİMLİLİĞİ- KONYA NEDENSELLİK TESTİ.docx | secondary: O13, C23 | evidence: default-profile
+- bromley1978.pdf | secondary: O13, C23 | evidence: default-profile
+- BURCU ÖZDEN YAZ OKULU NOT DONUSUMU.doc | secondary: O13, C23 | evidence: default-profile
+- Buse_Bağrıaçık_DGS_Muafiyet.doc | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.1 izmir 2020 gelir tablosu.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.1 izmir hastane 2019 bilanço.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.1 izmir hastane 2019 gelir tablosu.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.1. izmir 2020 bilanço.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.1. izmir 31.12.2021 bilanço.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.2 Izmir Bayraklı Hastane Yatırım ve Sağlık Hizmetleri A.Ş. - 31.12.2020 Signed.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.2.IFRS İzmir 2021.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.3 izmir 31.12.2021 mizan.xlsx | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.3 izmir hastane 31.12.2019 mizan.xlsx | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/F.2.3 İZMİR MİZAN_2020.PDF | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.2/İZMİR 31.12.2021 MUAVİN.XLSX | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/F.6.2 Izmir PPP - Restructuring Deed (Executed) 17.12.20.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/G.1.2 Izmir SPV Articles of Association _English Trans....pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/KREDİ LİMİT RİSK İTFA tümü_27.05.2022.xlsx | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.1 006283_4840892466_KURUMLAR_24_01012021-31122021.xm_BYN.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.1 İzmir_006276_4840892466_KURUMLAR_22_01012019-31122019.xm_BYN.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.1 İZMİR KURUMLAR 01012020-31122020. BYN.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.2 006283_4840892466_KURUMLAR_24_01012021-31122021.xm_THK.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.2 2020 Kurumlar Vergisi Tahakkukları.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.2 İzmir_006276_4840892466_KURUMLAR_22_01012019-31122019.xm_THK.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.2 İzmir_2020 Kurumlar Ödeme dekontu.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.1/V.1.2 İzmir_2021 Kurumlar Dekontu.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.2/V.2.1 İzmir - Yatırım Teşvik Belgesi -1.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/İzmir/V.2/V.2.1 İzmir - Yatırım Teşvik Belgesi -2.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.1 kocaeli 2020 bilanço.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.1 kocaeli 2020 gelir tablosu.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.1 kocaeli bilanço 31.12.2021.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.1 kocaeli hastane 2019 bilanço.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.1 kocaeli hastane 2019 gelir tablosu.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.1 kocaeli mizan 31.12.2021.xlsx | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.1 KOCAELİ GELİR TABLOSU 31.12.2021.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.2 IFRS Kocaeli 31.12.2021.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.2 Kocaeli Hastane Yatırım ve Sağlık Hizmetleri A.Ş. - 31.12.2020 Signed.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.3 kocaeli hastane 31.12.2019 mizan.xlsx | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/F.2.3 KOCAELİ_MİZAN 2020.PDF | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.2/kocaeli 31.12.2021 muavin.xlsx | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/F.6.2 Kocaeli PPP - Restructuring Deed (Executed) 17.12.20.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/G.1.2 Kocaeli SPV Articles of Association _English Translation....pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/KREDİ LİMİT RİSK İTFA tümü_27.05.2022.xlsx | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.1 006283_5650621574_KURUMLAR_24_01012021-31122021.xm_BYN.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.1 Kocaeli_006276_5650621574_KURUMLAR_22_01012019-31122019.xm_BYN.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.1 KOCAELİ KURUMLAR 01012020-31132020.BYN.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.2 006283_5650621574_KURUMLAR_24_01012021-31122021.xm_THK.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.2 2020 Kurumlar Dekontu.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.2 2020 Kurumlar Vergisi Tahakkukları.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.2 2021_Kurumlar Ödemesi.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.1/V.1.2 Kocaeli_006276_5650621574_KURUMLAR_22_01012019-31122019.xm_THK.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.2/V.2.1 Kocaeli-Yatırım Teşvik Belgesi-1.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Kocaeli/V.2/V.2.1 Kocaeli-Yatırım teşvik Belgesi-2.pdf | secondary: O13, C23 | evidence: default-profile
+- Büşra Belgeler/Türkerler Talep Belgeleri SPV/Talep Belgeleri Türkerler.xlsx | secondary: O13, C23 | evidence: default-profile
+- BÜŞRA GÜVEN VE AİLESİ TSS.pdf | secondary: O13, C23 | evidence: default-profile
+- Bölüm Başkanı- Öğrenci Toplantısı 2.docx | secondary: O13, C23 | evidence: default-profile
+- Bölüm Tanıtım Yazısı.docx | secondary: O13, C23 | evidence: default-profile
+- c0fb56206af556133a2109e305fb3e27de72ae1ad2d37b4b08c95e77ff1fedd6841c5771dd3ba640df596450d4c8b27ed2b47e58b514ec76431ade07bc29248e.pdf | secondary: O13, C23 | evidence: default-profile
+- c14007.pdf | secondary: O13, C23 | evidence: default-profile
+- CAER-02-2013-0034.pdf | secondary: O13, C23 | evidence: default-profile
+- calisma_grubu_2.xlsx | secondary: O13, C23 | evidence: default-profile
+- Calle-MexicosStrategicComparative-2016.pdf | secondary: O13, C23 | evidence: default-profile
+- CAN_Country_Trends.csv | secondary: O13, C23 | evidence: default-profile
+- cao2003.pdf | secondary: O13, C23 | evidence: default-profile
+- cb6033en.pdf | secondary: O13, C23 | evidence: default-profile
+- cb6810en.pdf | secondary: O13, C23 | evidence: default-profile
+- cb9180en.pdf | secondary: O13, C23 | evidence: default-profile
+- cc2909en.pdf | secondary: O13, C23 | evidence: default-profile
+- cc4943en.pdf | secondary: O13, C23 | evidence: default-profile
+- cc7014en.pdf | secondary: O13, C23 | evidence: default-profile
+- cc_dis_1001_1500.bib | secondary: O13, C23 | evidence: default-profile
+- cc_dis_1501_2000.bib | secondary: O13, C23 | evidence: default-profile
+- cc_dis_1_500.bib | secondary: O13, C23 | evidence: default-profile
+- cc_dis_2001_2500.bib | secondary: O13, C23 | evidence: default-profile
+- cc_dis_2501_2783.bib | secondary: O13, C23 | evidence: default-profile
+- cc_dis_501_1000.bib | secondary: O13, C23 | evidence: default-profile
+- CC_FD.pdf | secondary: O13, C23 | evidence: default-profile
+- CEPII - EQCHANGE.pdf | secondary: O13, C23 | evidence: default-profile
+- cer_prod_ardl_data.xlsx | secondary: O13, C23 | evidence: default-profile
+- cern.bib | secondary: O13, C23 | evidence: default-profile
+- Cevap Anahtarı.docx | secondary: O13, C23 | evidence: default-profile
+- Cezayir ve Türkiye_v2_taslak.docx | secondary: O13, C23 | evidence: default-profile
+- CHI_Country_Trends.csv | secondary: O13, C23 | evidence: default-profile
+- Chicago Devlet Üniversitesi.docx | secondary: O13, C23 | evidence: default-profile
+- Chingiz Aytmatov _ Kyrgyz Novelist, Poet & Diplomat _ Britannica.pdf | secondary: O13, C23 | evidence: default-profile
+- Christian J. Peters, Dawn Thilmany - Food Systems Modelling_ Tools for Assessing Sustainability in Food and Agriculture-Academic Press (2022).pdf | secondary: O13 | evidence: sustainab
+- cikti_Zal-2-do-Wytycznych_Formularz-danych-osobowych-uczestnika---ENGLISH-color.docx | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/__Contents.docx | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/A_For Instructional Courses/Citavi_6_Exercises.docx | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/A_For Instructional Courses/Citavi_6_Introduction.pptx | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/A_For Instructional Courses/Citavi_6_Slideshows.pdf | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/B_For Individual Study/Citavi_6_Analyzing_PDFs.pdf | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/B_For Individual Study/Citavi_6_Getting_Started.pdf | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/B_For Individual Study/Citavi_6_Writing_a_Research_Paper.pdf | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/C_Wallpaper/_About_Citavi_Wallpaper.pdf | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/C_Wallpaper/CITAVI_Wallpaper_16_9_EN.pptx | secondary: O13, C23 | evidence: default-profile
+- citavi_6_course_materials/C_Wallpaper/CITAVI_Wallpaper_3_4_EN.pptx | secondary: O13, C23 | evidence: default-profile
+- citaviii/Renewable/Renev/files/1005/Daube_Ulph_2016_Moral Behaviour, Altruism and Environmental Policy.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1010/Avoiding self organized extinction Toward a co evolutionary economics of sustainability.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renev/files/1012/J Public Economic Theory - 2009 - OSMANI - Toward Farsightedly Stable International Environmental Agreements.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1296/Stern_2004_The Rise and Fall of the Environmental Kuznets Curve.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1297/The-Rise-and-Fall-of-the-Environmental-Kuznets-CurveWorld-Development.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1299/Engel et al_2008_Designing payments for environmental services in theory and practice.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1318/A-review-on-circular-economy-The-expected-transition-to-a-balanced-interplay-of-environmental-and-economic-systemsJournal-of-Cleaner-Production.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1334/Tom Tietenberg, Lynne Lewis - Environmental and Natural Resource Economics-Routledge (2018).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1339/(Macmillan Texts in Economics) Nick Hanley, Jason F. Shogren, Ben White (auth.) - Environmental Economics in Theory and Practice-Macmillan Education UK (1997).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/1398/John C. Bergstrom, Alan Randall - Resource Economics_ An Economic Approach to Natural Resource and Environmental Policy_ An Economic Approach to Natural Resource and Environmental Policy, Fourth Editi.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/487/Horbach vd. - Sustainability and Innovation.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renev/files/570/Boly vd. - 2018 - Building a Resilient and Sustainable Agriculture i.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renev/files/901/Alauddin_Quiggin_2008_Agricultural intensification, irrigation and the environment in South Asia.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/923/Slavík_2007_Neoclassical economy in environmental protection.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/924/Neoclassical-economy-in-environmental-protectionPoliticka-Ekonomie.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/929/Horst Siebert - Economics of the Environment_ Theory and Policy-Springer (2008).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renev/files/957/Manuel A.J. Teehankee - Trade and Environment Governance at the World Trade Organization Committee on Trade and Environment-Wolters Kluwer z (2020).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1010/Avoiding self organized extinction Toward a co evolutionary economics of sustainability.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1299/Engel et al_2008_Designing payments for environmental services in theory and practice.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1318/A-review-on-circular-economy-The-expected-transition-to-a-balanced-interplay-of-environmental-and-economic-systemsJournal-of-Cleaner-Production.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/1334/Tom Tietenberg, Lynne Lewis - Environmental and Natural Resource Economics-Routledge (2018).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/487/Horbach vd. - Sustainability and Innovation.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/901/Alauddin_Quiggin_2008_Agricultural intensification, irrigation and the environment in South Asia.pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/Exported Items_3/files/929/Horst Siebert - Economics of the Environment_ Theory and Policy-Springer (2008).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/files/2960/Robert Zwahlen - Assessing the Environmental Impacts of Hydropower Projects (Environmental Earth Sciences)-Springer (2022).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/files/2995/Martin Kaltschmitt, Wolfgang Streicher, Andreas Wiese - Renewable Energy_ Technology, Economics and Environment-Springer (2007).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/files/2999/(Applied Environmental Science and Engineering for a Sustainable Future) Arindam Sinharoy, Piet N. L. Lens - Renewable Energy Technologies for Energy Efficient Sustainable Development-Springer (2022).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/files/3001/(Environmental and Resource Economics) Helmuth-M. Groscurth (auth.) - Long-Term Integration of Renewable Energy Sources into the European Energy System-Physica-Verlag Heidelberg (1998) (1).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/files/3008/Bent Sørensen (Auth.) - Renewable Energy. Physics, Engineering, Environmental Impacts, Economics and Planning- Academic Press  (2017).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/files/3010/(Routledge Explorations in Environmental Economics) Hisham M. Akhonbay - The Economics of Renewable Energy in the Gulf-Routledge (2018).pdf | secondary: Q53 | evidence: environment
+- citaviii/Renewable/Renewable Energy/files/3021/Hafner et al. - 2019 - Renewables for Energy Access and Sustainable Devel.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renewable Energy/files/3024/(IOP Series in Renewable and Sustainable Power) David Elliott - Renewables_ A Review Of Sustainable Energy Supply Options-IOP Publishing (2019).pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renewable Energy/files/3031/(Green Energy and Technology) Nicola Labanca (eds.) - Complex Systems and Social Practices in Energy Transitions_ Framing Energy Sustainability in the Time of Renewables-Springer International Publish.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renewable Energy/files/3056/Chel and Kaushik - 2011 - Renewable energy for sustainable agriculture.pdf | secondary: O13 | evidence: sustainab
+- citaviii/Renewable/Renewable Energy/files/3058/Thrän et al. - 2020 - Governance of sustainability in the German biogas .pdf | secondary: O13 | evidence: sustainab
+- CİHAN_DURMUŞ_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- CİHAN_DURMUŞ_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- claude token optimization github - Google'da Ara.pdf | secondary: O13, C23 | evidence: default-profile
+- COL_Country_Trends.csv | secondary: O13, C23 | evidence: default-profile
+- common1988.pdf | secondary: O13, C23 | evidence: default-profile
+- CONFERENCE PROGRAM-RSEP PARIS 2022.pdf | secondary: O13, C23 | evidence: default-profile
+- Contribution_922_final_a.pdf | secondary: O13, C23 | evidence: default-profile
+- COS_Country_Trends.csv | secondary: O13, C23 | evidence: default-profile
+- costanza1997.pdf | secondary: O13, C23 | evidence: default-profile
+- costanza2003.pdf | secondary: O13, C23 | evidence: default-profile
+- Coudert-Couharde-Crete.pdf | secondary: O13, C23 | evidence: default-profile
+- Countries_Production_Over_Time.xlsx | secondary: O13, C23 | evidence: default-profile
+- Country Strategic Opportunity Programme.pdf | secondary: O13, C23 | evidence: default-profile
+- Country_Production.xlsx | secondary: O13, C23 | evidence: default-profile
+- Courecon.docx | secondary: O13, C23 | evidence: default-profile
+- crotty's paper.docx | secondary: O13, C23 | evidence: default-profile
+- cru-x0.5_timeseries_pr,tas_timeseries_annual,monthly,seasonal_1901-2024_mean_historical_cru_ts4.09_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- cru-x0.5_timeseries_pr_timeseries_annual,monthly,seasonal_1901-2022_mean_historical_cru_ts4.07_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- cru-x0.5_timeseries_tas,tasmax,tasmin_timeseries_annual,monthly,seasonal_1901-2022_mean_historical_cru_ts4.07_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- cru-x0.5_timeseries_tas^Jtasmax^Jtasmin_timeseries_annual^Jmonthly^Jseasonal_1901-2022_mean_historical_cru_ts4.07_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- CS_YÖK-SİS bilgilerini teyit (dolduruldu, imzalı) (C. Samur) (3 Şubat 2026).pdf | secondary: O13, C23 | evidence: default-profile
+- CV Mahmoud Okasha.pdf | secondary: O13, C23 | evidence: default-profile
+- CV_Linkedin.pdf | secondary: O13, C23 | evidence: default-profile
+- CVP ANHTRI FİNAL.docx | secondary: O13, C23 | evidence: default-profile
+- Çevre ve İktisat (1).docx | secondary: O13, C23 | evidence: default-profile
+- Çevre ve İktisat (2).docx | secondary: O13, C23 | evidence: default-profile
+- Çevre ve İktisat I. Bölüm için.pdf | secondary: O13, C23 | evidence: default-profile
+- Çevre ve İktisat-Mehmet MacBook Air.docx | secondary: O13, C23 | evidence: default-profile
+- Çevre ve İktisat.docx | secondary: O13, C23 | evidence: default-profile
+- Çevre ve Sıfır Atık.pdf | secondary: O13, C23 | evidence: default-profile
+- çeyreklik_sıcaklık_cru-x0.5_timeseries_tas_timeseries_seasonal_1901-2024_mean_historical_cru_ts4.09_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- çeyreklik_yağış_cru-x0.5_timeseries_pr_timeseries_seasonal_1901-2024_mean_historical_cru_ts4.09_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- dagdeviren-2012-misalignment-under-different-exchange-rate-regimes-the-case-of-turkey (1).pdf | secondary: O13, C23 | evidence: default-profile
+- dagdeviren-2012-misalignment-under-different-exchange-rate-regimes-the-case-of-turkey.pdf | secondary: O13, C23 | evidence: default-profile
+- dasgupta1996.pdf | secondary: O13, C23 | evidence: default-profile
+- data-HI0nK.csv | secondary: O13, C23 | evidence: default-profile
+- data.csv | secondary: O13, C23 | evidence: default-profile
+- data_3.xlsx | secondary: O13, C23 | evidence: default-profile
+- Database_GVC_2018update_rev0323.csv | secondary: O13, C23 | evidence: default-profile
+- DATAMACLEA'26_Call_For_Papers (3) (4).docx | secondary: O13, C23 | evidence: default-profile
+- datamaclea26_ai_ecology.pdf | secondary: O13, C23 | evidence: default-profile
+- Davet Yazısı - Mehmet Gökhan Özdemir.pdf | secondary: O13, C23 | evidence: default-profile
+- Degisim Programlari Koordinatorleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Dekont.pdf | secondary: O13, C23 | evidence: default-profile
+- dekont_FAÖ_Emlak_vergisi.pdf | secondary: O13, C23 | evidence: default-profile
+- dekont_mrm_bld.pdf | secondary: O13, C23 | evidence: default-profile
+- delbo.pdf | secondary: O13, C23 | evidence: default-profile
+- deloma-osorio2017.pdf | secondary: O13, C23 | evidence: default-profile
+- DEN_Country_Trends.csv | secondary: O13, C23 | evidence: default-profile
+- depolu dükkan.pdf | secondary: O13, C23 | evidence: default-profile
+- Dergipark Performance Analysis of Participation Funds in the Context of Ethical Investment_v2.docx | secondary: O13, C23 | evidence: default-profile
+- Ders Kullanımı (İktisat-Ekonometri-İşletme).xlsx | secondary: O13, C23 | evidence: default-profile
+- Ders Programlarinin Hazirlanmasinda Dikkat Edilmesi Gereken Hususlar.pdf | secondary: O13, C23 | evidence: default-profile
+- derse gore kayit yapan ogrenciler.xlsx | secondary: O13, C23 | evidence: default-profile
+- dersler ve öğretim üyeleri.xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kapasite Mühendislik.docx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (2023-2024 Derslik Kullanımı - Ekonometri - İşletme - Sbky.xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (2023-2024 Derslik Kullanımı - İktisat - Ekonometri - İşletme - Ulus - SBKY) (1).xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (2023-2024 Derslik Kullanımı - İktisat - Ekonometri - İşletme - Ulus - SBKY).xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (2023-2024 Derslik Kullanımı - İktisat - Ekonometri - İşletme - Ulus - SBKY)_18092023 (2) (1).xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (2023-2024 Derslik Kullanımı - İktisat - Ekonometri - İşletme - Ulus).xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (2023-2024 Derslik Kullanımı - İktisat - Ekonometri).xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (2023-2024 Derslik Kullanımı - İktisat).xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Kullanımı (İktisat-Ekonometri-İşletme-Maliye).xlsx | secondary: O13, C23 | evidence: default-profile
+- Derslik Projeksiyon.docx | secondary: O13, C23 | evidence: default-profile
+- DERSLİK DEĞİŞİMİ DUYURUSU.docx | secondary: O13, C23 | evidence: default-profile
+- DersProgramı İlanı (C. Samur) (Şubat 2026) (1).doc | secondary: O13, C23 | evidence: default-profile
+- DersProgramı İlanı (C. Samur) (Şubat 2026).doc | secondary: O13, C23 | evidence: default-profile
+- DesteklenenSektorler.pdf | secondary: O13, C23 | evidence: default-profile
+- Devlet Malını Koruma ve Tasarruf Tedbirleri.pdf | secondary: O13, C23 | evidence: default-profile
+- DGS İLE YERLEŞEN ÖĞRENCİLERİN MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- Dice Modelinin Temel Yapısı.pptx | secondary: O13, C23 | evidence: default-profile
+- dietz1992.pdf | secondary: O13, C23 | evidence: default-profile
+- dietz1993.pdf | secondary: O13, C23 | evidence: default-profile
+- Dilara_Yüksel_YAZ OKULU NOT DONUSUMU.docx | secondary: O13, C23 | evidence: default-profile
+- Dinçer ve Şerbetci 04.09.2022.docx | secondary: O13, C23 | evidence: default-profile
+- Dinçer ve Şerbetci 05.09.2022 v2.docx | secondary: O13, C23 | evidence: default-profile
+- disano2006.pdf | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/1_Rapor Sunum Bildirimi.docx | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/2_Dizi Pusulası.docx | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/Ramazan Tolga Yıldız/90784-IktisatBol.Bsk.-RamazanTolgaYILDIZHk..pdf | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/Ramazan Tolga Yıldız/RAMAZANTOLGAYILDIZ.pdf | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/Ramazan Tolga Yıldız/Savunma Tutanağı.doc | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/Ramazan Tolga Yıldız/Savunma Tutanağı.docx | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/Ramazan Tolga Yıldız/SORUŞTURMA RAPORU.docx | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/Ramazan Tolga Yıldız/Tanık İfade Tutanağı .docx | secondary: O13, C23 | evidence: default-profile
+- Disiplin Soruşturması/YOKOGRENCIDISIPLINYONETMELIGI.pdf | secondary: O13, C23 | evidence: default-profile
+- diss.pdf | secondary: O13, C23 | evidence: default-profile
+- ditctab2022d6_en.pdf | secondary: O13, C23 | evidence: default-profile
+- DİLEK SARI.doc | secondary: O13, C23 | evidence: default-profile
+- doc01821920190902084336.pdf | secondary: O13, C23 | evidence: default-profile
+- document.pdf | secondary: O13, C23 | evidence: default-profile
+- Doğal Kaynaklar ve Çevre Ekonomisi Kitabı AÖF.pdf | secondary: O13, C23 | evidence: default-profile
+- Doktora Tez Literatür Tarama.docx | secondary: O13, C23 | evidence: default-profile
+- Doktora Tezi_METU-ESS_SaideSiminBayrktar (1).pdf | secondary: O13, C23 | evidence: default-profile
+- Doktora Tezi_METU-ESS_SaideSiminBayrktar.pdf | secondary: O13, C23 | evidence: default-profile
+- Doktora_Tez_Savunma_Sunumu.pptx | secondary: O13, C23 | evidence: default-profile
+- Doktora_Tez_Savunma_Sunumu_2.pptx | secondary: O13, C23 | evidence: default-profile
+- Doktora_Tez_Sunumu.pptx | secondary: O13, C23 | evidence: default-profile
+- Doktora_Tez_Sunumu_Düzeltilmiş.pptx | secondary: O13, C23 | evidence: default-profile
+- Doktora_Tez_Sunumu_Final.pptx | secondary: O13, C23 | evidence: default-profile
+- Dolinskaetal_2023VPublie.pdf | secondary: O13, C23 | evidence: default-profile
+- Dosya 1-İKTİSAT DERS  DAĞILIMLARI WORD.docx | secondary: O13, C23 | evidence: default-profile
+- Döviz Kuru Sapmaları ve Dış Dengeler_ Yükselen Piyasa Ekonomilerinden Yeni Kanıtlar.pdf | secondary: O13, C23 | evidence: default-profile
+- dp1240.pdf | secondary: O13, C23 | evidence: default-profile
+- dr_tez.xlsx | secondary: O13, C23 | evidence: default-profile
+- dr_veri_seti_yıllık.xlsx | secondary: O13, C23 | evidence: default-profile
+- drive-download-20230719T123106Z-001/200352016 Ziya TÜRE YAZ OKULU BAŞVURU DİLEKÇESİ - Ziya Türe.pdf | secondary: O13, C23 | evidence: default-profile
+- drive-download-20230719T123106Z-001/200352038YazokuluDilekcesi - Doğu ÖZD.pdf | secondary: O13, C23 | evidence: default-profile
+- drive-download-20230719T123106Z-001/başvuru dilekçesi - Berivan Sever.pdf | secondary: O13, C23 | evidence: default-profile
+- drive-download-20230719T123106Z-001/BAŞVURU DİLEKÇESİ - Berivan Sever-Mehmet MacBook Air.pdf | secondary: O13, C23 | evidence: default-profile
+- drive-download-20230719T123106Z-001/dilekçe -büşra deniz alevli- 170352065 - Deniz.pdf | secondary: O13, C23 | evidence: default-profile
+- drive-download-20230719T123106Z-001/DOC-20230706-WA0002. - Emine Türk.pdf | secondary: O13, C23 | evidence: default-profile
+- drive-download-20230719T123106Z-001/OzelOgrenci Yönergesinin5. Maddesine göre Bursa Uludag Universitesi - Tuna Doğa Dursun.pdf | secondary: O13, C23 | evidence: default-profile
+- dunyada-insani-gelis.pdf | secondary: O13, C23 | evidence: default-profile
+- e-bordro-sorgulama (1).pdf | secondary: O13, C23 | evidence: default-profile
+- e-bordro-sorgulama.pdf | secondary: O13, C23 | evidence: default-profile
+- e4e340c2-b769-431f-9a6a-4c914208b551DILEK SARI TRNASKRIPT.pdf | secondary: O13, C23 | evidence: default-profile
+- ebe3665e8d81865dad6bcf961bdda97a.pdf | secondary: O13, C23 | evidence: default-profile
+- EBSCO-FullText-10_01_2025.pdf | secondary: O13, C23 | evidence: default-profile
+- ecbwp0920.pdf | secondary: O13, C23 | evidence: default-profile
+- Ecem_Cengiz_Aytmatov.docx | secondary: O13, C23 | evidence: default-profile
+- economic-analysis-of-environmental-impacts-1994.pdf | secondary: Q53 | evidence: environment
+- Economic_Recovery_thought_Corporate_Entrepreneursh.pdf | secondary: O13, C23 | evidence: default-profile
+- economies-13-00065.pdf | secondary: O13, C23 | evidence: default-profile
+- Economist_Impact_GFSI_2022_Global_Report_Sep_2022.pdf | secondary: O13, C23 | evidence: default-profile
+- EFFECTOFANTHROPOGENICGLOBALWARMINGANDINSECURITYON.pdf | secondary: O13, C23 | evidence: default-profile
+- EGE 10. SOSYAL BİLİMLER TAM METİN KİTABI CİLT 2_compressed copy.pdf | secondary: O13, C23 | evidence: default-profile
+- ek - İKT günlük ders sayısı dağılımı.docx | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Cengiz Samur.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Fatma Pınar Eşsiz.docx | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Hacı Bayram Işık.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Mehmet Dikkaya.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Mehmet Gökhan Özdemir.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Mustafa Ünver.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Nazan Şahbaz Kılınç.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Nimet Varlık.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Onur Bilgin.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Sara Onur.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Uğur Yıldırım.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI Zaim Reha Yaşar.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI_Dikkaya.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI_Nimet Varlık.doc | secondary: O13, C23 | evidence: default-profile
+- ek 1- DERS PROGRAMI_zaim_reha_yaşar.doc | secondary: O13, C23 | evidence: default-profile
+- ek 2- İetisim bilgileri-İKTİSAT.docx | secondary: O13, C23 | evidence: default-profile
+- EK 2. İİBF 2025 2026 BAHAR DERS GÖREVLENDİRMELER son.docx | secondary: O13, C23 | evidence: default-profile
+- Ek Sınav 1 İzlencesi  İKTİSAT (SHAH).doc | secondary: O13, C23 | evidence: default-profile
+- Ek Sınav 1 İzlencesi  İKTİSAT.doc | secondary: O13, C23 | evidence: default-profile
+- Ek Sınav 2 İzlencesi  İKTİSAT.doc | secondary: O13, C23 | evidence: default-profile
+- EK-1 SINAV PROGRAMI.docx | secondary: O13, C23 | evidence: default-profile
+- EK-1......xlsx | secondary: O13, C23 | evidence: default-profile
+- Ek-1.pdf | secondary: O13, C23 | evidence: default-profile
+- Ek_1_Analiz_Ulke_Listesi.xlsx | secondary: O13, C23 | evidence: default-profile
+- EKC/1-s2.0-S0048969718331930-main.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/1-s2.0-S0048969723010999-main.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/1-s2.0-S014098831830272X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/1-s2.0-S0301421514006272-main.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/1-s2.0-S0301421517307255-main.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/1-s2.0-S030147972101001X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/1-s2.0-S096014812200605X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/A-review-of-trends-and-drivers-of-greenhouse-gas-emissions-by-sector-from-1990-to-2018_2021_IOP-Publishing-Ltd.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/A-systematic-review-of-the-evidence-on-decoupling-of-GDP-resource-use-and-GHG-emissions-part-II-Synthesizing-the-insights_2020_Institute-of-Physics-Publishing-helencravenioporg.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/Environmental-economic-and-social-consequences-of-the-oil-palm-boom_2020_Annual-Reviews-Inc.pdf | secondary: Q53 | evidence: environment
+- EKC/Global-impacts-of-human-mineral-malnutrition_2010_.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/Green-revolution-Impacts-limits-andthe-path-ahead_2012_.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/Gridded-emissions-of-air-pollutants-for-the-period-19702012-within-EDGAR-v432_2018_Copernicus-GmbH-infocopernicusorg.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/Production-diversity-and-dietary-diversity-in-smallholder-farm-households_2015_National-Academy-of-Sciences.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/Rice-straw-burning-a-review-on-its-global-prevalence-and-the-sustainable-alternatives-for-its-effective-mitigation_2021_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf | secondary: O13 | evidence: sustainab
+- EKC/Scientists-warning-on-affluence_2020_Nature-Research.pdf | secondary: O13, C23 | evidence: default-profile
+- EKC/sustainability-13-06260-v2.pdf | secondary: O13 | evidence: sustainab
+- EKC/The-food-environment-its-effects-on-dietary-consumption-and-potential-for-measurement-within-agriculturenutrition-interventions_2015_Kluwer-Academic-Publishers.pdf | secondary: Q53 | evidence: environment
+- EKC/The-global-burden-of-disease-attributable-to-high-body-mass-index-in-195-countries-and-territories-19902017-An-analysis-of-the-Global-Burden-of-Disease-Study_2020_Public-Library-of-Science.pdf | secondary: O13, C23 | evidence: default-profile
+- ekilebilir arazi ve daimi tohum alanı.xlsx | secondary: O13, C23 | evidence: default-profile
+- Ekonometri Vize 21-22 Bahar.docx | secondary: O13, C23 | evidence: default-profile
+- Ekonomik Kalk__nma ve ____birli__i __rg__t__ne __ye __lkelelerin  2006 Y__l__ __nsani Geli__mi__lik D__zeylerinin Analizi.[#211332]-184968.pdf | secondary: O13, C23 | evidence: default-profile
+- EKONOMİ VE SİYASET İLİŞKİSİ BÜTÜNLEME SINAVI.docx | secondary: O13, C23 | evidence: default-profile
+- Elfstrom-GallagherReview.pdf | secondary: O13, C23 | evidence: default-profile
+- Elicit - Anti-Colonial Struggles in Sub-Saharan Africa - Report.pdf | secondary: O13, C23 | evidence: default-profile
+- Emissions_Totals_E_All_Data_(Normalized)/Emissions_Totals_E_All_Data_(Normalized).csv | secondary: O13, C23 | evidence: default-profile
+- Emissions_Totals_E_All_Data_(Normalized)/Emissions_Totals_E_AreaCodes.csv | secondary: O13, C23 | evidence: default-profile
+- Emissions_Totals_E_All_Data_(Normalized)/Emissions_Totals_E_Elements.csv | secondary: O13, C23 | evidence: default-profile
+- Emissions_Totals_E_All_Data_(Normalized)/Emissions_Totals_E_Flags.csv | secondary: O13, C23 | evidence: default-profile
+- Emissions_Totals_E_All_Data_(Normalized)/Emissions_Totals_E_ItemCodes.csv | secondary: O13, C23 | evidence: default-profile
+- Emissions_Totals_E_All_Data_(Normalized)/Emissions_Totals_E_Sources.csv | secondary: O13, C23 | evidence: default-profile
+- EMİNE SULTAN ŞEN (ösS).docx | secondary: O13, C23 | evidence: default-profile
+- Enabiz-Tahlilleri (1) 27 mart 2026.pdf | secondary: O13, C23 | evidence: default-profile
+- Enabiz-Tahlilleri (1) 27 mayıs 2025.pdf | secondary: O13, C23 | evidence: default-profile
+- Enabiz-Tahlilleri (1) Sağlık Ocağı.pdf | secondary: O13, C23 | evidence: default-profile
+- Enabiz-Tahlilleri (1).pdf | secondary: O13, C23 | evidence: default-profile
+- Enabiz-Tahlilleri.pdf | secondary: O13, C23 | evidence: default-profile
+- energies-12-04590-v2.pdf | secondary: O13, C23 | evidence: default-profile
+- energies-18-00434.pdf | secondary: O13, C23 | evidence: default-profile
+- energies-18-04836.pdf | secondary: O13, C23 | evidence: default-profile
+- Enerji Ekonomisi Araştırmaları.pdf | secondary: O13, C23 | evidence: default-profile
+- Enerji ve Çevre (Kitabın Başlıkları).docx | secondary: O13, C23 | evidence: default-profile
+- Enerji ve Çevre Tablo.docx | secondary: O13, C23 | evidence: default-profile
+- ENERJİ EKONOMİSİ ARAŞTIRMALARI (1).pdf | secondary: O13, C23 | evidence: default-profile
+- ENERJİ EKONOMİSİ ARAŞTIRMALARI KİTAP PROJESİ BİLGİ NOTU.pdf | secondary: O13, C23 | evidence: default-profile
+- ENFLASYON VE YOKSULLAŞMA ÇAĞDAŞ SEFERİHİSAR FORUM.docx | secondary: O13, C23 | evidence: default-profile
+- english1993.pdf | secondary: O13, C23 | evidence: default-profile
+- ENS-FRM-019 HATALI NOT DÜZELTME DİLEKÇESİ.doc | secondary: O13, C23 | evidence: default-profile
+- Environment_Emissions_intensities_E_All_Data_(Normalized)/Environment_Emissions_intensities_E_All_Data_(Normalized).csv | secondary: Q53 | evidence: environment
+- Environment_Emissions_intensities_E_All_Data_(Normalized)/Environment_Emissions_intensities_E_AreaCodes.csv | secondary: Q53 | evidence: environment
+- Environment_Emissions_intensities_E_All_Data_(Normalized)/Environment_Emissions_intensities_E_Elements.csv | secondary: Q53 | evidence: environment
+- Environment_Emissions_intensities_E_All_Data_(Normalized)/Environment_Emissions_intensities_E_Flags.csv | secondary: Q53 | evidence: environment
+- Environment_Emissions_intensities_E_All_Data_(Normalized)/Environment_Emissions_intensities_E_ItemCodes.csv | secondary: Q53 | evidence: environment
+- Environmental Economics.bib | secondary: Q53 | evidence: environment
+- Environmental effects of trade openness  what role do institutions have .pdf | secondary: Q53 | evidence: environment
+- environmental-economics-and-the-international-economy-2003.pdf | secondary: Q53 | evidence: environment
+- EPH716007.pdf | secondary: O13, C23 | evidence: default-profile
+- epi2022policymakerssummary.pdf | secondary: O13, C23 | evidence: default-profile
+- Erasmus KA131 Personel Ders Verme Hareketliliği.pdf | secondary: O13, C23 | evidence: default-profile
+- Erasmus Kota Dağılım Raporu - Anlaşmalar - EWP - EUC - Erasmus+ Online Başvuru ve Yönetim Sistemi - Uluslararası İlişkiler Ofisi - Anadolu Üniversitesi.pdf | secondary: O13, C23 | evidence: default-profile
+- erasmus+ anlaşamalı üniversiteler.pptx | secondary: O13, C23 | evidence: default-profile
+- erasmus+ IIA.pdf | secondary: O13, C23 | evidence: default-profile
+- Erica Stewart - One Week Spanish Mastery_ The Complete Beginner's Guide to Learning Spanish in just 1 Week (2022).pdf | secondary: O13, C23 | evidence: default-profile
+- esmanur_ders_içerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- esmanur_transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- ESMANUR_ŞAHİN_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Esra Kalkan AKTS DÜZELTME.docx | secondary: O13, C23 | evidence: default-profile
+- Esra Kalkan Müfredat Durumu.pdf | secondary: O13, C23 | evidence: default-profile
+- eurostat.pdf | secondary: O13, C23 | evidence: default-profile
+- EVDS.xlsx | secondary: O13, C23 | evidence: default-profile
+- eviewssonuçlar.docx | secondary: O13, C23 | evidence: default-profile
+- Evolution-of-the-international-regulation-of-plant-pests-and-challenges-for-future-plant-health_2010_.pdf | secondary: O13, C23 | evidence: default-profile
+- evrak_.pdf | secondary: O13, C23 | evidence: default-profile
+- Exchange_Rate_Misalignment_and_Growth_Ol.pdf | secondary: O13, C23 | evidence: default-profile
+- Exchange_rate_risk,_contract_e.pdf | secondary: O13, C23 | evidence: default-profile
+- External_Vulnerabilities_and_Exchange_Ra.pdf | secondary: O13, C23 | evidence: default-profile
+- f1b0b29c-en.pdf | secondary: O13, C23 | evidence: default-profile
+- FA.docx | secondary: O13, C23 | evidence: default-profile
+- fa_1.bib | secondary: O13, C23 | evidence: default-profile
+- fa_10_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- FA_1_bib.bib | secondary: O13, C23 | evidence: default-profile
+- fa_2.bib | secondary: O13, C23 | evidence: default-profile
+- FA_2_bib.bib | secondary: O13, C23 | evidence: default-profile
+- fa_2_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- fa_3.bib | secondary: O13, C23 | evidence: default-profile
+- FA_3_bib.bib | secondary: O13, C23 | evidence: default-profile
+- fa_3_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- fa_4_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- fa_5_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- fa_6_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- fa_7_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- fa_8_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- fa_9_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- FA_AgTFPInternational2021.xlsx | secondary: O13, C23 | evidence: default-profile
+- FA_Çevre ve İktisat.docx | secondary: O13, C23 | evidence: default-profile
+- FA_hakemli.docx | secondary: O13, C23 | evidence: default-profile
+- FA_İçindekiler_Öneri.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGO_1_bib.bib | secondary: O13, C23 | evidence: default-profile
+- FA_MGO_ghg-emissions.csv | secondary: O13, C23 | evidence: default-profile
+- FA_MGO_HBI_EA_TFV_SIIRT_SUNU _ENG.pptx | secondary: O13, C23 | evidence: default-profile
+- FA_MGO_HBI_TAM_EF_AGTFP_SIIRT_v1.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGO_HBI_TAM_EF_AGTFP_SIIRT_v_son.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGO_tr_efe_sdi_ARDL_Düzce.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_AGTFP_EF_SİİRT_BİLDİRİ.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_AGTFP_EF_SİİRT_ÖZET.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_AGTFP_EF_SİİRT_ÖZET.pdf | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_AGTFP_EF_SİİRT_TAM_METİN_BİLDİRİ.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_AGTFP_EF_SİİRT_TAM_METİN_BİLDİRİ_vson.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_EA_TFV_SİİRT_SUNU.pptx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_EA_TFV_SİİRT_SUNU_ENG.pptx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_TAM_EF_AGTFP_SİİRT.docx | secondary: O13, C23 | evidence: default-profile
+- FA_MGÖ_HBI_TAM_EF_AGTFP_SİİRT.pdf | secondary: O13, C23 | evidence: default-profile
+- fa_savedrecs.bib | secondary: O13, C23 | evidence: default-profile
+- FA_SD_MGO_g7_goc_co2_b_son.docx | secondary: O13, C23 | evidence: default-profile
+- FA_vson.docx | secondary: O13, C23 | evidence: default-profile
+- FA_vson.pdf | secondary: O13, C23 | evidence: default-profile
+- FA_vson_.pdf | secondary: O13, C23 | evidence: default-profile
+- Faaliyet Raporu 2024-2025.docx | secondary: O13, C23 | evidence: default-profile
+- Faaliyet Raporu 2024-2025_İKTİSAT.docx | secondary: O13, C23 | evidence: default-profile
+- Faaliyet Raporu İstek Bilgileri son.docx | secondary: O13, C23 | evidence: default-profile
+- Fakulte Koordinatorleri.pdf | secondary: O13, C23 | evidence: default-profile
+- fao_fbs.csv.csv | secondary: O13, C23 | evidence: default-profile
+- fao_makine.csv | secondary: O13, C23 | evidence: default-profile
+- FAOSTAT_data_8-15-2021.xlsx | secondary: O13, C23 | evidence: default-profile
+- FAOSTAT_data_en_10-15-2023.csv | secondary: O13, C23 | evidence: default-profile
+- FAÖ Selçuklu Dekont.pdf | secondary: O13, C23 | evidence: default-profile
+- FAÖ2_gib-vergi-borcu-sorgu.pdf | secondary: O13, C23 | evidence: default-profile
+- FAÖ_gib-vergi-borcu-sorgu.pdf | secondary: O13, C23 | evidence: default-profile
+- Fatma Aysun Özdemir IVD-Alindi-bEJ8NMZHKK6.pdf | secondary: O13, C23 | evidence: default-profile
+- fd_tr.xlsx | secondary: O13, C23 | evidence: default-profile
+- fenvs-11-1301995.pdf | secondary: O13, C23 | evidence: default-profile
+- FERAGATNAME.docx | secondary: O13, C23 | evidence: default-profile
+- fertilizers.xlsx | secondary: O13, C23 | evidence: default-profile
+- FETHİYE HOCA ÖNERİLERİ.docx | secondary: O13, C23 | evidence: default-profile
+- FILE_fs9b07znardze.xlsx | secondary: O13, C23 | evidence: default-profile
+- final gözetmen final word copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Final Programı Toplantısı.docx | secondary: O13, C23 | evidence: default-profile
+- Final Sınav Programı.docx | secondary: O13, C23 | evidence: default-profile
+- Final_Koordinatör Listesi VE GÖREVLERİ.docx | secondary: O13, C23 | evidence: default-profile
+- fischer2013.pdf | secondary: O13, C23 | evidence: default-profile
+- FİNAL DUYURULAR.docx | secondary: O13, C23 | evidence: default-profile
+- FOMC/fomcminutes20220126.pdf | secondary: O13, C23 | evidence: default-profile
+- FOMC/fomcminutes20220316.pdf | secondary: O13, C23 | evidence: default-profile
+- FOMC/fomcminutes20220504.pdf | secondary: O13, C23 | evidence: default-profile
+- FOMC/fomcminutes20220615.pdf | secondary: O13, C23 | evidence: default-profile
+- FOMC/monetary20220126a1.pdf | secondary: O13, C23 | evidence: default-profile
+- FOMC/monetary20220316a1.pdf | secondary: O13, C23 | evidence: default-profile
+- FOMC/monetary20220504a1.pdf | secondary: O13, C23 | evidence: default-profile
+- FOMC/monetary20220615a1.pdf | secondary: O13, C23 | evidence: default-profile
+- Food Science   Nutrition - 2025 - Jadoon - The Impact of Environmental Degradation on Agricultural Crop Productivity  The.pdf | secondary: Q53 | evidence: environment
+- Forecasting.pdf | secondary: O13, C23 | evidence: default-profile
+- FPE DERS PROGRAMI.docx | secondary: O13, C23 | evidence: default-profile
+- fpe Haftalık Program ve Görüşme Saatleri.docx | secondary: O13, C23 | evidence: default-profile
+- FPE YOKSİS.docx | secondary: O13, C23 | evidence: default-profile
+- Frank-BuiltDestabilizationA-1960.pdf | secondary: O13, C23 | evidence: default-profile
+- French_Influence.pdf | secondary: O13, C23 | evidence: default-profile
+- Fritjof Capra - Fiziğin Taosu copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Frontiers_Template.docx | secondary: O13, C23 | evidence: default-profile
+- full_Main_Information.xlsx | secondary: O13, C23 | evidence: default-profile
+- fullrefman.pdf | secondary: O13, C23 | evidence: default-profile
+- FullReport.pdf | secondary: O13, C23 | evidence: default-profile
+- FURKAN YÜREK.doc | secondary: O13, C23 | evidence: default-profile
+- G-7 Ülkelerinde Göç, Karbon Emisyonu ve Ekonomik Büyüm copy.pdf | secondary: O13, C23 | evidence: default-profile
+- g7.pdf | secondary: O13, C23 | evidence: default-profile
+- GALİP AFŞIN RAVANOĞLU.pdf | secondary: O13, C23 | evidence: default-profile
+- Ge_ici_Koruma_Kapsam_nda_Bulunan_Suriyeli_lerin_So.pdf | secondary: O13, C23 | evidence: default-profile
+- Gelir Gider Tablom.xlsx | secondary: O13, C23 | evidence: default-profile
+- GEN__ERKEK_BOKS_M_LL__TAKIMI_SPORCULAR__LE_AMAT_R_.pdf | secondary: O13, C23 | evidence: default-profile
+- Genel Tarım Sektörü Raporu.pdf | secondary: O13, C23 | evidence: default-profile
+- GENÇ ERKEK BOKS MİLLİ TAKIMI SPORCULAR İLE AMATÖR DÜZEYDE BOKS YAPAN SPORULARIN FİZİKSEL.docx | secondary: O13, C23 | evidence: default-profile
+- Gerrit Lohmann (auth.), Robert A. Meyers Ph. D. (eds.) - Encyclopedia of Complexity and Systems Science-Springer-Verlag New York (2009).pdf | secondary: O13, C23 | evidence: default-profile
+- ghg-emissions.csv | secondary: O13, C23 | evidence: default-profile
+- ghg-emissions.xlsx | secondary: O13, C23 | evidence: default-profile
+- ghosh.pdf | secondary: O13, C23 | evidence: default-profile
+- Gizem Koç yaz okulu not dönüşüm formu.docx | secondary: O13, C23 | evidence: default-profile
+- Gizem KOÇ_akts düzeltme.docx | secondary: O13, C23 | evidence: default-profile
+- gizem koç_ders  silinmesi.docx | secondary: O13, C23 | evidence: default-profile
+- Gizem KOÇ_mezuniyet.docx | secondary: O13, C23 | evidence: default-profile
+- Global Assessment Report on Disaster Risk Reduction 2022_0.pdf | secondary: O13, C23 | evidence: default-profile
+- Globalisation-in-the-time-of-COVID19-Repositioning-Africa-to-meet-the-immediate-and-remote-challenges_2020_BioMed-Central-Ltd-infobiomedcentralcom.pdf | secondary: O13, C23 | evidence: default-profile
+- Gmail - Abonelik iptali.pdf | secondary: O13, C23 | evidence: default-profile
+- GncelAratrmalarerevesindeklimDeiiklii.pdf | secondary: O13, C23 | evidence: default-profile
+- GO.docx | secondary: O13, C23 | evidence: default-profile
+- godfray2010.pdf | secondary: O13, C23 | evidence: default-profile
+- Gokhan_25-RSEP_Bibliometric Analysis.docx | secondary: O13, C23 | evidence: default-profile
+- GOKHAN_8-TIK_TUTANAK copy.pdf | secondary: O13, C23 | evidence: default-profile
+- GOKHAN_8. TIK ARA RAPOR copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Gokhan_Bayram_MIRDEC_Bibliometric Analysis.docx | secondary: O13, C23 | evidence: default-profile
+- Gokhan_R_Bibliometrix_Web_of_Science_v2.pptx | secondary: O13, C23 | evidence: default-profile
+- gokhananliz200825b.docx | secondary: O13, C23 | evidence: default-profile
+- Gorev Suresi Gökhan Özdemir copy.pdf | secondary: O13, C23 | evidence: default-profile
+- GorevSuresi.pdf | secondary: O13, C23 | evidence: default-profile
+- gowdy2005.pdf | secondary: O13, C23 | evidence: default-profile
+- Gökhan hocam veri.xlsx | secondary: O13, C23 | evidence: default-profile
+- gökhan tik.docx | secondary: O13, C23 | evidence: default-profile
+- GÖRKEM_KARAKUZU_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- Gözetmen Atamaları 21-22 Bahar Vize copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Gözetmen Atamam 21-22 Bahar Vize.pdf | secondary: O13, C23 | evidence: default-profile
+- granger69.pdf | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Countries_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_gdp_source_d_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_gdp_source_o_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_legal_new_d_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_legal_new_o_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_legal_old_d_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_legal_old_o_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_pop_source_d_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_pop_source_o_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_rta_coverage_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- Gravity_rds_V202211/Label_rta_type_V202211.csv | secondary: O13, C23 | evidence: default-profile
+- green1990.pdf | secondary: O13, C23 | evidence: default-profile
+- GŞ Aldığı dersler .pdf | secondary: O13, C23 | evidence: default-profile
+- gunsoy.pdf | secondary: O13, C23 | evidence: default-profile
+- Gül_Muslu_Ders_İçerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Gül_Muslu_DGS_Muafiyet.doc | secondary: O13, C23 | evidence: default-profile
+- Gül_Muslu_Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- Gülçin Şahin Müfredat Durumu.pdf | secondary: O13, C23 | evidence: default-profile
+- Gülçin_ obs.kku.edu.tr_oibs_acd_index.aspx#.pdf | secondary: O13, C23 | evidence: default-profile
+- Günlük Hayatta Su Verimliliği.pdf | secondary: O13, C23 | evidence: default-profile
+- Günlük Hayatta ve Kamu Binalarında Enerji Verimliliği.pdf | secondary: O13, C23 | evidence: default-profile
+- GWMO_report.pdf | secondary: O13, C23 | evidence: default-profile
+- Görev_Dağılımı_Mobil Bankacılık Uygulamaları - Taslak.docx | secondary: O13, C23 | evidence: default-profile
+- Görme Engelli Sınav Şablon.docx | secondary: O13, C23 | evidence: default-profile
+- Gözetmen Atamam 21-22 Bahar Vize.xlsx | secondary: O13, C23 | evidence: default-profile
+- güz dönemi ders programı.xlsx | secondary: O13, C23 | evidence: default-profile
+- h2015.pdf | secondary: O13, C23 | evidence: default-profile
+- Hacı Bayram Işık.pdf | secondary: O13, C23 | evidence: default-profile
+- Haftalık Program ve Görüşme Saatleri.docx.pdf | secondary: O13, C23 | evidence: default-profile
+- Haftalık Program ve Görüşme Saatleri.docx | secondary: O13, C23 | evidence: default-profile
+- hahn1989.pdf | secondary: O13, C23 | evidence: default-profile
+- Hakem Kopyası (İNCELENDI) - İklim Değişikliğinin Ekonomik Etkileri.docx | secondary: O13, C23 | evidence: default-profile
+- Hakemlik/1814466-AF-T0-V0-20251031135711.doc | secondary: O13, C23 | evidence: default-profile
+- Hakemlik/Hakem » DergiPark.pdf | secondary: O13, C23 | evidence: default-profile
+- Hakemlik/hakem_raporu_1814466.docx | secondary: O13, C23 | evidence: default-profile
+- HamiAlpas-Kalknma-2018.pdf | secondary: O13, C23 | evidence: default-profile
+- hamilton.pdf | secondary: O13, C23 | evidence: default-profile
+- Handbook.pdf | secondary: O13, C23 | evidence: default-profile
+- Hande.pdf | secondary: O13, C23 | evidence: default-profile
+- hanjra2010.pdf | secondary: O13, C23 | evidence: default-profile
+- Harç Listesi.pdf | secondary: O13, C23 | evidence: default-profile
+- harry2013.pdf | secondary: O13, C23 | evidence: default-profile
+- Hasan Bozkurt 220306033 (1).pptx | secondary: O13, C23 | evidence: default-profile
+- Hasan Bozkurt 220306033.pdf | secondary: O13, C23 | evidence: default-profile
+- Hasan Bozkurt 220306033.pptx | secondary: O13, C23 | evidence: default-profile
+- hatalı not dilekçe formu.doc | secondary: O13, C23 | evidence: default-profile
+- havza-2022.pdf | secondary: O13, C23 | evidence: default-profile
+- Hazar_Eşlik_ÖSS_Muafiyet.docx | secondary: O13, C23 | evidence: default-profile
+- Hazar_Eşlik_Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- HBI2_KKÜ-FRM-019 HATALI NOT DİLEKÇESİ.doc | secondary: O13, C23 | evidence: default-profile
+- HBI_KKÜ-FRM-019 HATALI NOT DİLEKÇESİ.doc | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_24.01.2026_Teslim.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_08.01.2026_tezo_onay_çıktı.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_10.01.2026_savunma_sonrası.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_12.11.2025_vson.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_17.09.2025_vson.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_18.11.2025_satılmışbey.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_18.11.2025_son düzeltme.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_18.11.2025_tez_yazım_klavuzu.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_18.11.2025_vson.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_20.01.2026_savunma_sonrası.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_20.05.2025.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_20.05.2025_vson.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_22.10.2025_vson.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_22.10.2025_vson.docx.pdf | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_25.09.2025_vson.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_26.01.2026_TESLİM DÜZELTMESİ.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_27.01.2026_TESLİM DÜZELTMESİ.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_Bolum_1 ve 2 ve 3 .docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_Bolum_1 ve 2.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_Bolum_1.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_Bölüm_II.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Doktora_Tezi_rev_part-1.docx | secondary: O13, C23 | evidence: default-profile
+- HBI_MGO_Konya_Tam_Metin_Taslak.pdf | secondary: O13, C23 | evidence: default-profile
+- HBI_YOKSIS_Bilgi_Kontrol_Formu_ IIBF.docx | secondary: O13, C23 | evidence: default-profile
+- hdr2019overview-turkishpdf.pdf | secondary: O13, C23 | evidence: default-profile
+- HEIDWP16-2017.pdf | secondary: O13, C23 | evidence: default-profile
+- helbing2021.pdf | secondary: O13, C23 | evidence: default-profile
+- helm1990.pdf | secondary: O13, C23 | evidence: default-profile
+- Hesap_Hareketleri_MEHMET_GOKHAN_OZDEMIR_20260306_105720123.pdf | secondary: O13, C23 | evidence: default-profile
+- HesapBildirimCetveli_16155634_E1A3E3C2B42D4F87.pdf | secondary: O13, C23 | evidence: default-profile
+- HGS Müşteri Hizmetleri Resmi İnternet Sitesi.pdf | secondary: O13, C23 | evidence: default-profile
+- hinshelwoodbasics.pdf | secondary: O13, C23 | evidence: default-profile
+- Hizmet Dengesi Denemeleri.xlsx | secondary: O13, C23 | evidence: default-profile
+- hk-Mehmet MacBook Air.docx | secondary: O13, C23 | evidence: default-profile
+- hk.docx | secondary: O13, C23 | evidence: default-profile
+- hk_2023_proje.docx | secondary: O13, C23 | evidence: default-profile
+- hk_4ncu_böl_UNDP-TR-TECHNICAL-NOTES-PHDI-TR.pdf | secondary: O13, C23 | evidence: default-profile
+- HK_Ithenticate.docx | secondary: O13, C23 | evidence: default-profile
+- HK_Ithenticate.pdf | secondary: O13, C23 | evidence: default-profile
+- hk_MOR_CEVAP.docx | secondary: O13, C23 | evidence: default-profile
+- hk_sarı_cvp.docx | secondary: O13, C23 | evidence: default-profile
+- hk_son.docx | secondary: O13, C23 | evidence: default-profile
+- hk_SON_RÖTUŞ.docx | secondary: O13, C23 | evidence: default-profile
+- hornsby2016.pdf | secondary: O13, C23 | evidence: default-profile
+- Household-livelihoods-and-conflict-with-wildlife-in-communitybased-conservation-areas-across-northern-Tanzania_2016_Cambridge-University-Press-Journals_subscriptionscupcamacuk.pdf | secondary: O13, C23 | evidence: default-profile
+- How_Deep_is_the_European_Unions_Economic_and_Poli.pdf | secondary: O13, C23 | evidence: default-profile
+- I5188E.pdf | secondary: O13, C23 | evidence: default-profile
+- IBArchive-a784f3ca-7a77-4a54-bf30-a0e1e35fa86a.pdf | secondary: O13, C23 | evidence: default-profile
+- ICCA.pdf | secondary: O13, C23 | evidence: default-profile
+- IIBF 20212022 Bahar Vize Program.docx | secondary: O13, C23 | evidence: default-profile
+- IIBF 20212022 Bahar Vize Program.pdf | secondary: O13, C23 | evidence: default-profile
+- iii_tarim_orman_surasi__sura_kitabi.pdf | secondary: O13, C23 | evidence: default-profile
+- ijoem-02-2020-0192.pdf | secondary: O13, C23 | evidence: default-profile
+- ik_Arge_Veri_zarf.pptx | secondary: O13, C23 | evidence: default-profile
+- ik_ithenticate.pdf | secondary: O13, C23 | evidence: default-profile
+- Iklim Degisikligi ile Mucadeleye Yonelik Calismalara Iliskin Bilgi Talebi.pdf | secondary: O13, C23 | evidence: default-profile
+- iklim/cc_dis_1001_1500.bib | secondary: O13, C23 | evidence: default-profile
+- iklim/cc_dis_1501_2000.bib | secondary: O13, C23 | evidence: default-profile
+- iklim/cc_dis_1_500.bib | secondary: O13, C23 | evidence: default-profile
+- iklim/cc_dis_2001_2500.bib | secondary: O13, C23 | evidence: default-profile
+- iklim/cc_dis_2501_2783.bib | secondary: O13, C23 | evidence: default-profile
+- iklim/cc_dis_501_1000.bib | secondary: O13, C23 | evidence: default-profile
+- Iklim_Tarim_ARDL_Sunumu.pptx | secondary: O13, C23 | evidence: default-profile
+- IKT 20222023 GÜZ Arasınav Program Taslak.docx | secondary: O13, C23 | evidence: default-profile
+- IKT 20222023 GÜZ Arasınav Program.docx | secondary: O13, C23 | evidence: default-profile
+- IKTISAT BOLUMU ARASINAV OGRENCI SAYILARI copy.pdf | secondary: O13, C23 | evidence: default-profile
+- IKTISAT BOLUMU ARASINAV OGRENCI SAYILARI.xlsx | secondary: O13, C23 | evidence: default-profile
+- IKTISAT BÜTÜNLEME PROGRAMI.doc | secondary: O13, C23 | evidence: default-profile
+- ikvetarım.pdf | secondary: O13, C23 | evidence: default-profile
+- ilan.xlsx | secondary: O13, C23 | evidence: default-profile
+- ilker daşdan Mezuniyet Onay.docx | secondary: O13, C23 | evidence: default-profile
+- index (1).pdf | secondary: O13, C23 | evidence: default-profile
+- index.pdf | secondary: O13, C23 | evidence: default-profile
+- Indicators-of-Banking-Fragility-in-India-An-Empirical-Test_2012_Sage-Publications-India-Pvt-Ltd.pdf | secondary: O13, C23 | evidence: default-profile
+- indir (1).pdf | secondary: O13, C23 | evidence: default-profile
+- indir (2).pdf | secondary: O13, C23 | evidence: default-profile
+- indir.pdf | secondary: O13, C23 | evidence: default-profile
+- industry-40-2021.pdf | secondary: O13, C23 | evidence: default-profile
+- innovations-in-sustainable-agriculture-2019.pdf | secondary: O13 | evidence: sustainab
+- Inputs_LandUse_E_All_Data_(Normalized)/Inputs_LandUse_E_All_Data_(Normalized).csv | secondary: O13, C23 | evidence: default-profile
+- Inputs_LandUse_E_All_Data_(Normalized)/Inputs_LandUse_E_AreaCodes.csv | secondary: O13, C23 | evidence: default-profile
+- Inputs_LandUse_E_All_Data_(Normalized)/Inputs_LandUse_E_Elements.csv | secondary: O13, C23 | evidence: default-profile
+- Inputs_LandUse_E_All_Data_(Normalized)/Inputs_LandUse_E_Flags.csv | secondary: O13, C23 | evidence: default-profile
+- Inputs_LandUse_E_All_Data_(Normalized)/Inputs_LandUse_E_ItemCodes.csv | secondary: O13, C23 | evidence: default-profile
+- intal-2023-current-account-imbalance-and-exchange-rate-policy.pdf | secondary: O13, C23 | evidence: default-profile
+- Integrating Environmental Economics into Economic Theory.docx | secondary: Q53 | evidence: environment
+- Intention Letter.docx | secondary: O13, C23 | evidence: default-profile
+- InternationalGraduateResearchSymposium-IGRS2024.pdf | secondary: O13, C23 | evidence: default-profile
+- introduction-economics-and-environmental-policy.pdf | secondary: Q53 | evidence: environment
+- Investment_CapitalStock_E_All_Data_(Normalized)/Investment_CapitalStock_E_All_Data_(Normalized).csv | secondary: O13, C23 | evidence: default-profile
+- Investment_CapitalStock_E_All_Data_(Normalized)/Investment_CapitalStock_E_AreaCodes.csv | secondary: O13, C23 | evidence: default-profile
+- Investment_CapitalStock_E_All_Data_(Normalized)/Investment_CapitalStock_E_Elements.csv | secondary: O13, C23 | evidence: default-profile
+- Investment_CapitalStock_E_All_Data_(Normalized)/Investment_CapitalStock_E_Flags.csv | secondary: O13, C23 | evidence: default-profile
+- Investment_CapitalStock_E_All_Data_(Normalized)/Investment_CapitalStock_E_ItemCodes.csv | secondary: O13, C23 | evidence: default-profile
+- IPCC 7. Degerlendirme Dongusu Calisma Grubu raporlarina yazar olarak katki saglamak isteyen uzmanlarin basvuru sureci (1).pdf | secondary: O13, C23 | evidence: default-profile
+- IPCC 7. Degerlendirme Dongusu Calisma Grubu raporlarina yazar olarak katki saglamak isteyen uzmanlarin basvuru sureci.pdf | secondary: O13, C23 | evidence: default-profile
+- istatistiklerle_turkiye.pdf | secondary: O13, C23 | evidence: default-profile
+- ISTEC 22_USTEK_22_SYMPOSIUM_ABSTRACT_BOOK.pdf | secondary: O13, C23 | evidence: default-profile
+- ISTEC22_USTEK_22_SYMPOSIUM_ABSTRACT_BOOK.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-b1E16JILFSMH.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-b1FE80GXJ73E.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-b3OPYH5PZS0L.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-b3VBA6C8UA8D.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-b5M5L3PXTF81.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-bEQ0ZOEVX2S.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-bP1D9WZVE07.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-bP1DLR6JPUV.pdf | secondary: O13, C23 | evidence: default-profile
+- IVD-Alindi-bPFIK2QFVJR.pdf | secondary: O13, C23 | evidence: default-profile
+- İBRAHİM TOPÇU YAZ OKULU NOT DONUSUMU.doc | secondary: O13, C23 | evidence: default-profile
+- İçindekiler .docx | secondary: O13, C23 | evidence: default-profile
+- İGM_1_Rapor Sunum Bildirimi.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF 20212022 Bahar Vize Programı.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF 2025 Bahar Bütünleme Öğretim Elemanı Gözetmenlik Sayıları ve Yedek Gözetmenlik Listesi 10.07.2025.xlsx | secondary: O13, C23 | evidence: default-profile
+- İİBF 2025 Bahar Vize Gözetmen Atamaları 07.04.2025 (2).pdf | secondary: O13, C23 | evidence: default-profile
+- İİBF 2025 Bahar Vize Sınav Programı 23.03.2025.xlsx | secondary: O13, C23 | evidence: default-profile
+- İİBF 2025 Bahar Vize Sınav Programı 25.03.2025.xlsx | secondary: O13, C23 | evidence: default-profile
+- İİBF 2025 Bahar Vize Öğretim Elemanı Gözetmenlik Sayıları ve Yedek Gözetmenlik Listesi 23.05.2025.xlsx | secondary: O13, C23 | evidence: default-profile
+- İİBF 2025 Bahar Vize Öğretim Elemanı Gözetmenlik Sayıları ve Yedek Gözetmenlik Listesi 28.05.2025.xlsx | secondary: O13, C23 | evidence: default-profile
+- İİBF 2122 Bahar BÜTÜNLEME Sınav Programı_saatli.doc | secondary: O13, C23 | evidence: default-profile
+- İİBF 2122 Bahar Final Sınav Programı.doc | secondary: O13, C23 | evidence: default-profile
+- İİBF 2122 Bahar Final Sınav Programı_saatli.doc | secondary: O13, C23 | evidence: default-profile
+- İİBF Bahar Ara Sınav İzlenceleri 17.3.2025.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF Bahar Ara Sınav İzlenceleri 24.3.2025.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF Bahar Ara Sınav İzlenceleri 25.3.2025.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF Bahar Ara Sınav İzlenceleri 27.3.2025.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF Bahar Bütünleme Sınav Programı.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF Bahar Bütünleme Sınav Programı 10.07.2025.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF GÜNLÜK ORTALAMA ÖĞRENCİ SAYILARI TAHMİNİ-ORTALAMA (1) (2) (2).xlsx | secondary: O13, C23 | evidence: default-profile
+- İİBF Güz Dönem Ara Sınav İzlencesi.docx | secondary: O13, C23 | evidence: default-profile
+- İİBF Kayıt Yaptırmayanlar.xlsx | secondary: O13, C23 | evidence: default-profile
+- İİBF_BÜTÜNLEME_SINAV_PROGRAMI.doc | secondary: O13, C23 | evidence: default-profile
+- İİBF_BÜTÜNLEME_SINAV_PROGRAMI.pdf | secondary: O13, C23 | evidence: default-profile
+- İİBF_BÜTÜNLEME_SINAV_PROGRAMI_vson.doc | secondary: O13, C23 | evidence: default-profile
+- İİBF_BÜTÜNLEME_SINAV_PROGRAMI_vson.pdf | secondary: O13, C23 | evidence: default-profile
+- İİBF_İLAN_SINIFSIZ_BÜTÜNLEME_SINAV_PROGRAMI.pdf | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliği Azaltım Stratejisi ve Eylem Planı (2024-2030).pdf | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliği Ekonomik Etkileri.pptx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliği ve Tarım.pdf | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğine Uyum Stratejisi ve Eylem Plan_ 2024-2030.pdf | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Ekonomik Etkileri_v6.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Tarımsal Katma Değer Üzerine Etkisi Türkiye Üzerine Bir Uygulama SON.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliği Çalışmaları.xlsx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Ekonomik Etkileri.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Ekonomik Etkileri_Hakem_Duzeltme.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Ekonomik Etkileri_v1.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Ekonomik Etkileri_v4.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Ekonomik Etkileri_vson.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Gölgesinde Temel İktisadi Bir Sorun 11.09.2022 dipnot ekli.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Gölgesinde Temel İktisadi Bir Sorun.docx | secondary: O13, C23 | evidence: default-profile
+- İklim Değişikliğinin Tarımsal Katma Değer Üzerine Etkisi Türkiye Üzerine Bir Uygulama.docx | secondary: O13, C23 | evidence: default-profile
+- İklim_Değişikliğinin_Tarımsal_Katma_Değer_Üzerindeki_Etkisi_Türkiye_Üzerine_ARDL_Analizi.pptx | secondary: O13, C23 | evidence: default-profile
+- İklim_değişikliği_verileri.xlsx | secondary: O13, C23 | evidence: default-profile
+- İKLİM DEĞİŞİKLİĞİNİN TARIM ÜZERİNDEKİ ETKİSİ TÜRKİYE ÜZERİNE ARDL ANALİZİ.docx | secondary: O13, C23 | evidence: default-profile
+- İKLİM DEĞİŞİKLİĞİNİN TARIM ÜZERİNDEKİ ETKİSİ TÜRKİYE ÜZERİNE ARDL ANALİZİ.pdf | secondary: O13, C23 | evidence: default-profile
+- İKT - Zorunlu Tablolar.xlsx | secondary: O13, C23 | evidence: default-profile
+- İkt YL FİİLİ PROGRAM.docx | secondary: O13, C23 | evidence: default-profile
+- İkt YL PROGRAM.docx | secondary: O13, C23 | evidence: default-profile
+- İKT_202223_FİNAL_GÜZ_PROG.doc | secondary: O13, C23 | evidence: default-profile
+- İKT_2023_24_GÜZ_ARASINAV_İZLENCE.doc | secondary: O13, C23 | evidence: default-profile
+- İKT_BHR_PROG.docx | secondary: O13, C23 | evidence: default-profile
+- İKT_BÜTÜNLEME_SINAV_TASLAĞI.doc | secondary: O13, C23 | evidence: default-profile
+- İktisat  Mezun Öğrenci Transkript Analizi.xlsx | secondary: O13, C23 | evidence: default-profile
+- İktisat Akreditasyon Görevlendirme Tablosu.docx | secondary: O13, C23 | evidence: default-profile
+- İktisat Bölümü Etkinlik Takip Listesi (Yanıtları).xlsx | secondary: O13, C23 | evidence: default-profile
+- İktisat Bölümü_Telafi Dersi Programı.docx | secondary: O13, C23 | evidence: default-profile
+- İktisat Müfredatı.pdf | secondary: O13, C23 | evidence: default-profile
+- İktisat_.pdf | secondary: O13, C23 | evidence: default-profile
+- İktisat_20212022_Bahar_Vize_sınav_programı.doc | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT 2024-2025 EK SINAV 1 PROGRAMI KVKK.docx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT 2024-2025 EK SINAV 2 PROGRAMI KVKK.docx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT 2025-25 BAHAR GUNLUK DERS DAGILIMI 25-26 BAHAR DONEMI.docx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT 2025-26 BAHAR BÖL. BAŞK. YAZILACAK- GÜNLÜK DERS DAĞILIMLARI HK._8348878.docx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT 2122 Bahar BÜTÜNLEME Sınav Programı_saatli.doc | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT BÖLÜMÜ DERS PROGRAMI.xlsx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT ÖDR Raporu_15_05_2024.docx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT_2024-2025 Akademik Faaliyet Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT_2024-25 GÜZ BÜTÜNLEME SINAVI İZLENCESİ.docx | secondary: O13, C23 | evidence: default-profile
+- İKTİSAT_2024-25 GÜZ DÖNEM SONU SINAV İZLENCESİ.docx | secondary: O13, C23 | evidence: default-profile
+- İleri Mikro İktisat, 2. Sunum, Oligopoly.pptx | secondary: O13, C23 | evidence: default-profile
+- İlker DAŞDAN_akts düzeltme copy.pdf | secondary: O13, C23 | evidence: default-profile
+- İlker DAŞDAN_akts düzeltme.docx | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_0fq47m9rdosci_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_0m9woi278nnid_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_40ejwtr8ni94t_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_8i5vvvt10a5p2_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_8xw58dojq9izs_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_93mv8c0joqbw2_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_a7ggb34mdyrto_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_b427q7a4zhgx9_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_cft7bdr57hk75_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_hzy6vzc978s69_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_k91o9xc0ryrfr_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_nnithoiqk8azx_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_o27zikgdg90qv_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_q0j66y39cqqd0_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_s2y705rga246c_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_s35z8pnac4u1f_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_u6xb9w7kqvokx_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İlt_ mezun durumda olan son sınıflar/FILE8397_vs6rhe8o8xzoe_8397_7.pdf | secondary: O13, C23 | evidence: default-profile
+- İLYAS_ALPEREN_APAYDIN_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- İLYAS_ALPEREN_APAYDIN_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- İÖ_Derse_Kayıtlı Öğrenci Sayısı.xlsx | secondary: O13, C23 | evidence: default-profile
+- İsa_İstatistik.xlsx | secondary: O13, C23 | evidence: default-profile
+- İSMAİL_ÖZKAN_ALSAN_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- İSMAİL_YALÇIN_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- İSMAİL_YALÇIN_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- İstatistik_Okur_Yazarlığı.pdf | secondary: O13, C23 | evidence: default-profile
+- İşletme Bölümü Ders Programı 23-24 Güz.xlsx | secondary: O13, C23 | evidence: default-profile
+- İŞLETME SINAV PROGRAMI (SON).doc | secondary: O13, C23 | evidence: default-profile
+- İÖ.xlsx | secondary: O13, C23 | evidence: default-profile
+- jadee-10-2022-0215.pdf | secondary: O13, C23 | evidence: default-profile
+- jeremy-munday-introducing-translation-studies-theories-and-applications-routledge-2016-1-YffV.pdf | secondary: O13, C23 | evidence: default-profile
+- jes-07-2017-0181.pdf | secondary: O13, C23 | evidence: default-profile
+- jrfm-18-00078-v2.pdf | secondary: O13, C23 | evidence: default-profile
+- Jüri_Soruları_ve_Sunumdaki_Slayt_Eşleştirmesi.pdf | secondary: O13, C23 | evidence: default-profile
+- Jüri_Soruları_ve_Tez_Bölümleri_Haritalama_Tablosu.pdf | secondary: O13, C23 | evidence: default-profile
+- jwc0122256.pdf | secondary: O13, C23 | evidence: default-profile
+- Kabul Mektubu.docx | secondary: O13, C23 | evidence: default-profile
+- Kabul Mektubu.pdf | secondary: O13, C23 | evidence: default-profile
+- kabul mektubu__.pdf | secondary: O13, C23 | evidence: default-profile
+- kang2013.pdf | secondary: O13, C23 | evidence: default-profile
+- Karbonunun sosyal maliyeti bölgesel dağılım.pdf | secondary: O13, C23 | evidence: default-profile
+- Kasko Sigortası Listeleme Sayfası.pdf | secondary: O13, C23 | evidence: default-profile
+- Kentaka Aruga - Environmental and Natural Resource Economics-Springer (2022).pdf | secondary: Q53 | evidence: environment
+- kitap (1) copy.pdf | secondary: O13, C23 | evidence: default-profile
+- KKÜ-FRM-018 ÖĞRENCİ İSTEKLERİ FORMU (FAKÜLTELER) (1).doc | secondary: O13, C23 | evidence: default-profile
+- KKÜ-FRM-018 ÖĞRENCİ İSTEKLERİ FORMU (FAKÜLTELER).doc | secondary: O13, C23 | evidence: default-profile
+- Klein Love Guilt.pdf | secondary: O13, C23 | evidence: default-profile
+- Kongre başvuru formu_özet.docx | secondary: O13, C23 | evidence: default-profile
+- Kongre Etkinlikler Listesi.xlsx | secondary: O13, C23 | evidence: default-profile
+- Kongre Listesi - 2025.xlsx | secondary: O13, C23 | evidence: default-profile
+- kongrede cıkan metın duzeltılecek copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Kontic.docx | secondary: O13, C23 | evidence: default-profile
+- Konya 7. Aile Mahkemesine.docx | secondary: O13, C23 | evidence: default-profile
+- Koridor İktisat İletişim Askı.pdf | secondary: O13, C23 | evidence: default-profile
+- Koridor İktisat İletişim Askı.docx | secondary: O13, C23 | evidence: default-profile
+- Koridor/ikili tablo.docx | secondary: O13, C23 | evidence: default-profile
+- Koridor/ikili tablo.pdf | secondary: O13, C23 | evidence: default-profile
+- Koridor/Incites Researchers.csv | secondary: O13, C23 | evidence: default-profile
+- Koridor/Incites Researchers.xlsx | secondary: O13, C23 | evidence: default-profile
+- Koridor/İkisatçılar Listesi.xlsx | secondary: O13, C23 | evidence: default-profile
+- Koridor/Koridor.pdf | secondary: O13, C23 | evidence: default-profile
+- Koridor/Liste.docx | secondary: O13, C23 | evidence: default-profile
+- Koridor/Örnek.pdf | secondary: O13, C23 | evidence: default-profile
+- Koridor/tek tablo.docx | secondary: O13, C23 | evidence: default-profile
+- Koridor/tek tablo.pdf | secondary: O13, C23 | evidence: default-profile
+- Koridor/Üçlü Tablo.docx | secondary: O13, C23 | evidence: default-profile
+- Koridor/Üçlü Tablo.pdf | secondary: O13, C23 | evidence: default-profile
+- Koridor/Üçlü Tablo2.pdf | secondary: O13, C23 | evidence: default-profile
+- Koridor/~$İkisatçılar Listesi.xlsx | secondary: O13, C23 | evidence: default-profile
+- KUZEM İKT Lisans Ders Programı 16.02.23.xlsx | secondary: O13, C23 | evidence: default-profile
+- KUZEM İKT Lisans Ders Programı 21.02.23.xlsx | secondary: O13, C23 | evidence: default-profile
+- KUZEM İKT Lisans Ders Programı 22.02.23-Mehmet MacBook Air.xlsx | secondary: O13, C23 | evidence: default-profile
+- Kübra Karaman Ders İçerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Kübra Karaman ÖDB-FRM-008 DGS İLE YERLEŞEN ÖĞRENCİLERİN MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- Kübra Karaman Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- kültür_sertifika.pdf | secondary: O13, C23 | evidence: default-profile
+- KÜRESEL TARIMSAL KATMA DEĞERDE YAPISAL TABAN ANALİZİ VE 2030 PROJEKSİYONU_ 105 ÜLKE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE REEL VERİ GÜDÜMLÜ SENARYO SİMÜLASYONU.pdf | secondary: O13, C23 | evidence: default-profile
+- KÜRESEL TARIMSAL KATMA DEĞERDE YAPISAL TABAN ANALİZİ VE 2030 PROJEKSİYONU_ 105 ÜLKE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE REEL VERİ GÜDÜMLÜ SENARYO SİMÜLASYONU_v2.pdf | secondary: O13, C23 | evidence: default-profile
+- KÜRESEL TARIMSAL KATMA DEĞERİN BELİRLEYİCİLERİ VE 2030 PROJEKSİYONU_ 105 ÜLKE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE SENARYO ANALİZİ.pdf | secondary: O13, C23 | evidence: default-profile
+- KÜRESEL TARIMSAL KATMA DEĞERİN BELİRLEYİCİLERİ VE 2030 PROJEKSİYONU_ 140 ÜLKE_BÖLGE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE SENARYO ANALİZİ.pdf | secondary: O13, C23 | evidence: default-profile
+- KÜRESEL TARIMSAL KATMA DEĞERİN BELİRLEYİCİLERİ VE 2030 PROJEKSİYONU_ 178 ÜLKE_BÖLGE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE SENARYO ANALİZİ.pdf | secondary: O13, C23 | evidence: default-profile
+- KÜRESEL TARIMSAL KATMA DEĞERİN BELİRLEYİCİLERİ VE 2030 PROJEKSİYONU_ 229 ÜLKE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE SENARYO ANALİZİ.pdf | secondary: O13, C23 | evidence: default-profile
+- Köppen İklim Çeşitleri ve Türkiye.docx | secondary: O13, C23 | evidence: default-profile
+- Küresel Isınma ve İklim Değişikliği.pptx | secondary: O13, C23 | evidence: default-profile
+- Küresel Sera Gazı Salınım Dağılımı.docx | secondary: O13, C23 | evidence: default-profile
+- Kırdemir A. Ş. Dış Paydaş Ziyareti Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- Kırıkkale Demir Çelik A.Ş. Dış Paydaş Ziyareti Değerlendirme Anketi.pdf | secondary: O13, C23 | evidence: default-profile
+- Kırıkkale Üniversitesi II. Proje Yönetimi Çalıştayı.pdf | secondary: O13, C23 | evidence: default-profile
+- Kırıkkale Üniversitesi İktisadi İdari Bilimler Fakültesi İktisat Bölümü 2025 Akademik Teşviklerinde Başvurulan Uluslararası Yayınevleri Listesi.docx | secondary: O13, C23 | evidence: default-profile
+- Kırıkkale2053AramaKonferansiKitabi.pdf | secondary: O13, C23 | evidence: default-profile
+- lal2016.pdf | secondary: O13, C23 | evidence: default-profile
+- lecomber1979.pdf | secondary: O13, C23 | evidence: default-profile
+- Let-them-Eat-Promises-Global-Policy-Incoherence-Unmet-Pledges-and-Misplaced-Priorities-Undercut-Progress-on-SDG-2_2019_Springer-International-Publishing.pdf | secondary: O13, C23 | evidence: default-profile
+- liebig2012.pdf | secondary: O13, C23 | evidence: default-profile
+- linear_algebra.pdf | secondary: O13, C23 | evidence: default-profile
+- LISANS MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Lisansüstü Tez Yazım Klavuzu_2025.pdf | secondary: O13, C23 | evidence: default-profile
+- Lisansüstü Tez Yazım Klavuzu_2025.docx | secondary: O13, C23 | evidence: default-profile
+- LISTE.docx | secondary: O13, C23 | evidence: default-profile
+- Literatür Taraması Şablonu.xlsx | secondary: O13, C23 | evidence: default-profile
+- Long Run Real Exchange.pdf | secondary: O13, C23 | evidence: default-profile
+- Lotka_Law.xlsx | secondary: O13, C23 | evidence: default-profile
+- Louisiana Devlet Üniversitesi.docx | secondary: O13, C23 | evidence: default-profile
+- M_İKTİSAT BÜTÜNLEME PROGRAMI.doc | secondary: O13, C23 | evidence: default-profile
+- Main_Information.xlsx | secondary: O13, C23 | evidence: default-profile
+- Makale 2022_1.pdf | secondary: O13, C23 | evidence: default-profile
+- Makale1_Ek1_Ulke_Listesi.csv | secondary: O13, C23 | evidence: default-profile
+- Makale1_Ek_Ulke_Listesi.csv | secondary: O13, C23 | evidence: default-profile
+- makale2_hakemlik_raporu_OB.docx | secondary: O13, C23 | evidence: default-profile
+- MAKBULE _BAŞAK_DÖNMEZ_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Makbuz-2023-11-30_12-38-49-ÖS.pdf | secondary: O13, C23 | evidence: default-profile
+- Makbuz-2025-05-31_11-16-21-ÖS.pdf | secondary: O13, C23 | evidence: default-profile
+- makbuz_HBI_MGO_Doktora_Tezi_22.10.2025_vson.docx.pdf | secondary: O13, C23 | evidence: default-profile
+- Makroiktisat Sunu Plan.pptx | secondary: O13, C23 | evidence: default-profile
+- malhi2021.pdf | secondary: O13, C23 | evidence: default-profile
+- MALİYE-SINAV PROGRAMI WORD DOSYASI.doc | secondary: O13, C23 | evidence: default-profile
+- Management_Theory_and_Studies_for_Rural.pdf | secondary: O13, C23 | evidence: default-profile
+- manale2016.pdf | secondary: O13, C23 | evidence: default-profile
+- manuel.pdf | secondary: O13, C23 | evidence: default-profile
+- Marginal-Abatement-Cost-Curve-Estimate-Methodology-Report.pdf | secondary: O13, C23 | evidence: default-profile
+- Mart2026_FindeksRaporu_119286450_sifredir.pdf | secondary: O13, C23 | evidence: default-profile
+- matthew2009.pdf | secondary: O13, C23 | evidence: default-profile
+- MD  Haftalık Program ve Görüşme Saatleri.docx | secondary: O13, C23 | evidence: default-profile
+- MD Hukuk Tek Ders.docx | secondary: O13, C23 | evidence: default-profile
+- mechanisms.pdf | secondary: O13, C23 | evidence: default-profile
+- Mediating_effect_of_Cost_of_Safety_on_Performance_.pdf | secondary: O13, C23 | evidence: default-profile
+- Meditation 1 posture and basic breathing copy.pdf | secondary: O13, C23 | evidence: default-profile
+- MEDİTASYON TEKNİKLERİ copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Mehmet Cavid Bey (1875-1926).pdf | secondary: O13, C23 | evidence: default-profile
+- Mehmet Gökhan Özdemir- cover Letter.docx | secondary: O13, C23 | evidence: default-profile
+- Mehmet Gökhan Özdemir- Fuat Sekmen Eleştirileri.docx | secondary: O13, C23 | evidence: default-profile
+- Mehmet Gökhan Özdemir.pdf | secondary: O13, C23 | evidence: default-profile
+- MEHMET GÖKHAN ÖZDEMİR GÖRÜŞME.doc | secondary: O13, C23 | evidence: default-profile
+- MEHMET GÖKHAN ÖZDEMİR HACİZ copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Mehmet Gökhan ÖZDEMİR.pdf | secondary: O13, C23 | evidence: default-profile
+- MEHMET YORULMAZ KAT KARŞILIĞI SÖZLEŞME.docx | secondary: O13, C23 | evidence: default-profile
+- Mehmet-Gökhan_Özdemir_Doktora-Tez_Benzerlik-Raporu-OZET.pdf | secondary: O13, C23 | evidence: default-profile
+- MEHMET_GOKHAN_OZDEMIR_ARBIS_RESUME_2024.01.03.14.44.21.686.pdf | secondary: O13, C23 | evidence: default-profile
+- mehmet_gökhan_özdemir birleştirilmiş tezi 10.12.2025 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- mehmet_gökhan_özdemir birleştirilmiş tezi 10.12.2025.pdf | secondary: O13, C23 | evidence: default-profile
+- mehmet_gökhan_özdemir birleştirilmiş tezi copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Melisa_Aktaş_Ders_İiçerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Melisa_Aktaş_DGS_Muafiyet.doc | secondary: O13, C23 | evidence: default-profile
+- Melisa_Aktaş_Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- MELİKE_GÜLDEN_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- MELİKE_GÜLDEN_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- MELİSA_ELMACI_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Memduha Aydın  ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Memduha Aydın Ders İçerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Memduha Aydın Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- Meram Belediyesi Emlak Vergisi.pdf | secondary: O13, C23 | evidence: default-profile
+- Merkezi Yerleştirme NOT HESAPLAMA.xlsx | secondary: O13, C23 | evidence: default-profile
+- MERKEZİMİZDE AÇILACAK KURSLARIMIZ - Çankaya Halk Eğitimi Merkezi.pdf | secondary: O13, C23 | evidence: default-profile
+- MERT_EREN_YALÇIN_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- MERT_EREN_YALÇIN_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Merve Suna Özel Özcan -M .Gökhan Özdemir Orion Sözleşme.docx | secondary: O13, C23 | evidence: default-profile
+- MERVE-sözleşme kopyası.docx | secondary: O13, C23 | evidence: default-profile
+- mervesunakazan.pdf | secondary: O13, C23 | evidence: default-profile
+- Metrics.csv | secondary: O13, C23 | evidence: default-profile
+- metz2002.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_6_tik.pptx | secondary: O13, C23 | evidence: default-profile
+- MGO_6_tik_son.pptx | secondary: O13, C23 | evidence: default-profile
+- MGO_6_tik_SUNUM.pptx | secondary: O13, C23 | evidence: default-profile
+- MGO_ARALIK_25_RiskMerkeziRaporu.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_bordro.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_Doktora_Tezi.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Doktora_Tezi_Bölüm_1.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Doktora_Tezi_Bölüm_II.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Doktora_Tezi_Bölüm_III.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Doktora_Tezi_Son.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Eğitim Psikolojisi.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Eğitimde Ölçme ve Değerlendirme.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Eğitime Giriş.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_FA_OECD_SDI+and+Components+(1990-2019).xlsx | secondary: O13, C23 | evidence: default-profile
+- MGO_Hakem_Davet.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_HAKEM_The Structural Divergence of Global Agrifood Systems_ Why Technological and Dietary Transitions Decouple from Environmental Efficiency.pdf | secondary: Q53 | evidence: environment
+- MGO_hitap-hizmet-dokumu.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_PDB-FRM-005_pers_gor_dilekcesi.doc | secondary: O13, C23 | evidence: default-profile
+- MGO_SD_CC_FR_FP.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_SD_CC_FR_FP.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_Sustainable Agriculture .docx | secondary: O13 | evidence: sustainab
+- MGO_Sınıf Yönetimi.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_tek tablo.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Yesil_Düsünce_kabul_mektubu.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Zal-2-do-Wytycznych_Formularz-danych-osobowych-uczestnika---ENGLISH-color kopyası.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Zal-2-do-Wytycznych_Formularz-danych-osobowych-uczestnika---ENGLISH-color kopyası.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_Zal-2-do-Wytycznych_Formularz-danych-osobowych-uczestnika---ENGLISH-color-1 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- MGO_Zal-2-do-Wytycznych_Formularz-danych-osobowych-uczestnika---ENGLISH-color.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Öğretim İlke ve Yöntemleri.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Öğretim Teknolojileri.docx | secondary: O13, C23 | evidence: default-profile
+- MGO_Öğretmenlik Uygulaması.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ CEZA SORUŞTURMASI İFADE TUTANAĞI.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ İFADE TUTANAĞI.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ Ocak 2026 Bordro.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ Ocak 2026 e-bordro-sorgulama .pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ Ulusal Tez Merkezi _ Tez Form Yazdir.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_(FORM-ENS012)_DOKTORA-JURI-ONERI-FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- MGÖ_29_12_23_Risk_Raporu.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_akademik bilgi formu.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_AKADEMİK FAALİYET RAPORU.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_bildiriler_Yökakademik.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Çalışma_Hayatında_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Çevre_Şehircilik_İklim_Değişikliği_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_dr_mezuniyet_belgesi.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Enerjide_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Faaliyet Raporu_2022-23.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Finansta_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_GA_Tarım_Afrika.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Güvenilir_Yapay_Zeka_Riskler_Etik_Değerler_ve_İlkeler.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_HBI_Konya.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_HBI_Tarım_Konya.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Hukukta_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Kamu_Düzeni_ve_Güvenliğinde_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_kitapbölümü_yökakademik.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_makaleler_yök_akademik.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_ödüller_yökakademik.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_ÖZGEÇMİŞ.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Sağlıkta_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Savunma_Taslak_Kırıkkale Üniversitesi Rektörlüğü.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Savunma_Taslak_Kırıkkale Üniversitesi Rektörlüğü_Kemal .docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Savunma_Taslak_Kırıkkale Üniversitesi Rektörlüğü_Kemal_Beril.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_SD_İklim_Değişikliği_Gölgesinde_Temel_İktisadi_Sorun_Gıda_Hakkı.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Tarımda_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Template Naskah Jurnal HEXAGRO (New).docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Ticarette_Yapay_Zeka.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Ulusal Tez Merkezi _ Tez Form Yazdir.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_üniversitedışı_yökakademik.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_üyelikler_yökakademik.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Yalı_Sunum.pdf | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Yalı_Sunum.pptx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_YD_2_Tam_metin.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ YOKSİS.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_4. TİK RAPORU .docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_4.TİK (FORM-ENS011) DOKTORA-SANATTA YETERLİK ÇALIŞMASI TEZ ARA RAPOR TUTANAK FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_5.TİK (FORM-ENS011) DOKTORA-SANATTA YETERLİK ÇALIŞMASI TEZ ARA RAPOR TUTANAK FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_6.TİK (FORM-ENS011) DOKTORA-SANATTA YETERLİK ÇALIŞMASI TEZ ARA RAPOR TUTANAK FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Bölgesel Entegrasyon.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Faaliyet Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Savunma_Kırıkkale Üniversitesi Rektörlüğü vson.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_Savunma_Taslak_Kırıkkale Üniversitesi Rektörlüğü son.docx | secondary: O13, C23 | evidence: default-profile
+- mgö_sd_ege_sunu_gıda_hakkı.pptx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_ÖZGEÇMİŞ.docx | secondary: O13, C23 | evidence: default-profile
+- MGÖ_ÖÖ_Sözleşme.docx | secondary: O13, C23 | evidence: default-profile
+- MIRDEC_Gokhan_R_Bibliometrix_Web_of_Science_v2.pptx | secondary: O13, C23 | evidence: default-profile
+- MİKRO İKTİSAT 8. HAFTA.pdf | secondary: O13, C23 | evidence: default-profile
+- Mkbule_transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- MO_MGO_Sustainable_Agriculture.pptx | secondary: O13 | evidence: sustainab
+- Modeller_Tablo.docx | secondary: O13, C23 | evidence: default-profile
+- mosnier2014.pdf | secondary: O13, C23 | evidence: default-profile
+- Most_Cited_Countries.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Cited_Sources.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Frequent_Words.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Global_Cited_Documents.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Local_Cited_Authors.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Local_Cited_Documents.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Local_Cited_References.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Relevant_Affiliations.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Relevant_Countries_By_Corresponding_Author.xlsx | secondary: O13, C23 | evidence: default-profile
+- Most_Relevant_Sources.xlsx | secondary: O13, C23 | evidence: default-profile
+- mount1994.pdf | secondary: O13, C23 | evidence: default-profile
+- MPRA_paper_107973.pdf | secondary: O13, C23 | evidence: default-profile
+- MPRA_paper_112565.pdf | secondary: O13, C23 | evidence: default-profile
+- munasinghe2010.pdf | secondary: O13, C23 | evidence: default-profile
+- munda1997.pdf | secondary: O13, C23 | evidence: default-profile
+- MUSTAFA ÖZER.pdf | secondary: O13, C23 | evidence: default-profile
+- Mustafa Yalçın Ders İçerikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Mustafa Yalçın ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Mustafa Yalçın Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- Mustafa_Koçak_Öğrenci_Not_Belgesi.pdf | secondary: O13, C23 | evidence: default-profile
+- Mustafa_Koçak_ÖSS_Muafiyet.docx | secondary: O13, C23 | evidence: default-profile
+- Mustafa_Koçak_Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- MÜ_Yöksis Bilgi Kontrol ve Güncelleme Formu.pdf | secondary: O13, C23 | evidence: default-profile
+- Mvodo.docx | secondary: O13, C23 | evidence: default-profile
+- My Library.bib | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1005/Daube_Ulph_2016_Moral Behaviour, Altruism and Environmental Policy.pdf | secondary: Q53 | evidence: environment
+- My Library/files/1020/Fourcade vd. - 2015 - The Superiority of Economists.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1021/Fourcade vd. - 2015 - The Superiority of Economists.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1075/Frenken et al_2007_Related Variety, Unrelated Variety and Regional Economic Growth.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1188/Borgomeo et al_2020_Impact of green water anomalies on global rainfed crop yields.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1241/Akar_2012_Ekonomik Büyüme ve Çevresel Vergilerin Emisyon Miktarına Etkileri.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1296/Stern_2004_The Rise and Fall of the Environmental Kuznets Curve.pdf | secondary: Q53 | evidence: environment
+- My Library/files/1299/Engel et al_2008_Designing payments for environmental services in theory and practice.pdf | secondary: Q53 | evidence: environment
+- My Library/files/1303/Boyd_Banzhaf_2007_What are ecosystem services.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1330/Kirişik_2013_EKOLOJİK SORUNLARIN ÇÖZÜMÜNDE DERİN EKOLOJİ YAKLAŞIMI.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1363/Funtowicz_Ravetz_1994_The worth of a songbird.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1374/Ellis et al_2013_Used planet.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1400/Page et al_2021_The PRISMA 2020 statement.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1403/Page et al_2021_The PRISMA 2020 statement.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1405/Dell et al_2014_What Do We Learn from the Weather.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1441/Dell et al_2012_Temperature Shocks and Economic Growth.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1443/Hepburn et al_2019_The technological and economic prospects for CO2 utilization and removal.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1447/Tack et al_2015_Effect of warming temperatures on US wheat yields.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1478/Gallic_Vermandel_2020_Weather shocks.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1484/Chandio et al_2022_Modeling the impact of climatic and non-climatic factors on cereal production.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1500/Fahimnia vd. - 2015 - Green supply chain management A review and biblio.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1508/Erşen_Köstem_2020_Turkey’s Interest in Closer Relations with Russia.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1510/Yatsko - 2012 - The interpretation of Bradford’s law in terms of g.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1515/Bruijnzeel - 2004 - Hydrological functions of tropical forests not se.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1518/Snyder vd. - 2009 - Review of greenhouse gas emissions from crop produ.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1536/Kremen ve Miles - 2012 - Ecosystem Services in Biologically Diversified ver.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1537/Richardson vd. - 2012 - Terrestrial biosphere models need better represent.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1590/Kahil vd. - 2015 - Efficient water management policies for irrigation.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1592/Moretti vd. - 2021 - Accounting for externalities in cross-sectional ec.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1595/Tack vd. - 2016 - Quantifying variety‐specific heat resistance and t.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1599/Ogle vd. - 2014 - Reducing greenhouse gas emissions and adapting agr.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1604/Berauer vd. - 2020 - Predicting forage quality of species-rich pasture .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1605/Kreft vd. - 2021 - The role of non-cognitive skills in farmers' adopt.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1640/Augustine vd. - 2018 - Elevated CO.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1641/D'Amato vd. - 2013 - Effects of thinning on drought vulnerability and c.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1642/Parks vd. - 2015 - Wildland fire deficit and surplus in the western U.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1645/de Bruijn vd. - 2014 - Toward more robust projections of forest landscape.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1646/Giannini vd. - 2012 - Pollination services at risk Bee habitats will de.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1648/Ford vd. - 2011 - Can forest management be used to sustain water-bas.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1649/Scheller vd. - 2011 - The effects of forest harvest intensity in combina.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1651/McKinley vd. - 2011 - A synthesis of current knowledge on forests and ca.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1652/Klos vd. - 2009 - Drought impact on forest growth and mortality in t.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1653/Skagen ve Adams - 2012 - Weather effects on avian breeding performance and .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1654/Sturtevant vd. - 2009 - Simulating dynamic and mixed-severity fire regimes.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1655/Hawbaker vd. - 2013 - Human and biophysical influences on fire occurrenc.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1657/Allen vd. - 2015 - On underestimation of global vulnerability to tree.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1661/Diamond ve Bellwood - 2003 - Farmers and Their Languages The First Expansions.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1679/Callon vd. - 1983 - From translations to problematic networks An intr.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1681/Glanzel - 2001 - [No title found].pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1683/Peters ve Van Raan - 1991 - Structuring scientific activities by co-author ana.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1716/Daim vd. - 2006 - Forecasting emerging technologies Use of bibliome.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1717/Weingart - 2005 - Impact of bibliometrics upon the science system I.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1718/Narin - 1994 - Patent bibliometrics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1719/D'Angelo vd. - 2011 - A heuristic approach to author name disambiguation.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1720/Narin vd. - 1994 - BibliometricsTheory, Practice and Problems.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1721/Broadus - 1987 - Toward a definition of “bibliometrics”.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1722/Abramo vd. - 2009 - Allocative efficiency in public research funding .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1723/Sengupta - 1992 - Bibliometrics, Informetrics, Scientometrics and Li.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1724/Cronin - 2000 - Semiotics and evaluative bibliometrics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1725/Kostoff vd. - 2002 - Electrochemical power text mining using bibliometr.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1726/Persson - 1986 - Online bibliometrics. A research tool for every ma.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1727/De Glas - 1986 - Fiction and Bibliometrics Analyzing a Publishing .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1728/Broadus - 1987 - Some Notes on Research in Bibliometrics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1729/Bornmann ve Marx - 2015 - Methods for the generation of normalized citation .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1730/Bornmann - 2014 - How are excellent (highly cited) papers defined in.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1731/Bornmann - 2013 - How to analyze percentile citation impact data mea.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1732/Bornmann ve Williams - 2013 - How to calculate the practical significance of cit.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1733/Bornmann ve Marx - 2013 - The proposal of a broadening of perspective in eva.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1734/Bornmann ve Leydesdorff - 2014 - On the meaningful and non-meaningful use of refere.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1735/Peritz - 1990 - A bradford distribution for bibliometrics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1736/Kostoff vd. - 2005 - Power source roadmaps using bibliometrics and data.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1737/Abramo ve D’Angelo - 2011 - Evaluating research from informed peer review to .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1738/Aria vd. - 2021 - The scholar’s best friend research trends in dog .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1739/Cuccurullo vd. - 2016 - Foundations and trends in performance management. .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1740/Garfield - 2006 - The History and Meaning of the Journal Impact Fact.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1741/Hirsch - 2005 - An index to quantify an individual's scientific re.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1742/Gross ve Gross - 1927 - College Libraries and Chemical Education.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1743/Small - 1973 - Co-citation in the scientific literature A new me.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1746/Koseoglu - 2016 - Growth and structure of authorship and co-authorsh.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1750/Kessler - 1963 - Bibliographic coupling between scientific papers.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/1763/Punnakitikashem ve Hallinger - 2019 - Bibliometric Review of the Knowledge Base on Healt.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2613/Hope et al_2020_Rethinking the economics of rural water in Africa.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2616/Booker et al_2012_ECONOMICS AND THE MODELING OF WATER RESOURCES AND POLICIES.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2620/Debaere_2014_The Global Economics of Water.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2622/Boschee_2014_Produced and Flowback Water Recycling and Reuse.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2625/Convery_2013_Reflections—Shaping Water Policy.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2922/Kuehnlenz et al. - 2022 - Capitalism and crises A comparative analysis of m.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2962/Crist et al. - 2021 - Protecting Half the Planet and Transforming Human .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/2975/Carrasco et al. - 2006 - Power-Electronic Systems for the Grid Integration .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3021/Hafner et al. - 2019 - Renewables for Energy Access and Sustainable Devel.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/3050/Khan et al. - 2018 - The nexus between greenhouse gas emission, electri.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3056/Chel and Kaushik - 2011 - Renewable energy for sustainable agriculture.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/3058/Thrän et al. - 2020 - Governance of sustainability in the German biogas .pdf | secondary: O13 | evidence: sustainab
+- My Library/files/3062/Palys et al. - 2021 - Renewable ammonia for sustainable energy and agric.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/3071/Sutherland et al. - 2015 - Conceptualising multi-regime interactions The rol.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3127/Wackernagel et al. - 2019 - Defying the Footprint Oracle Implications of Coun.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3166/Wiese_2021_Advanced microeconomics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3180/Vohra_2020_Prices and quantities.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3188/Yu_2019_Mathematical economics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3204/Vali_2014_Principles of Mathematical Economics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3208/Schofield_2014_Mathematical Methods in Economics and Social Choice.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3218/Hritonenko_Yatsenko_2013_Mathematical Modeling in Economics, Ecology and the Environment.pdf | secondary: Q53 | evidence: environment
+- My Library/files/3223/De Finetti_Centro Internazionale Matematico Estivo_2010_Mathematical Optimization in Economics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3232/Fisher - 2020 - Lecture notes on resource and environmental econom.pdf | secondary: Q53 | evidence: environment
+- My Library/files/3236/Buchholz and Rübbelke - 2019 - Foundations of environmental economics.pdf | secondary: Q53 | evidence: environment
+- My Library/files/3282/Becker - 1962 - Irrational Behavior and Economic Theory.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3295/Bagwell and Staiger - 1999 - An Economic Theory of GATT.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3301/Case et al. - 2020 - Principles of microeconomics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3303/Fisher et al. - 2008 - ECOSYSTEM SERVICES AND ECONOMIC THEORY INTEGRATIO.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3362/Popkova et al_2021_Strategies for the global economic system for 2030.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3380/Puaschunder_2020_Behavioral economics and finance leadership.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3385/Lynne_2020_Metaeconomics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3390/Kemal - 2000 - Türk Anayasa Hukuku.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3393/Bayrakdar_İncekara_2013_Türkiye’nin Genç İşsizlik Profili.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3399/Bölükbaş_2018_Kayıt Dışı İstihdam ve Genç İşsizlik Ekonomik Büyüme ile İlişkili Olabilir Mi.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3403/Öztürk et al_2008_24 OCAK KARARLARI, NEO-LİBERAL POLİTİKALAR VE TÜRKİYE TARIMI.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3406/Ulukan_2020_Esnek İstihdam Genç İşsizliğin Çaresi mi.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3485/Mahi̇roğullari_2017_TÜRKİYE'DE KAYITDIŞI İSTİHDAM VE ÖNLEMEYE YÖNELİK STRATEJİLER.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3488/Bozdağlioğlu_2008_TÜRKİYE’DE İŞSİZLİĞİN ÖZELLİKLERİ VE İŞSİZLİKLE MÜCADELE POLİTİKALARI.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3493/Kasapoğlu_Murat_2018_AKTİF İSTİHDAM POLİTİKALARI VE TÜRKİYE’DE İŞKUR TARAFINDAN UYGULANAN AKTİF.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3495/Kasapoğlu_Murat_2018_AKTİF İSTİHDAM POLİTİKALARI VE TÜRKİYE’DE İŞKUR TARAFINDAN UYGULANAN AKTİF.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3500/Aygül_2018_Eğitime Erişim, Yoksulluk ve Formel-Enformel İş-gücü Olarak Üniversite Gençliği.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3502/Eser_Terzi̇_2008_Türkiye'de İşsizlik Sorunu ve Avrupa İstihdam Stratejisi.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3512/Durak_Kaya_2014_TÜRKİYEDE İŞSİZLİK VE İŞSİZLİĞİ AZALTMAYA YÖNELİK POLİTİKİLAR.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3520/Bayrakdar_2019_İşsizliğin Çözümünde Uygulanan Aktif İstihdam Politikalarının Etkinliği Üzerine.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3523/Topal_2017_TÜRKİYE’DE KAMU YATIRIMLARININ İSTİHDAM ÜZERİNDEKİ ETKİSİ.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3573/Psillos_Curd_2010_The Routledge companion to philosophy of science.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3580/Davis_Hands_2021_Introduction.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3594/Peacock - 2011 - Economic Methodology Understanding Economics as a.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3600/Feige_1990_Defining and estimating underground and informal economies.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3624/Çürük and Kaynar - 2021 - Bibliometric Analysis of Islamic Finance Literatur.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3638/Tas_Yildirim_2020_DRAINAGE PRACTICES IN TURKEY.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3640/Innal_Erk’akan_2006_Effects of exotic and translocated fish species in the inland waters of Turkey.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3670/invest-in-turkiye-roadshow-booklet.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3682/Demırtaş et al. - 2020 - What should we call the Levant mole Unravelling t.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3694/Eichengreen_Frieden_1993_THE POLITICAL ECONOMY OF EUROPEAN MONETARY UNIFICATION.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3695/Burfisher - The Economics of Regional Integration.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3707/Thomas_2021_The limits of Europe.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3727/Boyer et al_2018_Evolving diversity and interdependence of capitalisms.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3732/Braun_2018_Regional policies and european integration.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3760/Coleman and Bhattacharjee - 1975 - Regulation of citrate synthase activity of Sacchar.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3762/Bose and Sarma - 1975 - Delineation of the intimate details of the backbon.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3764/Wei et al. - 2020 - Self-preservation strategy for approaching global .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3777/P17030605138760630b3dd0668d9de5089e.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3815/Esterik - 1999 - [No title found].pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3828/Dasgupta_2007_Commentary.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3860/Bernstein - 2016 - Agrarian political economy and modern world capita.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3884/Reinert - 2021 - An introduction to international economics new pe.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3913/Hope - 2008 - Discount rates, equity weights and the social cost.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3921/SanayiStratejiBelgesi2023.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/3993/Kara_Yereli̇_2022_İKLİM DEĞİŞİKLİĞİNİN YÖNETİMİ VE TARIM SEKTÖRÜ.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4009/van der Ploeg and Withagen - 2015 - Global Warming and the Green Paradox A Review of .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4052/Canci et al. - 2023 - Quantitative Models in Life Science Business From.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4055/Investigating the subsistence of Environmental Kuz.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4057/Bertelli et al. - 2022 - Bootstrap cointegration tests in ARDL models.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4072/Nezahat - 2016 - Agriculture and Environmental Kuznets Curves in th.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4110/Leal and Marques - 2022 - The evolution of the environmental Kuznets curve h.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4126/Hunnes - 2022 - Recipe for Survival What You Can Do to Live a Hea.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4173/Saleh et al. - 2020 - IMPLEMENTATION OF SUSTAINABLE DEVELOPMENT GOALS TO.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4179/Kaza et al. - 2018 - What a Waste 2.0 A Global Snapshot of Solid Waste.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4181/Baskar et al. - 2022 - Handbook of Solid Waste Management Sustainability.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4209/Hanley et al. - 1997 - Environmental Economics in Theory and Practice.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4213/Wiesmeth - 2022 - Environmental economics theory and policy in equi.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4218/Buchholz and Rübbelke - 2019 - Foundations of Environmental Economics.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4224/Marsiliani et al. - 2003 - Environmental Economics and the International Econ.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4237/Keiko Nakayama_ Yuzuru Miyata - Theoretical and Empirical Analysis in Environmental Economics-Springer (2019).pdf | secondary: Q53 | evidence: environment
+- My Library/files/4239/Nakayama and Miyata - 2019 - Theoretical and Empirical Analysis in Environmenta.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4260/van Ierland et al_2002_Environmental Economics for Environmental Protection.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4290/Slavikova_2013_From Cost-Benefit to Institutional Analysis in The Economics of the Environment.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4295/Hahn_1999_The Impact Of Economics On Environmental Policy.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4299/Fischer and Heutel - 2013 - Environmental Macroeconomics Environmental Policy.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4305/Schug_1997_Teaching the Economics of the Environment.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4347/Scorse_2010_What Environmentalists Need to Know About Economics.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4439/Fakhrul Islam_Karim_2019_Sustainable Agricultural Management Practices and Enterprise Development for.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4463/Anibaldi et al_2021_Theoretical Underpinnings in Research Investigating Barriers for Implementing.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4465/Anibaldi et al_2021_Theoretical Underpinnings in Research Investigating Barriers for Implementing.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4495/Roychowdhury_2013_ORGANIC FARMING FOR CROP IMPROVEMENT AND SUSTAINABLE AGRICULTURE IN THE ERA OF.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4503/Shah_Wu_2019_Soil and Crop Management Strategies to Ensure Higher Crop Productivity within.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4542/Leisner_2020_Review.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4585/Smith et al. - 2018 - Advancing sustainability science for the SDGs.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4589/van Vuuren et al. - 2015 - Pathways to achieve a set of ambitious global sust.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4611/Arora and Mishra - 2019 - United Nations Sustainable Development Goals 2030 .pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4620/Lim et al. - 2018 - Reframing the sustainable development goals to ach.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4634/Spash - 1999 - The Development of Environmental Thinking in Econo.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4660/Hanley et al. - 1997 - Environmental Economics in Theory and Practice.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4686/Martínez-Alier et al. - 2010 - Sustainable de-growth Mapping the context, critic.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4703/Kaivo-oja et al. - 2014 - A Note De-Growth Debate and New Scientific Analys.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4715/Pesaran et al. - 2001 - Bounds testing approaches to the analysis of level.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4718/Bertsatos et al. - 2022 - Extensions of the Pesaran, Shin and Smith (2001) b.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4726/Dogan - 2016 - Agriculture and Environmental Kuznets Curves in th.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4736/Adebayo et al. - 2021 - Economic performance of Indonesia amidst CO2 emiss.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4740/Wang - 2022 - Role of environmental degradation and energy use f.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4749/Shrestha_Bhatta_2018_Selecting appropriate methodological framework for time series data analysis.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4766/Laurent et al. - 2014 - Review of LCA studies of solid waste management sy.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4768/Troschinetz and Mihelcic - 2009 - Sustainable recycling of municipal solid waste in .pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4770/Nabavi-Pelesaraei et al. - 2017 - Modeling of energy consumption and environmental l.pdf | secondary: Q53 | evidence: environment
+- My Library/files/4772/Erses Yay - 2015 - Application of life cycle assessment (LCA) for mun.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4773/Guerrero et al. - 2013 - Solid waste management challenges for cities in de.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4775/Önüt and Soner - 2008 - Transshipment site selection using the AHP and TOP.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4777/Şener et al. - 2010 - Combining AHP with GIS for landfill site selection.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4779/Coban et al. - 2018 - Municipal solid waste management via multi-criteri.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4781/Şener et al. - 2011 - Solid waste disposal site selection with GIS and A.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4785/Singh - 2019 - Remote sensing and GIS applications for municipal .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4787/Bilgilioglu et al. - 2022 - A GIS-based multi-criteria decision-making method .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4789/Ekmekçioğlu et al. - 2010 - Fuzzy multicriteria disposal method and site selec.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4791/Mohsenizadeh et al. - 2020 - Municipal solid waste management with cost minimiz.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4793/Arıkan et al. - 2017 - Solid waste disposal methodology selection using m.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4797/Banar et al. - 2009 - Life cycle assessment of solid waste management op.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4799/Esin and Cosgun - 2007 - A study conducted to reduce construction waste gen.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4803/Birpınar et al. - 2009 - Medical waste management in Turkey A case study o.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4805/Othman et al. - 2013 - Review on life cycle assessment of integrated soli.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4807/Mamashli and Javadian - 2021 - Sustainable design modifications municipal solid w.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4809/Karakuş et al. - 2020 - Evaluation of GIS-based multi-criteria decision-ma.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4811/Ozcan et al. - 2016 - Municipal Solid Waste Characterization According t.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4813/Mmereki et al. - 2016 - A comparative analysis of solid waste management i.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4815/Turan et al. - 2009 - Municipal solid waste management strategies in Tur.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4817/Metin et al. - 2003 - Solid waste management practices and review of rec.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4819/Karabulut et al. - 2022 - Landfill siting for municipal solid waste using re.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4821/Ferronato and Torretta - 2019 - Waste Mismanagement in Developing Countries A Rev.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4827/Hannan et al. - 2020 - Solid waste collection optimization objectives, co.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4829/Srivastav and Kumar - 2021 - An endeavor to achieve sustainable development goa.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4831/Vertakova and Plotnikov - 2019 - THE INTEGRATED APPROACH TO SUSTAINABLE DEVELOPMENT.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4834/Phonphoton and Pharino - 2019 - Multi-criteria decision analysis to mitigate the i.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4837/Da Silva et al. - 2019 - Sustainability indicators for urban solid waste ma.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4841/Balci et al. - 2022 - Multi-purpose reverse logistics network design for.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4846/Yalçıntaş et al. - 2023 - Bibliometric Analysis of Studies on Sustainable Wa.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4855/Oğul - 2023 - İklim Değişikliği Tarım Sektörünü Nasıl Etkiliyor.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/487/Horbach vd. - Sustainability and Innovation.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4876/Newell et al. - 2021 - The GDP-Temperature relationship Implications for.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4899/Erdi̇K and Temurlenk - 2023 - İklim Değişikliğinin Gelişmişlik ve Bölgesel Farkl.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4901/Chandio et al. - 2021 - Addressing the long- and short-run effects of clim.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4926/Schaller - 1993 - The concept of agricultural sustainability.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/4963/Çel and Anaç - TARIMSAL EKONOMİ ARAŞTIRMA ENSTİTÜSÜ.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4965/Çel and Anaç - TARIMSAL EKONOMİ ARAŞTIRMA ENSTİTÜSÜ.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4979/Republic of Türkiye.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4992/uyum_stratejisi_eylem_plani_EN(2).pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/4998/Kuzma et al. - 2023 - Aqueduct 4.0 Updated Decision-Relevant Global Wat.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5003/Kuzma et al. - 2023 - Aqueduct 4.0 Updated Decision-Relevant Global Wat.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5012/Başoğlu - İKLİM DEĞİŞİKLİĞİ’NİN ETKİLERİ TARIM SEKTÖRÜ ÜZER.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5054/Hersbach et al. - 2020 - The ERA5 global reanalysis.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5104/Harris et al. - 2020 - Version 4 of the CRU TS monthly high-resolution gr.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5117/Wheat Landraces in Farmers' Fields in Turkey Nati.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/514/Viguier vd. - 2006 - Modeling endogenous learning and imperfect competi.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5157/Acar - TÜRKİYE' DE GELİR DAĞILIMI.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5161/Lacy - OECD Environment Director.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5163/P17456909414590250907f0334d02fd1be1.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5175/Hasegawa et al. - 2022 - A global dataset for the projected impacts of clim.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5269/Ahmed et al. - 2020 - Moving towards a sustainable environment The dyna.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5271/Destek and Sarkodie - 2019 - Investigation of environmental Kuznets curve for e.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5278/Awosusi et al. - 2022 - The dynamic impact of biomass and natural resource.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5290/Li et al. - 2021 - Sustainable Agricultural Total Factor Productivity.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/5313/Gövdeli̇_2018_EKONOMİK ÖZGÜRLÜK, TURİZM VE EKONOMİK BÜYÜME.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5348/Breusch_Pagan_1980_The Lagrange Multiplier Test and its Applications to Model Specification in.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5350/Borucke et al_2013_Accounting for demand and supply of the biosphere's regenerative capacity.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5354/Swamy_1970_Efficient Inference in a Random Coefficient Regression Model.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5356/Gövdeli̇_2018_EKONOMİK ÖZGÜRLÜK, TURİZM VE EKONOMİK BÜYÜME.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5378/Wackernagel_Yount_1998_[No title found].pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5394/Weinzettel et al. - 2019 - Potential net primary production footprint of agri.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5396/Chen et al. - 2021 - An improved global remote-sensing-based surface so.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5409/Aydin - 2020 - SEÇİLMİŞ OECD ÜLKELERİNDE ÇEVRE VERGİLERİNİN ÇEVRE.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5411/Moshiri and Daneshmand - 2020 - How effective is government spending on environmen.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5421/Muratoğlu - 2019 - Üretimin su ayak izinin incelenmesi Diyarbakır il.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5511/Hua et al. - 2022 - Research on the Policy Effect and Mechanism of Car.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5514/Han et al. - 2018 - Agricultural environmental total factor productivi.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5533/Choi et al. - 2015 - Environmentally sensitive productivity growth and .pdf | secondary: Q53 | evidence: environment
+- My Library/files/5534/Bansal et al. - 2022 - Dynamic Metafrontier Malmquist–Luenberger Producti.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5535/Oh - 2010 - A global Malmquist-Luenberger productivity index.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5536/Ray et al. - 2022 - Handbook of Production Economics.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5538/Wu et al. - 2022 - The spatial spillover effect of environmental regu.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5540/Zhong et al. - 2022 - Measurement of green total factor productivity on .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5541/Homayoni et al. - 2022 - Cross Malmquist Productivity Index in Data Envelop.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5542/Tang et al. - 2020 - Measuring eco-efficiency and its convergence empi.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5543/Han et al. - 2018 - Agricultural environmental total factor productivi.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5545/Balsalobre-Lorente et al. - 2019 - A road to enhancements in natural gas use in Iran.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5549/Iquebal - 2022 - Introduction to time series modeling with applicat.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5550/Chatfield and Xing - 2019 - The analysis of time series an introduction with .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5553/Valenzuela et al. - 2020 - Theory and Applications of Time Series Analysis S.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5556/Bisht and Ram - 2021 - Recent Advances in Time Series Forecasting.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5557/Privalsky - 2021 - Time Series Analysis in Climatology and Related Sc.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5559/Uribe and Guillen - 2020 - Quantile Regression for Cross-Sectional and Time S.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5560/Tsounis and Vlachvei - 2018 - Advances in Time Series Data Methods in Applied Ec.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5561/Cryer and Chan - 2009 - Time series analysis with applications in R.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5562/Shumway and Stoffer - 2006 - Time series analysis and its applications with R .pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5563/Woodward et al. - 2017 - Applied time series analysis, with R.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5564/Metcalfe and Cowpertwait - 2009 - Introductory Time Series with R.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5565/Pfaff - 2008 - Analysis of integrated and cointegrated time serie.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5566/Shewhart et al. - WILEY SERIES IN PROBABILITY AND STATISTICS.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5567/Paolella - 2018 - Linear models and time-series analysis regression.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5569/Gemitzi et al. - 2019 - Advanced Environmental Monitoring with Remote Sens.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5570/Coghlan - A Little Book of R For Time Series.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5571/Dalgaard - 2008 - Introductory Statistics with R.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5573/Rajagopal - Time Series Forecasting with R.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5574/Woodward et al. - 2017 - Applied time series analysis with R.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5576/2018 - Front-matter.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5577/Mills - 2019 - Applied time series analysis a practical guide to.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5579/Peña et al. - 2001 - A course in time series analysis.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5580/Krispin - 2019 - Hands-on time series analysis with R perform time.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5581/Huffaker et al. - 2017 - Nonlinear time series analysis with R.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5582/Mills - 2019 - Applied time series analysis a practical guide to.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5583/Mills - 2021 - Modelling Trends and Cycles in Economic Time Serie.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5584/Cipra - 2020 - Time Series in Economics and Finance.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5585/Wei - Multivariate Time Series Analysis and Applications.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5586/McElroy et al. - Economic Time Series.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5620/(Analytical Methods for Social Research) Janet M. Box-Steffensmeier_ John R. Freeman_ Jon C. Pevehouse_ Matthew Perry Hitt - Time Series Analysis for the Social Sciences-Cambridge Univ.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5621/(Analytical Methods for Social Research) Janet M. Box-Steffensmeier_ John R. Freeman_ Jon C. Pevehouse_ Matthew Perry Hitt - Time Series Analysis for the Social Sciences-Cambridge Univ.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5626/(Contributions to Management Science) Hasan Dincer, Serhat Yüksel - Strategic Priorities in Competitive Environments_ Multidimensional Approaches for Business Success-Springer International Publ.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5627/(Contributions to Statistics) Olga Valenzuela, Fernando Rojas, Luis Javier Herrera, Héctor Pomares, Ignacio Rojas - Theory and Applications of Time Series Analysis_ Selected Contributions from I.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5629/(Evolutionary Economics and Social Complexity Science 11) Robert Boyer, Hiroyasu Uemura, Toshio Yamada, Lei Song - Evolving Diversity and Interdependence of Capitalisms_ Transformations of Region.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5630/(Handbooks of Research Methods and Applications) Nigar Hashimzade (editor), Michael A. Thornton (editor) - Handbook of Research Methods and Applications in Empirical Microeconomics-Edward Elgar (.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5633/(Springer Proceedings in Business and Economics) Nicholas Tsounis, Aspasia Vlachvei - Advances in Time Series Data Methods in Applied Economic Research_ International Conference on Applied Econom.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5634/(Springer Texts in Statistics) Jonathan D. Cryer, Kung-Sik Chan - Time Series Analysis_ With Applications in R-Springer (2008).pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5646/Boyer et al_2018_Evolving diversity and interdependence of capitalisms.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/5658/Dinçer_Yüksel_2020_Strategic priorities in competitive environments.pdf | secondary: Q53 | evidence: environment
+- My Library/files/5662/Box-Steffensmeier et al_2014_Time series analysis for the social sciences.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/570/Boly vd. - 2018 - Building a Resilient and Sustainable Agriculture i.pdf | secondary: O13 | evidence: sustainab
+- My Library/files/641/Al-Abdulrazag - 2021 - The optimal government size in the kingdom of Saud.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/654/Vinokurov - 2017 - Eurasian Economic Union Current state and prelimi.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/664/memo.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/670/Vinokurov - 2018 - Introduction to the Eurasian Economic Union.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/675/Kemme vd. - 2021 - The effects of the Eurasian Economic Union on regi.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/679/Kargina ve Masolletti - 2021 - Eurasian Economic Union Current Concept and Prosp.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/695/Roberts ve Moshes - 2016 - The Eurasian Economic Union a case of reproductiv.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/698/Şahin vd. - TÜRKİYE’NİN KARBONSUZLAŞMA YOL HARİTASI.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/809/SürdürülebilirGıda Sistemlerine Doğru Türkiye’nin Ulusal Yol Haritası (Türkçe).pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/810/Ulusal Yol Haritası Sonuç Raporu.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/834/Libman_2011_Russian Federalism and Post-Soviet Integration.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/848/Holtz-Eakin ve Selden - 1995 - Stoking the fires CO2 emissions and economic grow.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/893/Munn et al_2018_Systematic review or scoping review.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/896/Khangura et al_2012_Evidence summaries.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/899/Jaffe et al_2005_A tale of two market failures.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/901/Alauddin_Quiggin_2008_Agricultural intensification, irrigation and the environment in South Asia.pdf | secondary: Q53 | evidence: environment
+- My Library/files/915/Ge ve Lin - 2022 - Does the Kyoto Protocol as an International Enviro.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/923/Slavík_2007_Neoclassical economy in environmental protection.pdf | secondary: Q53 | evidence: environment
+- My Library/files/934/Mora Rodríguez et al_2019_Evaluando los stakeholders de la Economía del Bien Común.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/945/Leuz_Verrecchia_2000_The Economic Consequences of Increased Disclosure.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/993/Dasgupta_2007_Nature and the economy.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/files/998/Jouini et al_2010_Discounting and divergence of opinion.pdf | secondary: O13, C23 | evidence: default-profile
+- My Library/My Library.bib | secondary: O13, C23 | evidence: default-profile
+- My Submissions/EPH716007.pdf | secondary: O13, C23 | evidence: default-profile
+- My Submissions/sözleşmekitap.pdf | secondary: O13, C23 | evidence: default-profile
+- n-11.xlsx | secondary: O13, C23 | evidence: default-profile
+- Nagehan_ Berna_Özdemir_ÖSS_Muafiyet.docx | secondary: O13, C23 | evidence: default-profile
+- Nagehan_Berna_Özdemir_Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- natural-disasters.csv | secondary: O13, C23 | evidence: default-profile
+- natural-disasters.xlsx | secondary: O13, C23 | evidence: default-profile
+- naylor2016.pdf | secondary: O13, C23 | evidence: default-profile
+- Naz Soydan KKÜ-FRM-018 ÖĞRENCİ İSTEKLERİ FORMU (FAKÜLTELER) (1).doc | secondary: O13, C23 | evidence: default-profile
+- Naz Soydan KKÜ-FRM-018 ÖĞRENCİ İSTEKLERİ FORMU (FAKÜLTELER) (1).pdf | secondary: O13, C23 | evidence: default-profile
+- NAZLI ÖZDOĞAN_akts düzeltme.docx | secondary: O13, C23 | evidence: default-profile
+- NAZLICAN_BAYRAK_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- NAZLICAN_BAYRAK_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- nazlı özdoğan Mezuniyet Onay.docx | secondary: O13, C23 | evidence: default-profile
+- nazlı özdoğan_ders  eşleştirilmesi.docx | secondary: O13, C23 | evidence: default-profile
+- NAZMİYE_VERİ_SON.xlsx | secondary: O13, C23 | evidence: default-profile
+- Nefise_Arslan_YAZ OKULU NOT DONUSUMU.docx | secondary: O13, C23 | evidence: default-profile
+- NEHİR_TÜMER_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- NEHİR_TÜMER_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- neo2009.pdf | secondary: O13, C23 | evidence: default-profile
+- nepal2015.pdf | secondary: O13, C23 | evidence: default-profile
+- NEŞET_KUZAN_A_1_KURUMLAR ARASI YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- New-Evidence-on-WTO-Membership-After-the-Uruguay-Round-An-Analysis-at-the-Sectoral-Level_2024_Springer.pdf | secondary: O13, C23 | evidence: default-profile
+- NewInconsistencyTriadBeckPrinzIntereconomics.pdf | secondary: O13, C23 | evidence: default-profile
+- NFBA-2023-Public-Data-Package-1.0-1 2/NFBA 2023 Calculation Factors 1.0.xlsx | secondary: O13, C23 | evidence: default-profile
+- NFBA-2023-Public-Data-Package-1.0-1 2/NFBA 2023 Public Data Package 1.0.xlsx | secondary: O13, C23 | evidence: default-profile
+- NFBA-2023-Public-Data-Package-1.0-1/NFBA 2023 Calculation Factors 1.0.xlsx | secondary: O13, C23 | evidence: default-profile
+- NFBA-2023-Public-Data-Package-1.0-1/NFBA 2023 Public Data Package 1.0.xlsx | secondary: O13, C23 | evidence: default-profile
+- Ng2020_Chapter_BuddhistEconomicsTheory.pdf | secondary: O13, C23 | evidence: default-profile
+- Nimet Varlık_2025-2026 Bahar.doc | secondary: O13, C23 | evidence: default-profile
+- Nimet Varlık_Akademik Faaliyet Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- Nimet Varlık_FPE YOKSİS - Copy copy.pdf | secondary: O13, C23 | evidence: default-profile
+- norton2014.pdf | secondary: O13, C23 | evidence: default-profile
+- NÖ_Derse_Kayıtlı Öğrenci Sayısı.xlsx | secondary: O13, C23 | evidence: default-profile
+- NT_TVS_İSL.pdf | secondary: O13, C23 | evidence: default-profile
+- NÖ.xlsx | secondary: O13, C23 | evidence: default-profile
+- NÖ_Yatay_Geçiş.xls.xlsx | secondary: O13, C23 | evidence: default-profile
+- NŞK_YOKSIS_Bilgi_Kontrol_Formu_ IIBF.docx | secondary: O13, C23 | evidence: default-profile
+- O&M 4.xlsx | secondary: O13, C23 | evidence: default-profile
+- OB_tek tablo.docx | secondary: O13, C23 | evidence: default-profile
+- OB_YOKSIS_Bilgi_Kontrol_Formu_ IIBF_Onur BİLGİN.pdf | secondary: O13, C23 | evidence: default-profile
+- obasi1993.pdf | secondary: O13, C23 | evidence: default-profile
+- OECD.TAD.ATM,DSD_AGR@DF_OUTLOOK_2022_2031,1.0,filtered,2023-10-18 14-39-48.xlsx | secondary: O13, C23 | evidence: default-profile
+- OECD_EF_TVF_MAKALE SONUÇLARI.docx | secondary: O13, C23 | evidence: default-profile
+- OECD_FA_AgTFPInternational2021.xlsx | secondary: O13, C23 | evidence: default-profile
+- ogle2013.pdf | secondary: O13, C23 | evidence: default-profile
+- Ogretim Uyelerinizin Bilimsel Alanlari Danismanliklari ve Yayin Sayilari.docx | secondary: O13, C23 | evidence: default-profile
+- Ogretim Uyelerinizin Bilimsel Alanlari, Danismanliklari ve Yayin Sayilari copy.docx | secondary: O13, C23 | evidence: default-profile
+- Ogretim Uyelerinizin Bilimsel Alanlari, Danismanliklari ve Yayin Sayilari copy.pdf | secondary: O13, C23 | evidence: default-profile
+- Oğuzhan_Karaarslan_(FORM-ENS023) DERS MUAFİYET BAŞVURU DEĞERLENDİRME FORMU (1).docx | secondary: O13, C23 | evidence: default-profile
+- Olası Hasar Fonksiyonları.docx | secondary: O13, C23 | evidence: default-profile
+- Oncelikli_Alanlar_2025-2.pdf | secondary: O13, C23 | evidence: default-profile
+- Onur Bilgin Haftalık Program 2025-26 Bahar Dönemi.docx | secondary: O13, C23 | evidence: default-profile
+- Optimizasyon.pptx | secondary: O13, C23 | evidence: default-profile
+- Optimization_R.pdf | secondary: O13, C23 | evidence: default-profile
+- orman.pdf | secondary: O13, C23 | evidence: default-profile
+- ORNEK FORM.doc | secondary: O13, C23 | evidence: default-profile
+- Ortak dersleri rektörlük dersleri ve fakülte içi ortak dersleri hoca bilgisi dahilinde.docx | secondary: O13, C23 | evidence: default-profile
+- Ortak Derslikler.docx | secondary: O13, C23 | evidence: default-profile
+- Ortak Derslikler_Güncellenecek.docx | secondary: O13, C23 | evidence: default-profile
+- Ortak Derslikler_Güncellenmiş_GÖZETMENSİZ.docx | secondary: O13, C23 | evidence: default-profile
+- out (1).pdf | secondary: O13, C23 | evidence: default-profile
+- out (10).pdf | secondary: O13, C23 | evidence: default-profile
+- out (2).pdf | secondary: O13, C23 | evidence: default-profile
+- out (3).pdf | secondary: O13, C23 | evidence: default-profile
+- out (4).pdf | secondary: O13, C23 | evidence: default-profile
+- out (5).pdf | secondary: O13, C23 | evidence: default-profile
+- out (6).pdf | secondary: O13, C23 | evidence: default-profile
+- out (7).pdf | secondary: O13, C23 | evidence: default-profile
+- out (8).pdf | secondary: O13, C23 | evidence: default-profile
+- out (9).pdf | secondary: O13, C23 | evidence: default-profile
+- out.pdf | secondary: O13, C23 | evidence: default-profile
+- ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- ÖDB-FRM-008 DGS İLE YERLEŞEN ÖĞRENCİLERİN MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- ÖDB-FRM-013 ÖĞRETİM PLANI FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- ÖDB-FRM-016 YENİ AÇILAN DERSLER FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- ÖDR - Taslak.docx | secondary: O13, C23 | evidence: default-profile
+- Ögrenci İstekleri Dilekce Formu.doc | secondary: O13, C23 | evidence: default-profile
+- Öğretim üyeleri- dersler.xlsx | secondary: O13, C23 | evidence: default-profile
+- Ömer Özdemir Karatay Emlak Vergisi.pdf | secondary: O13, C23 | evidence: default-profile
+- ÖRGÜN  ve UZAKTAN ENSTİTÜ_18_02_2023.xlsx | secondary: O13, C23 | evidence: default-profile
+- ÖRGÜN  ve UZAKTAN ENSTİTÜ_22_02_2023 (1).xlsx | secondary: O13, C23 | evidence: default-profile
+- ÖRGÜN ENSTİTÜ_08_09_2023.xlsx | secondary: O13, C23 | evidence: default-profile
+- ÖRGÜN ENSTİTÜ_09_02_2021.xlsx | secondary: O13, C23 | evidence: default-profile
+- ÖRGÜN ENSTİTÜ_31_08_2023.xlsx | secondary: O13, C23 | evidence: default-profile
+- ÖRNEK BÜTÜNLEME SINAV TASLAĞI.doc | secondary: O13, C23 | evidence: default-profile
+- örnek tez_ardl.pdf | secondary: O13, C23 | evidence: default-profile
+- Özdemir&Dinçer 12.09.2022.docx | secondary: O13, C23 | evidence: default-profile
+- Özdemir&Dinçer_17.10.2023.docx | secondary: O13, C23 | evidence: default-profile
+- Özdemir&Dinçer_31.10.2023.docx | secondary: O13, C23 | evidence: default-profile
+- Özet örnek.pdf | secondary: O13, C23 | evidence: default-profile
+- P17456909414590250907f0334d02fd1be1.pdf | secondary: O13, C23 | evidence: default-profile
+- Para Gönderin _ Wise_ Çevrimiçi Para Transferleri _ Uluslararası Bankacılık Özellikleri.pdf | secondary: O13, C23 | evidence: default-profile
+- parametre-analiz-2022.pdf | secondary: O13, C23 | evidence: default-profile
+- pearce1995.pdf | secondary: O13, C23 | evidence: default-profile
+- pearce2002.pdf | secondary: O13, C23 | evidence: default-profile
+- Performance Analysis of Participation Funds in the Context of Ethical Investment.docx | secondary: O13, C23 | evidence: default-profile
+- Performance_Analysis_of_Participation_Funds_in_the.pdf | secondary: O13, C23 | evidence: default-profile
+- Performance_Analysis_of_Participation_Funds_in_the_v2.pdf | secondary: O13, C23 | evidence: default-profile
+- pericles_1099171931.bib | secondary: O13, C23 | evidence: default-profile
+- Perş_Çıktı.pdf | secondary: O13, C23 | evidence: default-profile
+- pesetaiv_summary_final_report copy.pdf | secondary: O13, C23 | evidence: default-profile
+- pgp-2023-24.pdf | secondary: O13, C23 | evidence: default-profile
+- PGP24-web.pdf | secondary: O13, C23 | evidence: default-profile
+- PIIS2405844022031280.pdf | secondary: O13, C23 | evidence: default-profile
+- POLITICAL_INSTABILITY_AND_ECONOMIC_GROWTH_IN_NIGER.pdf | secondary: O13, C23 | evidence: default-profile
+- Posta - Mehmet Gökhan Özdemir-Akademik - Outlook.pdf | secondary: O13, C23 | evidence: default-profile
+- Powell_Speech.docx | secondary: O13, C23 | evidence: default-profile
+- POWER_Point_Monthly_Timeseries_1981_2021_039d8361N_032d7693E_LST.csv | secondary: O13, C23 | evidence: default-profile
+- POWER_Point_Monthly_Timeseries_1981_2022_039d1667N_035d6667E_LST.csv | secondary: O13, C23 | evidence: default-profile
+- pr_timeseries_annual_cru_1901-2021_TUR.csv | secondary: O13, C23 | evidence: default-profile
+- Predicting-Future-Phytophthora-Outbreaks-New-Tools-to-Identify-Emerging-Lineages-and-Track-Spread_2026_Springer-Science-and-Business-Media-BV.pdf | secondary: O13, C23 | evidence: default-profile
+- proceedings-of-topical-issues-in-international-political-geograp-2021.pdf | secondary: O13, C23 | evidence: default-profile
+- prof-dr-armagan-gozkaman (1).pdf | secondary: O13, C23 | evidence: default-profile
+- Prof. Dr. Mustafa ÜNVER Haftalık program 25 26 .docx | secondary: O13, C23 | evidence: default-profile
+- Profile-Mehmet MacBook Air.pdf | secondary: O13, C23 | evidence: default-profile
+- Profile.pdf | secondary: O13, C23 | evidence: default-profile
+- PROGRAM MIRDEC BARCA 2023 FINAL.pdf | secondary: O13, C23 | evidence: default-profile
+- program.pdf | secondary: O13, C23 | evidence: default-profile
+- Proje.xlsx | secondary: O13, C23 | evidence: default-profile
+- Proposal #1.docx | secondary: O13, C23 | evidence: default-profile
+- Proposal #2.docx | secondary: O13, C23 | evidence: default-profile
+- Proposal #3.docx | secondary: O13, C23 | evidence: default-profile
+- Proposal #4.docx | secondary: O13, C23 | evidence: default-profile
+- Proposal ^N1.docx | secondary: O13, C23 | evidence: default-profile
+- ProQuest Eğitimi.pdf | secondary: O13, C23 | evidence: default-profile
+- publishedversion_GBER240404GREWAL_305485.pdf | secondary: O13, C23 | evidence: default-profile
+- quantifiying sustainability.pdf | secondary: O13 | evidence: sustainab
+- R_Bibliometrix_Web_of_Science.pptx | secondary: O13, C23 | evidence: default-profile
+- rasiah2018.pdf | secondary: O13, C23 | evidence: default-profile
+- Real-Exchange-Rate-Misalignment-and-Economic-Growth-An-Update.pdf | secondary: O13, C23 | evidence: default-profile
+- Real_Exchange_Rate_Misalignments.pdf | secondary: O13, C23 | evidence: default-profile
+- Recent-trends-in-agrifood-trade-and-the-future-in-a-changing-geopolitical-environment_2025_NAIK-Research-Institute-of-Agricultural-Economics.pdf | secondary: Q53 | evidence: environment
+- reel efektif kur .xlsx | secondary: O13, C23 | evidence: default-profile
+- Reference List.pdf | secondary: O13, C23 | evidence: default-profile
+- Refuge-in-a-Moving-World.pdf | secondary: O13, C23 | evidence: default-profile
+- Relations_between_EU_and_Algeria.pdf | secondary: O13, C23 | evidence: default-profile
+- Research Paper on Credit Management.docx | secondary: O13, C23 | evidence: default-profile
+- Resilience thinking.pdf | secondary: O13, C23 | evidence: default-profile
+- resul_solmaz_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- retrieve (1).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (10).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (11).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (12).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (13).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (14).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (15).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (16).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (17).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (2).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (3).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (4).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (5).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (6).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (7).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (8).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve (9).pdf | secondary: O13, C23 | evidence: default-profile
+- retrieve.pdf | secondary: O13, C23 | evidence: default-profile
+- Review form Blank.docx | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu (1) 56540723.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu (1) 85915348.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu MART 77544068.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu MART.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu090224.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu57412003.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu72823236.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu_80260128_sifre.pdf | secondary: O13, C23 | evidence: default-profile
+- RiskMerkeziRaporu_v2.pdf | secondary: O13, C23 | evidence: default-profile
+- Ristina_Mehmet_ Chapter for Springer Nature_ Prof. Dr. Behnassi.docx | secondary: O13, C23 | evidence: default-profile
+- Ristina_Mehmet_ Chapter for Springer Nature_ Prof. Dr. Behnassi.pdf | secondary: O13, C23 | evidence: default-profile
+- Ristina_Mehmet_ Chapter for Springer Nature_ Prof. Dr. Behnassi_alternative.docx | secondary: O13, C23 | evidence: default-profile
+- Roberto Bermejo (auth.) - Handbook for a Sustainable Economy-Springer Netherlands (2014).pdf | secondary: O13 | evidence: sustainab
+- Robyn Eckersley (eds.) - Markets, the State and the Environment_ Towards Integration-Macmillan Education UK (1995).pdf | secondary: Q53 | evidence: environment
+- rosegrant2012.pdf | secondary: O13, C23 | evidence: default-profile
+- RPYS_Documents.xlsx | secondary: O13, C23 | evidence: default-profile
+- rticle/Article Writing with rticle/.Rproj.user/shared/notebooks/FAA6AF6C-Untitled/1/s/c1zn5ehhlph4k/000002.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Article Writing with rticle/Untitled/logo-ccby.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/Article Writing with rticle/Untitled/logo-mdpi.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/Article Writing with rticle/Untitled/logo-orcid.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/Article Writing with rticle/Untitled/logo-updates.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/Article Writing with rticle/Untitled/mybibfile.bib | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/F9CF6F21/unsaved-notebooks/7F7755D0/1/chnrx0rqmq8i1/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/F9CF6F21/unsaved-notebooks/7F7755D0/1/csetup_chunk/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/c0yrz65pwe644/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/c5k3lwhlfoalh/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/c6dzcw2iecp29/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/c7hiwtocpkboe/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/cc6h39bv8oot7/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/cg5jqljdfliql/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/cpoqcco2pls3q/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/csetup_chunk/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/csuobst92m8et/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/ctevz76ph5bat/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/cvq7lzq8xt0f8/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/cwgk591he0pc4/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/cx2a8v4otbps2/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/cxb1k8d6jiikj/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/czl3umu82ag1k/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/3361F513-İKT_Makroiktisat_SB_Vize/1/s/czrvklypiv33q/00001c.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/.Rproj.user/shared/notebooks/546BF064-Introduction/1/s/cgoapmeibqu6j/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/Introduction to Data Science/Introduction.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/F9CF6F21/unsaved-notebooks/9878BDCA/1/ckq8vw0h7d24f/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/F9CF6F21/unsaved-notebooks/9878BDCA/1/ckq8vw0h7d24f/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/F9CF6F21/unsaved-notebooks/9878BDCA/1/csetup_chunk/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/F9CF6F21/unsaved-notebooks/9878BDCA/1/csi2jit03xle5/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/c1jr2lh3te93w/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/c5rl0soo7vnvc/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/c7fpjem2cj6dx/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/cewnacao08mgc/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/cfykaog8s9kbj/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/clyl3c1xfgeag/000003.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/cqb2p7ect5ji1/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/cw1sh80yaojpc/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining/.Rproj.user/shared/notebooks/19007768-text_mining/1/s/cxd5tjz7i065a/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/c6f4x632rh0to/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cdn8lk3u908zk/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cf4okd6r3epft/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cfx75tzwrnie8/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cfxs9dsndesi3/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cgxmxa6mlswxn/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/ciof2pzodl2ei/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cni3kg79vbbq9/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cpoleddp57yer/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cqemt3ucz74a7/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/ctqfuh3gfdh1c/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cuyz9ajdyqf5b/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cvaax0jzjhzkm/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cvue8bf1ksqn7/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cw6hd5fedgonw/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cy2ujmgxu0yrn/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/56F2670D-text_mining_fed/1/s/cz044bdxt4glf/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c0f4gowbmre2p/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c0uzlkwd8npe6/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c2dq8uhc8q02l/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c2fgsxrnk8lwx/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c32psylb96bxt/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c4mfhcqih3w66/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c4o5rng52b8qu/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c5b4fsv024kk1/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c5pp2m0a5htna/00001b.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c5qeomkfurw92/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c5t8v7rt6osbv/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c6x1y6cz5doqq/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c6xr00e522cr6/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c6xwyb1ew69lv/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c7u5v017t4sb0/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c81pwrjhj2dam/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c871mf4wz2p4p/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c87y14oeg1hqe/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/c9ngfe5xwfo3f/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ca0ka3v1dhhaa/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cc3j6lp3u5ev3/000017.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cd8vtwlsd7p90/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cdarznfgnkpx7/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cdb4i9g5gqs8d/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cfb6qcpbzc3xx/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cfd0arzdbb20d/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cfjcyvftlo7ut/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cfyh587ler2ik/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cgd405s66b2b9/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cgzmcxoo5mayx/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/chgoxupkmgaq5/00001b.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ci5ul551tl6nl/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ci733jy41f05t/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cia5666h8w40b/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cib0gjdh60oxz/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cio705qp3wlij/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cjdvrjwjfw0w8/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ckzzo8zlhgo84/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cmpnd9801uf0q/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cn5mmc8e66wlv/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/coqr57c7wi0r9/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cpa1a2zwwfsxf/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cpyp1msmyjxs2/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cq6hwcog43r8m/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cqq1u7p39xrz5/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/crhmb7nr25tyt/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/csqwkm45t46cu/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ct1nefz6kan1o/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ct9ijjrhxwx53/000017.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ct9wtz996zc7e/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/ctofn0ja4jl0r/000012.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cu4pt2ex6p8bn/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cujq9zej1nd19/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cvbsv2625v7rz/000013.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cvbsv2625v7rz/000015.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cw4dzfvbqttby/000017.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cwgli9d8c6ry0/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cx9vvf668i7yq/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cxbsipp57b7fz/000006.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cy77n03axahgr/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/cyic4oro0tol3/000011.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/.Rproj.user/shared/notebooks/EE22C6AA-ARDL/1/s/czgrpbt0xp9u8/00000f.csv | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/fomcminutes20220126.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/fomcminutes20220316.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/fomcminutes20220504.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/fomcminutes20220615.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/monetary20220126a1.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/monetary20220316a1.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/monetary20220504a1.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/monetary20220615a1.pdf | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/text_mining_fed.docx | secondary: O13, C23 | evidence: default-profile
+- rticle/text_mining_fed/text_mining_fed.pdf | secondary: O13, C23 | evidence: default-profile
+- Russia algeria relations a post soviet analysis (1).docx | secondary: O13, C23 | evidence: default-profile
+- Russia algeria relations a post soviet analysis the finl.docx | secondary: O13, C23 | evidence: default-profile
+- russian.pdf | secondary: O13, C23 | evidence: default-profile
+- s00181-020-01875-7.pdf | secondary: O13, C23 | evidence: default-profile
+- s00181-024-02600-4.pdf | secondary: O13, C23 | evidence: default-profile
+- s10018-020-00293-4.pdf | secondary: O13, C23 | evidence: default-profile
+- s10602-016-9224-8.pdf | secondary: O13, C23 | evidence: default-profile
+- s10614-006-9041-7.pdf | secondary: O13, C23 | evidence: default-profile
+- s10668-022-02139-3.pdf | secondary: O13, C23 | evidence: default-profile
+- s11192-022-04294-w.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-016-6252-x.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-019-04867-y.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-020-07798-1.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-020-11739-3.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-021-17801-y.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-021-18264-x.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-022-22743-0.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-022-23144-z.pdf | secondary: O13, C23 | evidence: default-profile
+- s11356-024-35788-0.pdf | secondary: O13, C23 | evidence: default-profile
+- s11575-012-0146-z.pdf | secondary: O13, C23 | evidence: default-profile
+- s11625-018-0645-3.pdf | secondary: O13, C23 | evidence: default-profile
+- s12122-009-9075-4.pdf | secondary: O13, C23 | evidence: default-profile
+- s12232-022-00401-8.pdf | secondary: O13, C23 | evidence: default-profile
+- s13132-021-00788-9.pdf | secondary: O13, C23 | evidence: default-profile
+- s13198-025-03043-5.pdf | secondary: O13, C23 | evidence: default-profile
+- s13762-022-04471-7.pdf | secondary: O13, C23 | evidence: default-profile
+- S232E118X.pdf | secondary: O13, C23 | evidence: default-profile
+- s40008-021-00253-5.pdf | secondary: O13, C23 | evidence: default-profile
+- s40008-022-00293-5.pdf | secondary: O13, C23 | evidence: default-profile
+- s40066-021-00315-8.pdf | secondary: O13, C23 | evidence: default-profile
+- s41685-025-00388-4.pdf | secondary: O13, C23 | evidence: default-profile
+- s43621-025-02443-8.pdf | secondary: O13, C23 | evidence: default-profile
+- s44246-025-00197-6.pdf | secondary: O13, C23 | evidence: default-profile
+- sablon.docx | secondary: O13, C23 | evidence: default-profile
+- Sabrina (1).docx | secondary: O13, C23 | evidence: default-profile
+- SaglikRaporlarininHastalikIznineCevrilmesindeDikkatEdilecekHususlar.pdf | secondary: O13, C23 | evidence: default-profile
+- SAHRA ALTI AFRİKA’DA TARIMSAL KATMA DEĞERİN BELİRLEYİCİLERİ VE 2030 PROJEKSİYONU_ 29 ÜLKE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE SENARYO ANALİZİ.pdf | secondary: O13, C23 | evidence: default-profile
+- SAHRA ALTI AFRİKA’DA TARIMSAL KATMA DEĞERİN BELİRLEYİCİLERİ VE 2030 PROJEKSİYONU_ 29 ÜLKE ÜZERİNE ÇOK KATMANLI YAPAY SİNİR AĞLARI VE SENARYO ANALİZİ_v2.pdf | secondary: O13, C23 | evidence: default-profile
+- SALİHA REŞADİ.docx | secondary: O13, C23 | evidence: default-profile
+- SALİHA_KILAVUZ_(FORM-ENS023) DERS MUAFİYET BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- sanchezrodriguez2018.pdf | secondary: O13, C23 | evidence: default-profile
+- sarkar2010.pdf | secondary: O13, C23 | evidence: default-profile
+- sarokin1992.pdf | secondary: O13, C23 | evidence: default-profile
+- sarokin1993.pdf | secondary: O13, C23 | evidence: default-profile
+- Saving_and_Growth_Granger_Causality_Analysis_with_.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_Ekon_Göst_İzl_Final_A.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Ekon_Göst_İzl_Final_A_CA.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Ekon_Göst_İzl_Final_B.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Ekon_Göst_İzl_Final_B_CA.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Ekonomik Göstergeler_Vize.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Ekonomik Göstergeler_Vize.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_EkonGöstİzI_KKÜ_20212022_VİZE_OTURMA PLANI.docx | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_MakroiktisatII_KKÜ_20212022_VİZE_OTURMA PLANI.docx | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_Makroİktisat_A_Vize.docx | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_Makroİktisat_A_Vize.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_Makroİktisat_A_Vize_Görme_Engelli.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_Makroİktisat_A_Vize_Görme_Engelli.docx | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_Makroİktisat_B_Vize.docx | secondary: O13, C23 | evidence: default-profile
+- SB_İKT_Makroİktisat_B_Vize.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_Makro_İktisat_Arasınav.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makro_İktisat_FİNAL-v2.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makro_İktisat_FİNAL.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makro_KKÜ_20212022_VİZE_OTURMA PLANI.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_Final.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_Final_A.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_Final_A_CA.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_Final_B.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_Final_B_CA.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_SBKY_Final_A.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_SBKY_Final_A_CA.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_SBKY_Final_B.docx | secondary: O13, C23 | evidence: default-profile
+- SB_Makroiktisat_SBKY_Final_B_CA.docx | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroiktisat_Vize_GÖRME_Problemli.docx | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroiktisat_Vize_GÖRME_Problemli.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroİktisat_A_Vize.docx | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroİktisat_A_Vize.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroİktisat_A_Vize_v1.docx | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroİktisat_B_Vize.docx | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroİktisat_B_Vize.pdf | secondary: O13, C23 | evidence: default-profile
+- SB_SBKY_Makroİktisat_B_Vize_v1.docx | secondary: O13, C23 | evidence: default-profile
+- SBKY VİZE SINAV PROGRAMI WORD DOSYASI (2).doc | secondary: O13, C23 | evidence: default-profile
+- SBKY2022makro.docx | secondary: O13, C23 | evidence: default-profile
+- schaller1993.pdf | secondary: O13, C23 | evidence: default-profile
+- schaltegger2002.pdf | secondary: O13, C23 | evidence: default-profile
+- schug1997.pdf | secondary: O13, C23 | evidence: default-profile
+- scorse2010.pdf | secondary: O13, C23 | evidence: default-profile
+- Scott J. Callan, Janet M. Thomas - Environmental Economics and Management_ Theory, Policy, and Applications-Cengage Learning (c2013).pdf | secondary: Q53 | evidence: environment
+- SD_MGÖ_2022_USTEK22_full_text_template_vson.docx | secondary: O13, C23 | evidence: default-profile
+- SD_MGÖ_2022_USTEK22_31.08.2022.docx | secondary: O13, C23 | evidence: default-profile
+- SD_MGÖ_2022_USTEK22_full_text_template.docx | secondary: O13, C23 | evidence: default-profile
+- SD_MGÖ_79130_2210171147852.docx | secondary: O13, C23 | evidence: default-profile
+- SDI+and+Components+(1990-2019).xlsx | secondary: O13, C23 | evidence: default-profile
+- SELAMİ_YİĞİT_A_1_KURUMLAR ARASI YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- Selen Demirtaş AKTS DÜZELTME.docx | secondary: O13, C23 | evidence: default-profile
+- Selin_Dölek_DGS_Muafiyet.doc | secondary: O13, C23 | evidence: default-profile
+- Sera Gazı Ödünleşimi.docx | secondary: O13, C23 | evidence: default-profile
+- serps_2013018.pdf | secondary: O13, C23 | evidence: default-profile
+- shankar2018.pdf | secondary: O13, C23 | evidence: default-profile
+- shaw1991.pdf | secondary: O13, C23 | evidence: default-profile
+- shindell2017.pdf | secondary: O13, C23 | evidence: default-profile
+- shsconf_shcms2023_02005.pdf | secondary: O13, C23 | evidence: default-profile
+- SihhiIzin(Ars.Gor.MehmetGokhanOZDEMIR).pdf | secondary: O13, C23 | evidence: default-profile
+- siirt program (3).pdf | secondary: O13, C23 | evidence: default-profile
+- Siirt_BASKI_SON.docx | secondary: O13, C23 | evidence: default-profile
+- siirt_kongre_tam_metin_kongre_bildiri_kitabı.pdf | secondary: O13, C23 | evidence: default-profile
+- SINAV KURAL İHLALİ İFADE ÖRNEĞİ.docx | secondary: O13, C23 | evidence: default-profile
+- SINAV KURAL İHLALİ TESPİT TUTANAĞI.docx | secondary: O13, C23 | evidence: default-profile
+- Sinemgül_Demir_Ders_Programı.pdf | secondary: O13, C23 | evidence: default-profile
+- Sinemgül_Demir_ÖSS_Muafiyet.docx | secondary: O13, C23 | evidence: default-profile
+- Sinemgül_Demir_Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- SIPRI-Milex-data-1949-2021.xlsx | secondary: O13, C23 | evidence: default-profile
+- SİİRT DOÇENTLİK.pdf | secondary: O13, C23 | evidence: default-profile
+- SİNEMNUR ÜLGER (DGS)[28460538208].docx | secondary: O13, C23 | evidence: default-profile
+- Slayt_Bazlı_Konuşma_Metinleri.md.pdf | secondary: O13, C23 | evidence: default-profile
+- slayt_ÖZDEMİR VE DİNÇER TAM METİN.docx | secondary: O13, C23 | evidence: default-profile
+- SO YOKSİS.docx | secondary: O13, C23 | evidence: default-profile
+- so_2024-2025 Akademik Faaliyet Raporu.docx | secondary: O13, C23 | evidence: default-profile
+- SO_kapı için ders programı.docx | secondary: O13, C23 | evidence: default-profile
+- Socioeconomic-aspects-of-marine-bivalve-production_2018_Springer-International-Publishing.pdf | secondary: O13, C23 | evidence: default-profile
+- Solid Waste Management Practices in Turkey to Achieve the UN Sustainable Development Goals of Waste to Energy.doc | secondary: O13 | evidence: sustainab
+- Solid Waste Management Practices in Turkey to Achieve the UN Sustainable Development Goals of Waste to Energy.docx | secondary: O13 | evidence: sustainab
+- Solid_Waste_Management_Practices_in_Turkey.pdf | secondary: O13, C23 | evidence: default-profile
+- Son Derslik Kullanımı 2023-2024 Derslik Kullanımı - Ekonometri - İşletme - Sbky - İktisat-maliye-Uli.xlsx | secondary: O13, C23 | evidence: default-profile
+- son hali makalenin (2).docx | secondary: O13, C23 | evidence: default-profile
+- son hali makalenin.docx | secondary: O13, C23 | evidence: default-profile
+- sonucbildirgesi.pdf | secondary: O13, C23 | evidence: default-profile
+- SorusturmaSonucu(Ars.Gor.MehmetGokhanOZDEMIR).pdf | secondary: O13, C23 | evidence: default-profile
+- SosyalveBeseriBilimlerArastirmalariEtikKurulu.pdf | secondary: O13, C23 | evidence: default-profile
+- Source_Dynamics.xlsx | secondary: O13, C23 | evidence: default-profile
+- Source_Impact.xlsx | secondary: O13, C23 | evidence: default-profile
+- Southern Devlet Üniversitesi.docx | secondary: O13, C23 | evidence: default-profile
+- Southern Üniversitesi ve A&M Koleji İktisat Branş İŞ Birliği Protokolü Taslağı.docx | secondary: O13, C23 | evidence: default-profile
+- Sovyet-Sonrası Süreçte Avrasya Birliği'nin Tarihsel Gelişimi_son.docx | secondary: O13, C23 | evidence: default-profile
+- Sovyet_Sonras__S_re_te_Avrasya_Ekonomik_Birli_i__B.pdf | secondary: O13, C23 | evidence: default-profile
+- Soyabean-expansion-and-smallholder-livelihoods-in-rural-Zambia-dynamics-experiences-and-implications_2024_Informa-Healthcare.pdf | secondary: O13, C23 | evidence: default-profile
+- spash1997.pdf | secondary: O13, C23 | evidence: default-profile
+- ssa_tarim_29_ulke.csv | secondary: O13, C23 | evidence: default-profile
+- ssrn-1604839.pdf | secondary: O13, C23 | evidence: default-profile
+- ssrn-2456461.pdf | secondary: O13, C23 | evidence: default-profile
+- ssrn-3250725.pdf | secondary: O13, C23 | evidence: default-profile
+- ssrn-4771326.pdf | secondary: O13, C23 | evidence: default-profile
+- SSRN-id1768948.pdf | secondary: O13, C23 | evidence: default-profile
+- SSRN-id2267381.pdf | secondary: O13, C23 | evidence: default-profile
+- SSRN-id4042275.pdf | secondary: O13, C23 | evidence: default-profile
+- SSRN-id4352213.pdf | secondary: O13, C23 | evidence: default-profile
+- SSRN-id4563927.pdf | secondary: O13, C23 | evidence: default-profile
+- stallworth1996.pdf | secondary: O13, C23 | evidence: default-profile
+- Star Özdeğerlendirme Raporu Hazırlama Kılavuzu.pdf | secondary: O13, C23 | evidence: default-profile
+- stat_tables.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id1215166_europe_-import-value-share-of-fresh-fruit-and-vegetables-2021.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id255939_leading-rice-producers-worldwide-based-on-area-harvested-2021-2022.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id255945_top-countries-based-on-production-of-milled-rice-2021-22.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id255954_price-indices-of-rice-worldwide-2016-2022.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id255966_monthly-rice-price-index-worldwide-2022-2023.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id255971_global-rice-consumption-2022-23-by-country.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id255989_total-rice-consumption-in-china-my-2012-13-2023-24.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id256005_total-global-supply-of-rice-2000-2001-2022-2023.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id263977_grain-production-worldwide-2022-23-by-type.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id263990_global-beef-and-veal-leading-producing-countries-2022-2023.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id271943_total-world-grain-production-2008-09-2022-23.pdf | secondary: O13, C23 | evidence: default-profile
+- statistic_id271972_milled-rice-production-volume-worldwide-2008-09-2022-23.pdf | secondary: O13, C23 | evidence: default-profile
+- Stratejik Plan Degerlendirme 2026.docx | secondary: O13, C23 | evidence: default-profile
+- study_id10549_world-of-wheat-statista-dossier.pdf | secondary: O13, C23 | evidence: default-profile
+- study_id10549_world-of-wheat-statista-dossier.pptx | secondary: O13, C23 | evidence: default-profile
+- Submission ^LN1.docx | secondary: O13, C23 | evidence: default-profile
+- Submission ^N1.docx | secondary: O13, C23 | evidence: default-profile
+- sulama için donatılmış alan.xlsx | secondary: O13, C23 | evidence: default-profile
+- sunum_el_kibabi.pdf | secondary: O13, C23 | evidence: default-profile
+- sustainability-10-04173.pdf | secondary: O13 | evidence: sustainab
+- sustainability-12-01060.pdf | secondary: O13 | evidence: sustainab
+- sustainability-12-05518-v2.pdf | secondary: O13 | evidence: sustainab
+- sustainability-12-07890.pdf | secondary: O13 | evidence: sustainab
+- sustainability-14-05589-v2.pdf | secondary: O13 | evidence: sustainab
+- sustainability-14-11594.pdf | secondary: O13 | evidence: sustainab
+- sustainability-16-00264-v2.pdf | secondary: O13 | evidence: sustainab
+- sustainability-17-00413.pdf | secondary: O13 | evidence: sustainab
+- sustainability-17-05920.pdf | secondary: O13 | evidence: sustainab
+- sustainability-17-06077.pdf | secondary: O13 | evidence: sustainab
+- sustainability-17-08627-v3.pdf | secondary: O13 | evidence: sustainab
+- sustainability-17-09146.pdf | secondary: O13 | evidence: sustainab
+- sustainability-18-02308.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Agriculture .docx | secondary: O13 | evidence: sustainab
+- Sustainable Banking/30.06.2022 IFRS/İzmir Bayraklı 30.06.2022 IFRS Report.docx | secondary: O13 | evidence: sustainab
+- Sustainable Banking/30.06.2022 IFRS/Kocaeli Hastane 30.06.2022 IFRS Report Draft.docx | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Akbank_2020_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Akbank_2021_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/akbank_integrated_report_2020.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/garanti_bbva_2019_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Garanti_BBVA_2021_2022-03-31_Entegre_Faaliyet_Raporu.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/garanti_bbva_2021_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/GB18_TR.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/GBFR17_tr_FULL.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Halk_2020_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/halkbank_2021-Entegre-Raporu.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Is-Bankasi-2020-Entegre-Rapor.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/isbank_2020_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/isbank_2021_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Sustainable Banking in Türkiye.docx | secondary: O13 | evidence: sustainab
+- Sustainable Banking/TKYB-Entegre-Rapor-2020.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Vkf_2020_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Vkf_2021_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Ykb_2019_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Ykb_2020_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/Ykb_2021_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/ziraat_2019_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/ziraat_2020_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Banking/ziraat_2021_efp.pdf | secondary: O13 | evidence: sustainab
+- Sustainable Development - 2022 - Kocak - The path to sustainable municipal solid waste management  Do human development .pdf | secondary: O13 | evidence: sustainab
+- Sustainable Development - 2025 - Akpınar - Lifelong Learning Supported by Artificial Intelligence and Technology for.pdf | secondary: O13 | evidence: sustainab
+- Sustainable_Agricultural_Development_Economics_and_Policy.pdf | secondary: O13 | evidence: sustainab
+- Sustainable_Food_Systems__Balancing_Economy_and_Environment (1).pptx | secondary: Q53 | evidence: environment
+- Sustainable_Food_Systems__Balancing_Economy_and_Environment.pptx | secondary: Q53 | evidence: environment
+- SÜ_1.pdf | secondary: O13, C23 | evidence: default-profile
+- SÜRDÜRÜLEBİLİR KALKINMA 2030 GÜNDEMİ BAĞLAMINDA ÇALIŞMA HAYATINDA CİNSİYETE DAYALI AYRIMCILIK[#327698]-323689.pdf | secondary: O13, C23 | evidence: default-profile
+- SWM  Chapter.docx | secondary: O13, C23 | evidence: default-profile
+- SWM  Chapter1.docx | secondary: O13, C23 | evidence: default-profile
+- SWM 29.4.23 Chapter.docx | secondary: O13, C23 | evidence: default-profile
+- SWM 29.4.23 Figures.docx | secondary: O13, C23 | evidence: default-profile
+- SWM Tables 29.4.23.docx | secondary: O13, C23 | evidence: default-profile
+- swm try.docx | secondary: O13, C23 | evidence: default-profile
+- SWM.pdf | secondary: O13, C23 | evidence: default-profile
+- sınav Koordinatörü-Yedek Gözetmenlik Teslim Tutanağı   -İİBF.doc | secondary: O13, C23 | evidence: default-profile
+- sınav soruları 2022 bahar final 2.docx | secondary: O13, C23 | evidence: default-profile
+- Sınıf Yönetimi.docx | secondary: O13, C23 | evidence: default-profile
+- T.docx | secondary: O13, C23 | evidence: default-profile
+- Tabloörnek.docx | secondary: O13, C23 | evidence: default-profile
+- tahıl.xlsx | secondary: O13, C23 | evidence: default-profile
+- tahıl_miktarı.xls.xlsx | secondary: O13, C23 | evidence: default-profile
+- Takasbank TEFAS  Fon Karşılaştırma.xlsx | secondary: O13, C23 | evidence: default-profile
+- Tam Metin.pdf | secondary: O13, C23 | evidence: default-profile
+- Tam_metin_Şablon.docx | secondary: O13, C23 | evidence: default-profile
+- TAMMETINKITABIAEGEAN.pdf | secondary: O13, C23 | evidence: default-profile
+- TAOcu politikalar ve politikacıların TAOlar copy.pdf | secondary: O13, C23 | evidence: default-profile
+- TARIK_SAYGILI_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- TARIK_SAYGILI_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Tarım_GSYİH_Cari_ÜFE_Çeyrek_Zaman_Seri.xlsx | secondary: O13, C23 | evidence: default-profile
+- Tarım_GSYİH_Çeyreklik.xlsx | secondary: O13, C23 | evidence: default-profile
+- Tarım_ve_Sıcaklık_GSYİH_Çeyreklik_.xlsx | secondary: O13, C23 | evidence: default-profile
+- tarımsal aktif nüfus.xlsx | secondary: O13, C23 | evidence: default-profile
+- tarımsal girdi endeksi.xlsx | secondary: O13, C23 | evidence: default-profile
+- tarımsal makina.xlsx | secondary: O13, C23 | evidence: default-profile
+- Tarımsal Yayınlarımız.pdf | secondary: O13, C23 | evidence: default-profile
+- tarımsal çıktı değeri.xlsx | secondary: O13, C23 | evidence: default-profile
+- tarımsal çıktı turkey.xlsx | secondary: O13, C23 | evidence: default-profile
+- Tarımsal Üretim Brüt Değeri.xlsx | secondary: O13, C23 | evidence: default-profile
+- tas_timeseries_annual_cru_1901-2021_TUR.csv | secondary: O13, C23 | evidence: default-profile
+- tasmax_timeseries_annual_cru_1901-2021_TUR.csv | secondary: O13, C23 | evidence: default-profile
+- tasmax_timeseries_annual_cru_1901-2021_TUR.xlsx | secondary: O13, C23 | evidence: default-profile
+- tasmin_timeseries_annual_cru_1901-2021_TUR.csv | secondary: O13, C23 | evidence: default-profile
+- tasmin_timeseries_annual_cru_1901-2021_TUR.xlsx | secondary: O13, C23 | evidence: default-profile
+- Taylan Taner Doğan.xlsx | secondary: O13, C23 | evidence: default-profile
+- TDP İFADE TUTANAĞI.docx | secondary: O13, C23 | evidence: default-profile
+- teachR.pdf | secondary: O13, C23 | evidence: default-profile
+- tekders.pdf | secondary: O13, C23 | evidence: default-profile
+- Template_RSEP.docx | secondary: O13, C23 | evidence: default-profile
+- Tercih Donemi Gorevlendirmeleri.docx | secondary: O13, C23 | evidence: default-profile
+- Tercih Donemi Gorevlendirmeleri.pdf | secondary: O13, C23 | evidence: default-profile
+- Tercih Dönemi Günlük Görev Raporu Formu.docx | secondary: O13, C23 | evidence: default-profile
+- teslim-tebellüğ belgesi.docx | secondary: O13, C23 | evidence: default-profile
+- text-mining-with-r-a-tidy-approach-by-julia-silge-and-david-robinson-sebastopol-ca-oreilly-media-2017-isbn-978-1-491-98165-8-xi-184-pages.pdf | secondary: O13, C23 | evidence: default-profile
+- text_mining_fed.docx | secondary: O13, C23 | evidence: default-profile
+- Tez Savunma Sinavi (Mehmet Gokhan OZDEMIR) copy.pdf | secondary: O13, C23 | evidence: default-profile
+- TEZ SAVUNMA SINAVI İŞLEMLERİ 2023-2024 bahar.pdf | secondary: O13, C23 | evidence: default-profile
+- TFP Turkey.xlsx | secondary: O13, C23 | evidence: default-profile
+- The effects of FDI on economic growth in Africa.pdf | secondary: O13, C23 | evidence: default-profile
+- The flourishing of relations with Türkiye. Is it Algeria's chance to get rid of French influen.docx | secondary: O13, C23 | evidence: default-profile
+- The Structural Divergence of Global Agrifood Systems_ Why Technological and Dietary Transitions Decouple from Environmental Efficiency.pdf | secondary: Q53 | evidence: environment
+- The Structural Divergence of Global Agrifood SystemsRUSSIAN_ Why Technological and Dietary Transitions Decouple from Environmental Efficiency.pdf | secondary: Q53 | evidence: environment
+- the-challenge-of-sustainability-in-agricultural-systems-2021.pdf | secondary: O13 | evidence: sustainab
+- the-impact-of-economics-on-environmental-policy.pdf | secondary: Q53 | evidence: environment
+- The-Political-Economy-of-Real-Exchange-Rate-Behavior-Theory-and-Empirical-Evidence-for-Developed-and-Developing-Countries-19602010_2017_Routledge-infotandfcouk.pdf | secondary: O13, C23 | evidence: default-profile
+- The_Book_of_R.pdf | secondary: O13, C23 | evidence: default-profile
+- The_Double_Whammy_of_COVID_19_and_Oil_Price_Collap.pdf | secondary: O13, C23 | evidence: default-profile
+- ThepublishorperishbookAmazonColourrevisedJuly2011.pdf | secondary: O13, C23 | evidence: default-profile
+- thesis_defense_qa.md.pdf | secondary: O13, C23 | evidence: default-profile
+- TheViewofIntelligenceTechnologyintheLearningSector.pdf | secondary: O13, C23 | evidence: default-profile
+- TİK 4 RAPOR_M. Gökhan ÖZDEMİR.docx | secondary: O13, C23 | evidence: default-profile
+- Topic_Modelling_AGR.pdf | secondary: O13, C23 | evidence: default-profile
+- topicmodels.pdf | secondary: O13, C23 | evidence: default-profile
+- Toplantı Kararr Tutanağı.docx | secondary: O13, C23 | evidence: default-profile
+- Toplantı saatinde YEDEK GÖZETMEN OLARAK görevliydim.docx | secondary: O13, C23 | evidence: default-profile
+- torres1979.pdf | secondary: O13, C23 | evidence: default-profile
+- Townsend-SociologicalApproachMeasurement-1985.pdf | secondary: O13, C23 | evidence: default-profile
+- Townsend.pdf | secondary: O13, C23 | evidence: default-profile
+- tÖÖ_Karatay_Emlak_tahsilat_makbuzu-file.pdf | secondary: O13, C23 | evidence: default-profile
+- TR_İklim Değişikliği_Tarım_Zaman_Serisi.xlsx | secondary: O13, C23 | evidence: default-profile
+- Tracking_the_effect_of_climatic_and_non-climatic_e.pdf | secondary: O13, C23 | evidence: default-profile
+- Trafik idari Para Cezasi Karar Tutanagi.pdf_03-03-2026 14_41.pdf | secondary: O13, C23 | evidence: default-profile
+- Trafik Sigortası Listeleme Sayfası.pdf | secondary: O13, C23 | evidence: default-profile
+- Trip.com.pdf | secondary: O13, C23 | evidence: default-profile
+- TrkiyedeTarmSektrnnYnetimi.pdf | secondary: O13, C23 | evidence: default-profile
+- TSelçuk_Tez Yazım Kılavuzu.pdf | secondary: O13, C23 | evidence: default-profile
+- ttfv.docx | secondary: O13, C23 | evidence: default-profile
+- tto proje yönetimi.pdf | secondary: O13, C23 | evidence: default-profile
+- Tuna Doğa Dursun - Müfredat Durumu.pdf | secondary: O13, C23 | evidence: default-profile
+- TUNA DOĞA DURSUN - ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- Tuna Doğa Dursun - Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- TUR_NIR_2022.pdf | secondary: O13, C23 | evidence: default-profile
+- Turan Dursun - Din Bu 1. Cilt (Tanrı ve Kur'an).pdf | secondary: O13, C23 | evidence: default-profile
+- Turan Dursun - Din Bu 2 Cilt.pdf | secondary: O13, C23 | evidence: default-profile
+- Turan Dursun - Din Bu 3 Cilt.pdf | secondary: O13, C23 | evidence: default-profile
+- Turan Dursun - Din Bu 4.pdf | secondary: O13, C23 | evidence: default-profile
+- Turkey.pdf | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/0_Indicators_Summary.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/Bilateral_Trade_in_Environmental_Goods.csv | secondary: Q53 | evidence: environment
+- Turkey_TR_All_Indicators/CO2_Emissions_Emissions_Intensities_and_Emissions_Multipliers.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/Direct_Investment-related_Indicators.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/Environmental_Protection_Expenditures.csv | secondary: Q53 | evidence: environment
+- Turkey_TR_All_Indicators/Environmental_Taxes.csv | secondary: Q53 | evidence: environment
+- Turkey_TR_All_Indicators/Fossil_Fuel_Subsidies.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/Green_Bonds.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/National_Greenhouse_Gas_Emissions_Inventories_and_Implied_National_Mitigation_Nationally_Determined_Contributions_Targets.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/Non-life_Insurance_Penetration.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/RevenuesAssets_at_Risk_in_Disclosing_Firms.csv | secondary: O13, C23 | evidence: default-profile
+- Turkey_TR_All_Indicators/Trade_in_Environmental_Goods.csv | secondary: Q53 | evidence: environment
+- TurkeyinG20.pdf | secondary: O13, C23 | evidence: default-profile
+- Turkiye_ghg-emissions_all_1990_2020.csv | secondary: O13, C23 | evidence: default-profile
+- Turkiye_ghg-emissions_all_1990_2020.xlsx | secondary: O13, C23 | evidence: default-profile
+- Turkiyede-Tarim-Istatistikleri-Gelisimi-Sorunlar-ve-Cozum-Onerileri.pdf | secondary: O13, C23 | evidence: default-profile
+- Turkiyenin_Insani_Gelisme_EndeksiveEndeksSiralamasininAnalizi.pdf | secondary: O13, C23 | evidence: default-profile
+- Turnitin - Orijinallik Raporu - HBI_MGO_Doktora_Tezi_22.10.2025_vson.docx.pdf | secondary: O13, C23 | evidence: default-profile
+- Turnitin - Orijinallik Raporu - HBI_MGO_Doktora_Tezi_22.10.2025_vson_KAYNAKÇA_HARİÇ.docx.pdf | secondary: O13, C23 | evidence: default-profile
+- Turnitin - Orijinallik Raporu - İKLİM DEĞİŞİKLİĞİNİN TARIM ÜZERİN.._.pdf | secondary: O13, C23 | evidence: default-profile
+- TURNİTİN EN SON.pdf | secondary: O13, C23 | evidence: default-profile
+- Tutanak TDP Büt.docx | secondary: O13, C23 | evidence: default-profile
+- Tübitak 2209.pdf | secondary: O13, C23 | evidence: default-profile
+- Tübitak 2209_ Tuğba Atsız.pdf | secondary: O13, C23 | evidence: default-profile
+- Türkiye CCDR Full Report.pdf | secondary: O13, C23 | evidence: default-profile
+- Türkiye Noterler Birliği - Adıma Tescilli Araç Sorgulama.pdf | secondary: O13, C23 | evidence: default-profile
+- Türkiye_Tarım_Verileri.xlsx | secondary: O13, C23 | evidence: default-profile
+- Türkiyes Culture/Algeriaculture.pdf | secondary: O13, C23 | evidence: default-profile
+- Türkiyes Culture/b0e93678f0e2ce0a65247195b852cf12.pdf | secondary: O13, C23 | evidence: default-profile
+- Tüm Fakülte Saatler.docx | secondary: O13, C23 | evidence: default-profile
+- Türkiye Culture- paperback.docx | secondary: O13, C23 | evidence: default-profile
+- Türkiye Culture.docx | secondary: O13, C23 | evidence: default-profile
+- Türkiye Tarımın Önemi.docx | secondary: O13, C23 | evidence: default-profile
+- Türkiye’de 24 Ocak 1980 Kararları Sonrasında İstihdamın Sektörel Görününü_v3.docx | secondary: O13, C23 | evidence: default-profile
+- TÜRKİYE EKONOMİSİ SINAV SORUSU.docx | secondary: O13, C23 | evidence: default-profile
+- UA0326401.doc | secondary: O13, C23 | evidence: default-profile
+- UA0326401_Review form .docx | secondary: O13, C23 | evidence: default-profile
+- UA0326406.docx | secondary: O13, C23 | evidence: default-profile
+- UA0326406_Review form .docx | secondary: O13, C23 | evidence: default-profile
+- Uğur YILDIRIM ders programı.doc | secondary: O13, C23 | evidence: default-profile
+- Uğur YILDIRIM haftalık program.docx | secondary: O13, C23 | evidence: default-profile
+- Uğur YILDIRIM Yöksis Bilgileri.pdf | secondary: O13, C23 | evidence: default-profile
+- ulgener.pdf | secondary: O13, C23 | evidence: default-profile
+- ulusal_at-k_yonet-m--eylem_plan--20180328154824 (1).pdf | secondary: O13, C23 | evidence: default-profile
+- ulusal_at-k_yonet-m--eylem_plan--20180328154824.pdf | secondary: O13, C23 | evidence: default-profile
+- Uluslararasi Arastirmaci Programlari.pdf | secondary: O13, C23 | evidence: default-profile
+- Uluslararası Güvenlik Anlaşmaları.docx | secondary: O13, C23 | evidence: default-profile
+- Uluslararası İlişkiler Vize 21-22 Bahar (1).doc | secondary: O13, C23 | evidence: default-profile
+- UNCTAD Reel Büyüme .xlsx | secondary: O13, C23 | evidence: default-profile
+- Understanding Claude's Personalization Features _ Claude Help Center.pdf | secondary: O13, C23 | evidence: default-profile
+- UNDP-TR-TECHNICAL-NOTES-HDI-IHDI-HDR-2020-TR.pdf | secondary: O13, C23 | evidence: default-profile
+- UNDP-TR-TECHNICAL-NOTES-PHDI-TR.pdf | secondary: O13, C23 | evidence: default-profile
+- us_gdpgr_43903673447416.xlsx | secondary: O13, C23 | evidence: default-profile
+- Usage Policy _ Anthropic.pdf | secondary: O13, C23 | evidence: default-profile
+- uy_ikt_o.xlsx | secondary: O13, C23 | evidence: default-profile
+- UY_OB_MGO_TR_Econ_Paradigm_Shift_Employment_vs_Technology.docx | secondary: O13, C23 | evidence: default-profile
+- valin2013.pdf | secondary: O13, C23 | evidence: default-profile
+- Value_of_Production_E_All_Data_(Normalized)/Value_of_Production_E_All_Data_(Normalized).csv | secondary: O13, C23 | evidence: default-profile
+- Value_of_Production_E_All_Data_(Normalized)/Value_of_Production_E_AreaCodes.csv | secondary: O13, C23 | evidence: default-profile
+- Value_of_Production_E_All_Data_(Normalized)/Value_of_Production_E_Elements.csv | secondary: O13, C23 | evidence: default-profile
+- Value_of_Production_E_All_Data_(Normalized)/Value_of_Production_E_Flags.csv | secondary: O13, C23 | evidence: default-profile
+- Value_of_Production_E_All_Data_(Normalized)/Value_of_Production_E_ItemCodes.csv | secondary: O13, C23 | evidence: default-profile
+- VanderMarel_Dreyer_Beyond_Dutch_Disease_13072102.pdf | secondary: O13, C23 | evidence: default-profile
+- vanierland2002.pdf | secondary: O13, C23 | evidence: default-profile
+- venkatachalam2007.pdf | secondary: O13, C23 | evidence: default-profile
+- VergiOdemeAlindisi_e08lkt80wkn16on.pdf | secondary: O13, C23 | evidence: default-profile
+- veri1.xlsx | secondary: O13, C23 | evidence: default-profile
+- veriler kopyası/ARDL_R.xlsx | secondary: O13, C23 | evidence: default-profile
+- veriler kopyası/Chandio et al (2020).pdf | secondary: O13, C23 | evidence: default-profile
+- veriler kopyası/Gökhan hocam veri.xlsx | secondary: O13, C23 | evidence: default-profile
+- veriler kopyası/Kolerasyonlar.pdf | secondary: O13, C23 | evidence: default-profile
+- veriler kopyası/pr_timeseries_annual_cru_1901-2021_TUR.xlsx | secondary: O13, C23 | evidence: default-profile
+- vermeulen2012.pdf | secondary: O13, C23 | evidence: default-profile
+- victor2010.pdf | secondary: O13, C23 | evidence: default-profile
+- Vision Statement.docx | secondary: O13, C23 | evidence: default-profile
+- vMgaPdPolE-waste-management-in-turkey-full-report (1).pdf | secondary: O13, C23 | evidence: default-profile
+- vMgaPdPolE-waste-management-in-turkey-full-report.pdf | secondary: O13, C23 | evidence: default-profile
+- w24196.pdf | secondary: O13, C23 | evidence: default-profile
+- Waas-Hug2012_Chapter_DevelopingAnEnvironmentalSusta.pdf | secondary: Q53 | evidence: environment
+- wackernagel2008.pdf | secondary: O13, C23 | evidence: default-profile
+- water-16-02077-v2.pdf | secondary: O13, C23 | evidence: default-profile
+- water-17-01706-v2.pdf | secondary: O13, C23 | evidence: default-profile
+- Wheat - statistics & facts _ Statista.pdf | secondary: O13, C23 | evidence: default-profile
+- wheeler2013.pdf | secondary: O13, C23 | evidence: default-profile
+- White-gold-The-commercialisation-of-rice-farming-in-the-lower-mekong-basin_2020_Springer-Singapore.pdf | secondary: O13, C23 | evidence: default-profile
+- Why_are_M_Payment_platforms_so_attractive__M_Payme.pdf | secondary: O13, C23 | evidence: default-profile
+- William J. Baumol, Wallace E. Oates - The Theory of Environmental Policy-Cambridge University Press (1988).pdf | secondary: Q53 | evidence: environment
+- willis2012.pdf | secondary: O13, C23 | evidence: default-profile
+- wmr-2022_0 copy.pdf | secondary: O13, C23 | evidence: default-profile
+- worldBank_historical.csv | secondary: O13, C23 | evidence: default-profile
+- WOSviewer.docx | secondary: O13, C23 | evidence: default-profile
+- WP-2020-001.pdf | secondary: O13, C23 | evidence: default-profile
+- wp2016-07.pdf | secondary: O13, C23 | evidence: default-profile
+- WP2_PRIN_CC2C.pdf | secondary: O13, C23 | evidence: default-profile
+- WP_EcoX_2016-18.pdf | secondary: O13, C23 | evidence: default-profile
+- wspc_ser69_1315.ris | secondary: O13, C23 | evidence: default-profile
+- XB-90-705.pdf | secondary: O13, C23 | evidence: default-profile
+- Yağmur Erceyiş (DGS)[10423229216].docx | secondary: O13, C23 | evidence: default-profile
+- Yapay Zeka ve Ekolojik Ekonomi Bildirisi.pdf | secondary: O13, C23 | evidence: default-profile
+- yapay-sinir-aglari-yontemi-ile-ekonomik-buyumenin-tahmin-edilebilirligi-turkiye-ornegi20241224023302.pdf | secondary: O13, C23 | evidence: default-profile
+- YAYINLAR.docx | secondary: O13, C23 | evidence: default-profile
+- yaz okulu ilan.xlsx | secondary: O13, C23 | evidence: default-profile
+- YAZ OKULU NOT DONUSUMU.doc | secondary: O13, C23 | evidence: default-profile
+- yağmurla beslenen tarım arazisi.xlsx | secondary: O13, C23 | evidence: default-profile
+- yd_1_tam_metin_bildiri.pdf | secondary: O13, C23 | evidence: default-profile
+- ye-aras-konf-kitapcik-web.pdf | secondary: O13, C23 | evidence: default-profile
+- ye-arastirmacilar-konferansi-tambildirimetinleri-optimized-v3.pdf | secondary: O13, C23 | evidence: default-profile
+- Yillik izin.pdf | secondary: O13, C23 | evidence: default-profile
+- yok-ogrenci-belgesi-sorgulama (1).pdf | secondary: O13, C23 | evidence: default-profile
+- yok-ogrenci-belgesi-sorgulama.pdf | secondary: O13, C23 | evidence: default-profile
+- YOKSIS Verilerinin Guncellemesi.pdf | secondary: O13, C23 | evidence: default-profile
+- YOKSIS_Bilgi_Kontrol_Formu_ IIBF MD copy.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0022199622000836-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0040162513000279-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0169809525003801-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0305750X1400062X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0305750X19301767-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0305750X22001577-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0306919216303773-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0306919216303803-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0378377418306516-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0378377425002021-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0378429009001701-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0959652623016451-main (1).pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S0959652623016451-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S1569843225003358-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/1-s2.0-S246822762600061X-main.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/9780191071423_web.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/A-critical-analysis-of-challenges-and-opportunities-for-soil-fertility-restoration-in-SudanoSahelian-West-Africa_2006_.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Air-pollution-trajectories-and-life-expectancy-in-Nigeria_2022_Emerald-Group-Holdings-Ltd.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/applsci-11-05750-v2.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Appropriate-technologies-to-replenish-soil-fertility-in-southern-Africa_2006_.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Are-the-drivers-of-structural-change-different-in-Asia-and-Africa_2024_Routledge.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Bibliometric-Analysis-of-Monitoring-and-Mapping-of-Soil-Salinity-Using-Remote-Sensing-Approaches-Reports-from-the-Past-Three-Decades_2025_.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Building-a-resilient-and-sustainable-agriculture-in-subSaharan-Africa_2018_Springer-International-Publishing.pdf | secondary: O13 | evidence: sustainab
+- YSA_GA_MGO/Characterizing-the-association-between-child-malnutrition-and-protected-areas-in-subSaharan-Africa-using-unsupervised-clustering_2024_Springer.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/ejab014.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/ejv027.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/ejx012.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Farmers-preference-and-willingness-to-pay-for-weather-forecast-services-in-Benin-West-Africa_2023_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Finescale-mapping-of-irrigation-suitability-in-South-Africa-using-ensemble-modelling_2025_Nature-Research.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Future-urban-land-expansion-and-implications-for-global-croplands_2017_National-Academy-of-Sciences.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Introduction-The-provision-of-animal-health-services-in-a-changing-world_2004_Office-International-des-Epizootes.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/jsan-14-00099.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/lhx029.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Mitigating-Low-Agricultural-Productivity-of-Smallholder-Farms-in-Africa-TimeSeries-Forecasting-for-Environmental-Stressors_2022_Association-for-the-Advancement-of-Artificial-Intelligence.pdf | secondary: Q53 | evidence: environment
+- YSA_GA_MGO/Oil-revenues-for-public-investment-in-Africa-Targeting-urban-or-rural-areas_2011_.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Prospects-for-cereal-selfsufficiency-in-subSaharan-Africa_2025_National-Academy-of-Sciences.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/rsta.2010.0246.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/s10113-023-02159-3.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/s10668-010-9278-0.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Skilful-prediction-of-Sahel-summer-rainfall-on-interannual-and-multiyear-timescales_2017_Nature-Publishing-Group.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Soil Use and Management - 2007 - Gowing - Sustainable agricultural development in sub‐Saharan Africa  the case for a.pdf | secondary: O13 | evidence: sustainab
+- YSA_GA_MGO/Structural-transformation-andpoverty-alleviation-inSubSaharan-Africa-countries-sectoral-valueadded-analysis_2024_Emerald-Publishing.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Structural-transformation-andsustainable-development-insubSaharan-Africa_2025_Emerald-Publishing.pdf | secondary: O13 | evidence: sustainab
+- YSA_GA_MGO/Structural-Transformation-in-Africa-Static-Gains-Dynamic-Losses_2015_Routledge.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/SubSaharan-Africas-diverging-inequality-trends-19912011-A-structuralist-interpretation_2020_Boeck-Universite.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/sustainability-13-13620.pdf | secondary: O13 | evidence: sustainab
+- YSA_GA_MGO/Sustainable Development - 2024 - Makurumidze - Leveraging on the fourth industrial revolution by African accountants in the.pdf | secondary: O13 | evidence: sustainab
+- YSA_GA_MGO/Sustainable Development - 2025 - Xi - Agricultural Productivity‐Driven Renewable Energy Adoption and Mechanisms in.pdf | secondary: O13 | evidence: sustainab
+- YSA_GA_MGO/The-economic-impact-of-schistosomiasis_2021_BioMed-Central-Ltd.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/The-Role-of-Land-Use-Consolidation-in-Improving-Crop-Yields-among-Farm-Households-in-Rwanda_2019_Routledge-infotandfcouk.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/Toward-a-sustainable-development-in-subSaharan-Africa-do-economic-complexity-and-renewable-energy-improve-environmental-quality_2023_Springer-Science-and-Business-Media-Deutschland-GmbH.pdf | secondary: Q53 | evidence: environment
+- YSA_GA_MGO/van-ittersum-et-al-2016-can-sub-saharan-africa-feed-itself.pdf | secondary: O13, C23 | evidence: default-profile
+- YSA_GA_MGO/What-contribution-of-agroecology-to-job-creation-in-subSaharan-Africa-The-case-of-horticulture-in-the-Niayes-Senegal_2022_Taylor-and-Francis-Ltd.pdf | secondary: O13, C23 | evidence: default-profile
+- yuksekogretim-mezun-belgesi-sorgulama (1).pdf | secondary: O13, C23 | evidence: default-profile
+- yuksekogretim-mezun-belgesi-sorgulama.pdf | secondary: O13, C23 | evidence: default-profile
+- YUNUS CAN YURDAGÜL- ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- YUSUF AKGÜMÜŞ YAZ OKULU NOT DONUSUMU.doc | secondary: O13, C23 | evidence: default-profile
+- YUSUF KALENDER- ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU-Mehmet MacBook Air.doc | secondary: O13, C23 | evidence: default-profile
+- YUSUF KALENDER- ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- YUSUF_AKKAYA_A_2_MERKEZİ YERLEŞTİRME PUANI (Ek Madde.1) İLE YATAY GEÇİŞ BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- YUSUF_AKKAYA_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile
+- Yüksek Lisans ve Doktora 2024-25.docx | secondary: O13, C23 | evidence: default-profile
+- Yüksek Seçim Kurulu Başkanlığı - Yurt İçi Seçmen Kaydı Sorgulama.pdf | secondary: O13, C23 | evidence: default-profile
+- YÜKSEKÖĞRETİM KURULU.pdf | secondary: O13, C23 | evidence: default-profile
+- Yüksek Lisans Programı 2025-26 bahar dönemi.docx | secondary: O13, C23 | evidence: default-profile
+- Yüksek Lisans Programı 2025-26.docx | secondary: O13, C23 | evidence: default-profile
+- Yüksek lisans taslak.docx | secondary: O13, C23 | evidence: default-profile
+- yıllık_cru-x0.5_timeseries_pr,tas_timeseries_annual_1901-2024_mean_historical_cru_ts4.09_mean.xlsx | secondary: O13, C23 | evidence: default-profile
+- Zafer Özkan Transkript.pdf | secondary: O13, C23 | evidence: default-profile
+- Zafer_Özkan(FORM-ENS023) DERS MUAFİYET BAŞVURU DEĞERLENDİRME FORMU (1).docx | secondary: O13, C23 | evidence: default-profile
+- Zaim Reha Yaşar Final Soruları.docx | secondary: O13, C23 | evidence: default-profile
+- Zal-2-do-Wytycznych_Formularz-danych-osobowych-uczestnika---ENGLISH-color.docx | secondary: O13, C23 | evidence: default-profile
+- Zenginlestirilmis_Iklim_Tarim_ARDL_Sunumu.pptx | secondary: O13, C23 | evidence: default-profile
+- ZİYA TÜRE - ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU-Mehmet MacBook Air.doc | secondary: O13, C23 | evidence: default-profile
+- ZİYA TÜRE - ÖDB-FRM-001 YAZ OKULU DERS ALMA BAŞVURU DEĞERLENDİRME FORMU.doc | secondary: O13, C23 | evidence: default-profile
+- Zotero/Gintis_2000_Beyond Homo economicus.pdf | secondary: O13, C23 | evidence: default-profile
+- Zotero/Katz_Shapiro_1986_Technology Adoption in the Presence of Network Externalities.pdf | secondary: O13, C23 | evidence: default-profile
+- ZRY YOKSİS.pdf | secondary: O13, C23 | evidence: default-profile
+- ~$_Çevre ve İktisat.docx | secondary: O13, C23 | evidence: default-profile
+- ~$_MGO_HBI_TAM_EF_AGTFP_SIIRT_v_son.docx | secondary: O13, C23 | evidence: default-profile
+- ~$_MGÖ_HBI_AGTFP_EF_SİİRT_BİLDİRİ.docx | secondary: O13, C23 | evidence: default-profile
+- ~$_MGÖ_HBI_AGTFP_EF_SİİRT_TAM_METİN_BİLDİRİ.docx | secondary: O13, C23 | evidence: default-profile
+- ~$_MGÖ_HBI_AGTFP_EF_SİİRT_TAM_METİN_BİLDİRİ_vson.docx | secondary: O13, C23 | evidence: default-profile
+- ~$_MGÖ_HBI_TAM_EF_AGTFP_SİİRT.docx | secondary: O13, C23 | evidence: default-profile
+- ~$asınav DÖNEM.docx | secondary: O13, C23 | evidence: default-profile
+- ~$demir&Dinçer_31.10.2023.docx | secondary: O13, C23 | evidence: default-profile
+- ~$FA_MGÖ_HBI_EA_TFV_SİİRT_SUNU_ENG.pptx | secondary: O13, C23 | evidence: default-profile
+- ~$T_202223_FİNAL_GÜZ_PROG.doc | secondary: O13, C23 | evidence: default-profile
+- ~$T_2023_24_GÜZ_ARASINAV_İZLENCE.doc | secondary: O13, C23 | evidence: default-profile
+- Çetele.xlsx | secondary: O13, C23 | evidence: default-profile
+- Çevre ve İktisat I. Bölüm için.docx | secondary: O13, C23 | evidence: default-profile
+- ÖRGÜN  ve UZAKTAN ENSTİTÜ_25_02_2023.xlsx | secondary: O13, C23 | evidence: default-profile
+- ÖZGE MERAL.docx | secondary: O13, C23 | evidence: default-profile
+- ÖZGEÇMİŞ.docx | secondary: O13, C23 | evidence: default-profile
+- şbl.docx | secondary: O13, C23 | evidence: default-profile
+- ŞEHRİBAN_YÜCELER_ÖDB-FRM-002 MUAFİYET VE İNTİBAK BAŞVURU DEĞERLENDİRME FORMU.docx | secondary: O13, C23 | evidence: default-profile

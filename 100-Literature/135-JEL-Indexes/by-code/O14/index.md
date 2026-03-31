@@ -1,0 +1,93 @@
+---
+type: jel-code-index
+code: O14
+family: O
+item_count: 84
+---
+
+# O14
+
+- GEÇİŞ EKONOMİLERİNDE EKONOMİK KARMAŞIKLIK VE EKONOMİK BÜYÜME İLİŞKİSİ: ÇEK CUMHURİYETİ ÖRNEĞİ (n.d.) | Doru, Ömer, Düşünceli̇, Faruk
+- Gelişmiş ve Gelişmekte Olan Ülkelerde Ekonomik Karmaşıklık (Complexity) ile CO2 Emisyonları Arasındaki İlişki: 2003-2022 Yılları İçin Panel Veri Analizi (n.d.) | Durusoy, Ömer Tanju
+- Does greater financial openness promote external competitiveness in emerging markets? The role of institutional quality (01/2) | Aman, Zunaira, Granville, Brigitte, Mallick, Sushanta K.
+- Does greater financial openness promote external competitiveness in emerging markets? The role of institutional quality (01/2) | Aman, Zunaira, Granville, Brigitte, Mallick, Sushanta K.
+- Dynamic association between ICT, renewable energy, economic complexity and ecological footprint: Is there any difference between E-7 (developing) and G-7 (developed) countries? (02/2) | Huang, Yongming, Haseeb, Mohammad, Usman, Muhammad
+- Labor productivity and employment gaps in Sub-Saharan Africa (02/2) | McCullough, Ellen B.
+- Labor productivity and employment gaps in Sub-Saharan Africa (02/2) | McCullough, Ellen B.
+- Structural transformation and its relevance for economic growth in Sub‐Saharan Africa (02/2) | Busse, Matthias, Erdogan, Ceren, Mühlen, Henning
+- Structural transformation and its relevance for economic growth in Sub‐Saharan Africa (02/2) | Busse, Matthias, Erdogan, Ceren, Mühlen, Henning
+- Youth Employment in Sub-Saharan Africa: Challenges, Constraints and Opportunities (03/2) | Fox, Louise, Senbet, Lemma W., Simbanegavi, Witness
+- Youth Employment in Sub-Saharan Africa: Challenges, Constraints and Opportunities (03/2) | Fox, Louise, Senbet, Lemma W., Simbanegavi, Witness
+- Exploring the role of green investment, energy intensity and economic complexity in balancing the relationship between growth and environmental degradation (05/2) | Ullah, Obaid, Zeb, Ali, Shuhai, Niu
+- Structural Transformation and African Agriculture (05/2) | Binswanger-Mkhize, Hans P., McCalla, Alex F., Patel, Praful
+- Structural Transformation and African Agriculture (05/2) | Binswanger-Mkhize, Hans P., McCalla, Alex F., Patel, Praful
+- Does economic complexity reduce output volatility in developing countries? (07/2) | Güneri, Barbaros, Yalta, A. Yasemin
+- Examining the environmental aspect of economic complexity outlook and environmental-related technologies in the Nordic states (07/2) | Alola, Andrew Adewale, Celik, Ali, Awan, Usama
+- Structural change and trade openness in sub‐Saharan African countries (07/2) | Kaba, Kabinet, Lin, Justin Yifu, Renard, Mary‐Françoise
+- Structural change and trade openness in sub‐Saharan African countries (07/2) | Kaba, Kabinet, Lin, Justin Yifu, Renard, Mary‐Françoise
+- Agriculture and Structural Transformation in Africa: An Overview (08/2) | Senbet, Lemma W., Simbanegavi, Witness
+- Agriculture and Structural Transformation in Africa: An Overview (08/2) | Senbet, Lemma W., Simbanegavi, Witness
+- Effects of the German Renewable Energy Act on structural change in agriculture – The case of biogas (08/2) | Appel, Franziska, Ostermeyer-Wiethaup, Arlette, Balmann, Alfons
+- Evolution and economic complexity: an overview (10/2) | Foster, John, Metcalfe, Stan J.
+- Waking a sleeping giant: Realizing the potential of groundwater in Sub-Saharan Africa (10/2) | Cobbing, Jude, Hiller, Bradley
+- Waking a sleeping giant: Realizing the potential of groundwater in Sub-Saharan Africa (10/2) | Cobbing, Jude, Hiller, Bradley
+- Introduction – Understanding Structural Transformation in Africa (11/2) | McMillan, Margaret, Headey, Derek
+- Introduction – Understanding Structural Transformation in Africa (11/2) | McMillan, Margaret, Headey, Derek
+- Introduction: the provision of animal health services in a changing world: -EN- -FR- -ES- (2004) | De Haan, C.
+- Introduction: the provision of animal health services in a changing world: -EN- -FR- -ES- (2004) | De Haan, C.
+- Consumption structure and macroeconomics: structural change and the relationship between inequality and growth (2005) | Foellmi, Reto
+- Transmission of Real Exchange Rate Changes to the Manufacturing Sector Performance (2013) | Dhasmana, Anubha
+- Complexity and the economy (2015) | Arthur, W. Brian
+- Structural Transformation in Africa: Static Gains, Dynamic Losses (2015) | De Vries, Gaaitzen, Timmer, Marcel, De Vries, Klaas
+- Structural Transformation in Africa: Static Gains, Dynamic Losses (2015) | De Vries, Gaaitzen, Timmer, Marcel, De Vries, Klaas
+- The potential for internal trade and regional integration in Africa (2015) | Geda, Alemayehu, Seid, Edris Hussein
+- Global value chains and the exchange rate elasticity of exports (2017) | Ahmed, Swarnali, Appendino, Maximiliano, Ruta, Michele
+- Climate Change, Agriculture, and Economic Development in Ethiopia (2018) | Yalew, Amsalu, Hirte, Georg, Lotze-Campen, Hermann
+- Agriculture, Aid, and Economic Growth in Africa (2019) | McArthur, John W, Sachs, Jeffrey D
+- Agriculture, Aid, and Economic Growth in Africa (2019) | McArthur, John W, Sachs, Jeffrey D
+- Defying the Footprint Oracle: Implications of Country Resource Trends (2019) | Wackernagel, Mathis, Lin, David, Evans, Mikel
+- EKONOMİK KARMAŞIKLIK İLE EKONOMİK BÜYÜME ARASINDAKİ İLİŞKİ: PANEL BOOTSTRAP GRANGER NEDENSELLİK ANALİZİ (2019) | Akbulut Yildiz, Gizem, Yildiz, Barış
+- Complexity Economics: Building a New Approach to Ancient Economic History (2021) | Unknown
+- Currency regimes and external competitiveness: the role of institutions, trade agreements and monetary frameworks (2021) | Aman, Zunaira, Mallick, Sushanta, Nemlioglu, Ilayda
+- Food for All: International Organizations and the Transformation of Agriculture (2021) | Lele, Uma, Agarwal, Manmohan, Baldwin, Brian C.
+- Food for All: International Organizations and the Transformation of Agriculture (2021) | Lele, Uma, Agarwal, Manmohan, Baldwin, Brian C.
+- Shocks, Resilience and Structural Transformation in Sub-Saharan Africa (2021) | Adelaja, Adesoji, George, Justin, Fox, Louise
+- Shocks, Resilience and Structural Transformation in Sub-Saharan Africa (2021) | Adelaja, Adesoji, George, Justin, Fox, Louise
+- The Impact of Currency Misalignment on Trade Balance of Emerging Market Economies (2021) | Mamun, Abdullahil, Akça, Emrah Eray, Bal, Harun
+- Decent Employment and the Future of Agriculture. How Dominant Narratives Prevent Addressing Structural Issues (2022) | Losch, Bruno
+- Decent Employment and the Future of Agriculture. How Dominant Narratives Prevent Addressing Structural Issues (2022) | Losch, Bruno
+- EKONOMİK KARMAŞIKLIK İNDEKSİ VE EKONOMİK BÜYÜME: CIVETS ÜLKELERİNDEN AMPİRİK KANITLAR (2022) | Bayar, İlyas
+- EKONOMİK KARMAŞIKLIK, AR-GE HARCAMALARI VE EKONOMİK BÜYÜME İLİŞKİSİ (2022) | Akar, Tuba
+- Effects of Digitalization on Natural Resource Use in European Countries: Does Economic Complexity Matter? (2022) | Mai, Ngô Thanh, Ha, Le Thanh, Hoa, Trần Thi Mai
+- What contribution of agroecology to job creation in sub-Saharan Africa? The case of horticulture in the Niayes, <i>Senegal</i> (2022) | Laske, Esther, Michel, Sandrine
+- What contribution of agroecology to job creation in sub-Saharan Africa? The case of horticulture in the Niayes, <i>Senegal</i> (2022) | Laske, Esther, Michel, Sandrine
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Agricultural productivity and structural transformation: evidence and questions for African development (2023) | Gollin, Douglas
+- Structural change in Africa: role of agriculture (2023) | Grabowski, Richard, Self, Sharmistha
+- Structural change in Africa: role of agriculture (2023) | Grabowski, Richard, Self, Sharmistha
+- Toward a sustainable development in sub-Saharan Africa: do economic complexity and renewable energy improve environmental quality? (2023) | Abdi, Abdikafi Hassan
+- Toward a sustainable development in sub-Saharan Africa: do economic complexity and renewable energy improve environmental quality? (2023) | Abdi, Abdikafi Hassan
+- Are the drivers of structural change different in Asia and Africa? (2024) | Grabowski, Richard, Self, Sharmistha
+- Are the drivers of structural change different in Asia and Africa? (2024) | Grabowski, Richard, Self, Sharmistha
+- Does Financial Development Matter for Economic Complexity? –Cross-Country Evidence (2024) | Low, Soo-Wah, Albada, Ali, Ghazali, Noor Azlan
+- Nexus between Economic Structural Changes, Foreign Investments, and Environmental Efficiency: Novel Findings from Global Regional Data (2024) | Kumar Singh, Amit, Jain, Srishti
+- Structural transformation and poverty alleviation in Sub-Saharan Africa countries: sectoral value-added analysis (2024) | Enongene, Betrand Ewane
+- Structural transformation and poverty alleviation in Sub-Saharan Africa countries: sectoral value-added analysis (2024) | Enongene, Betrand Ewane
+- The Most Economically Complex Regions First? A Map of Brazil's Green Economy (2024) | Dos Santos Robinson, Andrey Luis, Domingues Cechin, Andrei
+- The Role of Knowledge-Sharing in Improving Marine Living Resources Towards Sustainable Blue Economy (2024) | Ha, Nguyen Thi Thu, Huyen, Nguyen Thi Thanh, Hoa, Tran Thi Mai
+- EKONOMİK KARMAŞIKLIK VE İNSANİ GELİŞME ENDEKSLERİNİN EKONOMİK BÜYÜME ÜZERİNDEKİ ETKİSİ: MIKTA ÜLKELERİNDEN AMPİRİK KANITLAR (2025) | Atılgan, Dilek, Kütükçü, Esra
+- Effect of Exchange Rate Volatility on Export Competitiveness and National Trade Balances in Emerging Markets (2025) | Unknown
+- Examining the relationship between foreign direct investment and industrial carbon intensity in China: does economic complexity matter? (2025) | Wang, Xiuting, Jiang, Shixu
+- From complexity to resilience: clean innovation reshapes the load capacity curve dynamics (2025) | Satrovic, Elma, Razi, Ummara, Radulescu, Magdalena
+- Global insights on validating environmental Kuznets curve using economic complexity and environmental efficiency scores (2025) | Singh, Amit Kumar, Jain, Srishti
+- Prospects for cereal self-sufficiency in sub-Saharan Africa (2025) | Van Ittersum, Martin K., Alimagham, Seyyedmajid, Silva, João Vasco
+- Prospects for cereal self-sufficiency in sub-Saharan Africa (2025) | Van Ittersum, Martin K., Alimagham, Seyyedmajid, Silva, João Vasco
+- Structural transformation and sustainable development in sub-Saharan Africa (2025) | Olaoye, Olumide O., Zerihun, Mulatu Fekadu, Tabash, Mosab I.
+- Structural transformation and sustainable development in sub-Saharan Africa (2025) | Olaoye, Olumide O., Zerihun, Mulatu Fekadu, Tabash, Mosab I.
+- Sub-Saharan Africa’s development pattern (2025) | Grabowski, Richard, Self, Sharmistha
+- Sub-Saharan Africa’s development pattern (2025) | Grabowski, Richard, Self, Sharmistha
+- BRICS-T Ekonomilerinde Büyümenin Dinamikleri: Ekonomik Karmaşıklık ve Dışa Açıklığın Yapısal Dönüşümdeki Rolü (2026) | Yilmaz, Ömer
+- Eco‐Innovation, Economic Complexity, and Sustainability: A Bibliometric and Systematic Literature Review (2026) | De Moraes, Gregory Matheus Pereira, Ferraz, Diogo
+- The Influence of the Belt and Road Initiative on China’s Advancement in Global Value Chains and Developing Economies: A Systematic Review (2026) | Moradi Haghighi, Faezeh, Augustín, Michael

@@ -1,0 +1,96 @@
+---
+type: jel-code-index
+code: Q57
+family: Q
+item_count: 87
+---
+
+# Q57
+
+- Ecological Footprint - Global Footprint Network (n.d.) | Unknown
+- Free Public Data Set (n.d.) | Unknown
+- Circular Economy: The Concept and its Limitations (01/2) | Korhonen, Jouni, Honkasalo, Antero, Seppälä, Jyri
+- Value-based adaptation to climate change and divergent developmentalisms in Turkish agriculture (01/2) | Turhan, Ethemcan
+- Does financial inclusion, renewable and non-renewable energy utilization accelerate ecological footprints and economic growth? Fresh evidence from 15 highest emitting countries (02/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad, Kousar, Rakhshanda
+- Dynamic association between ICT, renewable energy, economic complexity and ecological footprint: Is there any difference between E-7 (developing) and G-7 (developed) countries? (02/2) | Huang, Yongming, Haseeb, Mohammad, Usman, Muhammad
+- Food access in crisis: Food security and COVID-19 (02/2) | O'Hara, Sabine, Toussaint, Etienne C.
+- Investigation of environmental Kuznets curve for ecological footprint: The role of energy and financial development (02/2) | Destek, Mehmet Akif, Sarkodie, Samuel Asumadu
+- Redefining innovation — eco-innovation research and the contribution from ecological economics (02/2) | Rennings, Klaus
+- A tale of three paradigms: Realising the revolutionary potential of ecological economics (03/2) | Spash, Clive L.
+- A tale of three paradigms: Realising the revolutionary potential of ecological economics (03/2) | Spash, Clive L.
+- Climate change and agriculture in the Sudan: Impact pathways beyond changes in mean rainfall and temperature (03/2) | Siddig, Khalid, Stepanyan, Davit, Wiebelt, Manfred
+- Determinants of the ecological footprint: Role of renewable energy, natural resources, and urbanization (03/2) | Danish, Ulucak, Recep, Khan, Salah Ud-Din
+- Does globalization matter for ecological footprint in Turkey? Evidence from dual adjustment approach (03/2) | Kirikkaleli, Dervis, Adebayo, Tomiwa Sunday, Khan, Zeeshan
+- The need for ecological ethics in a new ecological economics (03/2) | Washington, Haydn, Maloney, Michelle
+- Towards an ecological theory of unequal exchange: articulating world system theory and ecological economics (04/1) | Hornborg, Alf
+- Adaptation to Climate Change in Rainfed Agriculture in the Global South: Soil Biodiversity as Natural Insurance (04/2) | Sidibé, Yoro, Foudi, Sébastien, Pascual, Unai
+- Ecological Macroeconomic Models: Assessing Current Developments (04/2) | Hardt, Lukas, O'Neill, Daniel W.
+- Climate-induced Land Use Change in France: Impacts of Agricultural Adaptation and Climate Change Mitigation (05/2) | Lungarska, Anna, Chakir, Raja
+- Irrigated agriculture and climate change: The influence of water supply variability and salinity on adaptation (05/2) | Connor, Jeffery D., Schwabe, Kurt, King, Darran
+- New foundations for ecological economics (05/2) | Spash, Clive L.
+- National natural capital accounting with the ecological footprint concept (06/1) | Wackernagel, Mathis, Onisto, Larry, Bello, Patricia
+- Revisiting the role of renewable and non-renewable energy consumption on Turkey’s ecological footprint: Evidence from Quantile ARDL approach (06/2) | Sharif, Arshian, Baris-Tuzemen, Ozge, Uzuner, Gizem
+- The linkages between natural resources, human capital, globalization, economic growth, financial development, and ecological footprint: The moderating role of technological innovations (06/2) | Jahanger, Atif, Usman, Muhammad, Murshed, Muntasir
+- Accounting for externalities in cross-sectional economic models of climate change impacts (07/2) | Moretti, Michele, Vanschoenwinkel, Janka, Van Passel, Steven
+- Moving towards a sustainable environment: The dynamic linkage between natural resources, human capital, urbanization, economic growth, and ecological footprint in China (08/2) | Ahmed, Zahoor, Asghar, Muhammad Mansoor, Malik, Muhammad Nasir
+- Beyond environmental and ecological economics: Proposal for an economic sociology of the environment (09/2) | Gendron, Corinne
+- Beyond environmental and ecological economics: Proposal for an economic sociology of the environment (09/2) | Gendron, Corinne
+- Ecological deficit tax: A tax design and simulation of compensation for ecosystem service value based on ecological footprint in China (09/2) | Xiong, Zhenxing, Li, Hong
+- Economywide impacts of climate change on agriculture in Sub-Saharan Africa (09/2) | Calzadilla, Alvaro, Zhu, Tingju, Rehdanz, Katrin
+- Evaluation of Climate Change Adaptation Alternatives for Smallholder Farmers in the Upper Blue-Nile Basin (09/2) | Nigussie, Yalemzewd, van der Werf, Edwin, Zhu, Xueqin
+- Modelling the effects of energy taxes on ecological footprint transfers in China's foreign trade (09/2) | Sun, Yuanyuan, Mao, Xianqiang, Liu, Gengyuan
+- The ecological economics of land degradation: Impacts on ecosystem service values (09/2) | Sutton, Paul C., Anderson, Sharolyn J., Costanza, Robert
+- The shallow or the deep ecological economics movement? (09/2) | Spash, Clive L.
+- Transformation archetypes in global food systems (09/2) | Dornelles, André Zuanazzi, Boonstra, Wiebren J., Delabre, Izabela
+- Climate change and its marginalizing effect on agriculture (1/20) | Mestre-Sanchís, Fernando, Feijóo-Bello, María Luisa
+- Ecological footprints and appropriated carrying capacity: what urban economics leaves out (10/1) | Rees, William E.
+- Climate Change and Agriculture: Do Environmental Preservation and Ecosystem Services Matter? (10/2) | Maia, Alexandre Gori, Miyamoto, Bruno César Brito, Garcia, Junior Ruiz
+- The Ecological Economics of Economic Democracy (10/2) | Akbulut, Bengi, Adaman, Fikret
+- Environmental economics in theory and practice (11/1) | Neumayer, Eric
+- New methodology for the ecological footprint with an application to the New Zealand economy (11/1) | Bicknell, Kathryn B, Ball, Richard J, Cullen, Ross
+- Impact of carbon footprint of bank loans and fossil fuel subsidies on ecological footprint in Tunisia: A contingency and asymmetric analysis (11/2) | Iyke-Ofoedu, Maureen Ifeoma, Nwonye, Nnenna G., Abner, Ishaku Prince
+- Sustainability indicators, policy and governance: Issues for ecological economics (11/2) | Hezri, Adnan A., Dovers, Stephen R.
+- The dynamic impact of biomass and natural resources on ecological footprint in BRICS economies: A quantile regression evidence (11/2) | Awosusi, Abraham Ayobamiji, Adebayo, Tomiwa Sunday, Altuntaş, Mehmet
+- The role of non-cognitive skills in farmers' adoption of climate change mitigation measures (11/2) | Kreft, Cordelia, Huber, Robert, Wuepper, David
+- A hydro-economic model for the assessment of climate change impacts and adaptation in irrigated agriculture (12/2) | Esteve, Paloma, Varela-Ortega, Consuelo, Blanco-Gutiérrez, Irene
+- Beyond Homo economicus: evidence from experimental economics (12/2) | Gintis, Herbert
+- Ecological economics: The next 30 years (12/2) | Farley, Joshua, Kish, Kaitlin
+- Ecosystem services and dis-services to agriculture (12/2) | Zhang, Wei, Ricketts, Taylor H., Kremen, Claire
+- Efficient water management policies for irrigation adaptation to climate change in Southern Europe (12/2) | Kahil, Mohamed Taher, Connor, Jeffery D., Albiac, Jose
+- Political economy of climate change, ecological destruction and uneven development (12/2) | O'Hara, Phillip Anthony
+- Supplemental irrigation water rights and climate change adaptation (12/2) | Bigelow, Daniel P., Zhang, Hongliang
+- What abates ecological footprint in BRICS-T region? Exploring the influence of renewable energy, non-renewable energy, agriculture, forest area and financial development (12/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad
+- The Ecological Footprint: an Indicator of Progress Toward Regional Sustainability (1998) | Wackernagel, Mathis, Yount, J. David
+- Ecological economics and the ecology of economics: essays in criticism (1999) | Daly, H. E.
+- Ecological economics: themes, approaches, and differences with environmental economics (2001) | van den Bergh, Jeroen C. J. M.
+- Ecological economics: principles and applications (2004) | Unknown
+- The approach of ecological economics (2005) | Gowdy, J., Erickson, J.
+- Introduction to Ecological Economics (2007) | Unknown
+- Ecological Footprint (2008) | Wackernagel, M., Kitzes, J.
+- Ecological economics: Principles and applications (2010) | Daly, H. E., Farley, J.
+- Ecological Footprint Analysis of Canned Sweet Corn (2016) | Usubharatana, Phairat, Phungrassami, Harnpon
+- The Evaluation of Cereal Farms Using Ecological Footprint Method (2016) | Biekša, Kęstutis
+- Defying the Footprint Oracle: Implications of Country Resource Trends (2019) | Wackernagel, Mathis, Lin, David, Evans, Mikel
+- Seçilmiş OECD Ülkelerinde Çevre Vergilerinin Çevre Kirliliği Üzerindeki Etkileri: Yapısal Kırılmalı Nedensellik Testinden Kanıtlar (2020) | Aydin, Mücahit
+- Time-varying causality between income inequality and ecological footprint in Turkey (2022) | Altıntaş, Nurullah, Kırca, Mustafa, Acar, Samet
+- Data and Methodology (2023) | Küresel Ayak İzi Ağı
+- Environmental Policy Stringency and Ecological Footprint Linkage: Mitigation Measures of Renewable Energy and Innovation (2023) | Sohag, Kazi, Husain, Shaiara, Soytas, Ugur
+- Agricultural intensification, irrigation and the environment in South Asia: Issues and policy options (3/20) | Alauddin, Mohammad, Quiggin, John
+- Environmental economics and ecological economics: Where they can converge? (3/20) | Venkatachalam, L.
+- Farm-level Autonomous Adaptation of European Agricultural Supply to Climate Change (3/20) | Leclère, David, Jayet, Pierre-Alain, de Noblet-Ducoudré, Nathalie
+- On the economics of virtual water trade (3/20) | Reimer, Jeffrey J.
+- Climate change, irrigation, and Israeli agriculture: Will warming be harmful? (4/20) | Fleischer, Aliza, Lichtman, Ivgenia, Mendelsohn, Robert
+- Ecological economics at a crossroads (4/20) | Gowdy, John, Erickson, Jon
+- Squaring the circle? Some thoughts on the idea of sustainable development (4/20) | Robinson, John
+- The history of ecosystem services in economic theory and practice: From early notions to markets and payment schemes (4/20) | Gómez-Baggethun, Erik, de Groot, Rudolf, Lomas, Pedro L.
+- Designing payments for environmental services in theory and practice: An overview of the issues (5/20) | Engel, Stefanie, Pagiola, Stefano, Wunder, Sven
+- Limits to substitution and irreversibility in production and consumption: A neoclassical interpretation of ecological economics (6/19) | Stern, David I.
+- Urban ecological footprints: Why cities cannot be sustainable—And why they are a key to sustainability (7/19) | Rees, William, Wackernagel, Mathis
+- Mitigating economic risk from climate variability in rain-fed agriculture through enterprise mix diversification (7/20) | Kandulu, John M., Bryan, Brett A., King, Darran
+- Sustainable de-growth: Mapping the context, criticisms and future prospects of an emergent paradigm (7/20) | Martínez-Alier, Joan, Pascual, Unai, Vivien, Franck-Dominique
+- The worth of a songbird: ecological economics as a post-normal science (8/19) | Funtowicz, Silvio O., Ravetz, Jerome R.
+- A tale of two market failures: Technology and environmental policy (8/20) | Jaffe, Adam B., Newell, Richard G., Stavins, Robert N.
+- Environmental Kuznets Curve Hypothesis: A Survey (8/20) | Dinda, Soumyananda
+- Refining the ecological footprint (8/20) | Venetoulis, Jason, Talberth, John
+- What are ecosystem services? The need for standardized environmental accounting units (8/20) | Boyd, James, Banzhaf, Spencer
+- Weak comparability of values as a foundation for ecological economics (9/19) | Martinez-Alier, Joan, Munda, Giuseppe, O'Neill, John

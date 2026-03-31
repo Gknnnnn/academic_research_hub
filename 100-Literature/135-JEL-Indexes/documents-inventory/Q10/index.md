@@ -1,0 +1,110 @@
+---
+type: documents-jel-index
+code: Q10
+item_count: 102
+---
+
+# Documents - Q10
+
+- (Agriculture issues and policies series.) Lee, Tomas H. - Agricultural economics _ new research-Nova Science Publishers (2010).pdf | secondary: Q18 | evidence: agric
+- (SpringerBriefs in Economics) Stefan Mann (auth.) -  Socioeconomics of Agriculture-Springer International Publishing (2018).pdf | secondary: Q18 | evidence: agric
+- 112_2015-AGRICECON.pdf | secondary: Q18 | evidence: agric
+- agricecon_age-201103-0006.pdf | secondary: Q18 | evidence: agric
+- agricecon_age-202210-0002.pdf | secondary: Q18 | evidence: agric
+- Agricultural Total Factor Productivity.docx | secondary: Q18 | evidence: agric
+- agricultural-output-dollars.csv | secondary: Q18 | evidence: agric
+- Agricultural-support-and-vulnerability-of-food-security-to-trade-in-developing-countries_2016_Springer-Netherlands.pdf | secondary: Q18 | evidence: agric
+- agriculture-10-00178.pdf | secondary: Q18 | evidence: agric
+- agriculture-13-00272-v3.pdf | secondary: Q18 | evidence: agric
+- agriculture-13-02021.pdf | secondary: Q18 | evidence: agric
+- agriculture-16-00414.pdf | secondary: Q18 | evidence: agric
+- Analysis-and-Research-on-ChinaRussia-Agricultural-Economic-Smart-Supply-Chain-from-the-Perspective-of-Global-Food-Security_2025_Nan-Yang-Academy-of-Sciences-Pte-Ltd.pdf | secondary: Q18 | evidence: agric
+- Assessing the determinants of agricultural productivity in Somalia An application of an ARDL model.pdf | secondary: Q18 | evidence: agric
+- Book Chapter _ Mehmet_Ristina_Urban Farming at Emerging Countries within an Agricultural Outlook.docx | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/1216/Water Agriculture and Drought in the West under Changing Climat.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/1429/Schlenker et al_2004_Determinants of Agricultural Output.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/1438/Hertel_2011_The Global Supply and Demand for Agricultural Land in 2050.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/1469/Solomou_Wu_1999_Weather effects on European agricultural output, 1850-1913.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/1582/Wollenberg vd. - 2016 - Reducing emissions from agriculture to meet the 2 .pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/1603/Niles vd. - 2015 - How limiting factors drive agricultural adaptation.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/1609/Tinker vd. - 1996 - Effects of slash-and-burn agriculture and deforest.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renev/files/742/K. Vohnout - Mathematical Modeling for System Analysis in Agricultural Research-Elsevier (2003).pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renewable Energy/Exported Items_2/files/1438/Hertel_2011_The Global Supply and Demand for Agricultural Land in 2050.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renewable Energy/files/2979/Liu et al. - 2017 - The impact of renewable energy and agriculture on .pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renewable Energy/files/2983/Waheed et al. - 2018 - Forest, agriculture, renewable energy, and CO2 emi.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renewable Energy/files/2989/Ben Jebli and Ben Youssef - 2017 - The role of renewable energy and agriculture in re.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renewable Energy/files/3046/Liu et al. - 2017 - The nexus of renewable energy-agriculture-environm.pdf | secondary: Q18 | evidence: agric
+- citaviii/Renewable/Renewable Energy/files/3048/Ben Jebli and Ben Youssef - 2017 - Renewable energy consumption and agriculture evid.pdf | secondary: Q18 | evidence: agric
+- Determinants-of-Extensive-and-Intensive-Margins-of-Indian-Agriculture-Gravity-Model-Analysis_2024_Nan-Yang-Academy-of-Sciences-Pte-Ltd.pdf | secondary: Q18 | evidence: agric
+- Determinants-of-South-African-agricultural-exports-to-African-markets_2023_AOSIS-pty-Ltd.pdf | secondary: Q18 | evidence: agric
+- Econometric-Analysis-of-ChinaECOWAS-agricultural-products-trade_2023_Universidade-Federal-de-Santa-Maria.pdf | secondary: Q18 | evidence: agric
+- EKC/agriculture-13-00241.pdf | secondary: Q18 | evidence: agric
+- EKC/The-Impact-of-Digital-Inclusive-Finance-on-Agricultural-Green-Total-Factor-Productivity-Evidence-From-China_2022_Frontiers-Media-SA.pdf | secondary: Q18 | evidence: agric
+- GHG_Emission_Mitigation_of_Turkish_Agriculture_Sec.pdf | secondary: Q18 | evidence: agric
+- Green agriculture .docx | secondary: Q18 | evidence: agric
+- Impacts-of-irrigated-agriculture-on-foodenergywaterCO2-nexus-across-metacoupled-systems_2020_Nature-Research.pdf | secondary: Q18 | evidence: agric
+- Influence-of-CPECFlagship-of-Belt-and-Road-Initiative-on-the-agricultural-trade-of-China_2023_Routledge.pdf | secondary: Q18 | evidence: agric
+- Interest-trade-in-agriculture-sector-between-Vietnam-and-some-WTO-member-countries_2021_EDP-Sciences.pdf | secondary: Q18 | evidence: agric
+- J Agricultural Economics - 2020 - Fiankor - The Heterogeneous Effects of Standards on Agricultural Trade Flows.pdf | secondary: Q18 | evidence: agric
+- Kyklos - 2025 - Fiankor - The Effect of Swiss Free Trade Agreements on Agricultural Trade.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1429/Schlenker et al_2004_Determinants of Agricultural Output.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1438/Hertel_2011_The Global Supply and Demand for Agricultural Land in 2050.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1469/Solomou_Wu_1999_Weather effects on European agricultural output, 1850-1913.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1582/Wollenberg vd. - 2016 - Reducing emissions from agriculture to meet the 2 .pdf | secondary: Q18 | evidence: agric
+- My Library/files/1591/Campbell vd. - 2017 - Agriculture production as a major driver of the Ea.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1603/Niles vd. - 2015 - How limiting factors drive agricultural adaptation.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1609/Tinker vd. - 1996 - Effects of slash-and-burn agriculture and deforest.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1617/Leclère vd. - 2013 - Farm-level Autonomous Adaptation of European Agric.pdf | secondary: Q18 | evidence: agric
+- My Library/files/1647/Leclère vd. - 2013 - Farm-level Autonomous Adaptation of European Agric.pdf | secondary: Q18 | evidence: agric
+- My Library/files/2979/Liu et al. - 2017 - The impact of renewable energy and agriculture on .pdf | secondary: Q18 | evidence: agric
+- My Library/files/2983/Waheed et al. - 2018 - Forest, agriculture, renewable energy, and CO2 emi.pdf | secondary: Q18 | evidence: agric
+- My Library/files/2989/Ben Jebli and Ben Youssef - 2017 - The role of renewable energy and agriculture in re.pdf | secondary: Q18 | evidence: agric
+- My Library/files/3046/Liu et al. - 2017 - The nexus of renewable energy-agriculture-environm.pdf | secondary: Q18 | evidence: agric
+- My Library/files/3048/Ben Jebli and Ben Youssef - 2017 - Renewable energy consumption and agriculture evid.pdf | secondary: Q18 | evidence: agric
+- My Library/files/4104/Isbasoiu et al. - 2021 - Increasing food production and mitigating agricult.pdf | secondary: Q18 | evidence: agric
+- My Library/files/4149/Mann_2018_Socioeconomics of Agriculture.pdf | secondary: Q18 | evidence: agric
+- My Library/files/4476/Singh_Singh_2017_Traditional agriculture.pdf | secondary: Q18 | evidence: agric
+- My Library/files/4734/Shita et al. - 2018 - Determinants of Agricultural Productivity in Ethio.pdf | secondary: Q18 | evidence: agric
+- My Library/files/4746/Osabohien et al. - 2018 - An Econometric Analysis of Food Security and Agric.pdf | secondary: Q18 | evidence: agric
+- My Library/files/4981/Dusunceli et al. - POLICIES TO STRENGTHEN TURKISH AGRICULTURE FOR ADA.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5024/OECD and Food and Agriculture Organization of the United Nations - 2022 - OECD-FAO Agricultural Outlook 2022-2031.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5047/OECD - 2011 - Evaluation of Agricultural Policy Reforms in Turke.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5120/2022 - The impacts of agricultural trade and support poli.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5154/FAO - 2022 - World Food and Agriculture – Statistical Yearbook .pdf | secondary: Q18 | evidence: agric
+- My Library/files/5222/OECD - 2019 - Agricultural Policy Monitoring and Evaluation 2019.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5284/Hu et al. - 2021 - Financial inclusion and agricultural total factor .pdf | secondary: Q18 | evidence: agric
+- My Library/files/5286/Alhassan - 2021 - The effect of agricultural total factor productivi.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5288/Sheng et al. - 2020 - Measuring agricultural total factor productivity i.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5292/Villoria - 2019 - Consequences of agricultural total factor producti.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5294/Fu and Zhang - 2022 - Can Digitalization Levels Affect Agricultural Tota.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5298/Sunge and Ngepah - 2020 - The Impact of Agricultural Trade Liberalization on.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5302/Joshi et al. - 2022 - Impacts of Climatic Variability on Agricultural To.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5333/Fuglie_2015_Accounting for growth in global agriculture.pdf | secondary: Q18 | evidence: agric
+- My Library/files/5508/Liu et al. - 2021 - China's agricultural green total factor productivi.pdf | secondary: Q18 | evidence: agric
+- NEURAL NETWORK APPLICATIONS IN AGRICULTURAL ECONOMICS.pdf | secondary: Q18 | evidence: agric
+- Özdemir_Sundari_Urban Farming and Emerging Countries Agricultural Outlook.docx | secondary: Q18 | evidence: agric
+- P. N. Raja Junankar (auth.) - Development Economics_ The Role of Agriculture in Development-Palgrave Macmillan UK (2016).pdf | secondary: Q18 | evidence: agric
+- Regional-blocs-and-agricultural-trade-flow-The-case-of-ASEAN_2008_Japan-International-Research-Center-for-Agricultural-Sciences.pdf | secondary: Q18 | evidence: agric
+- Regionalism-and-its-effects-on-Iranian-agricultural-exports-The-case-of-economic-cooperation-organization_2009_.pdf | secondary: Q18 | evidence: agric
+- study_id15830_agriculture-forestry-fishing-and-hunting-in-the-us.pdf | secondary: Q18 | evidence: agric
+- study_id57185_agriculture-forestry-and-fishing-–-global.pdf | secondary: Q18 | evidence: agric
+- The-Impact-of-Logistics-Performance-on-Agricultural-Export-Values-Among-ASEAN-Countries-A-Gravity-Model-Approach_2026_IGI-Global.pdf | secondary: Q18 | evidence: agric
+- The-impact-of-logistics-performance-on-agricultural-exports-in-ASEAN_2026_Malque-Publishing.pdf | secondary: Q18 | evidence: agric
+- The-Impact-of-RCEP-Partner-Countries-Digital-Trade-Levels-on-Chinas-Agricultural-Exports_2025_Nan-Yang-Academy-of-Sciences-Pte-Ltd.pdf | secondary: Q18 | evidence: agric
+- The-influence-of-trade-facilitation-on-agricultural-product-exports-of-China-empirical-evidence-from-ASEAN-countries_2023_Taylor-and-Francis-Ltd.pdf | secondary: Q18 | evidence: agric
+- THEEFFECTOFAGRICULTURALINPUTPRICESONFARMERSPURCHASE.pdf | secondary: Q18 | evidence: agric
+- Urban Farming and Emerging Countries Agricultural Outlook.docx | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Agricultural Economics - 2017 - Sheahan - Human health and pesticide use in Sub‐Saharan Africa.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Agricultural Economics - 2019 - Ariga - Can improved agricultural technologies spur a green revolution in Africa  A.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Agricultural-productivity-and-structural-transformation-evidence-and-questions-for-African-development_2023_Routledge.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/American J Agri Economics - 2025 - Gulati - Women s work and agricultural productivity gaps in India (1).pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/American J Agri Economics - 2025 - Gulati - Women s work and agricultural productivity gaps in India.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Ann NY Acad Sci - 2008 - Jama - Agriculture in Africa  Strategies to Improve and Sustain Smallholder Production Systems (1).pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Ann NY Acad Sci - 2008 - Jama - Agriculture in Africa  Strategies to Improve and Sustain Smallholder Production Systems.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Decent-Employment-and-the-Future-of-Agriculture-How-Dominant-Narratives-Prevent-Addressing-Structural-Issues_2022_Frontiers-Media-SA.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Does-the-twin-growth-catalyst-of-oil-rent-seeking-and-agriculture-exhibit-complementary-or-substitute-role-New-perspective-from-a-West-African-country_2019_Springer.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Gender-and-conservation-agriculture-in-subSaharan-Africa-a-systematic-review_2019_Taylor-and-Francis-Ltd-michaelwagreichunivieacat.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Structural-change-in-Africa-role-of-agriculture_2023_Routledge.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Structural-Transformation-and-African-Agriculture_2010_SAGE-Publications-Ltd-infosagepubcouk.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/When-crops-fail-forests-follow-Agricultural-shocks-and-deforestation-in-Zambia_2025_National-Academy-of-Sciences.pdf | secondary: Q18 | evidence: agric
+- YSA_GA_MGO/Which-agricultural-choices-to-meet-transformation-challenges-in-africa-debating-smallscale-versus-largescale_2013_EDP-Sciences.pdf | secondary: Q18 | evidence: agric

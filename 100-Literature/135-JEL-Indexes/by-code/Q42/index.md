@@ -1,0 +1,87 @@
+---
+type: jel-code-index
+code: Q42
+family: Q
+item_count: 78
+---
+
+# Q42
+
+- Forest, agriculture, renewable energy, and CO2 emission (01/2) | Waheed, Rida, Chang, Dongfeng, Sarwar, Suleman
+- Renewable and non-renewable energy consumption, economic complexity, CO2 emissions, and ecological footprint in the USA: testing the EKC hypothesis with a structural break (01/2) | Pata, Ugur Korkut
+- Renewable, non-renewable energy consumption, economic growth, trade openness and ecological footprint: Evidence from organisation for economic Co-operation and development countries (01/2) | Destek, Mehmet Akif, Sinha, Avik
+- Assessing the effect of climate change and financial development on agricultural production in ASEAN-4: the role of renewable energy, institutional quality, and human capital as moderators (02/2) | Chandio, Abbas Ali, Shah, Muhammad Ibrahim, Sethi, Narayan
+- Do Emission Trading Systems, Green Technology, and Environmental Governance Matter for Environmental Quality? Evidence from the European Union (02/2) | Radulescu, Magdalena, Hossain, Mohammad Razib, Alofaysan, Hind
+- Does financial inclusion, renewable and non-renewable energy utilization accelerate ecological footprints and economic growth? Fresh evidence from 15 highest emitting countries (02/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad, Kousar, Rakhshanda
+- Dynamic association between ICT, renewable energy, economic complexity and ecological footprint: Is there any difference between E-7 (developing) and G-7 (developed) countries? (02/2) | Huang, Yongming, Haseeb, Mohammad, Usman, Muhammad
+- Determinants of the ecological footprint: Role of renewable energy, natural resources, and urbanization (03/2) | Danish, Ulucak, Recep, Khan, Salah Ud-Din
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- Revisiting the role of forestry, agriculture, and renewable energy in testing environment Kuznets curve in Pakistan: evidence from Quantile ARDL approach (03/2) | Aziz, Noshaba, Sharif, Arshian, Raza, Ali
+- The role of renewable energy and agriculture in reducing CO 2 emissions: Evidence for North Africa countries (03/2) | Ben Jebli, Mehdi, Ben Youssef, Slim
+- Understanding farmers’ intention and willingness to install renewable energy technology: A solution to reduce the environmental emissions of agriculture (03/2) | Elahi, Ehsan, Khalid, Zainab, Zhang, Zhixin
+- Renewable energy consumption in economic sectors in the EU-27. The impact on economics, environment and conventional energy sources. A 20-year perspective (04/2) | Tutak, Magdalena, Brodny, Jarosław
+- Renewable energy consumption-economic growth nexus in emerging countries: A bootstrap panel causality test (04/2) | Ozcan, Burcu, Ozturk, Ilhan
+- The environmental Kuznets curve hypothesis for Bangladesh: the importance of natural gas, liquefied petroleum gas, and hydropower consumption (04/2) | Murshed, Muntasir, Alam, Risana, Ansarin, Adiba
+- The nexus between greenhouse gas emission, electricity production, renewable energy and agriculture in Pakistan (04/2) | Khan, Muhammad Tariq Iqbal, Ali, Qamar, Ashfaq, Muhammad
+- The role of renewable energy in the global energy transformation (04/2) | Gielen, Dolf, Boshell, Francisco, Saygin, Deger
+- Towards a sustainable environment: The nexus between ISO 14001, renewable energy consumption, access to electricity, agriculture and CO2 emissions in SAARC countries (04/2) | Ikram, Muhammad, Zhang, Qingyu, Sroufe, Robert
+- Climate change caused by renewable and non-renewable energy consumption and economic growth: A time series ARDL analysis for Turkey (06/2) | Acaroğlu, Hakan, Güllü, Mustafa
+- Power-Electronic Systems for the Grid Integration of Renewable Energy Sources: A Survey (06/2) | Carrasco, J.M., Franquelo, L.G., Bialasiewicz, J.T.
+- Revisiting the role of renewable and non-renewable energy consumption on Turkey’s ecological footprint: Evidence from Quantile ARDL approach (06/2) | Sharif, Arshian, Baris-Tuzemen, Ozge, Uzuner, Gizem
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (06/2) | Yurtkuran, Suleyman
+- The greenhouse effect of the agriculture-economic growth-renewable energy nexus: Evidence from G20 countries (06/2) | Qiao, Hui, Zheng, Fengtian, Jiang, Hongdian
+- Effects of the German Renewable Energy Act on structural change in agriculture – The case of biogas (08/2) | Appel, Franziska, Ostermeyer-Wiethaup, Arlette, Balmann, Alfons
+- Energy efficiency and environmental regulations for mitigating carbon emissions in Chinese Provinces (08/2) | Radulescu, Magdalena, Cifuentes-Faura, Javier, Si Mohammed, Kamel
+- Linking renewable energy, globalization, agriculture, CO2 emissions and ecological footprint in BRIC countries: A sustainability perspective (08/2) | Pata, Ugur Korkut
+- Research on the dynamic relationship between China's renewable energy consumption and carbon emissions based on ARDL model (08/2) | Wang, Liping
+- Effects of agriculture, renewable energy, and economic growth on carbon dioxide emissions: Evidence of the environmental Kuznets curve (09/2) | Ridzuan, Nur Hilfa Awatif Mohamad, Marwan, Nur Fakhzan, Khalid, Norlin
+- Feasibility analysis and techno-economic design of grid-isolated hybrid renewable energy system for electrification of agriculture and irrigation area: A case study in Dongola, Sudan (09/2) | Elkadeem, M.R., Wang, Shaorong, Sharshir, Swellam W.
+- Dynamics of renewable energy consumption and economic activities across the agriculture, industry, and service sectors: evidence in the perspective of sustainable development (1/20) | Paramati, Sudharshan Reddy, Apergis, Nicholas, Ummalla, Mallesh
+- Renewable energy for sustainable agriculture (1/20) | Chel, A., Kaushik, G.
+- Conceptualising multi-regime interactions: The role of the agriculture sector in renewable energy transitions (10/2) | Sutherland, Lee-Ann, Peter, Sarah, Zagata, Lukas
+- The impact of renewable energy and agriculture on carbon dioxide emissions: Investigating the environmental Kuznets curve in four selected ASEAN countries (10/2) | Liu, Xuyi, Zhang, Shun, Bae, Junghan
+- The nexus of renewable energy-agriculture-environment in BRICS (10/2) | Liu, Xuyi, Zhang, Shun, Bae, Junghan
+- Towards long-term sustainable environment: does agriculture and renewable energy consumption matter? (10/2) | Chandio, Abbas Ali, Akram, Waqar, Ozturk, Ilhan
+- Exploring the nexus between agriculture and greenhouse gas emissions in BIMSTEC region: The role of renewable energy and human capital as moderators (11/2) | Sharma, Gagan Deep, Shah, Muhammad Ibrahim, Shahzad, Umer
+- The nexus between renewable energy, CO2 emissions, and economic growth: Empirical evidence from African oil-producing countries (11/2) | İnal, Veysel, Addi, Haman Mahamat, Çakmak, Eyüp Ensar
+- Governance of sustainability in the German biogas sector—adaptive management of the Renewable Energy Act between agriculture and the energy sector (12/2) | Thrän, Daniela, Schaubach, Kay, Majer, Stefan
+- Mapping global development potential for renewable energy, fossil fuels, mining and agriculture sectors (12/2) | Oakleaf, James R., Kennedy, Christina M., Baruch-Mordo, Sharon
+- What abates ecological footprint in BRICS-T region? Exploring the influence of renewable energy, non-renewable energy, agriculture, forest area and financial development (12/2) | Usman, Muhammad, Makhdum, Muhammad Sohail Amjad
+- Long-Term Integration of Renewable Energy Sources into the European Energy System (1998) | The LTI-Research Group, The LTI-Research
+- Renewable energy resources (2006) | Twidell, John, Weir, Anthony D.
+- Renewable energy: technology, economics, and environment (2007) | Unknown
+- Biofuels: global impact on renewable energy, production agriculture and technological advancements (2011) | Unknown
+- A Glance to Renewable Energy Prospects: Unleashing Future Perspectives of Generating Energy with Potential Use of Renewables (2016) | Özdemir, Mehmet Gökhan
+- Our renewable future: laying the path for 100% clean energy (2016) | Heinberg, Richard, Fridley, David
+- Complex Systems and Social Practices in Energy Transitions: Framing Energy Sustainability in the Time of Renewables (2017) | Unknown
+- Renewable Energy: Physics, Engineering, Environmental Impacts, Economics and Planning (2017) | Sørensen, Bent
+- Renewable energy consumption and agriculture: evidence for cointegration and Granger causality for Tunisian economy (2017) | Ben Jebli, Mehdi, Ben Youssef, Slim
+- Feed-in tariffs and the economics of renewable energy (2018) | Yamamoto, Yoshihiro
+- The Geopolitics of Renewables (2018) | Unknown
+- Behavioural Economics of Climate Change: New Empirical Perspectives (2019) | Udalov, Vladimir
+- Renewables for Energy Access and Sustainable Development in East Africa (2019) | Hafner, Manfred, Falchetta, Giacomo, Occhiali, Giovanni
+- The economics of renewable energy in the Gulf (2019) | Unknown
+- Evaluating the role of renewable energy, economic growth and agriculture on CO <sub>2</sub> emission in E7 countries (2020) | Aydoğan, Berna, Vardar, Gülin
+- Renewable Energy Statistics 2019 (2020) | Republic of Turkey Ministry of Energy and Natural Resources
+- Renewables: a review of sustainable energy supply options (2020) | Elliott, David
+- Measuring the effectiveness of the Chinese Certified Emission Reduction scheme in mitigating CO2 emissions: A system dynamics approach (2021) | Ye, Fei, Xiong, Xueying, Li, Lixu
+- Renewable energy in India: economics and market dynamics (2021) | Deo, Pramod, Chatterjee, Sushanta K., Modak, Shrikant
+- The effect of agriculture, renewable energy production, and globalization on CO2 emissions in Turkey: A bootstrap ARDL approach (2021) | Yurtkuran, Suleyman
+- An outlook on the development of renewable energy, policy measures to reshape the current energy mix, and how to achieve sustainable economic growth in the post COVID-19 era (2022) | Farhan Bashir, Muhammad, Sadiq, Muhammad, Talbi, Besma
+- Encyclopedia of renewable energy (2022) | Speight, James G
+- Fundamentals of renewable energy processes (2022) | Da Rosa, Aldo Vieira, Ordóñez, Juan Carlos
+- Renewable energy technologies for energy efficient sustainable development (2022) | Sinharoy, Arindam, Lens, P. N. L
+- Energy transition or energy diversification? Assessing the complexity of energy ecosystem towards transiting a climate neutral society (2023) | Andrei, Jean-Vasile, Zaharia, Alina, Graci, Giuseppe
+- Environmental Policy Stringency and Ecological Footprint Linkage: Mitigation Measures of Renewable Energy and Innovation (2023) | Sohag, Kazi, Husain, Shaiara, Soytas, Ugur
+- How do environmental tax and renewable energy contribute to ecological sustainability? New evidence from top renewable energy countries (2023) | Shayanmehr, Samira, Radmehr, Riza, Ali, Ernest Baba
+- On-Farm Renewable Energy Systems: A Systematic Review (2023) | Pestisha, Albiona, Gabnai, Zoltán, Chalgynbayeva, Aidana
+- A Comparative Study of the Environmental, Social, and Governance Impacts of Renewable Energy Investment on CO2 Emissions in Brazil, Russia, India, China, and South Africa (2024) | Bi, Zhaoming, Khan, Rabnawaz
+- A Spotlight on Environmental Sustainability in View of the European Green Deal (2024) | Stefanis, Christos, Stavropoulos, Agathangelos, Stavropoulou, Elisavet
+- Briefing: Stocktaking global warming: the outcomes of the 2023 Dubai Climate Summit (COP28) (2024) | Darby, Sarah J., Hammond, Geoffrey P., Wu, Jianzhong
+- Exploring the energy-climate-agriculture (ECA) nexus: a roadmap toward agricultural sustainability in Asian countries (2024) | Chandio, Abbas Ali, Gokmenoglu, Korhan K., Dash, Devi Prasad
+- The Effect of Environmental Smart Technology and Renewable Energy on Carbon Footprint: A Sustainability Perspective from the MENA Region (2024) | Alofaysan, Hind
+- Agricultural Productivity‐Driven Renewable Energy Adoption and Mechanisms in Developing Economies: A Double Machine Learning Approach (2025) | Xi, Jiancheng, Boateng, Seth Acquah, Agyei, Kelvin Dankwah
+- Agricultural Productivity‐Driven Renewable Energy Adoption and Mechanisms in Developing Economies: A Double Machine Learning Approach (2025) | Xi, Jiancheng, Boateng, Seth Acquah, Agyei, Kelvin Dankwah
+- Decoding Solar Adoption: A Systematic Review of Theories and Factors of Photovoltaic Technology Adoption in Households of Developing Countries (2025) | Oliva, Edison Jair Duque, Atehortua Santamaria, Rodrigo
+- Turning electricity into food: the role of renewable energy in the future of agriculture (8/20) | Bardi, Ugo, El Asmar, Toufic, Lavacchi, Alessandro

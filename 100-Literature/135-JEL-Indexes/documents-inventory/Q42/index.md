@@ -1,0 +1,266 @@
+---
+type: documents-jel-index
+code: Q42
+item_count: 258
+---
+
+# Documents - Q42
+
+- citaviii/Renewable/Renev/files/1006/Daube-Ulph2016_Article_MoralBehaviourAltruismAndEnvir.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1008/1-s2.0-S0308521X15000797-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1014/1-s2.0-S0301421518302787-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1020/Fourcade vd. - 2015 - The Superiority of Economists.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1024/1-s2.0-S0921800996001036-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1028/enviroValues.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1030/falk1989.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1032/document.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1040/Holcombe2011_Article_PluralismAndHeterodoxyInEconom.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1042/heilbroner1990.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1044/jep.3.4.99.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1050/Suppe_2000.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1052/day1975.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1055/1229304.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1058/1-s2.0-S0921800907001462-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1060/1-s2.0-S092180090900456X-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1062/azariadis1990.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1064/1-s2.0-S0959378008001192-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1066/Katz_Shapiro_1986_Technology Adoption in the Presence of Network Externalities.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1068/D-19_PRODUCTIVITY_AND_DENSITY_OF_ECONOMIC_GROWTH.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1070/1-s2.0-S0301421500000707-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1073/Related Variety Unrelated Variety and Regional Economic Growth.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1075/Frenken et al_2007_Related Variety, Unrelated Variety and Regional Economic Growth.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1077/Bovenberg1999_Article_GreenTaxReformsAndTheDoubleDiv.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1079/Gahvari2014_Article_Second-BestPigouvianTaxationAC.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1081/resrep16372.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1083/29729990.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1085/26513495.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1087/randalls2011.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1093/Lisansüstü Tez Yazım Klavuzu.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1096/adams1998.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1102/10.1007@978-981-15-8225-7.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1107/j.ctv941wjn.5.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1111/10.1007@978-3-030-16880-3.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1131/67f2803ad5f8420d52b753c443f4e2e5.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1134/cb2373en.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1137/shayanmehr2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1141/kang2013.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1143/palumbo2014.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1146/Iizumi2019BookCh1AcceptedVersion.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1148/panda2018.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1150/rickards2012.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1152/qian2014.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1154/10.1007@978-981-13-9235-1.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1156/chen2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1158/cui2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1162/nunti2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1166/goh2011.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1170/ahmed2021.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1179/wiebe2019.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1182/sweileh2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1186/zhao2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1188/Borgomeo et al_2020_Impact of green water anomalies on global rainfed crop yields.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1194/ferreirafilho2014.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1202/GAWMC_Salethetal_2016.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1204/BSUY_Egitimi.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1208/cmsarticle_520.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1218/frontiers-in-water-resource-economics-2006.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1220/OyunTeorisi.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1222/roson2014.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1226/Water-and-the-private-sector.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1228/polipers.15.3.0139.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1231/adaptive-inclusive-watershed-management-kenya.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1233/vila-traver2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1241/Akar_2012_Ekonomik Büyüme ve Çevresel Vergilerin Emisyon Miktarına Etkileri.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1259/1-s2.0-S0959652622007090-main (1).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1261/david1990.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1264/26617802.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1268/caldari2004.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1274/Abraham - Identities and Equations in Macroeconomics.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1278/Sürdülebilirliğin Gelişimi.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1284/Marshall-Industry-Trade.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1287/2341084.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1290/costanza1997.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1292/grossman1995.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1294/1-s2.0-S0921800904001570-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1301/Balsalobre-Lorente et al_2018_How economic growth, renewable electricity and natural resources contribute to.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1303/Boyd_Banzhaf_2007_What are ecosystem services.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1305/balmford2002.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1307/korhonen2018.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1311/vatn2000.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1314/Gintis_2000_Beyond Homo economicus.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1326/WP71.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1330/Kirişik_2013_EKOLOJİK SORUNLARIN ÇÖZÜMÜNDE DERİN EKOLOJİ YAKLAŞIMI.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1336/neumayer1997.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1341/1-s2.0-S1877050921020214-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1344/Carraro1998_Article_NewEconomicTheories.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1346/1-s2.0-S0921800997001006-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1348/1-s2.0-S0921800919310298-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1352/1-s2.0-S0921800915301725-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1354/1-s2.0-S0921800919307554-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1356/1-s2.0-S0921800997001201-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1363/Funtowicz_Ravetz_1994_The worth of a songbird.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1365/1-s2.0-S092180090500529X-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1368/1-s2.0-S092180091200050X-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1374/Ellis et al_2013_Used planet.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1376/bowles2002.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1380/Nelson-Kennedy2009_Article_TheUseAndAbuseOfMeta-AnalysisI.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1383/libby1982.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1389/txtbook_3.ed_att00106.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1393/reep_rew008.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1394/Jon M. Conrad - Resource Economics (1999).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1400/Page et al_2021_The PRISMA 2020 statement.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1401/page2021.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1403/Page et al_2021_The PRISMA 2020 statement.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1405/Dell et al_2014_What Do We Learn from the Weather.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1407/41724653.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1441/Dell et al_2012_Temperature Shocks and Economic Growth.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1443/Hepburn et al_2019_The technological and economic prospects for CO2 utilization and removal.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1447/Tack et al_2015_Effect of warming temperatures on US wheat yields.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1449/ranson2014.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1451/heal2014.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1457/hertel2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1459/trinh2017.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1461/koubi2017.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1463/stupak2017.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1471/guo2020.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1473/10.1007@s11750-009-0114-3.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1476/regan2018.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1478/Gallic_Vermandel_2020_Weather shocks.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1482/castro2019.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1484/Chandio et al_2022_Modeling the impact of climatic and non-climatic factors on cereal production.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1487/sridhar2016.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1494/1-s2.0-S1751157717300500-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1496/1-s2.0-S0148296321003155-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1500/Fahimnia vd. - 2015 - Green supply chain management A review and biblio.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1508/Erşen_Köstem_2020_Turkey’s Interest in Closer Relations with Russia.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1510/Yatsko - 2012 - The interpretation of Bradford’s law in terms of g.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1515/Bruijnzeel - 2004 - Hydrological functions of tropical forests not se.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1518/Snyder vd. - 2009 - Review of greenhouse gas emissions from crop produ.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1536/Kremen ve Miles - 2012 - Ecosystem Services in Biologically Diversified ver.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1537/Richardson vd. - 2012 - Terrestrial biosphere models need better represent.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1604/Berauer vd. - 2020 - Predicting forage quality of species-rich pasture .pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1605/Kreft vd. - 2021 - The role of non-cognitive skills in farmers' adopt.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1640/Augustine vd. - 2018 - Elevated CO.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1641/D'Amato vd. - 2013 - Effects of thinning on drought vulnerability and c.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1642/Parks vd. - 2015 - Wildland fire deficit and surplus in the western U.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1657/Allen vd. - 2015 - On underestimation of global vulnerability to tree.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1659/Most_Global_Cited_Documents_per_year.xlsx | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1661/Diamond ve Bellwood - 2003 - Farmers and Their Languages The First Expansions.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1679/Callon vd. - 1983 - From translations to problematic networks An intr.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1681/Glanzel - 2001 - [No title found].pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1683/Peters ve Van Raan - 1991 - Structuring scientific activities by co-author ana.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1716/Daim vd. - 2006 - Forecasting emerging technologies Use of bibliome.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1717/Weingart - 2005 - Impact of bibliometrics upon the science system I.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1718/Narin - 1994 - Patent bibliometrics.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1719/D'Angelo vd. - 2011 - A heuristic approach to author name disambiguation.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1720/Narin vd. - 1994 - BibliometricsTheory, Practice and Problems.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1721/Broadus - 1987 - Toward a definition of “bibliometrics”.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1722/Abramo vd. - 2009 - Allocative efficiency in public research funding .pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1723/Sengupta - 1992 - Bibliometrics, Informetrics, Scientometrics and Li.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1724/Cronin - 2000 - Semiotics and evaluative bibliometrics.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1725/Kostoff vd. - 2002 - Electrochemical power text mining using bibliometr.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1726/Persson - 1986 - Online bibliometrics. A research tool for every ma.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1727/De Glas - 1986 - Fiction and Bibliometrics Analyzing a Publishing .pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1728/Broadus - 1987 - Some Notes on Research in Bibliometrics.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1729/Bornmann ve Marx - 2015 - Methods for the generation of normalized citation .pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1730/Bornmann - 2014 - How are excellent (highly cited) papers defined in.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1731/Bornmann - 2013 - How to analyze percentile citation impact data mea.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1732/Bornmann ve Williams - 2013 - How to calculate the practical significance of cit.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1733/Bornmann ve Marx - 2013 - The proposal of a broadening of perspective in eva.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1734/Bornmann ve Leydesdorff - 2014 - On the meaningful and non-meaningful use of refere.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1735/Peritz - 1990 - A bradford distribution for bibliometrics.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1736/Kostoff vd. - 2005 - Power source roadmaps using bibliometrics and data.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1737/Abramo ve D’Angelo - 2011 - Evaluating research from informed peer review to .pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1738/Aria vd. - 2021 - The scholar’s best friend research trends in dog .pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1739/Cuccurullo vd. - 2016 - Foundations and trends in performance management. .pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1740/Garfield - 2006 - The History and Meaning of the Journal Impact Fact.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1741/Hirsch - 2005 - An index to quantify an individual's scientific re.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1742/Gross ve Gross - 1927 - College Libraries and Chemical Education.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1743/Small - 1973 - Co-citation in the scientific literature A new me.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1746/Koseoglu - 2016 - Growth and structure of authorship and co-authorsh.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1748/out.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1750/Kessler - 1963 - Bibliographic coupling between scientific papers.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1760/HowtoWriteaBibliometricpaperByNaderAleEbrahim.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1763/Punnakitikashem ve Hallinger - 2019 - Bibliometric Review of the Knowledge Base on Healt.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1766/academic-phrasebank-navigable-pdf-pdf-free.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/1772/232210eng.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2603/W. Douglass Shaw - Water Resource Economics and Policy. An Introduction-Edward Elgar Publishing (2005).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2611/Ronald C. Griffin - Water Resource Economics_ The Analysis of Scarcity, Policies, and Projects-The MIT Press (2006).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2613/Hope et al_2020_Rethinking the economics of rural water in Africa.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2616/Booker et al_2012_ECONOMICS AND THE MODELING OF WATER RESOURCES AND POLICIES.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2620/Debaere_2014_The Global Economics of Water.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2622/Boschee_2014_Produced and Flowback Water Recycling and Reuse.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2625/Convery_2013_Reflections—Shaping Water Policy.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2628/Reimer_2012_On the economics of virtual water trade.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2632/oup-accepted-manuscript-2019.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2635/Colin Green - Handbook of Water Economics_ Principles and Practice (2003).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2829/T. Franks, M. Kay, Smith L. E. D. - Water_ Economics, Management and Demand-Spon Press (1998).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2840/oup-accepted-manuscript-2019 (1).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2896/1-s2.0-S0921800921002706-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/2922/Kuehnlenz et al. - 2022 - Capitalism and crises A comparative analysis of m.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/514/Viguier vd. - 2006 - Modeling endogenous learning and imperfect competi.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/641/Al-Abdulrazag - 2021 - The optimal government size in the kingdom of Saud.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/648/Hansen - 1999 - Threshold effects in non-dynamic panels Estimatio.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/654/Vinokurov - 2017 - Eurasian Economic Union Current state and prelimi.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/656/oecd-peer-reviews-of-competition-law-and-policy-eurasian-economic-union-2021.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/664/memo.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/670/Vinokurov - 2018 - Introduction to the Eurasian Economic Union.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/675/Kemme vd. - 2021 - The effects of the Eurasian Economic Union on regi.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/679/Kargina ve Masolletti - 2021 - Eurasian Economic Union Current Concept and Prosp.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/686/Sieps_2016-11-epa.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/695/Roberts ve Moshes - 2016 - The Eurasian Economic Union a case of reproductiv.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/698/Şahin vd. - TÜRKİYE’NİN KARBONSUZLAŞMA YOL HARİTASI.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/708/(Lecture Notes in Economics and Mathematical Systems 685) Antonio Villar (auth.) - Lectures on Inequality, Poverty and Welfare-Springer International Publishing (2017).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/719/1002079.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/721/agovino2018.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/723/Antony W. Dnes, Robert Rowthorn - Law economics marriage divorce-Cambridge University Press (2002).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/726/carter2018.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/727/CCKP_Metadata_November 2021.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/738/Grabowski-Haggblade2016_Chapter_TheEconomicsOfConservationAgri.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/748/Türkiye'nin Karbonsuzlaşma Yol Haritası.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/751/Wang2017_Book_IntegratedAssessmentModelsOfCl.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/809/SürdürülebilirGıda Sistemlerine Doğru Türkiye’nin Ulusal Yol Haritası (Türkçe).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/810/Ulusal Yol Haritası Sonuç Raporu.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/819/10.1.1.685.3445.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/820/440085.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/821/Piquet - 1950 - The Customs Union Issue. By Jacob Viner. (New York.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/834/Libman_2011_Russian Federalism and Post-Soviet Integration.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/837/Orlowski_1993_Indirect transfers in trade among former Soviet Union Republics.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/848/Holtz-Eakin ve Selden - 1995 - Stoking the fires CO2 emissions and economic grow.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/856/3146538.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/893/Munn et al_2018_Systematic review or scoping review.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/896/Khangura et al_2012_Evidence summaries.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/899/Jaffe et al_2005_A tale of two market failures.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/911/cepa33.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/913/DP972.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/915/Ge ve Lin - 2022 - Does the Kyoto Protocol as an International Enviro.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/917/sre-disc-2021_01.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/920/44f5e229a907fa2ec153acaf9966d559.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/926/1-s2.0-030142079685063X-main (1).pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/931/DP 20.21_Arthmar and McLure.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/934/Mora Rodríguez et al_2019_Evaluando los stakeholders de la Economía del Bien Común.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/936/SSRN-id3623004.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/939/CORE_DP_2022-12.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/942/cepa33.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/945/Leuz_Verrecchia_2000_The Economic Consequences of Increased Disclosure.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/950/30301524.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/954/44378828.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/959/aer.15000001.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/962/Ostrom2012_Article_NestedExternalitiesAndPolycent.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/973/1-s2.0-S0301421509002110-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/977/Kane-Shogren2000_Article_LinkingAdaptationAndMitigation.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/982/Goers2010_Article_NewAndOldMarket-basedInstrumen.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/984/1-s2.0-S0304380014003640-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/986/Risk Analysis - 2014 - Duinen - Empirical Analysis of Farmers  Drought Risk Perception  Objective Factors  Personal.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/991/1-s2.0-S0022053104001449-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/993/Dasgupta_2007_Nature and the economy.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/994/Journal of Applied Ecology - 2007 - DASGUPTA - Nature and the economy.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/996/1-s2.0-S0095069614000242-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/998/Jouini et al_2010_Discounting and divergence of opinion.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/files/999/1-s2.0-S0022053110000037-main.pdf | secondary: Q43, Q56 | evidence: renewable
+- citaviii/Renewable/Renev/Renev.bib | secondary: Q43, Q56 | evidence: renewable
+- My Library/files/1301/Balsalobre-Lorente et al_2018_How economic growth, renewable electricity and natural resources contribute to.pdf | secondary: Q43, Q56 | evidence: renewable
+- My Library/files/3018/Scholten - 2018 - The Geopolitics of Renewables.pdf | secondary: Q43, Q56 | evidence: renewable
+- My Library/files/3065/Oakleaf et al. - 2019 - Mapping global development potential for renewable.pdf | secondary: Q43, Q56 | evidence: renewable
+- My Library/files/5275/Sharif et al. - 2020 - Revisiting the role of renewable and non-renewable.pdf | secondary: Q43, Q56 | evidence: renewable
+- My Library/files/5282/Usman et al. - 2021 - Does financial inclusion, renewable and non-renewa.pdf | secondary: Q43, Q56 | evidence: renewable
