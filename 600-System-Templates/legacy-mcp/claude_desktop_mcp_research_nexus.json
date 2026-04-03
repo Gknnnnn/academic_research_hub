@@ -1,0 +1,4 @@
+{
+  "_comment": "Legacy config. Docker Desktop only. Temporarily disabled during OrbStack migration.",
+  "mcpServers": {}
+}
