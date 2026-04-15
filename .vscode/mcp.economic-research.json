@@ -1,0 +1,34 @@
+{
+  "_comment": "Research-heavy profile: discovery, literature, web context, and deadlines.",
+  "servers": {
+    "research_nexus": {
+      "command": "python3",
+      "args": [
+        "/Users/mehmetgokhanozdemir/Library/CloudStorage/OneDrive-Kişisel/Akademik_Arastirma/servers/research-nexus/main.py"
+      ]
+    },
+    "fetch": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-fetch"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/mehmetgokhanozdemir/Library/CloudStorage/OneDrive-Kişisel/Akademik_Arastirma",
+        "/tmp"
+      ]
+    },
+    "time": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-time",
+        "--local-timezone",
+        "Europe/Istanbul"
+      ]
+    }
+  }
+}

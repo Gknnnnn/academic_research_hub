@@ -1,0 +1,28 @@
+{
+  "_comment": "Writing-heavy profile: draft comparison, submission checks, and deadline tracking.",
+  "servers": {
+    "research_nexus": {
+      "command": "python3",
+      "args": [
+        "/Users/mehmetgokhanozdemir/Library/CloudStorage/OneDrive-Kişisel/Akademik_Arastirma/servers/research-nexus/main.py"
+      ]
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "/Users/mehmetgokhanozdemir/Library/CloudStorage/OneDrive-Kişisel/Akademik_Arastirma",
+        "/tmp"
+      ]
+    },
+    "time": {
+      "command": "uvx",
+      "args": [
+        "mcp-server-time",
+        "--local-timezone",
+        "Europe/Istanbul"
+      ]
+    }
+  }
+}

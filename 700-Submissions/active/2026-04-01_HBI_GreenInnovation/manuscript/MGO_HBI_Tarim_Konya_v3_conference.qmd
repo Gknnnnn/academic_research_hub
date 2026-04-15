@@ -1,0 +1,76 @@
+---
+title: "KÜRESEL TARIMSAL KATMA DEĞERDE YAPISAL TABAN ANALİZİ VE 2030 PROJEKSİYONU"
+subtitle: "105 Ülke Üzerine Kısaltılmış Kongre Bildirisi Sürümü"
+author:
+  - name: "Prof. Dr. Hacı Bayram IŞIK"
+    affiliation: "Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü"
+  - name: "Arş. Gör. Dr. Mehmet Gökhan ÖZDEMİR"
+    affiliation: "Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü"
+format:
+  html: default
+lang: tr
+---
+
+# ÖZET
+
+Bu çalışma, tarımsal katma değerin GSYİH içindeki payının uzun dönemde sıfıra yakınsamadığı, belirli bir eşik düzeyinde dengelendiği yönündeki "Yapısal Taban" hipotezini incelemektedir. Analizde 2000-2020 dönemini kapsayan, 105 ülkeden ve 2.205 gözlemden oluşan tam dengeli panel veri seti kullanılmıştır. Tarımsal GSYH payı; emek, toprak, gübre, verim, ticaret ve ekipman değişkenleri yardımıyla 6-7-5-1 mimarili çok katmanlı yapay sinir ağı modeliyle tahmin edilmiştir. Modelin açıklayıcılık gücü %91,42 düzeyindedir.
+
+Bulgular, klasik yapısal dönüşüm yaklaşımının ima ettiği sınırsız gerileme eğilimine karşılık, tarımın uzun dönemde bir direnç hattı ürettiğine işaret etmektedir. Olden ve SHAP sonuçlarına göre gübre ve ekipman değişkenleri daraltıcı, verim ve toprak değişkenleri ise dengeleyici etki üretmektedir. 2030 projeksiyonu, küresel tarım payının yaklaşık %6,13 düzeyinde bir yapısal taban oluşturduğunu; yüksek gelirli ülkelerde bu sınırın %2,17 civarında, orta gelirli ülkelerde ise iyimser senaryoda %8,74 düzeyinde korunduğunu göstermektedir.
+
+Bu sonuçlar, tarımın yalnızca gerileyen bir sektör olarak değil, teknoloji, verimlilik ve ticaret bileşimi içinde yeniden dengelenen stratejik bir alan olarak değerlendirilmesi gerektiğine işaret etmektedir.
+
+**Anahtar Kelimeler:** Yapay sinir ağları, tarımsal katma değer, yapısal taban, 2030 projeksiyonu, kalkınma ekonomisi.
+
+# ABSTRACT
+
+This conference paper examines the "Structural Floor" hypothesis, namely that agricultural value added as a share of GDP may stabilize around a lower bound rather than converge to zero in the long run. The study uses a fully balanced panel of 105 countries over 2000-2020 with 2,205 observations. Agricultural value added is modeled with a 6-7-5-1 multilayer artificial neural network using labor, land, fertilizer, yield, trade, and equipment as predictors. The model reaches an explanatory power of 91.42%.
+
+The results suggest that agriculture does not follow an unlimited decline path. Olden and SHAP analyses indicate that fertilizer intensity and equipment are associated with a lower agricultural share, whereas yield and land act as stabilizing factors. Scenario projections for 2030 place the global structural floor around 6.13%. In high-income economies, the floor stabilizes near 2.17%, while middle-income economies can maintain levels around 8.74% under an optimistic technology-and-trade scenario.
+
+Taken together, the findings suggest that agriculture should be interpreted not merely as a shrinking sector, but as a component of development that may settle at a persistent lower bound under changing technology, productivity, and trade conditions.
+
+**Keywords:** Artificial neural networks, agricultural value added, structural floor, 2030 projection, development economics.
+
+# GİRİŞ
+
+Tarım sektörü, gıda güvenliği, kırsal istihdam ve sürdürülebilir kalkınma açısından stratejik önemini korumaktadır. Klasik yapısal dönüşüm teorileri, ekonomiler sanayileştikçe tarımın GSYİH içindeki payının azalacağını öngörmektedir (Lewis, 1954; Kuznets, 1955). Ancak bu yaklaşım, söz konusu düşüşün hangi noktada yavaşladığı ya da dengelendiği sorusuna sınırlı yanıt vermektedir. Bu çalışma, tarımsal katma değerin modern belirleyicilerini yapay sinir ağları yaklaşımıyla inceleyerek küresel tarımın belirli bir alt eşikte dengelenip dengelenmediğini araştırmaktadır. Çalışmanın katkısı, 105 ülkeden oluşan tam dengeli panel üzerinde tarımsal payın öngörüsünü üretmek ve bu öngörü üzerinden "yapısal taban" fikrini ampirik olarak tartışmaya açmaktır.
+
+# GELİŞME
+
+## Kısa Literatür Çerçevesi
+
+Yapay sinir ağları, doğrusal olmayan ve karmaşık ilişkileri tanımlama kapasitesi nedeniyle ekonomi literatüründe giderek daha fazla kullanılmaktadır (Kuan & White, 1994; Chen, 2005). Büyüme, enflasyon ve makroekonomik projeksiyon alanlarında YSA temelli modellerin geleneksel doğrusal modellere göre daha yüksek tahmin performansı sunduğu gösterilmiştir (Aminian vd., 2006; Alamsyah & Permana, 2018; Yurdakul, 2024). Tarım ekonomisi açısından asıl mesele, sektörel payın sadece emek ve toprakla değil, verimlilik, mekanizasyon ve dış ticaret gibi kanallar üzerinden şekillenmesidir. Bu çalışma, bu kanalları tek bir öngörü çerçevesinde bir araya getirerek mevcut literatürdeki doğrusal daralma anlatısına alternatif bir okuma önermektedir.
+
+## Veri ve Yöntem
+
+Araştırmada Dünya Bankası Açık Veri ve FAOSTAT kaynaklarından derlenen 2000-2020 dönemi verileri kullanılmıştır. Örneklem, her ülke için 21 yıllık kesintisiz gözlem içeren 105 ülkeden oluşmaktadır. Bağımlı değişken tarım sektörünün GSYİH içindeki payıdır. Bağımsız değişkenler tarımsal istihdam, tarımsal arazi, gübre kullanımı, verim, gıda ihracatı payı ve ekipman varlığıdır. Tüm değişkenler Min-Max yöntemi ile normalize edilmiştir. Tahmin modeli, Resilient Backpropagation algoritmasıyla kurulan 6-7-5-1 mimarili çok katmanlı algılayıcı yapısına dayanmaktadır. Olden ve SHAP analizleri, modelin hangi değişken kombinasyonları üzerinden öngörü ürettiğini yorumlamak için kullanılmıştır. Panel birim kök, eşbütünleşim, Dumitrescu-Hurlin nedensellik ve System GMM testleri ise sonuçların makroekonomik tutarlılığını destekleyici kontrol araçları olarak değerlendirilmiştir. Bu çerçevede bulguların öngörü gücü yüksek olmakla birlikte, tek başına güçlü bir nedensellik iddiası taşımadığı özellikle not edilmelidir.
+
+## Temel Bulgular
+
+Model sonuçları, seçilen altı değişkenin tarımsal katma değeri yüksek doğrulukla açıkladığını göstermektedir. YSA modelinin açıklayıcılık gücü %91,42, ortalama kare hata düzeyi ise 0,0011 olarak hesaplanmıştır. Değişken önem analizleri, gübre ve ekipman değişkenlerinin tarımsal pay üzerinde negatif yönlü baskı oluşturduğunu, verim ve toprak değişkenlerinin ise dengeleyici etki yarattığını ortaya koymaktadır. Ekonomik yorum açısından bu bulgu, sermaye yoğunlaşması ve teknoloji kullanımının tarımın nispi payını daraltırken, üretkenlik ve arazi tabanının sektörel ağırlığın tamamen kaybolmasını engellediğini düşündürmektedir. 2030 projeksiyonları, küresel tarım payının yaklaşık %6,13 düzeyinde bir direnç hattı oluşturduğunu göstermektedir. Yüksek gelirli ülkelerde bu sınır %2,17 düzeyinde, orta gelirli ülkelerde ise iyimser senaryoda %8,74 düzeyindedir. Dolayısıyla sonuçlar, tarımın uzun dönemde ortadan kaybolan değil, daha düşük ama kalıcı bir payda dengelenen bir sektör olduğuna işaret etmektedir.
+
+# SONUÇ
+
+Bu çalışma, küresel tarımsal katma değerin uzun dönemde sıfıra yaklaşmadığını; aksine teknoloji, verimlilik ve ticaret bileşimleri altında bir yapısal tabanda dengelenebileceğini göstermektedir. Bu sonuç, tarımın gelişme sürecinde sadece küçülen bir sektör değil, belirli koşullar altında kalıcı bir denge payı üreten bir alan olarak okunabileceğini düşündürmektedir. Politika açısından en temkinli çıkarım, tarım politikalarının yalnızca istihdam korumaya değil, verimlilik artışı, teknoloji uyumu ve dış ticaret kapasitesine odaklanması gerektiğidir. Özellikle orta ve düşük gelirli ülkelerde bu üç kanalın birlikte güçlendirilmesi, tarımsal payın daha sağlıklı bir dengede korunmasına katkı sağlayabilir. Bununla birlikte çalışma 2020 sonrası şokları içermemektedir; bu nedenle sonuçlar, dergi sürümünde güncel veri ve ek sağlamlık analizleriyle yeniden sınanmalıdır.
+
+# KAYNAKÇA
+
+Alamsyah, A., & Permana, M. F. (2018). Artificial neural network for predicting Indonesian economic growth using macroeconomics indicators.
+
+Aminian, F., Suarez, E. D., Aminian, M., & Walz, D. T. (2006). Forecasting economic data with neural networks.
+
+Blundell, R., & Bond, S. (1998). Initial conditions and moment restrictions in dynamic panel data models.
+
+Chen, J. (2005). Neural network applications in agricultural economics.
+
+Dumitrescu, E.-I., & Hurlin, C. (2012). Testing for Granger non-causality in heterogeneous panels.
+
+Kuan, C.-M., & White, H. (1994). Artificial neural networks: An econometric perspective.
+
+Kuznets, S. (1955). Economic growth and income inequality.
+
+Lewis, W. A. (1954). Economic development with unlimited supplies of labour.
+
+Pingali, P. (2012). Green revolution: Impacts, limits, and the path ahead.
+
+Yurdakul, F. (2024). Makroekonomik tahminlerde yapay sinir ağlarının performansı.
