@@ -1,0 +1,87 @@
+# ═══════════════════════════════════════════════════════════════
+# .gitignore — Academic Research Vault (MGO)
+# Architecture: .git lives at ~/.git-repos/akademik_arastirma/
+# (OneDrive-safe: separate-gitdir prevents corruption)
+# ═══════════════════════════════════════════════════════════════
+
+# ── OneDrive conflict copies ─────────────────────────────────
+# OneDrive appends " (N)" or "- ComputerName" on sync conflicts
+* (1).*
+* (2).*
+* (3).*
+*-Mehmet MacBook Air*
+*-Mehmet*MacBook*
+*.~lock.*#
+# OneDrive temp upload files (pattern: lu[hex].tmp)
+lu*.tmp
+*.tmp
+
+# ── Office temporary files ───────────────────────────────────
+~$*
+
+# ── Large binary / non-diffable files (tracked in OneDrive, not git)
+*.pdf
+*.docx
+*.doc
+*.xlsx
+*.xls
+*.pptx
+*.ppt
+*.zip
+*.7z
+*.rar
+*.gz
+*.tar
+*.bz2
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+.env
+.venv*/
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# ── R / RStudio ──────────────────────────────────────────────
+.Rhistory
+.RData
+.Rproj.user/
+*.rdb
+*.rdx
+Rplots.pdf
+
+# ── Quarto / LaTeX artifacts ─────────────────────────────────
+_site/
+_book/
+*.tex
+*.log
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz
+*.fdb_latexmk
+*.fls
+
+# ── Data directories (large, binary, version-controlled via DVC) ─
+400-Data/
+200-Manuscripts/**/_Documents-Archive/
+
+# ── System & tool directories ────────────────────────────────
+.agents/
+.claude/
+.cache/
+.venv_mlx/
+.dvc/
+.obsidian/
+.DS_Store
+.quarto/
+.vscode/
+.playwright-cli/
+node_modules/
+
+# ── OneDrive macOS metadata ──────────────────────────────────
+.849C9593-D756-4E56-8D6E-42412F2A707B
