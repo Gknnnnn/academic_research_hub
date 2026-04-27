@@ -69,6 +69,39 @@ _book/
 # ── Data directories (large, binary, version-controlled via DVC) ─
 400-Data/
 200-Manuscripts/**/_Documents-Archive/
+200-Manuscripts/**/_Courses-Archive/
+200-Manuscripts/**/_ARCHIVE*/
+
+# ── Large archive & legacy dirs (OneDrive stores, not git) ───
+_ARCHIVE_300-Projects/
+_ARCHIVE_800-Infrastructure/
+100-Literature/
+110-Literature/
+100-Inbox/
+600-Methods/
+700-Results/
+800-Teaching/
+900-Admin/
+900-Dashboard/
+950-Dossiers/
+000-System/
+290-Idea-Incubator/
+300-Output-Registry/
+400-Grants/
+120-Concepts/
+960-Infrastructure/lightrag_db/
+960-Infrastructure/venv/
+960-Infrastructure/venv_finetune/
+960-Infrastructure/research_ops_ui_v1_deploy_copy/
+960-Infrastructure/stage-10-watchtower/
+960-Infrastructure/stage-11-evolution/
+960-Infrastructure/961-Dashboard/
+960-Infrastructure/962-BIST-Econometrics-Lab/
+960-Infrastructure/350-Software-Dev/
+960-Infrastructure/legacy-mcp/
+960-Infrastructure/finetuning/
+960-Infrastructure/mcp-docs/
+960-Infrastructure/n8n_workflows/
 
 # ── System & tool directories ────────────────────────────────
 .agents/
