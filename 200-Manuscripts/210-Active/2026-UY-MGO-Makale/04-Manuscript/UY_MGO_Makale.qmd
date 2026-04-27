@@ -1,0 +1,1534 @@
+---
+title: "Döviz Kuru Şoklarının İhracat Performansı Üzerindeki Etkisinde Kurumsal Kalitenin Rolü: Gelişmekte Olan Ülkeler İçin Bir Panel Veri Analizi"
+lang: tr
+format:
+  html:
+    theme: cosmo
+    mainfont: "Times New Roman"
+    fontsize: "11pt"
+    embed-resources: false
+    css: styles.css
+  docx:
+    toc: false
+    number-sections: false
+  pdf:
+    pdf-engine: xelatex
+    keep-tex: true
+    documentclass: article
+    geometry:
+      - top=30mm
+      - left=25mm
+      - bottom=30mm
+      - right=25mm
+    include-in-header:
+      text: |
+        \usepackage{fontspec}
+        \usepackage{setspace}
+        \onehalfspacing
+        \usepackage{float}
+        \floatplacement{figure}{H}
+        \floatplacement{table}{H}
+execute:
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+<!-- MAKÜ SOBED — KÖR HAKEM: Yazar bilgileri Başlık Sayfası dosyasındadır -->
+<!-- The Role of Institutional Quality in the Impact of Exchange Rate Shocks on Export Performance: A Panel Data Analysis for Developing Countries -->
+
+**Etik Beyan:** Bu çalışma yalnızca kamuya açık ikincil veri kaynaklarından (Dünya Bankası WDI ve WGI veri tabanları) derlenen verilerle yürütülmüştür. İnsan katılımcı, birincil veri toplama ya da gizlilik gerektiren herhangi bir unsur içermediğinden etik kurul onayı gerekmemektedir.
+
+```{r}
+#| include: false
+options(warn = -1)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(readr)
+library(plm)
+library(lmtest)
+library(knitr)
+library(kableExtra)
+library(modelsummary)
+library(quantreg)
+library(jsonlite)
+library(zoo)
+library(sandwich)
+library(CADFtest)
+
+# CIPS (Pesaran 2007) hesaplama fonksiyonu
+compute_cips <- function(df, var, diff_order = 0) {
+  countries <- unique(df$country)
+  cs_mean <- df %>%
+    group_by(year) %>%
+    summarize(csmean = mean(.data[[var]], na.rm = TRUE), .groups = "drop")
+  df2 <- left_join(df, cs_mean, by = "year")
+
+  stats <- sapply(countries, function(ctry) {
+    d <- df2 %>% filter(country == ctry) %>% arrange(year)
+    y   <- d[[var]]
+    csm <- d$csmean
+    if (diff_order == 1) { y <- c(NA, diff(y)); csm <- c(NA, diff(csm)) }
+    ok  <- !is.na(y) & !is.na(csm)
+    y   <- y[ok]; csm <- csm[ok]
+    if (length(y) < 5) return(NA_real_)
+    dy      <- diff(y);   n <- length(dy)
+    y_lag   <- head(y,  -1)[seq_len(n)]
+    csm_lag <- head(csm, -1)[seq_len(n)]
+    dcsm    <- diff(csm)[seq_len(n)]
+    tryCatch({
+      coef(summary(lm(dy ~ y_lag + csm_lag + dcsm)))["y_lag", "t value"]
+    }, error = function(e) NA_real_)
+  })
+  list(cips = mean(stats, na.rm = TRUE), n = sum(!is.na(stats)))
+}
+
+# modelsummary v2.6.0: settings_init() her çağrıda getOption() ile sıfırlar
+# Bu nedenle options() kütüphaneden SONRA ayarlanmalıdır
+options(modelsummary_stars_note = FALSE)
+
+# ------- Format algılama yardımcı fonksiyonları -------
+# kable / modelsummary için: html, latex veya pipe (DOCX)
+tbl_fmt <- function() {
+  if (knitr::is_latex_output()) return("latex")
+  fmt <- knitr::pandoc_to()
+  if (!is.null(fmt) && fmt == "docx") return("pipe")
+  return("html")
+}
+# kableExtra stil uygulanacak mı?
+use_kable_styling <- function() {
+  tbl_fmt() == "html"
+}
+# modelsummary çıktı formatı
+ms_fmt <- function() {
+  if (knitr::is_latex_output()) return("latex")
+  fmt <- knitr::pandoc_to()
+  if (!is.null(fmt) && fmt == "docx") return("markdown")
+  return("html")
+}
+# -------------------------------------------------------
+
+temiz_veri <- read_csv("data/analiz_verisi_full.csv", show_col_types = FALSE)
+gelismekte_olan_veri <- read_csv("data/gelismekte_olan_veri.csv", show_col_types = FALSE)
+
+temiz_veri <- temiz_veri %>%
+  filter(!is.na(reer) & !is.na(ihracat))
+
+analiz_verisi <- temiz_veri %>%
+  drop_na(hukuk, regulasyon, reer, ihracat, gsyh) %>%
+  mutate(
+    ln_ihracat = log(ihracat),
+    ln_reer = log(reer),
+    ln_gsyh = log(gsyh)
+  )
+
+# Panel veri yapıları
+p_veri    <- pdata.frame(analiz_verisi,     index = c("country", "year"))
+p_veri_em <- pdata.frame(gelismekte_olan_veri, index = c("country", "year"))
+
+# Model tahminleri
+model_politik <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                     data = p_veri, model = "within")
+model_em <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                data = p_veri_em, model = "within")
+model_em_re <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                   data = p_veri_em, model = "random")
+
+# Driscoll-Kraay dirençli standart hatalar
+se_scc <- sqrt(diag(vcovSCC(model_em, type = "HC3", maxlag = 4)))
+
+# Metin içi inline kodlar için ön hesaplamalar
+hausman_pre <- phtest(model_em, model_em_re)
+t_dk_inter  <- as.numeric(coef(model_em)["ln_reer:hukuk"]) / se_scc["ln_reer:hukuk"]
+p_dk_inter  <- round(2 * pnorm(abs(t_dk_inter), lower.tail = FALSE), 3)
+
+sig_note_tr <- if (knitr::is_latex_output()) {
+  "Anlaml\u0131l\u0131k d\u00fczeyleri s\u0131ras\u0131yla y\u00fczde 1, y\u00fczde 5 ve y\u00fczde 10 olarak raporlanm\u0131\u015ft\u0131r."
+} else if (!is.null(knitr::pandoc_to()) && knitr::pandoc_to() == "docx") {
+  # Unicode asterisk operator (\u2217) kullan — markdown bold/italic yorumlanmasını engeller
+  "\u2217\u2217\u2217 p<0,01; \u2217\u2217 p<0,05; \u2217 p<0,1."
+} else {
+  "*** p<0,01; ** p<0,05; * p<0,1."
+}
+
+sig_note_en <- if (knitr::is_latex_output()) {
+  "Significance levels are reported at the 1 percent, 5 percent, and 10 percent thresholds."
+} else if (!is.null(knitr::pandoc_to()) && knitr::pandoc_to() == "docx") {
+  "\u2217\u2217\u2217 p<0.01; \u2217\u2217 p<0.05; \u2217 p<0.1."
+} else {
+  "*** p<0.01; ** p<0.05; * p<0.1."
+}
+
+```
+
+# Özet
+
+Bu çalışma, döviz kuru şoklarının ihracat performansı üzerindeki etkisinde kurumsal kalitenin düzenleyici rolünü sorgulamaktadır. 2000-2022 dönemini kapsayan 37 gelişmekte olan ülke ve 773 gözlemlik panel veri seti kullanılmıştır. Temel sabit etkiler modeli, kurumsal kalkan hipotezini destekleyen pozitif ve anlamlı bir etkileşim katsayısı üretmektedir. Ancak bu sonuç daha sağlam çıkarım yöntemlerinde sistematik olarak ortadan kalkmaktadır: Driscoll-Kraay dirençli tahmincisi yatay kesit bağımlılığını, Arellano-Bond GMM içselliği kontrol ettikten sonra etkileşim terimi anlamlılığını yitirmektedir. Canay (2011) panel çeyreklik regresyonu, küme bootstrap standart hatalarıyla (B=499, N=37) tekrarlandığında aynı sıfır bulgusunu üretmekte ve etkileşim terimi dağılımın hiçbir noktasında anlamlılık taşımamaktadır. Kur düzeyi yerine kur oynaklığının kullanıldığı spesifikasyonda da etkileşim terimi pozitif bir katsayı üretmekle birlikte Driscoll-Kraay dirençli standart hatalar altında geleneksel anlamlılık eşiğine ulaşamamaktadır. Tüm yöntemlerde ülke içi üretim ölçeği (reel GSYH) ihracatın yegane güçlü belirleyicisi olarak kalmaktadır. Bulgular, kurumsal reformların güçlü yerel ekonomik kapasite olmaksızın yetersiz kalacağını göstermektedir.
+
+**Anahtar Kelimeler:** İhracat Performansı, Reel Efektif Döviz Kuru Oynaklığı, Hukukun Üstünlüğü, Panel Çeyreklik Regresyon, Dinamik Panel GMM.
+
+# Abstract
+
+This study examines whether institutional quality (rule of law) moderates the impact of exchange rate shocks on export performance in developing countries, and whether this moderating effect survives corrections for cross-sectional dependence and endogeneity. Using an unbalanced panel of 37 developing countries over 2000-2022 (773 observations), a baseline fixed effects model yields a positive and significant interaction coefficient, consistent with the institutional shield hypothesis. This result, however, does not survive more rigorous inference: the Driscoll-Kraay robust estimator and the Arellano-Bond Dynamic Panel GMM both render the interaction term insignificant. Canay (2011) panel quantile regression with cluster bootstrap standard errors (B=499, N=37 clusters) produces the same null finding across all quantiles. When exchange rate volatility replaces the level specification, the volatility × rule-of-law interaction yields a positive coefficient but remains below conventional significance thresholds under Driscoll-Kraay standard errors, providing at most a suggestive indication that institutional quality may partially buffer short-run exchange rate uncertainty. Domestic production scale (real GDP) remains the sole robust determinant of export performance across every specification. The findings indicate that institutional reforms, while necessary, are insufficient to sustain export growth without strong domestic economic capacity.
+
+**Keywords:** Export Performance, Real Effective Exchange Rate Volatility, Rule of Law, Panel Quantile Regression, Dynamic Panel GMM, Cross-Sectional Dependence.
+
+**JEL Codes:** F14, F31, C23, C14, O17, O43
+
+# Extended Summary
+
+## Background and Motivation
+
+International trade occupies a central place in economic growth strategies, particularly for developing economies where export revenues feed into foreign exchange reserves, technology transfer, and employment. The traditional macroeconomic literature attributes export performance primarily to price competitiveness through the real effective exchange rate (REER) and foreign income. Under the Marshall-Lerner condition, a depreciation of the domestic currency improves the trade balance by reducing export prices in foreign markets. However, a growing body of evidence indicates that price-based advantages alone are insufficient to sustain long-run export growth: countries with weak legal and institutional frameworks fail to translate currency depreciation into lasting export gains, because high transaction costs, contract enforcement failures, and property rights insecurity erode competitiveness at the firm level.
+
+The New Institutional Economics tradition, formalised by North (1990) and extended by Acemoglu and Robinson (2012), argues that institutions — the rules of the game governing economic interaction — are a primary driver of economic performance. Applied to international trade, this implies that strong rule-of-law environments act as an "institutional shield," buffering exporters against exchange rate shocks by reducing risk premia and lowering the cost of cross-border contracting. Most empirical studies testing this hypothesis, however, assume cross-sectional independence across panel units and ignore potential endogeneity, two assumptions that are implausible in an era of deep financial globalisation where developing economies share common external shocks.
+
+## Research Question and Contribution
+
+This paper asks: does institutional quality (rule of law) moderate the impact of exchange rate movements on export performance in developing countries, and does this moderating effect survive econometric corrections for cross-sectional dependence and endogeneity? The analysis makes three methodological contributions. First, it employs the Driscoll-Kraay (SCC) robust estimator, which jointly controls for cross-sectional dependence, autocorrelation, and heteroskedasticity — directly addressing the global contagion channels that contaminate standard estimators. Second, the Canay (2011) two-stage panel quantile regression decomposes the institutional shield effect across the full export distribution (τ = 0.25, 0.50, 0.75), revealing distributional heterogeneity that pooled estimators obscure. Third, the Arellano-Bond two-step Difference GMM controls for dynamic path dependence and potential reverse causality between institutional quality and trade outcomes.
+
+## Data and Methodology
+
+The empirical analysis employs an unbalanced panel of 37 developing countries (after filtering two single-observation units) covering 2000–2022, yielding 773 country-year observations. Export performance is measured as log real exports in constant prices. The main explanatory variables are the log real effective exchange rate (ln_REER, World Bank), rule-of-law index (hukuk, WGI), their interaction (ln_REER × hukuk), and log real GDP (ln_gdp) as a scale control. Robustness checks substitute the Regulatory Quality index (WGI) for rule of law.
+
+The estimation sequence is: (i) pooled fixed effects (FE) baseline; (ii) Driscoll-Kraay SCC robust standard errors with maxlag=4; (iii) Canay (2011) panel quantile regression with cluster bootstrap standard errors (B=499, N=37 clusters); (iv) Arellano-Bond two-step GMM with lag(2:3) instruments validated by Sargan overidentification and AR(2) serial correlation tests.
+
+## Main Results
+
+The FE baseline confirms a positive and statistically significant interaction coefficient at the 5% level, consistent with the institutional shield hypothesis. However, this result does not survive more demanding specifications. The Driscoll-Kraay estimator — the methodologically preferred specification given confirmed cross-sectional dependence and autocorrelation — yields an insignificant interaction term (p = `r p_dk_inter`), indicating that cross-sectional spillovers from global shocks confound the institutional effect. The Arellano-Bond GMM similarly renders the interaction insignificant after controlling for endogeneity. Across all estimators and all quantiles of the export distribution, the sole variable that retains large magnitude, consistent sign, and statistical significance at the 1% level is domestic economic scale (ln_gdp), with coefficients ranging from 1.18 to 1.32. The Canay quantile regression, re-estimated with cluster bootstrap standard errors (B=499, N=37 clusters) that preserve within-country serial dependence, produces the same null result across all quantiles (approximate p-values: τ = 0.25, p = 0.129; τ = 0.50, p = 0.242; τ = 0.75, p = 0.623). Regulatory quality substitution does not qualitatively alter these conclusions. When exchange rate volatility (three-year rolling standard deviation) replaces the level specification, the volatility x rule-of-law interaction yields a positive coefficient but fails to reach conventional significance thresholds under Driscoll-Kraay standard errors (p $\approx$ 0.10), providing at most suggestive evidence that institutional quality may partially buffer short-run exchange rate uncertainty.
+
+## Policy Implications and Conclusion
+
+The central finding is an estimator-conditional null result: the institutional shield hypothesis receives support in the FE baseline but is not robust to cross-sectional dependence or endogeneity corrections. This suggests that the prior literature — which relies heavily on standard FE with clustered or White standard errors — may overstate institutional effects by ignoring global contagion. For developing-country policymakers, the implication is consequential: institutional reforms are valuable but insufficient as a standalone export strategy in a highly integrated global economy. Durable export growth ultimately requires expanding domestic productive capacity. Strategies targeting industrial deepening, infrastructure investment, and supply-chain integration are likely to yield larger and more robust export gains than institutional reforms pursued in isolation. Pesaran (2007) CIPS panel unit root tests confirm that log-level series (ln\_exports, ln\_REER, ln\_GDP) are I(1), while the rule-of-law index is borderline I(0)/I(1), consistent with its bounded nature; detailed results are reported in Appendix 2. The Driscoll-Kraay estimator addresses cross-sectional dependence, and confirmed panel cointegration (Pedroni, 1999) supports the long-run interpretation of the null result.
+
+# 1. GİRİŞ
+
+Dış ticaret, gelişmekte olan ekonomilerin büyüme stratejilerinin merkezinde yer almaktadır. Bu ülkeler için ihracat gelirleri döviz rezervlerini beslemekte, teknoloji transferini kolaylaştırmakta ve istihdam yaratmaktadır. Uluslararası iktisat literatürü ihracat performansını geleneksel olarak reel döviz kuru ve dış talep üzerinden açıklamaktadır; ancak bu makroekonomik değişkenlerin tek başına yetersizliği, araştırmacıları kurumsal yapıyı modele dahil etmeye yöneltmiştir (North, 1990; Acemoglu ve Robinson, 2012).
+
+Geleneksel görüşe göre, yerel paranın reel olarak değer kaybetmesi (rekabetçi kur), ihraç mallarının dış piyasalardaki fiyatını düşürerek ihracat hacmini artırmaktadır. Öte yandan Yeni Kurumsal İktisat perspektifi; mülkiyet hakları ve hukukun üstünlüğü gibi faktörlerin işlem maliyetlerini düşürerek ticari performansı doğrudan etkilediğini savunur. Bu bağlamda literatürdeki yaygın argüman, güçlü bir hukuk sisteminin, döviz kuru oynaklıklarına karşı ihracatçı firmaları koruyan bir "kurumsal kalkan" işlevi gördüğü yönündedir. Ancak yanıtlanmayı bekleyen bir soru vardır: Küresel finansal krizlerin, tedarik zinciri kesintilerinin ve ülkeler arası bulaşma (spillover) etkilerinin yoğunlaştığı günümüzde, *sadece yerel* bir kurumsal kalkan gelişmekte olan ülkelerin ihracatını dış şoklardan korumaya yetecek midir?
+
+Bu çalışma, döviz kuru değişimlerinin ihracat üzerindeki etkisinde hukukun üstünlüğünün düzenleyici (moderator) rolünü sorgularken, literatürdeki mevcut analizlerin ötesine geçmeyi hedeflemektedir. Birçok çalışma ülkelerin birbirinden bağımsız hareket ettiğini varsayarak (yatay kesit bağımsızlığı) kurumsal kalitenin gücünü abartma eğilimindedir. Oysa gelişmekte olan ekonomiler, küresel rüzgarlara ve birbirlerinin ticaret politikalarına son derece duyarlıdır. Bu çalışma, 39 gelişmekte olan ülke için (analitik alt örneklem N=37) 2000-2022 dönemini kapsayan verilerle hem temel sabit etkiler analizini hem de ülkeler arası bulaşma etkilerini (cross-sectional dependence) kontrol altına alan ileri düzey Driscoll-Kraay dirençli standart hata tahmincisini kullanmaktadır. Araştırmanın amacı, "yerel kurumların gücü" ile "küresel talebin baskısı" arasındaki hiyerarşiyi ampirik olarak ortaya koymak ve gelişmekte olan ülkelere yönelik politika çıkarımları üretmektir.
+
+Çalışmanın geri kalanı şu şekilde organize edilmiştir: İkinci bölümde ilgili literatür özetlenmekte, üçüncü bölümde veri seti ve metodoloji tanıtılmaktadır. Dördüncü bölümde tanı testlerini de içeren ampirik bulgular sunulmakta ve son bölümde ise elde edilen sonuçlar ışığında politika önerileri tartışılmaktadır.
+
+# 2. LİTERATÜR ÖZETİ VE KURAMSAL ÇERÇEVE
+
+Uluslararası iktisat literatüründe ihracat performansını belirleyen unsurlar geleneksel olarak fiyat rekabetçiliği ve dış talep kanalları üzerinden analiz edilmektedir. Eaton ve Kortum (2002) tarafından geliştirilen Ricardian dış ticaret modeli, ülkeler arası üretkenlik farklılıklarının ve göreceli fiyatların ticaret akışlarını nasıl şekillendirdiğini yapısal bir çerçevede ortaya koymuştur. Genel kabul gören analitik yaklaşımlar ve Marshall-Lerner koşulu çerçevesinde, reel döviz kurundaki değerlenmenin (REER artışı) ihraç mallarının uluslararası piyasalardaki göreli fiyatlarını yükselterek dış rekabet gücünü zayıflattığı ve ihracat hacmini negatif yönde etkilediği savunulmaktadır (Aman, Mallick ve Nemlioglu, 2021; Bulut ve Yaşar, 2023). Özellikle gelişmekte olan ekonomilerde döviz kuru şokları, yerel paranın aşırı değerlenmesi durumunda ihracatçı firmaların kâr marjlarını baskılayarak ticari performansta ciddi daralmalara yol açabilmektedir (Chamindani, 2019; Khan, Khan ve Ahmad, 2024). Ancak klasik makroekonomik değişkenlerin tek başına ihracat dinamiklerini açıklamadaki yetersizliği, özellikle 1990’lı yıllardan itibaren Yeni Kurumsal İktisat perspektifinin dış ticaret modellerine entegre edilmesini zorunlu kılmıştır. Douglass North (1990) tarafından geliştirilen kuramsal çerçeveye göre, kurumlar ekonomik etkileşimleri yapılandıran "oyunun kuralları"dır ve mülkiyet hakları ile hukuki öngörülebilirliğin sağlandığı ortamlarda işlem maliyetleri düşerek ekonomik faaliyetler teşvik edilmektedir. Bu kuramsal zemin, Coase (1937) ve Williamson (1990) tarafından kavramsallaştırılan işlem maliyetleri (transaction costs) teorisiyle desteklenmektedir; nitekim asimetrik bilgi, fırsatçılık riski ve varlık özgüllüğü (asset particularity) gibi unsurlar, hukuki altyapının zayıf olduğu durumlarda dış ticareti kısıtlayan birer "gizli vergi" (hidden tax) işlevi görmektedir (Ruzekova, Kittova ve Steinhauser, 2020, s. 146-149). Bu dönüşüm, Rodrik (2000) tarafından da vurgulandığı üzere, yüksek kaliteli ve sürdürülebilir bir ekonomik büyüme için kurumsal altyapının vazgeçilmez olduğu fikrini merkeze taşımıştır.
+
+Kurumsal kalitenin dış ticaret üzerindeki doğrudan etkisini inceleyen ampirik çalışmalar, hukukun üstünlüğü, sözleşme yaptırım gücü ve bürokratik etkinliğin ihracat hacmi ve çeşitliliği üzerinde birincil derecede belirleyici olduğunu göstermektedir. Acemoglu ve Robinson (2012) ile Acemoglu, Johnson ve Robinson (2005), kurumların coğrafya ve salt dışa açıklık gibi faktörlerden daha baskın bir büyüme motoru olduğunu vurgulayarak, mülkiyet güvenliğinin zayıf olduğu ülkelerde sadece rekabetçi kur politikalarının kalıcı bir ihracat artışı yaratmakta yetersiz kalacağına işaret etmişlerdir (Rodrik, Subramanian ve Trebbi, 2004). Hukuki ve sözleşmesel güvencenin (contract enforcement) dış ticaretteki yapısal belirleyiciliği üzerine Levchenko (2007) ve Nunn (2007), gelişmiş yasal kurumlara sahip ülkelerin özellikle sözleşme yoğunluğu ve ürün karmaşıklığı yüksek mallarda açık bir karşılaştırmalı üstünlük elde ettiğini kanıtlamışlardır (Frensch, Horvath ve Huber, 2021, s. 4-6). Nitekim Méon ve Sekkat (2004, s. 1479-1486), bürokratik etkinsizlik ve zayıf hukukun üstünlüğünün imalat sanayi ihracatını doğrudan baltalayarak gelişmekte olan ülkelerin dünya ekonomisine entegrasyonunu engellediğini ekonometrik olarak bulgulamıştır. Literatürde, yüksek kaliteli yasal kurumlara sahip ülkelerde faaliyet gösteren firmaların, sözleşme güvenliği sayesinde asimetrik bilgi problemlerini ve sınır ötesi işlem risklerini daha etkin yönetebildikleri savunulmaktadır (Li, Vertinsky ve Zhang, 2012).
+
+Buna ek olarak, firma düzeyindeki mikro bulgular da bu makro teoriyi desteklemektedir; örneğin Mwatu (2022, s. 494), gelişmiş kurumsal yapıların finansal kısıtları ve bürokratik engelleri hafifleterek firmaların ihracat pazarlarına girişini ve tutunmasını doğrudan kolaylaştırdığını kanıtlamıştır. Helpman, Melitz ve Rubinstein (2008) ise ihracat kararlarındaki seçim yanlılığını (selection bias) dikkate alan iki aşamalı bir tahmin çerçevesi önererek, kurumsal kalitenin yalnızca ihracat hacmini değil ihracat pazarına giriş olasılığını da doğrudan etkilediğine dikkat çekmiştir; bu bulgu, kurumsal kalkan hipotezinin mikro temelli mekanizma açıklamasını güçlendirmektedir. İlave olarak, makro boyutta kurumsal kalitenin yalnızca ihracatçı ülke içindeki seviyesi değil, ticaret ortakları arasındaki "kurumsal uzaklık" (institutional distance) da kritik bir parametre olarak öne çıkmaktadır. Ezzat ve Zaki (2022, s. 143-156), MENA ülkeleri eksenindeki çekim modeli (gravity model) tahminlerinde, ticaret ortakları arasındaki politik ve kurumsal kalite (hukukun üstünlüğü) farkı arttıkça derin ticaret anlaşmaları imzalama olasılığının istatistiksel olarak anlamlı ölçüde düştüğünü; anlaşmaların yaptırım gücünün (enforceability) artmasının ise ticaret hacmini doğrudan büyüttüğünü kanıtlamışlardır. Benzer şekilde, Abreo, Bustillo ve Rodriguez (2021, s. 4-5) Latin Amerika örneğinde, Afonso vd. (2025, s. 1-23) ise gelişmiş ve gelişmekte olan ülkeler ekseninde kurumsal etkinliğin dış ticaret üzerindeki belirleyici rolünü ampirik olarak teyit etmişlerdir. Bu bağlamda kurumsal gelişmişlik, sadece toplam ticaret hacmini artırmakla kalmamakta, ülkelerin karşılaştırmalı üstünlüklerini daha karmaşık ve kurumsal yoğunluğu yüksek ürünlere kaydırmalarına imkan tanımaktadır (Bustaman vd., 2022, s. 9). Hatta Tadesse, Shukralla ve Fayissa (2019, s. 4235–4236), kurumsal altyapının işlem maliyetlerini düşürmede anahtar bir değişken olduğunu ve hukukun üstünlüğü belirli bir eşik değeri (threshold) aşmadan ticaret maliyetlerinde (bilateral trade costs) kalıcı bir iyileşme sağlanamayacağını ortaya koymaktadır.
+
+Çalışmanın özgün odağını oluşturan döviz kuru ve kurumsal kalite etkileşimi üzerine yapılan güncel araştırmalar, kurumların döviz kuru şoklarını emme veya iletme kapasitesine sahip kritik bir "düzenleyici" (moderator) işlevi gördüğünü ortaya koymaktadır. Anderson ve Marcouiller (2002), döviz kuru riskleri ile ticaret arasındaki ilişkinin, sözleşme yaptırımlarını güvence altına alan kurumsal kaliteye bağlı olarak non-monotonik bir seyir izlediğini teorik ve ampirik olarak ortaya koymuşlardır; Arize, Osang ve Slottje (2000) ise döviz kuru belirsizliğinin ihracat üzerindeki olumsuz etkisini panel kanıtlarla belgelemiştir. Bu kuramsal yaklaşıma göre, mülkiyet haklarının ve sözleşme icrasının (enforcement) zayıf olduğu durumlarda artan döviz kuru oynaklığı ticareti belirgin biçimde baskılarken, kurumsal kalitenin iyileşmesiyle bu negatif dışsallık sönümlenmektedir. Güçlü kurumsal yapılara ve mülkiyet güvencesine sahip ülkelerde, reel döviz kurundaki değerlenmelerin yarattığı maliyet artışları, kurumsal güvenin sağladığı düşük risk primi ve azalan işlem maliyetleri ile kompanse edilebilmektedir (Garayeva ve Tahirova, 2017, s. 3-5). Son yıllarda ekonometrik modellemelerdeki güncel ilerlemeler (özellikle Doğrusal Olmayan ARDL - NARDL yaklaşımları), döviz kuru ve ihracat ilişkisinin asimetrik doğasını da gün yüzüne çıkarmıştır. Urgessa (2024, s. 18) ve Ashour (2023, s. 16-29) tarafından gelişmekte olan ülkeler üzerine yapılan asimetrik panel analizleri, döviz kurundaki pozitif volatilitenin ihracat gelirlerini sert biçimde düşürdüğünü; kurumsal kalkanın zayıf olduğu durumlarda riskten kaçınan (risk-averse) firmaların uluslararası piyasalardan hızla geri çekildiğini doğrulamaktadır.
+
+Buna karşın, hukukun üstünlüğünün zayıf olduğu gelişmekte olan ekonomilerde kurumsal eksiklikler, döviz kuru oynaklığıyla birleştiğinde ihracatçılar için riskleri derinleştirmekte ve dış ticareti dış şoklara karşı çok daha kırılgan hale getirmektedir. Nitekim Aman, Granville, Mallick ve Nemlioglu (2024, s. 486-510), gelişmekte olan piyasalarda yalnızca ticari ve finansal dışa açıklığın (trade and financial openness) dış rekabet gücünü artırmakta tek başına yetersiz kalacağını; REER (reel efektif döviz kuru) kaynaklı değer kayıplarının kalıcı bir ihracat performansına dönüşebilmesi için yüksek kaliteli hukuki kurumların vazgeçilmez olduğunu ampirik olarak kanıtlamışlardır. Abdi ve Mohamed (2025, s. 2) de benzer şekilde, kurumların etkinsiz olduğu ortamlarda yüksek işlem maliyetlerinin ortaya çıktığını ve ihracatçıların ucuzlayan yerel para avantajından (devalüasyon) faydalanamadığını vurgulamaktadır. Bu durum, gelişmekte olan ülkeler için sadece dışsal fiyat avantajlarına (devalüasyon) odaklanan stratejilerin eksik kalacağını; sürdürülebilir dış ticaret başarısı için mülkiyet haklarını ve hukuk sistemini güçlendiren yapısal reformların stratejik bir "kurumsal kalkan" görevi gördüğünü kanıtlamaktadır (Baxa ve Paulus, 2024, s. 1734; Kazdal ve Yılmaz, 2021).
+
+# 3. VERİ SETİ VE METODOLOJİ
+
+### 3.1. Veri Kaynakları ve Değişken Tanımları
+
+Aşağıda sunulan Tablo 1 ve Tablo 2, sırasıyla tüm ülkeleri ve gelişmekte olan ülkeler alt örneklemini kapsayan tanımlayıcı istatistikleri özetlemektedir.
+
+```{r}
+#| tbl-cap: "Tablo 1: Tüm Ülkeler Tanımlayıcı İstatistikler (2000-2022)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)   # Daha güzel görünüm için öneririm
+
+# Veri önceden yüklenmiş olmalı (üstteki setup chunk'ında yap)
+# Eğer emin değilsen buraya da ekle:
+# analiz_verisi <- read_csv("data/analiz_verisi_full.csv", show_col_types = FALSE)
+
+sutunlar <- c("ln_ihracat", "ln_reer", "ln_gsyh", "hukuk")
+isimler  <- c("ln(İhracat)", "ln(REER)", "ln(GSYH)", "Hukukun Üstünlüğü")
+
+desc1a <- data.frame(
+  "Değişken"    = isimler,
+  "N"           = sapply(sutunlar, function(v) sum(!is.na(analiz_verisi[[v]]))),
+  "Ortalama"    = sapply(sutunlar, function(v) round(mean(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Std. Sapma"  = sapply(sutunlar, function(v) round(sd(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Minimum"     = sapply(sutunlar, function(v) round(min(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Maksimum"    = sapply(sutunlar, function(v) round(max(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  check.names = FALSE, 
+  row.names = NULL
+)
+
+# En güvenilir yöntem:
+res_kable <- kable(desc1a, 
+      format = tbl_fmt(),
+      align = c("l", "c", "c", "c", "c", "c"),
+      escape = FALSE)
+
+if (use_kable_styling()) {
+  res_kable <- res_kable %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+                  full_width = TRUE,
+                  position = "center")
+}
+res_kable
+```
+
+Çalışmada kullanılan veriler, 2000-2022 dönemini kapsayan yıllık panel veri setinden oluşmaktadır. Örneklem, veri kısıtları ve kurumsal heterojenliği yakalamak amacıyla Dünya Bankası World Development Indicators (WDI) veri tabanından (World Bank, 2024a) derlenmiştir. Çalışmanın bağımlı değişkeni olan ihracat performansı, sabit fiyatlarla mal ve hizmet ihracatı ($ln\_ihracat$) ile temsil edilmektedir. Temel bağımsız değişken olan reel efektif döviz kuru ($ln\_reer$), bir ülkenin para biriminin ticaret ortaklarına göre reel değerini yansıtmaktadır.
+
+Çalışmanın özgün odağı olan kurumsal kaliteyi temsil etmek üzere, Dünya Bankası Dünya Yönetişim Göstergeleri (WGI) veri setinden (World Bank, 2024b) "Hukukun Üstünlüğü" ($hukuk$) endeksi kullanılmıştır. Bu endeks, mülkiyet haklarının korunması, mahkemelerin bağımsızlığı ve sözleşmelerin uygulanabilirliği gibi mülkiyet güvenliğini doğrudan etkileyen unsurları -2.5 (zayıf) ile +2.5 (güçlü) arasında puanlamaktadır. Ayrıca, ülkelerin kendi ihracat kapasitelerini (ölçek etkisi) kontrol etmek amacıyla ulusal reel GSYH ($ln\_gsyh$) değişkeni modele dahil edilmiştir.[^1]
+
+[^1]: Dış talep şoklarını ve küresel dalgalanmaları kontrol etmek amacıyla, modelleme aşamasında "Dünya Reel GSYH" ($ln\_world\_gsyh$) değişkeni de test edilmiştir. Ancak, yalnızca zamana göre değişen ve ülkeler arası varyans içermeyen bu değişkenin panele eklenmesi, iki-yönlü sabit etkiler (two-way fixed effects) varsayımları altında zaman trendleriyle ve yıllara özgü sabit etkilerle aşırı doğrusal bağıntı (multicollinearity) yaratmıştır. Ayrıca, çalışmanın temelini oluşturan yatay kesit bağımlılığını (cross-sectional dependence) kontrol eden Driscoll-Kraay tahmincisi, doğası gereği küresel dışsal şokları ve zaman trendlerini matematiksel olarak sönümlediği için, analizin bilimsel tutarlılığını korumak adına $ln\_world\_gsyh$ değişkeni nihai tahmin modelinden çıkarılmıştır.
+
+Araştırmanın örneklemi, Dünya Bankası WDI veri tabanındaki veri mevcudiyeti ile sınırlandırılmıştır. Türkiye gibi bazı önemli gelişmekte olan ekonomiler, Reel Efektif Döviz Kuru (REER) serilerindeki yapısal veri eksiklikleri nedeniyle örneklem dışı bırakılmıştır. Başlangıçta veri mevcudiyetine göre 39 ülke derlenmiş olup Çin ve Zambiya birer gözlemle sınırlı kaldığından sabit etkiler tahmincisinde etkin örneklem 37 ülke ve 773 gözlemden oluşmaktadır. Ülkelerin tam listesi, bölgesel sınıflandırması ve gözlem dağılımı Tablo EK-1'de (bkz. Ekler) ayrıntılı biçimde sunulmaktadır.
+
+Tablo 2 incelendiğinde, gelişmekte olan ülkeler örnekleminde hukukun üstünlüğü endeksinin ortalama değerinin negatif (`r round(mean(gelismekte_olan_veri$hukuk, na.rm=TRUE), 2)`) olduğu görülmektedir. Bu durum, analize dahil edilen ülkelerde mülkiyet hakları, sözleşme güvenliği ve hukuki öngörülebilirlik gibi kurumsal altyapı unsurlarının yapısal olarak zayıf olduğuna işaret etmektedir. Söz konusu kurumsal zayıflık ve belirsizlik ortamı, döviz kuru şoklarının ihracatçılar üzerindeki etkisini ve kurumların bir 'güven kalkanı' olma işlevini inceleyen modelimizin temel motivasyonunu ampirik olarak doğrulamaktadır.
+
+```{r}
+#| tbl-cap: "Tablo 2: Gelişmekte Olan Ülkeler Tanımlayıcı İstatistikler (2000-2022)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+# gelismekte_olan_veri zaten setup chunk'ında yüklenmiştir; tekrar yükleme yapılmaz.
+# Değişken isimleri
+sutunlar <- c("ln_ihracat", "ln_reer", "ln_gsyh", "hukuk")
+isimler  <- c("ln(İhracat)", "ln(REER)", "ln(GSYH)", "Hukukun Üstünlüğü")
+
+# Tanımlayıcı istatistikler
+desc1b <- data.frame(
+  "Değişken"    = isimler,
+  "N"           = sapply(sutunlar, function(v) sum(!is.na(gelismekte_olan_veri[[v]]))),
+  "Ortalama"    = sapply(sutunlar, function(v) round(mean(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Std. Sapma"  = sapply(sutunlar, function(v) round(sd(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Minimum"     = sapply(sutunlar, function(v) round(min(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Maksimum"    = sapply(sutunlar, function(v) round(max(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  check.names = FALSE, 
+  row.names = NULL
+)
+
+# Tabloyu oluştur (kableExtra ile daha güzel ve stabil)
+res_kable_b <- kable(desc1b, 
+      format = tbl_fmt(),
+      align = c("l", "c", "c", "c", "c", "c"),
+      escape = FALSE)
+
+if (use_kable_styling()) {
+  res_kable_b <- res_kable_b %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+      full_width = TRUE,
+      position = "center"
+    )
+}
+res_kable_b
+```
+
+### 3.2. Ekonometrik Model ve Yöntem
+
+Değişkenler arasındaki etkileşimli ilişkiyi test etmek amacıyla aşağıdaki panel veri modeli kurulmuştur:
+
+$$
+ln\_ihracat_{it} = \beta_0 + \beta_1 ln\_reer_{it} + \beta_2 hukuk_{it} + \beta_3 (ln\_reer_{it} \times hukuk_{it}) + \beta_4 ln\_gsyh_{it} + \alpha_i + \epsilon_{it}
+$$
+
+Burada $i$ ülkeleri, $t$ zamanı ve $\alpha_i$ ülke sabit etkilerini temsil etmektedir.[^twoway]
+
+[^twoway]: İki yönlü sabit etkiler ($\alpha_i + \mu_t$) altında etkileşim terimi zaten anlamsız hale gelmektedir (p = 0,129). Zaman sabit etkileri, küresel zaman trendlerini emerek ülkeler arası kurumsal varyasyonu da kısmen absorbe etmekte; bu nedenle tek yönlü sabit etkiler ve Driscoll-Kraay dirençli standart hatalar tercih edilmiştir. Modelde yer alan $(ln\_reer_{it} \times hukuk_{it})$ etkileşim terimi, kurumsal kalitenin döviz kuru duyarlılığı üzerindeki düzenleyici etkisini ölçmektedir.
+
+Panel veri analizinde birim etkilerin (ülke karakteristikleri) hata terimiyle ilişkili olup olmadığını belirlemek amacıyla Hausman testi uygulanmıştır. Test sonucunda elde edilen $\chi^2$ istatistiği (`r round(hausman_pre$statistic, 3)`) ve ilgili p-değeri (`r format.pval(hausman_pre$p.value, digits=3, eps=0.001)`), sıfır hipotezinin reddedildiğini ve Sabit Etkiler (Fixed Effects) tahmincisinin, Rassal Etkiler (Random Effects) tahmincisine göre daha tutarlı (consistent) sonuçlar ürettiğini doğrulamıştır. Bu doğrultuda, ülkeler arasındaki gözlemlenemeyen heterojenliği kontrol altına alan Sabit Etkiler yöntemi benimsenmiştir.
+
+Sağlamlık analizlerinde kullanılan panel çeyreklik regresyon, Canay (2011) tarafından geliştirilen iki aşamalı yaklaşım çerçevesinde uygulanmıştır. Bu yöntemde ilk aşamada sabit etkiler modelinden elde edilen ülkeye özgü sabit etkiler ($\hat{\alpha}_i$) bağımlı değişkenden çıkarılarak arındırılmış bir bağımlı değişken ($\tilde{y}_{it} = y_{it} - \hat{\alpha}_i$) elde edilmiştir. İkinci aşamada bu arındırılmış değişken üzerinde standart çeyreklik regresyon uygulanmıştır. Canay (2011) yaklaşımı, $\sqrt{n}$-tutarlı sabit etki tahminleri altında asimptotik olarak geçerlidir ve geleneksel $rq()$ çağrısının panel yapısını göz ardı etmesinin yol açacağı örneklem seçimi yanlılığını ortadan kaldırmaktadır. Bu çalışmada kullanılan standart hatalar, yatay kesit bağımlılığı ve otokorelasyon varlığında iid varsayımının bozulduğunu dikkate alarak küme bootstrap yöntemiyle (B=499, N=37 küme) hesaplanmıştır. Küme bootstrap, ülke zaman serilerinin tamamını yeniden örnekleyerek panel yapısını korumaktadır.
+
+**Durağanlık Notu:** Çalışmada kullanılan log-düzey serileri ($ln\_ihracat$, $ln\_reer$, $ln\_gsyh$) T≈23 yıllık zaman boyutuyla birim kök içerebilir (I(1) olasılığı). Bu sınırlılık, Pesaran (2007) CIPS panel birim kök testi ile doğrudan ele alınmış olup ayrıntılı sonuçlar Ek 2'de sunulmaktadır. Buna ek olarak üç faktör sonuçların yorumlanmasını güvenilir kılmaktadır: (i) analiz gerçek büyüme ve döviz kuru dalgalanmalarına odaklandığından düzey serileri iktisat teorisiyle örtüşmektedir; (ii) Sabit Etkiler ve Driscoll-Kraay tahminleri ülke-zaman sabit etkilerini kontrol altında tutarak uzun dönem ortalamalara yakınsama güvencesi sağlamaktadır; (iii) Canay (2011) çeyreklik regresyonu, dağılımın tamamını ele alarak olası sahte regresyon riskini azaltmaktadır.
+
+# 4. AMPİRİK BULGULAR VE TARTIŞMA
+
+Bu bölümde, seçilen ekonometrik model çerçevesinde elde edilen ampirik sonuçlar sunulmaktadır. Analizler iki aşamalı olarak kurgulanmıştır: İlk olarak tüm örneklem için genel bulgular sunulmuş, ardından gelişmekte olan ülkeler bazında yapılan heterojenlik analizi ile kurumsal kalitenin düzenleyici rolü tartışılmıştır.
+
+### 4.1. Genel Örneklem Sonuçları
+
+Öncelikle küresel ölçekte dış ticaret ve kurumsal yapı arasındaki dinamikleri sınamak amacıyla, tüm ülkeleri (gelişmiş ve gelişmekte olan) kapsayan genel temel model tahmin edilmiştir. Bu analizde, ihracat performansının temel makroekonomik belirleyicileri olarak ülke içi kapasite ($ln\_gsyh$) ve reel rekabet gücü ($ln\_reer$) merkeze alınmış; şoklara karşı koruyucu kalkan olarak ise hukukun üstünlüğü endeksinin düzenleyici (moderatör) rolü test edilmiştir.
+
+Aşağıda sunulan Tablo 3, söz konusu genel örneklem üzerinden elde edilen Sabit Etkiler regresyon katsayılarını ve önemlilik düzeylerini göstermektedir:
+
+```{r}
+#| tbl-cap: "Tablo 3: Panel Sabit Etkiler Regresyon Sonuçları"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(modelsummary)
+
+models <- list(
+  "Tüm Ülkeler"             = model_politik,
+  "Gelişmekte Olan Ülkeler" = model_em
+)
+
+modelsummary(
+  models,
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"       = "ln(REER)",
+    "hukuk"         = "Hukukun Üstünlüğü",
+    "ln_gsyh"       = "ln(GSYH)",
+    "ln_reer:hukuk" = "ln(REER) × Hukuk"
+  ),
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  statistic  = "std.error",
+  output     = ms_fmt(),
+  fmt        = 3,                    
+  escape     = FALSE,
+
+  # Add rows (güvenli yöntem)
+  add_rows = data.frame(
+    term = c("R²", "Gözlem Sayısı", "Sabit Etkiler"),
+    `Tüm Ülkeler` = c(
+      round(summary(model_politik)$r.squared["rsq"], 3),
+      nobs(model_politik),
+      "Evet"
+    ),
+    `Gelişmekte Olan Ülkeler` = c(
+      round(summary(model_em)$r.squared["rsq"], 3),
+      nobs(model_em),
+      "Evet"
+    ),
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  ),
+
+  notes = paste("Not: Parantez içindeki değerler standart hatalardır.", sig_note_tr),
+)
+```
+
+Tüm ülkeleri kapsayan panel sabit etkiler modeli sonuçları, ihracat performansının temel belirleyicileri olarak reel döviz kuru ve iç ekonomik büyümeyi öne çıkarmaktadır. Tablo 3’te sunulan katsayılar incelendiğinde, $ln\_reer$ katsayısının negatif ve anlamlı olduğu (-0.111) görülmektedir. Bu bulgu, döviz kurundaki değerlenmenin ihracat rekabetçiliğini azalttığını doğrulamaktadır. Modelde kontrol değişkeni olarak yer alan $ln\_gsyh$ katsayısı (1.316), ihracatın belirlenmesinde en güçlü faktör olarak öne çıkmaktadır. Katsayının 1'den büyük olması, ölçek etkisinin ihracat arzı için belirleyici olduğunu göstermektedir. Ancak, tüm örneklem genelinde etkileşim terimi ($ln\_reer \times hukuk$) istatistiksel olarak anlamlı bir düzeye ulaşmamıştır (0.034). Bu durum, gelişmiş ve gelişmekte olan ülkeler arasındaki kurumsal olgunluk farklarının genel regresyon doğrusunu baskıladığını düşündürmektedir.
+
+### 4.2. Gelişmekte Olan Ülkeler ve Kurumsal Etkileşim Analizi
+
+Genel örneklemde elde edilen bu anlamsız etkileşim bulgusu, yapısal kırılganlıklara ve kurumsal boşluklara sahip ülkelerin (gelişmekte olan ekonomilerin) makroekonomik şoklara karşı farklı bir duyarlılık sergileyeceği ihtimalini gündeme getirmektedir. Çalışmanın özgün katkısını oluşturan gelişmekte olan ülkeler alt örneklemi üzerinden oluşturulan etkileşim modeli sonuçları Tablo 3’ün "Gelişmekte Olan Ülkeler" sütununda sunulmaktadır.
+
+Tablo 3’ün Gelişmekte Olan Ülkeler sütununda görüleceği üzere, hukukun üstünlüğü endeksinin döviz kuru hassasiyeti üzerindeki düzenleyici etkisini test eden etkileşim terimi ($ln\_reer \times hukuk$) pozitif ve yüzde 5 düzeyinde anlamlıdır (`r round(coef(model_em)["ln_reer:hukuk"], 3)`). Bu katsayı, makalenin ana hipotezi ile tutarlıdır: hukukun üstünlüğündeki iyileşmeler, döviz kuru artışlarının (değerlenme) ihracat üzerindeki negatif marjinal etkisini hafifletmektedir. Bir başka ifadeyle, kurumsal kapasite inşasını başaran gelişmekte olan ekonomiler, döviz kuru şoklarına karşı ihracat gelirlerini koruyabilen bir 'kurumsal kalkana' sahiptir. Model teşhisi (Hausman) bağlamında tüm analizler Sabit Etkiler'in üstünlüğünü (p\<0.01) doğrulamıştır.
+
+### 4.3. Kurumsal Etkileşim Dinamiklerinin Boyutsal Görselleştirilmesi
+
+Tablo 3'te saptanan düzenleyici kurumsal kalkan etkisini görselleştirmek amacıyla aşağıda üç ayrı şekil sunulmaktadır.
+
+```{r}
+#| fig-cap: "Şekil 1: Reel Efektif Döviz Kuru Oynaklığı ve İhracat Performansı (2000–2022)"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(zoo)
+
+# Oynaklık Hesaplama (3 yıllık hareketli standart sapma)
+vol_data <- gelismekte_olan_veri %>%
+  group_by(country) %>%
+  arrange(year) %>%
+  mutate(reer_vol = rollapply(reer, width = 3, FUN = sd, fill = NA, align = "right")) %>%
+  group_by(year) %>%
+  summarise(
+    avg_ihracat = mean(ihracat, na.rm = TRUE),
+    avg_vol      = mean(reer_vol, na.rm = TRUE)
+  ) %>%
+  drop_na()
+
+# İkili eksenli grafik (Volatility vs Export)
+ggplot(vol_data, aes(x = year)) +
+  geom_line(aes(y = avg_vol, color = "REER Oynaklığı"), linewidth = 1.2) +
+  geom_line(aes(y = avg_ihracat / mean(avg_ihracat) * mean(avg_vol), color = "İhracat (Normalize)"), 
+            linewidth = 1.2, linetype = "dashed") +
+  scale_y_continuous(sec.axis = sec_axis(~ . * mean(vol_data$avg_ihracat) / mean(vol_data$avg_vol), 
+                                         name = "Ortalama İhracat")) +
+  scale_color_manual(values = c("REER Oynaklığı" = "#dc2626", "İhracat (Normalize)" = "#2563eb")) +
+  labs(x = "Yıl", y = "Ortalama REER Oynaklığı", color = "Gösterge") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+Şekil 1, 2000–2022 döneminde reel efektif döviz kurundaki oynaklık ile ihracat performansı arasındaki ilişkiyi ortaya koymaktadır. Küresel kriz dönemlerinde REER volatilitesinin tırmandığı ve buna paralel olarak ihracat gelirlerinde belirgin gerilemeler yaşandığı dikkat çekmektedir. Bu örüntü, Marshall-Lerner koşuluyla örtüşmekte; döviz kuru değerlenmesinin ihracat rekabetçiliğini olumsuz etkilediğini ampirik olarak doğrulamaktadır.
+
+```{r}
+#| fig-cap: "Şekil 2: Kurumsal Kalite Gruplarına Göre REER-İhracat Etkileşimi"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+medyan_hukuk <- median(gelismekte_olan_veri$hukuk, na.rm = TRUE)
+
+inter_data <- gelismekte_olan_veri %>%
+  mutate(Hukuk_Grubu = ifelse(hukuk >= medyan_hukuk, "Güçlü Hukuk", "Zayıf Hukuk")) %>%
+  drop_na(Hukuk_Grubu, ln_reer, ln_ihracat)
+
+ggplot(inter_data, aes(x = ln_reer, y = ln_ihracat, color = Hukuk_Grubu, fill = Hukuk_Grubu)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(method = "lm", formula = y ~ x, linewidth = 1.2) +
+  scale_color_manual(values = c("Güçlü Hukuk" = "#10b981", "Zayıf Hukuk" = "#ef4444")) +
+  scale_fill_manual(values = c("Güçlü Hukuk" = "#10b981", "Zayıf Hukuk" = "#ef4444")) +
+  labs(x = "ln(REER)", y = "ln(İhracat)", color = "Kurumsal Yapı", fill = "Kurumsal Yapı") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+Şekil 2, hukukun üstünlüğü endeksinin medyan değerine göre "Zayıf Hukuk" ve "Güçlü Hukuk" olarak ikiye ayrılan ülke gruplarında REER-ihracat ilişkisinin belirgin biçimde farklılaştığını göstermektedir. Zayıf kurumsal yapıya sahip ülkelerde döviz kuru değerlenmesi ihracat üzerinde güçlü negatif baskı yaratırken, kurumsal kalitesi yüksek ülkelerde bu negatif etki anlamlı ölçüde zayıflamaktadır. Bu örüntü, hukuki altyapının döviz kuru şoklarını sönümleyen bir "kurumsal kalkan" işlevi görebileceği hipotezi ile tutarlıdır.
+
+Hukukun üstünlüğünün REER üzerindeki marjinal etkisini sürekli bir fonksiyon olarak ölçümlediğimiz Şekil 3, endeks arttıkça REER katsayısındaki değişimi daha net ortaya koymaktadır:
+
+```{r}
+#| fig-cap: "Şekil 3: REER'in Marjinal Etkisinin Hukukun Üstünlüğü Endeksine Göre Değişimi (%95 Güven Bandı)"
+#| warning: false
+#| message: false
+#| fig-align: center
+#| out-width: "800"
+library(ggplot2)
+
+# 1. Hukuk aralığı
+hukuk_range <- seq(min(gelismekte_olan_veri$hukuk), max(gelismekte_olan_veri$hukuk), length.out = 100)
+
+# 2. Katsayı ve standart hatalar
+beta_reer  <- coef(model_em)["ln_reer"]
+beta_inter <- coef(model_em)["ln_reer:hukuk"]
+dk_vcov_fig3 <- vcovSCC(model_em, type = "HC3", maxlag = 4)
+se_reer    <- sqrt(dk_vcov_fig3["ln_reer", "ln_reer"])
+se_inter   <- sqrt(dk_vcov_fig3["ln_reer:hukuk", "ln_reer:hukuk"])
+cov_ri     <- dk_vcov_fig3["ln_reer", "ln_reer:hukuk"]
+
+# 3. Marjinal etki ve %95 güven bandı
+marginal_effect <- as.numeric(beta_reer) + as.numeric(beta_inter) * hukuk_range
+se_marginal     <- sqrt(se_reer^2 + hukuk_range^2 * se_inter^2 + 2 * hukuk_range * cov_ri)
+
+df_marginal <- data.frame(
+  hukuk  = hukuk_range,
+  effect = marginal_effect,
+  lower  = marginal_effect - 1.96 * se_marginal,
+  upper  = marginal_effect + 1.96 * se_marginal
+)
+
+# 4. Grafik
+ggplot(df_marginal, aes(x = hukuk, y = effect)) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.15, fill = "steelblue") +
+  geom_line(color = "steelblue", linewidth = 1) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red", linewidth = 0.8) +
+  labs(
+    x = "Hukukun Üstünlüğü Endeksi",
+    y = "REER'in Marjinal Etkisi (∂ln_ihracat / ∂ln_reer)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid.minor = element_blank())
+```
+
+Şekil 3'te görüldüğü üzere, hukukun üstünlüğü endeksi düşük seyreden ülkelerde REER'in ihracat üzerindeki marjinal etkisi negatif olup güven bandının büyük bölümü sıfırın altında kalmaktadır. Kurumsal kalite arttıkça bu negatif etki sıfıra yaklaşmakta; belirli bir eşik değerinin ötesinde güven bandı sıfır çizgisini kesmektedir. Bu bulgu, kurumsal reformların döviz kuru şoklarının yıkıcı etkisini anlamlı ölçüde hafiflettiğini, ancak küresel entegrasyon baskıları karşısında tam anlamıyla nötralize edemediğini ortaya koymaktadır.
+
+Hausman testinin sonucu aşağıda sunulmaktadır. Elde edilen $\chi^2$ istatistiği ($\chi^2 = 17{,}181$; $p = 0{,}0017$) sıfır hipotezini (H0: Birim etkiler açıklayıcı değişkenlerle ilişkisizdir) yüzde 1 anlamlılık düzeyinde reddetmektedir. Bu bulgu, ülkelerin gözlemlenemeyen tarihsel, coğrafi ve kurumsal heterojen yapılarının bağımsız değişkenlerle ilişkili olduğunu; dolayısıyla Rassal Etkiler (RE) tahmincisinin tutarsız sonuçlar ürettiğini göstermekte ve Sabit Etkiler (FE) modelinin kullanımını zorunlu kılmaktadır.
+
+### 4.4. Tanı Testleri ve Dirençli Tahminler
+
+Sabit Etkiler regresyonundan elde edilen bulguların istatistiksel geçerliliğini teyit etmek amacıyla üç kritik tanı testi uygulanmıştır. Sonuçlar Tablo 4'te sunulmaktadır.
+
+```{r}
+#| tbl-cap: "Tablo 4: Panel Tanı Test Sonuçları (Gelişmekte Olan Ülkeler)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+# Testleri çalıştır
+bg_test  <- pbgtest(model_em)
+cd_test  <- suppressWarnings(pcdtest(model_em, test = "cd"))
+hausman  <- phtest(model_em, model_em_re)
+
+# Tabloyu oluştur
+tablo4 <- data.frame(
+  Test          = c("Hausman Model Seçim Testi",
+                    "Otokorelasyon Testi (Breusch-Godfrey-Wooldridge)",
+                    "Yatay Kesit Bağımlılığı Testi (Pesaran CD)"),
+  
+  `H₀ Hipotezi` = c("Rassal Etkiler tutarlı",
+                    "Otokorelasyon yok",
+                    "Yatay kesit bağımsızlığı"),
+  
+  İstatistik    = c(
+    sprintf("χ²(%d) = %.3f", as.integer(hausman$parameter), hausman$statistic),
+    sprintf("χ²(%d) = %.3f", as.integer(bg_test$parameter), bg_test$statistic),
+    sprintf("z = %.3f", cd_test$statistic)
+  ),
+  
+  `p-Değeri`    = c(
+    format.pval(hausman$p.value,  digits = 3, eps = 0.001),
+    format.pval(bg_test$p.value,  digits = 3, eps = 0.001),
+    format.pval(cd_test$p.value,  digits = 3, eps = 0.001)
+  ),
+  
+  Sonuç         = c("Sabit Etkiler modeli seçildi",
+                    "H₀ reddedildi — otokorelasyon tespit edildi",
+                    "H₀ reddedildi — yatay kesit bağımlılığı tespit edildi"),
+  
+  check.names = FALSE,
+  row.names = NULL
+)
+
+# Tabloyu göster (kableExtra ile daha stabil)
+res_tablo4 <- kable(tablo4, 
+      format = tbl_fmt(),
+      align = c("l", "l", "c", "c", "l"),
+      escape = FALSE)
+
+if (use_kable_styling()) {
+  res_tablo4 <- res_tablo4 %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+      full_width = TRUE,
+      position = "center"
+    )
+}
+res_tablo4
+```
+
+### 4.5. Bulguların Değerlendirilmesi
+
+Panel sabit etkiler regresyon analizi sonuçlarına göre, ihracat performansını belirleyen makroekonomik ve kurumsal faktörlerin genel örneklem ve gelişmekte olan ülkeler bazında ayrıştığı görülmektedir.
+
+Tablo 4'te sunulan otokorelasyon (Breusch-Godfrey-Wooldridge: $\chi^2 =$ `r round(bg_test$statistic, 2)`, $p < 0{,}01$) ve yatay kesit bağımlılığı (Pesaran CD: $z =$ `r round(cd_test$statistic, 2)`, $p < 0{,}01$) test sonuçları, standart panel regresyon varsayımlarının ihlal edildiğini ortaya koymaktadır. Küreselleşme süreciyle birlikte gelişmekte olan ülkeler, birbirlerinin ticaret politikalarına ve ortak dış şoklara karşı yapısal olarak hassas hale gelmiştir. Bu nedenle, geleneksel heteroskedastisiteye dayanıklı White standart hataları bu karmaşık hata-kovaryans yapısını görmezden geleceğinden bilimsel olarak yetersiz kalmaktadır.
+
+Bu test sonuçları doğrultusunda, hem otokorelasyon hem de yatay kesit bağımlılığını aynı anda kontrol eden **Driscoll-Kraay (SCC) dirençli standart hatalar** uygulanmıştır (Tablo 5). Yatay kesit bağımlılığı tespitinde kullanılan Pesaran CD testi, Pesaran (2021) tarafından geliştirilen ve küçük örneklemlerde de güçlü güce sahip olan güncellenmiş istatistiğe dayanmaktadır. Bu tahmin yöntemi, panel literatüründe yaygın biçimde tercih edilmektedir.
+
+```{r}
+#| tbl-cap: "Tablo 5: Driscoll-Kraay Dirençli Standart Hatalar ile Regresyon Sonuçları"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(modelsummary)
+
+# Sadece Driscoll-Kraay'li model
+model_dk <- list("Driscoll-Kraay SH" = model_em)
+
+modelsummary(
+  model_dk,
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"       = "ln(REER)",
+    "hukuk"         = "Hukukun Üstünlüğü",
+    "ln_gsyh"       = "ln(GSYH)",
+    "ln_reer:hukuk" = "ln(REER) × Hukuk"
+  ),
+  statistic  = "std.error",
+  vcov       = list(vcovSCC(model_em, type = "HC3", maxlag = 4)),  # Driscoll-Kraay vcov matrisi
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  output     = ms_fmt(),
+
+  # Ek satırlar
+  add_rows = data.frame(
+    term = c("R²", "Gözlem Sayısı", "Sabit Etkiler"),
+    `Driscoll-Kraay SH` = c(
+      round(summary(model_em)$r.squared["rsq"], 3),
+      nobs(model_em),
+      "Evet"
+    ),
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  ),
+
+  notes = paste("Not: Parantez içindeki değerler Driscoll-Kraay dirençli standart hatalardır.", sig_note_tr),
+)
+```
+
+Tablo 5'te sunulan sonuçlar incelendiğinde, ülke içi ekonomik kapasiteyi temsil eden ln(GSYH) değişkeninin yüzde 1 düzeyinde anlamlılığını koruduğu görülmektedir. Bu bulgu, gelişmekte olan ülkelerin ihracat performansında temel belirleyicinin kurumsal veya yerel fiyat avantajlarından ziyade ülke içi üretim kapasitesi olduğuna işaret etmektedir.
+
+Öte yandan, temel modelde anlamlı bulunan $ln(REER) \times Hukuk$ etkileşim terimi, ülkeler arası bulaşma etkileri kontrol edildikten sonra istatistiksel anlamlılığını yitirmiştir (p=`r p_dk_inter`). Gelişmekte olan ülkelerde hukukun üstünlüğü, teorik olarak döviz kuru şoklarına karşı kurumsal kalkan işlevi görse de; yüksek finansal entegrasyon ortamında küresel şoklar ve ülkeler arası bulaşma etkileri o kadar güçlüdür ki, kurumsal kalite tek başına bu dışsal baskıları izole etmeye yetmemektedir.
+
+### 4.6. Sağlamlık Kontrolleri
+
+Driscoll-Kraay tahminlerinin ortaya koyduğu sıfır bulgusunun sağlamlığını sınamak amacıyla üç ek yöntem uygulanmıştır: (i) Canay (2011) panel çeyreklik regresyonu ile dağılımsal heterojenlik testi, (ii) döviz kuru oynaklığı modeli ve (iii) Arellano-Bond dinamik panel GMM. Tablo 6'da sunulan panel çeyreklik regresyon sonuçları, ihracat dağılımının farklı kademelerindeki etkileri ayrıştırmaktadır.
+
+```{r}
+#| tbl-cap: "Tablo 6: Panel Çeyreklik Regresyon Sonuçları (Canay, 2011)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(quantreg)
+
+# Canay (2011) Panel Quantile Regression
+# Adım 1: FE modelinden ülke sabit etkilerini çek (model_em setup chunk'ta tanımlı)
+fe_vals <- fixef(model_em)
+# Adım 2: Her gözlemi kendi ülkesinin sabit etkisinden arındır
+gelismekte_olan_veri$ln_ihracat_tilde <-
+  gelismekte_olan_veri$ln_ihracat -
+  fe_vals[as.character(gelismekte_olan_veri$country)]
+# Referans: Canay, I.A. (2011). A simple approach to quantile regression
+#           for panel data. The Econometrics Journal, 14(3), 368-386.
+
+qr_25 <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+            data = gelismekte_olan_veri, tau = 0.25)
+qr_50 <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+            data = gelismekte_olan_veri, tau = 0.50)
+qr_75 <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+            data = gelismekte_olan_veri, tau = 0.75)
+
+# Küme bootstrap standart hataları (B=499, ülke zaman serisi bütünlüğü korunarak).
+# Çiftler (pairs) bootstrap panel yapısını görmezden gelir — (i,t) gözlemlerini
+# bağımsız örnekler ve ülke-içi zamansal bağımlılığı yok eder.
+# Küme bootstrap, ülke zaman serilerinin tamamını yeniden örnekler (N=37, B=499).
+set.seed(42)
+countries_vec <- unique(gelismekte_olan_veri$country)
+n_c <- length(countries_vec)
+B_clust <- 499
+
+get_qr_coef <- function(data, tau) {
+  fit <- tryCatch(
+    rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh, data = data, tau = tau),
+    error = function(e) NULL
+  )
+  if (is.null(fit)) return(NULL)
+  coef(fit)
+}
+
+orig_coef <- list(
+  "0.25" = coef(qr_25),
+  "0.50" = coef(qr_50),
+  "0.75" = coef(qr_75)
+)
+
+boot_results <- list(
+  "0.25" = matrix(NA, nrow = B_clust, ncol = length(orig_coef[["0.25"]])),
+  "0.50" = matrix(NA, nrow = B_clust, ncol = length(orig_coef[["0.50"]])),
+  "0.75" = matrix(NA, nrow = B_clust, ncol = length(orig_coef[["0.75"]]))
+)
+
+for (b in seq_len(B_clust)) {
+  sc <- sample(countries_vec, n_c, replace = TRUE)
+  bd <- do.call(rbind, lapply(seq_along(sc), function(j) {
+    d <- gelismekte_olan_veri[gelismekte_olan_veri$country == sc[j], ]
+    d$country <- paste0("bc_", j)
+    d
+  }))
+  for (tau_str in c("0.25","0.50","0.75")) {
+    cc <- get_qr_coef(bd, as.numeric(tau_str))
+    if (!is.null(cc)) boot_results[[tau_str]][b,] <- cc
+  }
+}
+
+for (tau_str in c("0.25","0.50","0.75")) {
+  colnames(boot_results[[tau_str]]) <- names(orig_coef[[tau_str]])
+}
+
+se_clust_25 <- apply(boot_results[["0.25"]], 2, sd, na.rm = TRUE)
+se_clust_50 <- apply(boot_results[["0.50"]], 2, sd, na.rm = TRUE)
+se_clust_75 <- apply(boot_results[["0.75"]], 2, sd, na.rm = TRUE)
+
+se_boot_list <- list(se_clust_25, se_clust_50, se_clust_75)
+
+# modelsummary rq nesneleri için vcov parametresini yok sayar —
+# bu nedenle tabloyu kable ile manuel oluşturuyoruz (bootstrap SE'ler ile)
+sig_star <- function(p) ifelse(p < 0.01, "***", ifelse(p < 0.05, "**", ifelse(p < 0.1, "*", "")))
+
+qr_models <- list(qr_25, qr_50, qr_75)
+qr_se_list <- list(se_clust_25, se_clust_50, se_clust_75)
+qr_labels <- c("Sabit", "ln(REER)", "Hukukun Üstünlüğü", "ln(GSYH)", "ln(REER) × Hukuk")
+orig_names <- names(coef(qr_25))
+
+qr_tablo <- data.frame(Değişken = character(), stringsAsFactors = FALSE)
+for (i in seq_along(orig_names)) {
+  row_coef <- data.frame(Değişken = qr_labels[i], stringsAsFactors = FALSE)
+  row_se   <- data.frame(Değişken = "", stringsAsFactors = FALSE)
+  for (j in 1:3) {
+    cc <- coef(qr_models[[j]])[orig_names[i]]
+    ss <- qr_se_list[[j]][orig_names[i]]
+    tt <- cc / ss
+    pp <- 2 * pnorm(abs(tt), lower.tail = FALSE)
+    col_name <- c("τ=0.25 (Düşük)", "τ=0.50 (Medyan)", "τ=0.75 (Yüksek)")[j]
+    row_coef[[col_name]] <- paste0(sprintf("%.3f", cc), sig_star(pp))
+    row_se[[col_name]]   <- sprintf("(%.3f)", ss)
+  }
+  qr_tablo <- rbind(qr_tablo, row_coef, row_se)
+}
+
+# RMSE satırı
+rmse_row <- data.frame(Değişken = "RMSE", stringsAsFactors = FALSE, check.names = FALSE)
+for (j in 1:3) {
+  col_name <- c("τ=0.25 (Düşük)", "τ=0.50 (Medyan)", "τ=0.75 (Yüksek)")[j]
+  rmse_row[[col_name]] <- sprintf("%.2f", sqrt(mean(residuals(qr_models[[j]])^2)))
+}
+qr_tablo <- rbind(qr_tablo, rmse_row)
+
+# Not satırı
+qr_note_row <- data.frame(
+  Değişken = paste0("Not: Canay (2011) panel çeyreklik regresyon. Küme bootstrap standart hatalar (B=499, N=37 küme). ", sig_note_tr),
+  `τ=0.25 (Düşük)` = "", `τ=0.50 (Medyan)` = "", `τ=0.75 (Yüksek)` = "",
+  stringsAsFactors = FALSE, check.names = FALSE
+)
+qr_tablo <- rbind(qr_tablo, qr_note_row)
+
+res_qr <- kable(qr_tablo, format = tbl_fmt(), align = c("l", "r", "r", "r"), escape = FALSE)
+if (use_kable_styling()) {
+  res_qr <- res_qr %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = TRUE)
+}
+res_qr
+
+# Metin-içi inline p-değerleri — tablo ile tutarlılık için aynı bootstrap SE'lerden
+t_qr25_inter <- coef(qr_25)["ln_reer:hukuk"] / se_clust_25["ln_reer:hukuk"]
+t_qr50_inter <- coef(qr_50)["ln_reer:hukuk"] / se_clust_50["ln_reer:hukuk"]
+t_qr75_inter <- coef(qr_75)["ln_reer:hukuk"] / se_clust_75["ln_reer:hukuk"]
+p_qr25_inter <- round(2 * pnorm(abs(t_qr25_inter), lower.tail = FALSE), 3)
+p_qr50_inter <- round(2 * pnorm(abs(t_qr50_inter), lower.tail = FALSE), 3)
+p_qr75_inter <- round(2 * pnorm(abs(t_qr75_inter), lower.tail = FALSE), 3)
+
+# QR ln_reer doğrudan etki p-değerleri
+t_qr25_reer <- coef(qr_25)["ln_reer"] / se_clust_25["ln_reer"]
+t_qr50_reer <- coef(qr_50)["ln_reer"] / se_clust_50["ln_reer"]
+t_qr75_reer <- coef(qr_75)["ln_reer"] / se_clust_75["ln_reer"]
+p_qr25_reer <- round(2 * pnorm(abs(t_qr25_reer), lower.tail = FALSE), 3)
+p_qr50_reer <- round(2 * pnorm(abs(t_qr50_reer), lower.tail = FALSE), 3)
+p_qr75_reer <- round(2 * pnorm(abs(t_qr75_reer), lower.tail = FALSE), 3)
+```
+
+Tablo 6'da sunulan panel çeyreklik regresyon sonuçları, Canay (2011) yöntemi uygulanarak elde edilmiştir. Bu yaklaşımda, Hausman testi ile seçilen sabit etkiler modelinden türetilen ülke sabit etkileri ($\hat{\alpha}_i$) bağımlı değişkenden arındırılmış; böylece gözlemlenemeyen ülke heterojenliği kontrol altına alınmıştır. Elde edilen bulgular, ihracat performansını belirleyen dinamiklerin ülkelerin ihracat kapasitelerine göre asimetrik ve heterojen bir yapı sergilediğini ortaya koymaktadır. Panel sabit etkiler düzeltmesi uygulandığında ülke içi ekonomik büyüklüğü temsil eden reel GSYH değişkeninin (ln_gsyh) katsayısı, tüm çeyrekliklerde (τ = 0,25; 0,50; 0,75) yüzde 1 anlamlılık düzeyinde pozitif olup sırasıyla 1,187; 1,182 ve 1,176 değerlerini almıştır. Bu bulgu, ihracat hacmi ne seviyede olursa olsun, dış ticaret performansının temel itici gücünün yerel fiyat avantajlarından ziyade ülke içi ölçek ekonomileri ve üretim kapasitesi olduğunu teyit etmektedir.
+
+Öte yandan, reel efektif döviz kurunun ($ln\_reer$) ihracat üzerindeki doğrudan etkisi, panel sabit etkiler düzeltmesinin ardından ihracat yelpazesinin hiçbir kademesinde istatistiksel anlamlılık taşımamaktadır (τ = 0,25: p = `r p_qr25_reer`; τ = 0,50: p = `r p_qr50_reer`; τ = 0,75: p = `r p_qr75_reer`). Bu bulgu, ülke heterojenliği kontrol altına alındığında REER seviyesinin ihracat performansı üzerinde bağımsız ve güvenilir bir belirleyici olmadığını ortaya koymaktadır.
+
+Çalışmanın temel hipotezini oluşturan kurumsal yapı ekseninde ise etkileşim terimi ($ln\_reer \times hukuk$) tüm çeyrekliklerde pozitif katsayılar üretmektedir (τ = 0,25: `r round(coef(qr_25)["ln_reer:hukuk"], 3)`; τ = 0,50: `r round(coef(qr_50)["ln_reer:hukuk"], 3)`; τ = 0,75: `r round(coef(qr_75)["ln_reer:hukuk"], 3)`); ancak küme bootstrap standart hataları altında ihracat dağılımının hiçbir noktasında istatistiksel anlamlılığa ulaşamamaktadır (yaklaşık p-değerleri: τ = 0,25: `r p_qr25_inter`; τ = 0,50: `r p_qr50_inter`; τ = 0,75: `r p_qr75_inter`).[^kume_not] Katsayı ihracat kapasitesi arttıkça monoton biçimde küçülmekte olup bu örüntü, küresel bulaşma etkilerinin yüksek hacimli ihracatçılarda kurumsal tamponları baskıladığı sezgisiyle tutarlıdır; ancak bu dağılımsal eğilim istatistiksel olarak sıfırdan ayırt edilememektedir. Bu bulgu, Driscoll-Kraay (Tablo 5) ve GMM (Tablo 8) sonuçlarıyla tam bir uyum içindedir: tüm sağlam çıkarım yöntemlerinde kurumsal kalkan etkisi ortadan kalkmaktadır. Çeyreklik ayrıştırması, pozitif katsayının dağılımın alt ucunda (kurumsal duyarlılığı daha yüksek küçük ihracatçıların bulunduğu bölge) en büyük olduğunu göstermekle birlikte, bu yerel örüntü bile doğru çıkarım altında istatistiksel kesinlikten yoksundur.
+
+[^kume_not]: Standart hatalar küme bootstrap (B = 499) ile hesaplanmış olup ülke zaman serilerinin tamamı yeniden örneklenmiştir. Bu tablonun önceki sürümlerinde çiftler (pairs) bootstrap (B = 200) kullanılmıştı; çiftler bootstrap, (i,t) gözlemlerini bağımsız olarak örnekleyerek ülke-içi serisel bağımlılığı görmezden gelir ve standart hataları sistematik olarak küçümser. Çiftler bootstrap altında etkileşim terimi τ = 0,25'te yüzde 5 anlamlılığına (p ≈ 0,040), τ = 0,50'de sınır anlamlılığa (p ≈ 0,096) ulaşmıştı. Bu önceki sonuçlar hatalı yeniden örnekleme şemasının ürünüdür. Doğrulanmış otokorelasyon ve yatay kesit bağımlılığı altında küme bootstrap uygun yöntemdir (bkz. Tablo 4).
+
+```{r}
+#| fig-cap: "Şekil 4: REER'in İhracat Üzerindeki Etkisinin Çeyrekliklere Göre Değişimi — Canay (2011) Panel Çeyreklik Regresyon (%95 Güven Bandı)"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(quantreg)
+library(ggplot2)
+
+# Canay (2011): ln_ihracat_tilde bu chunk'ta yoksa yeniden hesapla
+if (!"ln_ihracat_tilde" %in% names(gelismekte_olan_veri)) {
+  fe_vals <- fixef(model_em)
+  gelismekte_olan_veri$ln_ihracat_tilde <-
+    gelismekte_olan_veri$ln_ihracat -
+    fe_vals[as.character(gelismekte_olan_veri$country)]
+}
+
+# 1. 0.10'dan 0.90'a kadar 9 farklı çeyreklik
+taus <- seq(0.1, 0.9, by = 0.1)
+
+# 2. Canay (2011): FE arındırılmış bağımlı değişken üzerinden QR
+qr_all <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+             data = gelismekte_olan_veri, tau = taus)
+
+# 3. ln_reer katsayılarını ve güven aralıklarını çek
+set.seed(42)
+sum_qr <- suppressWarnings(summary(qr_all, se = "boot", R = 200))
+
+plot_data <- data.frame(
+  tau      = taus,
+  estimate = sapply(sum_qr, function(x) x$coefficients["ln_reer", "Value"]),
+  lower    = sapply(sum_qr, function(x) x$coefficients["ln_reer", "Value"] -
+                      1.96 * x$coefficients["ln_reer", "Std. Error"]),
+  upper    = sapply(sum_qr, function(x) x$coefficients["ln_reer", "Value"] +
+                      1.96 * x$coefficients["ln_reer", "Std. Error"])
+)
+
+# 4. Grafik
+ggplot(plot_data, aes(x = tau, y = estimate)) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, fill = "darkorange") +
+  geom_line(color = "darkorange", linewidth = 1.2) +
+  geom_point(color = "darkred", size = 3) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black", linewidth = 0.8) +
+  scale_x_continuous(breaks = taus) +
+  labs(
+    x     = "İhracat Çeyreklikleri (Quantiles)",
+    y     = "ln(REER) Katsayısı",
+    title = "Döviz Kuru Etkisinin İhracat Kapasitesine Göre Değişimi"
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(panel.grid.minor = element_blank(),
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+**Şekil 4** incelendiğinde, Canay (2011) panel çeyreklik regresyon yöntemiyle elde edilen yüzde 95 güven bandının ihracat yelpazesinin tamamında sıfır çizgisini kestiği görülmektedir. Bu görsel bulgu, REER katsayısının hiçbir çeyrekte istatistiksel anlamlılık taşımadığını teyit etmektedir. Katsayı tahmini, düşük ihracat çeyrekliklerinde hafif pozitif seyretmekte; ihracat kapasitesi arttıkça azalarak yüksek çeyrekliklerde negatife dönmektedir. Ancak güven bandının genişliği göz önüne alındığında bu eğilim istatistiksel olarak anlamsızdır. Bu bulgu, panel sabit etkileri kontrol altına alındığında döviz kuru seviyesinin, gelişmekte olan ülkelerin ihracat performansı üzerinde güvenilir bir belirleyici olmadığını görsel düzeyde de doğrulamaktadır.
+
+Çeyreklik regresyonunun yanı sıra, döviz kuru düzeyinden ziyade oynaklığının (volatilite) ihracat üzerindeki etkisi ve bu etkide kurumsal yapının rolü ayrıca test edilmiştir. Tablo 7, üç yıllık hareketli standart sapma ile hesaplanan REER oynaklığı ve kurumsal kalkan etkileşimini Driscoll-Kraay dirençli standart hatalarıyla sunmaktadır.
+
+```{r}
+#| tbl-cap: "Tablo 7: Döviz Kuru Oynaklığı ve Kurumsal Kalkan Etkisi"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+# 1. VOLATİLİTE HESAPLAMA (Literatürdeki "Rolling Standard Deviation" Yöntemi)
+# Her ülkenin kendi içindeki 3 yıllık REER standart sapmasını hesaplıyoruz.
+panel_vol_veri <- gelismekte_olan_veri %>%
+  group_by(country) %>%
+  arrange(year) %>%
+  mutate(
+    # 3 yıllık hareketli standart sapma (Oynaklık / Belirsizlik göstergesi)
+    ln_reer_vol = rollapply(ln_reer, width = 3, FUN = sd, fill = NA, align = "right")
+  ) %>%
+  filter(!is.na(ln_reer_vol)) %>% # İlk 2 yıl hesaplanamayacağı için onları düşüyoruz
+  ungroup()
+
+# Veriyi panel veri yapısına (pdata.frame) çeviriyoruz
+panel_vol <- pdata.frame(panel_vol_veri, index = c("country", "year"))
+
+# 2. MODEL TAHMİNİ (Panel Sabit Etkiler)
+model_vol <- plm(ln_ihracat ~ ln_reer_vol * hukuk + ln_gsyh, 
+                 data = panel_vol, model = "within")
+
+# 3. DRISCOLL-KRAAY STANDART HATALARI (Yatay kesit bağımlılığına karşı)
+se_vol_scc <- sqrt(diag(vcovSCC(model_vol, type = "HC3", maxlag = 4)))
+
+# 4. Tablo (modelsummary — format-agnostic)
+modelsummary(
+  list("Driscoll-Kraay SH" = model_vol),
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer_vol"        = "REER Volatilitesi",
+    "hukuk"              = "Hukukun Üstünlüğü",
+    "ln_gsyh"            = "ln(GSYH)",
+    "ln_reer_vol:hukuk"  = "Volatilite × Hukuk"
+  ),
+  vcov       = list(vcovSCC(model_vol, type = "HC3", maxlag = 4)),
+  statistic  = "std.error",
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse|F",
+  output     = ms_fmt(),
+  notes      = paste("Not: Parantez içindeki değerler Driscoll-Kraay (SCC, maxlag=4) dirençli standart hatalardır.", sig_note_tr),
+)
+```
+
+Tablo 7'de sunulan ve ülkeler arası bulaşma etkilerini (yatay kesit bağımlılığını) kontrol altına alan Driscoll-Kraay (SCC) dirençli tahmincisine dayalı panel sabit etkiler modeli sonuçları, döviz kuru oynaklığının ihracat performansı üzerindeki etkisini ve bu şoklara karşı kurumların koruyucu rolünü test etmektedir. Analiz bulguları incelendiğinde, döviz kuru volatilitesinin ve hukukun üstünlüğü endeksinin ihracat performansı üzerinde tek başına istatistiksel olarak anlamlı bir etki yaratmadığı görülmektedir. Kurumsal kalitenin makroekonomik belirsizlik anlarındaki düzenleyici rolünü ölçen etkileşim terimi ($Volatilite \times Hukuk$) pozitif bir katsayı (`r round(coef(model_vol)["ln_reer_vol:hukuk"], 3)`) üretmektedir; ancak Driscoll-Kraay dirençli standart hatalar altında geleneksel anlamlılık eşiklerinin üzerinde kalmaktadır (p $\approx$ 0,10). Katsayının büyüklüğü ve yönü, kurumsal yapının kur belirsizliğine karşı kısmi bir tampon işlevi görebileceğine dair zayıf bir işaret sunmakla birlikte, bu etki istatistiksel kesinlikten yoksundur. Dolayısıyla oynaklık modeli de düzey modeli (Tablo 5) ile tutarlı biçimde kurumsal kalkan hipotezini desteklemeyen bir sıfır bulgusuna yakınsamaktadır.
+
+Bu örüntü dikkat çekicidir: ne döviz kuru düzeyi ne de kur oynaklığı üzerinden tanımlanan kurumsal etkileşim, yatay kesit bağımlılığı kontrol altına alındığında anlamlılık taşımaktadır. Bununla birlikte, ülke içi üretim kapasitesi ($ln\_gsyh$) oynaklık modelinde de yüzde 1 anlamlılık düzeyinde pozitif ve güçlü bir katsayıya (`r round(coef(model_vol)["ln_gsyh"], 3)`) sahip olup ihracatın en istikrarlı belirleyicisi olmaya devam etmektedir. Bu bulgu, çalışmanın diğer tüm tahminleyicileriyle tam bir uyum içindedir: kurumsal kalkan hipotezi, uygulanan sağlam çıkarım yöntemlerinin hiçbirinde desteklenmemektedir.
+
+Son olarak, içsellik ve dinamik panel sapması endişelerini gidermek amacıyla Arellano-Bond iki aşamalı fark GMM tahmincisi uygulanmıştır. Tablo 8'de sunulan sonuçlar, bağımlı değişkenin gecikmeli değerleri araç değişken olarak kullanılarak elde edilmiştir.
+
+```{r}
+#| tbl-cap: "Tablo 8: Dinamik Panel GMM (Arellano-Bond) Sonuçları"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+# GMM için veriyi panel data frame formatına çeviriyoruz (setup'ta tanımlandı, yine de güvenlik için)
+p_veri_em_gmm <- pdata.frame(gelismekte_olan_veri, index = c("country", "year"))
+
+# 1. GMM Modelinin Tahmini
+model_gmm <- suppressWarnings(pgmm(ln_ihracat ~ lag(ln_ihracat, 1) + ln_reer * hukuk + ln_gsyh | lag(ln_ihracat, 2:3),
+                  data = p_veri_em_gmm, 
+                  effect = "individual", 
+                  model = "twosteps", 
+                  transformation = "d"))
+
+# 2. GMM'e Özel Teşhis Testlerini Çekme
+sargan_p <- round(sargan(model_gmm)$p.value, 3)
+ar1_p <- round(mtest(model_gmm, order = 1)$p.value, 3)
+ar2_p <- round(mtest(model_gmm, order = 2)$p.value, 3)
+
+# 3. Tablonun kable ile basılması (pgmm nesnesi modelsummary ile uyumsuz)
+gmm_sum <- summary(model_gmm)
+gmm_cf  <- gmm_sum$coefficients
+gmm_coef <- gmm_cf[, 1]
+gmm_se   <- gmm_cf[, 2]
+gmm_p    <- gmm_cf[, 4]
+
+sig_star <- function(p) ifelse(p < 0.01, "***", ifelse(p < 0.05, "**", ifelse(p < 0.1, "*", "")))
+
+gmm_labels <- c("ln(İhracat) [t-1]", "ln(REER)", "Hukukun Üstünlüğü", "ln(GSYH)", "ln(REER) × Hukuk")
+if (length(gmm_labels) < length(gmm_coef)) gmm_labels <- names(gmm_coef)
+
+gmm_tablo <- data.frame(
+  Değişken = gmm_labels,
+  Katsayı  = paste0(sprintf("%.3f", gmm_coef), sig_star(gmm_p)),
+  `SE`     = sprintf("(%.3f)", gmm_se),
+  check.names = FALSE, stringsAsFactors = FALSE
+)
+
+gmm_diag <- data.frame(
+  Değişken = c("Sargan Testi (p)", "AR(1) (p)", "AR(2) (p)", "Gözlem"),
+  Katsayı  = c(as.character(sargan_p), as.character(ar1_p), as.character(ar2_p),
+               as.character(length(residuals(model_gmm)))),
+  `SE`     = c("", "", "", ""),
+  check.names = FALSE, stringsAsFactors = FALSE
+)
+
+gmm_full <- rbind(gmm_tablo, gmm_diag)
+
+gmm_note <- data.frame(
+  Değişken = paste0("Not: Arellano-Bond iki aşamalı fark GMM. Parantez içindeki değerler standart hatalardır. ", sig_note_tr),
+  Katsayı  = "",
+  `SE`     = "",
+  check.names = FALSE, stringsAsFactors = FALSE
+)
+gmm_full <- rbind(gmm_full, gmm_note)
+
+res_gmm <- kable(gmm_full, format = tbl_fmt(), align = c("l", "r", "r"), escape = FALSE)
+if (use_kable_styling()) {
+  res_gmm <- res_gmm %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed"), full_width = TRUE)
+}
+res_gmm
+```
+
+Dış ticaret serilerinde sıklıkla karşılaşılan içsellik, ters nedensellik ve bağımlı değişkenin patika bağımlılığını kontrol altına almak amacıyla Arellano-Bond iki aşamalı fark GMM tahmincisi uygulanmıştır. Tablo 8'de sunulan modelin geçerliliği kritik teşhis testleriyle değerlendirilmiştir: Araç değişkenlerin (instruments) geçerliliğini sınayan Sargan testi (p = `r sargan_p`) aşırı belirleme kısıtlarının geçerli olduğunu gösterirken; GMM tahmincisinin tutarlılığı açısından gerekli olan ikinci dereceden otokorelasyon testi (AR(2), p = `r ar2_p`) sıfır hipotezinin reddedilemediğini ve hata terimlerinde ikinci dereceden ardışık bağımlılık sorunu bulunmadığını ortaya koymaktadır. Birinci dereceden otokorelasyon testi (AR(1), p = `r ar1_p`) standart anlamlılık düzeyinde istatistiksel olarak anlamlılık taşımamaktadır; bu durum, örneklemin kısa zaman boyutu (T≤23) ve ihracat serisinde güçlü bir otokorelasyon bileşeninin yokluğuyla tutarlıdır.
+
+Tahmin sonuçları incelendiğinde, bağımlı değişkenin birinci gecikmesinin anlamlı olmadığı; dolayısıyla incelenen panelde ihracat performansının geçmiş şoklardan ziyade cari dönemin yapısal dinamiklerine bağlı olduğu saptanmıştır. İçsellik ve dinamik panel sapmaları (Nickell bias) kontrol edildikten sonra ln(REER) ve kurumsal kalkan etkileşimi (ln_REER × hukuk) anlamlılığını yitirmektedir — bu örüntü, Driscoll-Kraay tahminleriyle tutarlıdır.
+
+Buna karşılık reel GSYH (ln_gsyh) yüzde 1 düzeyinde anlamlı ve pozitif (`r round(coef(model_gmm)["ln_gsyh"], 3)`) kalmaya devam etmektedir. GMM bulguları, ihracat performansında asıl belirleyicinin üretim ölçeği olduğuna dair daha önceki tahminlerle örtüşmektedir.
+
+### 4.7. Alternatif Kurumsal Kalite Değişkeni ile Sağlamlık Testi
+
+Temel analizde kurumsal kaliteyi temsilen kullanılan Hukukun Üstünlüğü endeksinin (WGI Rule of Law) seçimine bağlı önyargı riskini bertaraf etmek amacıyla, Dünya Bankası Dünya Yönetişim Göstergeleri'nin (WGI) ikinci bir boyutu olan **Düzenleyici Kalite** (Regulatory Quality — $regulasyon$) değişkeniyle analizler tekrarlanmıştır. Bu endeks, özel sektörün gelişimini teşvik eden politikaların kalitesini ölçmekte olup $hukuk$ endeksiyle birlikte kurumsal altyapının en yaygın kullanılan iki göstergesini oluşturmaktadır.
+
+```{r}
+#| tbl-cap: "Tablo 9: Alternatif Kurumsal Kalite Değişkeni ile Sağlamlık Testi (DK-SCC)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(plm)
+library(modelsummary)
+
+# Regulasyon modeli
+gelismekte_olan_veri_reg <- gelismekte_olan_veri %>%
+  filter(!is.na(regulasyon))
+p_veri_reg <- pdata.frame(gelismekte_olan_veri_reg, index = c("country", "year"))
+model_reg  <- plm(ln_ihracat ~ ln_reer * regulasyon + ln_gsyh,
+                  data = p_veri_reg, model = "within")
+
+# Driscoll-Kraay SE'ler
+se_reg_scc <- sqrt(diag(vcovSCC(model_reg, type = "HC3", maxlag = 4)))
+
+modelsummary(
+  list("Hukuk (Ana Model)" = model_em,
+       "Regulasyon (Alternatif)" = model_reg),
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"            = "ln(REER)",
+    "hukuk"              = "Hukukun Üstünlüğü",
+    "regulasyon"         = "Düzenleyici Kalite",
+    "ln_gsyh"            = "ln(GSYH)",
+    "ln_reer:hukuk"      = "ln(REER) × Hukuk",
+    "ln_reer:regulasyon" = "ln(REER) × Düzenleyici Kalite"
+  ),
+  vcov       = list(vcovSCC(model_em, type = "HC3", maxlag = 4),
+                    vcovSCC(model_reg, type = "HC3", maxlag = 4)),
+  statistic  = "std.error",
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  output     = ms_fmt(),
+  add_rows   = data.frame(
+    term = c("R²", "Gözlem Sayısı", "Sabit Etkiler", "Standart Hatalar"),
+    `Hukuk (Ana Model)`      = c(round(summary(model_em)$r.squared["rsq"], 3),
+                                  nobs(model_em), "Evet", "Driscoll-Kraay"),
+    `Regulasyon (Alternatif)` = c(round(summary(model_reg)$r.squared["rsq"], 3),
+                                   nobs(model_reg), "Evet", "Driscoll-Kraay"),
+    stringsAsFactors = FALSE, check.names = FALSE
+  ),
+  notes = paste0("Not: Her iki model de Driscoll-Kraay (SCC, maxlag=4) dirençli standart hatalar ",
+                 "kullanmaktadır. Parantez içindeki değerler standart hatalardır. ",
+                 sig_note_tr),
+)
+
+# Metin-içi inline p-değeri — regulasyon etkileşimi (DK SE ile)
+t_reg_inter <- coef(model_reg)["ln_reer:regulasyon"] / se_reg_scc["ln_reer:regulasyon"]
+p_reg_inter <- round(2 * pnorm(abs(t_reg_inter), lower.tail = FALSE), 3)
+```
+
+Tablo 9'da sunulan karşılaştırmalı sonuçlar, ana modelin bulgularını teyit etmektedir. Düzenleyici Kalite endeksiyle kurulan alternatif modelde, kurumsal kalitenin döviz kuru şokları üzerindeki düzenleyici etkisini ölçen etkileşim terimi ($ln\_reer \times regulasyon$) Driscoll-Kraay dirençli tahmincisi altında istatistiksel anlamlılık taşımamaktadır (p = `r p_reg_inter`). Bu sonuç, hukukun üstünlüğü endeksiyle elde edilen toplu düzey bulgusunu bire bir yansıtmaktadır. Buna karşın, ülke içi üretim kapasitesini temsil eden $ln(GSYH)$ değişkeni her iki modelde de yüzde 1 anlamlılık düzeyinde pozitif ve baskın kalmaktadır (sırasıyla 1,187 ve 1,172). Sonuç olarak, kurumsal kalitenin ölçümünde kullanılan WGI boyutundan bağımsız olarak temel bulgu değişmemekte; GSYH'nin ihracat performansının en tutarlı belirleyicisi olduğu görülmektedir.
+
+# 5. SONUÇ VE POLİTİKA ÖNERİLERİ
+
+Bu çalışma, 2000-2022 dönemi verilerini kullanarak gelişmekte olan ülkelerde döviz kuru şoklarının ihracat performansı üzerindeki etkisinde kurumsal kalitenin (hukukun üstünlüğü) rolünü ampirik olarak incelemiştir. Kurumsal kalkan hipotezi temiz bir mantığa ve güçlü teorik desteğe sahiptir: mahkemelerin bağımsız olduğu, sözleşmelerin uygulandığı ve mülkiyetin güvence altında olduğu ortamlarda ihracatçı firmalar döviz kuru risklerini daha etkin yönetebilir. Bu çalışmanın sonuçları hipotezin mantığını değil, lehine sunulan ampirik kanıtları sorgulamaktadır.
+
+Temel panel sabit etkiler modeli, pozitif ve anlamlı bir etkileşim katsayısı üreterek geleneksel beklentileri destekler niteliktedir. Ancak bu sonuç, daha sağlam çıkarım yöntemlerine tabi tutulduğunda sistematik olarak ortadan kalkmaktadır. Döviz kuru düzeyini ($ln\_reer$) esas alan modellerde Driscoll-Kraay dirençli tahmincisi, Arellano-Bond GMM ve küme bootstrap standart hatalarıyla (B=499, N=37) tekrarlanan Canay (2011) çeyreklik regresyonu aynı sıfır bulgusuna yakınsamaktadır: kur düzeyi ile kurumsal kalite etkileşimi hiçbir tahmincide ve ihracat dağılımının hiçbir noktasında anlamlılık taşımamaktadır. Döviz kuru oynaklığının (volatilite) kullanıldığı spesifikasyonda da etkileşim terimi pozitif bir katsayı üretmekle birlikte Driscoll-Kraay dirençli standart hatalar altında geleneksel anlamlılık eşiğine ulaşamamaktadır; bu da düzey-oynaklık ayrımının dahi sağlam çıkarım altında desteklenemediğini göstermektedir. Ülke içi üretim kapasitesini temsil eden ln(GSYH) değişkeni, uygulanan tüm yöntemlerde ve ihracat dağılımının tüm kademelerinde yüzde 1 anlamlılık düzeyinde pozitif ve baskın kalmıştır. Bu yakınsak sıfır örüntüsü, temel sabit etkiler modelindeki anlamlılığın gerçek bir yapısal ilişkiyi değil, kontrol edilmeyen yatay kesit bağımlılığı ve içselliğin yarattığı bir yapay sonucu (artefact) yansıttığını düşündürmektedir.
+
+Elde edilen bulgular, politika yapıcılar için dikkat çekici çıkarımlar içermektedir. Uygulanan tüm tahmin yöntemlerinde ln(GSYH) katsayısı 1,18–1,32 aralığında kalmıştır; bu büyüklük, reel GSYH'deki yüzde 10'luk bir artışın ihracatı yaklaşık yüzde 11–13 oranında artırdığına işaret etmekte ve üretim ölçeğinin ihracat performansı üzerindeki etkisini somut bir politika birimi cinsinden ortaya koymaktadır. Canay (2011) panel QR sonuçları istatistiksel anlamlılık üretememekle birlikte, etkileşim katsayısının dağılımın alt ucunda (τ=0,25) en büyük olduğu gözlemlenmektedir. Bu nokta tahmini örüntüsü — istatistiksel kesinlikten yoksun olsa da — küçük ihracatçıların kurumsal yapıya daha duyarlı olabileceğine dair zayıf bir işaret sunmaktadır. Bölgesel heterojenlik analizi (bkz. Şekil EK-2) de benzer bir eğilimi yansıtmaktadır: Sahra Altı Afrika ve Latin Amerika gibi yüksek kurumsal kırılganlığa sahip bölgelerde etkileşim katsayıları görece büyüktür, ancak geniş güven aralıkları nedeniyle kesin çıkarım yapılamamaktadır. Doğu Asya ve Pasifik ülkelerinde ise bölgesel kümelenmenin oluşturduğu ticaret altyapısı, kurumsal kalkandan bağımsız bir dayanıklılık zemini oluşturmaktadır. Dolayısıyla yeni ihracatçıları sisteme dahil etmeye yönelik hukuki reform programları, düşük ihracat kapasitesine sahip ekonomilerde destekleyici olabilir; ancak bu çalışmanın bulguları tek başına bu politika önerisini istatistiksel olarak temellendiremez.
+
+Bununla birlikte, yalnızca rekabetçi kur politikalarına ya da kurumsal reformlara yaslanmak dışa açık ekonomiler için tek başına yeterli değildir. Küresel entegrasyonun bu denli derinleştiği bir ortamda döviz kuru ve kurumsal altyapının sağladığı avantajlar, ülke içi üretim ölçeğinin yarattığı yapısal güç karşısında ikincil kalmaktadır. Sürdürülebilir dış ticaret başarısı için kurumsal reformların aşağıdaki yapısal adımlarla eş zamanlı yürütülmesi gerekmektedir:
+
+*(i)* Hedefli sanayi politikaları (özellikle imalat sanayi kapasitesi için kamu-özel yatırım ortaklıkları) aracılığıyla yurt içi üretim ölçeğinin genişletilmesi; Dünya Bankası Grubu'nun IFC ihracat finansmanı programları bu süreçte aracı platform olarak kullanılabilir. *(ii)* Belirli pazarlara ya da emtia fiyatlarına yapısal bağımlılığı azaltmak amacıyla ihracat pazarı çeşitlendirme programları ve WTO Ticaretin Kolaylaştırılması Anlaşması (TFA) taahhütlerinin etkin uygulanması yoluyla çok taraflı ticaret altyapısının güçlendirilmesi. *(iii)* Fiyat rekabetçiliğinden teknoloji yoğun, yüksek katma değerli ürünlere geçişi teşvik eden araştırma-geliştirme sübvansiyonları, UNCTAD'ın Yatırım Kolaylaştırma Çerçevesi kapsamında küresel değer zincirlerine entegrasyon stratejileri. *(iv)* Küçük ve orta ölçekli ihracatçılara yönelik, sözleşme yaptırım mekanizmalarını ve ticaret finansmanına erişimi güçlendiren hedefli kurumsal reform paketleri; IMF ve Dünya Bankası'nın bütünleşik kurumsal güçlendirme programları (FSAP) bu alandaki uluslararası işbirliğini destekleyebilir.
+
+**Sınırlılıklar:** Bu çalışmanın dört temel sınırlılığı bulunmaktadır. *(1)* Birim kök analizi Ek 2'de Pesaran (2007) CIPS testi ile güçlendirilmiş; log-düzey değişkenlerinin (ln\_ihracat, ln\_reer, ln\_gsyh) I(1) davranışı teyit edilmiştir. IPS/LLC sonuçları referans amaçlı ek olarak sunulmaktadır. Eşbütünleşme testlerinin Westerlund (2007) bootstrap yaklaşımıyla genişletilmesi, Pedroni bulgularını ikinci nesil bir çerçevede teyit edecektir. *(2)* Ek 3'teki eşik regresyonu yalnızca RSS minimizasyonuna dayanmakta olup Hansen (2000) türü formal eşik çıkarımı uygulanmamıştır; eşik değeri keşifsel kanıt olarak değerlendirilmelidir. *(3)* WGI kurumsal kalite endeksleri algı tabanlı ölçütlere dayanmakta ve nesnel kurumsal etkinliği tam yansıtmayabilmektedir; farklı kurumsal ölçüm yaklaşımları (örn. Fraser Institute Economic Freedom Index) sonuçların kararlılığını test edebilir. *(4)* Örneklem n=37 gelişmekte olan ülkeyle sınırlıdır; Çin ve Zambiya gibi tek gözleme sahip birimler sabit etkiler tahmincisinde katkıda bulunamadığından daha geniş ve dengeli panel veri setleriyle sonuçların teyit edilmesi gerekmektedir.
+
+Sonuç olarak, uluslararası ticari ve finansal entegrasyonun bu boyutlara ulaştığı günümüzde, gelişmekte olan ülkelerin kalıcı ihracat performansı; ihracatçı büyüklüğüne duyarlı kurumsal politikalar ile güçlü üretim kapasitesinin (GSYH) birlikteliğine dayanmaktadır. Çalışmanın temel katkısı, bu iki boyutun birbirini tamamladığı ancak hiçbirinin tek başına yeterli olmadığını, Driscoll-Kraay ve GMM gibi metodolojik açıdan sağlam tahminleyicilerle ampirik olarak göstermesidir.
+
+# KAYNAKÇA
+
+Abdi, A. H. ve Mohamed, A. M. (2025). Determinants of agricultural exports in Somalia: The impacts of exchange rates, foreign direct investment, and institutional quality. *Cogent Economics & Finance*, 13(1), 2445755.
+
+Abreo, C., Bustillo, R. ve Rodriguez, C. (2021). The role of institutional quality in the international trade of a Latin American country: Evidence from Colombian export performance. *Journal of Economic Structures*, 10(1), 24.
+
+Acemoglu, D. ve Robinson, J. A. (2012). *Why nations fail: The origins of power, prosperity, and poverty*. Crown Business.
+
+Acemoglu, D., Johnson, S. ve Robinson, J. A. (2005). Institutions as a fundamental cause of long-run growth. P. Aghion ve S. N. Durlauf (Ed.), *Handbook of Economic Growth* (C. 1A, ss. 385–472) içinde. Elsevier. https://doi.org/10.1016/S1574-0684(05)01006-3
+
+Afonso, D. L., Bastos, S. Q. d. A., Perobelli, F. S. ve Betarelli Junior, A. A. (2025). Impacts of institutional efficiency on exports in developed and developing countries. *The International Trade Journal*.
+
+Aman, Z., Granville, B., Mallick, S. K. ve Nemlioglu, I. (2024). Does greater financial openness promote external competitiveness in emerging markets? The role of institutional quality. *International Journal of Finance & Economics*, 29(1), 486–510.
+
+Anderson, J. E. ve Marcouiller, D. (2002). Insecurity and the pattern of trade: An empirical investigation. *The Review of Economics and Statistics*, 84(2), 342–352.
+
+Arize, A. C., Osang, T. ve Slottje, D. J. (2000). Exchange-rate volatility and foreign trade: Evidence from thirteen LDC's. *Journal of Business & Economic Statistics*, 18(1), 10–17.
+
+Aman, Z., Mallick, S. ve Nemlioglu, I. (2021). Currency regimes and external competitiveness: The role of institutions, trade agreements and monetary frameworks. *Journal of Institutional Economics*, 18(3), 399–428.
+
+Ashour, M. M. (2023). Asymmetric effect of real effective exchange rate and Saudi non-oil export determinants. *Cogent Social Sciences*, 9(1), 2278206.
+
+Baxa, J. ve Paulus, M. (2024). Exchange rate misalignments, growth, and institutions. *Empirical Economics*, 67(4), 1705–1799.
+
+Bulut, E. ve Yaşar, Z. R. (2023). Determinants of export performance in emerging market economies: New evidence from a panel quantile regression model. *İstanbul İktisat Dergisi - Istanbul Journal of Economics*, 73(1), 453–472.
+
+Bustaman, A., Indiastuti, R., Budiono, B. ve Anas, T. (2022). Quality of Indonesia’s domestic institutions and export performance in the era of global value chains. *Journal of Economic Structures*, 11, 35.
+
+Canay, I. A. (2011). A simple approach to quantile regression for panel data. *The Econometrics Journal*, 14(3), 368–386.
+
+Chamindani, S. D. N. (2019). Real effective exchange rate and export performance: The case of Sri Lanka. *Central Bank of Sri Lanka – Staff Studies*, 47(2), 71–93.
+
+Coase, R. H. (1937). The nature of the firm. *Economica*, 4(16), 386–405.
+
+Eaton, J. ve Kortum, S. (2002). Technology, geography, and trade. *Econometrica*, 70(5), 1741–1779.
+
+Ezzat, A. ve Zaki, C. (2022). Deep trade agreements and institutional quality in the MENA region. *International Economics*, 172, 143–156.
+
+Frensch, R., Horvath, R. ve Huber, S. (2021). Openness, institutions, and comparative advantage. *Journal of International Economics*, 131, 103445.
+
+Garayeva, A. ve Tahirova, G. (2017). *Exchange rate elasticity of exports and the role of institutions* (Çalışma Tebliği No. HEIDWP16-2017). Graduate Institute of International and Development Studies. [URL: repository.graduateinstitute.ch — Manuel doğrulama gerekli]
+
+Helpman, E., Melitz, M. ve Rubinstein, Y. (2008). Estimating trade flows: Trading partners and trading volumes. *The Quarterly Journal of Economics*, 123(2), 441–487.
+
+Kazdal, A. ve Yılmaz, M. H. (2021). *External vulnerabilities and exchange rate pass-through: The case of emerging markets* (SUERF Policy Note No. 244). [URL: suerf.org/publications/suerf-policy-notes-and-briefs — Manuel doğrulama gerekli]
+
+Khan, A., Khan, M. Y. ve Ahmad, M. (2024). Macroeconomics factor, institutional quality and export performance: Empirical evidence from Pakistan. *International Social Science Journal*, 74(253), 831–850.
+
+Levchenko, A. A. (2007). Institutional quality and international trade. *The Review of Economic Studies*, 74(3), 791–819.
+
+Li, J., Vertinsky, I. ve Zhang, H. (2012). The quality of domestic legal institutions and export performance. *Management International Review*, 52, 361–390.
+
+Méon, P. G. ve Sekkat, K. (2004). Does the quality of institutions limit the MENA’s integration in the world economy? *The World Economy*, 27(9), 1475–1498.
+
+Mwatu, S. M. (2022). Institutions and export performance: Firm level evidence from Kenya. *International Review of Economics*, 69(4), 487–506.
+
+North, D. C. (1990). *Institutions, institutional change and economic performance*. Cambridge University Press.
+
+Nunn, N. (2007). Relationship-specificity, incomplete contracts, and the pattern of trade. *The Quarterly Journal of Economics*, 122(2), 569–600.
+
+Pesaran, M. H. (2021). General diagnostic tests for cross-sectional dependence in panels. *Empirical Economics*, 60(1), 13–50.
+
+Rodrik, D. (2000). Institutions for high-quality growth: What they are and how to acquire them. *Studies in Comparative International Development*, 35(3), 3–31.
+
+Rodrik, D., Subramanian, A. ve Trebbi, F. (2004). Institutions rule: The primacy of institutions over geography and integration in economic development. *Journal of Economic Growth*, 9(2), 131–165.
+
+Ruzekova, V., Kittova, Z. ve Steinhauser, D. (2020). Export performance as a measurement of competitiveness. *Journal of Competitiveness*, 12(1), 145–160.
+
+Tadesse, B., Shukralla, E. ve Fayissa, B. (2019). Institutional quality and the effectiveness of aid for trade. *Applied Economics*, 51(39), 4233–4254. https://doi.org/10.1080/00036846.2019.1589644
+
+Urgessa, O. (2024). Effects of real effective exchange rate volatility on export earnings in Ethiopia: Symmetric and asymmetric effect analysis. *Heliyon*, 10(1), e23529.
+
+Williamson, O. E. (1990). *The economic institutions of capitalism*. Free Press.
+
+World Bank. (2024a). *World Development Indicators*. https://databank.worldbank.org/source/world-development-indicators
+
+World Bank. (2024b). *Worldwide Governance Indicators*. https://databank.worldbank.org/source/worldwide-governance-indicators
+
+# EKLER
+
+**EK 1: Analize Dahil Edilen Gelişmekte Olan Ülkeler Örneklemi (n=39)**
+
+Çalışmanın ampirik analizlerinde Dünya Bankası (WDI) veri tabanından veri mevcudiyetine göre derlenen ve "Yüksek Gelirli" sınıfında yer almayan aşağıdaki 39 gelişmekte olan ülke kullanılmıştır. Tablo EK-1, ülkeleri Dünya Bankası bölgesel sınıflandırmasına göre gruplandırarak her ülkenin veri yılı aralığını ve örneklemdeki gözlem sayısını sunmaktadır.
+
+```{r}
+#| tbl-cap: "Tablo EK-1: Örneklem Ülke Listesi (2000–2022, n = 39)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+library(readr)
+library(dplyr)
+
+gelismekte_olan_veri_ek <- read_csv("data/gelismekte_olan_veri.csv",
+                                    show_col_types = FALSE)
+
+ulke_tr <- c(
+  "Algeria"                  = "Cezayir",
+  "Armenia"                  = "Ermenistan",
+  "Belize"                   = "Belize",
+  "Bolivia"                  = "Bolivya",
+  "Brazil"                   = "Brezilya",
+  "Cameroon"                 = "Kamerun",
+  "Central African Republic" = "Orta Afrika Cumhuriyeti",
+  "China"                    = "Çin",
+  "Colombia"                 = "Kolombiya",
+  "Congo, Dem. Rep."         = "Demokratik Kongo Cum.",
+  "Costa Rica"               = "Kosta Rika",
+  "Cote d'Ivoire"            = "Fildişi Sahili",
+  "Dominican Republic"       = "Dominik Cumhuriyeti",
+  "Equatorial Guinea"        = "Ekvator Ginesi",
+  "Gabon"                    = "Gabon",
+  "Gambia, The"              = "Gambiya",
+  "Georgia"                  = "Gürcistan",
+  "Ghana"                    = "Gana",
+  "Iran, Islamic Rep."       = "İran",
+  "Lesotho"                  = "Lesotho",
+  "Malaysia"                 = "Malezya",
+  "Mexico"                   = "Meksika",
+  "Moldova"                  = "Moldova",
+  "Morocco"                  = "Fas",
+  "Nicaragua"                = "Nikaragua",
+  "North Macedonia"          = "Kuzey Makedonya",
+  "Pakistan"                 = "Pakistan",
+  "Paraguay"                 = "Paraguay",
+  "Philippines"              = "Filipinler",
+  "Samoa"                    = "Samoa",
+  "Sierra Leone"             = "Sierra Leone",
+  "Solomon Islands"          = "Solomon Adaları",
+  "South Africa"             = "Güney Afrika",
+  "Togo"                     = "Togo",
+  "Tunisia"                  = "Tunus",
+  "Uganda"                   = "Uganda",
+  "Ukraine"                  = "Ukrayna",
+  "Venezuela, RB"            = "Venezuela",
+  "Zambia"                   = "Zambiya"
+)
+
+bolge_map <- c(
+  "Algeria"                  = "Orta Doğu ve K. Afrika",
+  "Armenia"                  = "Avrupa ve Orta Asya",
+  "Belize"                   = "Latin Amerika ve Karayipler",
+  "Bolivia"                  = "Latin Amerika ve Karayipler",
+  "Brazil"                   = "Latin Amerika ve Karayipler",
+  "Cameroon"                 = "Sahra Altı Afrika",
+  "Central African Republic" = "Sahra Altı Afrika",
+  "China"                    = "Doğu Asya ve Pasifik",
+  "Colombia"                 = "Latin Amerika ve Karayipler",
+  "Congo, Dem. Rep."         = "Sahra Altı Afrika",
+  "Costa Rica"               = "Latin Amerika ve Karayipler",
+  "Cote d'Ivoire"            = "Sahra Altı Afrika",
+  "Dominican Republic"       = "Latin Amerika ve Karayipler",
+  "Equatorial Guinea"        = "Sahra Altı Afrika",
+  "Gabon"                    = "Sahra Altı Afrika",
+  "Gambia, The"              = "Sahra Altı Afrika",
+  "Georgia"                  = "Avrupa ve Orta Asya",
+  "Ghana"                    = "Sahra Altı Afrika",
+  "Iran, Islamic Rep."       = "Orta Doğu ve K. Afrika",
+  "Lesotho"                  = "Sahra Altı Afrika",
+  "Malaysia"                 = "Doğu Asya ve Pasifik",
+  "Mexico"                   = "Latin Amerika ve Karayipler",
+  "Moldova"                  = "Avrupa ve Orta Asya",
+  "Morocco"                  = "Orta Doğu ve K. Afrika",
+  "Nicaragua"                = "Latin Amerika ve Karayipler",
+  "North Macedonia"          = "Avrupa ve Orta Asya",
+  "Pakistan"                 = "Güney Asya",
+  "Paraguay"                 = "Latin Amerika ve Karayipler",
+  "Philippines"              = "Doğu Asya ve Pasifik",
+  "Samoa"                    = "Doğu Asya ve Pasifik",
+  "Sierra Leone"             = "Sahra Altı Afrika",
+  "Solomon Islands"          = "Doğu Asya ve Pasifik",
+  "South Africa"             = "Sahra Altı Afrika",
+  "Togo"                     = "Sahra Altı Afrika",
+  "Tunisia"                  = "Orta Doğu ve K. Afrika",
+  "Uganda"                   = "Sahra Altı Afrika",
+  "Ukraine"                  = "Avrupa ve Orta Asya",
+  "Venezuela, RB"            = "Latin Amerika ve Karayipler",
+  "Zambia"                   = "Sahra Altı Afrika"
+)
+
+ek1_tablo <- gelismekte_olan_veri_ek %>%
+  group_by(country) %>%
+  summarise(
+    n       = n(),
+    yil_bas = min(year),
+    yil_son = max(year),
+    .groups = "drop"
+  ) %>%
+  arrange(country) %>%
+  mutate(
+    ulke_tr = ulke_tr[country],
+    bolge   = bolge_map[country],
+    yil_aralik = paste0(yil_bas, "–", yil_son)
+  ) %>%
+  select(ulke_tr, country, bolge, yil_aralik, n) %>%
+  rename(
+    "Ülke (Türkçe)"   = ulke_tr,
+    "Ülke (İngilizce)" = country,
+    "Bölge (DB Sınıf.)" = bolge,
+    "Yıl Aralığı"     = yil_aralik,
+    "Gözlem (n)"      = n
+  )
+
+res_ek1 <- kable(
+  ek1_tablo,
+  format  = tbl_fmt(),
+  align   = c("l", "l", "l", "c", "c"),
+  escape  = FALSE
+)
+
+if (use_kable_styling()) {
+  res_ek1 <- res_ek1 %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+      full_width = TRUE,
+      position   = "center",
+      font_size  = 13
+    ) %>%
+    column_spec(3, width = "18em")
+}
+
+res_ek1
+```
+
+*Not: Çin ve Zambiya'nın örneklemdeki gözlem sayısı birer yılla sınırlı kalmaktadır (sırasıyla 2015 ve 2015). Bu ülkeler, sabit etkiler tahmincisinde bireysel zaman-içi varyans üretemediğinden temel bulgular üzerindeki etkileri sınırlıdır; ancak içerdikleri yatay kesit bağımlılığı bilgisi Driscoll-Kraay tahmincisi için korunmaktadır. Türkiye, Reel Efektif Döviz Kuru (REER) serisindeki yapısal veri eksiklikleri nedeniyle örneklem dışı bırakılmıştır.*
+
+**EK 2: Panel Birim Kök ve Eşbütünleşme Test Sonuçları**
+
+Panel veri analizi öncesinde serilerin durağanlık özellikleri, güçlü yatay kesit bağımlılığının (Z=14.404, p<0.001) doğrulandığı örneklemde **ikinci nesil** Pesaran (2007) CIPS testiyle incelenmiştir. CIPS (Cross-sectionally Augmented IPS), her ülke regresyonuna kesit ortalamalarını ($\bar{y}_t$, $\Delta\bar{y}_t$) kovaryat olarak ekleyerek CSD'nin yol açtığı boyut (size) bozulmasını doğrudan gidermektedir.
+
+```{r}
+#| tbl-cap: "Tablo EK-2: CIPS Panel Birim Kök Test Sonuçları (Pesaran, 2007)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+cips_data <- gelismekte_olan_veri %>%
+  drop_na(ln_ihracat, ln_reer, ln_gsyh, hukuk)
+
+vars_tr   <- c("ln_ihracat", "ln_reer", "ln_gsyh", "hukuk")
+labels_tr <- c("ln(İhracat)", "ln(REER)", "ln(GSYH)", "Hukukun Üstünlüğü")
+
+# Pesaran (2007) Tablo 2c kritik değerler (N≈40, T≈25, sabit terimli, trendsiz)
+cv_5  <- -2.20
+cv_1  <- -2.51
+cv_10 <- -2.07
+
+cips_results <- data.frame(
+  Değişken      = character(),
+  `CIPS (Düzey)` = numeric(),
+  `CIPS (1. Fark)` = numeric(),
+  Bütünleşme    = character(),
+  stringsAsFactors = FALSE,
+  check.names = FALSE
+)
+
+for (i in seq_along(vars_tr)) {
+  r0 <- compute_cips(cips_data, vars_tr[i], diff_order = 0)
+  r1 <- compute_cips(cips_data, vars_tr[i], diff_order = 1)
+  concl <- dplyr::case_when(
+    r0$cips < cv_5  ~ "I(0)",
+    r1$cips < cv_5  ~ "I(1)",
+    TRUE            ~ "I(1)?"
+  )
+  cips_results <- rbind(cips_results, data.frame(
+    Değişken         = labels_tr[i],
+    `CIPS (Düzey)`   = round(r0$cips, 3),
+    `CIPS (1. Fark)` = round(r1$cips, 3),
+    Bütünleşme       = concl,
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  ))
+}
+
+# Kritik değer satırı ekle
+cv_row <- data.frame(
+  Değişken         = "Kritik Değer (%5)",
+  `CIPS (Düzey)`   = cv_5,
+  `CIPS (1. Fark)` = cv_5,
+  Bütünleşme       = "—",
+  stringsAsFactors = FALSE,
+  check.names = FALSE
+)
+cips_out <- rbind(cips_results, cv_row)
+
+kbl_cips <- kable(cips_out,
+  format  = tbl_fmt(),
+  align   = c("l", "c", "c", "c"),
+  escape  = FALSE,
+  col.names = c("Değişken", "CIPS (Düzey)", "CIPS (1. Fark)", "Sonuç")
+)
+if (use_kable_styling()) {
+  kbl_cips <- kbl_cips %>%
+    kable_styling(bootstrap_options = c("striped","condensed"), full_width = FALSE) %>%
+    row_spec(nrow(cips_out), bold = TRUE, italic = TRUE)
+}
+kbl_cips
+```
+
+*Not: CIPS istatistiği ülke düzeyindeki CADF t-istatistiklerinin panel ortalamasıdır. H₀: birim kök. Daha negatif değerler H₀'ı reddeder. Kritik değerler Pesaran (2007) Tablo 2c'den alınmıştır (N≈40, T≈25, sabit terimli). ln(İhracat), ln(REER) ve ln(GSYH) düzeyde durağan değildir (I(1)); birinci farklarında güçlü biçimde durağanlaşmaktadır. Hukukun Üstünlüğü endeksi sınırlı (-2,5 ile +2,5) olması nedeniyle borderline I(0)/I(1) görünümü sergilemektedir. IPS ve LLC (birinci nesil) testleri referans amaçlı aşağıda sunulmaktadır.*
+
+Panel veri analizi öncesinde serilerin durağanlık özellikleri birinci nesil Im-Pesaran-Shin (IPS) ve Levin-Lin-Chu (LLC) birim kök testleri ile de incelenmiştir. Test sonuçları, serilerin düzeyde durağan olmadığını ($p > 0.05$), ancak birinci farkları alındığında güçlü biçimde durağan hale geldiğini (I(1)) göstermiştir; bu bulgular CIPS sonuçlarıyla tutarlıdır. Serilerin I(1) olması nedeniyle değişkenler arasında uzun dönemli bir ilişkinin varlığı Pedroni (1999) eşbütünleşme testiyle araştırılmış; artıklar serisinin IPS testinde %5 anlamlılık düzeyinde durağan olduğu saptanmıştır. Bu durum değişkenler arasında uzun dönemli bir eşbütünleşme ilişkisinin varlığına işaret etmektedir.
+
+*Not: Temel analizde Pesaran (2004) CD testi güçlü yatay kesit bağımlılığını doğrulamaktadır (Z=14.404, p<0.001). Bu koşul altında IPS ve LLC testleri boyut (size) bozulmasına açık birinci nesil testlerdir ve yalnızca referans amaçlı sunulmuştur. Birincil birim kök kanıtı yukarıdaki CIPS tabloya dayanmaktadır.*
+
+**EK 3: Kurumsal Eşik Regresyon Analizi**
+
+Etkileşim modelinden elde edilen bulgular, hukukun üstünlüğünün etkisinin doğrusal olmayabileceğini göstermektedir. Bu asimetrik durumu test etmek amacıyla Artıkların Kareler Toplamını (RSS) minimize eden **Panel Eşik Regresyonu** uygulanmıştır.
+
+```{r}
+#| fig-cap: "Şekil EK-1: Hukukun Üstünlüğü İçin Eşik RSS Optimizasyonu"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(tidyr)
+library(plm)
+library(ggplot2)
+
+# Eşik adayları (hukuk değişkeninin %20 ile %80'lik dilimleri arası)
+esik_adaylari <- quantile(gelismekte_olan_veri$hukuk, probs = seq(0.2, 0.8, by = 0.05), na.rm = TRUE)
+esik_RSS <- numeric(length(esik_adaylari))
+
+# Analiz verisi (sadece gerekli değişkenler ve NA'sız)
+analiz_esik <- gelismekte_olan_veri %>% 
+  drop_na(ln_ihracat, ln_reer, ln_gsyh, hukuk)
+
+for (i in seq_along(esik_adaylari)) {
+  esik_deger <- esik_adaylari[i]
+
+  analiz_esik_tmp <- analiz_esik %>%
+    mutate(
+      D_asagi  = as.numeric(hukuk <  esik_deger),
+      D_yukari = as.numeric(hukuk >= esik_deger),
+      reer_asagi  = ln_reer * D_asagi,
+      reer_yukari = ln_reer * D_yukari
+    )
+
+  panel_tmp <- pdata.frame(analiz_esik_tmp, index = c("country", "year"))
+
+  tryCatch({
+    m <- plm(ln_ihracat ~ reer_asagi + reer_yukari + ln_gsyh,
+             data = panel_tmp, model = "within")
+    esik_RSS[i] <- sum(residuals(m)^2)
+  }, error = function(e) {
+    esik_RSS[i] <- NA
+  })
+}
+
+# En iyi eşik değeri
+esik_en_iyi_idx <- which.min(esik_RSS)
+esik_en_iyi     <- esik_adaylari[esik_en_iyi_idx]
+
+# RSS Grafiği
+esik_df <- data.frame(esik = esik_adaylari, RSS = esik_RSS)
+
+ggplot(esik_df, aes(x = esik, y = RSS)) +
+  geom_line(color = "#2563eb", linewidth = 1.2) +
+  geom_point(color = "#2563eb", size = 2) +
+  geom_vline(xintercept = esik_en_iyi, linetype = "dashed",
+             color = "#dc2626", linewidth = 1) +
+  annotate("text", x = esik_en_iyi, y = max(esik_RSS, na.rm=TRUE), 
+           label = paste("Optimal Eşik:", round(esik_en_iyi, 3)), 
+           vjust = 1.5, color = "#dc2626", fontface = "bold") +
+  labs(x = "Hukuk Eşik Değeri", y = "Artıkların Kareler Toplamı (RSS)") +
+  theme_minimal()
+```
+
+Şekil EK-1'de görüldüğü üzere, hukukun üstünlüğü endeksinin `r round(esik_en_iyi, 3)` değeri civarında bir optimal eşik noktası bulunmaktadır. Bu eşiğin altında kalan kurumsal açıdan zayıf ekonomilerde REER artışının (değerlenme) negatif ihracat şoku daha şiddetli hissediliyor olabileceğine işaret ederken; bu eşiğin üstünde ise sözleşme güvenliğinin sağladığı kurumsal kalkan mekanizmasının kısmen devreye girebileceği gözlemlenmektedir. Bu bulgu yalnızca RSS minimizasyonuna dayanan keşifsel niteliktedir; Hansen (2000) türü formal eşik çıkarım testi uygulanmadığından istatistiksel kesinlik taşımamaktadır ve yorumlayıcı kanıt olarak değerlendirilmelidir.
+
+**EK 4: Bölgesel Heterojenlik Analizi**
+
+Gelişmekte olan ülkeler tek bir homojen birim değildir. Küresel bulaşma etkilerinin bölgeler arası asimetrik dağılımını görmek için etkileşim termi odaklı alt-grup analizleri yapılmıştır.
+
+```{r}
+#| fig-cap: "Şekil EK-2: Bölgesel Alt Gruplar İtibarıyla REER × Hukuk Etkileşim Katsayıları"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(tidyr)
+library(plm)
+library(lmtest)
+library(ggplot2)
+
+bolge_tr <- c(
+  "East Asia & Pacific"        = "Doğu Asya ve Pasifik",
+  "Europe & Central Asia"      = "Avrupa ve Orta Asya",
+  "Latin America & Caribbean"  = "Latin Amerika ve Karayipler",
+  "Middle East & North Africa" = "Orta Doğu ve Kuzey Afrika",
+  "South Asia"                 = "Güney Asya",
+  "Sub-Saharan Africa"         = "Sahra Altı Afrika"
+)
+
+bolge_listesi <- unique(gelismekte_olan_veri$region)
+bolge_sonuclari <- data.frame()
+
+for (bolge in bolge_listesi) {
+  bolge_veri <- gelismekte_olan_veri %>%
+    filter(region == bolge) %>%
+    drop_na(ln_ihracat, ln_reer, ln_gsyh, hukuk)
+
+  n_ulke   <- length(unique(bolge_veri$country))
+  n_gozlem <- nrow(bolge_veri)
+
+  if (n_ulke >= 3 && n_gozlem >= 20) {
+    panel_bolge <- pdata.frame(bolge_veri, index = c("country", "year"))
+
+    tryCatch({
+      model_bolge <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                         data   = panel_bolge,
+                         model  = "within")
+
+      est <- coeftest(model_bolge, vcov = vcovSCC(model_bolge, type = "HC3", maxlag = 2))
+
+      # Etkilesim katsayisi (ln_reer:hukuk)
+      idx <- which(rownames(est) == "ln_reer:hukuk")
+      if (length(idx) > 0) {
+        bolge_sonuclari <- rbind(bolge_sonuclari, data.frame(
+          bolge       = bolge,
+          etkilesim   = est[idx, "Estimate"],
+          p_val       = est[idx, "Pr(>|t|)"]
+        ))
+      }
+    }, error = function(e) {})
+  }
+}
+
+if (nrow(bolge_sonuclari) > 0) {
+  bolge_sonuclari$bolge <- bolge_tr[bolge_sonuclari$bolge]
+  bolge_sonuclari$bolge[is.na(bolge_sonuclari$bolge)] <- "Diğer"
+  ggplot(bolge_sonuclari, aes(x = reorder(bolge, etkilesim), y = etkilesim,
+                              fill = p_val < 0.10)) +
+    geom_col(width = 0.6) +
+    geom_hline(yintercept = 0, linetype = "dashed", color = "gray40") +
+    scale_fill_manual(values = c("TRUE" = "#10b981", "FALSE" = "#94a3b8"),
+                      labels = c("TRUE" = "p < 0.10", "FALSE" = "p >= 0.10"),
+                      name = "Anlamlılık (p < 0,10)") +
+    coord_flip() +
+    labs(x = "Bölge", y = "Etkileşim Katsayısı (ln_reer x Hukuk)") +
+    theme_minimal()
+}
+```
+
+Şekil EK-2'de sunulan bölgesel ayrıştırma sonuçları, kurumların düzenleyici etkisinin özellikle Sahra Altı Afrika ve Latin Amerika gibi yapısal dış kırılganlıkların ve kurumsal zayıflıkların yoğun olduğu bölgelerde istatistiksel açıdan anlamlı sınırda gezindiğini; buna karşılık Doğu Asya ve Pasifik bölgesinde çok daha entegre bir ihracat-kurumsal kalkan yapısının mevcut olduğunu göstermektedir. Bu da, sadece ülkeye özgü kurumların değil, bulunulan bölgesel kümelenmenin de kurum-ticaret bağı üzerinde doğrudan etkili olduğunu kanıtlamaktadır.

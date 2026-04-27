@@ -1,0 +1,290 @@
+---
+title: "Doviz Kuru Soklarinin Ihracat Performansi Uzerindeki Etkisinde Kurumsal Kalitenin Rolu: Gelismekte Olan Ulkeler Icin Bir Panel Veri Analizi"
+subtitle: "The Role of Institutional Quality in the Impact of Exchange Rate Shocks on Export Performance: A Panel Data Analysis for Developing Countries"
+author: 
+  - name: "Dr. Ogr. Uye. Ugur YILDIRIM"
+    affiliation: "Kirikkale Universitesi, Iktisadi ve Idari Bilimler Fakultesi, Iktisat Bolumu, Kirikkale, Turkiye"
+    orcid: "0000-0000-0000-0000"
+  - name: "Ars. Gor. Dr. Mehmet Gokhan OZDEMIR"
+    affiliation: "Kirikkale Universitesi, Iktisadi ve Idari Bilimler Fakultesi, Iktisat Bolumu, Kirikkale, Turkiye"
+    orcid: "0000-0002-6756-7285"
+format:
+  html:
+    theme: cosmo
+    mainfont: "Times New Roman"
+    fontsize: "11pt"
+    embed-resources: false
+    css: |
+      p, div { text-align: justify; text-justify: inter-word; }
+      table { margin-bottom: 20px; width: 100%; border-collapse: collapse; }
+      caption { caption-side: top !important; font-weight: bold; text-align: center; padding: 8px 0 6px 0; font-size: 1em; display: table-caption; }
+      figure { margin: 24px 0; text-align: center; }
+      figcaption { font-weight: bold; text-align: center; margin-top: 6px; font-size: 0.95em; }
+execute:
+  echo: false    # Kodların kendisi Word'de GÖRÜNMEZ
+  eval: true     # Kodlar KESİNLİKLE ÇALIŞTIRILSIN! Makale artık dinamiktir.
+  warning: false
+  message: false
+---
+
+```{r}
+#| include: false
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(readr)
+library(stargazer)
+library(plm)
+library(lmtest)
+library(knitr)
+library(kableExtra)
+library(modelsummary)
+library(quantreg)
+library(zoo)
+library(sandwich)
+
+temiz_veri <- read_csv("data/analiz_verisi_full.csv", show_col_types = FALSE)
+gelismekte_olan_veri <- read_csv("data/gelismekte_olan_veri.csv", show_col_types = FALSE)
+
+temiz_veri <- temiz_veri %>%
+  filter(!is.na(reer) & !is.na(ihracat))
+
+analiz_verisi <- temiz_veri %>%
+  drop_na(hukuk, regulasyon, reer, ihracat, gsyh) %>%
+  mutate(
+    ln_ihracat = log(ihracat),
+    ln_reer = log(reer),
+    ln_gsyh = log(gsyh)
+  )
+
+# Panel veri yapıları
+p_veri    <- pdata.frame(analiz_verisi,     index = c("country", "year"))
+p_veri_em <- pdata.frame(gelismekte_olan_veri, index = c("country", "year"))
+
+# Model tahminleri
+model_politik <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                     data = p_veri, model = "within")
+model_em <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                data = p_veri_em, model = "within")
+model_em_re <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                   data = p_veri_em, model = "random")
+
+# Driscoll-Kraay dirençli standart hatalar
+se_scc <- sqrt(diag(vcovSCC(model_em, type = "HC3", maxlag = 4)))
+
+# Metin içi inline kodlar için ön hesaplamalar
+hausman_pre <- phtest(model_em, model_em_re)
+t_dk_inter  <- as.numeric(coef(model_em)["ln_reer:hukuk"]) / se_scc["ln_reer:hukuk"]
+p_dk_inter  <- round(2 * pnorm(abs(t_dk_inter), lower.tail = FALSE), 3)
+```
+
+# Özet
+
+Bu çalışma, döviz kuru değişimlerinin ve makroekonomik oynaklıkların ihracat performansı üzerindeki etkisinde kurumsal kalitenin (hukukun üstünlüğü) düzenleyici rolünü araştırmaktadır. Analiz kapsamında, 2000-2022 dönemini kapsayan ve 39 gelişmekte olan ülkeyi içeren 773 gözlemlik dengesiz bir panel veri seti kullanılmıştır. Analizin ilk aşamasında tahmin edilen panel çeyreklik regresyon modelleri, kurumsal kalkan etkisinin ihracat yelpazesinin tüm kademelerinde koruyucu bir rol üstlendiğini ve döviz kurunun asimetrik etkilere sahip olduğunu göstermiştir. Ancak çalışmanın özgün metodolojik katkısını oluşturan ve panel veri modellerinde sıklıkla göz ardı edilen yatay kesit bağımlılığını çözen Driscoll-Kraay dirençli tahmincisi ile içsellik sorunlarını kontrol altına alan Arellano-Bond Dinamik Panel GMM yöntemleri uygulandığında, kurumsal kalkan etkisinin istatistiksel anlamlılığını yitirdiği tespit edilmiştir. Tüm dirençli (robust) test bulguları, gelişmekte olan ülkelerin ihracat performansında yerel döviz kuru seviyesi, kur volatilitesi veya salt makro kurumsal altyapıdan ziyade; ülke içi üretim ölçeğinin (reel GSYH) yegane ve en güçlü belirleyici güç olduğunu tartışmasız biçimde kanıtlamaktadır. Sonuçlar, yüksek finansal entegrasyon çağında dış ticareti dışsal şoklardan korumak için sadece yerel hukuk reformlarına veya rekabetçi kur politikalarına odaklanmanın eksik kalacağını; kurumsal yapıların mutlaka güçlü bir yerel ekonomik kapasite ile desteklenmesi gerektiğini vurgulamaktadır.
+
+**Anahtar Kelimeler:** İhracat Performansı, Reel Efektif Döviz Kuru Oynaklığı, Hukukun Üstünlüğü, Panel Çeyreklik Regresyon, Dinamik Panel GMM, Yatay Kesit Bağımlılığı.
+
+# Abstract
+
+This study investigates the moderating role of institutional quality (rule of law) in the impact of exchange rate fluctuations and macroeconomic volatility on export performance. The analysis utilizes an unbalanced panel data set comprising 773 observations from 39 developing countries over the period 2000-2022. Initial estimations using panel quantile regression models suggest that the institutional shield plays a protective role across all tiers of the export spectrum and that exchange rates exhibit asymmetric effects. However, introducing the study's novel methodological contribution—employing the Driscoll-Kraay robust estimator to address cross-sectional dependence, alongside the Arellano-Bond Dynamic Panel GMM approach to control for endogeneity—reveals that this institutional shield loses its statistical significance. All robust test findings unequivocally prove that domestic production scale (real GDP), rather than local exchange rate levels, currency volatility, or mere macro-institutional infrastructure, remains the sole and most powerful determinant of export performance in developing nations. The results emphasize that in an era of high financial integration, relying solely on local legal reforms or competitive exchange rate policies to protect foreign trade from external shocks is insufficient; institutional structures must inherently be supported by strong domestic economic capacity and economies of scale.
+
+**Keywords:** Export Performance, Real Effective Exchange Rate Volatility, Rule of Law, Panel Quantile Regression, Dynamic Panel GMM, Cross-Sectional Dependence.
+
+Jel Codes: F14, F31, C23, O43
+
+# 1. GİRİŞ
+
+Küreselleşme süreciyle birlikte dış ticaret, ülkelerin ekonomik büyüme ve kalkınma stratejilerinin temel taşlarından biri haline gelmiştir. Özellikle gelişmekte olan ekonomiler için ihracat performansı; döviz rezervlerinin artırılması, teknoloji transferi ve istihdam yaratılması açısından kritik öneme sahiptir. Uluslararası iktisat literatüründe ihracat performansını belirleyen unsurlar geleneksel olarak reel döviz kuru ve dış talep (gelir) üzerinden açıklanmaktadır. Ancak, klasik makroekonomik değişkenlerin tek başına ihracat dinamiklerini açıklamadaki yetersizliği, araştırmacıları kurumsal yapı ve politik ekonomi bileşenlerini modele dahil etmeye yöneltmiştir (North, 1990; Acemoglu ve Robinson, 2012).
+
+Geleneksel görüşe göre, yerel paranın reel olarak değer kaybetmesi (rekabetçi kur), ihraç mallarının dış piyasalardaki fiyatını düşürerek ihracat hacmini artırmaktadır. Öte yandan Yeni Kurumsal İktisat perspektifi; mülkiyet hakları ve hukukun üstünlüğü gibi faktörlerin işlem maliyetlerini düşürerek ticari performansı doğrudan etkilediğini savunur. Bu bağlamda literatürdeki yaygın argüman, güçlü bir hukuk sisteminin, döviz kuru oynaklıklarına karşı ihracatçı firmaları koruyan bir "kurumsal kalkan" işlevi gördüğü yönündedir. Ancak bu noktada yanıtlanması gereken çok daha hayati bir soru bulunmaktadır: Küresel finansal krizlerin, tedarik zinciri kesintilerinin ve ülkeler arası yoğun bulaşma (spillover) etkilerinin yaşandığı günümüz dünyasında, *sadece yerel* bir kurumsal kalkan gelişmekte olan ülkelerin ihracatını dış şoklardan korumaya yetecek midir?
+
+Bu çalışma, döviz kuru değişimlerinin ihracat üzerindeki etkisinde hukukun üstünlüğünün düzenleyici (moderator) rolünü sorgularken, literatürdeki mevcut analizlerin ötesine geçmeyi hedeflemektedir. Birçok çalışma ülkelerin birbirinden bağımsız hareket ettiğini varsayarak (yatay kesit bağımsızlığı) kurumsal kalitenin gücünü abartma eğilimindedir. Oysa gelişmekte olan ekonomiler, küresel rüzgarlara ve birbirlerinin ticaret politikalarına son derece duyarlıdır. Bu çalışma, 39 gelişmekte olan ülke için 2000-2022 dönemini kapsayan verilerle hem temel sabit etkiler analizini hem de ülkeler arası bulaşma etkilerini (cross-sectional dependence) kontrol altına alan ileri düzey Driscoll-Kraay dirençli standart hata tahmincisini kullanmaktadır. Araştırmanın temel amacı, "yerel kurumların gücü" ile "küresel talebin baskısı" arasındaki gerçek hiyerarşiyi ampirik olarak ortaya koymak ve gelişmekte olan ülkeler için ezber bozan politika çıkarımları sunmaktır.
+
+Çalışmanın geri kalanı şu şekilde organize edilmiştir: İkinci bölümde ilgili literatür özetlenmekte, üçüncü bölümde veri seti ve metodoloji tanıtılmaktadır. Dördüncü bölümde tanı testlerini de içeren ampirik bulgular sunulmakta ve son bölümde ise elde edilen sonuçlar ışığında politika önerileri tartışılmaktadır.
+
+# 2. LİTERATÜR ÖZETİ VE KURAMSAL ÇERÇEVE
+
+Uluslararası iktisat literatüründe ihracat performansını belirleyen unsurlar geleneksel olarak fiyat rekabetçiliği ve dış talep kanalları üzerinden analiz edilmektedir. Genel kabul gören analitik yaklaşımlar ve Marshall-Lerner koşulu çerçevesinde, reel döviz kurundaki değerlenmenin (REER artışı) ihraç mallarının uluslararası piyasalardaki göreli fiyatlarını yükselterek dış rekabet gücünü zayıflattığı ve ihracat hacmini negatif yönde etkilediği savunulmaktadır (Aman, Mallick ve Nemlioglu, 2021; Bulut ve Yaşar, 2023). Özellikle gelişmekte olan ekonomilerde döviz kuru şokları, yerel paranın aşırı değerlenmesi durumunda ihracatçı firmaların kâr marjlarını baskılayarak ticari performansta ciddi daralmalara yol açabilmektedir (Chamindani, 2019; Khan, Khan ve Ahmad, 2024). Ancak klasik makroekonomik değişkenlerin tek başına ihracat dinamiklerini açıklamadaki yetersizliği, özellikle 1990’lı yıllardan itibaren Yeni Kurumsal İktisat perspektifinin dış ticaret modellerine entegre edilmesini zorunlu kılmıştır. Douglass North (1990) tarafından geliştirilen kuramsal çerçeveye göre, kurumlar ekonomik etkileşimleri yapılandıran "oyunun kuralları"dır ve mülkiyet hakları ile hukuki öngörülebilirliğin sağlandığı ortamlarda işlem maliyetleri düşerek ekonomik faaliyetler teşvik edilmektedir. Bu kuramsal zemin, Coase (1937) ve Williamson (1990) tarafından kavramsallaştırılan işlem maliyetleri (transaction costs) teorisiyle desteklenmektedir; nitekim asimetrik bilgi, fırsatçılık riski ve varlık özgüllüğü (asset particularity) gibi unsurlar, hukuki altyapının zayıf olduğu durumlarda dış ticareti kısıtlayan birer "gizli vergi" (hidden tax) işlevi görmektedir (Ruzekova, Kittova ve Steinhauser, 2020, s. 146-149). Bu dönüşüm, Rodrik (2000) tarafından da vurgulandığı üzere, yüksek kaliteli ve sürdürülebilir bir ekonomik büyüme için kurumsal altyapının vazgeçilmez olduğu fikrini merkeze taşımıştır.
+
+Kurumsal kalitenin dış ticaret üzerindeki doğrudan etkisini inceleyen ampirik çalışmalar, hukukun üstünlüğü, sözleşme yaptırım gücü ve bürokratik etkinliğin ihracat hacmi ve çeşitliliği üzerinde birincil derecede belirleyici olduğunu göstermektedir. Acemoglu ve Robinson (2012) ile Acemoglu, Johnson ve Robinson (2005), kurumların coğrafya ve salt dışa açıklık gibi faktörlerden daha baskın bir büyüme motoru olduğunu vurgulayarak, mülkiyet güvenliğinin zayıf olduğu ülkelerde sadece rekabetçi kur politikalarının kalıcı bir ihracat artışı yaratmakta yetersiz kalacağına işaret etmişlerdir (Rodrik, Subramanian ve Trebbi, 2004). Hukuki ve sözleşmesel güvencenin (contract enforcement) dış ticaretteki yapısal belirleyiciliği üzerine Levchenko (2007) ve Nunn (2007), gelişmiş yasal kurumlara sahip ülkelerin özellikle sözleşme yoğunluğu ve ürün karmaşıklığı yüksek mallarda açık bir karşılaştırmalı üstünlük elde ettiğini kanıtlamışlardır (Frensch, Horvath ve Huber, 2021, s. 4-6). Nitekim Méon ve Sekkat (2004, s. 1479-1486), bürokratik etkinsizlik ve zayıf hukukun üstünlüğünün imalat sanayi ihracatını doğrudan baltalayarak gelişmekte olan ülkelerin dünya ekonomisine entegrasyonunu engellediğini ekonometrik olarak bulgulamıştır. Literatürde, yüksek kaliteli yasal kurumlara sahip ülkelerde faaliyet gösteren firmaların, sözleşme güvenliği sayesinde asimetrik bilgi problemlerini ve sınır ötesi işlem risklerini daha etkin yönetebildikleri savunulmaktadır (Li, Vertinsky ve Zhang, 2012).
+
+Buna ek olarak, firma düzeyindeki mikro bulgular da bu makro teoriyi desteklemektedir; örneğin Crozet ve Koeniger (2010) ile Mwatu (2022, s. 494), gelişmiş kurumsal yapıların finansal kısıtları ve bürokratik engelleri hafifleterek firmaların ihracat pazarlarına girişini ve tutunmasını doğrudan kolaylaştırdığını kanıtlamışlardır. İlave olarak, makro boyutta kurumsal kalitenin yalnızca ihracatçı ülke içindeki seviyesi değil, ticaret ortakları arasındaki "kurumsal uzaklık" (institutional distance) da kritik bir parametre olarak öne çıkmaktadır. Ezzat ve Zaki (2022, s. 143-156), MENA ülkeleri eksenindeki çekim modeli (gravity model) tahminlerinde, ticaret ortakları arasındaki politik ve kurumsal kalite (hukukun üstünlüğü) farkı arttıkça derin ticaret anlaşmaları imzalama olasılığının istatistiksel olarak anlamlı ölçüde düştüğünü; anlaşmaların yaptırım gücünün (enforceability) artmasının ise ticaret hacmini doğrudan büyüttüğünü kanıtlamışlardır. Benzer şekilde, Abreo, Bustillo ve Rodriguez (2021, s. 4-5) Latin Amerika örneğinde, Afonso vd. (2025, s. 1-23) ise gelişmiş ve gelişmekte olan ülkeler ekseninde kurumsal etkinliğin dış ticaret üzerindeki tartışılmaz rolünü ampirik olarak doğrulamışlardır. Bu bağlamda kurumsal gelişmişlik, sadece toplam ticaret hacmini artırmakla kalmamakta, ülkelerin karşılaştırmalı üstünlüklerini daha karmaşık ve kurumsal yoğunluğu yüksek ürünlere kaydırmalarına imkan tanımaktadır (Bustaman vd., 2022, s. 9). Hatta Tadesse (2017, s. 2-3), kurumsal altyapının işlem maliyetlerini düşürmede anahtar bir değişken olduğunu ve hukukun üstünlüğü belirli bir eşik değeri (threshold) aşmadan ticaret maliyetlerinde (bilateral trade costs) kalıcı bir iyileşme sağlanamayacağını ortaya koymaktadır.
+
+Çalışmanın özgün odağını oluşturan döviz kuru ve kurumsal kalite etkileşimi üzerine yapılan güncel araştırmalar, kurumların döviz kuru şoklarını emme veya iletme kapasitesine sahip kritik bir "düzenleyici" (moderator) işlevi gördüğünü ortaya koymaktadır. Sayınta (2002, s. 2, 94), döviz kuru riskleri ile ticaret arasındaki ilişkinin, sözleşme yaptırımlarını güvence altına alan kurumsal kaliteye bağlı olarak non-monotonik bir seyir izlediğini teorik olarak temellendirmiştir. Bu kuramsal yaklaşıma göre, mülkiyet haklarının ve sözleşme icrasının (enforcement) zayıf olduğu durumlarda artan döviz kuru oynaklığı ticareti dramatik biçimde baskılarken, kurumsal kalitenin iyileşmesiyle bu negatif dışsallık sönümlenmektedir. Güçlü kurumsal yapılara ve mülkiyet güvencesine sahip ülkelerde, reel döviz kurundaki değerlenmelerin yarattığı maliyet artışları, kurumsal güvenin sağladığı düşük risk primi ve azalan işlem maliyetleri ile kompanse edilebilmektedir (Garayeva ve Tahirova, 2017, s. 3-5). Son yıllarda ekonometrik modellemelerdeki güncel ilerlemeler (özellikle Doğrusal Olmayan ARDL - NARDL yaklaşımları), döviz kuru ve ihracat ilişkisinin asimetrik doğasını da gün yüzüne çıkarmıştır. Urgessa (2024, s. 18) ve Ashour (2023, s. 16-29) tarafından gelişmekte olan ülkeler üzerine yapılan asimetrik panel analizleri, döviz kurundaki pozitif volatilitenin ihracat gelirlerini sert biçimde düşürdüğünü; kurumsal kalkanın zayıf olduğu durumlarda riskten kaçınan (risk-averse) firmaların uluslararası piyasalardan hızla geri çekildiğini doğrulamaktadır.
+
+Buna karşın, hukukun üstünlüğünün zayıf olduğu gelişmekte olan ekonomilerde kurumsal eksiklikler, döviz kuru oynaklığıyla birleştiğinde ihracatçılar için riskleri derinleştirmekte ve dış ticareti dış şoklara karşı çok daha kırılgan hale getirmektedir. Nitekim Aman, Granville, Mallick ve Nemlioglu (2024, s. 486-510), gelişmekte olan piyasalarda yalnızca ticari ve finansal dışa açıklığın (trade and financial openness) dış rekabet gücünü artırmakta tek başına yetersiz kalacağını; REER (reel efektif döviz kuru) kaynaklı değer kayıplarının kalıcı bir ihracat performansına dönüşebilmesi için yüksek kaliteli hukuki kurumların vazgeçilmez olduğunu ampirik olarak kanıtlamışlardır. Abdi ve Mohamed (2025, s. 2) de benzer şekilde, kurumların etkinsiz olduğu ortamlarda yüksek işlem maliyetlerinin ortaya çıktığını ve ihracatçıların ucuzlayan yerel para avantajından (devalüasyon) faydalanamadığını vurgulamaktadır. Bu durum, gelişmekte olan ülkeler için sadece dışsal fiyat avantajlarına (devalüasyon) odaklanan stratejilerin eksik kalacağını; sürdürülebilir dış ticaret başarısı için mülkiyet haklarını ve hukuk sistemini güçlendiren yapısal reformların stratejik bir "kurumsal kalkan" görevi gördüğünü kanıtlamaktadır (Baxa ve Paulus, 2024, s. 1734; Kazdal ve Yılmaz, 2021).
+
+# 3. VERİ SETİ VE METODOLOJİ
+
+### 3.1. Veri Kaynakları ve Değişken Tanımları
+
+```{r}
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)   # Daha güzel görünüm için öneririm
+
+# Veri önceden yüklenmiş olmalı (üstteki setup chunk'ında yap)
+# Eğer emin değilsen buraya da ekle:
+# analiz_verisi <- read_csv("data/analiz_verisi_full.csv", show_col_types = FALSE)
+
+sutunlar <- c("ln_ihracat", "ln_reer", "ln_gsyh", "hukuk")
+isimler  <- c("ln(İhracat)", "ln(REER)", "ln(GSYH)", "Hukukun Üstünlüğü")
+
+desc1a <- data.frame(
+  "Değişken"    = isimler,
+  "N"           = sapply(sutunlar, function(v) sum(!is.na(analiz_verisi[[v]]))),
+  "Ortalama"    = sapply(sutunlar, function(v) round(mean(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Std. Sapma"  = sapply(sutunlar, function(v) round(sd(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Minimum"     = sapply(sutunlar, function(v) round(min(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Maksimum"    = sapply(sutunlar, function(v) round(max(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  check.names = FALSE, 
+  row.names = NULL
+)
+
+# En güvenilir yöntem:
+kable(desc1a, 
+      format = "html",
+      caption = "Tablo 1a: Tüm Ülkeler Tanımlayıcı İstatistikler (2000-2022)",
+      align = c("l", "c", "c", "c", "c", "c"),
+      escape = FALSE) %>%   # escape = FALSE bazen gerekli olur
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+                full_width = TRUE,
+                position = "center")
+```
+
+Çalışmada kullanılan veriler, 2000-2022 dönemini kapsayan yıllık panel veri setinden oluşmaktadır. Örneklem, veri kısıtları ve kurumsal heterojenliği yakalamak amacıyla Dünya Bankası (World Development Indicators - WDI) veri tabanından derlenmiştir. Çalışmanın bağımlı değişkeni olan ihracat performansı, sabit fiyatlarla mal ve hizmet ihracatı ($ln\_ihracat$) ile temsil edilmektedir. Temel bağımsız değişken olan reel efektif döviz kuru ($ln\_reer$), bir ülkenin para biriminin ticaret ortaklarına göre reel değerini yansıtmaktadır.
+
+Çalışmanın özgün odağı olan kurumsal kaliteyi temsil etmek üzere, Dünya Bankası Dünya Yönetişim Göstergeleri (WGI) veri setinden "Hukukun Üstünlüğü" ($hukuk$) endeksi kullanılmıştır. Bu endeks, mülkiyet haklarının korunması, mahkemelerin bağımsızlığı ve sözleşmelerin uygulanabilirliği gibi mülkiyet güvenliğini doğrudan etkileyen unsurları -2.5 (zayıf) ile +2.5 (güçlü) arasında puanlamaktadır. Ayrıca, ülkelerin kendi ihracat kapasitelerini (ölçek etkisi) kontrol etmek amacıyla ulusal reel GSYH ($ln\_gsyh$) değişkeni modele dahil edilmiştir.[^1]
+
+[^1]: Dış talep şoklarını ve küresel dalgalanmaları kontrol etmek amacıyla, modelleme aşamasında "Dünya Reel GSYH" ($ln\_world\_gsyh$) değişkeni de test edilmiştir. Ancak, yalnızca zamana göre değişen ve ülkeler arası varyans içermeyen bu değişkenin panele eklenmesi, iki-yönlü sabit etkiler (two-way fixed effects) varsayımları altında zaman trendleriyle ve yıllara özgü sabit etkilerle aşırı doğrusal bağıntı (multicollinearity) yaratmıştır. Ayrıca, çalışmanın temelini oluşturan yatay kesit bağımlılığını (cross-sectional dependence) kontrol eden Driscoll-Kraay tahmincisi, doğası gereği küresel dışsal şokları ve zaman trendlerini matematiksel olarak sönümlediği için, analizin bilimsel tutarlılığını korumak adına $ln\_world\_gsyh$ değişkeni nihai tahmin modelinden çıkarılmıştır.
+
+Araştırmanın örneklemi, Dünya Bankası WDI veri tabanındaki veri mevcudiyeti (data availability) ile sınırlandırılmıştır. Türkiye gibi bazı önemli gelişmekte olan ekonomiler, Reel Efektif Döviz Kuru (REER) serilerindeki yapısal veri eksiklikleri nedeniyle algoritma tarafından örneklem dışı bırakılmıştır.
+
+Tablo 1 incelendiğinde, gelişmekte olan ülkeler örnekleminde hukukun üstünlüğü endeksinin ortalama değerinin negatif (`r round(mean(gelismekte_olan_veri$hukuk, na.rm=TRUE), 2)`) olduğu görülmektedir. Bu durum, analize dahil edilen ülkelerde mülkiyet hakları, sözleşme güvenliği ve hukuki öngörülebilirlik gibi kurumsal altyapı unsurlarının yapısal olarak zayıf olduğuna işaret etmektedir. Söz konusu kurumsal zayıflık ve belirsizlik ortamı, döviz kuru şoklarının ihracatçılar üzerindeki etkisini ve kurumların bir 'güven kalkanı' olma işlevini inceleyen modelimizin temel motivasyonunu ampirik olarak doğrulamaktadır.
+
+```{r}
+#| label: tbl-desc1b
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+# === ÖNEMLİ: Veriyi burada tekrar yükle (Render sırasında garanti olsun) ===
+gelismekte_olan_veri <- read_csv("data/gelismekte_olan_veri.csv", show_col_types = FALSE)
+
+# Değişken isimleri
+sutunlar <- c("ln_ihracat", "ln_reer", "ln_gsyh", "hukuk")
+isimler  <- c("ln(İhracat)", "ln(REER)", "ln(GSYH)", "Hukukun Üstünlüğü")
+
+# Tanımlayıcı istatistikler
+desc1b <- data.frame(
+  "Değişken"    = isimler,
+  "N"           = sapply(sutunlar, function(v) sum(!is.na(gelismekte_olan_veri[[v]]))),
+  "Ortalama"    = sapply(sutunlar, function(v) round(mean(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Std. Sapma"  = sapply(sutunlar, function(v) round(sd(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Minimum"     = sapply(sutunlar, function(v) round(min(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Maksimum"    = sapply(sutunlar, function(v) round(max(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  check.names = FALSE, 
+  row.names = NULL
+)
+
+# Tabloyu oluştur (kableExtra ile daha güzel ve stabil)
+kable(desc1b, 
+      format = "html",
+      caption = "Tablo 1b: Gelişmekte Olan Ülkeler Tanımlayıcı İstatistikler (2000-2022)",
+      align = c("l", "c", "c", "c", "c", "c"),
+      escape = FALSE) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = TRUE,
+    position = "center"
+  )
+```
+
+### 3.2. Ekonometrik Model ve Yöntem
+
+Değişkenler arasındaki etkileşimli ilişkiyi test etmek amacıyla aşağıdaki panel veri modeli kurulmuştur:
+
+$$
+ln\_ihracat_{it} = \beta_0 + \beta_1 ln\_reer_{it} + \beta_2 hukuk_{it} + \beta_3 (ln\_reer_{it} \times hukuk_{it}) + \beta_4 ln\_gsyh_{it} + \alpha_i + \mu_t + \epsilon_{it}
+$$
+
+Burada $i$ ülkeleri, $t$ zamanı, $\alpha_i$ ülke sabit etkilerini ve $\mu_t$ zaman sabit etkilerini temsil etmektedir. Modelde yer alan $(ln\_reer_{it} \times hukuk_{it})$ etkileşim terimi, kurumsal kalitenin döviz kuru duyarlılığı üzerindeki düzenleyici etkisini ölçmektedir.
+
+Panel veri analizinde birim etkilerin (ülke karakteristikleri) hata terimiyle ilişkili olup olmadığını belirlemek amacıyla Hausman testi uygulanmıştır. Test sonucunda elde edilen $\chi^2$ istatistiği (`r round(hausman_pre$statistic, 3)`) ve ilgili p-değeri (`r format.pval(hausman_pre$p.value, digits=3, eps=0.001)`), sıfır hipotezinin reddedildiğini ve Sabit Etkiler (Fixed Effects) tahmincisinin, Rassal Etkiler (Random Effects) tahmincisine göre daha tutarlı (consistent) sonuçlar ürettiğini doğrulamıştır. Bu doğrultuda, ülkeler arasındaki gözlemlenemeyen heterojenliği kontrol altına alan Sabit Etkiler yöntemi benimsenmiştir.
+
+# 4. AMPİRİK BULGULAR VE TARTIŞMA
+
+Bu bölümde, seçilen ekonometrik model çerçevesinde elde edilen ampirik sonuçlar sunulmaktadır. Analizler iki aşamalı olarak kurgulanmıştır: İlk olarak tüm örneklem için genel bulgular sunulmuş, ardından gelişmekte olan ülkeler bazında yapılan heterojenlik analizi ile kurumsal kalitenin düzenleyici rolü tartışılmıştır.
+
+### 4.1. Genel Örneklem Sonuçları
+
+Öncelikle küresel ölçekte dış ticaret ve kurumsal yapı arasındaki dinamikleri sınamak amacıyla, tüm ülkeleri (gelişmiş ve gelişmekte olan) kapsayan genel temel model tahmin edilmiştir. Bu analizde, ihracat performansının temel makroekonomik belirleyicileri olarak ülke içi kapasite ($ln\_gsyh$) ve reel rekabet gücü ($ln\_reer$) merkeze alınmış; şoklara karşı koruyucu kalkan olarak ise hukukun üstünlüğü endeksinin düzenleyici (moderatör) rolü test edilmiştir.
+
+Aşağıda sunulan Tablo 2, söz konusu genel örneklem üzerinden elde edilen Sabit Etkiler regresyon katsayılarını ve önemlilik düzeylerini göstermektedir:
+
+```{r}
+#| label: tbl-regression
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(modelsummary)
+
+models <- list(
+  "Tüm Ülkeler"             = model_politik,
+  "Gelişmekte Olan Ülkeler" = model_em
+)
+
+modelsummary(
+  models,
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  title      = "Tablo 2: Panel Sabit Etkiler Regresyon Sonuçları",
+  coef_rename = c(
+    "ln_reer"       = "ln(REER)",
+    "hukuk"         = "Hukukun Üstünlüğü",
+    "ln_gsyh"       = "ln(GSYH)",
+    "ln_reer:hukuk" = "ln(REER) × Hukuk"
+  ),
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  statistic  = "std.error",
+  output     = "html",
+  fmt        = 3,                    # 3 ondalık basamak
+  escape     = FALSE,
+
+  # Add rows (güvenli yöntem)
+  add_rows = data.frame(
+    term = c("R²", "Gözlem Sayısı", "Sabit Etkiler"),
+    `Tüm Ülkeler` = c(
+      round(summary(model_politik)$r.squared["rsq"], 3),
+      nobs(model_politik),
+      "Evet"
+    ),
+    `Gelişmekte Olan Ülkeler` = c(
+      round(summary(model_em)$r.squared["rsq"], 3),
+      nobs(model_em),
+      "Evet"
+    ),
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  ),
+
+  notes = "Not: Parantez içindeki değerler standart hatalardır. *** p<0,01, ** p<0,05, * p<0,1."
+)
+```
+
+Tüm ülkeleri kapsayan panel sabit etkiler modeli sonuçları, ihracat performansının temel belirleyicileri olarak reel döviz kuru ve iç ekonomik büyümeyi öne çıkarmaktadır. Tablo 2’de sunulan katsayılar incelendiğinde, $ln\_reer$ katsayısının negatif ve anlamlı olduğu (-0.111) görülmektedir. Bu bulgu, döviz kurundaki değerlenmenin ihracat rekabetçiliğini azalttığını doğrulamaktadır. Modelde kontrol değişkeni olarak yer alan $ln\_gsyh$ katsayısı (1.316), ihracatın belirlenmesinde en güçlü faktör olarak öne çıkmaktadır. Katsayının 1'den büyük olması, ölçek etkisinin ihracat arzı için belirleyici olduğunu göstermektedir. Ancak, tüm örneklem genelinde etkileşim terimi ($ln\_reer \times hukuk$) istatistiksel olarak anlamlı bir düzeye ulaşmamıştır (0.034). Bu durum, gelişmiş ve gelişmekte olan ülkeler arasındaki kurumsal olgunluk farklarının genel regresyon doğrusunu baskıladığını düşündürmektedir.
+
+### 4.2. Gelişmekte Olan Ülkeler ve Kurumsal Etkileşim Analizi
+
+Genel örneklemde elde edilen bu anlamsız etkileşim bulgusu, yapısal kırılganlıklara ve kurumsal boşluklara sahip ülkelerin (gelişmekte olan ekonomilerin) makroekonomik şoklara karşı farklı bir duyarlılık sergileyeceği ihtimalini gündeme getirmektedir. Çalışmanın özgün katkısını oluşturan gelişmekte olan ülkeler alt örneklemi üzerinden oluşturulan etkileşim modeli sonuçları Tablo 2’nin "Gelişmekte Olan Ülkeler" sütununda sunulmaktadır.
+
+Tablo 2’nin Gelişmekte Olan Ülkeler sütununda görüleceği üzere, hukukun üstünlüğü endeksinin döviz kuru hassasiyeti üzerindeki düzenleyici etkisini (moderator effect) test eden etkileşim terimi ($ln\_reer \times hukuk$) pozitif ve %5 düzeyinde anlamlıdır (`r round(coef(model_em)["ln_reer:hukuk"], 3)`). Bu kritik katsayı, makalenin ana hipotezini güçlü bir şekilde destekleyerek; hukukun üstünlüğündeki iyileşmelerin, döviz kuru artışlarının (değerlenme) ihracat üzerindeki negatif marjinal etkisini hafiflettiğini bilimsel olarak kanıtlamaktadır. Bir başka ifadeyle, kurumsal kapasite inşasını başaran gelişmekte olan ekonomiler, döviz kuru şoklarına karşı ihracat gelirlerini koruyabilen bir 'kurumsal kalkana' sahiptir. Model teşhisi (Hausman) bağlamında tüm analizler Sabit Etkiler'in üstünlüğünü (p\<0.01) doğrulamıştır.

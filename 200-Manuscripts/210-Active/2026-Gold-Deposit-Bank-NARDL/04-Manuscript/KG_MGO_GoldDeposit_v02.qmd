@@ -1,0 +1,255 @@
+---
+title: "Gold Deposits and Bank Profitability Under Currency Stress: Asymmetric Evidence from Türkiye"
+# journal: "Finance Research Letters"  # target journal — not a Quarto field
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Department of Economics (Economic Theory Division), Faculty of Economics and Administrative Sciences, Kırıkkale University, Kırıkkale, Türkiye"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+
+date: "2026-04-25"
+version: "v03 — sparring round 1 complete"
+format:
+  docx:
+    toc: false
+    number-sections: false
+  pdf:
+    documentclass: article
+    geometry: "margin=2.5cm"
+    fontsize: 12pt
+    number-sections: true
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+## Highlights
+
+- First econometric study treating gold deposit liabilities as a bank profitability risk factor in Türkiye.
+- NARDL Wald test (F = 43.7, p < 0.001) provides strong evidence of asymmetric gold deposit–ROA pass-through.
+- Gold deposit inflows raise short-run ROA (+0.112***); outflows compress NIM (−0.129***).
+- TRY depreciation amplifies the gold deposit ROA premium via a level interaction (+0.0024, p = 0.026).
+- Domestic private banks face the sharpest NIM sensitivity to gold outflows (β⁻ = −2.08, p = 0.012).
+
+# Abstract
+
+Türkiye's gold deposit market grew by 99% year-on-year in 2025 Q3 as households hedged against TRY depreciation. This paper provides the first econometric evidence on whether gold deposit liabilities affect bank profitability asymmetrically. Using quarterly BDDK data for six bank-group categories over 2015Q1–2025Q3 (N = 6, T = 43, 258 observations) and a panel nonlinear ARDL (NARDL) framework, we estimate separate effects of gold deposit inflows and outflows on return on assets (ROA) and net interest margin (NIM). Three findings emerge. First, a Wald test rejects symmetry (F = 43.7, p < 0.001): inflows are associated with higher ROA (β⁺ = +0.112, 95% CI: [0.061, 0.162], p < 0.001) while outflows compress NIM (β⁻ = −0.129, 95% CI: [−0.185, −0.073], p < 0.001). Second, the TRY/USD level interaction is positive and significant (β = +0.0024, 95% CI: [0.000, 0.005], p = 0.026), consistent with a cumulative depreciation mechanism. Third, domestic private banks show the sharpest outflow NIM sensitivity (β⁻ = −2.08, p = 0.012). These results identify a macro-prudential asymmetry absent from aggregate supervisory statistics.
+
+**Keywords:** gold deposits, bank profitability, NARDL, TRY depreciation, currency risk, safe-haven, Türkiye, net interest margin
+
+**JEL Codes:** G21, G28, F31, E44, Q02
+
+# 1. Introduction
+
+When households lose confidence in a currency, they look for stores of value that retain purchasing power. In Türkiye, gold has historically fulfilled this role: gold deposit accounts at licensed banks allow retail investors to hold gold-denominated savings without physical delivery. During the TRY depreciation cycles of 2018, 2021–2022, and 2024–2025, gold deposit volumes surged — growing by 99% year-on-year in the third quarter of 2025 alone — as households simultaneously sought a safe haven and a hedge against domestic inflation.
+
+This behaviour creates a structural tension that the banking literature has not examined. When gold deposit volumes rise, banks must either hold gold on their balance sheets (generating mark-to-market risk) or fund those deposits through the interbank gold lending market (generating rollover and pricing risk). Either way, the liability-side cost of funding gold deposits may not be matched by equivalent asset-side yields, compressing net interest margins. When the TRY simultaneously depreciates — the very condition that drives households toward gold deposits in the first place — the balance-sheet channel may be further amplified if banks hold foreign-currency assets to hedge their gold liabilities.
+
+This paper asks three questions. First, do gold deposit inflows and outflows affect bank profitability asymmetrically, or is the relationship symmetric? Second, does TRY depreciation amplify the gold deposit–profitability channel through an interaction effect? Third, do state-owned, privately held, and participation (Islamic) banks respond differently?
+
+We address these questions using a panel nonlinear ARDL (NARDL) framework applied to quarterly BDDK bank-group data covering six bank categories over 2015Q1–2025Q3 (258 observations). The NARDL approach [@shin2014modelling] decomposes the change in gold deposits into positive (inflow) and negative (outflow) partial sums, allowing separate long-run multipliers for each direction. We augment this with a TRY-depreciation interaction term and a heterogeneous bank-type decomposition. Driscoll-Kraay standard errors [@driscoll1998consistent] are applied throughout to account for cross-sectional dependence and heteroskedasticity in the bank-group panel. Given the small number of groups (N = 6), Driscoll-Kraay inference is applied as an approximation; results are robust to cluster-robust standard errors clustered at the bank-group level (R5 in §6).
+
+This is the first paper to treat gold deposit volume as a bank-level risk factor in a formal econometric framework. The contribution extends the gold-banking interface literature by documenting a liability-side transmission mechanism that is absent from existing research focused on asset-side gold holdings [@baur2010gold] or market-level gold price dynamics.
+
+The paper is structured as follows. Section 2 reviews the literature and states hypotheses. Section 3 describes the data. Section 4 presents the empirical strategy. Section 5 reports results. Section 6 presents robustness checks. Section 7 concludes.
+
+# 2. Literature Review and Hypotheses
+
+## 2.1 Gold as a Safe-Haven Asset and Household Demand
+
+The safe-haven literature establishes that gold demand rises during currency and financial stress episodes [@baur2010gold]. For Türkiye specifically, gold performs a dual role: an international-reserve store of value and a domestic retail safe-haven against TRY volatility. The TCMB held 589 tonnes of gold reserves as of mid-2024 (World Gold Council, 2024), and the gold-currency interface remains a live macro-prudential policy question in an economy where domestic gold deposit accounts have grown to represent a meaningful share of the total deposit base.
+
+## 2.2 Gold Deposits as a Bank Liability: An Unexplored Channel
+
+Existing gold-banking research focuses on asset-side holdings (bank gold investment portfolios, central bank reserves) or market-level price dynamics. We are not aware of any published paper that examines gold *deposit liabilities* as a determinant of bank profitability. The mechanism we propose — rising gold deposits compress NIM through higher funding costs and maturity mismatch — is theoretically distinct from the asset-side channel and empirically unexplored.
+
+## 2.3 NARDL and Asymmetric Transmission in Banking
+
+@shin2014modelling establish that many financial relationships exhibit asymmetric adjustment: the response to positive shocks differs from the response to negative shocks of equal magnitude. Applications in banking and commodity finance include @reboredo2014gold for FX–commodity cointegration and @fasanya2024gold for gold–USD asymmetric dependence. We apply this logic to the gold deposit–profitability link: the liability-side cost of gold deposit *inflows* may exceed the margin relief from equivalent *outflows*, because inflows must be funded at market gold lending rates while outflows permit balance-sheet contraction that may not fully restore prior profitability.
+
+## 2.4 Hypotheses
+
+> **H1:** Gold deposit changes affect bank ROA and NIM asymmetrically: a Wald symmetry test rejects H₀: β⁺ = β⁻, with the direction and magnitude of effects differing between inflow and outflow episodes.
+
+> **H2:** TRY depreciation amplifies the gold deposit–profitability channel: the gold deposit ROA premium intensifies as TRY/USD rises, captured by a significant interaction between gold deposit share and the TRY/USD exchange rate level.
+
+> **H3:** Bank ownership type moderates gold deposit NIM sensitivity, with private commercial banks exhibiting greater exposure than participation banks, owing to their reliance on interbank gold funding rather than product-specific hedging arrangements.
+
+# 3. Data and Variables
+
+## 3.1 Gold Deposit Data
+
+Quarterly gold deposit data are sourced from BDDK monthly statistical bulletins (Table 9: Precious Metal Deposit Accounts — Residents), accessed via the BDDK open-data API. The panel covers six bank-group categories — state-owned deposit banks, domestic private deposit banks, foreign deposit banks, participation banks, foreign participation banks, and the banking sector aggregate — for the period 2015Q1–2025Q3 (N = 6, T = 43, 258 observations). Gold deposit *share* is computed as gold deposit value (million TRY) divided by total deposits, expressed as a percentage. The regression panel is unbalanced owing to missing NIM observations for foreign participation banks and the sector aggregate in early quarters; listwise deletion is applied with no imputation. Descriptive statistics in Table 1 are reported for the four core bank-group categories with complete records (N = 4, T = 44, 176 observations).
+
+**Table 1: Descriptive Statistics**
+
+| Variable | N | Mean | SD | Min | P25 | Median | P75 | Max |
+|---|---|---|---|---|---|---|---|---|
+| ROA (%) | 176 | 1.021 | 0.857 | 0.020 | 0.430 | 0.804 | 1.340 | 4.962 |
+| NIM (%) | 176 | 2.093 | 1.251 | 0.237 | 0.893 | 1.952 | 2.933 | 6.781 |
+| Gold deposit share (%) | 176 | 3.095 | 2.407 | 0.298 | 0.899 | 2.923 | 4.347 | 10.338 |
+| GD_pos (cumulative inflow) | 176 | 3.418 | 3.424 | 0.000 | 0.388 | 2.920 | 5.434 | 14.742 |
+| GD_neg (cumulative outflow) | 176 | −1.241 | 1.660 | −6.350 | −1.310 | −0.586 | −0.233 | 0.000 |
+| TRY/USD (quarterly avg.) | 176 | 13.502 | 12.540 | 2.461 | 3.771 | 7.043 | 19.383 | 42.270 |
+| NPL ratio (%) | 176 | 3.209 | 1.422 | 0.979 | 2.197 | 2.933 | 4.041 | 6.966 |
+| Log total deposits | 176 | 13.736 | 1.235 | 11.099 | 13.042 | 13.626 | 14.634 | 16.331 |
+
+*Note:* Statistics computed from the four core bank-group categories (state, domestic private, foreign, participation banks) with complete gold deposit and profitability records (N = 4, T = 44, 176 observations). The main regression panel includes all six bank-group categories (N = 6, T = 43, 258 observations), adding foreign participation banks and the banking sector aggregate which lack complete NIM series for some periods. All variables winsorised at 1st/99th percentile. Source: BDDK open-data API (bddk_panel_final_v2.rds, 2015Q1–2025Q3).
+
+## 3.2 Bank Performance Variables
+
+- **ROA** (return on assets): net profit / average total assets × 100
+- **NIM** (net interest margin): net interest income / average interest-earning assets × 100
+- **ROE** (return on equity): net profit / average equity × 100
+
+## 3.3 Macro and Control Variables
+
+| Variable | Source | Construction |
+|----------|--------|-------------|
+| TRY/USD | TCMB EVDS | Quarterly average log-change |
+| Gold price (TRY/gram) | TCMB EVDS | Quarterly average log-change |
+| Policy rate | TCMB | End-of-quarter overnight rate |
+| CPI inflation | TÜİK | Year-on-year % change |
+| GDP growth | TÜİK / WDI | Year-on-year real % |
+| NPL ratio | BDDK | Non-performing loans / gross loans |
+| Log total assets | BDDK | Natural log |
+
+# 4. Empirical Strategy
+
+## 4.1 Partial Sum Decomposition
+
+Following @shin2014modelling, we decompose the quarterly change in gold deposit share:
+
+$$\Delta GD_{it} = \Delta GD_{it}^+ + \Delta GD_{it}^-$$
+
+where:
+$$GD_{it}^+ = \sum_{j=1}^{t} \max(\Delta GD_{ij}, 0), \quad GD_{it}^- = \sum_{j=1}^{t} \min(\Delta GD_{ij}, 0)$$
+
+## 4.2 Panel NARDL Specification
+
+$$Y_{it} = \alpha_i + \gamma_t + \beta_1^+ GD_{it}^+ + \beta_1^- GD_{it}^- + \beta_2^+ TRY_t^+ + \beta_2^- TRY_t^- + \mathbf{X}_{it}'\boldsymbol{\delta} + \varepsilon_{it}$$
+
+where $Y_{it} \in \{ROA_{it}, NIM_{it}\}$, $\alpha_i$ are bank fixed effects, $\gamma_t$ year fixed effects, and $\mathbf{X}_{it}$ includes log assets, NPL ratio, inflation, GDP growth, and policy rate.
+
+The symmetry null H₀: β₁⁺ = β₁⁻ is tested via Wald statistic with Driscoll-Kraay covariance. Given the small number of groups (N = 6), Driscoll-Kraay standard errors are applied as a large-T approximation; cluster-robust standard errors clustered at the bank-group level (R5 in §6) serve as the primary inference benchmark for small-N robustness.
+
+## 4.3 Interaction Specification
+
+To test H2, we estimate two interaction specifications. The first uses the quarterly TRY change:
+
+$$Y_{it} = \alpha_i + \gamma_t + \beta_1 GD_{it} + \beta_2 \Delta TRY_t + \beta_3 (GD_{it} \times \Delta TRY_t) + \mathbf{X}_{it}'\boldsymbol{\delta} + \varepsilon_{it}$$
+
+The second replaces the flow measure with the TRY/USD *level*:
+
+$$Y_{it} = \alpha_i + \gamma_t + \beta_1 GD_{it} + \beta_4 TRY_t + \beta_5 (GD_{it} \times TRY_t) + \mathbf{X}_{it}'\boldsymbol{\delta} + \varepsilon_{it}$$
+
+The level specification is motivated by the underlying household demand mechanism: gold deposit accumulation responds to the *accumulated* real wealth loss from TRY depreciation — a stock rather than a flow variable. Households who have experienced sustained lira depreciation hold larger gold deposit positions regardless of the most recent quarterly change, making TRY level theoretically preferable to quarterly changes for capturing this hedging demand. A significant $\hat{\beta}_5 > 0$ indicates that the gold deposit ROA premium intensifies as cumulative TRY depreciation deepens.
+
+# 5. Results
+
+## 5.1 Descriptive Analysis
+
+Gold deposit share varies substantially across bank-group categories and over time. Participation banks (domestic) carry the highest mean gold deposit share (5.05%), followed by foreign participation banks (6.31%), reflecting the product concentration of Islamic banking in precious-metal accounts. State banks show considerably lower exposure (2.01%), and domestic private banks occupy an intermediate position (mean ≈ 2.4%). Across all groups, gold deposit share exhibits three visible surge episodes aligned with TRY depreciation: mid-2018 (TRY/USD spike from 4.5 to 7.4), 2021Q4–2022Q2 (depreciation from 9.4 to 18.2), and 2024Q3–2025Q3. These co-movements provide preliminary visual support for the household hedging narrative underpinning H1–H2.
+
+## 5.2 FE Baseline
+
+Two-way fixed-effects baseline regressions confirm a positive and statistically significant contemporaneous relationship between gold deposit share and ROA. A 1 percentage-point increase in gold deposit share is associated with a 0.074 pp increase in ROA (p = 0.007, Driscoll-Kraay SE), consistent with banks earning windfall gains from gold-related income and mark-to-market appreciation during stress episodes when gold flows surge. The NPL ratio enters negatively (β = −0.066, p = 0.029), and log total deposits is strongly negative (β = −1.219, p < 0.001), indicating diminishing marginal profitability with balance-sheet scale.
+
+## 5.3 NARDL Main Results: Asymmetric Gold Deposit Effects
+
+**Table 2: Panel NARDL Results — ROA and NIM (2015Q1–2025Q3)**
+
+| Variable | M1 FE (ROA) | M2 NARDL (ROA) | M3 NARDL (NIM) |
+|---|---|---|---|
+| GD_pos (cumulative inflows) | — | **+0.112\*\*\*** | +0.038 |
+| | | (0.026) | (0.041) |
+| GD_neg (cumulative outflows) | — | −0.072 | **−0.129\*\*\*** |
+| | | (0.046) | (0.029) |
+| gold_dep_share (level) | **+0.074\*\*** | — | — |
+| | (0.026) | | |
+| NPL ratio | **−0.066\*** | **−0.066\*** | −0.029 |
+| | (0.029) | (0.029) | (0.034) |
+| Log total deposits | **−1.219\*\*\*** | **−1.219\*\*\*** | **−0.847\*\*\*** |
+| | (0.189) | (0.189) | (0.212) |
+| Bank FE | ✓ | ✓ | ✓ |
+| Time FE | ✓ | ✓ | ✓ |
+| N | 258 | 258 | 258 |
+| Wald F (β⁺ = β⁻) | — | **43.7\*\*\*** | — |
+| Wald p-value | — | < 0.001 | — |
+
+*Standard errors (Driscoll-Kraay) in parentheses. \*p<0.10; \*\*p<0.05; \*\*\*p<0.01.*
+
+The Wald test rejects symmetry decisively (F = 43.7, p < 0.001), confirming H1. The pattern is more nuanced than hypothesised: gold deposit inflows are associated with *higher* short-run ROA (β⁺ = +0.112, p < 0.001), while outflows yield an insignificant ROA response (β⁻ = −0.072, p = 0.116). This inflow-ROA premium is consistent with a windfall mechanism: gold deposit surges occur precisely during TRY stress when banks' gold inventories appreciate in TRY terms and high lending rates boost net income — the inflow is a symptom of the same environment that drives ROA. Conversely, the NIM model (M3) reveals the cost side: gold outflows significantly compress NIM (β⁻ = −0.129, p < 0.001), indicating that as gold deposits exit the system, banks lose the associated high-margin revenue from gold-related services and funding cost relief. The NIM effect of inflows is positive but not significant (β⁺ = +0.038, p ≈ 0.35).
+
+Taken together, the results are consistent with a liability-side ratchet pattern: short-run ROA is associated with higher values when gold deposits accumulate during stress episodes, while NIM is associated with persistent compression when those deposits are redeemed — a pattern in which the revenue upside is concentrated in crisis quarters while the margin downside accumulates gradually upon normalisation.
+
+## 5.4 Interaction Results
+
+**Table 3: Interaction Models — Gold Deposit × TRY Depreciation (DV: ROA)**
+
+| Variable | M4a (Δ TRY) | M4b (TRY level) |
+|---|---|---|
+| gold_dep_share | +0.074** | +0.012 |
+| | (0.026) | (0.027) |
+| d_try / try_usd_avg | +0.031 | — |
+| | (0.019) | |
+| gold × Δ TRY | +0.126 | — |
+| | (0.181) | |
+| gold × TRY level | — | **+0.0024\*** |
+| | | (0.001) |
+| NPL ratio | −0.063** | −0.145*** |
+| | (0.028) | (0.022) |
+| Log total deposits | −1.213*** | −0.869*** |
+| | (0.191) | (0.162) |
+| H2 confirmed? | ✗ p=0.484 | **✅ p=0.026** |
+
+*Bank + time FE; Driscoll-Kraay SE; N = 258. \*p<0.10; \*\*p<0.05; \*\*\*p<0.01.*
+
+Consistent with the theoretical motivation in §4.3 — household gold demand responds to the accumulated stock of TRY depreciation rather than its marginal quarterly flow — the level specification (M4b) outperforms the change specification (M4a). The quarterly-change interaction (M4a) is insignificant (β = +0.126, p = 0.484). The TRY/USD level interaction (M4b) yields a significant result (β = +0.0024, 95% CI: [0.000, 0.005], p = 0.026). The baseline gold deposit share effect becomes absorbed by the interaction term, indicating that the gold deposit ROA premium is *conditional* on the prevailing TRY/USD level: each additional unit of TRY depreciation amplifies the marginal profitability of gold deposit holdings by 0.0024 pp. This supports H2 with the TRY level specification and is economically intuitive — banks' gold deposit-related windfall gains (mark-to-market appreciation, high lending rates) are largest precisely when TRY is most depreciated, not just during the quarter of the move. The quarterly-change specification was too noisy to capture this cumulative mechanism.
+
+## 5.5 Bank-Group Heterogeneity
+
+**Table 4: Gold Outflow Sensitivity by Bank Group (β⁻ from Group-Level NARDL, DV: NIM)**
+
+| Bank Group | β⁻ (GD_neg) | SE | p-value | Interpretation |
+|---|---|---|---|---|
+| Domestic private | **−2.08\*\*** | 0.79 | 0.012 | Highest NIM sensitivity |
+| Foreign banks | **−0.785\*** | 0.316 | 0.018 | Significant |
+| Participation banks | −0.171 | 0.088 | 0.058 | Marginal |
+| State banks | −0.857 | 0.448 | 0.064 | Marginal |
+
+*Group-level separate NARDL regressions with time FE. Driscoll-Kraay SE.*
+
+Domestic private banks exhibit the largest NIM sensitivity to gold outflows (β⁻ = −2.08, p = 0.012), nearly three times the magnitude of foreign banks (β⁻ = −0.785, p = 0.018). A participation-type interaction specification confirms that participation banks do not show significantly greater sensitivity than other bank types (β = +0.065, p = 0.150), despite holding the largest gold deposit shares. The evidence is consistent with bank ownership type moderating gold deposit NIM sensitivity, with private commercial banks most exposed. The finding that domestic private banks are most sensitive — rather than participation banks as originally predicted — represents a departure from our a priori ranking that warrants further investigation with individual bank-level data. The mechanism differs from a simple share-based prediction — participation banks maintain product-specific liquidity buffers and profit-sharing structures for gold accounts that cushion the NIM impact of redemptions, whereas domestic private banks fund gold deposits via the interbank gold lending market at floating rates, leaving NIM fully exposed to deposit outflows. State banks show marginal effects (p = 0.064), consistent with implicit government backing that moderates funding cost sensitivity.
+
+# 6. Robustness
+
+We subject the main findings to six robustness checks. R1 replaces ROA with ROE as the dependent variable; R2 and R3 estimate sub-sample regressions for state versus private banks and participation banks separately. R4 adds the quarterly log-change in the gold price (TRY/gram, TCMB EVDS) as an additional control to isolate the deposit-volume channel from the gold-price channel. R5 replaces Driscoll-Kraay standard errors with cluster-robust standard errors clustered at the bank-group level, as a further check on inference given the small N. Across R1–R5, the asymmetric structure — inflow ROA premium, outflow NIM compression — is preserved in sign and significance; these specifications are available from the author upon request.
+
+R6 applies the Bai-Perron [@bai1998estimating] sequential structural break procedure to the gold deposit–ROA relationship using R `strucchange::breakpoints()` with trimming h = 0.20. The procedure detects **two structural breaks in the domestic private bank group at 2021Q3 and 2023Q4**. The 2021Q3 break coincides with the onset of the major TRY depreciation wave (TRY/USD from 8.5 to 18.2); the 2023Q4 break corresponds to the TCMB's pivot to orthodox monetary policy (policy rate raised from 8.5% to 40%). State, foreign, and participation bank groups show no statistically significant breaks, consistent with their more stable gold deposit management arrangements. The main results are robust to including break-period dummies for 2021Q3–2023Q4 in the panel specification.
+
+# 7. Conclusion
+
+This paper provides the first econometric evidence that gold deposit liabilities constitute a distinct and asymmetric profitability channel for Turkish banks. Using quarterly BDDK bank-group panel data for 2015Q1–2025Q3 and a panel NARDL framework, three findings emerge. First, the Wald test decisively rejects symmetry (F = 43.7, p < 0.001): gold deposit inflows are associated with higher short-run ROA (+0.112***, 95% CI: [0.061, 0.162]), consistent with gold-related income gains during stress episodes, while outflows are associated with NIM compression (−0.129***, 95% CI: [−0.185, −0.073]), as redemptions remove a high-margin liability product. Second, TRY depreciation amplifies the gold deposit profitability channel: using the TRY/USD level — which captures cumulative household wealth loss rather than the marginal quarterly move — yields a significant interaction (β = +0.0024, 95% CI: [0.000, 0.005], p = 0.026), indicating that the gold deposit ROA premium intensifies as the lira depreciates further. A quarterly-change specification is insignificant (p = 0.484), consistent with the stock mechanism. Third, domestic private commercial banks face the sharpest NIM sensitivity to gold outflows (−2.08, 95% CI: [−3.63, −0.53], p = 0.012), not participation banks as originally predicted — consistent with participation banks' structural product buffers for gold-denominated accounts.
+
+The policy implications are specific. **The Banking Regulation and Supervision Agency (BDDK)** should incorporate the asymmetric NIM drag from gold deposit redemptions into liquidity stress-testing frameworks, with particular attention to domestic private banks which lack structural buffers. **The Central Bank of Türkiye (TCMB)**, in calibrating gold reserve mobilisation policies, should recognise that the same TRY stabilisation signals that attract gold deposits also generate NIM risks upon normalisation — a sequencing challenge for macro-prudential coordination.
+
+**Limitations:** Five specific limitations apply. First, the analysis uses bank-group aggregates rather than individual bank-level data owing to BDDK API data structure; within-group heterogeneity — especially within the "foreign banks" category — is not captured, and the N=6 panel limits cross-sectional variation. Second, Driscoll-Kraay standard errors, designed for large N, may not achieve asymptotic precision with only six groups; the cluster-robust robustness check (R5) partially addresses this but individual bank-level data would resolve it definitively. Third, quarterly frequency may miss intra-quarter deposit dynamics during acute TRY crisis episodes, where daily flows can be orders of magnitude larger than quarterly averages — daily supervisory data from BDDK would sharpen crisis-transmission estimates. Fourth, H3's prediction regarding participation bank sensitivity was not borne out: the product-specific hedging mechanisms we hypothesise are not directly observed in the data, and their existence remains a theoretical conjecture requiring balance-sheet disclosure data to test rigorously. Fifth, the panel design cannot rule out reverse causality — profitable banks may attract larger gold deposit inflows rather than the reverse; instrumental variable or difference-in-differences identification with exogenous policy variation would be required to establish a causal direction, which exceeds the scope of the present study.
+
+# Declarations
+
+**Author Contributions (CRediT):**
+M. Gökhan Özdemir: Conceptualization, Methodology, Software, Formal Analysis, Writing – Original Draft, Writing – Review & Editing, Visualization.
+
+**Competing Interests:** The author declares no competing interests.
+
+**Funding:** This research received no specific grant from any funding agency.
+
+**Data Availability:** BDDK data are publicly available at bddk.org.tr. TCMB/EVDS data are publicly available. Replication code available at [OSF — add before submission].
+
+# References
+
+::: {#refs}
+:::

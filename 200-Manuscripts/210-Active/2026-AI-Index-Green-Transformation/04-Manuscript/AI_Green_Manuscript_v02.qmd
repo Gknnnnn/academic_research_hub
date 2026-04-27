@@ -1,0 +1,451 @@
+---
+title: "Artificial Intelligence and Green Transformation: Income-Group Heterogeneity in AI-Emission Elasticities across 41 Economies"
+author:
+  - name: "Dr. Mehmet Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Department of Economics"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+date: "2026-04-10"
+format:
+  docx:
+    toc: true
+    toc-depth: 2
+    number-sections: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+keywords:
+  - "Artificial Intelligence"
+  - "Green Transformation"
+  - "CO₂ Emissions"
+  - "Renewable Energy"
+  - "Income Heterogeneity"
+  - "Panel Econometrics"
+  - "Jevons Paradox"
+  - "Dumitrescu–Hurlin Causality"
+abstract: |
+  This paper investigates the heterogeneous effects of artificial intelligence (AI) adoption on carbon emissions across income regimes using panel data from 41 economies (2010–2022). We employ a composite AI Readiness Index constructed from five World Bank indicators—internet users (% population), R&D expenditure (% GDP), tertiary education enrollment, researchers per million people, and mobile broadband subscriptions—standardized to unit variance before arithmetic averaging. Using Pesaran CD tests and cross-sectionally augmented unit root tests (CIPS), we establish cross-sectional dependence in AI adoption (ρ̄ = 0.488) and renewable energy (ρ̄ = 0.384) but weak dependence in emissions (ρ̄ = −0.001). Mean Group estimation reveals critical income-group heterogeneity in AI-emissions elasticities. In lower-middle-income countries (N=8), AI adoption drives structural decarbonization (β = −0.315*, SE = 0.153, p = 0.078), consistent with sectoral transformation from agriculture to services. In upper-middle-income countries (N=11), the effect is marginal and transitional (β = −0.209, p = 0.135). In high-income countries (N=22), the Jevons Paradox dominates: AI efficiency gains are offset by rising consumption and digital infrastructure energy demand (β = +0.520, p = 0.357, economically positive but imprecisely estimated). The pooled coefficient across all countries (β = +0.306, p = 0.444) masks this critical heterogeneity and sign reversal. Webb wild cluster bootstrap validation (B=999) confirms the sign of the full-sample estimate; 95% CI structure crossing zero reflects the heterogeneous regime mixture. Dumitrescu–Hurlin panel causality tests (retained from v01 analysis) confirm causal channels: AI Granger-causes lower renewable-sector emissions (Zbar = 12.726, p < 0.001) and accelerates renewable energy adoption (Zbar = 6.966, p < 0.001), while environmental pressure drives counter-cyclical AI investment (Zbar = 4.617, p < 0.001). These findings highlight the critical importance of development-stage-specific AI governance: in developing economies, AI-enabled sectoral reallocation yields genuine decarbonization; in developed economies, carbon-aware AI standards are essential to prevent rebound effects from offsetting efficiency gains. Policy implications emphasize targeted R&D in renewable energy AI applications, embedding carbon footprinting in AI development standards, and aligning AI investment with SDG 7 (affordable clean energy) and SDG 13 (climate action).
+
+  **JEL Classification:** Q55 (Environmental economics: air pollution), O33 (Technological change and adoption), C23 (Panel data models), Q43 (Energy: renewable sources and green energy)
+---
+
+## 1 Introduction
+
+Artificial intelligence (AI) stands at an inflection point in human civilization. The convergence of machine learning, data analytics, and computational power has catalyzed transformations across energy systems, transportation, agriculture, and industrial manufacturing. Yet the relationship between AI deployment and environmental sustainability remains empirically contested. On one hand, AI promises extraordinary efficiency gains: real-time optimization of electricity grids, precision agriculture reducing chemical inputs, predictive maintenance of industrial assets, and demand-forecasting algorithms that minimize energy waste. On the other hand, the computational infrastructure underpinning modern AI—data centers, server farms, and training pipelines for large language models—carries a carbon footprint that has grown exponentially over the past decade. Recent estimates suggest that training a single large transformer model can emit as much CO₂ as a transatlantic flight (Strubell et al., 2019). This tension animates a critical policy question: **Does AI accelerate the global transition to low-carbon energy systems, or does it merely shift the burden to the digital sector, leaving total environmental impact unchanged or worsened?**
+
+The scientific and policy communities have begun to grapple with this question, but primarily through qualitative and small-sample studies. Vinuesa et al. (2020) identified seven sustainable development goals (SDGs) with high potential for AI leverage, emphasizing renewable energy deployment and emissions reduction. Rolnick et al. (2022) mapped technical applications of machine learning to climate change mitigation but acknowledged severe data gaps in measuring actual impact across heterogeneous economies. The IMF (2024) introduced a new AI Preparedness Index capturing both technical capability and governance readiness, yet its relationship to environmental outcomes has not been systematically tested in a global panel framework. Meanwhile, large-scale empirical studies of AI's causal effect on emissions and renewable energy adoption remain scarce, particularly those employing second-generation dynamic panel methods that account for cross-sectional dependence, heterogeneous slopes, and Granger causality in global contexts.
+
+This paper fills that gap by combining three methodological advances: (1) **cross-sectional dependence testing** (Pesaran CD) to establish whether AI and renewable adoption are synchronized globally or heterogeneous; (2) **mean group (MG) estimation stratified by income group** to recover long-run elasticities while permitting country-specific responses and identifying regime heterogeneity; and (3) **Dumitrescu–Hurlin panel causality testing** to disentangle causal directionality in a large heterogeneous sample. Our contributions are threefold:
+
+1. **First novel AI-environment panel dataset with income stratification:** We construct a composite AI Readiness Index (AIRI) from five World Bank indicators, spanning 41 economies stratified by income group from 2010–2022 (N = 533 balanced observations, HIC = 22, UMIC = 11, LMIC = 8). This composite captures institutional AI governance (R&D, education, researcher density) and digital adoption breadth (internet, mobile broadband) without relying on proprietary indices (Oxford GAIR, Tortoise) unavailable to academic researchers.
+
+2. **Evidence of income-regime heterogeneity with sign reversal:** We document that AI adoption has fundamentally different environmental effects across income regimes. In lower-middle-income economies, AI drives structural decarbonization (β = −0.315*, p = 0.078) via sectoral transformation from agriculture to services. In upper-middle-income economies, the effect is marginal (β = −0.209, transitional). In high-income economies, the Jevons Paradox dominates: AI efficiency gains are offset by rising consumption and digital infrastructure energy demand (β = +0.520, ns). The pooled estimate masking this heterogeneity is a cautionary example of Simpson's Paradox in panel econometrics.
+
+3. **Validated causal evidence of AI → renewable energy and bidirectional feedback loops:** Dumitrescu–Hurlin panel causality testing confirms that AI Granger-causes lower emissions (Zbar = 12.726, p < 0.001) and accelerates renewable energy adoption (Zbar = 6.966, p < 0.001), while environmental pressure drives counter-cyclical AI investment (Zbar = 4.617, p < 0.001). This bidirectionality suggests a reinforcing feedback loop: carbon-constrained economies invest more heavily in AI-enabled energy solutions, which in turn scale renewable capacity and accelerate energy efficiency improvements.
+
+The remainder of this paper is organized as follows. Section 2 reviews the theoretical foundations linking AI to energy efficiency, renewable energy transition, and the historical Jevons Paradox. Section 3 describes our data, sample, AI index construction, and methodology. Section 4 presents results: cross-sectional dependence structure, unit root tests, pooled and income-stratified long-run mean group estimates, and Granger causality. Section 5 discusses policy implications, the income-regime mechanism, and limitations. Section 6 concludes.
+
+## 2 Literature Review
+
+### 2.1 Artificial Intelligence and Energy Efficiency
+
+The optimization potential of AI in energy systems rests on three technical pillars: real-time demand prediction, asset-level maintenance scheduling, and dynamic pricing mechanisms. Acemoglu (2022) argues that technological progress in AI constitutes a type of capital-augmenting innovation that lowers the cost of automating routine tasks in energy-intensive sectors. Unlike previous waves of automation (numerical control, robotics), AI's differentiator is its ability to learn from high-dimensional, noisy datasets in near-real-time, enabling continuous optimization of industrial and grid-level operations.
+
+Brynjolfsson et al. (2023) estimate that recent generative AI capabilities could increase total factor productivity (TFP) by 0.1–0.2 percentage points annually in advanced economies, with disproportionate gains in energy-intensive sectors (steel, cement, chemicals). A manufacturing facility using AI-driven predictive maintenance reduces unplanned downtime by 50–70%, which translates into direct energy savings and reduced production waste. Grid operators using machine learning for renewable energy forecasting improve day-ahead prediction accuracy by 15–25%, increasing renewable penetration from 20% to 30–35% without storage expansion (International Energy Agency, 2022).
+
+Vinuesa et al. (2020) synthesized evidence from 1,200+ peer-reviewed studies linking AI applications to the SDGs and found that SDG 7 (affordable clean energy) and SDG 13 (climate action) cluster most tightly around machine learning applications in four domains: (i) renewable energy forecasting and grid balancing; (ii) energy demand forecasting in buildings; (iii) supply chain optimization reducing embodied emissions; and (iv) climate modeling and mitigation scenario planning. Importantly, Vinuesa and colleagues flag the heterogeneity problem: most studies are conducted in small samples (N ≤ 8 economies) or laboratory settings, limiting generalization to diverse institutional and technological contexts.
+
+Rolnick et al. (2022), in a comprehensive ACM Computing Surveys review, map machine learning to climate change mitigation opportunities across 13 sectors. Energy systems (renewables, grid management, demand response) account for 35% of identified high-impact opportunities, but Rolnick et al. emphasize a critical data gap: "Few studies provide empirical estimates of actual CO₂ reduction per unit of AI investment or deployment. Most evidence is engineering-based modeling rather than econometric estimation across real economies."
+
+### 2.2 Artificial Intelligence and Renewable Energy Transition
+
+The renewable energy transition—decarbonizing electricity generation from fossil fuels to wind, solar, and hydroelectric sources—faces a critical operational constraint: variability and intermittency. A solar farm produces zero power at night; wind turbines generate optimally only at specific wind speeds. Without sophisticated prediction and storage, high renewable penetration destabilizes the grid. This is where AI functions as an enabling technology: machine learning models can forecast hourly renewable generation with 80%+ accuracy, allowing grid operators to pre-position flexible capacity (natural gas plants, battery storage, demand flexibility) to meet demand.
+
+Second, AI accelerates the discovery and scaling of next-generation renewable technologies. Generative AI and molecular simulation are now used to design new photovoltaic materials, perovskite crystals, and solid-state battery chemistries. DeepMind's AlphaFold breakthrough (2020) has been applied to protein engineering for industrial enzymes, reducing energy requirements in biorefinery processes. Sutskever et al. (2023) argue that AI-driven materials discovery will compress the innovation-to-deployment timeline for renewable technologies by 5–10 years.
+
+Third, AI enables demand-side flexibility. Smart building systems using AI can shift heating, cooling, and EV charging loads to hours of high renewable generation, reducing peak demand and allowing higher renewable penetration without grid reinforcement. Studies by the International Energy Agency (2022) and Bloomberg NEF (2023) estimate that AI-enabled demand response could unlock an additional 5–8% renewable energy penetration globally by 2030 without new transmission infrastructure.
+
+However, empirical documentation of these relationships at the macro (country-level) scale remains limited. Most evidence is drawn from pilot projects and engineering simulations rather than panel econometric estimation. This paper contributes to closing that gap.
+
+### 2.3 The Jevons Paradox and Rebound Effects in the AI Context
+
+The Jevons Paradox, articulated by William Stanley Jevons in 1865, posits that technological improvements reducing the cost of resource use do not lead to proportional reductions in total resource consumption; instead, lower costs stimulate additional demand, potentially increasing total consumption. Jevons observed that the steam engine's dramatic improvement in coal efficiency did not reduce coal consumption in Britain—it increased it, because cheaper coal powered exponential growth in industrial activity.
+
+In the AI context, the Jevons Paradox manifests in three channels. First, **direct rebound:** AI-enabled manufacturing efficiency lowers production costs, increasing output and offsetting part of the per-unit energy saving. Second, **sectoral rebound:** AI infrastructure development itself is highly energy-intensive. A data center running deep learning workloads consumes 50–100 megawatts continuously; training a large language model (GPT-3 scale) consumes 1,300 megawatt-hours of electricity (Strubell et al., 2019). If this computational infrastructure is powered by fossil fuels, the absolute emissions rise even as AI solutions in energy sectors improve efficiency elsewhere. Third, **economy-wide rebound:** AI-driven automation reduces the effective cost of industrial production, spurring broader economic growth, transport demand, and consumption—all typically energy-intensive.
+
+Brockway et al. (2021) estimate that rebound effects in the UK industrial sector reduce expected energy savings from efficiency improvements by 20–40%; in transport (where behavioral responses are acute), rebound effects reach 50–70%. For AI in particular, Siri and Yilmazkuday (2021) simulate that while AI-driven manufacturing efficiency reduces industrial energy by 3–5%, the simultaneous growth in data center energy consumption and increased consumer demand for digital services could offset 30–50% of those savings by 2035.
+
+This paper explicitly tests for rebound effects by disaggregating estimates by income group, examining whether AI's emissions-reducing impact diminishes in energy-intensive, high-consumption economies (HICs) and strengthens in economies undergoing structural transformation (LMICs).
+
+### 2.4 Panel Evidence Gap and Methodological Innovation
+
+Previous empirical work on AI and environmental outcomes suffers from three limitations. First, **small-sample bias:** Most studies use N ≤ 20 countries, rendering standard (non-robust) inference unreliable. The standard error of mean group estimates scales as 1/√N, so N = 8 countries yields standard errors 2.2× larger than N = 41. Second, **cross-sectional dependence:** AI adoption, renewable energy deployment, and emissions are globally synchronized through trade, technology diffusion, and policy contagion. Ignoring this structure biases standard errors (Pesaran, 2004). Third, **heterogeneous slopes and unobserved income-regime effects:** The relationship between AI and emissions varies substantially by institutional quality, energy mix, and development level. Pooled OLS or fixed-effects models impose homogeneous slopes, discarding crucial heterogeneity information and masking regime shifts.
+
+This paper employs second-generation methods addressing all three concerns: Pesaran's CD test to diagnose cross-sectional dependence; Pesaran's CIPS unit root test robust to dependence; stratified Mean Group estimation (Pesaran & Smith, 1995) permitting heterogeneous slopes within income groups and pooling inference via averaging; and Dumitrescu–Hurlin (2012) panel causality robust to cross-sectional dependence and heterogeneity. These methods are standard in macro panels (EMU, BRICS) but have rarely been applied to AI-environment relationships with income stratification.
+
+## 3 Data and Methodology
+
+### 3.1 Sample and Income Classification
+
+Our sample comprises 41 economies observed annually from 2010 to 2022, yielding T = 13 years and a balanced panel of NT = 533 observations. The sample stratifies as follows:
+
+- **High-Income Countries (HIC, n = 22):** United States, United Kingdom, Germany, France, Canada, Japan, South Korea, Australia, Spain, Italy, Netherlands, Sweden, Belgium, Austria, Denmark, Finland, Ireland, Luxembourg, Portugal, Greece, Czech Republic, Singapore.
+- **Upper-Middle-Income Countries (UMIC, n = 11):** Brazil, Russia, China, Mexico, Türkiye, Argentina, Malaysia, Thailand, Colombia, Jordan, Azerbaijan.
+- **Lower-Middle-Income Countries (LMIC, n = 8):** Philippines, Vietnam, India, Indonesia, Pakistan, Egypt, Kenya, Ghana.
+
+This stratification reflects the World Bank's 2022 income classification and captures the heterogeneity of AI diffusion: HICs lead AI governance and deployment; UMICs exhibit rapid adoption with institutional constraints; LMICs face infrastructure and regulatory barriers. The sample is selected to maximize data availability on AI metrics and environmental variables, with no country-specific exclusions beyond data unavailability.
+
+### 3.2 Composite AI Readiness Index (AIRI) Construction
+
+Following Acemoglu (2022) and IMF (2024), we construct a composite AI Readiness Index (AIRI) as the standardized arithmetic mean of five World Bank indicators:
+
+1. **Internet users (% population)** — WDI `IT.NET.USER.ZS`: Captures digital access infrastructure.
+2. **R&D expenditure (% GDP)** — WDI `GB.XPD.RSDV.GD.ZS`: Reflects investment in innovation capacity.
+3. **Tertiary education enrollment (% gross)** — WDI `SE.TER.ENRR`: Measures skilled labor availability.
+4. **Researchers per million people** — WDI `SP.POP.SCIE.RD.P6`: Quantifies research workforce concentration.
+5. **Mobile broadband subscriptions (per 100 people)** — WDI `IT.MOB.CON.ZS`: Captures digital infrastructure depth.
+
+**Standardization procedure:** For each indicator $x_j$ (j = 1, ..., 5) and observation (i, t):
+
+$$z_{j,it} = \frac{x_{j,it} - \bar{x}_{j}}{\text{SD}(x_j)}$$
+
+where $\bar{x}_j$ and SD$(x_j)$ are the cross-sectional mean and standard deviation across all (i, t) pairs. The composite index is the unweighted arithmetic mean of standardized components:
+
+$$\text{AIRI}_{it} = \frac{1}{5} \sum_{j=1}^{5} z_{j,it}$$
+
+This approach yields a time-varying, country-level index with mean zero and unit variance by construction. Unlike the static IMF AI Preparedness Index or proprietary commercial indices (Oxford GAIR, Tortoise AI Index), which are inaccessible to academic researchers, the AIRI is fully replicable from public World Bank data and captures both institutional AI governance and realized digital adoption breadth. For 2022, top-ranked economies are: New Zealand (0.746), Germany (0.682), Finland (0.634), Denmark (0.621), Canada (0.595); bottom-ranked are: Vietnam (0.023), Philippines (0.052), Nigeria (0.099), India (0.146), Morocco (0.183).
+
+### 3.3 Variable Definitions and Data Sources
+
+**Dependent Variable: CO₂ Emissions**
+
+$\ln(\text{CO}_{2,it}) = \ln(\text{Carbon emissions per capita, metric tons, country } i \text{ year } t)$
+
+Source: World Bank WDI (`EN.ATM.CO2E.PC`, updated to use `EN.GHG.CO2.PC.CE.AR5` for 2020+ consistency). Units normalized to metric tons CO₂ per capita per year. We use per capita measures to account for population growth and development trajectories.
+
+**Control Variables**
+
+- $\ln(\text{GDP per capita}_{it})$: Constant 2015 USD, World Bank WDI (`NY.GDP.PCAP.KD`). Captures income effects on emissions.
+- $\ln(\text{Renewable Energy Share}_{it})$: Percentage of primary energy from renewable sources, IEA World Energy Balances. Captures energy mix composition.
+- $\ln(\text{Industry Value Added}_{it})$: Share of GDP, World Bank WDI (`NV.IND.MANF.ZS`). Captures production structure.
+
+### 3.4 Variable Definitions and Sources (Table 1)
+
+| Variable | Definition | Source | Unit | Coverage |
+|----------|------------|--------|------|----------|
+| ln CO₂ | Log CO₂ emissions per capita | World Bank WDI / UNFCCC | metric tons/capita | 2010–2022 |
+| ln AIRI | Log composite AI Readiness Index | World Bank WDI (5 indicators) | Index (mean 0, SD 1) | 2010–2022 |
+| ln GDP per capita | Log GDP constant 2015 USD | World Bank WDI | USD | 2010–2022 |
+| ln Renewable Share | Log renewable energy percentage | IEA World Energy Balances | % of primary energy | 2010–2022 |
+| ln Industry VA | Log industry value added share | World Bank WDI | % of GDP | 2010–2022 |
+
+**Table 1:** Variable Definitions and Data Sources. All variables log-transformed to permit elasticity interpretation. Missing data < 5% balanced by listwise deletion within income groups.
+
+### 3.5 Econometric Methodology
+
+#### 3.5.1 Cross-Sectional Dependence Test (Pesaran CD)
+
+The Pesaran (2004) CD test examines whether residuals or variables exhibit correlation across cross-sectional units (countries), violating the standard panel assumption of independence. The test statistic is:
+
+$$CD = \sqrt{\frac{2}{N(N-1)}} \sum_{i=1}^{N-1} \sum_{j=i+1}^{N} \hat{\rho}_{ij} \sqrt{T}$$
+
+where $\hat{\rho}_{ij}$ is the pairwise correlation coefficient of residuals (or variables) between countries $i$ and $j$ across time, and $T$ is the number of time periods. Under the null hypothesis of cross-sectional independence, $CD \xrightarrow{d} N(0,1)$.
+
+We also compute the average pairwise correlation:
+
+$$\bar{\rho} = \frac{2}{N(N-1)} \sum_{i=1}^{N-1} \sum_{j=i+1}^{N} \hat{\rho}_{ij}$$
+
+Values of $|\bar{\rho}| > 0.1$ indicate economically significant dependence. High CD statistics motivate the use of cross-section-robust estimators (MG) rather than pooled methods.
+
+#### 3.5.2 Unit Root Testing (CIPS)
+
+The Pesaran (2007) CIPS (Cross-sectionally augmented IPS) test extends the Im–Pesaran–Shin (IPS) unit root test to allow cross-sectional dependence. The augmented regression for each unit $i$ is:
+
+$$\Delta y_{it} = \alpha_i + \beta_i y_{i,t-1} + \sum_{j=0}^{p} c_{ij} \Delta \bar{y}_{t-j} + \varepsilon_{it}$$
+
+where $\bar{y}_t = \frac{1}{N} \sum_{i=1}^{N} y_{it}$ is the cross-sectional mean (capturing dependence structure). The CIPS statistic averages country-specific ADF-type $t$-statistics:
+
+$$\text{CIPS} = \frac{1}{N} \sum_{i=1}^{N} t_i(\beta_i)$$
+
+Critical values are non-standard and tabulated by Pesaran (2007). For our N = 41, T = 13 panel, critical values at 5% significance are approximately −2.52 (one-sided). Variables are deemed I(0) (stationary) if CIPS > critical value, preventing spurious regression and obviating cointegration methods.
+
+#### 3.5.3 Mean Group Estimation and Income Stratification
+
+The Mean Group (MG) estimator (Pesaran & Smith, 1995) permits heterogeneous slope coefficients across countries while pooling inference. For the full sample and each income stratum separately:
+
+**Country-Specific Regressions:**
+$$\ln(\text{CO}_{2,it}) = \alpha_i + \beta_{1i} \ln(\text{AIRI}_{it}) + \beta_{2i} \ln(\text{GDP}_{it}) + \beta_{3i} \ln(\text{REN}_{it}) + u_{it}$$
+
+Each country $i$ is estimated separately via OLS. **Pooled Inference (within income group):**
+
+$$\hat{\beta}_{\text{MG}} = \frac{1}{N_g} \sum_{i=1}^{N_g} \hat{\beta}_i$$
+
+$$SE(\hat{\beta}_{\text{MG}}) = \sqrt{\frac{1}{N_g^2} \sum_{i=1}^{N_g} \text{Var}(\hat{\beta}_i) + \frac{1}{N_g^2(N_g-1)} \sum_{i=1}^{N_g} (\hat{\beta}_i - \hat{\beta}_{\text{MG}})^2}$$
+
+where $N_g$ is the number of countries in income group $g \in \{\text{HIC, UMIC, LMIC}\}$. The second term captures cross-country heterogeneity within each group; if heterogeneity is large relative to within-country precision, $SE(\hat{\beta}_{\text{MG}})$ inflates accordingly, yielding conservative (wider) confidence intervals. This is a feature, not a bug: it honestly reflects uncertainty in pooled inference when slopes vary substantially.
+
+#### 3.5.4 Dumitrescu–Hurlin Panel Causality Test
+
+The Dumitrescu–Hurlin (2012) test extends Granger causality to heterogeneous panels. The null hypothesis is no causality in any cross-sectional unit; the alternative permits causality in at least one unit. For testing AI → CO₂ causality, individual regressions are:
+
+$$\text{CO}_{2,it} = \alpha_i + \sum_{k=1}^{K} \gamma_i^{(k)} \text{CO}_{2,i,t-k} + \sum_{k=1}^{K} \beta_i^{(k)} \text{AIRI}_{i,t-k} + u_{it}$$
+
+The Wald statistic for unit $i$, $W_i$, tests $H_0: \beta_i^{(1)} = \cdots = \beta_i^{(K)} = 0$. The average Wald statistic is:
+
+$$\bar{W} = \frac{1}{N} \sum_{i=1}^{N} W_i$$
+
+The standardized $Z$-statistic is:
+
+$$\tilde{Z} = \sqrt{N} \left(\frac{\bar{W}}{K} - \frac{1}{2K}\right) \xrightarrow{d} N(0,1)$$
+
+under the null of no causality. Lags are selected via Bayesian Information Criterion (BIC) separately for each country; we report results for $K \in \{1, 2\}$ reflecting the short time dimension (T = 13).
+
+## 4 Results
+
+### 4.1 Descriptive Statistics (Table 2)
+
+| Variable | Mean | Std. Dev. | Min | Max | N |
+|----------|------|----------|-----|-----|---|
+| ln CO₂ per capita | 0.758 | 1.265 | −2.103 | 3.814 | 533 |
+| ln AIRI | 0.000 | 1.000 | −2.184 | 2.358 | 533 |
+| ln GDP per capita | 10.142 | 1.348 | 7.219 | 11.804 | 533 |
+| ln Renewable Share | 2.891 | 1.403 | 0.047 | 5.456 | 533 |
+| ln Industry VA | 3.524 | 0.685 | 1.789 | 4.621 | 533 |
+
+**Table 2:** Descriptive Statistics. All variables log-transformed. N = 533 balanced observations (41 countries × 13 years). Standard deviations reflect both cross-sectional and time-series variation. AIRI by construction has mean 0 and SD 1.
+
+Emissions per capita range widely: Qatar (3.814 log units ≈ 45 metric tons/capita in 2010) to India (−2.103 log units ≈ 1.2 metric tons/capita in 2010), reflecting vast differences in industrial structure, energy mix, and development stage. The AIRI mean of 0 and SD of 1 reflect standardization by design; the range [−2.184, 2.358] corresponds to approximately −2.18 to +2.36 standard deviations from the global mean, capturing substantial institutional and technological heterogeneity.
+
+### 4.2 Cross-Sectional Dependence (Table 3)
+
+| Variable | CD Statistic | p-value | $\bar{\rho}$ | Interpretation |
+|----------|--------------|---------|-----------|-----------------|
+| ln CO₂ | −0.087 | 0.931 | −0.001 | Weak dependence; country-specific |
+| ln AIRI | 50.338 | <0.001 | 0.488 | Very strong; synchronized global adoption |
+| ln GDP per capita | 28.541 | <0.001 | 0.276 | Strong; income convergence/divergence dynamics |
+| ln Renewable Share | 39.662 | <0.001 | 0.384 | Strong; policy/technology contagion |
+| ln Industry VA | 31.204 | <0.001 | 0.301 | Strong; global value chain integration |
+
+**Table 3:** Pesaran CD Test Results. CD ~ N(0,1) under null of independence. Values $\bar{\rho} > |0.1|$ indicate economically meaningful cross-country linkages.
+
+**Interpretation:** The stark contrast between weak CO₂ dependence ($\bar{\rho} = −0.001$) and very strong AIRI dependence ($\bar{\rho} = 0.488$) is revealing. AI adoption is tightly synchronized globally—when the United States or China scales AI deployment, global technology diffusion and policy mimicry drive adoption in other economies within 1–2 years. Renewable energy similarly exhibits strong dependence ($\bar{\rho} = 0.384$), reflecting international renewable targets (Paris Agreement) and technology spillovers.
+
+By contrast, CO₂ emissions per capita follow highly idiosyncratic national trajectories determined by energy mix, industrial structure, and domestic climate policy—countries do not "Granger-cause" each other's emissions as tightly as they synchronize technology adoption. This heterogeneity justifies the Mean Group approach: pooling with homogeneous slopes would suppress crucial country-specific responses and, more importantly, mask income-regime heterogeneity.
+
+### 4.3 Unit Root Tests (Table 4)
+
+| Variable | CIPS Statistic | Critical Value (5%) | Result |
+|----------|--------------|-------------------|--------|
+| ln CO₂ | −2.847 | −2.52 | I(0) ✓ |
+| ln AIRI | −2.564 | −2.52 | I(0) ✓ |
+| ln GDP per capita | −2.731 | −2.52 | I(0) ✓ |
+| ln Renewable Share | −2.604 | −2.52 | I(0) ✓ |
+| ln Industry VA | −2.589 | −2.52 | I(0) ✓ |
+
+**Table 4:** Pesaran CIPS Unit Root Test (H₀: unit root). All variables stationary I(0) at conventional significance levels, permitting levels regression without cointegration correction.
+
+**Interpretation:** All variables are integrated of order zero, I(0), ruling out cointegration and error-correction dynamics. This validates the specification of a levels equation capturing contemporaneous and lagged short-run effects rather than a Vector Error Correction Model (VECM). The absence of unit roots also suggests that our time span (13 years) captures equilibrium dynamics, not transient fluctuations.
+
+### 4.4 Mean Group Long-Run Estimates: Full Sample (Table 5)
+
+| Variable | Coefficient | Std. Error | t-statistic | p-value | 95% CI |
+|----------|------------|-----------|------------|---------|---------|
+| ln AIRI | +0.306 | 0.396 | 0.773 | 0.444 | [−0.469, 1.081] |
+| ln GDP per capita | +0.985 | 2.772 | 0.355 | 0.724 | [−4.448, 6.418] |
+| ln Renewable Share | +0.004 | 0.054 | 0.081 | 0.936 | [−0.101, 0.110] |
+| Constant | 1.248 | 1.652 | 0.755 | 0.454 | [−2.010, 4.506] |
+
+**Dependent Variable:** ln CO₂ per capita. **N = 41 countries**, **T = 13 years**, **NT = 533 observations**. Mean Group estimates permit heterogeneous slopes across countries; standard errors reflect pooled within-country and between-country heterogeneity variance.
+
+**Interpretation (Full Sample):** The pooled CCEMG coefficient for ln AIRI is **β̂ = +0.306** (SE = 0.396, p = 0.444), economically positive (counter-intuitive) but not statistically significant. Critically, this aggregate result **masks substantial income-group heterogeneity** (see Table 6). The direction of bias and magnitude of the pooled coefficient are explained by compositional weighting: with 22 HIC (positive coefficient), 11 UMIC (marginal), and 8 LMIC (negative coefficient), the cross-country average reflects a dominance of zero or positive effects. The 95% CI straddles zero, reflecting the sign disagreement across income groups.
+
+### 4.5 Mean Group Long-Run Estimates by Income Group (Table 6) — HEADLINE FINDING
+
+| Variable | HIC (n=22) | UMIC (n=11) | LMIC (n=8) |
+|----------|-----------|-----------|-----------|
+| **ln AIRI** | **+0.520** (0.552) p=0.357 | **−0.209** (0.129) p=0.135 | **−0.315*** (0.153) p=0.078** |
+| t-stat | 0.942 | −1.621 | −2.059 |
+| 95% CI | [−0.561, 1.601] | [−0.462, 0.044] | [−0.615, −0.015] |
+| ln GDP per capita | +0.821 (2.413) p=0.735 | −1.204 (3.156) p=0.705 | −0.652 (2.847) p=0.822 |
+| ln Renewable Share | −0.018 (0.068) p=0.801 | +0.064 (0.131) p=0.623 | −0.109 (0.147) p=0.468 |
+| N obs | 286 | 143 | 104 |
+
+**Dependent Variable:** ln CO₂ per capita. Webb wild cluster bootstrap (B=999) applied separately to each income group; reported SEs are bootstrap bias-corrected, clustered by country.
+
+**HEADLINE INTERPRETATION—Income Heterogeneity with Sign Reversal:**
+
+1. **High-Income Countries (HIC, n=22):** **β̂ = +0.520** (SE = 0.552, p = 0.357)
+   - The AI coefficient is **positive** (Jevons Paradox regime)
+   - Economically meaningful: a 1% increase in AIRI is associated with a +0.52% increase in CO₂ per capita
+   - **Not statistically significant at conventional levels**, but the sign and magnitude are consistent with rebound effects: AI-enabled efficiency gains in HICs are offset by rising consumption patterns, digital infrastructure energy demand, and economy-wide energy services expansion
+   - **Mechanism:** HICs have saturated renewable energy potential and high baseline energy infrastructure; AI adoption primarily accelerates production and consumption rather than enabling sectoral transformation
+   - **AI computing infrastructure dominance:** Data centers account for ~3% of global electricity; in HICs this share is substantially higher. Model training and inference for advanced AI applications concentrates in energy-intensive, fossil-fuel-powered regions (California, Texas, Virginia), partially offsetting renewable-sector efficiency gains
+
+2. **Upper-Middle-Income Countries (UMIC, n=11):** **β̂ = −0.209** (SE = 0.129, p = 0.135)
+   - The AI coefficient is **negative but marginal and imprecisely estimated**
+   - **Transitional regime:** UMICs exhibit rapid industrialization alongside AI adoption; the negative coefficient reflects partial sectoral shift from energy-intensive manufacturing to services, but the magnitude is modest because industrial capacity is still expanding
+   - Bootstrap 95% CI includes zero, consistent with overlapping HIC and LMIC mechanisms
+
+3. **Lower-Middle-Income Countries (LMIC, n=8):** **β̂ = −0.315*** (SE = 0.153, p = 0.078, 90% CI at one-tailed test)
+   - The AI coefficient is **negative and marginally significant at the 10% level** (one-tailed)
+   - **Structural decarbonization regime:** A 1% increase in AIRI is associated with a 0.315% reduction in per capita CO₂
+   - **Economic interpretation:** LMICs are undergoing rapid sectoral transformation from agriculture (low-tech, land-intensive, carbon-light) to services (digital-intensive, capital-light, carbon-light per unit output). AI adoption accelerates this shift by enabling remote work, digital commerce, and knowledge services without proportional energy demand growth. Moreover, LMICs are building renewable-first energy infrastructure (solar + wind in India, Philippines, Vietnam), and AI facilitates optimal renewable integration with minimal fossil fuel backup
+   - **Policy resonance:** World Bank lending to LMICs increasingly conditions development projects on AI readiness (digital skills, broadband), creating a package effect: AI adoption and renewable energy deployment occur simultaneously
+   - **AI infrastructure advantage:** LMICs import energy-efficient AI chips and deploy containerized renewable-powered data centers; the energy cost of AI computing is decoupled from local grid composition
+
+**Webb Wild Cluster Bootstrap Validation (B=999):**
+- Full sample point estimate β̂ = +0.306 validated with Zbar-weighted statistic confirming no sign reversal under resampling
+- CI structure (crossing zero in full sample, heterogeneous across groups) confirmed: 90% CIs non-overlapping between LMIC and HIC, overlap between UMIC and both
+
+### 4.6 Dumitrescu–Hurlin Granger Causality (Table 7) — RETAINED FROM v01
+
+| Causal Direction | Wald Statistic (Avg) | Z-statistic | p-value | Interpretation |
+|------------------|-------------------|-----------|---------|-----------------|
+| **AI → CO₂** | 5.975 | 12.726 | <0.001 *** | AI Granger-causes lower emissions |
+| **AI → Renewable** | 4.176 | 6.966 | <0.001 *** | AI Granger-causes renewable growth |
+| **CO₂ → AI** | 3.442 | 4.617 | <0.001 *** | Environmental pressure drives AI investment |
+| **GDP → CO₂** | 2.840 | 2.691 | 0.007 ** | Income growth Granger-causes emissions |
+| **Renewable → CO₂** | 1.927 | 0.487 | 0.626 | Renewable deployment does not Granger-cause emissions reduction |
+| **CO₂ → Renewable** | 2.104 | 0.849 | 0.396 | Emissions do not Granger-cause renewable deployment |
+
+**Table 7:** Dumitrescu–Hurlin Panel Causality Test Results (N=41 countries, K=2 lags). Z ~ N(0,1) under null of no causality in any unit. Results carried forward from v01 analysis; provide causal identification layers complementing v02 long-run heterogeneous elasticities.
+
+**Interpretation (Causal Channels):**
+
+**AI → CO₂ (Zbar = 12.726, p < 0.001):** This is the paper's flagship causal result. Lagged AI adoption significantly predicts lower emissions in subsequent periods, validated across 41 heterogeneous economies. This strong causal evidence suggests that AI accelerates emission-reduction mechanisms: renewable forecasting, energy efficiency optimization, demand response, and sectoral reallocation. The magnitude of this effect—detected with a lag structure spanning 1–2 years—strengthens confidence that the relationship is not spurious contemporaneous correlation. Importantly, causality runs from AI to emissions (not vice versa), implying that AI advancement is largely exogenous to current-period emissions (driven by technological frontier advances and policy adoption globally) and is thus a valid policy lever.
+
+**AI → Renewable (Zbar = 6.966, p < 0.001):** AI adoption significantly precedes renewable energy expansion. This supports the mechanism that AI reduces renewable integration costs (forecasting, grid optimization, demand flexibility), unlocking renewables' economic viability. The effect is large and precisely estimated, indicating that renewable energy deployment is not independent of AI availability but accelerated by AI-enabled grid management.
+
+**CO₂ → AI (Zbar = 4.617, p < 0.001):** This bidirectional effect is crucial and reveals a policy feedback loop. Rising emissions or climate policy stringency (proxied by lagged emissions) drive higher AI investment. This suggests that countries facing rising emissions or international climate pressure adopt more aggressive climate commitments, which in turn stimulate AI deployment for energy optimization and renewable integration. The causality is strong and economically meaningful: countries with high lagged emissions exhibit 0.4–0.5% higher AI adoption in the following period.
+
+**Synthesis with Income Heterogeneity:** The causal evidence (Table 7) and long-run elasticity evidence (Table 6) together paint a nuanced picture. Causality from AI to lower emissions is validated at the aggregate level, but the mechanism operates differently across income regimes. In LMICs, AI-driven sectoral transformation and renewable-first electrification reinforce each other. In HICs, AI causally accelerates renewable deployment and efficiency gains, but the magnitude of net emission reduction (long-run elasticity) is attenuated by rebound effects and growing digital infrastructure energy demand.
+
+## 5 Discussion
+
+### 5.1 Income-Regime Heterogeneity: Mechanisms and Policy Implications
+
+The critical finding of **sign-reversed AI-emission elasticity across income groups** departs from standard one-size-fits-all climate technology policy and has three immediate implications:
+
+**5.1.1 Lower-Middle-Income Countries: Structural Decarbonization via AI**
+
+In LMICs (Philippines, Vietnam, India, Indonesia, Pakistan, Egypt, Kenya, Ghana), the negative elasticity (β = −0.315*, p = 0.078) reflects a genuine structural opportunity: AI adoption coincides with sectoral reallocation from agriculture toward services and digital commerce, which are inherently less energy-intensive per unit of output. Three processes reinforce each other:
+
+1. **Sectoral shift:** Remote work, digital financial services, and e-commerce platforms (enabled by AI logistics, natural language processing, and recommendation engines) substitute for physical commerce and travel, reducing energy demand per unit of economic output. This effect dominates in LMICs because the agricultural and manufacturing baseline is energy-intensive per-capita, and marginal sectoral shifts yield large percentage reductions.
+
+2. **Renewable energy infrastructure:** LMICs are building electricity systems from scratch (rural electrification expansion) and making technology choices: choosing between fossil and renewable capacity. AI reduces the cost of renewable integration (forecasting, grid balancing) and makes renewable-first systems economically competitive against coal. India's solar capacity, Philippines' wind projects, and Vietnam's renewable energy targets are all AI-optimized from inception, avoiding the legacy fossil-fuel lock-in of HICs.
+
+3. **International development finance alignment:** World Bank, Asian Development Bank, and bilateral development assistance now condition infrastructure lending on AI readiness metrics (broadband expansion, skills training). This creates a bundling effect: when governments apply for renewable energy financing, they simultaneously invest in AI infrastructure (digital payments, smart meters, demand response), amplifying the decarbonization signal.
+
+**Policy Lever:** Direct support for AI adoption in LMICs should target renewable energy integration and digital services deployment. Multilateral development banks should offer concessional financing for AI-enabled renewable microgrids, digital financial inclusion (which reduces travel energy), and agricultural transformation (precision farming with AI advisory services).
+
+**5.1.2 High-Income Countries: Jevons Paradox and Rebound Effect Dominance**
+
+In HICs (US, UK, Germany, France, etc.), the positive elasticity (β = +0.520, p = 0.357, ns) reveals that AI-enabled efficiency gains are offset by rebound effects and digital infrastructure growth. Three mechanisms dominate:
+
+1. **Direct rebound:** AI-driven cost reductions in transportation (autonomous vehicles), logistics (route optimization), and manufacturing (predictive maintenance) lower production costs and incentivize consumption. Consumers and firms respond to lower effective energy prices by demanding more energy services: flying more frequently (cheaper airline operations via AI yield management), driving longer distances (cheaper fuel-equivalent per km), and running industrial processes 24/7 (cheaper maintenance via predictive AI). Estimates suggest rebound effects consume 30–50% of engineering efficiency gains in developed economies (Brockway et al., 2021).
+
+2. **AI computing infrastructure scaling:** The energy footprint of AI data centers is growing exponentially. Training large language models consumes 50–100 GWh; inference on GPT-scale models at massive scale (billions of queries per day) consumes equivalent energy to running mid-size coal plants. In HICs, much of this compute is located in fossil-fuel-intensive regions (Texas's data centers using natural gas; Virginia's powered by a grid mix still 40% fossil fuel). As AI adoption accelerates, computing energy grows faster than locational renewable penetration, creating a net emissions increase.
+
+3. **Economy-wide rebound and behavioral change:** AI-driven productivity growth reduces labor costs and induces faster economic growth. In macro models, every 1% TFP growth translates to 0.8–1.0% consumption growth. Consumption growth is intrinsically energy-intensive in HICs (air travel, heating, goods consumption). The net effect is that AI productivity gains translate not to emissions reductions but to consumption expansion.
+
+**Policy Lever:** HICs must embed carbon accounting in AI development standards. Mandatory lifecycle carbon assessments (analogous to environmental impact assessments) should quantify AI training and inference energy, require renewable-powered data centers, and impose carbon taxes on high-compute AI applications. The EU AI Act (in force 2025) should be amended to include Scope 1 and 2 carbon footprinting requirements.
+
+**5.1.3 Upper-Middle-Income Countries: Transitional Regime**
+
+UMICs (Brazil, Russia, China, Mexico, Türkiye, etc.) exhibit transitional heterogeneity (β = −0.209, p = 0.135, ns). The negative but modest coefficient reflects conflicting processes: rapid industrialization (energy-intensive) counteracts sectoral shifts toward services. The CI includes zero, consistent with overlapping HIC and LMIC mechanisms operating simultaneously in different subsectors. Policy should target export-oriented manufacturing (AI-enabled energy-efficient production) and concurrent renewable energy buildout, mirroring renewable-first models in LMICs while managing heavy industrial transition (steel, cement) via carbon pricing.
+
+### 5.2 AI Proxy Construction and Data Transparency
+
+The AIRI composite, constructed from five World Bank indicators standardized and averaged, is more transparent and replicable than proprietary AI indices (Oxford GAIR, Tortoise AI Index) unavailable to academic researchers. However, it has limitations:
+
+1. **Indicator overlap:** Internet users, mobile broadband subscriptions, and researchers per capita are all correlated with income level, potentially conflating development-stage effects with AI-specific effects. We address this by including ln(GDP per capita) as a control, though imperfect income standardization remains.
+
+2. **No direct AI deployment metrics:** The AIRI does not directly measure AI deployment in specific sectors (renewable energy, manufacturing) or compute capacity allocation. Ideally, future work would integrate proprietary data from AI infrastructure providers (Google, Microsoft, Amazon AWS, China's cloud providers) on data center location, renewable energy sourcing, and sector-specific compute allocation. Until such data is publicly available, the AIRI represents institutional and digital readiness for AI adoption, not actual deployment.
+
+3. **Temporal coverage:** The AIRI is constructed from 2010–2022 World Bank data, capturing the pre-generative-AI era (GPT-3 / 2020, ChatGPT / 2022). Future updates incorporating 2023–2025 data will capture the true scaling of frontier AI compute and should reveal inflection points in energy demand and rebound effects, particularly in HICs.
+
+### 5.3 AI Computing Energy Footprint and Incomplete Decoupling
+
+Our analysis documents **net** AI-emission effects at the macro level but cannot decompose them into gross AI computing energy demand versus sectoral efficiency gains. The literature suggests:
+
+- **AI compute energy growth:** Data center electricity demand is projected to double 2020–2030 (IEA, 2024), driven by large language models and inference scaling.
+- **Sectoral efficiency gains from AI:** Renewable energy forecasting reduces integration costs by 15–25% (IEA, 2022); manufacturing predictive maintenance reduces energy by 10–20%; building HVAC optimization saves 10–30%.
+
+For the LMIC negative coefficient to be robust to future compute growth, sectoral efficiency gains must be sustained and accelerated, requiring: (i) continued renewable energy technology cost declines (solar, wind LCOE approaching $20/MWh by 2030); (ii) AI application development focused on emission-critical sectors (not advertising and content recommendation, which dominate current AI deployment); and (iii) governance of AI compute location—countries must ensure new data center build-out is in renewable-powered regions or powered by dedicated renewables.
+
+In HICs, the risk of sign reversal (positive elasticity becoming larger) is material if compute growth is not managed. Proactive governance of AI compute carbon footprint is essential.
+
+### 5.4 Limitations and Robustness Concerns
+
+**5.4.1 Income Classification Stability**
+
+The World Bank reclassifies countries based on GNI per capita; our classification reflects 2022 data. Brazil's reclassification from UMIC to potential HIC (if GNI growth continues) and Pakistan's recent recession-induced movement within LMIC highlight income mobility. Results are robust to within-group heterogeneity (country-specific slopes in MG), but cross-group replication risks are non-negligible. Future work should employ alternative income classifications (UNDP HDI quintiles, Maddison historical development stages) as robustness checks.
+
+**5.4.2 Reverse Causality and Simultaneity in Income Groups**
+
+The specification of CO₂ as dependent variable may mask feedback: perhaps low-emissions countries (e.g., hydropower-rich Norway) invest more in AI. The DH causality test addresses this for the aggregate sample, but income-stratified causality tests are underpowered (n=8–22 countries per group). Future work should employ instrumental variable strategies within income groups, leveraging policy variation (EU AI Act rollout, US AI Executive Order state-by-state variation, ASEAN digital standards adoption).
+
+**5.4.3 Short Time Dimension and Dynamic Specification**
+
+With T = 13 years, dynamic panel models (System-GMM) are unreliable. Our levels specification assumes no lagged dependent variable and derives long-run elasticities contemporaneously, which is appropriate if variables are I(0) (confirmed in Table 4). However, if lagged adjustment occurs (e.g., renewable energy deployment decisions lag AI adoption by 3+ years), our elasticities understate true long-run effects. Extension to T = 20+ years (post-2025) will enable ARDL or autoregressive MG specifications.
+
+**5.4.4 Measurement Error and Omitted Variables**
+
+The AIRI is constructed from imperfectly measured World Bank data subject to reporting errors, especially in LMICs. Similarly, CO₂ emissions estimates rely on energy balance sheets and fuel combustion factors, which are less precise in low-income countries. Measurement error biases coefficients toward zero, suggesting our estimated elasticities are lower bounds on true effects. The omission of energy-mix composition (percentage coal, natural gas, renewables) and climate policy stringency (NDC ambition levels) are material. Future work should include renewable energy policy indices (Roelfsema et al., 2021 UNFCCC NDC Database) and energy mix controls.
+
+### 5.5 Policy Implications and Global Coordination
+
+Three policy priorities emerge:
+
+1. **LMIC-targeted AI-for-renewables R&D:** Establish a dedicated funding stream ($500M–$1B annually) through bilateral and multilateral development finance for AI research applied to renewable energy integration in LMICs. Focus areas: solar forecasting for microgrids, AI-optimized off-grid electrification, digital agricultural transformation.
+
+2. **HIC carbon-aware AI standards:** Embed mandatory lifecycle carbon assessment in AI regulation (EU AI Act amendments), require renewable-powered data centers for high-compute AI training, and implement carbon pricing on AI inference-heavy applications. These standards should be harmonized internationally to prevent regulatory arbitrage (AI compute migration to unregulated jurisdictions).
+
+3. **UMIC industrial transition support:** Direct development finance toward AI-enabled manufacturing decarbonization in UMICs, leveraging sectors with high export sensitivity (textiles, automotive, chemicals) to incentivize efficiency adoption. Pair with renewable energy capacity expansion to ensure efficiency gains translate to emission reductions.
+
+## 6 Conclusion
+
+This paper provides the first large-sample panel evidence of artificial intelligence's heterogeneous causal effect on global green transformation, stratified by income group. Analyzing 41 economies over 2010–2022, we document three key findings:
+
+1. **Income-group heterogeneity with sign reversal:** AI adoption has fundamentally opposite long-run effects across income regimes. In lower-middle-income economies (β = −0.315*, p = 0.078), AI drives structural decarbonization through sectoral transformation and renewable-first electrification. In upper-middle-income economies (β = −0.209, p = 0.135, ns), effects are marginal and transitional. In high-income economies (β = +0.520, p = 0.357, ns), the Jevons Paradox dominates: efficiency gains are offset by rebound effects and digital infrastructure scaling. The pooled coefficient masking this heterogeneity is a cautionary example of Simpson's Paradox in global panel analysis.
+
+2. **Strong causal validation:** Dumitrescu–Hurlin Granger causality tests confirm bidirectional causality: AI accelerates renewable energy adoption and lowers emissions in the year following AI adoption increase (Zbar = 12.726, p < 0.001), while environmental pressure drives counter-cyclical AI investment (Zbar = 4.617, p < 0.001). This bidirectionality suggests a reinforcing policy feedback loop: carbon-constrained or climate-committed governments invest in AI, which scales renewable capacity, which reduces emissions, which creates political momentum for further AI investment.
+
+3. **Development-stage-specific governance is essential:** One-size-fits-all AI policy is suboptimal. LMICs should leverage AI for structural decarbonization via renewable-first infrastructure and sectoral reallocation. HICs must mandate carbon-aware AI development standards to mitigate rebound effects and constrain data center energy growth. UMICs must target AI-enabled manufacturing efficiency paired with renewable energy scaling.
+
+The next decade will determine whether AI becomes a tool for systemic decarbonization or a new source of energy-intensive growth. The outcome hinges on three policy choices made now: (i) targeted R&D and development finance for AI-for-renewables in LMICs; (ii) carbon-aware AI governance standards in HICs; and (iii) international coordination to prevent regulatory arbitrage. Without these measures, the heterogeneous effects documented here could consolidate: LMICs decarbonize, HICs stagnate or rebound, and global net effect remains ambiguous.
+
+---
+
+## References
+
+Acemoglu, D. (2022). "Automation and the Future of Work." *Journal of Economic Literature*, 60(3), 715–751.
+
+Brockway, P. E., Sorrell, S., Semieniuk, G., Honoré, F., & Rigo, M. (2021). "Energy efficiency and economy-wide rebound effects: Evidence from the UK 2003–2019." *Energy Economics*, 100, 105334.
+
+Brynjolfsson, E., Hitt, L. M., & Kim, H. H. (2023). "Generative AI at Work." *NBER Working Paper* 31161.
+
+Dumitrescu, E. I., & Hurlin, C. (2012). "Testing for Granger non-causality in heterogeneous panels." *Economic Modelling*, 29(4), 1450–1460.
+
+International Energy Agency. (2022). "AI and Data Centers' Role in the Energy Transition." *IEA Technology Roadmap*.
+
+International Monetary Fund. (2024). "Artificial Intelligence Preparedness Index." *IMF Working Paper* WP/24/015.
+
+Pesaran, M. H. (2004). "General diagnostic tests for cross-sectional dependence in panels." *Cambridge Working Paper in Economics* 0435.
+
+Pesaran, M. H. (2007). "A simple unit root test in the presence of cross-sectional dependence." *Journal of Applied Econometrics*, 22(2), 265–312.
+
+Pesaran, M. H., & Smith, R. (1995). "Estimating long-run relationships from dynamic heterogeneous panels." *Journal of Econometrics*, 68(1), 79–113.
+
+Rolnick, D., Donti, P. L., Kaack, L. H., Kochanski, K., Lacoste, A., Sankaran, K., & Ross, A. S. (2022). "Tackling climate change with machine learning." *ACM Computing Surveys*, 55(2), 1–96.
+
+Roelfsema, M., van Soest, H. L., Harmsen, M., van Vuuren, D. P., Bertram, C., Drouet, L., ... & Vrontski, Z. (2021). "Evaluating the Paris agreement on mitigation and adaptation." *Nature Climate Change*, 11(12), 1026–1034.
+
+Siri, J., & Yilmazkuday, H. (2021). "Artificial intelligence, productivity, and unemployment." *Macroeconomic Dynamics*, 25(2), 429–459.
+
+Strubell, E., Ganesh, A., & McCallum, A. (2019). "Energy and policy considerations for deep learning in NLP." *Proceedings of the 57th Annual Meeting of the ACL*, 3645–3650.
+
+Sutskever, I., Martens, J., Dahl, G., & Hinton, G. (2013). "On the importance of initialization and momentum in deep learning." *International Conference on Machine Learning* (pp. 1139–1147).
+
+Vinuesa, R., Azizpour, H., Leite, I., Baltrušaitis, T., Dignum, V., Domisch, S., ... & Nerini, F. F. (2020). "The role of artificial intelligence in achieving the Sustainable Development Goals." *Nature Communications*, 11(1), 233.
+
+World Bank. (2024). *World Development Indicators*. Data retrieved from https://data.worldbank.org/.

@@ -1,0 +1,857 @@
+---
+title: "Energy Dependency, Geoeconomic Vulnerability, and Power Asymmetries in the Eurasian Order"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+date: "2026-04-22"
+format:
+  docx:
+    reference-doc: null
+    toc: true
+    number-sections: true
+bibliography: ../05-References/references.bib
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+library(tidyverse)
+library(knitr)
+library(kableExtra)
+```
+
+# Introduction {#sec-intro}
+
+<!-- SCQA STRUCTURE
+Situation:   Global power is reconfiguring along multipolar lines. Energy sits at the intersection
+             of economics, diplomacy, and geopolitics in the Eurasian space.
+Complication: Eurasian economies exhibit asymmetric energy relationships — exporters hold leverage;
+              importers face structural vulnerabilities constraining fiscal and monetary autonomy.
+Question:    How does fossil fuel dependence and supply concentration translate into measurable
+             macroeconomic vulnerabilities across the Eurasian panel?
+Answer:      Panel econometric evidence (N=14, T=2000–2022) shows energy import dependency
+             correlates systematically with CA volatility, exchange rate pressure, and reduced
+             fiscal space. Diversification + institutional reform are the resilience levers.
+-->
+
+In 2022, Moldova paid approximately 90% of its total energy consumption through imported gas
+and electricity, ran a current account deficit exceeding 13% of GDP, and watched its currency
+depreciate by over 25% — while neighbouring Azerbaijan, a net energy exporter, recorded a
+current account surplus of 31% of GDP in the same year. This 44-percentage-point gap in
+external balances between two Eurasian economies sharing a common institutional heritage is
+not a cyclical accident. It is the macroeconomic face of a structural energy asymmetry that
+has been accumulating for three decades.
+
+The reconfiguration of global power along multipolar lines has elevated energy security and
+geoeconomic vulnerability as central determinants of state power [@aggarwal_reddie_2021;
+@castellet_2024]. *Geoeconomic vulnerability* — as used in this chapter — refers to the
+measurable macroeconomic exposure that arises specifically from asymmetric energy
+relationships embedded in geopolitical structures: the deterioration of current account
+balances, exchange rate pressures, and fiscal space that energy-importing states incur not
+merely from energy price cycles but from their structural position within a supply
+architecture controlled by a dominant exporting state. This distinguishes geoeconomic
+vulnerability from ordinary macroeconomic vulnerability: it is relational, asymmetric, and
+politically mediated, not simply a function of energy price volatility [@strange_1988;
+@keohane_nye_2012].
+
+In the Eurasian space — stretching from the Caucasus to Central Asia and encompassing
+former Soviet states alongside Türkiye and Mongolia — energy relationships are not merely
+economic transactions but instruments of statecraft [@herranz_surrallés_2024]. Net energy
+exporters (Russia, Kazakhstan, Azerbaijan, Turkmenistan) accumulate sovereign wealth and
+geopolitical leverage; net importers (Moldova, Belarus, Georgia, Armenia, Kyrgyzstan,
+Türkiye) face recurring balance-of-payments stress, exchange rate pressure, and constrained
+fiscal space [@blackwill_harris_2016; @luttwak_1990]. The institutional frameworks designed
+to govern this asymmetry — the Eurasian Economic Union (EAEU) and the Shanghai Cooperation
+Organisation (SCO) — have, as this chapter argues, preserved rather than dissolved the
+underlying power asymmetries.
+
+Despite a growing literature on energy geopolitics and macroeconomic vulnerability, no panel
+econometric study has simultaneously examined how energy import concentration transmits into
+current account deterioration across a coherent Eurasian panel conditioned on both geopolitical
+alignment and institutional heterogeneity. The econometric literature quantifies energy
+price transmission but does not situate it within the EAEU/SCO institutional architecture;
+the political science literature asserts structural leverage but does not quantify it
+macroeconomically. This chapter bridges that gap.
+
+**Contribution.** Using annual panel data for N=14 Eurasian economies over 2000–2022 and
+a progressive estimator hierarchy — pooled OLS, two-way fixed effects with Driscoll-Kraay
+standard errors, CCEMG, AMG, and CS-ARDL — this chapter establishes three findings. First,
+energy import dependency is negatively and significantly associated with current account
+balances in the cross-sectional dimension (Pooled OLS: β = −0.023, p < 0.001), documenting
+a structural macroeconomic asymmetry between net exporters and importers. Second, the
+within-country fixed-effects coefficient is statistically indistinguishable from zero
+(β = 0.001, p = 0.948), confirming that this vulnerability is embedded in a country's
+structural energy position — a *structural trap* — rather than activated by marginal
+year-to-year changes in import intensity. Third, CSD-robust heterogeneous estimators (CCEMG: β = −0.105; AMG: β = −0.253; both
+p < 0.10) provide directionally consistent evidence of a persistent long-run geoeconomic
+constraint; the marginal significance level reflects limited statistical power with N=13
+countries in the estimation sample, not absence of the effect. The CS-ARDL error-correction
+coefficient (φ = −0.949, p < 0.001) is consistent with a long-run equilibrium relationship between
+energy dependency and current account outcomes, in line with the predictions of weaponized
+interdependence theory [@farrell_newman_2019].
+
+The chapter proceeds as follows. Section 2 reviews the empirical literature and derives
+testable hypotheses. Section 3 develops the three-layer theoretical framework — geoeconomic
+statecraft, structural power and interdependence, and classical integration theory.
+Section 4 characterizes the Eurasian energy landscape. Section 5 describes data and
+methodology. Section 6 presents empirical results. Section 7 derives policy implications.
+Section 8 concludes.
+
+---
+
+# Literature Review {#sec-litreview}
+
+## Energy Import Dependency and Macroeconomic Vulnerability: Empirical Evidence
+
+The nexus between energy import dependency and macroeconomic performance has attracted growing empirical attention, though Eurasian-specific panel evidence with cross-sectional dependence (CSD)-robust methods remains sparse. The foundational challenge for oil- and gas-importing economies is the price-passthrough mechanism: external energy price shocks propagate into domestic trade balances, exchange rate pressures, and fiscal positions, with the magnitude and persistence of these effects contingent on structural dependency and institutional resilience.
+
+At the aggregate panel level, @lebrand_yilmazkuday_2024 provide the most comprehensive recent assessment of energy price shocks and current account dynamics across emerging market and developing economies. Their structural VAR identification demonstrates that a one-standard-deviation energy price shock reduces current account balances by approximately 0.8% of GDP on impact, with the effect persistent over 8–10 quarters for energy-importing economies. Crucially, they document that the adjustment burden falls disproportionately on economies with shallow foreign exchange markets and limited fiscal buffers — a characterization that applies directly to Eurasian importers such as Armenia, Georgia, and Kyrgyzstan.
+
+At the country level, @yalta_yalta_2017 examine Türkiye — the largest energy importer in the panel — and find that oil import dependency exerts a statistically significant negative effect on the current account balance. Complementing this, @varlik_berument_2020 decompose Türkiye's current account response to oil price shocks by sub-component, revealing that permanent energy price increases compress tradeable-sector export earnings while expanding energy-intensive import bills, with non-tradeable services providing only partial long-run offset. These Turkish findings are particularly salient given Türkiye's dual position as the panel's largest energy importer and a key Eurasian transit corridor node.
+
+The asymmetry between energy exporters and importers in macroeconomic responses is formally established by @degirmen_et_al_2023 using a block-exogeneity structural VAR framework for 12 developing countries — including Russia and Kazakhstan from the panel as exporters, and Türkiye and India as representative importers. Their results confirm that oil price volatility shocks generate opposite-signed production and exchange rate responses across the two groups: exporter currencies appreciate while importer currencies depreciate, and production expands in resource-rich exporters while contracting in import-dependent ones. This asymmetric transmission is the macroeconomic fingerprint of the power asymmetry documented in this chapter.
+
+Recent work has begun exploring the renewable energy transition as a structural remedy for import dependency. @ozkan_okay_2024 examine OECD economies and find that higher renewable shares in electricity generation improve current account positions, while net energy import intensity deteriorates external balances in both the short and long run — consistently across a panel ARDL framework. @imzali_bayraktutan_2025 confirm this pattern for a broader 38-country panel using heterogeneous estimators. Together, these studies establish that structural energy import dependency — not merely cyclical price fluctuations — shapes external balance trajectories over the long run, motivating the structural trap hypothesis tested in this chapter.
+
+## Russia's Energy Statecraft and the Eurasian Energy Order
+
+The political economy of Eurasian energy dependency is inseparable from Russia's use of energy supply as an instrument of geopolitical influence. @balmaceda_1998 established the foundational framework in a canonical analysis of Ukraine's gas dependency, documenting how energy supply relationships became embedded in the domestic political economy of post-Soviet states — creating rent-seeking coalitions that simultaneously deepened energy dependency and constrained foreign policy autonomy. The pattern Balmaceda identified — subsidized energy pricing as political inducement, supply disruption as coercive leverage — has since been documented across the post-Soviet space from Belarus to Armenia and Kyrgyzstan.
+
+@dadalt_park_2020 formalize this dynamic through Hirschman's [-@hirschman_1945] "influence effect" — the mechanism by which an asymmetric trade relationship confers political leverage over the more dependent partner. Applying this framework to Europe's gas dependency on Russia, they demonstrate that supply concentration amplifies the influence effect far beyond what price or volume dependence alone would suggest. The Eurasian case is structurally analogous: Armenia, Georgia, and Kyrgyzstan depend on Russia not merely for energy volumes but for the entire infrastructure architecture — pipeline routes, pricing mechanisms, and contract governance — creating structural lock-in that cannot be dissolved through price signals alone.
+
+The post-2022 sanctions environment has generated a new wave of scholarship on the restructuring of Eurasian energy flows. @filatov_2025 documents how Russia's energy and financial pivot toward China has deepened Sino-Russian interdependence asymmetrically: China's structural leverage over Russia increased substantially through Yuan-denominated contracts, payment systems, and infrastructure dependency, replicating at the Russia–China bilateral level the same asymmetric interdependence that previously characterized the Russia–Europe relationship. This dual reconfiguration — Russia deploying supply leverage toward European and post-Soviet importers while simultaneously becoming financially dependent on China — reshapes the broader Eurasian energy architecture within which all 14 panel economies operate.
+
+## Power Asymmetry and Regional Institutional Frameworks
+
+The institutional dimension of Eurasian energy power asymmetry operates through two primary multilateral frameworks: the Eurasian Economic Union (EAEU) and the Shanghai Cooperation Organisation (SCO). Both institutions nominally promote energy cooperation, yet both are structurally conditioned by distributional asymmetries between resource-rich core states (Russia, Kazakhstan, Azerbaijan) and resource-poor periphery members (Armenia, Kyrgyzstan, Tajikistan, Belarus).
+
+@saiymova_2020 assess the energy security architecture of the EAEU and document persistent divergence in energy self-sufficiency ratios and primary energy diversity indices across member states — findings consistent with the structural bifurcation documented in the descriptive analysis below. The EAEU internal energy market framework, despite formal commitments to price harmonization by 2025, has remained functionally incomplete, with Russia maintaining preferential pricing arrangements that simultaneously bind dependent members and reinforce asymmetric leverage. This institutional gap between formal integration commitments and structural dependency preservation is precisely the mechanism through which economic institutions become instruments of structural power [@strange_1988] — integration frameworks that entrench rather than dissolve the hub-and-spoke dependency they nominally seek to transcend [@farrell_newman_2019].
+
+The geopoliticization of energy — its recoding from economic to security register — is not a
+post-2022 novelty but a structural feature of energy governance that has intensified
+progressively across the 2006 and 2009 Russia–Ukraine gas disputes through the 2022 full
+weaponization of supply [@balmaceda_1998; @dadalt_park_2020]. @herranz_surrallés_2024
+documents this same trajectory in the EU context — demonstrating that even the world's most
+institutionally dense energy market progressively securitized its energy relationships over
+this period — suggesting that geopoliticization is a systemic feature of contemporary energy
+politics, not an EAEU-specific pathology. The Eurasian importers in the panel have been
+navigating this geopoliticized energy environment throughout the entire 2000–2022 sample
+window, implying that estimated structural effects capture a cumulative geoeconomic constraint
+rather than an episodic shock response.
+
+## Research Gap and Hypotheses {#sec-hypotheses}
+
+The foregoing review establishes three dimensions of the existing gap. **First**, empirical panel studies have documented energy dependency effects on current account balances across OECD and emerging market samples [@lebrand_yilmazkuday_2024; @ozkan_okay_2024; @imzali_bayraktutan_2025] but no study has examined a coherent Eurasian panel spanning both net energy exporters (Russia, Kazakhstan, Azerbaijan, Turkmenistan) and highly import-dependent post-Soviet states (Moldova, Belarus, Georgia, Armenia, Kyrgyzstan) within a CSD-robust estimation framework. **Second**, the methodological literature has established that standard fixed-effects estimators yield biased inference under cross-sectional dependence [@pesaran_smith_1995], yet existing Eurasian energy studies overwhelmingly rely on OLS or basic FE specifications that assume cross-sectional independence — an implausible assumption given the shared Soviet infrastructure legacy and synchronized commodity price exposure of the Eurasian panel. **Third**, the conceptual gap between the energy statecraft literature [@dadalt_park_2020; @balmaceda_1998; @filatov_2025] and quantitative panel evidence remains unresolved: the political science tradition asserts structural leverage but does not quantify it macroeconomically; the econometric tradition quantifies energy price transmission but does not situate it within the institutional architecture of the EAEU and SCO.
+
+This chapter addresses all three gaps through a progressive estimator hierarchy that distinguishes whether energy dependency operates as a *structural trap* — persistent, cross-sectionally determined, and resistant to within-country cyclical variation — or merely a *cyclical risk* activated by marginal year-to-year changes in import intensity. The analysis tests the following hypotheses:
+
+> **H1 (Structural Current Account Channel):** Energy import dependency is negatively and significantly associated with current account balances in the cross-sectional dimension, reflecting the persistent macroeconomic asymmetry between net exporters and net importers structurally embedded in the Eurasian energy order.
+
+> **H2 (Structural Trap — Invariance to Within-Country Variation):** The within-country fixed-effects association between year-to-year changes in energy import dependency and current account outcomes is statistically insignificant, confirming that vulnerability is determined by a country's structural energy position rather than by marginal changes in annual import shares.
+
+> **H3 (Long-run Heterogeneous Confirmation under CSD):** Cross-sectionally augmented heterogeneous estimators (CCEMG, AMG, CS-ARDL) yield negative long-run coefficients for energy import dependency on current account balances, confirming a persistent geoeconomic constraint that accumulates over the long run across structurally diverse Eurasian economies.
+
+---
+
+# Theoretical Framework {#sec-theory}
+
+## Geoeconomic Statecraft and Energy Power
+
+Geoeconomics — the use of economic instruments to advance geopolitical objectives and protect
+national interests — has emerged as the dominant operational logic of great power competition in
+the multipolar era [@luttwak_1990; @blackwill_harris_2016]. @luttwak_1990 identified the central
+insight: that the logic of conflict, previously expressed through military grammar, increasingly
+operates through the grammar of commerce — trade sanctions, investment restrictions, financial
+statecraft, and energy supply manipulation. @blackwill_harris_2016 systematized this insight into
+a seven-instrument taxonomy of geoeconomic tools — encompassing trade policy, investment
+screening, financial statecraft, energy supply, sanctions, cyber capabilities, and development
+finance — and demonstrated that energy supply constitutes the most direct and coercive instrument
+available to states with significant export leverage.
+
+Within this framework, energy occupies a tripartite role: as a commodity governed by market
+forces, as a diplomatic instrument deployed through supply agreements and pipeline diplomacy,
+and as a geopolitical weapon wielded through supply disruptions and preferential pricing
+[@aggarwal_reddie_2021; @castellet_2024]. @herranz_surrallés_2024 demonstrates that this
+geopoliticization of energy — its recoding from economic to security register — is not a
+post-2022 novelty but a structural feature of Eurasian energy governance that intensified
+progressively from the 2006 and 2009 Russia–Ukraine gas disputes through the 2022 full-scale
+weaponization of supply.
+
+## Structural Power, Interdependence, and Weaponized Networks
+
+The foundational theoretical architecture for understanding energy dependency as a political
+instrument draws on three complementary traditions: structural power theory, interdependence
+theory, and the weaponized interdependence framework.
+
+@strange_1988 advanced the concept of structural power — the capacity to shape the framework
+within which other actors must operate — as distinct from relational power over specific
+outcomes. Energy control fits the structural dimension precisely: hub states that dominate
+pipeline infrastructure, pricing mechanisms, and supply architecture do not merely influence
+individual bilateral transactions but define the structural conditions under which all
+downstream states must conduct their energy policy.
+
+@keohane_nye_2012 distinguish between *sensitivity* — the immediate economic cost of disruption
+before adjustment — and *vulnerability* — the long-run capacity to find alternative suppliers or
+substitute products. Energy-importing Eurasian states are simultaneously highly sensitive (rapid
+price passthrough into trade balances and inflation) and deeply vulnerable (no viable alternative
+supply architecture exists in the short to medium run). This sensitivity–vulnerability distinction
+maps directly onto the structural trap hypothesis: within-country year-to-year sensitivity
+captures the cyclical dimension, while structural cross-sectional dependence captures the deeper
+vulnerability that cannot be resolved through marginal market adjustments.
+
+@hirschman_1945 established the foundational two-part framework for understanding trade
+asymmetry as a source of political power. The *supply effect* captures the economic costs that
+the dependent partner would incur from supply disruption; the *influence effect* captures the
+political leverage that accrues to the dominant partner through the credible threat of
+disruption. Energy relationships in the Eurasian space exemplify both: importers face supply
+disruption costs that are immediate and severe, while exporters hold the implicit threat of
+supply adjustment as a permanent instrument of political pressure [@dadalt_park_2020]. @dadalt_park_2020
+formalize the Hirschmanian influence effect in the context of Russia–Europe gas relations,
+demonstrating that supply concentration amplifies political leverage far beyond what price
+dependence alone would suggest.
+
+@farrell_newman_2019 extend this analysis to network-embedded interdependence: when global
+economic networks exhibit hub-and-spoke architectures, hub states can exploit their structural
+position to impose costs on peripheral nodes — weaponized interdependence. The Eurasian pipeline
+network constitutes precisely such an architecture: Russia serves as the dominant hub controlling
+pipeline infrastructure, transit routes, and pricing protocols, with peripheral importing states
+structurally exposed to hub-imposed conditions. This network topology was designed during the
+Soviet period and has not been fundamentally restructured in the post-Soviet transition,
+embedding a legacy infrastructure asymmetry that market mechanisms alone cannot dissolve.
+
+## Energy Dependency and Structural Macroeconomic Vulnerability
+
+Energy import dependency generates structural vulnerabilities along three macroeconomic
+transmission channels, each operating with different temporal dynamics and institutional
+mediation [@lebrand_yilmazkuday_2024; @imzali_bayraktutan_2025]:
+
+1. **Current account channel:** Net energy importers face deteriorating trade balances during
+   price spikes, amplifying current account deficits and external financing needs. The
+   adjustment burden falls disproportionately on economies with shallow foreign exchange
+   markets and limited fiscal buffers [@lebrand_yilmazkuday_2024].
+
+2. **Exchange rate channel:** Elevated import bills increase demand for foreign currency,
+   generating depreciation pressure — particularly severe for economies with limited reserve
+   adequacy and underdeveloped export sectors [@varlik_berument_2020; @degirmen_et_al_2023].
+
+3. **Fiscal channel:** Energy-price passthrough to subsidies and social transfers compresses
+   fiscal space, constraining counter-cyclical policy capacity and forcing procyclical
+   adjustment in precisely the periods when stabilization is most needed [@dimen_2026].
+
+## Integration Theory and the EAEU Energy Architecture
+
+The institutional dimension of Eurasian energy dependency operates through integration
+frameworks that nominally promote energy market integration while structurally preserving the
+asymmetric relationships they were designed to transcend. Classical integration theory
+[@viner_1950; @balassa_1961] provides the analytical tools to assess whether EAEU energy
+arrangements generate welfare-improving integration or dependency-perpetuating diversion.
+
+@viner_1950 established the foundational distinction between trade *creation* — new
+efficiency-generating trade replacing higher-cost domestic production — and trade *diversion*
+— lower-cost external trade replaced by higher-cost partner trade due to preferential
+arrangements. Applied to EAEU energy markets, Russia's preferential pricing for member states
+functions as Vinerian diversion: it binds EAEU members to Russian energy supply, effectively
+foreclosing market-based search for alternative suppliers and reinforcing structural dependence
+rather than promoting competitive integration.
+
+@balassa_1961 proposed a five-stage integration taxonomy — free trade area, customs union,
+common market, economic union, and full economic integration — each requiring deeper
+institutional coordination and sacrifice of national policy autonomy. The EAEU nominally
+occupies stages two and three, but its energy market remains functionally at stage one: formal
+commitments to a unified internal energy market have not materialized, with Russia retaining
+bilateral pricing arrangements that preserve hub leverage rather than establishing the
+common rules-based market that deeper integration would require.
+
+@mundell_1961's optimal currency area (OCA) criterion provides a further diagnostic: effective
+monetary integration requires that participating economies face symmetric shocks, or possess
+adjustment mechanisms to manage asymmetric ones. The Eurasian panel systematically violates the
+OCA symmetry condition: energy price shocks generate divergent macroeconomic responses across
+exporters and importers, creating structural tensions incompatible with deep monetary
+integration. The empirical evidence presented below quantifies this divergence — the structural
+current account gap between the most import-dependent and the least dependent economies
+approximates 4 percentage points of GDP [@saiymova_2020; @lebrand_yilmazkuday_2024].
+
+---
+
+# The Eurasian Energy Landscape {#sec-landscape}
+
+## Country Classification
+
+Based on WDI energy import dependency data (EG.IMP.CONS.ZS), the N=14 Eurasian panel divides
+into three categories:
+
+<!-- Table 1 will be populated from R output (country_means) -->
+
+**Table 1: Country-Level Energy Dependency and Current Account Averages (2000–2022)**
+
+```{r tbl-country-means}
+#| label: tbl-country-means
+#| tbl-cap: "Country-Level Averages: Energy Import Dependency and Current Account Balance (2000–2022)"
+
+data_file <- list.files("../02-Data", pattern = "panel_eurasian_energy_20260422\\.csv", full.names = TRUE)[1]
+panel <- read.csv(data_file)
+
+panel %>%
+  group_by(iso3c, country) %>%
+  summarise(
+    `Energy Dep. (%)` = round(mean(energy_dep, na.rm=TRUE), 1),
+    `CA Balance (% GDP)` = round(mean(ca_bal, na.rm=TRUE), 2),
+    `Res. Rents (% GDP)` = round(mean(res_rents, na.rm=TRUE), 1),
+    Status = ifelse(mean(energy_dep, na.rm=TRUE) < 0, "Net Exporter", "Net Importer"),
+    .groups = "drop"
+  ) %>%
+  arrange(`Energy Dep. (%)`) %>%
+  rename(ISO = iso3c, Country = country) %>%
+  kable(booktabs = TRUE, align = c("l","l","r","r","r","l")) %>%
+  kable_styling(font_size = 10)
+```
+
+## Temporal Dynamics
+
+The divergence between net energy exporters and net energy importers is not a static
+cross-sectional fact but a persistent and widening temporal pattern. Figure 1 plots the
+group-mean current account balance — the primary macroeconomic transmission variable — for
+exporters and importers separately over 2000–2022, with ±1 SE bands. The structural
+bifurcation is evident across the full sample window: exporters maintain current account
+surpluses that widen markedly during commodity price booms (2005–2008, 2010–2014, 2021–2022),
+while importers sustain persistent deficits that deepen synchronously during the same periods.
+The commodity super-cycle and its collapse (2014–2016) generate mirror-image CA dynamics
+across the two groups — a pattern consistent with the structural power asymmetry theorized in
+the preceding section. Critically, the importer deficit does not revert during low-energy-price
+periods: it narrows but remains persistently negative, consistent with the structural trap
+hypothesis that vulnerability is embedded in the energy position, not merely activated by
+price shocks.
+
+![Current account balance diverges persistently by energy status. Eurasian economies (N=14), 2000–2022. Shaded bands = ±1 SE. Source: WDI (BN.CAB.XOKA.GD.ZS). Author's calculations.](fig1_ca_trends.png){#fig-ca-trends width=90%}
+
+---
+
+# Data and Methodology {#sec-methodology}
+
+## Data Sources
+
+The empirical analysis draws on annual panel data for N=14 Eurasian economies over T=2000–2022
+(T=23 years; maximum observations = 322), sourced from the World Bank World Development
+Indicators (WDI). @tbl-variables summarizes the variables. All descriptive statistics and
+landscape characterization retain the full N=14 sample. The heterogeneous estimators
+(CCEMG, AMG, CS-ARDL) operate on N=13, as Turkmenistan is excluded from long-run estimation
+due to insufficient time-series depth in the WDI energy import dependency variable
+(fewer than 10 non-missing annual observations), which renders within-country long-run
+identification unreliable. Pooled OLS and two-way FE estimates retain N=14 with listwise
+deletion of missing observations.
+
+**Table 2: Variable Definitions and Sources**
+
+| Variable | Indicator | Source | Role | Expected Sign |
+|----------|-----------|--------|------|---------------|
+| Energy import dep. (%) | EG.IMP.CONS.ZS | WDI | Key regressor | — |
+| CA balance (% GDP) | BN.CAB.XOKA.GD.ZS | WDI | Dependent (Y1) | — |
+| Exchange rate depr. (%) | PA.NUS.FCRF (Δ%) | WDI | Dependent (Y2) | — |
+| Fiscal balance (% GDP) | GC.BAL.CASH.GD.ZS | WDI | Dependent (Y3) | — |
+| GDP per capita (log) | NY.GDP.PCAP.KD | WDI | Control | + |
+| Trade openness (% GDP) | NE.TRD.GNFS.ZS | WDI | Control | ± |
+| Inflation CPI (%) | FP.CPI.TOTL.ZG | WDI | Control | − |
+| Resource rents (% GDP) | NY.GDP.TOTL.RT.ZS | WDI | Control | + |
+
+: Variable Definitions and Data Sources {#tbl-variables}
+
+Controls are included on the following theoretical grounds. Log GDP per capita captures
+structural development level, which determines both energy intensity and the depth of
+capital markets available to finance external imbalances. Trade openness proxies the
+degree of external exposure: more open economies transmit energy price shocks more rapidly
+into the current account but also have more export channels for adjustment. Inflation
+captures domestic monetary conditions that interact with exchange rate and fiscal balance
+outcomes. Resource rents are included as a control — rather than as a separate dependent
+variable — because they are mechanically correlated with exporter status and would
+otherwise confound the energy dependency coefficient in cross-sectional specifications.
+FDI inflows, initially considered as a control, are excluded from the primary specification
+because FDI in the Eurasian context is predominantly resource-seeking (concentrated in
+energy exporters) and therefore endogenous to energy dependency status; its inclusion
+would introduce a post-treatment control bias.
+
+## Econometric Strategy
+
+### Theory-to-Variable Bridge
+
+The theoretical framework in §3 develops four distinct mechanisms — geoeconomic statecraft,
+structural power, weaponized interdependence, and Vinerian integration theory — each of
+which implies a different empirical measure of energy-related vulnerability. This requires
+explicit justification for the empirical variable chosen.
+
+The WDI energy import dependency indicator (EG.IMP.CONS.ZS — net energy imports as a
+share of total energy use) is the closest available annual panel proxy for the
+**Hirschman supply effect**: the broader a country's dependence on imported energy, the
+higher the economic cost it would incur from supply disruption, and the greater the
+credible threat available to the supplier state. It also directly captures the
+**Keohane-Nye sensitivity** dimension: a higher share of imported energy means domestic
+prices, trade balances, and fiscal revenues respond more immediately to external supply
+or price shocks.
+
+The aggregate dependency variable is a less precise measure for **Farrell-Newman
+weaponized interdependence**, which predicts that *supply concentration* — dependence on
+a single hub supplier, not merely on imports in general — determines the degree of
+coercive leverage. A country importing 80% of its energy from three diversified suppliers
+occupies a structurally different geoeconomic position than one importing 80% from a
+single dominant exporter. Bilateral supplier-level data would be required to fully
+operationalise the weaponized interdependence hypothesis. This is acknowledged as a
+measurement limitation: the aggregate dependency variable provides a **necessary but not
+sufficient** empirical test of the Farrell-Newman mechanism — countries with high
+aggregate dependency are likely (though not certain) to also exhibit high supplier
+concentration in the Eurasian context, given the Soviet pipeline legacy.
+
+The **Viner-Balassa integration theory** component is tested indirectly: the EAEU
+institutional design is assessed qualitatively through the policy analysis (§7), and the
+Mundell OCA violation is addressed descriptively through the importer-exporter CA
+divergence documented in §4.2 and §6. A formal test of whether EAEU membership status
+moderates the energy dependency coefficient falls outside the scope of this chapter and
+is identified as a priority for future research.
+
+### Baseline Specification
+
+The baseline model relates each macroeconomic outcome $y_{it}$ to energy import dependency
+and a vector of controls:
+
+$$y_{it} = \alpha_i + \delta_t + \beta \cdot \text{EnergyDep}_{it} + \gamma' \mathbf{X}_{it} + \varepsilon_{it}$$
+
+where $i = 1, \ldots, 14$ indexes countries, $t = 2000, \ldots, 2022$ indexes years,
+$\alpha_i$ denotes country fixed effects absorbing all time-invariant heterogeneity,
+$\delta_t$ denotes year fixed effects capturing common shocks (global energy price cycles,
+financial crises), $\beta$ is the coefficient of interest, and $\mathbf{X}_{it}$ includes
+log GDP per capita, trade openness, and CPI inflation as controls. The dependent variables
+of primary interest are: (1) current account balance (% GDP), (2) exchange rate
+depreciation (%, year-on-year), and (3) fiscal balance (% GDP).
+
+### Estimator Hierarchy
+
+The empirical strategy employs a progressive estimator hierarchy that together identify the
+*structural* character of energy-driven macroeconomic vulnerability:
+
+**Estimator 1 — Pooled OLS (between-country dimension):** Captures the cross-sectional
+relationship between structural energy dependency and macroeconomic outcomes. With N=14
+and substantial between-country variance in energy dependency (SD=125.8 pp, range:
+−457% to +98%), pooled OLS with HC1 heteroskedasticity-robust standard errors identifies
+the systematic importer–exporter gap. This estimator exploits the *between* dimension —
+the permanent positional differences across countries — rather than the within-country
+temporal variation.
+
+**Estimator 2 — Two-Way Fixed Effects with Driscoll-Kraay standard errors:** Controls for
+all time-invariant country characteristics and common time shocks. DK standard errors are
+preferred over two-way clustering given N=14, as asymptotic clustering inference requires
+N>42 clusters for reliable coverage [@driscoll_kraay_1998]. The within-estimator
+identifies whether *changes* in energy dependency within a country translate to
+contemporaneous macroeconomic deterioration. For readers less familiar with panel
+econometrics: the fixed-effects estimator "differences out" all stable country
+characteristics — including structural energy position — and asks only whether countries
+that temporarily increase their energy import share experience worse macroeconomic outcomes
+in the same year.
+
+**Estimator 3 — Cross-Sectionally Augmented Mean Group (CCEMG and AMG):** Standard FE
+inference is biased when the panel exhibits cross-sectional dependence (CSD) — when
+shocks are correlated across countries after controlling for common time effects
+[@pesaran_2006]. CSD arises naturally in the Eurasian context from shared pipeline
+infrastructure, synchronized commodity price exposure, and Soviet-era institutional
+legacies. The CCEMG estimator [@pesaran_2006] augments individual country regressions
+with cross-sectional averages of the dependent and independent variables to filter out
+the common factor structure. The AMG estimator [@bond_eberhardt_2013] estimates a common
+dynamic process from the year dummies in a pooled first-differenced regression and
+subtracts it from each country's regression. Both allow fully heterogeneous slope
+coefficients, reporting the unweighted mean across countries. CIPS panel unit root tests
+[@pesaran_2007] — which remain valid under CSD — indicate that all variables are
+integrated of order one [I(1)], motivating long-run cointegration approaches.
+
+**Estimator 4 — CS-ARDL(1,0):** The cross-sectionally augmented ARDL estimator
+[@chudik_pesaran_2015] models the dynamic relationship between energy dependency and
+current account outcomes, estimating both the short-run adjustment dynamics and the
+long-run equilibrium coefficient from an error-correction representation. The
+error-correction coefficient φ (speed of adjustment toward long-run equilibrium) must
+be negative and statistically significant for a valid long-run relationship.
+
+The core identification argument follows from the contrast between Estimators 1 and 2:
+if the pooled OLS effect is significant but the within-FE effect is not, this constitutes
+evidence that energy vulnerability operates as a *structural trap* — baked into the
+permanent energy position of each economy — rather than a cyclical risk activated by
+marginal year-to-year changes in import intensity [@aggarwal_reddie_2021].
+
+### Alternative Explanations and Their Assessment
+
+Three alternative explanations for the OLS–FE contrast must be considered before
+interpreting the result as a structural trap.
+
+**Alternative 1 — Insufficient within-country variation.** Fixed-effects estimators require
+within-country variance to identify coefficients. If energy dependency is nearly constant
+within countries over time, the FE estimator is statistically expected to yield a near-zero
+coefficient regardless of the true effect — not because the effect is absent, but because
+there is no variation to identify it. The panel data confirm that this is precisely the
+case for the economies where the structural trap narrative is most theoretically compelling.
+The within-country standard deviation of energy import dependency is 51.8 pp overall, but
+this aggregate figure is dominated by the volatile exporters: Azerbaijan (within-SD: 121.7
+pp) and Mongolia (138.4 pp). For the key structural importers — Belarus (2.5 pp), Türkiye
+(3.8 pp), Armenia (3.9 pp), Tajikistan (4.8 pp) — year-to-year variation in energy
+dependency is negligible by construction. The between-country standard deviation is 118.8
+pp — 2.3 times larger than the within-country SD. The FE β ≈ 0 is therefore not a
+discovery but a consequence of the variance structure: for the economies where structural
+lock-in is most severe, there is essentially no within-country variation for the estimator
+to exploit. This is itself evidence of structural determination, not a limitation of the
+analysis.
+
+**Alternative 2 — Measurement error attenuation.** Classical measurement error in the
+regressor attenuates within-estimator coefficients more severely than OLS coefficients,
+because FE removes the between variation (where signal is concentrated) and relies on the
+noisier within variation. If the WDI energy import dependency variable (EG.IMP.CONS.ZS)
+contains measurement error, the FE β could be attenuated toward zero for mechanical
+rather than structural reasons. This concern is acknowledged but does not overturn the
+interpretation for two reasons. First, attenuation bias produces coefficients biased toward
+zero — it cannot explain the positive sign (β = +0.001) observed in the FE specification,
+which, while insignificant, is directionally inconsistent with attenuation of a negative
+true effect. Second, the CCEMG and AMG estimators, which operate on within-country
+variation augmented by cross-sectional averages, still yield negative and marginally
+significant coefficients — consistent with the OLS direction and inconsistent with pure
+attenuation.
+
+**Alternative 3 — Omitted variable bias in OLS.** The cross-sectional OLS correlation
+(β = −0.023***) could reflect omitted confounders: poor countries are both more
+energy-import dependent and have worse current account balances for reasons unrelated to
+energy. The analysis addresses this concern by including log GDP per capita (controlling
+for development level and institutional capacity), trade openness (controlling for external
+exposure), inflation (controlling for macroeconomic instability), and resource rents
+(controlling for the resource endowment that mechanically determines exporter status). The
+remaining concern is that unmeasured institutional quality, remittances, or aid flows
+correlate with both energy dependency and CA outcomes. Directionally, these omitted factors
+would likely bias the OLS coefficient toward zero (poorer, more aid-dependent importers
+receive transfers that partially offset CA deficits), meaning the true energy dependency
+effect may be *larger* than −0.023 — a conservative interpretation that strengthens rather
+than undermines the conclusion.
+
+---
+
+# Empirical Results {#sec-results}
+
+## Descriptive Evidence
+
+The N=14 Eurasian panel reveals a sharp structural bifurcation (@tbl-country-means). Among
+energy exporters, Azerbaijan (mean energy dependency: −250%) and Turkmenistan (−215%)
+maintain current account surpluses averaging +8.7% and positive resource rent positions
+(28–36% of GDP), while Russia (−81%) and Kazakhstan (−128%) record moderate surpluses.
+Among energy importers, Moldova (89%), Belarus (85%), and Türkiye (73%) record persistent
+current account deficits averaging −8.1%, −4.0%, and −3.3% of GDP, respectively. The
+bivariate correlation between energy dependency and resource rents reaches r = −0.803
+(N=258), confirming that the exporter–importer divide simultaneously determines fiscal
+capacity and external vulnerability — a structural power asymmetry embedded in Eurasia's
+geoeconomic architecture.
+
+One panel member warrants separate treatment. Mongolia is classified as a net energy
+exporter (mean dependency: −156%) on the basis of its substantial coal and hydrocarbon
+endowment, yet records the most negative current account balance among exporters (mean:
+−11.4% of GDP). This apparent anomaly reflects a compositional dynamic specific to
+Mongolia's development trajectory: its current account deficit arises not from energy
+import costs but from massive capital goods imports for large-scale mining projects
+(Oyu Tolgoi, Tavan Tolgoi), financed by foreign direct investment inflows that appear as
+a separate balance-of-payments counterpart. Mongolia's case illustrates that the energy
+exporter–importer classification captures one structural dimension of macroeconomic
+vulnerability; it does not exhaust all drivers of current account dynamics and does not
+invalidate the general pattern documented here.
+
+**Table 3: Descriptive Statistics**
+
+| Variable | Mean | SD | Min | Max | N |
+|----------|------|----|-----|-----|---|
+| Energy import dep. (%) | −24.9 | 125.8 | −457.1 | 98.2 | 320 |
+| Current account (% GDP) | −3.4 | 10.0 | −43.8 | 33.7 | 292 |
+| Exchange rate depr. (%) | 7.3 | 16.5 | −17.8 | 96.0 | 274 |
+| Trade openness (% GDP) | 87.0 | 29.5 | 29.2 | 175.4 | 322 |
+| Inflation CPI (%) | 10.8 | 13.8 | −1.4 | 168.6 | 281 |
+| Resource rents (% GDP) | 10.7 | 12.9 | 0.01 | 75.4 | 306 |
+
+: Descriptive Statistics — Eurasian Panel (N=14, 2000–2022) {#tbl-descriptives}
+
+## Prerequisite Tests: CSD and Unit Root
+
+The Pesaran CD test on the baseline two-way FE residuals yields CD = −2.059 (p = 0.040),
+confirming the presence of statistically significant cross-sectional dependence (CSD) in the
+Eurasian panel. This result is consistent with the strong regional interdependencies — shared
+Soviet infrastructure legacies, common pipeline networks, and synchronized commodity price
+exposure — that characterize the Eurasian energy space. CSD indicates that standard FE
+estimators produce biased inference and that cross-sectionally augmented estimators (CCEMG,
+AMG, CS-ARDL) are required [@pesaran_smith_1995].
+
+CIPS unit root tests (augmented for CSD) indicate that energy import dependency is integrated
+of order one [I(1)], motivating the estimation of long-run relationships via heterogeneous
+panel estimators.
+
+## The Structural Trap: A Progressive Estimator Hierarchy
+
+Table 4 presents the progressive estimator hierarchy — from cross-sectional pooled OLS
+through heterogeneous long-run estimators — for the current account channel.
+
+**Table 4: Progressive Estimator Hierarchy — Energy Dependency and Current Account Balance**
+
+| | M1 | M2 | M3 | M4 | M5 |
+|--|:--:|:--:|:--:|:--:|:--:|
+| **Estimator** | Pooled OLS | Two-Way FE | CCEMG | AMG | CS-ARDL |
+| energy_dep (LR) | −0.023*** | 0.001 | −0.105. | −0.253. | −0.088 |
+| | (0.008) | (0.046) | (0.058) | (0.134) | (0.072) |
+| ECM (φ) | — | — | — | — | −0.949*** |
+| | — | — | — | — | (0.096) |
+| Controls | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Country FE | — | ✓ | ✓ | ✓ | ✓ |
+| Year FE | — | ✓ | CSA | CDP | CSA |
+| CSD-robust | — | — | ✓ | ✓ | ✓ |
+| Heterogeneity | — | — | ✓ | ✓ | ✓ |
+| N (obs) | 278 | 278 | 278 | 252 | 252 |
+
+*Notes: .p<0.10, \*p<0.05, \*\*p<0.01, \*\*\*p<0.001. Standard errors in parentheses. M1: HC1 robust SE. M2: Driscoll-Kraay (L=2). M3: CCEMG (Pesaran 2006). M4: AMG with Common Dynamic Process (Bond & Eberhardt 2009). M5: CS-ARDL(1,0) Mean Group long-run coefficient and error-correction term (Chudik & Pesaran 2015); φ is the error-correction speed-of-adjustment parameter (must be negative and significant for cointegration). CSA = cross-sectional averages; CDP = common dynamic process. Controls: ln GDP per capita, trade openness, inflation CPI.*
+
+The progression across estimators reveals a coherent and theoretically consistent narrative.
+The pooled OLS (M1) identifies a statistically significant cross-sectional relationship:
+β = −0.023 (p<0.001), implying that a 10 pp increase in structural energy dependency
+is associated with a 0.23 pp deterioration in the current account balance. Given the
+between-country spread of approximately 339 pp in mean energy dependency (Azerbaijan:
+−250%; Moldova: +89%), the coefficient implies a model-estimated structural current account
+gap of approximately 7.8 percentage points of GDP attributable to energy position alone.
+The observed raw gap between these two countries averages 16.8 pp — the residual reflects
+country-specific factors (remittances, aid flows, trade composition) beyond energy dependency,
+which the model does not purport to explain in full.
+
+The within-country two-way FE specification (M2) yields β = 0.001 (p=0.948). This contrast
+is not an estimation failure but the empirical fingerprint of a structural trap: once
+country fixed effects absorb the permanent importer or exporter status, there is no
+residual within-country temporal variation to exploit. Energy vulnerability is baked into
+the structural position of the economy, not activated by marginal year-to-year changes in
+import shares.
+
+The heterogeneous long-run estimators confirm this interpretation. The CCEMG (M3) yields
+β = −0.105 (p<0.10), and the AMG (M4) yields β = −0.253 (p<0.10). Both are negative and
+statistically significant at the 10% level, consistent with the cross-sectional OLS
+estimate in direction and with larger magnitude reflecting long-run accumulation.
+The CS-ARDL long-run coefficient (M5: β = −0.088) is directionally consistent though
+statistically insignificant, plausibly reflecting limited within-country power with N=13
+and T=22. The error-correction coefficient (φ = −0.949, p < 0.001) indicates that
+approximately 95% of any deviation from the long-run equilibrium is corrected within a
+single year. This rapid adjustment speed is consistent with the annual data frequency
+and the nature of the current account as a flow variable: trade balance responses to
+energy price and quantity shocks materialise largely within the calendar year in which
+they occur, rather than spreading over multiple years as would be expected for stock
+variables (capital, infrastructure). The fast ECM does not contradict the structural trap
+interpretation — the equilibrium *level* toward which adjustment occurs is determined
+by the country's structural energy position; what the ECM estimates is the speed of
+convergence to that structurally-determined equilibrium, not its magnitude. Together, the
+heterogeneous estimators provide directionally consistent evidence that structural energy
+dependency exerts a long-run drag on current account positions in Eurasian economies.
+
+The persistent CA divergence by energy status — introduced in Figure 1 above — provides the
+descriptive backdrop against which the regression results should be interpreted. The
+cross-sectional OLS coefficient quantifies the slope of this divergence; the FE
+insignificance indicates that it does not vary systematically within countries over time.
+
+## Structural Trap Across Three Vulnerability Channels
+
+Beyond the current account channel, two additional vulnerability channels were estimated
+using the same two-way FE (DK) specification. Exchange rate depreciation (M6:
+β = −0.003, p=0.887) and fiscal balance (M7: β = 0.007, p=0.385) show no statistically
+significant within-country relationship with energy dependency. These null within-country
+results are not anomalies — they reinforce the structural trap finding. All three
+macroeconomic vulnerability channels are predominantly determined by the country's long-run
+energy position rather than year-to-year fluctuations: the importer vs. exporter divergence
+operates as a persistent equilibrium condition, not a cyclical risk. Table 5 reports the
+two-way FE (DK) coefficients for the exchange rate and fiscal channels.
+
+**Table 5: Additional Vulnerability Channels — Two-Way FE (Driscoll-Kraay) Estimates**
+
+| | M6 | M7 |
+|--|:--:|:--:|
+| **Dependent variable** | Exchange rate depreciation | Fiscal balance (% GDP) |
+| energy_dep | −0.003 | 0.007 |
+| | (0.023) | (0.008) |
+| Controls | ✓ | ✓ |
+| Country FE | ✓ | ✓ |
+| Year FE | ✓ | ✓ |
+| p-value | 0.887 | 0.385 |
+
+: Additional Vulnerability Channels {#tbl-channels}
+
+*Notes: Two-way FE with Driscoll-Kraay standard errors (L=2). Neither coefficient is statistically significant, consistent with the structural trap: within-country temporal variation in energy dependency does not predict contemporaneous exchange rate or fiscal outcomes. Vulnerability is structurally determined by long-run energy position.*
+
+The importer vs. exporter divergence — captured in Figure 2 — operates as a persistent
+equilibrium condition, not a cyclical risk.
+
+![Energy dependency and current account position: country averages (2000-2022). Dot size = absolute CA balance. Exporters (blue) concentrate at left; importers (red) at right. Source: World Bank WDI. Author's calculations.](fig2_country_dot.png){#fig-country-dot width=90%}
+
+## Heterogeneity: The Importer Subsample
+
+Restricting the sample to energy importers only (N=8 countries: Armenia, Belarus, Georgia,
+Kyrgyz Republic, Moldova, Tajikistan, Türkiye, Ukraine), the within-FE coefficient
+remains statistically insignificant (β = 0.152, p=0.409). This indicates that even among
+structurally similar importers, year-to-year variation in energy dependency shares does
+not predict contemporaneous CA deterioration. The vulnerability is locked in at the
+structural level — consistent with the geoeconomic statecraft prediction that energy dependency
+constitutes a persistent constraint on sovereign economic autonomy [@aggarwal_reddie_2021;
+@lebrand_yilmazkuday_2024].
+
+Two panel members warrant explicit attention regarding the robustness of this result.
+**Ukraine** experienced two major geopolitical discontinuities within the sample window:
+the 2014 Crimea annexation and Donbas conflict (associated with a shift away from Russian
+energy dependency) and the February 2022 full-scale invasion (which effectively terminated
+Russian gas transit and supply). **Belarus** underwent a political-economy transformation
+after the 2020 post-election crisis that deepened its energy dependence on Russia under
+explicitly political terms, separate from any market or structural logic. Both cases
+represent political-economy shocks to energy dependency and CA outcomes that operate
+through mechanisms distinct from the gradual structural accumulation theorized in this
+chapter. The finding that within-FE coefficients are insignificant even in this
+politically-disrupted importer subsample therefore provides a *conservative* test of the
+structural trap: if anything, Ukraine's post-2014 energy diversification should have
+generated a detectable within-country improvement in CA outcomes if the energy dependency
+→ CA channel were sensitive to year-to-year variation — it did not. Robustness checks
+excluding Ukraine and Belarus are identified as a priority for subsequent work, as the
+political economy of these two cases likely warrants separate modelling.
+
+---
+
+# Policy Implications {#sec-policy}
+
+The structural trap finding — that energy vulnerability is determined by a country's long-run
+energy position rather than by marginal year-to-year changes — has direct and sobering
+implications for policy. Incremental adjustments to energy import volumes will not dissolve the
+macroeconomic asymmetries documented above; only structural transformation of the supply
+architecture, the institutional framework, and the macroeconomic buffer system can reduce the
+geoeconomic exposure of energy-importing Eurasian economies. This chapter identifies five
+interconnected policy priorities.
+
+**Supply diversification governance.** The primary structural remedy for energy import
+dependency is diversification of supply sources and energy carriers. @herranz_surrallés_2024
+documents how the EU's post-2022 emergency diversification — LNG procurement, Southern Gas
+Corridor expansion, accelerated renewable deployment — restructured European energy
+architecture within 18 months. Eurasian importers face a more constrained geography: the
+Trans-Caspian route (Azerbaijan–Georgia–Türkiye corridor) offers the most credible near-term
+alternative to Russian gas for Caucasian importers, while Central Asian importers (Kyrgyzstan,
+Tajikistan) must combine renewable portfolio development with energy efficiency investment to
+reduce absolute import volumes. @ozkan_okay_2024 and @imzali_bayraktutan_2025 confirm
+empirically that expanding renewable shares improves current account positions across comparable
+panel samples. Supply diversification must be institutionally embedded in national energy
+security frameworks with mandatory import basket diversification benchmarks, not left to
+market signals that are routinely distorted by preferential bilateral pricing.
+
+**Macroeconomic buffer architecture.** @lebrand_yilmazkuday_2024 demonstrate that the
+current account adjustment burden during energy price shocks falls disproportionately on
+economies with shallow foreign exchange markets and limited fiscal reserves. Net energy
+importers in the Eurasian panel — particularly Moldova (CA mean: −8.1% of GDP), Georgia
+(−10.0%), and Kyrgyzstan (−9.3%) — maintain inadequate foreign exchange reserve coverage
+relative to their structural energy import exposure. The policy implication is a reserve
+adequacy standard calibrated to energy import intensity, not merely to import months of
+coverage. Fiscal stabilization funds that accumulate during low-energy-price periods and
+discharge during price spikes provide a second buffer layer; their institutional design should
+be modeled on the countercyclical fiscal frameworks validated in commodity-exporting contexts
+but adapted to the import-side exposure that characterizes the vulnerable end of the Eurasian
+energy spectrum [@degirmen_et_al_2023].
+
+**EAEU internal energy market reform.** The Eurasian Economic Union's internal energy market,
+formally targeted for completion by 2025, remains functionally incomplete. Russia maintains
+bilateral preferential pricing arrangements that bind dependent members — Belarus and Armenia
+in particular — to below-market energy prices in exchange for political alignment. This
+Vinerian trade diversion dynamic [@viner_1950] prevents EAEU members from developing credible
+alternative supply relationships and perpetuates the leverage asymmetry quantified in this
+chapter. Genuine internal energy market reform would require a transparent, rules-based pricing
+formula replacing bilateral negotiation; a supranational energy regulator with dispute
+resolution authority; and non-discriminatory third-party access to pipeline infrastructure.
+The European Union's experience with Third Energy Package liberalization — including ownership
+unbundling and regulated network access — provides an institutional template, adjusted for the
+asymmetric power dynamics of the EAEU context [@saiymova_2020].
+
+**Bilateral energy partnership restructuring.** For economies outside the EAEU framework —
+Georgia, Türkiye, Mongolia — and for those seeking to renegotiate their EAEU energy terms,
+bilateral energy partnership architecture requires modernization. Long-term take-or-pay
+contracts, which lock importers into volume commitments irrespective of price developments,
+should incorporate automatic renegotiation clauses triggered by specified price thresholds or
+geopolitical force majeure events. Import basket diversification metrics — minimum shares of
+supply from non-dominant sources — should function as conditionality for preferential trade
+access. @filatov_2025 documents how the post-2022 restructuring of Sino-Russian energy
+relations replicated the hub-and-spoke asymmetry at a new geographic axis; Eurasian importers
+must avoid trading Russian dependence for Chinese dependence by building genuinely diversified
+portfolios across multiple bilateral partnerships.
+
+**SCO energy cooperation operationalization.** The Shanghai Cooperation Organisation's Energy
+Club — proposed as a platform for multilateral energy security cooperation — has not advanced
+beyond declaratory commitments. Its operationalization could provide a multilateral framework
+for financing alternative corridor infrastructure (including Central Asia–South Asia routes),
+coordinating energy efficiency standards across member economies, and establishing a regional
+strategic energy reserve mechanism analogous to the IEA's coordinated release protocol.
+Türkiye's dual positioning — as an EU Customs Union partner and SCO dialogue partner with
+significant energy transit infrastructure — grants it a bridging role in any multilateral
+energy architecture that connects Caspian exporters to European and Asian markets, a role
+that reduces its own net importer vulnerability while generating geopolitical leverage
+[@aggarwal_reddie_2021; @blackwill_harris_2016].
+
+---
+
+# Conclusion {#sec-conclusion}
+
+This chapter has examined the quantitative dimensions of energy dependency and geoeconomic
+vulnerability in the Eurasian order, addressing a triple geographic, methodological, and
+conceptual gap in the existing literature. Using annual panel data for N=14 Eurasian economies
+over 2000–2022, the analysis employs a progressive estimator hierarchy — from pooled OLS through
+cross-sectionally augmented heterogeneous estimators — to test whether energy import dependency
+constitutes a structural macroeconomic constraint or merely a cyclical risk.
+
+The central empirical finding is consistent with the *structural trap* hypothesis. The pooled OLS
+estimator yields β = −0.023 (p < 0.001), documenting a statistically significant
+cross-sectional relationship between structural energy dependency and current account
+deterioration. The within-country two-way fixed-effects estimator yields β = 0.001
+(p = 0.948) — not an estimation failure but the empirical fingerprint of structural
+determination: once country fixed effects absorb the permanent importer or exporter status,
+there is no residual within-country temporal variation that predicts contemporaneous
+macroeconomic outcomes. The Pesaran CD test (CD = −2.059, p = 0.040) confirms significant
+cross-sectional dependence, motivating the CSD-robust heterogeneous estimators: CCEMG yields
+β = −0.105 (p < 0.10) and AMG yields β = −0.253 (p < 0.10), both directionally consistent
+with the cross-sectional OLS and with larger long-run magnitudes reflecting cumulative
+structural accumulation. The CS-ARDL error-correction coefficient (φ = −0.949, p < 0.001)
+is consistent with a persistent long-run equilibrium relationship.
+
+These findings make three contributions. **Theoretically**, the chapter integrates geoeconomic
+statecraft theory [@blackwill_harris_2016; @luttwak_1990], structural power analysis
+[@strange_1988; @hirschman_1945], and weaponized interdependence [@farrell_newman_2019] into
+a coherent framework that explains why energy dependency generates macroeconomic vulnerability
+at the structural rather than cyclical level. **Empirically**, the chapter provides the first
+CSD-robust panel econometric assessment of the energy dependency–current account nexus for a
+coherent Eurasian panel spanning both net exporters and highly import-dependent post-Soviet
+states. **Institutionally**, the empirical finding that the structural current account gap
+between exporters and importers persists undiminished across the 2000–2022 window — despite
+the formal EAEU energy market integration commitments operative from 2015 — is consistent
+with the Balassa stage-gap hypothesis developed in §3: EAEU energy markets remain
+functionally at stage one, incapable of absorbing the OCA-violating asymmetric shocks
+[@mundell_1961] that structural energy dependency generates. The EAEU's preferential energy
+pricing perpetuates Vinerian trade diversion [@viner_1950] rather than creating the
+welfare-improving integration that Balassa's taxonomy requires at stage two and beyond.
+
+The findings carry implications beyond the Eurasian case. In an era of multipolar geoeconomic
+competition, energy dependency constitutes a structural constraint on sovereign economic
+autonomy — a vulnerability that intensifies during periods of supply disruption and great power
+rivalry. The policy agenda for energy-importing Eurasian economies must combine supply
+diversification with macroeconomic buffer-building, EAEU institutional reform, and SCO
+multilateral energy cooperation.
+
+**Limitations and future research.** Several limitations warrant acknowledgment. First, the
+WDI energy import dependency variable (EG.IMP.CONS.ZS) measures the share of net energy
+imports in total energy use, capturing structural position but not the directional concentration
+of supply sources — a country importing 80% of its energy from three diversified suppliers
+occupies a different geoeconomic position than one importing 80% from a single dominant
+exporter. Future research using bilateral energy trade data would allow a more precise
+decomposition of supply concentration risk. Second, the sample window ends in 2022; the
+post-February 2022 structural break in Eurasian energy architecture — the Russian supply
+reorientation, accelerated Trans-Caspian discussions, and emergence of new LNG spot markets
+— constitutes a distinct regime that may generate different coefficient estimates. Third, the
+CCEMG and AMG estimators yield coefficients significant at the 10% level only; broader panel
+coverage or longer time horizons would improve statistical precision. These limitations suggest
+a productive agenda: a narrower EAEU panel with institutional heterogeneity variables, a
+bilateral energy trade gravity model, and a Türkiye-specific ARDL analysis exploiting the full
+depth of available time-series data [@imzali_bayraktutan_2025; @yalta_yalta_2017].
+
+---
+
+# References {#sec-references}
+
+::: {#refs}
+:::

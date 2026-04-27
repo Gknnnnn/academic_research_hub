@@ -1,0 +1,315 @@
+---
+title: "The AI-Green Paradox: Does Government AI Readiness Accelerate or Hinder Environmental Sustainability?"
+author: "Dr. Mehmet Gökhan Özdemir"
+format:
+  pdf:
+    documentclass: article
+    keep-tex: true
+    geometry: margin=1in
+    fontsize: 12pt
+  docx: default
+execute:
+  echo: false
+  warning: false
+bibliography: references.bib
+link-citations: true
+---
+
+**Abstract**
+
+This study investigates whether government AI readiness is associated with environmental sustainability outcomes using a two-way fixed effects (TWFE) panel model applied to 115–123 countries over 2019–2024. Using the Oxford Government AI Readiness Index (GAIRI) as the treatment variable — normalized to [0, 1] — I estimate its effects on ecological footprint, carbon intensity, and renewable energy share, controlling for income, trade, urbanization, and FDI. The baseline results, supported by cluster-bootstrap inference [@webb2023reworking], suggest a directionally counterintuitive *AI-Green Paradox*: higher AI readiness is associated with a larger ecological footprint (β = +0.139, p_Webb = 0.028) and a lower renewable energy share (β = −3.31, p_Webb = 0.074). However, comprehensive robustness analysis reveals substantial fragility in this finding. Within-country variation in GAIRI accounts for only 6% of total variance (within-country SD = 0.045), making TWFE identification nearly equivalent to cross-sectional estimation. Critically, the renewable energy result disappears entirely when extreme GAIRI values are excluded (β = −0.29, p = 0.938), and the sign reverses with one-period lagged GAIRI (β = +2.80, p = 0.030), raising concerns about reverse causality. A formal interaction test finds no statistically significant income-group heterogeneity (p = 0.958). Realistic within-country effect sizes are negligible: a one-SD within-country GAIRI move implies a −0.14 pp change in renewable share. These findings suggest that the cross-country association between AI readiness and environmental outcomes is real but does not survive within-country identification, pointing to development-stage confounding rather than a causal AI-environment nexus. The paper contributes a rigorous empirical benchmark — including a full variance decomposition, robustness battery, and formal heterogeneity tests — for future research with longer panels and better-identified designs.
+
+**Keywords:** Artificial Intelligence Readiness, Ecological Footprint, Carbon Intensity, Rebound Effect, Jevons Paradox, TWFE Panel, Webb Bootstrap.
+
+**JEL:** Q50, Q55, O33, C23.
+
+---
+
+# 1. Introduction
+
+The global diffusion of artificial intelligence (AI) technologies has generated divergent expectations about its environmental consequences. The techno-optimist view holds that AI accelerates green transformation by optimizing energy systems, reducing material waste, and enabling smart infrastructure [@vinuesa2020role; @rolnick2022tackling; @brynjolfsson2014second]. Empirical projections suggest AI applications could reduce global CO₂ emissions by 1.5–4% by 2030 through efficiency improvements in energy systems, precision agriculture, and industrial processes.
+
+The techno-pessimist view, rooted in the Jevons Paradox [@jevons1865coal; @alcott2005jevons], warns that efficiency gains from AI may increase total energy consumption by expanding the scale of economic activity and enabling energy-intensive computational processes [@crawford2021atlas; @strubell2019energy]. The energy footprint of AI is substantial and growing: large language models consume megawatt-hours per training run, data centres account for 1–3% of global electricity consumption, and projections suggest this share could reach 4–8% by 2030 [@freitag2021real; @devries2023energy; @schwartz2020green]. @patterson2021carbon estimate that training a single large AI model can emit as much CO₂ as five cars over their lifetimes.
+
+This paper offers the first cross-country TWFE panel analysis of the relationship between *government* AI readiness and environmental sustainability outcomes. Using the Oxford Government AI Readiness Index (GAIRI, 2019–2024) — a composite measure of AI infrastructure, data governance, and regulatory capacity — I test whether countries that are more prepared to deploy AI at the national level exhibit better or worse environmental performance, as measured by ecological footprint, carbon intensity per unit of GDP, and renewable energy adoption.
+
+The baseline finding is consistent with an **AI-Green Paradox**: after controlling for income, trade openness, urbanization, FDI, and country and year fixed effects, higher government AI readiness is positively associated with ecological footprint (β = +0.139, p_Webb = 0.028) and negatively associated with renewable energy share (β = −3.31, p_Webb = 0.074). The effect on carbon intensity is positive but statistically insignificant (p_Webb = 0.104). EKC-type moderation by income group is not supported (Chow test p = 0.958). However, a comprehensive robustness battery reveals substantial fragility: within-country GAIRI variation accounts for only 6% of total variance; the renewable energy result collapses entirely when extreme observations are trimmed (R1: β = −0.29, p = 0.938); and the sign reverses with lagged GAIRI (R3: β = +2.80, p = 0.030), raising reverse causality concerns. These diagnostics suggest the baseline estimates reflect cross-national level regularities rather than confirmed within-country causal effects, and the paper is best read as establishing a rigorous empirical benchmark for future research with longer panels and stronger identification.
+
+The paper contributes to three literatures: (1) the AI–environment nexus [@dhar2020carbon; @freitag2021real; @devries2023energy]; (2) panel econometrics of the environmental Kuznets curve [@grossman1991environmental; @grossman1995economic; @stern2004rise; @dinda2004ekc]; and (3) evidence-based AI governance policy [@oecd2019recommendation].
+
+The remainder of the paper is organized as follows. Section 2 reviews the literature. Section 3 develops the hypotheses. Section 4 describes the data. Section 5 presents the empirical strategy. Section 6 reports results. Section 7 discusses implications. Section 8 concludes.
+
+# 2. Literature Review
+
+## 2.1. AI and Environmental Performance: Channels and Countervailing Forces
+
+The theoretical relationship between AI adoption and environmental outcomes operates through multiple, partially offsetting channels. On the positive side, AI facilitates (i) energy system optimization through smart grids and demand-response algorithms, (ii) material efficiency in industrial processes via predictive maintenance and defect detection, and (iii) climate modelling and precision agriculture that reduce emissions per unit of output [@vinuesa2020role; @rolnick2022tackling]. @rolnick2022tackling identify over 13 distinct climate domains in which machine learning can accelerate decarbonization, from power systems to transportation to buildings.
+
+Counteracting forces are equally documented. The energy consumption of AI training and inference is growing rapidly — large language models consume megawatt-hours per training run [@strubell2019energy], and AI data centres account for an estimated 1–3% of global electricity consumption, with projections of 4–8% by 2030 [@freitag2021real; @crawford2021atlas]. @schwartz2020green argue that the AI research community has systematically underpriced computational costs, making the carbon footprint of AI largely invisible in published results. @devries2023energy estimates that AI electricity demand could reach 85–134 TWh per year by 2027 — comparable to the total annual electricity consumption of the Netherlands.
+
+More fundamentally, the Jevons Paradox suggests that efficiency gains enabled by AI lower the effective cost of energy-intensive activities, stimulating demand to a degree that may exceed the direct efficiency savings [@jevons1865coal; @alcott2005jevons; @sorrell2009jevons]. @sorrell2009jevons reviews econometric evidence that direct rebound effects alone absorb 10–30% of efficiency gains in energy-intensive sectors, with economy-wide effects potentially exceeding 100% ("backfire"). Applied to AI, this implies that AI-optimized energy systems may paradoxically increase total energy demand by lowering effective energy costs and stimulating broader economic activity.
+
+## 2.2. The Environmental Kuznets Curve and AI Readiness
+
+The Environmental Kuznets Curve (EKC) hypothesis — named after the income-inequality curve of @kuznets1955growth — originating in the environmental context with @grossman1991environmental and formalized by @grossman1995economic and @panayotou1997demystifying, predicts an inverted-U relationship between per-capita income and environmental degradation: pollution rises during early industrialization and falls after a turning point. The EKC mechanism is demand-driven (richer societies demand cleaner environments) and structural (income growth shifts economies toward services). @dinda2004ekc surveys the extensive empirical literature and identifies substantial heterogeneity in turning points across pollutants and samples, cautioning against policy conclusions drawn from aggregate estimates. @stern2004rise similarly questions whether the EKC represents a universal law or a sample-specific artifact.
+
+A natural extension is whether AI readiness modifies the EKC relationship — either by accelerating the income threshold at which environmental quality improves (shifting the turning point leftward) or by amplifying scale effects that dominate composition effects (shifting the curve upward). These possibilities motivate the interaction specification in M2.
+
+## 2.3. Government AI Readiness and Green Transition
+
+While firm-level and application-specific studies dominate the AI–environment literature, cross-country evidence on *government* AI capacity and environmental outcomes is sparse. Government AI readiness captures the national-level ecosystem — regulatory frameworks, public data infrastructure, e-government capacity, and AI governance — rather than private-sector adoption. @oxfordinsights2023gairi constructs the GAIRI across Government, Technology Sector, and Data & Infrastructure pillars. Countries with high GAIRI scores are typically high-income, highly urbanized, and technologically sophisticated; controlling for these confounders is necessary to isolate the AI readiness effect.
+
+Critically, higher government AI readiness reflects *capacity and infrastructure*, not actual deployment outcomes. A country may have excellent AI governance but still host energy-intensive data centres and tech ecosystems that increase aggregate environmental burden. This is the core mechanism underlying the AI-Green Paradox hypothesis.
+
+## 2.4. Methodological Context
+
+Cross-country panel analyses of environmental determinants typically employ TWFE models with country and year fixed effects to control for time-invariant heterogeneity and common trends [@stern2004rise]. A key inferential concern arises from the small number of clusters: with N_clusters < 30, conventional cluster-robust standard errors are undersized and nominal significance levels are unreliable [@cameron2015practitioner]. This paper applies the Webb [-@webb2023reworking] 6-point wild cluster bootstrap, which delivers near-correct rejection rates even at N = 6 clusters [@mackinnon2018wild].
+
+A second methodological concern is treatment effect heterogeneity in TWFE panels with staggered or gradual treatment adoption. @goodmanbacon2021 shows that the TWFE coefficient is a weighted average of 2×2 DiD estimands, with potentially negative weights when early-treated units serve as controls for late-treated units. @callaway2021did propose cohort-based DiD estimators robust to this concern. In the present application, the GAIRI is a continuously varying index rather than a binary treatment, which mitigates (but does not eliminate) the Goodman-Bacon decomposition concern. We address this in robustness checks (§6.4).
+
+# 3. Hypotheses
+
+Drawing on the competing theoretical mechanisms above, we state three testable hypotheses:
+
+**H1 (Techno-optimist):** Higher government AI readiness reduces ecological footprint and carbon intensity, and increases renewable energy share, through AI-enabled efficiency gains in energy systems. *Expected: β₁ < 0 for footprint and carbon intensity; β₁ > 0 for renewable share.*
+
+**H2 (Jevons/Rebound):** Higher government AI readiness increases ecological footprint and carbon intensity, and reduces renewable energy share, through demand expansion effects that outweigh direct efficiency gains. *Expected: β₁ > 0 for footprint and carbon intensity; β₁ < 0 for renewable share.*
+
+**H3 (EKC Moderation):** AI readiness moderates the income–environment relationship, shifting the EKC turning point toward lower income levels (i.e., AI accelerates the transition to environmental improvement). *Expected: β₃ < 0 in M2.*
+
+The empirical results in Section 6 test these hypotheses and find consistent support for H2 on ecological footprint, weak support for H2 on renewable energy, and no support for H3.
+
+# 4. Data
+
+## 4.1. Treatment Variable: Oxford GAIRI
+
+The Oxford Government AI Readiness Index (GAIRI) is published annually by Oxford Insights since 2019 [@oxfordinsights2023gairi]. It covers up to 193 countries and scores government preparedness across three pillars: Government (regulatory capacity, AI strategy, adaptive capacity), Technology Sector (AI ecosystem, talent, infrastructure), and Data & Infrastructure (open data, data portability, digital public services). Scores range 0–100; I normalise to [0, 1] for all regressions. **All β coefficients reported in this paper are on the normalised [0, 1] scale unless explicitly stated otherwise.**
+
+**Table 1: Oxford GAIRI — Descriptive Statistics by Year**
+
+| Year | N_countries | Mean | SD | Min | Max |
+|---|---|---|---|---|---|
+| 2019 | 171 | 43.6 | 23.4 | 1.7 | 91.9 |
+| 2020 | 152 | 45.9 | 16.1 | 19.1 | 85.5 |
+| 2021 | 152 | 48.1 | 16.8 | 17.9 | 88.2 |
+| 2022 | 161 | 46.2 | 17.4 | 13.5 | 85.7 |
+| 2023 | 160 | 46.9 | 16.9 | 18.3 | 84.8 |
+| 2024 | 161 | 49.1 | 17.3 | 14.6 | 87.0 |
+
+The GAIRI is a slowly-evolving index: within-country standard deviation across years is substantially smaller than cross-country variation. This limits the identifying variation for within-country FE estimation and is acknowledged as a limitation (§8).
+
+## 4.2. Outcome Variables
+
+Three environmental outcomes are used: (1) **Ecological footprint** (global hectares per capita; Global Footprint Network [@wackernagel1996footprint], available 2019–2021); (2) **Carbon intensity per GDP** (CO₂ per capita scaled by GDP per capita; World Bank indicator EN.GHG.CO2.PC.CE.AR5, available through 2024); (3) **Renewable energy share** (% of total final energy consumption; World Bank EG.FEC.RNEW.ZS). All outcomes are log-transformed where specified; β coefficients on log outcomes represent approximate percentage changes.
+
+## 4.3. Controls
+
+Controls are drawn from the World Bank WDI: log GDP per capita (NY.GDP.PCAP.CD), trade openness (NE.TRD.GNFS.ZS, % GDP), urbanization rate (SP.URB.TOTL.IN.ZS, %), and FDI net inflows (BX.KLT.DINV.WD.GD.ZS, % GDP). The Economic Complexity Index (ECI, MIT Observatory of Economic Complexity) captures structural sophistication beyond income. **Pairwise correlations among regressors and VIF statistics are reported in Appendix Table A1.** GAIRI is correlated with log GDP per capita (r ≈ 0.72), requiring careful interpretation of the AI readiness coefficient as a conditional effect net of income.
+
+## 4.4. Sample
+
+The merged sample covers 115–125 countries over 2019–2024. Ecological footprint is limited to 2019–2021 (T = 3); carbon intensity and renewable outcomes extend to 2024 (T ≤ 6). Total observations range from 329 (ecological footprint) to 651 (carbon/renewable, extended panel). **Appendix Table A2 documents country coverage by outcome and year.** Ireland and Luxembourg are retained in this analysis (unlike the Datamaclae panel) as their AI readiness profiles do not constitute structural outliers for the GAIRI-environment relationship.
+
+# 5. Empirical Strategy
+
+## 5.1. Baseline TWFE Specification (M1)
+
+$$
+y_{it} = \alpha_i + \lambda_t + \beta_1 \text{AI}_{it} + \mathbf{X}_{it}'\boldsymbol{\gamma} + \varepsilon_{it}
+$$
+
+where $y_{it}$ is the environmental outcome (log ecological footprint, log carbon intensity, or renewable share in percentage points), $\text{AI}_{it}$ is the Oxford GAIRI score normalised to [0, 1], $\mathbf{X}_{it}$ is the vector of controls, and $\alpha_i$ and $\lambda_t$ are country and year fixed effects. Standard errors are clustered at the country level.
+
+**Identification assumption**: TWFE identifies $\beta_1$ under the parallel trends assumption — that, absent AI readiness differences, countries would have experienced parallel environmental trajectories. This assumption is untestable in strict form but is assessed via: (i) inclusion of lagged AI readiness as a placebo regressor (Section 6.4), which should be insignificant if outcomes do not pre-trend; and (ii) the slow-moving nature of GAIRI, which reduces the likelihood of sharp pre-treatment divergences. We acknowledge that the short panel (T ≤ 6 beginning in 2019) limits formal pre-trend testing.
+
+**Endogeneity caveat**: Government AI readiness may not be strictly exogenous to environmental outcomes. Countries with weaker environmental performance might invest more heavily in AI governance as a compensatory strategy (reverse causality), or both AI readiness and ecological footprint may be jointly driven by industrialization intensity or natural resource endowment (omitted variable bias). We address this by: (i) controlling for GDP per capita and FDI (key proxies for industrialization); (ii) testing robustness after excluding resource-dependent economies (fuel exports > 30% of merchandise exports); and (iii) using GAIRI lagged two years as an alternative treatment measure. The TWFE coefficient should be interpreted as a conditional association rather than a structural causal effect.
+
+## 5.2. EKC Interaction (M2)
+
+To test whether AI readiness moderates the income–environment relationship (H3):
+
+$$
+y_{it} = \alpha_i + \lambda_t + \beta_1 \text{AI}_{it} + \beta_2 \ln\text{GDP}_{it} + \beta_3 (\text{AI}_{it} \times \ln\text{GDP}_{it}) + \mathbf{X}_{it}'\boldsymbol{\gamma} + \varepsilon_{it}
+$$
+
+$\beta_3 < 0$ would support H3 (AI lowers the EKC turning point). $\beta_3 > 0$ would imply AI amplifies the income–environment trade-off.
+
+## 5.3. Webb Wild Cluster Bootstrap
+
+With N = 115–125 clusters, conventional cluster-robust standard errors can still be imprecise at this cluster count [@cameron2015practitioner; @mackinnon2018wild]. I apply the @webb2023reworking 6-point discrete weights ($w \in \{-\sqrt{3/2}, -1, -\sqrt{1/2}, \sqrt{1/2}, 1, \sqrt{3/2}\}$, each with probability 1/6 per cluster) with B = 499 iterations. All inferential conclusions are drawn from bootstrap p-values; conventional cluster-robust p-values are reported for comparison only.
+
+# 6. Results
+
+## 6.1. Baseline TWFE (M1)
+
+Table 2 reports the key $\hat{\beta}_1$ coefficients from M1. **All AI readiness coefficients are on the normalised [0, 1] GAIRI scale.**
+
+**Table 2: TWFE Baseline — Effect of AI Readiness on Environmental Outcomes**
+
+| Outcome | β(AI readiness) | SE (CR) | p (CR) | p (Webb) | CI 95% (Webb) |
+|---|---|---|---|---|---|
+| ln Ecological Footprint | **+0.139** | 0.084 | 0.100 | **0.028\*\*** | [+0.022, +0.262] |
+| ln Carbon Intensity/GDP | +0.119 | 0.093 | 0.201 | 0.104 | [−0.028, +0.267] |
+| Renewable Energy Share (%) | **−3.31** | 2.34 | 0.157 | **0.074\*** | [−6.81, +0.16] |
+
+*N = 329–332, countries = 114–115 (ecological footprint/renewable: 2019–2021); carbon intensity: N = 329, countries = 114. TWFE country + year FE. CR = conventional cluster-robust. Webb bootstrap B = 499. AI readiness on normalised [0, 1] scale. \*\*p < 0.05; \*p < 0.10 (Webb bootstrap).*
+
+The ecological footprint result (β = +0.139, p_Webb = 0.028) is the headline finding and supports H2. Interpreting the log-linear specification: a one-unit increase in AI readiness (full range, 0→1, i.e., one standard deviation of σ ≈ 0.17 implies approximately 2.4% increase in ecological footprint) is associated with a 13.9% increase in ecological footprint at the same income level. This is consistent with the Jevons mechanism: AI-ready countries host energy-intensive AI infrastructure and experience demand-expansion effects that exceed efficiency savings.
+
+The renewable energy result (β = −3.31, p_Webb = 0.074) is directionally consistent with H2 but should be interpreted cautiously: the Webb bootstrap 95% CI spans [−6.81, +0.16], barely including zero, indicating *suggestive* rather than conclusive evidence of a negative association. **We do not claim that this result represents strong statistical evidence of a causal effect; it is directionally consistent with the AI-Green Paradox and motivates further investigation.**
+
+The carbon intensity result (β = +0.119, p_Webb = 0.104) is **statistically insignificant** at conventional thresholds and should not be interpreted as confirming H2. Carbon intensity is a normalized (intensive) measure, unlike ecological footprint which is an extensive measure; the null result may reflect offsetting efficiency and scale effects that cancel in the carbon-intensity ratio.
+
+## 6.2. EKC Interaction (M2)
+
+The EKC interaction term (AI × ln GDP) is statistically indistinguishable from zero across all three outcomes (all p > 0.80). H3 is rejected: AI readiness does not appear to shift the income–environment turning point within the 2019–2024 panel. This is consistent with the short T and limited within-country variation in AI readiness trajectories, and with the general critique of EKC turning-point estimates [@dinda2004ekc; @stern2004rise].
+
+## 6.3. Extended Panel (2019–2024)
+
+For carbon intensity and renewable energy, the extended panel (N ≤ 651 obs, T ≤ 6) produces directionally identical but smaller coefficients (carbon: β = +0.168, p_CR = 0.220; renewable: β = −3.09, p_CR = 0.204). The reduction in significance as T increases is consistent with within-country variation in AI readiness being modest over 6 years — the index evolves slowly, providing limited identifying variation for within-FE estimation.
+
+## 6.4. Robustness Battery
+
+**Table 3: Full Robustness Battery — TWFE Estimates (Cluster-Robust SE)**
+
+| Specification | N | N_c | β(Renewable) | p | β(ln Carbon) | p |
+|---|---|---|---|---|---|---|
+| Baseline | 334 | 123 | −3.09 | 0.119 | +0.168 | 0.178 |
+| R1: Excl GAIRI top/bottom 5% | 291 | 115 | **−0.29** | **0.938** | **−0.058** | **0.744** |
+| R2: Excl small states (N_obs < 4) | 334 | 117 | −3.09 | 0.119 | +0.175 | 0.162 |
+| R3: Lagged GAIRI (t−1) | 224 | 115 | **+2.80** | **0.030** | **−0.031** | **0.702** |
+| R4: Excl high-FDI countries (>15%) | 324 | 120 | −3.14 | 0.118 | +0.185 | 0.149 |
+
+*Country + year FE throughout. SE clustered by country. Bold = qualitative departure from baseline.*
+
+Three findings are decisive. **R1**: Excluding the top and bottom 5% of GAIRI values reduces the renewable coefficient by 91% (−3.09 → −0.29, p = 0.938) and flips the carbon sign. The baseline result is driven by a small number of extreme-GAIRI countries, not a broad cross-country pattern. **R3**: One-period lagged GAIRI reverses the renewable coefficient to +2.80 (p = 0.030), a sign reversal that raises serious reverse-causality concerns — countries improving their renewable performance may subsequently invest in AI governance, not the other way around. **R2 and R4** are stable relative to baseline.
+
+## 6.5. GAIRI Variance Decomposition, Formal Heterogeneity Test, and Effect Magnitudes
+
+**Variance decomposition.** TWFE identification relies on within-country GAIRI variation. A decomposition of Var(GAIRI) reveals:
+
+| Component | SD (norm.) | Share of total variance |
+|---|---|---|
+| Overall | 0.185 | 100% |
+| Between-country | 0.180 | 95% |
+| Within-country | **0.045** | **6%** |
+
+Only **6% of total GAIRI variance is within-country** — meaning TWFE is identified almost entirely from the cross-sectional distribution. This makes the TWFE estimator empirically indistinguishable from cross-sectional OLS with income controls, in which development-stage confounding (GAIRI × GDP correlation of r = 0.858) is the dominant threat.
+
+**Formal interaction test.** Income-group heterogeneity is tested via a pooled interaction regression:
+
+$$y_{it} = \alpha_i + \lambda_t + \beta_1 \text{AI}_{it} + \beta_2 (\text{AI}_{it} \times \mathbf{1}_\text{UM}) + \beta_3 \mathbf{1}_\text{UM} + \mathbf{X}'\boldsymbol{\gamma} + \varepsilon_{it}$$
+
+Results: β₁ = −3.00 (SE = 2.45, p = 0.223); interaction β₂ = −0.19 (SE = 3.59, **p = 0.958**). The income-group heterogeneity finding is **not confirmed by a formal test** and should be treated as exploratory.
+
+**Realistic effect magnitudes.** The −3.09 pp coefficient is for a full 0→1 GAIRI increase. Realistic within-country movements imply:
+
+| GAIRI move | Implied Δ Renewable share |
+|---|---|
+| 1 within-country SD (0.045 norm.) | −0.14 pp |
+| Median country range 2019–2024 (0.108 norm.) | −0.33 pp |
+| Full 0→1 range (reported headline) | −3.09 pp |
+
+The plausible within-country effect is **0.14–0.33 pp** — economically negligible and well within measurement error for renewable energy statistics.
+
+# 7. Discussion
+
+## 7.1. The AI-Green Paradox: Cross-Sectional Signal, Fragile Within-Country Identification
+
+The baseline TWFE results suggest a cross-nationally observed *AI-Green Paradox*: countries with higher government AI readiness exhibit larger ecological footprints (β = +0.139, p_Webb = 0.028) than countries at comparable income levels. This pattern is consistent with three theoretical mechanisms — energy-intensive AI infrastructure, Jevons rebound effects, and residual structural composition confounding. However, the robustness analysis in Section 6.4–6.5 demands a more cautious reading.
+
+The critical inferential constraint is that within-country variation in GAIRI accounts for only **6% of total variance** (within-country SD = 0.045 on the normalized scale). TWFE uses only within-country variation, so the FE estimator is operating with a severely attenuated signal: a 1-SD within-country move in GAIRI implies a −0.14 pp change in renewable share — far smaller than the headline cross-country contrast of 3.31 pp. This gap reveals that the headline coefficient is primarily a *between-country* regularity that the TWFE design is poorly positioned to confirm or refute with only T ≤ 6 annual observations.
+
+Three mechanisms remain theoretically plausible for the observed cross-sectional association:
+
+1. **Energy-intensive AI infrastructure**: Data centres and AI computation are heavily concentrated in AI-ready countries. @iea2024electricity projects data centre electricity consumption to nearly double by 2026. @devries2023energy estimates AI-specific demand at 85–134 TWh/year by 2027. These impose direct footprint additions not yet offset by efficiency gains [@patterson2021carbon; @schwartz2020green].
+
+2. **Rebound and expansion effects**: AI-enabled efficiency gains lower the effective cost of energy-intensive activities, inducing demand expansions [@sorrell2009jevons]. If the demand expansion effect exceeds the unit-efficiency gain — classical Jevons backfire [@jevons1865coal; @alcott2005jevons] — net ecological impact is positive. This mechanism is theoretically coherent and cross-sectionally consistent with our estimates.
+
+3. **Development-stage confounding**: AI-ready economies are simultaneously high-income, highly urbanized, and consumption-intensive. Although we control for ln GDP per capita, the high multicollinearity between AI readiness and income (r = 0.858) means the conditional β₁ captures the AI readiness dimension of a broader development-stage bundle. Within-country FE partially addresses this by absorbing level differences, but with such limited within-country GAIRI movement, the estimator cannot cleanly separate AI readiness from slow-moving institutional and structural trends.
+
+The sign reversal under lagged GAIRI (R3: β = +2.80, p = 0.030 for renewable energy) raises an additional concern: countries *expanding* renewable energy may create the institutional conditions that attract AI investment, generating reverse causality in the baseline specification. This is a plausible mechanism — AI investment is attracted to energy-abundant jurisdictions with stable grids — and its presence would bias β̂₁ in the direction we observe.
+
+In sum, the cross-country association is a genuine empirical regularity worthy of further investigation, but it does not establish a causal AI-to-environment relationship. The honest interpretation is that the available panel data cannot sustain the strong causal claim implied by the "paradox" framing.
+
+## 7.2. Renewable Energy and AI Readiness: An Inconclusive Baseline
+
+The baseline negative association between AI readiness and renewable energy share (β = −3.31, p_Webb = 0.074, 95% CI nearly touching zero) fails to survive exclusion of the top and bottom 5% of the GAIRI distribution (R1: β = −0.29, p = 0.938). This near-complete collapse is a strong indicator that the baseline result is driven by the extremes of the cross-country GAIRI distribution — which is precisely the region where the cross-country vs. within-country confounding is most acute.
+
+We can rule out income-group heterogeneity as an explanation: the formal Chow-style interaction test (β₂ = −0.19, p = 0.958) finds no statistically significant difference in the AI-readiness coefficient between upper-middle and other income countries. The result also fails to appear robustly with lagged GAIRI (sign reversal) or after excluding small-state outliers (R2 is stable, suggesting the baseline result is not driven by micro-states).
+
+The @rolnick2022tackling pathway — AI optimizing renewable grids and demand-response systems — may be correct in principle but is not yet detectably operative in the 2019–2024 country-level data. Longer panels covering the post-2023 generative AI surge (2024–2030) will be needed to test whether AI-enabled grid optimization becomes measurable at the national level.
+
+## 7.3. Conditional Policy Implications
+
+The empirical fragility documented above warrants calibrating the policy implications carefully. We do not claim that AI governance *causes* worse environmental outcomes; we claim that, in the current data, higher AI readiness is *cross-nationally associated* with larger ecological footprints after standard controls, and that this association does not survive within-country identification tests.
+
+Against this backdrop, three conditional policy directions emerge:
+
+1. **Environmental conditionality in AI readiness assessment**: AI readiness indices — including the GAIRI — currently omit environmental performance benchmarks. Countries with high AI readiness but growing ecological footprints may reflect a governance gap. @oecd2019recommendation provides a framework that *could* be extended with environmental conditionality, though our results do not establish a causal basis for mandating such linkage.
+
+2. **Green AI standards as a precautionary measure**: The energy intensity of AI computation is documented and growing [@devries2023energy; @schwartz2020green], regardless of whether our cross-country estimates reflect a causal mechanism. Energy efficiency and carbon disclosure standards for AI systems — as proposed in @schwartz2020green — are justified on direct emissions grounds even if the indirect ecological footprint pathway remains uncertain.
+
+3. **Research infrastructure for identification**: The most urgent policy-relevant investment is in the data and institutional infrastructure needed to identify the AI–environment relationship within countries over time. This requires: (i) at least 10 years of GAIRI scores (currently available only from 2019); (ii) firm-level or sector-level data on AI deployment paired with energy use; and (iii) natural experiments — policy shocks, AI index threshold crossings, or computing-infrastructure rollouts — that provide plausibly exogenous variation in AI readiness. Without stronger identification, prescriptive environmental mandates tied to AI governance would lack the empirical grounding required for effective design.
+
+# 8. Conclusion
+
+This paper examines whether government AI readiness — as measured by the Oxford GAIRI — is associated with environmental sustainability outcomes in a TWFE panel of 115–123 countries over 2019–2024. The baseline estimates suggest a cross-nationally observed *AI-Green Paradox*: higher AI readiness is associated with a larger ecological footprint (β = +0.139, p_Webb = 0.028) and a lower renewable energy share (β = −3.31, p_Webb = 0.074). The effect on carbon intensity is positive but statistically insignificant, and formal income-group heterogeneity tests find no moderation by development stage (Chow interaction p = 0.958).
+
+The paper's primary contribution is not the headline association per se, but the **rigorous empirical benchmark** it establishes: a variance decomposition showing that within-country GAIRI variation accounts for only 6% of total variance; a four-specification robustness battery revealing that the renewable energy result collapses when extreme observations are excluded and reverses sign with a one-period lag; and a formal Chow test ruling out the income-group moderation hypothesis. These diagnostics reveal that the available short panel (T ≤ 6, within-country SD = 0.045) cannot sustain causal identification of a within-country AI-to-environment effect. The headline coefficients are better interpreted as cross-country level regularities that may reflect development-stage confounding, reverse causality (energy-rich countries attracting AI investment), or genuine AI-driven ecological pressure — mechanisms that are observationally indistinguishable with the present data.
+
+The substantive takeaway is directionally sobering: there is no evidence in these data that higher government AI readiness is *environmentally beneficial* in the medium run, and some cross-national evidence that it is associated with higher ecological burden. Whether this reflects a causal pathway — Jevons-type rebound effects, energy-intensive AI infrastructure, or structural composition — remains an open empirical question requiring longer panels, better-identified designs, and sector-level data.
+
+**Limitations and future directions**: (i) The panel spans only T ≤ 6 years; within-country GAIRI variation is too limited for clean TWFE identification — the estimator is effectively a cross-sectional comparison with year-demeaning. (ii) The GAIRI measures government *readiness* capacity, not actual AI deployment; the causal pathway from readiness to environmental outcomes involves multiple intermediate steps that cannot be unpacked at country-year resolution. (iii) Ecological footprint data are available only through 2021, curtailing the estimation window for that outcome. (iv) Endogeneity cannot be ruled out: AI readiness and environmental outcomes may be jointly determined by economic development trajectories. A compelling IV strategy — using geographic, peer-network, or policy-event instruments — would substantially strengthen causal inference. (v) The post-2023 generative AI surge — characterized by dramatically growing data-centre energy demand — falls outside the study period and constitutes the most pressing agenda item for follow-up research. Future work with 2024–2030 data, firm-level AI adoption measures, and quasi-experimental identification designs will be needed to move from cross-sectional association to credible causal inference on the AI–environment nexus.
+
+---
+
+::: {#refs}
+:::
+
+---
+
+# Appendix
+
+## Appendix Table A1: Correlation Matrix and Variance Inflation Factors
+
+Pairwise Pearson correlations among all regressors (N = 657 complete observations). VIF computed via auxiliary OLS regressions.
+
+**Table A1a: Pearson Correlation Matrix**
+
+|  | AI (norm.) | ln GDP p.c. | Trade | Urbanization | FDI |
+|---|---|---|---|---|---|
+| AI Readiness (norm.) | 1.000 | | | | |
+| ln GDP per capita | **0.858** | 1.000 | | | |
+| Trade Openness | 0.285 | 0.394 | 1.000 | | |
+| Urbanization | 0.612 | 0.770 | 0.258 | 1.000 | |
+| FDI | −0.024 | −0.053 | 0.232 | −0.025 | 1.000 |
+
+**Table A1b: Variance Inflation Factors**
+
+| Variable | VIF | Assessment |
+|---|---|---|
+| AI Readiness (norm.) | 3.98 | Acceptable (< 5) |
+| ln GDP per capita | 6.73 | Elevated — monitor |
+| Trade Openness | 1.32 | No concern |
+| Urbanization | 2.55 | Acceptable |
+| FDI | 1.10 | No concern |
+
+*Note: The high correlation between AI readiness and ln GDP per capita (r = 0.858) and the elevated VIF for ln GDP (6.73) indicate substantial multicollinearity between these two regressors. This does not bias the FE coefficient estimates but inflates standard errors, making the conditional AI readiness coefficient β₁ more conservative than a bivariate estimate would suggest. The TWFE specification with country FE absorbs time-invariant income differences; the relevant identifying variation is within-country changes in AI readiness relative to within-country changes in income — which are substantially more orthogonal than the cross-sectional correlations above. All VIF values remain below the conventional threshold of 10.*
+
+---
+
+## Appendix Table A2: Sample Coverage by Outcome and Year
+
+**Table A2: Observations and Country Coverage by Outcome and Year**
+
+| Outcome | 2019 | 2020 | 2021 | 2022 | 2023 | 2024 | Total |
+|---|---|---|---|---|---|---|---|
+| **Renewable Energy Share** | 119 / 119 | 120 / 120 | 122 / 122 | 12 / 12 | — | — | ~361 |
+| **Carbon Intensity/GDP** | 116 / 116 | 118 / 118 | 120 / 120 | 121 / 121 | 121 / 121 | 119 / 119 | 715 |
+| **Ecological Footprint** | ~115 / 115 | ~115 / 115 | ~115 / 115 | — | — | — | ~345 |
+| **GAIRI (treatment)** | 119 / 119 | 114 / 114 | 117 / 117 | 122 / 122 | 118 / 118 | 119 / 119 | 709 |
+
+*Format: N_observations / N_countries. Ecological footprint sourced from Global Footprint Network (available 2019–2021 only). Renewable energy share data drops sharply after 2021 in the current panel extract; the baseline regressions use the 2019–2021 window with N ≈ 329–332 after merging with GAIRI and controls. Carbon intensity extends to 2024 (T = 6). Dashes indicate no data available in current panel.*
+
+*The unbalanced structure is driven by: (i) Global Footprint Network ecological footprint data publication lag (updated through 2021 at time of writing); (ii) World Bank renewable energy indicator (EG.FEC.RNEW.ZS) availability varying by country-year; (iii) Oxford GAIRI publication timing. Countries with fewer than two consecutive years of non-missing data on any outcome are excluded from that outcome's regression.*

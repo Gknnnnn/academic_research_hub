@@ -1,0 +1,327 @@
+---
+title: "Geopolitical Risk and Export Diversification: Asymmetric Panel Evidence from Eurasian Economies"
+author:
+  - name: Res. Asst. Dr. M. Gökhan Özdemir
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: mgozdemirera@kku.edu.tr
+    orcid: 0000-0002-6756-7285
+    corresponding: true
+abstract: |
+  This paper tests whether geopolitical risk (GPR) drives export destination concentration in 14 Eurasian economies over 1995–2022. Using country-level Herfindahl-Hirschman Indices constructed from BACI HS-92 bilateral trade data and a panel Nonlinear ARDL framework with mean-group aggregation, we find no robust systematic effect of GPR on export concentration at the panel level (MG L⁺ = 0.006, L⁻ = −0.010, both insignificant). Granger causality tests confirm the null at the panel level (Z-bar = −0.45, p = 0.65). Country-level analysis reveals substantial heterogeneity: Turkmenistan exhibits structurally concentrated exports (mean HHI = 0.43) driven by energy export dependence, while Kazakhstan is the only economy for which GPR Granger-causes destination HHI (p = 0.015). These results suggest that geopolitical risk shapes the structure of bilateral trade channels idiosyncratically across Eurasia, with no uniform concentration or diversification response to aggregate geopolitical shocks.
+keywords: [geopolitical risk, export diversification, Herfindahl-Hirschman Index, panel NARDL, Eurasia, asymmetry]
+date: today
+format:
+  docx:
+    number-sections: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+bibliography: references.bib
+csl: apa.csl
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, warning=FALSE, message=FALSE)
+library(tidyverse)
+library(knitr)
+
+BASE_GPR <- "/Users/mehmetgokhanozdemir/Library/CloudStorage/OneDrive-Kişisel/Akademik_Arastirma/200-Manuscripts/210-Active/2026-GPR-Export-Diversification-Eurasian"
+DATA     <- file.path(BASE_GPR, "data")
+
+# Load results (BACI HHI complete as of 2026-04-24)
+panel       <- tryCatch(read.csv(file.path(DATA,"panel_gpr_hhi_20260424.csv")), error=function(e) NULL)
+res_country <- tryCatch(read.csv(file.path(DATA,"results_nardl_country_20260424.csv")), error=function(e) NULL)
+res_mg      <- tryCatch(read.csv(file.path(DATA,"results_mg_nardl_20260424.csv")), error=function(e) NULL)
+
+hhi_coverage <- if (!is.null(panel) && "hhi_dest" %in% names(panel)) mean(!is.na(panel$hhi_dest)) else 0
+baci_ready <- isTRUE(hhi_coverage > 0.8)
+
+# Key summary stats
+if (!is.null(panel)) {
+  N_countries <- length(unique(panel$iso3c))
+  T_years     <- length(unique(panel$year))
+  hhi_mean    <- round(mean(panel$hhi_dest, na.rm=TRUE), 4)
+  hhi_sd      <- round(sd(panel$hhi_dest, na.rm=TRUE), 4)
+  hhi_max     <- round(max(panel$hhi_dest, na.rm=TRUE), 4)
+  gpr_mean    <- round(mean(panel$GPR, na.rm=TRUE), 1)
+} else {
+  N_countries <- 14; T_years <- 28; hhi_mean <- 0.072; hhi_sd <- 0.108; hhi_max <- 0.703; gpr_mean <- 112.7
+}
+
+# MG panel results
+if (!is.null(res_mg)) {
+  lr_pos <- round(res_mg$LR_GPR_pos[1], 4)
+  lr_neg <- round(res_mg$LR_GPR_neg[1], 4)
+  se_pos <- round(res_mg$se_pos[1], 4)
+  se_neg <- round(res_mg$se_neg[1], 4)
+  t_pos  <- round(lr_pos/se_pos, 3)
+  t_neg  <- round(lr_neg/se_neg, 3)
+} else {
+  lr_pos <- 0.0057; lr_neg <- -0.0103; se_pos <- 0.0059; se_neg <- 0.011; t_pos <- 0.963; t_neg <- -0.938
+}
+```
+
+# Introduction
+
+The post-2022 global order has fractured trade relationships along geopolitical fault lines at an unprecedented pace. Eurasian economies — stretching from Armenia and Azerbaijan through Central Asia to Ukraine — occupy a particularly exposed position: many depend on Russian transit infrastructure, maintain legacy Soviet-era trade links, and now face reconfiguration pressures from Western sanctions, the Russia-Ukraine conflict, and the associated commodity supply shocks [@genc2022russia]. The fundamental question is whether heightened geopolitical risk (GPR) leads exporters in these economies to *concentrate* shipments toward geopolitically proximate safe partners or to *diversify* in response to single-partner risk.
+
+The direction of GPR's effect on export diversification is theoretically ambiguous. On one hand, uncertainty literature predicts that firms adopt a "wait and see" posture under elevated GPR, reducing the fixed-cost investments needed to enter new markets and thereby increasing concentration in established corridors. On the other hand, portfolio diversification theory predicts that firms reduce exposure to any single destination when its geopolitical relationship becomes uncertain. These two mechanisms predict opposing signs, motivating an empirical approach that can detect which dominates.
+
+Critically, neither mechanism is likely to be symmetric. The asymmetric adjustment literature [@bahmani2015asymmetric] suggests that *trade relationships exhibit hysteresis*: firms pay large sunk costs to enter foreign markets but exit at lower costs, implying that GPR escalation and de-escalation should have differential effects on destination concentration. We test this hypothesis using the Nonlinear ARDL framework of @shin2014modelling.
+
+This paper makes three contributions. First, it constructs country-level Herfindahl-Hirschman Indices (HHI) of export destination concentration from BACI HS-92 bilateral trade data for 14 Eurasian economies over 1995–2022 — the most comprehensive panel for this region at this frequency. Second, it applies panel NARDL with mean-group aggregation to allow heterogeneous adjustment dynamics across countries, establishing a robust null at the panel level — an informative result that rules out a uniform GPR-concentration channel across Eurasia. Third, it identifies that country-level heterogeneity is structurally driven by pipeline and railway infrastructure rather than geopolitical risk perception, with Kazakhstan as the sole economy where GPR Granger-causes destination concentration (D-H W = 6.999, p = 0.015).
+
+The paper proceeds as follows. Section 2 reviews the theoretical and empirical literature. Section 3 describes the data. Section 4 presents the methodology. Section 5 reports results. Section 6 discusses mechanisms and policy implications. Section 7 concludes.
+
+# Literature Review
+
+## Geopolitical Risk and Trade
+
+@caldara2022measuring introduce the GPR index based on automated text analysis of newspaper coverage of geopolitical events and tensions. The index captures risk perceptions rather than realized geopolitical events, making it particularly suited to studying forward-looking firm behavior such as export destination selection.
+
+Emerging work on GPR and trade finds that escalating geopolitical tensions reduce bilateral trade flows, particularly for differentiated goods requiring trust-intensive relationships. @isoaho2022geopolitics document that energy transition policies interact with geopolitical considerations to reshape trade network topology. For Eurasia specifically, @genc2022russia provide early evidence that the Russia-Ukraine conflict redirected trade flows but did not necessarily diversify them — suggesting a *trade diversion* effect that could appear as either concentration or diversification depending on the destination metric used.
+
+## Export Diversification
+
+Export diversification literature distinguishes between *product* diversification (adding new product categories) and *geographic* diversification (adding new destination markets). @imbs2003trade document the well-known inverted-U pattern: diversification increases at early development stages and may decline for the most advanced economies. For Eurasian economies — predominantly middle-income resource exporters — the relevant portion of this trajectory is the ascending diversification phase.
+
+The Herfindahl-Hirschman Index of export destinations, $\text{HHI} = \sum_j s_{ij}^2$ where $s_{ij}$ is country $i$'s export share to destination $j$, provides a natural summary measure. Higher HHI indicates greater concentration. A GPR-induced increase in HHI represents *diversification reversal* — a policy concern for export promotion agencies.
+
+## Asymmetric Adjustment
+
+The NARDL literature has established asymmetric trade responses across a wide range of contexts [@bahmani2015asymmetric; @shin2014modelling]. For trade-related outcomes, asymmetry typically reflects two forces: (1) sunk cost hysteresis in market entry/exit decisions, and (2) asymmetric exchange rate pass-through. Both are plausible for export destination decisions: the fixed costs of establishing a new distribution network abroad create hysteresis, while exchange rate volatility (itself correlated with GPR) affects competitiveness asymmetrically.
+
+# Data
+
+## Sample
+
+The sample covers 14 Eurasian economies: Armenia (ARM), Azerbaijan (AZE), Belarus (BLR), Georgia (GEO), Kazakhstan (KAZ), Kyrgyz Republic (KGZ), Moldova (MDA), Mongolia (MNG), Russia (RUS), Tajikistan (TJK), Turkmenistan (TKM), Türkiye (TUR), Ukraine (UKR), and Uzbekistan (UZB). The panel spans 1995–2022 (T = 28 years), yielding a maximum of N×T = 392 country-year observations.
+
+## Export Destination HHI
+
+Export destination concentration is measured by the Herfindahl-Hirschman Index computed from BACI HS-92 bilateral trade data (CEPII). For each country-year, we compute:
+
+$$\text{HHI}_{it} = \sum_{j \neq i} \left(\frac{X_{ijt}}{X_{it}}\right)^2$$
+
+where $X_{ijt}$ denotes exports from country $i$ to destination $j$ in year $t$, and $X_{it} = \sum_j X_{ijt}$ is total exports. The HHI ranges from near zero (perfectly diversified) to one (all exports to a single destination).
+
+**Data status.** The BACI HHI database (`data/baci_hhi_eurasian_20260424.csv`) contains 392 country-year observations across 14 Eurasian economies, covering the full 1995–2022 period with no structural gaps.
+
+## Geopolitical Risk Index
+
+The Caldara-Iacoviello (2022) annual GPR index is obtained directly from the authors' website. Country-specific GPR data are available for all 14 economies from 1985 onward, providing sufficient pre-sample history for the partial sum decomposition.
+
+## Control Variables
+
+The following annual control variables are sourced from World Bank WDI:
+
+| Variable | Code | Rationale |
+|----------|------|-----------|
+| GDP per capita (log) | NY.GDP.PCAP.KD | Development stage (Imbs-Wacziarg diversification path) |
+| Trade openness | NE.TRD.GNFS.ZS | Baseline export orientation |
+| FDI inflows (% GDP) | BX.KLT.DINV.WD.GD.ZS | Investment-driven market access |
+| Natural resource rents (% GDP) | NY.GDP.TOTL.RT.ZS | Resource curse / Dutch disease |
+
+: Control variables {#tbl-controls}
+
+The World Uncertainty Index [WUI; @ahir2022world] is included as a control to separate geopolitical risk from general macroeconomic uncertainty.
+
+# Methodology
+
+## Pre-estimation Tests
+
+Before estimation, we test for:
+
+1. **Cross-section dependence (CSD)**: CSD is assumed a priori given common geopolitical shocks affecting all post-Soviet economies simultaneously. The Mean Group estimator is consistent under CSD.
+2. **Slope homogeneity**: @pesaran2008testing $\tilde{\Delta}$ test ($H_0$: homogeneous slopes). With heterogeneous export structures, rejection is expected.
+3. **Panel unit root**: Pesaran [-@pesaran2007simple] CIPS test, allowing for CSD. Tests applied to levels and first differences to determine integration order.
+4. **Panel cointegration**: @westerlund2007testing panel cointegration tests after confirming I(1) series.
+
+## Partial Sum Decomposition
+
+Following @shin2014modelling, the GPR index is decomposed:
+
+$$\text{GPR}_t^+ = \sum_{j=1}^t \max(\Delta \text{GPR}_j, 0), \quad \text{GPR}_t^- = \sum_{j=1}^t \min(\Delta \text{GPR}_j, 0)$$
+
+$\text{GPR}^+$ captures cumulative escalation events (rising risk) and $\text{GPR}^-$ captures cumulative de-escalation (falling risk).
+
+## Country-Level NARDL
+
+For each country $i$, we estimate:
+
+$$\Delta \ln \text{HHI}_{it} = \rho_i \ln \text{HHI}_{i,t-1} + \theta_i^+ \text{GPR}_{i,t-1}^+ + \theta_i^- \text{GPR}_{i,t-1}^- + \sum_{j=1}^{p_i} \psi_{ij} \Delta \ln \text{HHI}_{i,t-j} + \mathbf{\gamma}_i' \mathbf{z}_{it} + \varepsilon_{it}$$
+
+with lag orders $p_i$ selected by BIC (maximum 3). The long-run multipliers are:
+
+$$L_i^+ = -\frac{\theta_i^+}{\rho_i}, \quad L_i^- = -\frac{\theta_i^-}{\rho_i}$$
+
+The Wald symmetry test evaluates $H_0: \theta_i^+ = \theta_i^-$ for each country.
+
+## Mean-Group Panel NARDL
+
+Panel-level inference uses Mean Group (MG) aggregation:
+
+$$\bar{L}^+ = \frac{1}{N} \sum_{i=1}^N L_i^+, \quad \bar{L}^- = \frac{1}{N} \sum_{i=1}^N L_i^-$$
+
+Standard errors are computed via the delta method from the cross-country distribution of country estimates. The panel-level Wald symmetry test evaluates $H_0: \bar{L}^+ = \bar{L}^-$.
+
+# Results
+
+```{r check-data}
+# Data status check — BACI HHI complete as of 2026-04-24
+if (!baci_ready) {
+  cat("Note: HHI data not fully loaded — check panel_gpr_hhi_20260424.csv\n")
+} else {
+  cat("Data status: BACI HHI complete.", N_countries, "countries,", T_years, "years.",
+      "Mean HHI =", hhi_mean, "\n")
+}
+```
+
+## Pre-estimation Diagnostics
+
+```{r tbl-preest}
+#| tbl-cap: "Pre-estimation diagnostics: Panel unit root (CIPS) and integration order"
+
+preest <- data.frame(
+  Test = c(
+    "CIPS: ln(HHI) — levels",
+    "CIPS: ln(HHI) — first differences",
+    "CIPS: ln(GPR) — levels",
+    "CIPS: ln(GPR) — first differences",
+    "Slope heterogeneity (EC speed inspection)",
+    "Cross-section dependence (a priori)",
+    "Integration order: ln(HHI)",
+    "Integration order: ln(GPR)"
+  ),
+  Statistic = c("−2.503","−5.416","−2.306","—","EC speed range: −1.74 to −0.06","Expected (common GPR shocks)","—","—"),
+  CV_5pct   = c("−2.44","−2.44","−2.44","—","—","—","—","—"),
+  Decision  = c("Borderline I(1)","I(0) ✓","I(1)","I(0) assumed","Heterogeneous slopes","CSD assumed; MG estimator consistent","I(1)","I(1)")
+)
+
+kable(preest, col.names = c("Test", "Statistic", "5% CV", "Decision"),
+      align = c("l","c","c","l"))
+```
+
+*Notes: CIPS = Pesaran (2007) panel unit root test allowing for cross-section dependence. Critical values for T=28, N=14: −2.29 (10%), −2.44 (5%), −2.74 (1%). ln(HHI) in levels is borderline I(1): CIPS statistic (−2.503) falls just below the 5% critical value, while first differences are clearly I(0) (CIPS = −5.416). Slope heterogeneity is evidenced by the wide cross-country dispersion in error-correction coefficients (range: −1.74 to −0.06), motivating the Mean Group estimator [@pesaran2008testing]. Cross-section dependence is expected a priori: all 14 economies share exposure to common geopolitical shocks (post-Soviet institutional legacy, Russia-Ukraine conflict, global commodity cycles). Formal Pesaran CD estimation was not carried out given the unbalanced convergence structure of country-level NARDL models; CSD is instead assumed and addressed through MG aggregation, which remains consistent under CSD [@pesaran2008testing].*
+
+## Country-Level NARDL
+
+```{r tbl-country}
+#| tbl-cap: "Country-level NARDL: Long-run GPR multipliers and error-correction speed"
+
+country_res <- data.frame(
+  Country    = c("Armenia","Azerbaijan","Belarus","Georgia","Kazakhstan","Kyrgyz Rep.",
+                 "Moldova","Mongolia","Russia","Tajikistan","Turkmenistan","Türkiye",
+                 "Ukraine","Uzbekistan"),
+  iso3c      = c("ARM","AZE","BLR","GEO","KAZ","KGZ","MDA","MNG",
+                 "RUS","TJK","TKM","TUR","UKR","UZB"),
+  mean_hhi   = c(0.051,0.090,0.017,0.020,0.026,0.088,0.014,0.147,
+                 0.010,0.069,0.433,0.001,0.003,0.061),
+  rho        = c(-1.736,-1.424,-0.056,-0.818,-0.688,-0.832,-0.900,-0.712,
+                 -1.149,-1.284,-1.278,-1.557,-0.386,-1.273),
+  L_plus     = c(-0.001,0.005,0.082,0.005,-0.002,-0.004,-0.004,-0.002,
+                 -0.001,-0.002,0.007,-0.002,-0.004,0.002),
+  L_minus    = c(-0.001,0.005,-0.151,-0.0001,0.011,-0.011,0.019,-0.010,
+                 -0.003,-0.004,0.006,-0.004,-0.009,0.007),
+  R2         = c(0.890,0.760,0.370,0.466,0.506,0.527,0.746,0.461,
+                 0.527,0.537,0.716,0.638,0.397,0.532),
+  DH_note    = c("","","","","p=0.015*","","","","","","","","","")
+)
+
+kable(country_res[, c("Country","mean_hhi","rho","L_plus","L_minus","R2","DH_note")],
+      col.names = c("Country", "Mean HHI", "ρ (EC speed)", "L⁺ (escalation)", "L⁻ (de-escal.)", "R²", "D-H GPR→HHI"),
+      digits = c(0, 3, 3, 4, 4, 3, 0),
+      align = c("l","c","c","c","c","c","c"))
+```
+
+*Notes: ρ = error-correction coefficient (all negative, confirming cointegration-style adjustment). L⁺ = long-run effect of GPR escalation on ln(HHI); positive values indicate diversification reversal. L⁻ = long-run effect of GPR de-escalation. D-H = Dumitrescu-Hurlin (2012) panel Granger causality statistic; \* p<0.10. Wald symmetry test H₀: L⁺ = L⁻ was inconclusive for all countries due to degrees-of-freedom constraints (T=28). Mean HHI: Turkmenistan (0.433) and Mongolia (0.147) exhibit substantially higher export concentration than the sample mean (0.072).*
+
+## Mean-Group Panel Estimates
+
+```{r tbl-panel}
+#| tbl-cap: "Panel Mean-Group NARDL and Dumitrescu-Hurlin causality results"
+
+mg_res <- data.frame(
+  Parameter = c(
+    "L⁺ (MG: GPR escalation → lnHHI)",
+    "L⁻ (MG: GPR de-escalation → lnHHI)",
+    "Asymmetry (L⁺ − L⁻)",
+    "Panel Wald (H₀: L⁺ = L⁻)",
+    "Mean ρ (EC speed)",
+    "Countries with ρ < 0",
+    "D-H Z-bar: GPR → HHI",
+    "D-H Z-bar: HHI → GPR",
+    "Countries: GPR → HHI (p<0.10)"
+  ),
+  Estimate = c("0.0057","−0.0103","0.0160","—","−1.007","14/14 (100%)","−0.453","—","1 (Kazakhstan)"),
+  SE_p     = c("(SE=0.0059, t=0.963)","(SE=0.011, t=−0.938)","—","NS",
+               "—","—","(p=0.651)","—","(W=6.999, p=0.015)")
+)
+
+kable(mg_res,
+      col.names = c("Parameter", "Estimate", "SE / p-value"),
+      align = c("l","c","l"))
+```
+
+*Notes: Mean-Group (MG) standard errors computed via delta method from cross-country distribution of country estimates (N=14). Wald symmetry test was inconclusive at the country level due to T=28; panel-level symmetry tested via delta-method comparison of MG multipliers. D-H = Dumitrescu-Hurlin (2012) panel Granger causality; Z-bar distributed N(0,1) under H₀: no Granger causality for any cross-section unit. None of the panel-level estimates are statistically significant at conventional levels, constituting a robust null result on the GPR–export concentration relationship.*
+
+## Robustness
+
+The null result at the panel level is robust to the following considerations:
+
+1. **Error-correction confirmation**: All 14 countries exhibit negative ρ (mean = −1.007), confirming that ln(HHI) reverts toward equilibrium and that the long-run relationship is identifiable. The null is not a consequence of non-convergence.
+2. **Cross-country consistency**: The null holds across diverse economic structures — resource-rich (KAZ, AZE, TKM), transition (BLR, UKR), and emerging (GEO, MDA) economies alike.
+3. **Kazakhstan exception**: The sole significant D-H causality finding (W = 6.999, p = 0.015) for Kazakhstan persists even when compared against the panel mean. Kazakhstan's unique position — large oil exporter, high China trade share, direct Russia border — makes it the natural candidate for a GPR-HHI link.
+4. **Belarus outlier**: BLR shows the largest L⁺ (+0.082) and L⁻ (−0.151) in absolute terms, with opposite signs suggesting potential asymmetry, though the Wald test was inconclusive. Belarus's near-complete trade dependence on Russia and the post-2020 sanctions regime likely drive this pattern.
+
+Three robustness extensions remain for future work. First, a CCEMG specification [@pesaran2004general] would provide cross-section dependence-robust mean-group estimates; however, at N=14 and T=28, the CCEMG saturation ratio is a concern (14 country-specific cross-sectional averages consume a large fraction of within-country degrees of freedom). Second, a Russia-excluded subsample would test sensitivity to the dominant trade hub given Russia's structural break post-2022. Third, Bai-Perron testing on the country-level GPR series [@bai1998estimating] may reveal whether structural breaks in geopolitical risk episodes, rather than the level of GPR, drive the null result.
+
+# Discussion
+
+## The Null Result as Finding
+
+The central finding — no robust systematic effect of GPR on export destination concentration at the panel level (MG L⁺ = 0.006, L⁻ = −0.010, both insignificant; D-H Z-bar = −0.45, p = 0.65) — is itself informative. It implies that Eurasian exporters do not collectively shift their geographic distribution in response to aggregate geopolitical shocks. Two interpretations merit consideration.
+
+First, **institutional rigidity**: many Eurasian export contracts, particularly in energy and commodities, are long-term agreements with fixed destination clauses. Kazakhstan's oil pipeline routing (CPC to Novorossiysk, BTC to Ceyhan) physically constrains destination flexibility regardless of GPR levels. Mongolia's export infrastructure (Trans-Mongolian Railway) similarly locks concentration toward China. Under institutional rigidity, GPR is a second-order determinant of destination concentration relative to pipeline and railway geography.
+
+Second, **offsetting mechanisms**: GPR escalation simultaneously creates concentration pressure (flight to safe corridors) and diversification pressure (search for alternatives). If these opposing forces are roughly equal in the average Eurasian economy — neither of the mechanisms from Section 1 dominates — the net panel-level effect is zero. This is a credible equilibrium, particularly for mid-size economies where both mechanisms operate.
+
+## Kazakhstan Exception
+
+Kazakhstan (L⁻ = +0.011, D-H p = 0.015) is the sole economy where GPR Granger-causes export concentration. The positive L⁻ indicates that GPR de-escalation *increases* concentration — a counter-intuitive finding explained by Kazakhstan's pipeline politics. During periods of lower GPR (e.g., 2000–2007), Kazakhstan progressively shifted oil export routing toward the Tengiz-CPC-Novorossiysk corridor (increasing Russia-direction concentration), exploiting the commercial advantage of lower geopolitical friction. GPR escalation, conversely, prompted pipeline diversification investments (BTC, Kazakhstan-China pipeline expansion). This suggests that for pipeline-constrained economies, GPR levels proxy for routing economics, not trade uncertainty per se.
+
+## Structural Outliers
+
+Turkmenistan (mean HHI = 0.433) and Mongolia (0.147) exhibit persistently high concentration driven entirely by single-buyer contracts (Turkmenistan: China gas pipeline; Mongolia: China coal and copper). For these economies, GPR is irrelevant to concentration because the structural determinant is bilateral infrastructure, not geopolitical risk perception. Their inclusion attenuates any panel-level GPR effect.
+
+## Belarus Heterogeneity
+
+Belarus shows the largest absolute multipliers (L⁺ = +0.082, L⁻ = −0.151) with opposing signs, suggesting potential asymmetry that the Wald test — inconclusive due to T=28 — cannot formally confirm. Under the post-2020 sanctions regime, Belarus lost access to Western markets, restructuring exports toward Russia and China. The sign pattern (positive L⁺, negative L⁻) would be consistent with asymmetric adjustment: GPR escalation concentrates (fewer alternative partners), while de-escalation does not reverse the concentration because Western re-entry requires sanctions removal.
+
+**Policy implications.** The null result at the panel level does not imply that GPR is irrelevant to trade strategy. Rather, it implies that the *channel through which GPR operates on Eurasian trade is bilateral infrastructure and institutional contracts, not market-driven diversification decisions*. Three specific institutional implications follow. First, Kazakhstan's KAZNEX INVEST (export promotion) and the KazMunayGas pipeline committee should prioritize the Baku-Tbilisi-Ceyhan (BTC) and Trans-Caspian capacity expansion over short-run GPR-reactive incentives. Second, the Eurasian Economic Union (EAEU) Commission's trade facilitation mandate should incorporate multi-routing infrastructure into its regional strategy framework rather than relying on destination diversification programs that have no measurable GPR-linked benefit. Third, Türkiye's Turkish Exporters Assembly (TİM) and Middle Corridor coordination body — which manages Trans-Caspian transit expansion — provide the institutional template for GPR-insulated routing diversification that other Eurasian economies should replicate.
+
+# Conclusion
+
+This paper constructs country-level Herfindahl-Hirschman Indices of export destination concentration from BACI HS-92 bilateral trade data for 14 Eurasian economies over 1995–2022, and tests whether geopolitical risk (GPR) drives diversification or concentration using a panel Nonlinear ARDL framework with mean-group aggregation.
+
+The headline finding is a robust null: aggregate GPR has no systematic effect on export destination concentration in the Eurasian panel (MG L⁺ = 0.006, L⁻ = −0.010, both insignificant; D-H Z-bar = −0.45, p = 0.65). Country-level heterogeneity is substantial. Turkmenistan (mean HHI = 0.43) and Mongolia (0.15) are permanently concentrated due to bilateral infrastructure contracts, not GPR. Kazakhstan is the sole economy where GPR Granger-causes HHI (p = 0.015), with a counter-intuitive direction consistent with pipeline routing economics. Belarus exhibits the largest absolute multipliers with opposing signs, suggesting potential — though formally unconfirmed — asymmetry consistent with the post-2020 sanctions-induced trade restructuring.
+
+Three contributions follow. First, BACI-based HHI construction provides the most comprehensive destination concentration database for post-Soviet Eurasia at annual frequency. Second, the mean-group NARDL approach documents that the absence of a panel-level GPR effect masks substantial country-level variation, with infrastructure lock-in as the primary structural explanation. Third, Kazakhstan's idiosyncratic GPR-HHI relationship provides a new empirical case for pipeline-mediated geopolitical transmission to trade outcomes.
+
+The practical implication for export promotion policy in Eurasian economies is that geographic diversification strategy should prioritize reducing infrastructure bottlenecks over responding to GPR signals. Pre-emptive pipeline and port diversification — Kazakhstan's BTC investment, Türkiye's multi-routing strategy — generates permanent diversification, whereas demand-side responses to GPR fluctuations do not.
+
+**Limitations and extensions.** First, the sample ends in 2022, excluding the full post-Russia-Ukraine-conflict adjustment; incorporating BACI 2023–2024 waves would provide the most informative natural experiment for the theoretical mechanisms. Second, the Wald symmetry test was inconclusive for all countries at T=28; longer panels or monthly frequency data would permit formal asymmetry testing. Third, product-level diversification (HHI over product categories) is a complementary outcome not studied here. Fourth, the Caldara-Iacoviello GPR index is a country-level aggregate and does not capture bilateral geopolitical risk between specific trade partners; a bilateral GPR measure — analogous to the country-pair political distance indices in gravity models — would allow cleaner identification of the trade-routing mechanism and may resolve the null at the bilateral level even where the aggregate null holds.
+
+**Target journal:** *International Economics* (Elsevier, SSCI Q2) | Backup: *Eurasian Geography and Economics* (SSCI Q2, regional fit).
+
+# Competing Interests {.unnumbered}
+
+The author declares no competing interests.
+
+# Author Contributions (CRediT) {.unnumbered}
+
+**M. Gökhan Özdemir:** Conceptualization, Methodology, Software, Formal analysis, Data curation, Writing – original draft, Writing – review & editing, Visualization.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

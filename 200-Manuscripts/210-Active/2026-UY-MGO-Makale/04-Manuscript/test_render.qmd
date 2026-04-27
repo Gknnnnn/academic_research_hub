@@ -1,0 +1,30 @@
+---
+title: "Test"
+author: "Author"
+format: html
+---
+
+# Test
+
+./UY_MGO_Makale_files:
+./UY_MGO_Makale_files/figure-html:
+./UY_MGO_Makale_files/libs:
+./UY_MGO_Makale_files/libs/bootstrap:
+./UY_MGO_Makale_files/libs/clipboard:
+./UY_MGO_Makale_files/libs/kePrint-0.0.1:
+./UY_MGO_Makale_files/libs/lightable-0.0.1:
+./UY_MGO_Makale_files/libs/quarto-html:
+./UY_MGO_Makale_files/libs/quarto-html/axe:
+./UY_MGO_Makale_files/libs/quarto-html/tabsets:
+./data:
+./deneme_render_files:
+./literatur:
+Bulletin of Econ Res - 2020 - Güneri - Does economic complexity reduce output volatility in developing countries.pdf
+Determinants of agricultural exports in Somalia  the impacts of exchange rates  foreign direct investment  and institutional quality.pdf
+Int  J Fin Econ - 2022 - Aman - Does greater financial openness promote external competitiveness in emerging markets  The.pdf
+Int  J Fin Econ - 2022 - Nguyen - Exchange rate dynamics of emerging and developing economies  Not all capital flows are.pdf
+The Manchester School - 2008 - AIZENMAN - LARGE HOARDING OF INTERNATIONAL RESERVES AND THE EMERGING GLOBAL ECONOMIC.pdf
+The potential for internal trade and regional integration in Afri.pdf
+World Economy - 2004 - Méon - Does the Quality of Institutions Limit the MENA s Integration in the World Economy.pdf
+World Economy - 2010 - Chit - Exchange Rate Volatility and Exports  New Empirical Evidence from the Emerging East Asian.pdf
+World Economy - 2010 - Hyun - The Determinants of Cross‐border M As  The Role of Institutions and Financial Development in.pdf

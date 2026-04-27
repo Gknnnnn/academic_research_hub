@@ -1,0 +1,1484 @@
+---
+title: "Does Institutional Quality Shield Exporters from Exchange Rate Shocks? Panel Evidence from Developing Countries"
+lang: en
+format:
+  html:
+    theme: cosmo
+    mainfont: "Times"
+    fontsize: "11pt"
+    embed-resources: false
+    css: styles.css
+  pdf:
+    pdf-engine: xelatex
+    keep-tex: true
+    documentclass: article
+    geometry:
+      - top=30mm
+      - left=25mm
+      - bottom=30mm
+      - right=25mm
+    include-in-header:
+      text: |
+        \usepackage{fontspec}
+        \usepackage{setspace}
+        \onehalfspacing
+        \usepackage{float}
+        \floatplacement{figure}{H}
+        \floatplacement{table}{H}
+execute:
+  echo: false
+  eval: true
+  warning: false
+  message: false
+---
+
+<center>
+# The Role of Institutional Quality in the Impact of Exchange Rate Shocks on Export Performance: A Panel Data Analysis for Developing Countries
+
+**Asst. Prof. Dr. Uğur YILDIRIM**
+*Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics, Kırıkkale, Türkiye*
+ORCID: 0000-0002-3542-7835
+
+**Res. Asst. Dr. Mehmet Gökhan ÖZDEMİR**
+*Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics, Kırıkkale, Türkiye*
+ORCID: 0000-0002-6756-7285
+</center>
+
+**Author Contributions:** Uğur Yıldırım conceived the theoretical framework and research design, conducted the literature review, and interpreted the results. Mehmet Gökhan Özdemir carried out data collection, econometric modelling, statistical analysis, and manuscript preparation. Both authors have read and approved the final manuscript.
+
+**Funding:** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+**Conflicts of Interest:** The authors declare no conflicts of interest related to this study.
+
+**Ethics Statement:** This study uses only publicly available secondary data sources (World Bank WDI and WGI databases). As it involves no human participants, primary data collection, or confidential information, institutional ethics approval is not required.
+
+```{r}
+#| include: false
+options(warn = -1)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(readr)
+library(stargazer)
+library(plm)
+library(lmtest)
+library(knitr)
+library(kableExtra)
+library(modelsummary)
+library(quantreg)
+library(jsonlite)
+library(zoo)
+library(sandwich)
+
+temiz_veri <- read_csv("data/analiz_verisi_full.csv", show_col_types = FALSE)
+gelismekte_olan_veri_raw <- read_csv("data/gelismekte_olan_veri.csv", show_col_types = FALSE)
+
+# Exclude countries with fewer than 3 annual observations:
+# single-observation units (China 2015, Zambia 2015) contribute zero
+# within-country variance to FE estimator and are dropped for cleanliness.
+# This reduces the sample from 39 to 37 countries.
+obs_counts <- gelismekte_olan_veri_raw %>%
+  drop_na(ln_ihracat, ln_reer, ln_gsyh, hukuk) %>%
+  count(country)
+keep_countries <- obs_counts %>% filter(n >= 3) %>% pull(country)
+gelismekte_olan_veri <- gelismekte_olan_veri_raw %>%
+  filter(country %in% keep_countries)
+
+temiz_veri <- temiz_veri %>%
+  filter(!is.na(reer) & !is.na(ihracat))
+
+analiz_verisi <- temiz_veri %>%
+  drop_na(hukuk, regulasyon, reer, ihracat, gsyh) %>%
+  mutate(
+    ln_ihracat = log(ihracat),
+    ln_reer = log(reer),
+    ln_gsyh = log(gsyh)
+  )
+
+# Panel data structures
+p_veri    <- pdata.frame(analiz_verisi,       index = c("country", "year"))
+p_veri_em <- pdata.frame(gelismekte_olan_veri, index = c("country", "year"))
+
+# Model estimation
+model_politik <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                     data = p_veri, model = "within")
+model_em <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                data = p_veri_em, model = "within")
+model_em_re <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                   data = p_veri_em, model = "random")
+
+# Driscoll-Kraay robust standard errors
+se_scc <- sqrt(diag(vcovSCC(model_em, type = "HC3", maxlag = 4)))
+
+# Pre-computation for inline code
+hausman_pre <- phtest(model_em, model_em_re)
+t_dk_inter  <- as.numeric(coef(model_em)["ln_reer:hukuk"]) / se_scc["ln_reer:hukuk"]
+p_dk_inter  <- round(2 * pnorm(abs(t_dk_inter), lower.tail = FALSE), 3)
+
+sig_note_en <- if (knitr::is_latex_output()) {
+  "Significance levels are reported at the 1 percent, 5 percent, and 10 percent thresholds."
+} else {
+  "*** p<0.01, ** p<0.05, * p<0.1."
+}
+
+```
+
+## Highlights
+
+- Institutional shield null across all estimators and all quantiles once proper inference is applied
+- Canay QR positive coefficients vanish under cluster bootstrap — pairs bootstrap systematically understated SEs
+- Driscoll-Kraay and GMM confirm null: cross-sectional dependence and dynamic panel bias drove baseline FE significance
+- Domestic GDP is the sole robust and dominant determinant of export performance across all specifications
+- Sign reversal in first-difference model reveals institutional effects are horizon-dependent, not structurally absent
+
+# Abstract
+
+Does rule of law protect developing-country exporters from exchange rate shocks — or does that protection dissolve once the data are analysed with methods fit for purpose? We address this question using an unbalanced panel of `r nrow(gelismekte_olan_veri %>% tidyr::drop_na(ln_ihracat, ln_reer, ln_gsyh, hukuk))` observations from 37 developing countries over 2000–2022, applying four estimators that each address a distinct, formally confirmed threat to valid inference. Baseline panel fixed effects reproduce the familiar positive interaction between the real effective exchange rate and rule of law — the so-called institutional shield — but the result does not survive. Driscoll-Kraay standard errors, which correct for the strong cross-sectional dependence and serial correlation detected in the data, render the interaction insignificant. Arellano-Bond GMM reaches the same null after eliminating dynamic panel bias. Canay (2011) panel quantile regression with cluster bootstrap standard errors (B = 499, N = 37 clusters) confirms that the interaction is statistically indistinguishable from zero at every point of the export distribution (τ = 0.25, 0.50, 0.75) — earlier reports of significance at lower quantiles turn out to be artefacts of pairs bootstrap, which ignores within-country temporal dependence. A first-difference specification reveals a sign reversal in the short run, but the economic magnitude is negligible (roughly 0.5% of mean annual export variation), pointing to horizon-dependence rather than any structural absence of institutional effects. Throughout, domestic GDP is the only variable that holds up: production scale, not the quality of legal institutions, is the primary engine of export performance in developing economies.
+
+**Keywords:** Export Performance, Real Effective Exchange Rate Volatility, Rule of Law, Panel Quantile Regression, Dynamic Panel GMM, Cross-Sectional Dependence.
+
+**JEL Codes:** F14, F31, C23, C14, O17, O43
+
+# 1. Introduction
+
+Exporting in a developing country is a precarious business. Firms must hedge against currency swings with little access to deep forward markets, navigate customs regimes that shift with political winds, and compete in global markets shaped as much by the global financial cycle as by their own productive capacity. It is natural, then, that a substantial literature has asked whether strong domestic institutions — rule of law, contract enforcement, property rights — can buffer exporters against the worst of these shocks. The idea has intuitive appeal: a country with predictable courts and secure property rights should give exporters the contractual confidence to hedge exposures and sustain long-term trade relationships even when the exchange rate moves against them. This is the *institutional shield* hypothesis (Anderson & Marcouiller, 2002; Arize, Osang & Slottje, 2000; Aman et al., 2024).
+
+The trouble is that the empirical evidence for this shield has almost exclusively been assembled using standard panel fixed-effects models that treat each country as an econometric island — independent of every other. When developing economies are in fact exposed to synchronised shocks (commodity price cycles, financial contagion, the COVID-19 demand collapse), the assumption of cross-sectional independence inflates the apparent precision of coefficient estimates and can make an institutional effect look significant when the underlying signal is a global common factor. Whether the institutional shield survives proper inference correction for global integration is, to our knowledge, an open question.
+
+We answer it directly. Using data from 37 developing countries over 2000–2022, we apply four complementary estimators that address, in turn, the main inference threats the baseline model ignores: Driscoll-Kraay standard errors for cross-sectional dependence and serial correlation; Arellano-Bond Difference GMM for dynamic panel (Nickell) bias; and Canay (2011) panel quantile regression with cluster bootstrap standard errors, which tests whether the shield is operative at different points of the export distribution rather than only on average. The GMM instrument set is restricted to lagged values of the dependent variable to guard against proliferation (Roodman, 2009); REER and institutional quality enter as predetermined regressors. The pattern that emerges from all four approaches is unambiguous: the institutional shield, while positive and significant under naive fixed-effects inference, fails to survive any of the corrections. Across every estimator and every quantile, domestic production scale — real GDP — is the sole robust determinant of export performance. This convergent null is not merely a negative result: it reframes the policy conversation about what developing countries need most to weather exchange-rate shocks.
+
+Section 2 situates the paper in the relevant literature; Section 3 describes the data and empirical design; Section 4 presents the results and diagnostic tests; Section 5 draws policy implications.
+
+# 2. Literature Review and Theoretical Framework
+
+In the international economics literature, the determinants of export performance are traditionally analysed through the channels of price competitiveness and external demand. The Ricardian trade model developed by Eaton and Kortum (2002) established a structural framework showing how inter-country productivity differences and relative prices shape trade flows. Within the generally accepted analytical framework and the Marshall-Lerner condition, it is argued that an appreciation of the real exchange rate (REER increase) raises the relative prices of exported goods in international markets, weakening external competitiveness and negatively affecting export volume (Aman, Mallick & Nemlioglu, 2021; Bulut & Yaşar, 2023). Particularly in developing economies, exchange rate shocks can lead to significant contractions in trade performance by squeezing the profit margins of exporting firms when the local currency is overvalued (Chamindani, 2019; Khan, Khan & Ahmad, 2024). However, the insufficiency of classical macroeconomic variables alone in explaining export dynamics made it imperative — especially from the 1990s onwards — to integrate the New Institutional Economics perspective into trade models. According to the theoretical framework developed by Douglass North (1990), institutions are the "rules of the game" that structure economic interactions, and economic activities are promoted in environments where property rights and legal predictability are secured, thereby reducing transaction costs. This theoretical foundation is reinforced by the transaction cost theory conceptualised by Coase (1937) and Williamson (1990); indeed, factors such as asymmetric information, opportunism risk, and asset specificity act as "hidden taxes" restricting international trade in environments where the legal infrastructure is weak (Ruzekova, Kittova & Steinhauser, 2020, pp. 146–149). This transformation, as also emphasised by Rodrik (2000), placed institutional infrastructure at the centre of the idea that it is indispensable for high-quality and sustainable economic growth.
+
+Empirical studies examining the direct effect of institutional quality on international trade show that the rule of law, contract enforcement, and bureaucratic efficiency are primary determinants of export volume and diversification. Acemoglu and Robinson (2012) and Acemoglu, Johnson and Robinson (2005) highlighted that institutions are a more dominant engine of growth than factors such as geography and mere openness, indicating that only competitive exchange rate policies would be insufficient to create sustained export growth in countries where property security is weak (Rodrik, Subramanian & Trebbi, 2004). On the structural determinacy of legal and contractual security (contract enforcement) in international trade, Levchenko (2007) and Nunn (2007) demonstrated that countries with well-developed legal institutions gain a clear comparative advantage particularly in goods with high contract intensity and product complexity (Frensch, Horvath & Huber, 2021, pp. 4–6). Indeed, Méon and Sekkat (2004, pp. 1479–1486) econometrically found that bureaucratic inefficiency and weak rule of law directly undermine manufacturing exports and hinder the integration of developing countries into the world economy. In the literature, it is argued that firms operating in countries with high-quality legal institutions are able to manage asymmetric information problems and cross-border transaction risks more effectively thanks to contractual security (Li, Vertinsky & Zhang, 2012).
+
+Firm-level micro evidence supports this macro theory; for example, Mwatu (2022, p. 494) demonstrated that advanced institutional structures directly facilitate firms' entry into and retention in export markets by alleviating financial constraints and bureaucratic barriers. Helpman, Melitz and Rubinstein (2008) proposed a two-stage estimation framework accounting for selection bias in export decisions, pointing out that institutional quality directly affects not only export volume but also the probability of entry into export markets; this finding strengthens the micro-based mechanism explanation of the institutional shield hypothesis. At the macro level, not only the level of institutional quality within the exporting country but also the "institutional distance" between trading partners emerges as a critical parameter. Ezzat and Zaki (2022, pp. 143–156), in gravity model estimations for MENA countries, demonstrated that as the political and institutional quality (rule of law) gap between trade partners increases, the probability of signing deep trade agreements falls significantly; and that increasing the enforceability of agreements directly expands trade volume. Similarly, Abreo, Bustillo and Rodriguez (2021, pp. 4–5) in the Latin American context, and Afonso et al. (2025, pp. 1–23) for both developed and developing countries, empirically confirmed the indisputable role of institutional efficiency on international trade. In this context, institutional development not only increases total trade volume but also enables countries to shift their comparative advantages towards more complex and institutionally intensive goods (Bustaman et al., 2022, p. 9). Tadesse, Shukralla and Fayissa (2019, pp. 4235–4236) further show that institutional infrastructure is a key variable in reducing transaction costs, and that no permanent improvement in bilateral trade costs can be achieved until rule of law surpasses a certain threshold value.
+
+Recent research on the exchange rate–institutional quality interaction, which constitutes the original focus of this study, reveals that institutions serve as a critical "moderator" capable of absorbing or transmitting exchange rate shocks. Anderson and Marcouiller (2002, pp. 342–343) established theoretically and empirically that insecurity — manifested through weak contract enforcement and unpredictable property rights — systematically distorts trade patterns in ways that price-based models cannot capture; bilateral trade contracts for less between country pairs with weak legal institutions, even controlling for income and distance. Their framework implies a non-monotonic relationship between exchange rate volatility and trade: where institutional safeguards are absent, volatility compounds existing contracting hazards and suppresses trade sharply, whereas in institutionally robust environments the same volatility increment is absorbed through contractual hedging and risk-sharing mechanisms. Complementing this theoretical prediction, Arize, Osang and Slottje (2000) provide panel evidence across thirteen developing countries that exchange rate volatility exerts a consistently negative and significant effect on export volumes — an effect that the authors show is more pronounced in countries with shallow financial markets and weaker enforcement capacity. In countries with strong institutional structures and property security, the cost increases created by real exchange rate appreciations can be compensated by the lower risk premium and reduced transaction costs provided by institutional confidence (Aman et al., 2024, pp. 487–490; Baxa & Paulus, 2024, p. 1734). Recent advances in econometric modelling — particularly Non-Linear ARDL (NARDL) approaches — have also revealed the asymmetric nature of the exchange rate–export relationship. Asymmetric panel analyses conducted by Urgessa (2024, p. 18) and Ashour (2023, pp. 16–29) for developing countries confirm that positive exchange rate volatility sharply reduces export earnings, and that risk-averse firms rapidly withdraw from international markets when the institutional shield is weak.
+
+Conversely, in developing economies where the rule of law is weak, institutional deficiencies — combined with exchange rate volatility — deepen risks for exporters and make international trade far more vulnerable to external shocks. Indeed, Aman, Granville, Mallick and Nemlioglu (2024, pp. 486–510) empirically demonstrate that mere trade and financial openness is insufficient on its own to enhance external competitiveness in developing markets, and that high-quality legal institutions are indispensable for REER-driven depreciation to translate into sustained export performance. Abdi and Mohamed (2025, p. 2) similarly emphasise that in environments where institutions are ineffective, high transaction costs emerge and exporters are unable to benefit from the advantage of a depreciating local currency. This demonstrates that strategies focused only on external price advantages (devaluation) are incomplete for developing countries; for sustainable external trade success, structural reforms that strengthen property rights and the legal system serve the strategic function of an "institutional shield" (Baxa & Paulus, 2024, p. 1734; Aman et al., 2021, pp. 399–402).
+
+# 3. Data and Methodology
+
+### 3.1. Data Sources and Variable Definitions
+
+```{r}
+#| label: tbl-desc1a
+#| tbl-cap: "Table 1a: Descriptive Statistics — Full Sample (2000–2022)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+columns <- c("ln_ihracat", "ln_reer", "ln_gsyh", "hukuk")
+labels  <- c("ln(Exports)", "ln(REER)", "ln(GDP)", "Rule of Law")
+
+desc1a <- data.frame(
+  "Variable"       = labels,
+  "N"              = sapply(columns, function(v) sum(!is.na(analiz_verisi[[v]]))),
+  "Mean"           = sapply(columns, function(v) round(mean(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Std. Dev."      = sapply(columns, function(v) round(sd(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Minimum"        = sapply(columns, function(v) round(min(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  "Maximum"        = sapply(columns, function(v) round(max(analiz_verisi[[v]], na.rm = TRUE), 3)),
+  check.names = FALSE,
+  row.names = NULL
+)
+
+res_kable <- kable(desc1a,
+      format = ifelse(knitr::is_latex_output(), "latex", "html"),
+      align = c("l", "c", "c", "c", "c", "c"),
+      escape = FALSE)
+
+if (!knitr::is_latex_output()) {
+  res_kable <- res_kable %>%
+    kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+                  full_width = TRUE,
+                  position = "center")
+}
+res_kable
+```
+
+The data used in this study consist of an annual panel dataset covering the period 2000–2022. The sample was drawn from the World Bank World Development Indicators (WDI) database (World Bank, 2024a) to capture the relevant data availability and institutional heterogeneity across countries. The dependent variable, export performance, is represented by goods and services exports at constant prices ($ln\_exports$). The key independent variable, the real effective exchange rate ($ln\_reer$), reflects the real value of a country's currency relative to its trading partners.
+
+To represent institutional quality — the original focus of this study — the "Rule of Law" ($rule\_of\_law$) index from the World Bank Worldwide Governance Indicators (WGI) dataset (World Bank, 2024b) is used. This index scores elements that directly affect property security, including the protection of property rights, judicial independence, and contract enforceability, on a scale from −2.5 (weak) to +2.5 (strong). National real GDP ($ln\_gdp$) is included in the model as a control variable to account for each country's domestic export capacity (scale effect).[^1]
+
+[^1]: World real GDP ($ln\_world\_gdp$) was also tested during the modelling phase to control for external demand shocks and global fluctuations. However, adding this variable — which varies only over time and contains no cross-country variance — to the panel created excessive multicollinearity with time trends and year-specific fixed effects under two-way fixed effects assumptions. The Driscoll-Kraay estimator — which controls for cross-sectional dependence at the core of this study — mathematically dampens global external shocks and time trends by its nature, the $ln\_world\_gdp$ variable was excluded from the final estimation model in order to preserve scientific consistency.
+
+The final sample of 37 developing countries was determined by three sequential criteria: *(i)* World Bank income classification — only non-"High Income" economies are included to maintain institutional and structural comparability; *(ii)* REER data availability — countries lacking a sufficient REER series in the WDI database (including Türkiye, due to structural gaps) are excluded; *(iii)* minimum panel depth — countries with fewer than three complete annual observations across all model variables are dropped, as they cannot generate within-country variance for the fixed effects estimator.
+
+We acknowledge a potential selection concern: countries satisfying criterion *(ii)* tend to be more financially integrated and institutionally developed within the developing-country universe, since REER construction requires bilateral trade weight data typically available only for countries with active IMF reporting relationships. This implies the sample may underrepresent the most institutionally fragile states — precisely where the institutional shield hypothesis would matter most. This limitation is documented explicitly as a boundary on the generalisability of the findings. The complete list of included countries, along with their regional classification and panel coverage, is presented in Table A1 (see Appendix).
+
+Examining Table 1, the average value of the rule of law index in the developing country sample is negative (`r round(mean(gelismekte_olan_veri$hukuk, na.rm=TRUE), 2)`). This indicates that institutional infrastructure elements — such as property rights, contract security, and legal predictability — are structurally weak in the countries included in the analysis. This institutional weakness and environment of uncertainty empirically validates the core motivation of our model investigating the effect of exchange rate shocks on exporters and the function of institutions as a "shield of trust".
+
+```{r}
+#| label: tbl-desc1b
+#| tbl-cap: "Table 1b: Descriptive Statistics — Developing Countries (2000–2022)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+# Re-apply the same ≥3-observation filter used in the setup chunk to keep
+# gelismekte_olan_veri consistent (N=37) for all downstream code.
+# The raw CSV contains 39 countries; China and Zambia each have only 1 valid
+# observation and would add nothing to a within-FE estimator.
+gelismekte_olan_veri <- gelismekte_olan_veri_raw %>%
+  filter(country %in% keep_countries)
+
+columns <- c("ln_ihracat", "ln_reer", "ln_gsyh", "hukuk")
+labels  <- c("ln(Exports)", "ln(REER)", "ln(GDP)", "Rule of Law")
+
+desc1b <- data.frame(
+  "Variable"       = labels,
+  "N"              = sapply(columns, function(v) sum(!is.na(gelismekte_olan_veri[[v]]))),
+  "Mean"           = sapply(columns, function(v) round(mean(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Std. Dev."      = sapply(columns, function(v) round(sd(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Minimum"        = sapply(columns, function(v) round(min(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  "Maximum"        = sapply(columns, function(v) round(max(gelismekte_olan_veri[[v]], na.rm = TRUE), 3)),
+  check.names = FALSE,
+  row.names = NULL
+)
+
+res_kable_b <- kable(desc1b,
+      format = ifelse(knitr::is_latex_output(), "latex", "html"),
+      align = c("l", "c", "c", "c", "c", "c"),
+      escape = FALSE)
+
+if (!knitr::is_latex_output()) {
+  res_kable_b <- res_kable_b %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+      full_width = TRUE,
+      position = "center"
+    )
+}
+res_kable_b
+```
+
+### 3.2. Econometric Model and Method
+
+To test the interactive relationship among variables, the following panel data model is specified:
+
+$$
+ln\_exports_{it} = \beta_0 + \beta_1 ln\_reer_{it} + \beta_2 rule\_of\_law_{it} + \beta_3 (ln\_reer_{it} \times rule\_of\_law_{it}) + \beta_4 ln\_gdp_{it} + \alpha_i + \epsilon_{it}
+$$
+
+where $i$ denotes countries, $t$ denotes time, and $\alpha_i$ represents country fixed effects that absorb all time-invariant unobserved heterogeneity. The interaction term $(ln\_reer_{it} \times rule\_of\_law_{it})$ measures the moderating effect of institutional quality on exchange rate sensitivity. Time fixed effects ($\mu_t$) are deliberately excluded from the baseline specification for two reasons. First, with T = 23 annual periods and N = 37 countries, adding 22 year dummies absorbs approximately 37% of the time-series degrees of freedom in a relatively small panel, inflating standard errors without a proportionate reduction in omitted-variable bias. Second, and more importantly, time-varying common shocks — the primary motivation for time fixed effects — are explicitly addressed by the Driscoll-Kraay (SCC) estimator in Section 4.4, which directly corrects for cross-sectional dependence (global contagion) and serial correlation without sacrificing degrees of freedom.[^twoway]
+
+[^twoway]: We verified that adding two-way fixed effects (`effect = "twoways"`) renders the interaction term insignificant even under plain OLS standard errors (β = 0.090, p = 0.129), precisely because year dummies absorb the global common shocks that DK-SCC addresses through standard error correction. The one-way FE + DK-SCC strategy is therefore both more parsimonious and methodologically consistent: it preserves the estimator's identification variation while still delivering valid inference under cross-sectional dependence. Pesaran CD remains marginally significant after two-way FE (z = −2.020, p = 0.043), confirming that year dummies do not fully eliminate cross-country correlation — further supporting DK-SCC as the preferred correction.
+
+To determine whether unit effects (country characteristics) are correlated with the error term in the panel data analysis, a Hausman test was applied. The resulting $\chi^2$ statistic (`r round(hausman_pre$statistic, 3)`) and associated p-value (`r format.pval(hausman_pre$p.value, digits=3, eps=0.001)`) reject the null hypothesis and confirm that the Fixed Effects (FE) estimator produces more consistent results than the Random Effects (RE) estimator. Accordingly, the Fixed Effects method, which controls for unobserved heterogeneity across countries, was adopted.
+
+The panel quantile regression used in robustness analyses follows the two-stage approach developed by Canay (2011). In the first stage, country-specific fixed effects ($\hat{\alpha}_i$) estimated from the fixed effects model are subtracted from the dependent variable, yielding a purged dependent variable ($\tilde{y}_{it} = y_{it} - \hat{\alpha}_i$). Standard quantile regression is then applied to this purged variable in the second stage. The Canay (2011) approach is asymptotically valid under $\sqrt{n}$-consistent fixed effect estimates and eliminates the sample selection bias that would arise from conventional $rq()$ calls that ignore the panel structure. A maintained assumption is that fixed effects enter as location shifts — i.e., they are additive and constant across quantiles. If this assumption fails (e.g., if unobserved heterogeneity also shifts the scale or shape of the conditional distribution), the two-stage estimates may be inconsistent (Koenker, 2004). This assumption is substantive in a panel of 37 developing countries with heterogeneous institutional trajectories: it requires that country-level unobservables shift the entire export distribution uniformly, not just its mean. In the present context, where the paper's central question is whether the *distribution* of export outcomes responds differently to REER shocks depending on institutional quality, a failure of the location-shift assumption could mean that the Canay (2011) approach understates distributional heterogeneity by attributing scale variation to idiosyncratic noise rather than systematic country-level effects. We regard this as a limitation and note that the correlated random effects quantile regression framework of Abrevaya & Dahl (2008) would provide a robustness check in future work with a larger sample.
+
+**Integration and stationarity.** We formally test for unit roots using the CIPS (cross-sectionally augmented IPS) panel unit root test of Pesaran (2007), which is valid under cross-sectional dependence — the setting confirmed by Table 3 — and performs well in short-T panels (Pesaran, 2007). With lags = 2 and a drift specification, the CIPS statistics are: $ln\_exports$ = −0.841, $ln\_reer$ = −1.166, $ln\_gdp$ = −0.469, and $rule\_of\_law$ = −1.512. All four statistics exceed the 5% critical value of approximately −2.13 for panels of this dimension (N ≈ 37, T ≈ 23), so the null hypothesis of a unit root cannot be rejected for any variable. Running panel FE on I(1) variables without a confirmed cointegrating relationship risks producing spurious estimates (Granger & Newbold, 1974).
+
+To assess whether a cointegrating relationship exists, we apply individual Engle-Granger residual-based ADF tests across all 37 countries and combine the resulting p-values via the Maddala-Wu Fisher pooled test. The pooled statistic, $\chi^2(74) = 76.81$ (p = 0.389), fails to reject the null of no cointegration at any conventional level. In the absence of a confirmed cointegrating relationship, we interpret the FE log-levels estimates as characterising long-run cross-country associations rather than structural causal effects, and we complement them with a first-difference (FD) robustness specification in Section 4.9. As shown there, the FD model confirms the dominant role of GDP growth but reveals a sign reversal in the institutional interaction — a horizon-dependent result discussed in Section 5.[^stationary]
+
+[^stationary]: The Rule of Law index is bounded [−2.5, +2.5] and cannot drift to infinity in the way a pure I(1) process would; the CIPS result for this variable is therefore borderline and likely reflects slow institutional evolution rather than a true unit root. For REER, theoretical PPP arguments support mean-reversion over horizons exceeding our sample window (Taylor & Taylor, 2004). These considerations do not resolve the stationarity concern for $ln\_exports$ and $ln\_gdp$ — the variables most susceptible to trending — but they suggest the spurious regression risk is concentrated in the GDP-exports relationship rather than in the institutional interaction channel that is the paper's primary focus.
+
+# 4. Empirical Results and Discussion
+
+We begin with the full-country baseline before zooming into the developing-country sample where the institutional shield hypothesis is most relevant.
+
+### 4.1. Full Sample Results
+
+The full-sample model serves as a reference point, pooling developed and developing economies to establish whether the institutional interaction registers at all before we narrow the sample. Table 2 presents the results.
+
+```{r}
+#| label: tbl-regression
+#| tbl-cap: "Table 2: Panel Fixed Effects Regression Results"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(modelsummary)
+
+models <- list(
+  "All Countries"        = model_politik,
+  "Developing Countries" = model_em
+)
+
+modelsummary(
+  models,
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"       = "ln(REER)",
+    "hukuk"         = "Rule of Law",
+    "ln_gsyh"       = "ln(GDP)",
+    "ln_reer:hukuk" = "ln(REER) × Rule of Law"
+  ),
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  statistic  = "std.error",
+  output     = ifelse(knitr::is_latex_output(), "latex", "html"),
+  fmt        = 3,
+  escape     = FALSE,
+  add_rows = data.frame(
+    term = c("R²", "Observations", "Fixed Effects"),
+    `All Countries` = c(
+      round(summary(model_politik)$r.squared["rsq"], 3),
+      nobs(model_politik),
+      "Yes"
+    ),
+    `Developing Countries` = c(
+      round(summary(model_em)$r.squared["rsq"], 3),
+      nobs(model_em),
+      "Yes"
+    ),
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  ),
+  notes = paste("Note: Values in parentheses are standard errors.", sig_note_en)
+)
+```
+
+Two features of Table 2 stand out. The $ln\_reer$ coefficient is negative and significant (−0.111), in line with the Marshall-Lerner condition: when a country's currency appreciates in real terms, its exports become more expensive abroad and trade volumes fall. The $ln\_gdp$ coefficient (1.316) is above unity, signalling that larger domestic economies send a more than proportional share of their output into export markets — consistent with the heterogeneous-firm mechanism in Helpman et al. (2008), where scale generates more exporters capable of covering fixed entry costs. The institutional interaction ($ln\_reer \times rule\_of\_law$ = 0.034), however, is nowhere near significance in the full mixed sample. This is unsurprising: the pooled sample blends institutionally mature OECD economies with structurally fragile low-income ones, and the heterogeneous slopes wash out any conditional effect. The relevant test is the developing-country sub-sample, to which we now turn.
+
+### 4.2. Developing Countries and Institutional Interaction Analysis
+
+Among developing economies, institutional gaps are wide enough that any moderating role of rule of law should be detectable. The "Developing Countries" column of Table 2 reports the sub-sample results.
+
+The interaction term ($ln\_reer \times rule\_of\_law$) is positive and nominally significant under standard FE inference (`r round(coef(model_em)["ln_reer:hukuk"], 3)`, p < 0.05) — exactly the institutional shield that the literature predicts. If we stopped here, the story would be straightforward: rule of law cushions the export damage from real appreciation in developing economies. We do not stop here. The diagnostic tests in Table 3 show that the panel exhibits strong autocorrelation and cross-sectional dependence — the precise conditions in which conventional FE standard errors are systematically too small. Once inference is corrected to account for these features, the shield vanishes. We return to this in Sections 4.4–4.6; the Hausman test confirms Fixed Effects throughout (p < 0.01).
+
+### 4.3. Visualisation of the REER–Institutional Quality Gradient
+
+Figures 1–3 chart the patterns behind the numbers.
+
+```{r}
+#| label: fig-reer-vol
+#| fig-cap: "Figure 1: Real Effective Exchange Rate Volatility and Export Performance (2000–2022)"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+library(zoo)
+
+# Volatility calculation (3-year rolling standard deviation)
+vol_data <- gelismekte_olan_veri %>%
+  group_by(country) %>%
+  arrange(year) %>%
+  mutate(reer_vol = rollapply(reer, width = 3, FUN = sd, fill = NA, align = "right")) %>%
+  group_by(year) %>%
+  summarise(
+    avg_ihracat = mean(ihracat, na.rm = TRUE),
+    avg_vol      = mean(reer_vol, na.rm = TRUE)
+  ) %>%
+  drop_na()
+
+ggplot(vol_data, aes(x = year)) +
+  geom_line(aes(y = avg_vol, color = "REER Volatility"), linewidth = 1.2) +
+  geom_line(aes(y = avg_ihracat / mean(avg_ihracat) * mean(avg_vol), color = "Exports (Normalised)"),
+            linewidth = 1.2, linetype = "dashed") +
+  scale_y_continuous(sec.axis = sec_axis(~ . * mean(vol_data$avg_ihracat) / mean(vol_data$avg_vol),
+                                         name = "Average Exports")) +
+  scale_color_manual(values = c("REER Volatility" = "#dc2626", "Exports (Normalised)" = "#2563eb")) +
+  labs(x = "Year", y = "Average REER Volatility", color = "Indicator") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+Figure 1 illustrates the relationship between real effective exchange rate volatility and export performance over the period 2000–2022. It is notable that REER volatility escalated during global crisis periods, accompanied by pronounced contractions in export revenues. This pattern is consistent with the Marshall-Lerner condition, empirically confirming that exchange rate appreciation negatively affects export competitiveness.
+
+```{r}
+#| label: fig-institutional-interaction
+#| fig-cap: "Figure 2: REER–Export Interaction by Institutional Quality Groups"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(ggplot2)
+
+median_law <- median(gelismekte_olan_veri$hukuk, na.rm = TRUE)
+
+inter_data <- gelismekte_olan_veri %>%
+  mutate(Law_Group = ifelse(hukuk >= median_law, "Strong Rule of Law", "Weak Rule of Law")) %>%
+  drop_na(Law_Group, ln_reer, ln_ihracat)
+
+ggplot(inter_data, aes(x = ln_reer, y = ln_ihracat, color = Law_Group, fill = Law_Group)) +
+  geom_point(alpha = 0.3) +
+  geom_smooth(method = "lm", formula = y ~ x, linewidth = 1.2) +
+  scale_color_manual(values = c("Strong Rule of Law" = "#10b981", "Weak Rule of Law" = "#ef4444")) +
+  scale_fill_manual(values = c("Strong Rule of Law" = "#10b981", "Weak Rule of Law" = "#ef4444")) +
+  labs(x = "ln(REER)", y = "ln(Exports)", color = "Institutional Structure", fill = "Institutional Structure") +
+  theme_minimal() +
+  theme(legend.position = "bottom")
+```
+
+Figure 2 shows that the raw REER–export relationship *appears* to differ between country groups classified as "Weak Rule of Law" and "Strong Rule of Law" based on the median rule of law index — the OLS-smoothed slope is less steeply negative in the high-institutional group. This visual pattern motivates the interaction model in Table 2. However, Figure 2 uses unadjusted OLS fits with no correction for cross-sectional dependence or autocorrelation; it should be read as a descriptive illustration of the raw data gradient, not as evidence of a statistically valid institutional shield. As the subsequent inference-corrected analyses (Sections 4.4–4.6) demonstrate, this gradient does not survive proper standard error correction.
+
+Figure 3, which measures the marginal effect of rule of law on REER as a continuous function, more clearly reveals how the REER coefficient changes as the index increases:
+
+```{r}
+#| label: fig-marginal-effect
+#| fig-cap: "Figure 3: Marginal Effect of REER on Exports by Rule of Law Index — Driscoll-Kraay 95% Confidence Band"
+#| warning: false
+#| message: false
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+library(ggplot2)
+
+# 1. Rule of law range
+law_range <- seq(min(gelismekte_olan_veri$hukuk), max(gelismekte_olan_veri$hukuk), length.out = 100)
+
+# 2. Coefficients and Driscoll-Kraay standard errors
+# NOTE: FE standard errors are invalid (Table 3: CD and AR both p<0.01).
+# Marginal effect CIs use the DK-SCC VCV (maxlag=4) for internal consistency
+# with Table 4, which is the preferred specification.
+beta_reer  <- coef(model_em)["ln_reer"]
+beta_inter <- coef(model_em)["ln_reer:hukuk"]
+dk_vcov_fig3 <- vcovSCC(model_em, type = "HC3", maxlag = 4)
+se_reer    <- sqrt(dk_vcov_fig3["ln_reer", "ln_reer"])
+se_inter   <- sqrt(dk_vcov_fig3["ln_reer:hukuk", "ln_reer:hukuk"])
+cov_ri     <- dk_vcov_fig3["ln_reer", "ln_reer:hukuk"]
+
+# 3. Marginal effect and 95% confidence band (DK-corrected)
+marginal_effect <- as.numeric(beta_reer) + as.numeric(beta_inter) * law_range
+se_marginal     <- sqrt(se_reer^2 + law_range^2 * se_inter^2 + 2 * law_range * cov_ri)
+
+df_marginal <- data.frame(
+  law    = law_range,
+  effect = marginal_effect,
+  lower  = marginal_effect - 1.96 * se_marginal,
+  upper  = marginal_effect + 1.96 * se_marginal
+)
+
+# 4. Plot
+ggplot(df_marginal, aes(x = law, y = effect)) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.15, fill = "steelblue") +
+  geom_line(color = "steelblue", linewidth = 1) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "red", linewidth = 0.8) +
+  labs(
+    x = "Rule of Law Index",
+    y = "Marginal Effect of REER (∂ln_exports / ∂ln_reer)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(panel.grid.minor = element_blank())
+```
+
+Figure 3 presents the marginal effect of REER on exports as a continuous function of the rule of law index, with confidence bands computed from Driscoll-Kraay robust standard errors to maintain consistency with the preferred specification in Table 4. Three features merit explicit attention.
+
+*Zero-crossing threshold.* The marginal REER effect equals zero at a Rule of Law index value of approximately −0.052. Below this threshold, the effect is negative (REER appreciation depresses exports); above it, the effect turns positive. With the sample mean Rule of Law at −0.546 and a range of −2.267 to +1.163, **82.9% of country-year observations fall below the zero-crossing** — meaning that for the vast majority of this developing-country sample, REER appreciation is predicted to depress export performance even conditional on institutional quality.
+
+*Statistical significance map.* Despite this gradient, the DK confidence band straddles zero across the entire observed range of rule of law values. No grid point yields a marginal REER effect that is statistically distinguishable from zero in either direction at the 5% level. This confirms that Figure 3 illustrates a precise pattern of zero: a positive institutional gradient in the REER coefficient that is real in sign but not robust in magnitude.
+
+*Implication.* The figure should be read not as evidence that institutions protect exports at sufficiently high rule-of-law levels, but as a visual summary of the null result: the gradient is consistent with the institutional shield hypothesis in direction, but cross-sectional dependence inflates uncertainty sufficiently that no sub-group of the sample achieves a statistically credible shield.
+
+The Hausman test result is presented below. The obtained $\chi^2$ statistic ($\chi^2 =$ `r round(hausman_pre$statistic, 3)`; $p =$ `r format.pval(hausman_pre$p.value, digits=3, eps=0.001)`) rejects the null hypothesis (H0: unit effects are uncorrelated with explanatory variables) at the 1 percent significance level. This finding indicates that the unobserved historical, geographical, and institutional heterogeneous structures of countries are correlated with the independent variables; consequently the Random Effects (RE) estimator produces inconsistent results and the use of the Fixed Effects (FE) model is mandatory.
+
+### 4.4. Diagnostic Tests and Robust Estimates
+
+To confirm the statistical validity of the findings obtained from the Fixed Effects regression, three critical diagnostic tests were applied. Results are presented in Table 3.
+
+```{r}
+#| label: tbl-tanitest
+#| tbl-cap: "Table 3: Panel Diagnostic Test Results (Developing Countries)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+
+bg_test  <- pbgtest(model_em)
+cd_test  <- suppressWarnings(pcdtest(model_em, test = "cd"))
+hausman  <- phtest(model_em, model_em_re)
+
+tbl3 <- data.frame(
+  Test          = c("Hausman Model Selection Test",
+                    "Autocorrelation Test (Breusch-Godfrey-Wooldridge)",
+                    "Cross-Sectional Dependence Test (Pesaran CD)"),
+
+  `H₀ Hypothesis` = c("Random Effects is consistent",
+                       "No autocorrelation",
+                       "Cross-sectional independence"),
+
+  Statistic    = c(
+    sprintf("χ²(%d) = %.3f", as.integer(hausman$parameter), hausman$statistic),
+    sprintf("χ²(%d) = %.3f", as.integer(bg_test$parameter), bg_test$statistic),
+    sprintf("z = %.3f", cd_test$statistic)
+  ),
+
+  `p-Value`    = c(
+    format.pval(hausman$p.value,  digits = 3, eps = 0.001),
+    format.pval(bg_test$p.value,  digits = 3, eps = 0.001),
+    format.pval(cd_test$p.value,  digits = 3, eps = 0.001)
+  ),
+
+  Conclusion   = c("Fixed Effects model selected",
+                   "H₀ rejected — autocorrelation detected",
+                   "H₀ rejected — cross-sectional dependence detected"),
+
+  check.names = FALSE,
+  row.names = NULL
+)
+
+res_tbl3 <- kable(tbl3,
+      format = ifelse(knitr::is_latex_output(), "latex", "html"),
+      align = c("l", "l", "c", "c", "l"),
+      escape = FALSE)
+
+if (!knitr::is_latex_output()) {
+  res_tbl3 <- res_tbl3 %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+      full_width = TRUE,
+      position = "center"
+    )
+}
+res_tbl3
+```
+
+### 4.5. Assessment of Findings
+
+The diagnostic tests in Table 3 reveal a critical methodological problem that must be addressed before the baseline institutional shield result can be accepted at face value. Both autocorrelation (Breusch-Godfrey-Wooldridge: $\chi^2 =$ `r round(bg_test$statistic, 2)`, $p < 0{.}01$) and cross-sectional dependence (Pesaran CD: $z =$ `r round(cd_test$statistic, 2)`, $p < 0{.}01$) are strongly present in the data. This is precisely the setting in which conventional standard errors — and by extension the significant interaction term in Table 2 — may be misleading: when developing countries are simultaneously exposed to global shocks (oil prices, financial contagion, the COVID-19 pandemic), ignoring cross-sectional dependence conflates global common factors with country-level institutional effects, potentially overstating the role of local institutions.
+
+To address this, **Driscoll-Kraay (SCC) robust standard errors** — which simultaneously eliminate both autocorrelation and cross-sectional dependence — are applied (Table 4). The Pesaran (2004) CD statistic implemented by `pcdtest()` is robust under the N=37 and T≈23 dimensions of this panel. Crucially, the DK results should be interpreted not merely as a robustness check but as the preferred specification: if the institutional shield survives under DK correction, it is genuine; if it does not, the baseline FE result was an artefact of unaccounted cross-country correlation.
+
+The bandwidth parameter $maxlag = 4$ is selected following the convention of Hoechle (2007) for annual cross-country panels, where a lag truncation of 3–5 years accommodates autocorrelation induced by medium-term trade policy cycles and commodity price persistence. As a further check, Table 4 note reports that results are robust to $maxlag = 2$ and $maxlag = 3$; in all cases the $ln(REER) \times Rule of Law$ interaction remains statistically insignificant and $ln(GDP)$ retains its 1 percent significance.[^maxlag]
+
+[^maxlag]: Sensitivity of DK standard errors to bandwidth choice was verified by re-estimating with maxlag = 2 and maxlag = 3. The interaction term p-values are `r {se2 <- sqrt(diag(vcovSCC(model_em, type="HC3", maxlag=2))); t2 <- coef(model_em)["ln_reer:hukuk"]/se2["ln_reer:hukuk"]; round(2*pnorm(abs(t2), lower.tail=FALSE),3)}` (maxlag=2) and `r {se3 <- sqrt(diag(vcovSCC(model_em, type="HC3", maxlag=3))); t3 <- coef(model_em)["ln_reer:hukuk"]/se3["ln_reer:hukuk"]; round(2*pnorm(abs(t3), lower.tail=FALSE),3)}` (maxlag=3), neither reaching conventional significance thresholds.
+
+```{r}
+#| label: tbl-driscoll
+#| tbl-cap: "Table 4: Regression Results with Driscoll-Kraay Robust Standard Errors"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(modelsummary)
+
+model_dk <- list("Driscoll-Kraay SE" = model_em)
+
+modelsummary(
+  model_dk,
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"       = "ln(REER)",
+    "hukuk"         = "Rule of Law",
+    "ln_gsyh"       = "ln(GDP)",
+    "ln_reer:hukuk" = "ln(REER) × Rule of Law"
+  ),
+  statistic  = "std.error",
+  se         = list(se_scc),
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  output     = ifelse(knitr::is_latex_output(), "latex", "html"),
+  add_rows = data.frame(
+    term = c("R²", "Observations", "Fixed Effects"),
+    `Driscoll-Kraay SE` = c(
+      round(summary(model_em)$r.squared["rsq"], 3),
+      nobs(model_em),
+      "Yes"
+    ),
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  ),
+  notes = paste("Note: Values in parentheses are Driscoll-Kraay robust standard errors.", sig_note_en)
+)
+```
+
+Table 4 tells a stark story. $ln(GDP)$ retains its 1 percent significance regardless of the correction applied, confirming that domestic production scale — not institutional endowments or price advantages — is the primary engine of export performance in developing countries. The t-statistic is very large relative to the other regressors, consistent with the GDP dominance seen at every quantile of the Canay (2011) results. The estimated GDP elasticity of approximately 1.19–1.46 across specifications exceeds unity, implying increasing returns in export supply relative to domestic scale. This is consistent with export supply functions in heterogeneous-firm trade models (Helpman et al., 2008), where larger economies generate more high-productivity firms capable of crossing the fixed cost threshold for exporting — producing a super-unitary aggregate elasticity. Comparative benchmarks from the gravity literature (income elasticities of 0.7–1.0 for bilateral flows) are smaller because they estimate the marginal effect on a bilateral pair holding the partner fixed; our specification estimates the domestic supply elasticity net of bilateral demand, which is theoretically expected to be larger. The first-difference model (Table 10) also shows a GDP growth elasticity of approximately 1.46, confirming that this magnitude reflects a genuine supply-side relationship rather than a spurious levels correlation.
+
+The $ln(REER) \times Rule of Law$ interaction that was significant in the baseline model loses significance once cross-country contagion is removed (p = `r p_dk_inter`). The interpretation is not that institutions are irrelevant, but that in high-integration environments global shocks travel faster than domestic institutional buffers can absorb them. The baseline FE estimate conflates the domestic moderating effect with the differential capacity of institutionally stronger economies to weather common shocks — a distinction the DK correction isolates.
+
+### 4.6. Robustness Controls
+
+```{r}
+#| label: tbl-quantile-kontrol
+#| tbl-cap: "Table 5: Panel Quantile Regression Results (Canay, 2011)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(quantreg)
+library(stargazer)
+
+# Canay (2011) Panel Quantile Regression
+# Step 1: Extract country fixed effects from FE model
+fe_vals <- fixef(model_em)
+# Step 2: Demean each observation by its country fixed effect
+gelismekte_olan_veri$ln_ihracat_tilde <-
+  gelismekte_olan_veri$ln_ihracat -
+  fe_vals[as.character(gelismekte_olan_veri$country)]
+# Reference: Canay, I.A. (2011). A simple approach to quantile regression
+#            for panel data. The Econometrics Journal, 14(3), 368-386.
+
+qr_25 <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+            data = gelismekte_olan_veri, tau = 0.25)
+qr_50 <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+            data = gelismekte_olan_veri, tau = 0.50)
+qr_75 <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+            data = gelismekte_olan_veri, tau = 0.75)
+
+# Cluster bootstrap SEs (B=499, resampling entire country time series).
+# iid/nid asymptotic SEs are invalid under confirmed CD and serial correlation (Table 3).
+# Pairs bootstrap ignores the panel structure — it samples (i,t) observations independently,
+# destroying within-country temporal dependence. The cluster bootstrap resamples entire
+# country time series (N=37 clusters, B=499), respecting the panel's longitudinal structure.
+set.seed(42)
+countries_vec <- unique(gelismekte_olan_veri$country)
+n_c <- length(countries_vec)
+B_clust <- 499
+
+get_qr_coef <- function(data, tau) {
+  fit <- tryCatch(
+    rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh, data = data, tau = tau),
+    error = function(e) NULL
+  )
+  if (is.null(fit)) return(NULL)
+  coef(fit)
+}
+
+orig_coef <- list(
+  "0.25" = coef(qr_25),
+  "0.50" = coef(qr_50),
+  "0.75" = coef(qr_75)
+)
+
+boot_results <- list(
+  "0.25" = matrix(NA, nrow = B_clust, ncol = length(orig_coef[["0.25"]])),
+  "0.50" = matrix(NA, nrow = B_clust, ncol = length(orig_coef[["0.50"]])),
+  "0.75" = matrix(NA, nrow = B_clust, ncol = length(orig_coef[["0.75"]]))
+)
+
+for (b in seq_len(B_clust)) {
+  sc <- sample(countries_vec, n_c, replace = TRUE)
+  bd <- do.call(rbind, lapply(seq_along(sc), function(j) {
+    d <- gelismekte_olan_veri[gelismekte_olan_veri$country == sc[j], ]
+    d$country <- paste0("bc_", j)
+    d
+  }))
+  for (tau_str in c("0.25","0.50","0.75")) {
+    cc <- get_qr_coef(bd, as.numeric(tau_str))
+    if (!is.null(cc)) boot_results[[tau_str]][b,] <- cc
+  }
+}
+
+for (tau_str in c("0.25","0.50","0.75")) {
+  colnames(boot_results[[tau_str]]) <- names(orig_coef[[tau_str]])
+}
+
+se_clust_25 <- apply(boot_results[["0.25"]], 2, sd, na.rm = TRUE)
+se_clust_50 <- apply(boot_results[["0.50"]], 2, sd, na.rm = TRUE)
+se_clust_75 <- apply(boot_results[["0.75"]], 2, sd, na.rm = TRUE)
+
+se_boot_list <- list(se_clust_25, se_clust_50, se_clust_75)
+
+suppressWarnings(stargazer(qr_25, qr_50, qr_75,
+          se = se_boot_list,
+          type = ifelse(knitr::is_latex_output(), "latex", "html"),
+          column.labels = c("Low Exports", "Median", "High Exports"),
+          dep.var.labels = "ln(Exports) — FE-Demeaned",
+          covariate.labels = c("ln(REER)", "Rule of Law", "ln(GDP)",
+                               "ln(REER) × Rule of Law", "Constant"),
+          omit.stat = c("f", "ser", "adj.rsq", "rsq", "n"),
+          notes = paste0("Note: Canay (2011) panel quantile regression. ",
+                         "Dependent variable demeaned by country FE from Hausman-selected model. ",
+                         "Standard errors from cluster bootstrap (B=499), resampling entire country time series (N=37 clusters). ",
+                         "Pairs bootstrap ignores within-country temporal dependence and systematically understates SEs under confirmed CD and serial correlation (Table 3). ",
+                         sig_note_en),
+          notes.align = "l",
+          notes.label = ""))
+```
+
+The panel quantile regression results presented in Table 5 were obtained by applying the Canay (2011) method. In this approach, country fixed effects ($\hat{\alpha}_i$) derived from the Hausman-selected fixed effects model were subtracted from the dependent variable, thereby controlling for unobserved country heterogeneity. The findings reveal that the dynamics determining export performance exhibit an asymmetric and heterogeneous structure depending on countries' export capacities. After applying the panel fixed effects correction, the coefficient of real GDP ($ln\_gdp$), representing domestic economic size, is positive and significant at the 1 percent level across all quantiles (τ = 0.25; 0.50; 0.75), taking values of 1.187, 1.182, and 1.176 respectively. This finding confirms that, regardless of the level of export volume, the primary driver of trade performance is domestic scale economies and production capacity rather than local price advantages.
+
+On the other hand, the direct effect of the real effective exchange rate ($ln\_reer$) on exports is not statistically significant at any level of the export spectrum after the panel fixed effects correction (τ = 0.25: p = 0.669; τ = 0.50: p = 0.701; τ = 0.75: p = 0.299). This finding reveals that REER levels are not an independent and reliable determinant of export performance in developing countries once country heterogeneity is controlled for.
+
+Regarding institutional structure — which forms the core hypothesis of the study — the interaction term ($ln\_reer \times rule\_of\_law$) is positive across all three quantiles (τ = 0.25: 0.241; τ = 0.50: 0.157; τ = 0.75: 0.086), but fails to reach conventional significance under the cluster bootstrap standard errors at any point of the distribution (approximate p-values: τ = 0.25: 0.129; τ = 0.50: 0.248; τ = 0.75: 0.582).[^clust_note] The coefficient shrinks monotonically as export capacity rises, consistent with the intuition that global contagion dominates institutional buffers for high-volume exporters — but the distributional pattern is statistically indistinct from zero throughout. This finding is fully consistent with the Driscoll-Kraay (Table 4) and GMM (Table 7) results: across all robust inference frameworks, the institutional shield does not survive. The quantile decomposition adds that the positive coefficient is largest at the lower end of the distribution (where smaller, more institutionally sensitive exporters reside), but even this localised pattern lacks the statistical precision to constitute evidence of an operative shield under correct inference.
+
+[^clust_note]: Standard errors are from cluster bootstrap (B = 499), resampling entire country time series. Earlier versions of this table used pairs bootstrap (B = 200), which samples (i,t) observations independently and ignores within-country serial dependence — systematically understating standard errors. Under pairs bootstrap, the interaction reached 5% significance at τ = 0.25 (p ≈ 0.040) and borderline significance at τ = 0.50 (p ≈ 0.096). These earlier results were artefacts of the incorrect resampling scheme. Cluster bootstrap is the appropriate procedure for panel QR under confirmed autocorrelation and cross-sectional dependence (see Table 3).
+
+```{r}
+#| label: fig-quantile-reer
+#| fig-cap: "Figure 4: REER Coefficient Across Export Quantiles — Canay (2011) Panel QR with Cluster Bootstrap 95% Confidence Band (B=499)"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(quantreg)
+library(ggplot2)
+
+if (!"ln_ihracat_tilde" %in% names(gelismekte_olan_veri)) {
+  fe_vals <- fixef(model_em)
+  gelismekte_olan_veri$ln_ihracat_tilde <-
+    gelismekte_olan_veri$ln_ihracat -
+    fe_vals[as.character(gelismekte_olan_veri$country)]
+}
+
+taus <- seq(0.1, 0.9, by = 0.1)
+
+qr_all <- rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+             data = gelismekte_olan_veri, tau = taus)
+
+# Cluster bootstrap for Figure 4 (consistent with Table 5)
+set.seed(42)
+countries_fig <- unique(gelismekte_olan_veri$country)
+n_c_fig <- length(countries_fig)
+B_fig <- 499
+boot_fig <- array(NA, dim = c(B_fig, length(taus), length(coef(qr_all)[,1])))
+for (b in seq_len(B_fig)) {
+  sc <- sample(countries_fig, n_c_fig, replace = TRUE)
+  bd <- do.call(rbind, lapply(seq_along(sc), function(j) {
+    d <- gelismekte_olan_veri[gelismekte_olan_veri$country == sc[j], ]
+    d$country <- paste0("f_", j); d
+  }))
+  fit_b <- tryCatch(rq(ln_ihracat_tilde ~ ln_reer * hukuk + ln_gsyh,
+                        data = bd, tau = taus), error = function(e) NULL)
+  if (!is.null(fit_b)) boot_fig[b,,] <- t(coef(fit_b))
+}
+# SE of ln_reer coefficient across quantiles (column 2 = ln_reer position)
+se_fig_reer <- apply(boot_fig[,,2], 2, sd, na.rm = TRUE)
+est_fig_reer <- coef(qr_all)[2,]  # ln_reer row
+
+plot_data <- data.frame(
+  tau      = taus,
+  estimate = est_fig_reer,
+  lower    = est_fig_reer - 1.96 * se_fig_reer,
+  upper    = est_fig_reer + 1.96 * se_fig_reer
+)
+
+ggplot(plot_data, aes(x = tau, y = estimate)) +
+  geom_ribbon(aes(ymin = lower, ymax = upper), alpha = 0.2, fill = "darkorange") +
+  geom_line(color = "darkorange", linewidth = 1.2) +
+  geom_point(color = "darkred", size = 3) +
+  geom_hline(yintercept = 0, linetype = "dashed", color = "black", linewidth = 0.8) +
+  scale_x_continuous(breaks = taus) +
+  labs(
+    x     = "Export Quantiles",
+    y     = "ln(REER) Coefficient",
+    title = "Variation in the Exchange Rate Effect by Export Capacity"
+  ) +
+  theme_minimal(base_size = 10) +
+  theme(panel.grid.minor = element_blank(),
+        plot.title = element_text(hjust = 0.5, face = "bold"))
+```
+
+Examining **Figure 4**, the 95% confidence band obtained by the Canay (2011) panel quantile regression method crosses the zero line across the entire export spectrum. This visual finding confirms that the REER coefficient carries no statistical significance at any quantile. The coefficient estimate is slightly positive at lower export quantiles; as export capacity increases it declines and turns negative at higher quantiles. However, given the width of the confidence band, this tendency is statistically insignificant. This finding visually confirms at the panel level that, when panel fixed effects are controlled for, the exchange rate level is not a reliable determinant of export performance in developing countries.
+
+```{r}
+#| label: tbl-volatility
+#| tbl-cap: "Table 6: Exchange Rate Volatility and the Institutional Shield Effect"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+panel_vol_veri <- gelismekte_olan_veri %>%
+  group_by(country) %>%
+  arrange(year) %>%
+  mutate(
+    ln_reer_vol = rollapply(ln_reer, width = 3, FUN = sd, fill = NA, align = "right")
+  ) %>%
+  filter(!is.na(ln_reer_vol)) %>%
+  ungroup()
+
+panel_vol <- pdata.frame(panel_vol_veri, index = c("country", "year"))
+
+model_vol <- plm(ln_ihracat ~ ln_reer_vol * hukuk + ln_gsyh,
+                 data = panel_vol, model = "within")
+
+se_vol_scc <- sqrt(diag(vcovSCC(model_vol, type = "HC3", maxlag = 4)))
+
+suppressWarnings(stargazer(model_vol,
+          type = ifelse(knitr::is_latex_output(), "latex", "html"),
+          se = list(se_vol_scc),
+          dep.var.labels = "ln(Exports)",
+          covariate.labels = c("REER Volatility", "Rule of Law", "ln(GDP)", "Volatility × Rule of Law"),
+          omit.stat = c("f", "ser", "adj.rsq", "rsq", "n"),
+          notes = paste("Note: Standard errors obtained from the Driscoll-Kraay (SCC) robust estimator.", sig_note_en),
+          notes.align = "l",
+          notes.label = ""))
+```
+
+The results of the panel fixed effects model based on the Driscoll-Kraay (SCC) robust estimator presented in Table 6 — which controls for cross-country contagion effects (cross-sectional dependence) — test the effect of exchange rate volatility on export performance and the protective role of institutions against such shocks. Examining the analysis findings, exchange rate volatility and the rule of law index are found individually to have no statistically significant effect on export performance. More importantly, the interaction term ($Volatility \times Rule of Law$), which measures the moderating role of institutional quality during episodes of macroeconomic uncertainty, carries no statistical significance after controlling for cross-sectional dependence.
+
+The result reinforces the paper's central methodological point. Neither the level of REER volatility nor its interaction with institutional quality remains significant once cross-sectional dependence is corrected. Domestic GDP — at `r round(coef(model_vol)["ln_gsyh"], 3)`, positive and significant at the 1 percent level — is again the sole robust determinant. An institutional shield against currency volatility may be a necessary condition for export resilience, but it is far from sufficient; without the productive base to back it, it operates in a vacuum.
+
+```{r}
+#| label: tbl-gmm
+#| tbl-cap: "Table 7: Dynamic Panel GMM (Arellano-Bond) Results"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+p_veri_em_gmm <- pdata.frame(gelismekte_olan_veri, index = c("country", "year"))
+
+# Instrument set restricted to lag(y, 2:3) to avoid proliferation (N=37)
+# Roodman (2009) rule of thumb: instrument count should not exceed N
+model_gmm <- suppressWarnings(pgmm(ln_ihracat ~ lag(ln_ihracat, 1) + ln_reer * hukuk + ln_gsyh | lag(ln_ihracat, 2:3),
+                  data = p_veri_em_gmm,
+                  effect = "individual",
+                  model = "twosteps",
+                  transformation = "d"))
+
+sargan_p   <- round(sargan(model_gmm)$p.value, 3)
+ar1_p      <- round(mtest(model_gmm, order = 1)$p.value, 3)
+ar2_p      <- round(mtest(model_gmm, order = 2)$p.value, 3)
+# Instrument count: sum of moment conditions across time periods for lag(y,2:3)
+# With unbalanced T and difference transformation, exact count is taken from model
+n_instr    <- model_gmm$args$Hmat  # reliable: total GMM moments used
+if (is.null(n_instr)) n_instr <- nrow(model_gmm$W[[1]])
+
+suppressWarnings(stargazer(model_gmm,
+          type = ifelse(knitr::is_latex_output(), "latex", "html"),
+          dep.var.labels = "ln(Exports)",
+          covariate.labels = c("ln(Exports) [t-1]", "ln(REER)", "Rule of Law", "ln(GDP)", "ln(REER) × Rule of Law"),
+          omit.stat = c("f", "ser"),
+          add.lines = list(
+            c("Sargan Test (p-value)", sargan_p),
+            c("AR(1) Test (p-value)", ar1_p),
+            c("AR(2) Test (p-value)", ar2_p),
+            c("No. of instruments", n_instr),
+            c("No. of countries (N)", length(unique(gelismekte_olan_veri$country)))
+          ),
+          notes = paste("Note: Arellano-Bond Two-Step Difference GMM. Instrument set restricted to lag(y,2:3) to avoid proliferation (Roodman, 2009). Standard errors are robust.", sig_note_en),
+          notes.align = "l",
+          notes.label = ""))
+```
+
+The Arellano-Bond two-step Difference GMM estimator was applied to address dynamic panel (Nickell) bias and account for potential path dependence in trade series. The instrument set is restricted to lag(y, 2:3) — instruments for the lagged dependent variable only — to guard against proliferation (Roodman, 2009), keeping the instrument count well below N = 37. REER, rule of law, and their interaction enter as exogenous or predetermined regressors; the GMM design therefore does not claim to instrument for the institutional interaction, but rather tests whether the institutional shield survives after dynamic panel bias is eliminated. The Sargan test (p = `r sargan_p`) confirms overidentifying restrictions are valid, and the AR(2) test (p = `r ar2_p`) confirms the absence of second-order serial dependence in the differenced residuals — both conditions necessary for two-step GMM consistency.[^ar1]
+
+[^ar1]: The AR(1) test also fails to reject (p = `r ar1_p`), which is atypical for a well-specified first-difference GMM — where the differencing operation mechanically induces first-order serial correlation. The failure to reject AR(1) is consistent with the insignificance of the lagged dependent variable (β = `r round(coef(model_gmm)["lag(ln_ihracat, 1)"], 3)`, p = `r round(summary(model_gmm)$coefficients["lag(ln_ihracat, 1)", "Pr(>|z|)"], 3)`) and suggests that export dynamics in this unbalanced short-T panel are not strongly path-dependent. The dynamic specification therefore adds model robustness rather than capturing a genuine autoregressive process.
+
+Two features of the GMM results stand out. First, the lagged dependent variable is not statistically significant, which suggests that export performance in this panel is governed primarily by current structural conditions — countries do not appear to be locked into persistent export trajectories. Second, and more importantly, REER and the institutional interaction both lose statistical significance after dynamic panel bias is eliminated — corroborating the DK finding by a methodologically distinct route.
+
+GDP retains its dominant positive effect at the 1 percent level (`r round(coef(model_gmm)["ln_gsyh"], 3)`). Together with the DK result, this puts the productive base at the centre of the story: it is the only variable that survives cross-sectional dependence correction, dynamic panel adjustment, and quantile distributional analysis.
+
+### 4.7. Alternative Institutional Quality Variable Robustness Test
+
+To eliminate the risk of variable selection bias arising from the choice of the Rule of Law index (WGI Rule of Law) used to represent institutional quality in the baseline analysis, the analyses were repeated with **Regulatory Quality** ($regulatory\_quality$) — a second dimension of the World Bank's Worldwide Governance Indicators (WGI). This index measures the quality of policies promoting private sector development and, together with the rule of law index, constitutes the two most widely used indicators of institutional infrastructure.
+
+```{r}
+#| label: tbl-robustness-reg
+#| tbl-cap: "Table 8: Robustness Test with Alternative Institutional Quality Variable (DK-SCC)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(plm)
+library(modelsummary)
+
+gelismekte_olan_veri_reg <- gelismekte_olan_veri %>%
+  filter(!is.na(regulasyon))
+p_veri_reg <- pdata.frame(gelismekte_olan_veri_reg, index = c("country", "year"))
+model_reg  <- plm(ln_ihracat ~ ln_reer * regulasyon + ln_gsyh,
+                  data = p_veri_reg, model = "within")
+
+se_reg_scc <- sqrt(diag(vcovSCC(model_reg, type = "HC3", maxlag = 4)))
+
+modelsummary(
+  list("Rule of Law (Baseline)" = model_em,
+       "Regulatory Quality (Alternative)" = model_reg),
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"            = "ln(REER)",
+    "hukuk"              = "Rule of Law",
+    "regulasyon"         = "Regulatory Quality",
+    "ln_gsyh"            = "ln(GDP)",
+    "ln_reer:hukuk"      = "ln(REER) × Rule of Law",
+    "ln_reer:regulasyon" = "ln(REER) × Regulatory Quality"
+  ),
+  se         = list(se_scc, se_reg_scc),
+  statistic  = "std.error",
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  output     = ifelse(knitr::is_latex_output(), "latex", "html"),
+  add_rows   = data.frame(
+    term = c("R²", "Observations", "Fixed Effects", "Standard Errors"),
+    `Rule of Law (Baseline)`           = c(round(summary(model_em)$r.squared["rsq"], 3),
+                                            nobs(model_em), "Yes", "Driscoll-Kraay"),
+    `Regulatory Quality (Alternative)` = c(round(summary(model_reg)$r.squared["rsq"], 3),
+                                            nobs(model_reg), "Yes", "Driscoll-Kraay"),
+    stringsAsFactors = FALSE, check.names = FALSE
+  ),
+  notes = paste0("Note: Both models use Driscoll-Kraay (SCC, maxlag=4) robust standard errors. ",
+                 "Values in parentheses are standard errors. ",
+                 sig_note_en)
+)
+```
+
+Table 8 is reassuring on the measurement front. Replacing Rule of Law with Regulatory Quality leaves the substantive picture unchanged: the institutional interaction is insignificant under DK-SCC (p = 0.442), and GDP coefficients are virtually identical across the two specifications (1.187 vs. 1.172). The null result on the institutional shield is therefore not a peculiarity of the Rule of Law index — it survives across the two most widely used WGI dimensions. This rules out a simple measurement artefact as an explanation.
+
+### 4.8. Crisis Period Robustness — Structural Break Controls
+
+The 2000–2022 sample spans two major global shocks: the Global Financial Crisis (GFC, 2008–2009) and the COVID-19 pandemic (2020–2021). Both episodes generated sharp, simultaneous contractions in trade volumes and heightened exchange rate volatility across developing economies. If these crises systematically affected both the dependent variable and the institutional interaction through channels not captured by the fixed effects structure, the baseline estimates may conflate crisis-period dynamics with the institutional moderating effect.
+
+To test this, the DK-SCC baseline model is augmented with two binary crisis dummies — $d\_gfc$ (= 1 for 2008–2009) and $d\_covid$ (= 1 for 2020–2021) — alongside their interactions with $ln\_reer$ to allow crisis-specific exchange rate elasticities. Table 9 presents the results.
+
+```{r}
+#| label: tbl-crisis
+#| tbl-cap: "Table 9: Crisis Period Robustness — DK-SCC with Structural Break Dummies"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(plm)
+library(modelsummary)
+
+# Add crisis dummies
+crisis_veri <- gelismekte_olan_veri %>%
+  mutate(
+    d_gfc   = as.integer(year %in% 2008:2009),
+    d_covid = as.integer(year %in% 2020:2021)
+  )
+
+p_crisis <- pdata.frame(crisis_veri, index = c("country", "year"))
+
+# Baseline DK model augmented with crisis dummies + REER × crisis interactions
+model_crisis <- plm(
+  ln_ihracat ~ ln_reer * hukuk + ln_gsyh + d_gfc + d_covid +
+    ln_reer:d_gfc + ln_reer:d_covid,
+  data  = p_crisis,
+  model = "within"
+)
+
+se_crisis_scc <- sqrt(diag(vcovSCC(model_crisis, type = "HC3", maxlag = 4)))
+
+modelsummary(
+  list("Baseline DK" = model_em,
+       "With Crisis Dummies" = model_crisis),
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"          = "ln(REER)",
+    "hukuk"            = "Rule of Law",
+    "ln_gsyh"          = "ln(GDP)",
+    "ln_reer:hukuk"    = "ln(REER) × Rule of Law",
+    "d_gfc"            = "GFC Dummy (2008–09)",
+    "d_covid"          = "COVID Dummy (2020–21)",
+    "ln_reer:d_gfc"    = "ln(REER) × GFC",
+    "ln_reer:d_covid"  = "ln(REER) × COVID"
+  ),
+  se         = list(se_scc, se_crisis_scc),
+  statistic  = "std.error",
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  output     = ifelse(knitr::is_latex_output(), "latex", "html"),
+  add_rows   = data.frame(
+    term = c("R²", "Observations", "Fixed Effects", "Standard Errors"),
+    `Baseline DK`       = c(round(summary(model_em)$r.squared["rsq"], 3),
+                              nobs(model_em), "Yes", "Driscoll-Kraay"),
+    `With Crisis Dummies` = c(round(summary(model_crisis)$r.squared["rsq"], 3),
+                               nobs(model_crisis), "Yes", "Driscoll-Kraay"),
+    stringsAsFactors = FALSE, check.names = FALSE
+  ),
+  notes = paste("Note: Both models use Driscoll-Kraay (SCC, maxlag=4) robust standard errors.",
+                "Crisis dummies equal 1 for 2008–2009 (GFC) and 2020–2021 (COVID-19) respectively.",
+                sig_note_en)
+)
+```
+
+The results in Table 9 confirm the main finding's robustness to structural break controls. The $ln(REER) \times Rule of Law$ interaction term remains statistically insignificant under the DK estimator regardless of whether crisis dummies are included. As expected, the GFC and COVID period dummies carry negative and significant coefficients, reflecting the trade-depressing effects of both crises. The crisis-specific exchange rate interactions ($ln(REER) \times GFC$ and $ln(REER) \times COVID$) are also reported but do not qualitatively alter the core institutional shield finding. The $ln(GDP)$ coefficient retains its dominance across both specifications.
+
+### 4.9. First-Difference Robustness — Addressing I(1) Variables
+
+As documented in Section 3.2, formal CIPS tests indicate that all four variables are integrated of order one, and pooled Engle-Granger residual tests fail to confirm a cointegrating relationship. To address the potential spurious regression concern in the log-levels specification, we re-estimate the baseline model in first differences (FD), which eliminates I(1) trends by construction and captures short-run dynamics.
+
+```{r}
+#| label: tbl-fd
+#| tbl-cap: "Table 10: First-Difference Robustness — FE-FD with Driscoll-Kraay SEs"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(plm)
+library(dplyr)
+library(modelsummary)
+
+fd_veri <- gelismekte_olan_veri %>%
+  arrange(country, year) %>%
+  group_by(country) %>%
+  mutate(
+    d_ihracat = ln_ihracat - dplyr::lag(ln_ihracat),
+    d_reer    = ln_reer    - dplyr::lag(ln_reer),
+    d_gsyh    = ln_gsyh   - dplyr::lag(ln_gsyh),
+    d_hukuk   = hukuk      - dplyr::lag(hukuk)
+  ) %>%
+  ungroup() %>%
+  tidyr::drop_na(d_ihracat, d_reer, d_gsyh, d_hukuk)
+
+p_fd <- pdata.frame(fd_veri, index = c("country", "year"))
+model_fd <- plm(d_ihracat ~ d_reer * d_hukuk + d_gsyh, data = p_fd, model = "within")
+se_fd_scc <- sqrt(diag(vcovSCC(model_fd, type = "HC3", maxlag = 3)))
+
+modelsummary(
+  list("Log-levels (Baseline DK)" = model_em,
+       "First-Difference (FD-DK)" = model_fd),
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"        = "ln(REER) [levels]",
+    "hukuk"          = "Rule of Law [levels]",
+    "ln_gsyh"        = "ln(GDP) [levels]",
+    "ln_reer:hukuk"  = "ln(REER) × Rule of Law [levels]",
+    "d_reer"         = "Δln(REER)",
+    "d_hukuk"        = "ΔRule of Law",
+    "d_gsyh"         = "Δln(GDP)",
+    "d_reer:d_hukuk" = "Δln(REER) × ΔRule of Law"
+  ),
+  se         = list(se_scc, se_fd_scc),
+  statistic  = "std.error",
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  output     = ifelse(knitr::is_latex_output(), "latex", "html"),
+  add_rows   = data.frame(
+    term = c("R²", "Observations", "Fixed Effects", "Standard Errors"),
+    `Log-levels (Baseline DK)`  = c(round(summary(model_em)$r.squared["rsq"], 3),
+                                     nobs(model_em), "Yes", "Driscoll-Kraay"),
+    `First-Difference (FD-DK)`  = c(round(summary(model_fd)$r.squared["rsq"], 3),
+                                     nobs(model_fd), "Yes", "Driscoll-Kraay"),
+    stringsAsFactors = FALSE, check.names = FALSE
+  ),
+  notes = paste0("Note: The FD model estimates short-run (year-on-year) dynamics; ",
+                 "the levels model estimates long-run cross-country associations. ",
+                 "Both use Driscoll-Kraay (SCC) robust standard errors. ",
+                 "FD maxlag = 3: first-differencing removes one lag of serial correlation, ",
+                 "so the effective bandwidth is reduced by one relative to the levels model (maxlag = 4). ",
+                 sig_note_en)
+)
+```
+
+Table 10 reveals a horizon-dependent pattern that enriches the paper's findings. In the short-run FD specification, $\Delta ln(GDP)$ remains the dominant determinant of export growth (β = `r round(coef(model_fd)["d_gsyh"], 3)`, p < 0.01), consistent with the long-run levels result. The direct REER effect turns negative and significant in first differences ($\Delta ln(REER)$ β = `r round(coef(model_fd)["d_reer"], 3)`, p < 0.01), confirming that year-on-year REER appreciation depresses export growth — a finding obscured in the levels model but consistent with the Marshall-Lerner condition.
+
+The institutional interaction shows a sign reversal in first differences: $\Delta ln(REER) \times \Delta Rule of Law$ is negative and statistically significant (β = `r round(coef(model_fd)["d_reer:d_hukuk"], 3)`, p < 0.01), contrasting with the positive (DK-insignificant) interaction in levels. Before drawing substantive conclusions from this reversal, two clarifications are essential.
+
+*Economic magnitude is trivial.* The raw coefficient of −1.239 appears large, but annual changes in the Rule of Law index are small: the standard deviation of Δ*hukuk* is 0.108 index points, and that of Δln(REER) is 0.111 log points. A joint one-standard-deviation movement in both — the most realistic shock scenario — translates to an effect of only −0.108 standard deviations of export growth, or roughly 0.5% of mean annual export variation. The interaction is statistically significant because the panel has sufficient observations to detect even negligible signal; it does not represent an economically meaningful channel.
+
+*The FD interaction captures a different quantity from the levels interaction.* In first differences, Δ*hukuk* × Δln(REER) measures the co-movement of year-on-year institutional change and year-on-year REER change. It does not approximate the conditional slope of exports on REER at a given institutional level (the levels quantity). A plausible mechanism for the negative sign is a reform-period capital-inflow dynamic: simultaneous institutional improvement and real appreciation often co-occur when institutional reforms attract foreign capital, strengthening the currency and compressing export margins in the short run (Aman et al., 2024, pp. 487–490). This is theoretically distinct from the institutional shield mechanism, which operates through reduced transaction costs and contractual security over medium-to-long horizons (North, 1990; Anderson & Marcouiller, 2002).
+
+The FD finding therefore enriches rather than contradicts the paper's conclusion: any protective role of institutions for exports appears to be a structural, medium-to-long-run phenomenon. On a year-on-year basis, institutional improvements and their real-exchange-rate co-movements are economically negligible, and the sole robust short-run driver remains domestic GDP growth.
+
+### 4.10. Commodity-Exporter Robustness Sub-Sample
+
+A potential confound in the full sample is commodity price exposure. Countries whose exports are dominated by primary commodities (oil, minerals, agricultural raw materials) face export revenue fluctuations driven by global commodity price cycles that are correlated with both REER movements and — through the resource curse channel — institutional quality. The omission of a commodity terms-of-trade control could therefore bias the institutional interaction estimate if commodity exporters disproportionately populate specific regions of the REER × rule-of-law space. Following the UNCTAD (2021) State of Commodity Dependence classification, 15 of the 37 sample countries are classified as commodity-dependent (primary commodities exceeding approximately 60% of merchandise exports): Algeria, Bolivia, Cameroon, Central African Republic, Congo DRC, Equatorial Guinea, Gabon, Gambia, Côte d'Ivoire, Ghana, Sierra Leone, Togo, Nicaragua, Paraguay, and Venezuela (petroleum >95% of merchandise exports). Table 11 re-estimates the baseline DK-SCC model on the remaining 22 non-commodity-dependent countries.
+
+```{r}
+#| label: tbl-nocomm
+#| tbl-cap: "Table 11: Non-Commodity Sub-Sample Robustness — DK-SCC (N = 22 Countries)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(plm)
+library(modelsummary)
+
+commodity_exporters <- c(
+  "Algeria","Bolivia","Cameroon","Central African Republic",
+  "Congo, Dem. Rep.","Equatorial Guinea","Gabon","Gambia, The",
+  "Cote d'Ivoire","Ghana","Sierra Leone","Togo","Nicaragua","Paraguay",
+  "Venezuela, RB"  # petroleum >95% of merchandise exports (UNCTAD, 2021)
+)
+
+d_nocomm <- gelismekte_olan_veri %>% filter(!country %in% commodity_exporters)
+p_nocomm <- pdata.frame(d_nocomm, index = c("country", "year"))
+model_nocomm <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh, data = p_nocomm, model = "within")
+se_nocomm_scc <- sqrt(diag(vcovSCC(model_nocomm, type = "HC3", maxlag = 4)))
+
+modelsummary(
+  list("Full Sample (N=37)" = model_em,
+       "Ex-Commodity (N=22)" = model_nocomm),
+  stars      = c("*" = 0.10, "**" = 0.05, "***" = 0.01),
+  coef_rename = c(
+    "ln_reer"       = "ln(REER)",
+    "hukuk"         = "Rule of Law",
+    "ln_gsyh"       = "ln(GDP)",
+    "ln_reer:hukuk" = "ln(REER) × Rule of Law"
+  ),
+  se         = list(se_scc, se_nocomm_scc),
+  statistic  = "std.error",
+  fmt        = 3,
+  gof_omit   = "AIC|BIC|Log.Lik|Std.Err|DF|rmse",
+  output     = ifelse(knitr::is_latex_output(), "latex", "html"),
+  add_rows   = data.frame(
+    term = c("R²", "Observations", "Countries", "Fixed Effects", "Standard Errors"),
+    `Full Sample (N=37)` = c(round(summary(model_em)$r.squared["rsq"], 3),
+                              nobs(model_em), 37, "Yes", "Driscoll-Kraay"),
+    `Ex-Commodity (N=22)` = c(round(summary(model_nocomm)$r.squared["rsq"], 3),
+                               nobs(model_nocomm), 22, "Yes", "Driscoll-Kraay"),
+    stringsAsFactors = FALSE, check.names = FALSE
+  ),
+  notes = paste0("Note: Commodity-dependent countries excluded per UNCTAD (2021) classification. ",
+                 "Both models use Driscoll-Kraay (SCC, maxlag=4) robust standard errors. ",
+                 sig_note_en)
+)
+```
+
+The non-commodity sub-sample results in Table 11 confirm that commodity-price confounding does not drive the main finding. Excluding the 15 commodity-dependent countries (including Venezuela, whose petroleum exports exceed 95% of merchandise trade) leaves 22 countries. The $ln(REER) \times Rule of Law$ interaction remains statistically insignificant under DK-SCC (β = `r round(coef(model_nocomm)["ln_reer:hukuk"], 3)`, p = `r {t_nc <- coef(model_nocomm)["ln_reer:hukuk"]/se_nocomm_scc["ln_reer:hukuk"]; round(2*pnorm(abs(t_nc),lower.tail=FALSE),3)}`), and the GDP coefficient retains its dominant positive effect. Exclusion of commodity exporters does not restore the institutional shield nor does it materially alter the null result — confirming that the finding is not an artefact of the sample's commodity composition.
+
+# 5. Conclusion and Policy Implications
+
+The institutional shield hypothesis has a clean logic and strong theoretical support: where courts are independent, contracts are enforced, and property is secure, exporting firms can hedge their exchange-rate exposures more effectively, absorbing REER shocks rather than retreating from markets. Our results do not dispute the logic. They challenge the empirical record that has been marshalled in its support.
+
+We find that the apparent statistical significance of the REER–rule-of-law interaction, routinely reported in the literature, is fragile in a specific and diagnosable sense: it disappears as soon as the estimator is asked to account for the global integration that defines developing-country trade. Driscoll-Kraay standard errors, which correct for cross-sectional dependence detected in the data (Pesaran CD: p < 0.01), eliminate the interaction's significance entirely. Arellano-Bond GMM, addressing dynamic panel bias by a methodologically independent route, confirms the null. Canay (2011) panel quantile regression with cluster bootstrap standard errors (B = 499, N = 37 clusters) further shows that there is no quantile of the export distribution — not among the smallest exporters, not among the largest — at which an institutional shield can be detected. Earlier analyses that found significance at lower quantiles were using pairs bootstrap, which ignores within-country serial correlation and produces standard errors that are too small. A first-difference specification adds one more nuance: the sign of the institutional interaction reverses in the short run, but the effect is economically negligible (roughly 0.5% of mean annual export variation), pointing to a reform-period capital-inflow dynamic rather than any durable protective mechanism.
+
+What does survive — consistently, across all four estimators, all quantiles, the crisis-period controls in Table 9, and the commodity-exporter sub-sample in Table 11 — is domestic production scale. The GDP elasticity of exports exceeds unity in every specification, reflecting the increasing-returns logic of heterogeneous-firm trade models (Helpman et al., 2008): larger economies generate more productive firms that can afford the fixed costs of exporting, and this effect is not washed out by any inference correction we apply. Production capacity is not a nuisance control in this model; it is the story.
+
+The policy implications deserve emphasis. We are not arguing that institutions do not matter for trade. We are arguing that, at the current depth of global financial integration, where commodity cycles, financial contagion, and pandemic shocks hit developing economies simultaneously, a domestic institutional buffer is too thin to insulate export revenues from outside. The Figure 3 zero-crossing analysis shows that 82.9% of country-year observations in the sample lie in the region where REER appreciation is predicted to depress exports even *conditional on* institutional quality, and the DK confidence band is wide enough to encompass zero at every observed rule-of-law level. Designing policy around a shield that the data cannot confirm would be a mistake. A more defensible strategy pairs institutional reform with the structural work that underpins it:
+
+1. **Expand productive capacity first.** Without a manufacturing or service base capable of producing tradeable goods competitively, institutional improvements cannot convert into export resilience. Public-private investment in productive sectors — not just regulatory reform — needs to lead.
+
+2. **Diversify markets and goods.** Commodity dependence leaves exporters exposed to price cycles that institutional quality cannot offset. Bilateral and multilateral agreements that open markets for manufactured and services exports reduce structural vulnerability at its source.
+
+3. **Move up the value chain.** Levchenko (2007) and Nunn (2007) show that contract-intensive goods generate comparative advantage in institutionally strong environments. The route to making rule of law export-relevant is to develop the capacity to produce goods where legal infrastructure is a genuine input — not to expect that better courts alone will buffer a commodity-exporting economy from REER shocks.
+
+4. **Treat institutional reform as a prerequisite, not a substitute.** Contract enforcement, trade finance access, and predictable courts are necessary for exporters to function efficiently; the results simply indicate that these preconditions do not, on their own, neutralise the force of global shocks. They lower the floor for what production capacity must achieve — they do not replace it.
+
+# Data Availability Statement
+
+The data that support the findings of this study are derived from publicly available sources. Exchange rate data (real effective exchange rate index, 2010 = 100) were obtained from the World Bank World Development Indicators (WDI; data.worldbank.org, series PX.REX.REER). Institutional quality data were sourced from the World Bank Worldwide Governance Indicators (WGI; info.worldbank.org/governance/wgi). GDP and trade data were drawn from the World Bank WDI (series NY.GDP.MKTP.KD and NE.EXP.GNFS.KD). All primary data are freely accessible without restriction. The panel dataset compiled for this study and the R estimation script are available from the corresponding author upon reasonable request.
+
+# References
+
+Abdi, A. H. & Mohamed, A. M. (2025). Determinants of agricultural exports in Somalia: The impacts of exchange rates, foreign direct investment, and institutional quality. *Cogent Economics & Finance*, 13(1), 2445755.
+
+Abreo, C., Bustillo, R. & Rodriguez, C. (2021). The role of institutional quality in the international trade of a Latin American country: Evidence from Colombian export performance. *Journal of Economic Structures*, 10(1), 24.
+
+Acemoglu, D. & Robinson, J. A. (2012). *Why nations fail: The origins of power, prosperity, and poverty*. Crown Business.
+
+Acemoglu, D., Johnson, S. & Robinson, J. A. (2005). Institutions as a fundamental cause of long-run growth. In P. Aghion & S. N. Durlauf (Eds.), *Handbook of Economic Growth* (Vol. 1A, pp. 385–472). Elsevier. https://doi.org/10.1016/S1574-0684(05)01006-3
+
+Abrevaya, J. & Dahl, C. M. (2008). The effects of birth inputs on birthweight: Evidence from quantile estimation on panel data. *Journal of Business & Economic Statistics*, 26(4), 379–397. https://doi.org/10.1198/073500107000000269
+
+Afonso, D. L., Bastos, S. Q. d. A., Perobelli, F. S. & Betarelli Junior, A. A. (2025). Impacts of institutional efficiency on exports in developed and developing countries. *The International Trade Journal*. Advance online publication. https://doi.org/10.1080/08853908.2025.2449001
+
+Aman, Z., Granville, B., Mallick, S. K. & Nemlioglu, I. (2024). Does greater financial openness promote external competitiveness in emerging markets? The role of institutional quality. *International Journal of Finance & Economics*, 29(1), 486–510.
+
+Aman, Z., Mallick, S. & Nemlioglu, I. (2021). Currency regimes and external competitiveness: The role of institutions, trade agreements and monetary frameworks. *Journal of Institutional Economics*, 18(3), 399–428.
+
+Anderson, J. E. & Marcouiller, D. (2002). Insecurity and the pattern of trade: An empirical investigation. *Review of Economics and Statistics*, 84(2), 342–352. https://doi.org/10.1162/003465302317411587
+
+Arize, A. C., Osang, T. & Slottje, D. J. (2000). Exchange-rate volatility and foreign trade: Evidence from thirteen LDC's. *Journal of Business & Economic Statistics*, 18(1), 10–17. https://doi.org/10.1080/07350015.2000.10524843
+
+Ashour, M. M. (2023). Asymmetric effect of real effective exchange rate and Saudi non-oil export determinants. *Cogent Social Sciences*, 9(1), 2278206.
+
+Baxa, J. & Paulus, M. (2024). Exchange rate misalignments, growth, and institutions. *Empirical Economics*, 67(4), 1705–1799.
+
+Bulut, E. & Yaşar, Z. R. (2023). Determinants of export performance in emerging market economies: New evidence from a panel quantile regression model. *İstanbul İktisat Dergisi – Istanbul Journal of Economics*, 73(1), 453–472.
+
+Bustaman, A., Indiastuti, R., Budiono, B. & Anas, T. (2022). Quality of Indonesia's domestic institutions and export performance in the era of global value chains. *Journal of Economic Structures*, 11, 35.
+
+Canay, I. A. (2011). A simple approach to quantile regression for panel data. *The Econometrics Journal*, 14(3), 368–386.
+
+Chamindani, S. D. N. (2019). Real effective exchange rate and export performance: The case of Sri Lanka. *Central Bank of Sri Lanka – Staff Studies*, 47(2), 71–93.
+
+Coase, R. H. (1937). The nature of the firm. *Economica*, 4(16), 386–405.
+
+Eaton, J. & Kortum, S. (2002). Technology, geography, and trade. *Econometrica*, 70(5), 1741–1779.
+
+Ezzat, A. & Zaki, C. (2022). Deep trade agreements and institutional quality in the MENA region. *International Economics*, 172, 143–156.
+
+Frensch, R., Horvath, R. & Huber, S. (2021). Openness, institutions, and comparative advantage. *Journal of International Economics*, 131, 103445.
+
+Granger, C. W. J. & Newbold, P. (1974). Spurious regressions in econometrics. *Journal of Econometrics*, 2(2), 111–120. https://doi.org/10.1016/0304-4076(74)90034-7
+
+Helpman, E., Melitz, M. & Rubinstein, Y. (2008). Estimating trade flows: Trading partners and trading volumes. *The Quarterly Journal of Economics*, 123(2), 441–487.
+
+Hoechle, D. (2007). Robust standard errors for panel regressions with cross-sectional dependence. *The Stata Journal*, 7(3), 281–312.
+
+Koenker, R. (2004). Quantile regression for longitudinal data. *Journal of Multivariate Analysis*, 91(1), 74–89.
+
+Khan, A., Khan, M. Y. & Ahmad, M. (2024). Macroeconomics factor, institutional quality and export performance: Empirical evidence from Pakistan. *International Social Science Journal*, 74(253), 831–850.
+
+Levchenko, A. A. (2007). Institutional quality and international trade. *The Review of Economic Studies*, 74(3), 791–819.
+
+Li, J., Vertinsky, I. & Zhang, H. (2012). The quality of domestic legal institutions and export performance. *Management International Review*, 52, 361–390.
+
+Méon, P. G. & Sekkat, K. (2004). Does the quality of institutions limit the MENA's integration in the world economy? *The World Economy*, 27(9), 1475–1498.
+
+Mwatu, S. M. (2022). Institutions and export performance: Firm level evidence from Kenya. *International Review of Economics*, 69(4), 487–506.
+
+North, D. C. (1990). *Institutions, institutional change and economic performance*. Cambridge University Press.
+
+Nunn, N. (2007). Relationship-specificity, incomplete contracts, and the pattern of trade. *The Quarterly Journal of Economics*, 122(2), 569–600.
+
+Pesaran, M. H. (2007). A simple panel unit root test in the presence of cross-section dependence. *Journal of Applied Econometrics*, 22(2), 265–312. https://doi.org/10.1002/jae.951
+
+Pesaran, M. H. (2021). General diagnostic tests for cross-sectional dependence in panels. *Empirical Economics*, 60(1), 13–50.
+
+Rodrik, D. (2000). Institutions for high-quality growth: What they are and how to acquire them. *Studies in Comparative International Development*, 35(3), 3–31.
+
+Roodman, D. (2009). A note on the theme of too many instruments. *Oxford Bulletin of Economics and Statistics*, 71(1), 135–158.
+
+Rodrik, D., Subramanian, A. & Trebbi, F. (2004). Institutions rule: The primacy of institutions over geography and integration in economic development. *Journal of Economic Growth*, 9(2), 131–165.
+
+Ruzekova, V., Kittova, Z. & Steinhauser, D. (2020). Export performance as a measurement of competitiveness. *Journal of Competitiveness*, 12(1), 145–160.
+
+Tadesse, B., Shukralla, E. & Fayissa, B. (2019). Institutional quality and the effectiveness of aid for trade. *Applied Economics*, 51(39), 4233–4254. https://doi.org/10.1080/00036846.2019.1589644
+
+Urgessa, O. (2024). Effects of real effective exchange rate volatility on export earnings in Ethiopia: Symmetric and asymmetric effect analysis. *Heliyon*, 10(1), e23529.
+
+Williamson, O. E. (1990). *The economic institutions of capitalism*. Free Press.
+
+Taylor, A. M. & Taylor, M. P. (2004). The purchasing power parity debate. *Journal of Economic Perspectives*, 18(4), 135–158. https://doi.org/10.1257/0895330042632744
+
+UNCTAD. (2021). *State of commodity dependence 2021*. United Nations Conference on Trade and Development. https://unctad.org/publication/state-commodity-dependence-2021
+
+World Bank. (2024a). *World Development Indicators*. https://databank.worldbank.org/source/world-development-indicators
+
+World Bank. (2024b). *Worldwide Governance Indicators*. https://databank.worldbank.org/source/worldwide-governance-indicators
+
+# Appendix
+
+**Table A1: Sample of Developing Countries Included in the Analysis (n = 37 estimation; 39 identified)**
+
+The following 37 developing countries were used in the empirical analyses of this study. Two additional countries — China (1 observation) and Zambia (1 observation) — were identified but excluded because they lacked sufficient within-country variation (minimum 3 annual observations required for the fixed effects estimator). All 39 countries were compiled from the World Bank (WDI) database based on data availability and classified as non-"High Income". Table A1 groups countries by World Bank regional classification and presents each country's data year range and number of observations in the sample.
+
+```{r}
+#| label: tbl-ulke-listesi
+#| tbl-cap: "Table A1: Sample Country List (2000–2022, n = 37 in estimation)"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+library(knitr)
+library(kableExtra)
+library(readr)
+library(dplyr)
+
+# Use the filtered dataset (≥3 obs per country) consistent with the analysis
+gelismekte_olan_veri_ek <- gelismekte_olan_veri
+
+region_map <- c(
+  "Algeria"                  = "Middle East & North Africa",
+  "Armenia"                  = "Europe & Central Asia",
+  "Belize"                   = "Latin America & Caribbean",
+  "Bolivia"                  = "Latin America & Caribbean",
+  "Brazil"                   = "Latin America & Caribbean",
+  "Cameroon"                 = "Sub-Saharan Africa",
+  "Central African Republic" = "Sub-Saharan Africa",
+  "China"                    = "East Asia & Pacific",
+  "Colombia"                 = "Latin America & Caribbean",
+  "Congo, Dem. Rep."         = "Sub-Saharan Africa",
+  "Costa Rica"               = "Latin America & Caribbean",
+  "Cote d'Ivoire"            = "Sub-Saharan Africa",
+  "Dominican Republic"       = "Latin America & Caribbean",
+  "Equatorial Guinea"        = "Sub-Saharan Africa",
+  "Gabon"                    = "Sub-Saharan Africa",
+  "Gambia, The"              = "Sub-Saharan Africa",
+  "Georgia"                  = "Europe & Central Asia",
+  "Ghana"                    = "Sub-Saharan Africa",
+  "Iran, Islamic Rep."       = "Middle East & North Africa",
+  "Lesotho"                  = "Sub-Saharan Africa",
+  "Malaysia"                 = "East Asia & Pacific",
+  "Mexico"                   = "Latin America & Caribbean",
+  "Moldova"                  = "Europe & Central Asia",
+  "Morocco"                  = "Middle East & North Africa",
+  "Nicaragua"                = "Latin America & Caribbean",
+  "North Macedonia"          = "Europe & Central Asia",
+  "Pakistan"                 = "South Asia",
+  "Paraguay"                 = "Latin America & Caribbean",
+  "Philippines"              = "East Asia & Pacific",
+  "Samoa"                    = "East Asia & Pacific",
+  "Sierra Leone"             = "Sub-Saharan Africa",
+  "Solomon Islands"          = "East Asia & Pacific",
+  "South Africa"             = "Sub-Saharan Africa",
+  "Togo"                     = "Sub-Saharan Africa",
+  "Tunisia"                  = "Middle East & North Africa",
+  "Uganda"                   = "Sub-Saharan Africa",
+  "Ukraine"                  = "Europe & Central Asia",
+  "Venezuela, RB"            = "Latin America & Caribbean",
+  "Zambia"                   = "Sub-Saharan Africa"
+)
+
+ek1_tablo <- gelismekte_olan_veri_ek %>%
+  group_by(country) %>%
+  summarise(
+    n       = n(),
+    yil_bas = min(year),
+    yil_son = max(year),
+    .groups = "drop"
+  ) %>%
+  arrange(country) %>%
+  mutate(
+    region     = region_map[country],
+    year_range = paste0(yil_bas, "–", yil_son)
+  ) %>%
+  select(country, region, year_range, n) %>%
+  rename(
+    "Country"          = country,
+    "Region (WB Class.)" = region,
+    "Year Range"       = year_range,
+    "Obs. (n)"         = n
+  )
+
+res_ek1 <- kable(
+  ek1_tablo,
+  format  = ifelse(knitr::is_latex_output(), "latex", "html"),
+  align   = c("l", "l", "c", "c"),
+  escape  = FALSE
+)
+
+if (!knitr::is_latex_output()) {
+  res_ek1 <- res_ek1 %>%
+    kable_styling(
+      bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+      full_width = TRUE,
+      position   = "center",
+      font_size  = 13
+    ) %>%
+    column_spec(2, width = "18em")
+}
+
+res_ek1
+```
+
+*Note: Countries with fewer than three annual observations were excluded from the analysis, as they cannot generate within-country variance in the fixed effects estimator. This criterion removes two countries with single-observation coverage (2015 only), reducing the final sample to 37 countries. Türkiye was excluded due to structural data gaps in its Real Effective Exchange Rate (REER) series.*
+
+**Appendix B: Institutional Threshold Regression Analysis (Exploratory)**
+
+The findings from the interaction model suggest that the effect of rule of law may exhibit non-linearity. As an exploratory supplement — not a formal inference test — this appendix presents an RSS-minimisation grid search over candidate rule-of-law thresholds. **This is not a formal Hansen (2000) panel threshold test**, which would require a bootstrap distribution for the threshold statistic and a sup-F p-value. The results below are purely descriptive and should not be interpreted as evidence that a statistically significant threshold exists. They are presented solely to illustrate where in the distribution of rule of law the interactive REER effect changes sign, consistent with the Figure 3 zero-crossing analysis in the main text (−0.052).
+
+```{r}
+#| label: fig-threshold-rss
+#| fig-cap: "Figure A1: RSS Optimisation for Rule of Law Threshold"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(tidyr)
+library(plm)
+library(ggplot2)
+
+esik_adaylari <- quantile(gelismekte_olan_veri$hukuk, probs = seq(0.2, 0.8, by = 0.05), na.rm = TRUE)
+esik_RSS <- numeric(length(esik_adaylari))
+
+analiz_esik <- gelismekte_olan_veri %>%
+  drop_na(ln_ihracat, ln_reer, ln_gsyh, hukuk)
+
+for (i in seq_along(esik_adaylari)) {
+  esik_deger <- esik_adaylari[i]
+
+  analiz_esik_tmp <- analiz_esik %>%
+    mutate(
+      D_below = as.numeric(hukuk <  esik_deger),
+      D_above = as.numeric(hukuk >= esik_deger),
+      reer_below = ln_reer * D_below,
+      reer_above = ln_reer * D_above
+    )
+
+  panel_tmp <- pdata.frame(analiz_esik_tmp, index = c("country", "year"))
+
+  tryCatch({
+    m <- plm(ln_ihracat ~ reer_below + reer_above + ln_gsyh,
+             data = panel_tmp, model = "within")
+    esik_RSS[i] <- sum(residuals(m)^2)
+  }, error = function(e) {
+    esik_RSS[i] <- NA
+  })
+}
+
+esik_en_iyi_idx <- which.min(esik_RSS)
+esik_en_iyi     <- esik_adaylari[esik_en_iyi_idx]
+
+esik_df <- data.frame(threshold = esik_adaylari, RSS = esik_RSS)
+
+ggplot(esik_df, aes(x = threshold, y = RSS)) +
+  geom_line(color = "#2563eb", linewidth = 1.2) +
+  geom_point(color = "#2563eb", size = 2) +
+  geom_vline(xintercept = esik_en_iyi, linetype = "dashed",
+             color = "#dc2626", linewidth = 1) +
+  annotate("text", x = esik_en_iyi, y = max(esik_RSS, na.rm = TRUE),
+           label = paste("Optimal Threshold:", round(esik_en_iyi, 3)),
+           vjust = 1.5, color = "#dc2626", fontface = "bold") +
+  labs(x = "Rule of Law Threshold Value", y = "Residual Sum of Squares (RSS)") +
+  theme_minimal()
+```
+
+As seen in Figure A1, an optimal threshold point exists around the value `r round(esik_en_iyi, 3)` of the rule of law index. In institutionally weak economies below this threshold, the negative export shock from REER appreciation (overvaluation) is felt severely; in developing institutional regimes above this threshold, the protection (institutional shield) afforded by contractual security comes into effect.
+
+**Appendix D: Regional Heterogeneity Analysis**
+
+Developing countries do not constitute a single homogeneous unit. Sub-group analyses focused on the interaction term were conducted to observe the asymmetric distribution of global contagion effects across regions.
+
+```{r}
+#| label: fig-regional-interaction
+#| fig-cap: "Figure A2: REER × Rule of Law Interaction Coefficients by Regional Sub-Groups"
+#| fig-align: center
+#| out-width: "800"
+#| echo: false
+#| warning: false
+#| message: false
+
+library(dplyr)
+library(tidyr)
+library(plm)
+library(lmtest)
+library(ggplot2)
+
+region_list <- unique(gelismekte_olan_veri$region)
+region_results <- data.frame()
+
+for (reg in region_list) {
+  reg_data <- gelismekte_olan_veri %>%
+    filter(region == reg) %>%
+    drop_na(ln_ihracat, ln_reer, ln_gsyh, hukuk)
+
+  n_country <- length(unique(reg_data$country))
+  n_obs     <- nrow(reg_data)
+
+  if (n_country >= 3 && n_obs >= 20) {
+    panel_reg <- pdata.frame(reg_data, index = c("country", "year"))
+
+    tryCatch({
+      model_reg2 <- plm(ln_ihracat ~ ln_reer * hukuk + ln_gsyh,
+                        data  = panel_reg,
+                        model = "within")
+
+      est <- coeftest(model_reg2, vcov = vcovSCC(model_reg2, type = "HC3", maxlag = 2))
+
+      idx <- which(rownames(est) == "ln_reer:hukuk")
+      if (length(idx) > 0) {
+        region_results <- rbind(region_results, data.frame(
+          region      = reg,
+          interaction = est[idx, "Estimate"],
+          p_val       = est[idx, "Pr(>|t|)"]
+        ))
+      }
+    }, error = function(e) {})
+  }
+}
+
+if (nrow(region_results) > 0) {
+  ggplot(region_results, aes(x = reorder(region, interaction), y = interaction,
+                              fill = p_val < 0.10)) +
+    geom_col(width = 0.6) +
+    geom_hline(yintercept = 0, linetype = "dashed", color = "gray40") +
+    scale_fill_manual(values = c("TRUE" = "#10b981", "FALSE" = "#94a3b8"),
+                      labels = c("TRUE" = "p < 0.10", "FALSE" = "p >= 0.10"),
+                      name = "Significance (p < 0.10)") +
+    coord_flip() +
+    labs(x = "Region", y = "Interaction Coefficient (ln_reer × Rule of Law)") +
+    theme_minimal()
+}
+```
