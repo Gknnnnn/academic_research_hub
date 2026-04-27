@@ -13,6 +13,25 @@
 
 ---
 
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — CI PIPELINE + HOOKS + MEMORY
+
+- ✅ **4 Claude Code hooks fixed** (`~/.claude/hooks/`)
+  - `onedrive_cache.sh`: was reading `$1` (broken) → now reads `$CLAUDE_TOOL_INPUT` env var
+  - `qmd_check.py`: was checking only `new_string` fragment → now reads full file post-edit
+  - `git_checkpoint.sh`: two fixes: (1) stale `index.lock` auto-cleared (>60s), (2) `git add -A` → `timeout 15 git add -u` (only tracked files, no OneDrive scan)
+  - `raw_protect.sh`: already working ✅
+
+- ✅ **GitHub Actions CI pipeline** (`.github/workflows/academic-standard.yml`) — 4 parallel jobs:
+  - `python-env`: Miniforge3 + 39 Roudane Python packages (`960-Infrastructure/environment.yml`)
+  - `r-env`: R release + fixest/plm/fwildclusterboot/ARDL/strucchange/grf/did (`960-Infrastructure/requirements.R`)
+  - `render-manuscripts`: Quarto → DOCX for all 210-Active QMDs
+  - `bib-audit`: Missing DOI detection across all .bib files
+  - **403 research files** tracked on GitHub (`github.com/Gknnnnn/academic_research_hub`)
+
+- ✅ **MEMORY.md trimmed** — 215 → 200 lines (merged 5 single-item sections, compacted Collaborators)
+
+---
+
 ## 🆕 THIS SESSION COMPLETED (2026-04-28) — TEFAS INCUBATOR
 
 - ✅ **TEFAS deep dive + 5-paper incubator** (`290-Idea-Incubator/TEFAS-MonPol-FundFlows/`)
