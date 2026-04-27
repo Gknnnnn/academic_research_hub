@@ -33,6 +33,17 @@ lu*.tmp
 *.gz
 *.tar
 *.bz2
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.eps
+*.tiff
+*.tif
+*.rds
+*.rda
+*.RData
 
 # ── Python ───────────────────────────────────────────────────
 __pycache__/
