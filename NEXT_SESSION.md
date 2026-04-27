@@ -13,7 +13,17 @@
 
 ---
 
-## 🆕 THIS SESSION COMPLETED (2026-04-28)
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — TEFAS INCUBATOR
+
+- ✅ **TEFAS deep dive + 5-paper incubator** (`290-Idea-Incubator/TEFAS-MonPol-FundFlows/`)
+  - Own git repo initialized (290-Idea-Incubator/ gitignored by vault)
+  - 6 scripts written + verified (05_pretests.R + 06_nardl.R run clean on N=50 sim)
+  - Macro backbone: 136 obs × 15 vars VERIFIED (CBRT 5 errors corrected → 37% current)
+  - Takasbank email sent → `fonbilgilendirmeplatformu@takasbank.com.tr` ✅
+  - Safari Selenium script ready (20 funds) — user must enable "Allow Remote Automation"
+  - Ideas I2–I5 sketched: herding (I2), safe haven DCC (I3), fee convergence (I4), persistence (I5)
+  - `NEXT_SESSION.md` written in project folder with full execution sequence
+  - **Single blocker:** fund-level AUM data (Takasbank ~2-4 weeks / Selenium fallback)
 
 - ✅ **Türkiye Ödemeler Dengesi tezi — 1980-2026 tam revizyonu**
   - Bölüm 3: IMF WEO Nisan 2026 verileri (2025-2026 †††) tüm tablolara işlendi; §3.1.6 parasal normalleşme güncellendi
@@ -124,6 +134,7 @@ Do these yourself — all packages ready, no blockers:
 | "Chokepoints'ten devam" | İKB critique address → Yücel sign-off |
 | "FinStress'ten devam" | FSI data collection pipeline |
 | "Portföy durumu" | MEMORY.md + priority queue summary |
+| "TEFAS'tan devam" | Read TEFAS NEXT_SESSION.md → Takasbank geldi mi? → data drop |
 | "Inbox" | Inbox triage — categorize and action |
 
 ---
