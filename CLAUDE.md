@@ -372,43 +372,9 @@ ADIM 6 — SAĞLAMLIK:
   Eğim homojenliği → De Vos (2024) rank condition
 ```
 
-### 12 Küme — Hızlı Referans
+**12 küme (C1=Birim Kök…C12=DFM) + Q1 güncelleme protokolü + 2025-26 toolkit değişiklikleri → tam liste: `memory/reference_methodology_decision_trees.md`**
 
-| Küme | Konu | Birincil Araç | Kritik Kural |
-|------|------|--------------|-------------|
-| C1 | Birim Kök | CIPS/PANIC | CSD→2.nesil; T>N→PANIC tercih |
-| C2 | Stasyonerlik | HK (Hadri-Kruse) | CSD→HK; CSD yok→Hadri |
-| C3 | Eşbütünleşme | Westerlund+boot | CSD→Pedroni yalnızca referans |
-| C4 | Tahmin | AMG/CCEMG/CS-ARDL | rank condition zorunlu |
-| C5 | Nedensellik | NK2024 (GAUSS) | DH2012=1.nesil→ön tanı |
-| C6 | ARDL/NARDL | nonlinear_ardl/nardl | Fourier→GAUSS/xtfunitroot |
-| C7 | Yapısal Kırılma | Bai-Perron/xtbreak | xtbreak SJ2025→Q1 cite |
-| C8 | Kantil/MMQR | qrpd/mmqr | MMQR heterojenliği gösterir |
-| C9 | DiD/Staggered | did2s/staggered/LP-DiD | HonestDiD pretrends zorunlu |
-| C10 | ML/Nedensellik | RF+SHAP+ALE / DML | SHAP ALE'siz = eksik |
-| C11 | Yakınsama Kulüpleri | ConvergenceClubs (R) | log-t + PS2007 |
-| C12 | DFM/Endeks | dfms/PCA | faktör sayısı IC2 ile |
-
-### Q1 Güncelleme Protokolü (Her Oturumda Aktif)
-
-**Yeni metodoloji takibi için 5 kaynak** (bu dergilerden yeni makale geldiğinde karar ağaçları güncellenir):
-1. *Journal of Econometrics* — panel frontier (Juodis/Westerlund/Pesaran)
-2. *Econometrica* — identification + structural
-3. *Review of Economics and Statistics* — panel + IV + DiD
-4. *Journal of Applied Econometrics* — uygulamalı panel testleri
-5. *Stata Journal* — yazılım + test implementasyonu
-
-**2025–26 Doğrulanmış Güncellemeler (MGO toolkit'ine eklenmiş):**
-- CCE Bootstrap (Juodis-Karabiyik-Westerlund, JoE 2024) → CCEMG SE'yi düzeltir
-- csdm R paketi v1.0.1 (2026) → CS-ARDL+CCE+DCCE tek pakette ✅
-- De Vos rank condition in xtdcce2 (2024) → `estat ranktest` zorunlu
-- xtbreak SJ (2025) → Q1 cite edilebilir ✅
-- NK2024 (Empirical Economics 67) → nedensellik 2.nesil standart
-- did2s v1.2.1 → Borusyak-Gardner 2-step DiD ✅
-- IFE High-Dim CCE-LASSO (QE Nov 2025) → CE-CogEcon için
-- GFE Time-Varying (JBES 2025) → welfare/EKC için
-
-**Kural:** Yukarıdaki dergilerden yeni bir metodoloji makalesi MGO'ya ulaşırsa Claude `reference_methodology_decision_trees.md` dosyasını günceller ve bu tabloya ekler.
+**Kural:** Yeni metodoloji makalesi geldiğinde `reference_methodology_decision_trees.md` güncellenir.
 
 ---
 
@@ -431,61 +397,7 @@ OLS → NARDL (asimetri) → QARDL (kantil) → wavenardl (frekans)
     → wqr.qq_regression (QQ çiftler) → qqkrls (nonlinear kernel QQ)
 ```
 
-### 6 Küme — Hangi Problemi, Hangi Paket
-
-| Küme | Soru | Paketler (öncelik sırasıyla) |
-|------|------|------------------------------|
-| **A — Birim Kök** | Seri I(1) mi, nonlinear mi? | `tarur` (KSS/Kruse/Sollis) → `hybridnonlinur` (Fourier-ADF/KSS) → `fwadf` (gürültülü) → `qadf` (kantil ADF) → `boundedtest` (sınırlı) → `nearkpss` (yakın-entegre) → `kapetanios-test` (çok kırılma) → `fractionaldouble` (çift frekans) |
-| **B — Eşbütünleşme** | Uzun dönem denge kırılmaya dayanıklı mı? | `cointhatemij` (2 kırılma) → `fouriercoint` (smooth) → `cointsmall` (küçük N) → `selectbreakcoint` (LASSO) → `quantilecoint` (kantil) → `robcointeg` (outlier-robust) → `tarur.enders_siklos` (TAR/MTAR) → `vecmbreak` (VECM+LASSO) |
-| **C — NARDL/ARDL** | Asimetri, frekans, çok rejim? | `nardl_fourier.NARDL` → `FourierNARDL` (kırılma) → `wavenardl` (frekans bantları) → `qardl` (kantil) → `mtnardl` (çok eşik) → `twostep_nardl` (büyük T) |
-| **D — Kantil/Wavelet** | Dağılım heterojenligi + frekans? | `wqr.qq_regression` (9×9 QQ) → `wqr.wavelet_qr` (frekans×kantil) → `qqkrls` (nonlinear QQ-KRLS) → `wqr.np_quantile_causality` |
-| **E — Nedensellik** | Asimetrik ve zaman-değişen? | `asymcaus` (statik, 5 yön) → `dasycaus` (rolling/recursive) → `rbfmvar.granger_causality_test` (sistem içi) |
-| **F — Panel Tahmin** | CSD altında etkin tahmin? | `pydcce.CCE` → `pydcce.CSARDL` → `pycupfm` (⚠️ bug test et) → `rbfmvar` (FM-VAR) |
-
-### Master Karar Akışı (Her Analizde)
-
-```
-ADIM 0 — Spesifikasyon
-  Log/Level belirsiz?  → kmtest (Kobayashi-McAleer 1999) — y pozitif olmalı
-  Sınırlı seri?        → boundedtest ([a,b] aralığı)
-  ARCH/otokorelasyon?  → tsai_scoretest
-
-ADIM 1 — Entegrasyon
-  Doğrusal yeterli mi?  → tarur.kss / kruse / sollis
-  Smooth kırılma?       → hybridnonlinur.fourier_adf (tek k) | fractionaldouble (çift k)
-  Gürültülü + smooth?   → fwadf.fwadf_test (Haar DWT + Fourier)
-  Kantil heterojenligi? → qadf.qadf_process (QKS/QCM global test)
-  Çok kırılma?          → kapetanios_test (max_breaks=3)
-
-ADIM 2 — Eşbütünleşme
-  Kırılmasız CI?        → tarur.enders_siklos (TAR/MTAR)
-  1 kırılma?            → cointsmall | co_eco.ck_test_unknown_1break
-  2 kırılma?            → cointhatemij (model=2/3/4)
-  Smooth kırılma?       → fouriercoint (H0=CI)
-  LASSO kırılma?        → selectbreakcoint (.test() metodu)
-  Kantil CI?            → quantilecoint (Xiao 2009)
-  Outlier robust?       → robcointeg.plr_test (Student-t, nu=5)
-  Panel CSD?            → pydcce.CSARDL [BİRİNCİL]
-
-ADIM 3 — Uzun Dönem Tahmin
-  Asimetri testi?       → nardl_fourier.NARDL → .wald_lr_asymmetry()
-  + Smooth kırılma?     → FourierNARDL
-  + Frekans ayrımı?     → wavenardl
-  + Kantil?             → qardl.QARDL → γ̂(τ) per tau [gamma slice manuel]
-  + Çok rejim?          → mtnardl.MTNARDL (n_regimes=2)
-  Panel CSD?            → pydcce.CCE / MeanGroup
-
-ADIM 4 — Dağılım Analizi
-  Doğrusal QQ?          → wqr.qq_regression (9×9 heatmap)
-  Frekans × kantil?     → wqr.wavelet_qr / wavelet_qqr
-  Nonlinear QQ?         → qqkrls (KRLS kernel, plot_qqkrls_heatmap)
-
-ADIM 5 — Nedensellik
-  Simetrik?             → rbfmvar.granger_causality_test
-  Asimetrik statik?     → asymcaus (n_bootstrap≥499, 5 yön)
-  Asimetrik rolling?    → dasycaus (subsample_method='recursive')
-  Panel CSD?            → NK2024 GAUSS [BİRİNCİL]
-```
+**6 küme (A=Birim Kök, B=Eşbütünleşme, C=NARDL, D=Kantil/Wavelet, E=Nedensellik, F=Panel) + Master karar akışı → tam rehber: `600-Methods/roudane_python_packages_reference.md`**
 
 ### Kritik Bug Listesi (Kullanmadan Önce Kontrol)
 

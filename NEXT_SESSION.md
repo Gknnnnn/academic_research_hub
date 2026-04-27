@@ -1,87 +1,100 @@
-# NEXT SESSION — Yeni Oturum Başlangıç Protokolü
-_Güncellendi: 2026-04-12 (Token Optimization Protocol v2.0 — token-guard skill active)_
+# NEXT SESSION — 2026-04-26 (Updated)
 
-## Token-Optimized Session Startup Checklist
-
-Every session must follow this sequence:
+## Session Startup (30 seconds)
 
 ```
-1. /clear                          ← H1: Clean context from previous task
-2. Read CLAUDE.md                  ← Load project constitution
-3. Read PROJECT.md (if exists)     ← H16: Load project-specific context
-4. Read RESEARCH_STATE.md          ← Load current state
-5. Define task in ONE sentence     ← H6: Specific, English prompt
-6. /stats                          ← H3: Baseline token count
-7. Start work (Sonnet default)     ← H15: Switch to Opus only if needed
-8. /compact at 60-70% context      ← H10: Proactive compression
-9. /cost at session end            ← H4: Log to PROGRESS.md
-10. git commit                     ← H13: Checkpoint before next task
+1. /clear
+2. /handoff read [paper-folder]     ← instant context for any paper
+3. State task in ONE sentence
+4. Proceed
 ```
 
-## Claude'a Talimat
-
-Bu dosyayı okuyan Claude:
-1. `RESEARCH_STATE.md` dosyasını oku
-2. Kullanıcıya şu özeti sun:
+> All 60+ active manuscript folders now have `HANDOFF.md` ✅ (2026-04-26 sweep complete)
 
 ---
 
-**"Kaldığınız yerden devam ediyoruz. Son oturumda (12 Nisan 2026):**
+## ⚡ IMMEDIATE ACTIONS — NO CLAUDE NEEDED (MGO PORTAL LOGIN)
 
-- 18-Hack Token Optimization Protocol fully deployed (CLAUDE.md + skills + infrastructure)
-- token-guard skill installed and active in Cowork
-- research-manager skill updated with token protocol integration
-- 38 PROJECT.md files created across 210-Active/ portfolio
-- **Dr. Öğr. Üyesi başvurusu için 0-6 ay içinde ≥1 SSCI/SCI kabulü** gerekiyor
+Do these yourself — all packages ready, no blockers:
 
-**Priority Queue (submission order):**
-1. **Climate-Agriculture-Turkey-ARDL** → v05 complete, submit to JEM (Sonnet: cover letter + formatting)
-2. **Scopus-MGK-MGO** → v3, HRPUB template adaptation (Sonnet: data curation)
-3. **EKC_BRICST v0.4** → Pesaran CD → CIPS → CS-ARDL estimation (Opus: specification)
-
-**Şimdi ne yapalım?**"
+| Priority | Paper | Action | Portal | APC |
+|----------|-------|--------|--------|-----|
+| 🔴 URGENT | **EKC_BRICST** | "Sent Back to Author" — upload v39 | editorialmanager.com/JEPO | $0 |
+| 1 | **LCF Turkey** | Submit | editorialmanager.com/jresourpol | $0 |
+| 2 | **P3 Gold Policy** | Submit | editorialmanager.com/jresourpol | $0 |
+| 3 | **Green Innovation** | Submit | editorialmanager.com/jclepro | $0 |
+| 4 | **AI Strategy Carbon** | Submit | editorialmanager.com/erss | $0 |
+| 5 | **Automation LaborShare** | Submit | editorialmanager.com/YJCEC | $0 |
+| 6 | **Oksuzkaya Gold** | Submit | editorialmanager.com/irfa | $0 |
+| 7 | **GPR Export Diversification** | Submit | editorialmanager.com/inta | $0 |
+| 8 | **Food Regime Decoupling** | Submit | editorialmanager.com/jclepro | $0 |
+| 9 | **CBI Sovereign Yields** | Submit | editorialmanager.com/ememar | $0 |
+| 10 | **Chokepoints Maritime** | Submit | editorialmanager.com/tre | $0 |
+| 11 | **ZRY-SO-UY** | Submit | mc.manuscriptcentral.com/emft | $0 |
+| 12 | **MonPol Asymmetry** | Submit | tandfonline.com/journals/mree20 | $0 |
+| 13 | **SSA ML Food Security** | Submit | mc.manuscriptcentral.com/bfj | $0 |
+| 14 | **WQR P2** | Submit | editorialmanager.com/JEPO | $0 |
+| 15 | **WQR P3** | Submit | editorialmanager.com/RENE | $0 |
+| 16 | **IGI Chapter** | Step 3 upload | IGI eEditorial | $0 |
+| 17 | **Multipolar Basel (FIQ)** | Verify ESCI first, then submit | journals.wsiz.edu.pl/fiq | $0 |
+| 18 | **Gold Deposit Bank** | Word count check (≤2500) then FRL | editorialmanager.com/frl | $0 |
 
 ---
 
-## Hızlı Başlangıç Seçenekleri
+## ⚡ DEADLINE-DRIVEN (MGO ACTION)
 
-Kullanıcı doğrudan bir yön vermezse şunu sor:
+| Deadline | Task |
+|----------|------|
+| **NOW** | EKC_BRICST "Sent Back to Author" upload |
+| **1 May 2026** | IERFM/EconMod — Bilgin approval → upload |
+| **11-13 May 2026** | DATAMACLEA'26 full paper (await ERA response) |
+| **14-16 May 2026** | RSEP Barcelona presentation |
+| **29 May 2026** | IGI chapter eEditorial Step 3 |
 
-> "ARDL makalesini JEM'e göndermek için son adımları mı tamamlayalım, yoksa başka bir çalışmadan mı devam edelim?"
+---
 
-## Kritik Dosya Yolları
+## EMAILS TO SEND (draft ready or clear action)
+
+| To | Subject | File |
+|----|---------|------|
+| hbayram@kku.edu.tr | PSE AgTFP v07 review request | EMAIL_HBI_review_request.md ✅ |
+| hbayram@kku.edu.tr | Climate-Agri v17_2 co-author sign-off | send DOCX v17_2 (45KB) |
+| Karat | Stagflation ML approval → IJF | email pending |
+| Yusuf Çelik | YK paper placeholders (data period + lnfd definition) | ask directly |
+| Selin Dinçer | ORCID + affiliation confirmation | Migration-Carbon paper |
+| İlterişi | Hormuz-Turkey gravity review | ilteris_eposta_taslak.md ✅ |
+
+---
+
+## CLAUDE-ASSISTED WORK (next session topics)
+
+| Paper | What to do | Skill |
+|-------|------------|-------|
+| FinStress NARDL | Collect BIST data → re-run FSI scripts | data work |
+| Gravity Food Security | Fix OneDrive sync → re-render Figure 1 | render |
+| Dedolarizasyon EPFAD | pandoc v03.md → DOCX → DergiPark format check | render |
+| CIVETS Unemployment | Download WB HCI → clean panel → pre-tests | analysis |
+| UY-MGO Makale | Apply MAKÜ SOBED şablon → DergiPark submit (deadline Apr 30) | format |
+
+---
+
+## QUICK COMMAND MAP
+
+| Say | Claude does |
+|-----|------------|
+| `/handoff read [folder]` | Load any paper's state instantly |
+| "EKC'den devam" | Read EKC_BRICST HANDOFF → respond to "Sent Back to Author" |
+| "LCF'den devam" | Read LCF HANDOFF → prep portal copypaste |
+| "FinStress'ten devam" | FSI data collection pipeline |
+| "Portföy durumu" | MEMORY.md + priority queue summary |
+
+---
+
+## KEY PATHS
 
 ```
 ~/Library/CloudStorage/OneDrive-Kişisel/Akademik_Arastirma/
-├── RESEARCH_STATE.md          ← Ana hafıza dosyası
-├── PROGRESS.md                ← Oturum günlüğü
-├── NEXT_SESSION.md            ← Bu dosya
-└── 200-Manuscripts/
-    └── 210-Active/
-        ├── Climate-Agriculture-Turkey-ARDL/   ← P1 ACİL (v05 submit-ready)
-        │   └── PROJECT.md ← token-efficient context
-        ├── Scopus-MGK-MGO/                    ← P2 (HRPUB target)
-        │   └── PROJECT.md
-        ├── EKC_BRICST/                        ← P3 (CS-ARDL estimation)
-        │   └── PROJECT.md
-        └── [37 more active manuscripts with PROJECT.md]
+├── 200-Manuscripts/210-Active/[folder]/HANDOFF.md   ← any paper state
+├── 960-Infrastructure/961-Dashboard/                ← portfolio dashboard
+└── 300-Output-Registry/                             ← ÜAK tracking
 ```
-
-## Kısa Komutlar
-
-| Söylersen | Yapılacak |
-|---|---|
-| "ARDL'den devam" | ARDL v05 aç, cover letter finalize, JEM'e gönder |
-| "Scopus'tan devam" | 2026-Scopus-MGK-MGO → HRPUB template uyarla |
-| "EKC devam" | EKC_BRICST → Pesaran CD + CIPS + CS-ARDL pipeline |
-| "UY'den devam" | 2026-UY-MGO-Makale checklist tamamla |
-| "Konya'dan devam" | Konya Q1 revizyonuna başla |
-| "Portföy durumu" | RESEARCH_STATE.md oku + güncel özet sun |
-| "token check" | Token-guard skill tetikle, maliyet analizi |
-
-
-## ⚠️ P2 DERGI DEĞİŞİKLİĞİ — UNUTMA
-P2 makalesi (SCOPUS_MGK_MGO) → **HRPUB Environment and Ecology Research**
-URL: https://www.hrpub.org/journals/jour_index.php?id=40
-Template dosyası: `04-Manuscript/HRPUB_Manu_Template_V1.docx`
-Sonraki adım: Manuscript'i HRPUB template'ine uyarla → portal'dan gönder
