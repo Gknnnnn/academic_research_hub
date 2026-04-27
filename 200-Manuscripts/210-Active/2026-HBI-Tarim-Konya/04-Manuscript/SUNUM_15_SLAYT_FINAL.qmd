@@ -1,0 +1,165 @@
+---
+title: "Küresel Tarımsal Katma Değerde Yapısal Taban"
+subtitle: "105 ülke, 2000-2020 paneli, YSA ve ekonometrik sağlamlık"
+author:
+  - "Prof. Dr. Hacı Bayram IŞIK"
+  - "Arş. Gör. Dr. Mehmet Gökhan ÖZDEMİR"
+date: "3 Nisan 2026"
+lang: tr
+format:
+  beamer:
+    theme: Madrid
+    colortheme: dolphin
+    aspectratio: 169
+    slide-level: 2
+    toc: false
+    number-sections: false
+    section-titles: false
+    incremental: false
+header-includes:
+  - \setbeamertemplate{navigation symbols}{}
+  - \setbeamerfont{title}{size=\Large}
+  - \setbeamerfont{subtitle}{size=\normalsize}
+---
+
+## 1. Çalışma Ne Soruyor?
+
+- Tarımın milli gelir içindeki payı uzun vadede sıfıra mı iner?
+- Yoksa teknoloji, verimlilik ve gıda güvenliği nedeniyle belirli bir alt eşikte mi dengelenir?
+- Çalışmanın temel iddiası:
+  Tarımsal katma değer payı tam kaybolmaz; "yapısal taban" etrafında stabilize olur.
+
+## 2. Neden Önemli?
+
+- Tarım sadece küçülen bir sektör değildir.
+- Gıda güvenliği, kırsal istihdam ve stratejik dayanıklılık açısından kritik bir alandır.
+- 2020 sonrası şoklar:
+  pandemi, savaş, arz zinciri kırılması, iklim baskısı.
+- Bu yüzden "taban" fikri politika açısından doğrudan önem taşır.
+
+## 3. Veri Seti ve Kapsam
+
+- 105 ülke
+- 2000-2020 dönemi
+- Tam dengeli panel
+- Toplam gözlem: 2.205
+- Bağımlı değişken:
+  tarımsal katma değerin GSYH içindeki payı
+- 6 açıklayıcı değişken:
+  emek, toprak, gübre, verim, ticaret, ekipman
+
+## 4. Yöntem Neden Hibrit?
+
+- Yapay Sinir Ağı:
+  doğrusal olmayan ilişkileri ve gizli eşikleri yakalamak için
+- Ekonometrik testler:
+  sonuçların tesadüf ya da sahte ilişki olmadığını göstermek için
+- Ana mantık:
+  önce karmaşık örüntüyü keşfet, sonra ekonometrik olarak doğrula
+
+## 5. YSA Mimarisi ve Başarı
+
+- Mimari: 6-7-5-1
+- Eğitim/Test ayrımı: %80 / %20
+- Yakınsama: 58.462 adım
+- MSE: 0.0011
+- Test başarısı: R² = %91.55
+
+![](../03-Results/YSA_Tahmin_Son.png){width=70%}
+
+## 6. Model Sağlam mı?
+
+![](../03-Results/cv_fold_r2.png){width=48%}
+\hfill
+![](../03-Results/Residual_Plot.png){width=48%}
+
+- Çapraz doğrulama sonuçları tutarlı
+- Kalıntı grafiği belirgin sistematik sapma göstermiyor
+- YSA sadece ezberleyen bir yapı gibi görünmüyor
+
+## 7. Hangi Değişkenler Öne Çıkıyor?
+
+![](../03-Results/Olden_Analizi.png){width=72%}
+
+- Olden analizi toplam sinaptik etkiyi gösteriyor
+- Çalışmanın anlatısı:
+  verim tabanı koruyan direnç unsuru
+- ekipman ise yapısal dönüşüm baskısını temsil ediyor
+
+## 8. SHAP Ne Söylüyor?
+
+![](../03-Results/shap_beeswarm.png){width=78%}
+
+- Her nokta bir ülke-yıl gözlemi
+- SHAP, değişken katkısını gözlem bazında açıyor
+- Sonuç:
+  model açıklanabilir hale geliyor, "kara kutu" eleştirisi zayıflıyor
+
+## 9. Durağanlık ve Uzun Dönem İlişki
+
+![](../03-Results/yapisal_kirilma.png){width=42%}
+
+- IPS / LLC kontrolleri kullanıldı
+- Maddala-Wu yaklaşımı uzun dönemli ilişkinin varlığına işaret ediyor
+- Yapısal kırılma görseli, serilerin düz çizgisel olmayan dinamiğini destekliyor
+- Yani:
+  bulgular yalnızca makine öğrenmesi ürünü değil
+
+## 10. Nedensellik Testleri
+
+![](../03-Results/dh_nedensellik.png){width=44%}
+\hfill
+![](../03-Results/granger_nedensellik.png){width=44%}
+
+- Dumitrescu-Hurlin sonuçlarında 6 değişkenin tamamı için nedensellik var
+- Klasik Granger ağında da aynı yön korunuyor
+- Bu, yapısal taban hikayesinin yönlü ilişki içerdiğini gösteriyor
+
+## 11. System GMM Kontrolü
+
+- Dinamik panel kontrolü uygulandı
+- Sargan testi: p = 1.000
+- Arellano-Bond AR(2): p = 0.869
+- Anlamlı katsayılar:
+  ticaret = 0.0058
+- ekipman = 0.0547
+- Lagged dependent variable = 0.940
+- Mesaj:
+  modelde ciddi bir araç geçersizliği ya da ikinci derece otokorelasyon sorunu görünmüyor
+
+## 12. Metodolojik Çakışma: En Güçlü Savunma
+
+- YSA:
+  karmaşık, doğrusal olmayan etkileşimleri buluyor
+- SHAP/Olden:
+  hangi değişkenlerin etkili olduğunu açıyor
+- GMM ve nedensellik testleri:
+  aynı yapının istatistiksel tutarlılığını kontrol ediyor
+- Sunumdaki en güçlü cümle:
+  iki farklı metodolojik aile aynı hikayeyi destekliyor
+
+## 13. 2030 Projeksiyonu
+
+![](../03-Results/scenario_group_bars.png){width=44%}
+\hfill
+![](../03-Results/scenario_global_paths.png){width=44%}
+
+- Küresel orta senaryo: %6.13
+- Yüksek gelirli ülkeler: yaklaşık %2.17
+- Düşük gelirli ülkeler: yaklaşık %8.74 ve üzeri bant
+- Yorum:
+  tarım tamamen kaybolmuyor, gelir grubuna göre farklı eşiklerde yataylaşıyor
+
+## 14. Politika, Sonuç ve Sınır
+
+- Verimlilik artışı, tarımsal tabanı koruyan ana kaldıraç
+- Mekanizasyon tek başına ilerleme değil;
+  istihdam ve üretim bileşimi birlikte düşünülmeli
+- Tarım politikası yalnızca destekleme değil,
+  stratejik dayanıklılık politikası olarak okunmalı
+- SDG bağlantısı:
+  SDG 2, SDG 8 ve SDG 13 ile uyumlu
+- En kritik sınır:
+  veri 2020'de bitiyor, 2021-2025 polikriz dönemi modele doğrudan dahil değil
+- Bu yüzden yarın şu cümleyi özellikle söyle:
+  "2030 rakamları kesin kehanet değil, 2000-2020 yapısal eğilimlerinden türetilmiş senaryo değerleridir."

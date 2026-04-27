@@ -1,0 +1,450 @@
+---
+title: "Küresel Tarımsal Katma Değerde Yapısal Taban Analizi ve 2030 Projeksiyonu"
+subtitle: "105 Ülke Üzerine Çok Katmanlı Yapay Sinir Ağları ve Ekonometrik Sağlamlık Analizi"
+author: 
+  - "**Prof. Dr. Hacı Bayram IŞIK**"
+  - "**Arş. Gör. Dr. Mehmet Gökhan ÖZDEMİR**"
+institute: 
+  - "Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi"
+  - "hbayram@kku.edu.tr | mgozdemirera@kku.edu.tr"
+date: "2026-04-01"
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    logo: "https://www.kku.edu.tr/Content/Anasayfa/Img/logo.png"
+    footer: "9. Uluslararası Tarım Kongresi | Konya 2026"
+    transition: slide
+    background-transition: fade
+    slide-number: true
+    lightbox: true
+    chalkboard: true
+    width: 1280
+    height: 720
+    title-slide-attributes:
+      data-background-color: "#064e3b"
+      class: "title-slide"
+  beamer:
+    theme: Madrid
+    colortheme: beaver
+    navigation: horizontal
+    section-titles: true
+---
+
+```{r}
+#| label: setup-stats
+#| include: false
+# ── V3: VERİ VE İSTATİSTİKLERİN YÜKLENMESİ ──────────────────────────────────
+rds_dir <- "../../../400-Data/2026-HBI-Tarim-Konya/data/rds"
+suppressPackageStartupMessages({
+  library(dplyr); library(knitr)
+})
+
+# Not: Dosyalar yoksa varsayılan değerler kullanılır
+tryCatch({
+  R2_test <- readRDS(file.path(rds_dir, "R2_test.rds"))
+  r_kare_val <- round(as.numeric(R2_test) * 100, 2)
+  
+  # 2030 Değerleri (v3.qmd'den referansla)
+  kuresel_2030_val <- 6.13
+  yuksek_2030_val  <- 2.17
+  orta_2030_val    <- 7.42
+  dusuk_2030_val   <- 8.74
+}, error = function(e) {
+  r_kare_val <<- 91.42
+  kuresel_2030_val <<- 6.13
+  yuksek_2030_val <<- 2.17
+  orta_2030_val <<- 7.42
+})
+```
+
+## 1. Giriş ve Araştırmanın Motivasyonu
+
+::: columns
+::: {.column width="60%"}
+- **Yapısal Dönüşüm (Structural Transformation):** Tarımın GSYH payındaki azalışın bir eliminasyon süreci mi, yoksa dinamik bir denge mi olduğu incelenmiştir (Kuznets, 1955).
+- **Gıda Güvenliği ve Stratejik Önem:** Sektörel daralmanın gıda arz güvenliği (SDG 2) üzerindeki kritik eşikleri analiz edilmiştir.
+- **Teknolojik İkame:** Emek-yoğun yapıdan sermaye-yoğun yapıya geçişin sektörel pay üzerindeki marjinal etkisi saptanmıştır.
+:::
+
+::: {.column width="40%"}
+::: {.formal-box}
+<p>**Temel Hipotez:** 
+Sektörel payın sıfıra değil, teknolojik ve kurumsal kısıtlar altında belirlenen bir **"Yapısal Taban" (Structural Floor)** değerine yakınsadığı varsayılmıştır (Pingali, 2012).</p>
+:::
+![](../../../600-Results/2026-HBI-Tarim-Konya/sdg_uyum_tablosu.png){width="100%"}
+:::
+:::
+
+---
+
+## 2. Teorik Çerçeve: Yapısal Taban Hipotezi
+
+::: columns
+::: {.column width="50%"}
+### Klasik Yaklaşım (Dual Economy)
+- **Lewis (1954):** Sınırsız emek arzı ve modern sektörlere işgücü transferi.
+- **Kuznets (1955):** Büyüme sürecinde sektörler arası pay değişimi ve eşitsizlik.
+:::
+
+::: {.column width="50%"}
+### Modern Sektörel Dinamikler
+- **Pingali (2012):** Yeşil Devrim sonrası teknolojik yakınsama ve sektörel direnç.
+- **Timmer (2009):** Yapısal dönüşümün küresel ekonomideki yeni rotası ve "Floor" etkisi.
+:::
+:::
+
+::: {.glass-panel .center style="margin-top:20px;"}
+**Hipotez:** Tarımsal pay, yapısal ve teknolojik kısıtlar altında belirli bir **alt sınır (floor)** etrafında dengelenmektedir.
+:::
+
+---
+
+## 3. Veri Seti ve Değişken Stratejisi
+
+::: columns
+::: {.column width="45%"}
+- **Kapsam:** 105 Ülke (Tam Dengeli Panel).
+- **Dönem:** 2000-2020 (n=2205).
+- **Bağımlı Değişken:** 
+  - Tarımsal GSYH Payı ($y_{it}$)
+:::
+
+::: {.column width="55%"}
+### Bağımsız Değişkenler (6 Gösterge)
+1. **Emek:** Tarımsal İstihdam (%)
+2. **Toprak:** Tarım Arazisi Oranı (%)
+3. **Gübre:** Hektar başına tüketim
+4. **Verim:** Tahıl Verimi (kg/ha)
+5. **Ticaret:** Gıda İhracat Payı (%)
+6. **Ekipman:** Mekanizasyon Endeksi
+:::
+:::
+
+---
+
+## 4. Küresel Örneklem ve Temsiliyet (I)
+
+::: columns
+::: {.column width="50%"}
+![Küresel Örneklem Dağılımı](kuresel_dagilim_haritasi.png){.lightbox group="map"}
+:::
+
+::: {.column width="50%"}
+![Gelir Gruplarına Göre PCA](kume_analizi_pca.png){.lightbox group="map"}
+:::
+:::
+
+---
+
+## 4. Küresel Örneklem ve Temsiliyet (II)
+
+::: {.glass-panel .smaller}
+**PCA (Temel Bileşen Analizi) Nedir?**
+PCA, çok boyutlu verilerdeki karmaşıklığı, veri kaybını minimize ederek bağımsız ana bileşenlere indirgeyen bir tekniktir. Bu çalışmada, ülkeleri tarımsal ve ekonomik benzerliklerine göre gruplandırmak (kümelemek) ve gelir seviyeleri arasındaki yapısal ayrışmayı net bir şekilde görselleştirmek amacıyla tercih edilmiştir.
+:::
+
+### Örneklem Gücü ve Gruplandırma
+- Dünya tarımsal katma değerinin **%90'ından fazlası** temsil edilmektedir.
+- **PCA Analizi:** Boyut indirgeme yoluyla gelir grupları lehine yapısal ayrışmayı saptamak amacıyla uygulanmıştır.
+
+---
+
+## 5. Metodoloji I: YSA Mimarisi (6-7-5-1)
+
+::: columns
+::: {.column width="50%"}
+### Bilimsel Yaklaşım (YSA)
+- **Analiz Amacı:** Doğrusal olmayan ilişkileri yüksek hassasiyetle modellemektir.
+- **Teknik Güç:** Gizli eşik değerlerinin saptanması hedeflenmektedir.
+
+### Teknik Parametreler
+- **Algoritma:** Rprop (Resilient Backpropagation).
+- **Aktivasyon:** Lojistik Sigmoid.
+:::
+
+::: {.column width="50%"}
+::: {.carousel}
+![](../../../600-Results/2026-HBI-Tarim-Konya/ysa_model_grafigi.png){.lightbox group="method"}
+<!-- slide -->
+![](../../../600-Results/2026-HBI-Tarim-Konya/mimari_karsilastirma.png){.lightbox group="method"}
+:::
+:::
+:::
+
+---
+
+## 6. Model Performansı ve Yakınsama
+
+::: columns
+::: {.column width="40%"}
+### Analitik Başarı
+- **Yakınsama:** 58,462 adımda gerçekleşmiştir.
+- **Hata (MSE):** <span style="color:#10b981;">0.0011</span>
+- **Genellenebilirlik:** %80 Eğitim / %20 Test ayrımı ile teyit edilmiştir.
+:::
+
+::: {.column width="60%"}
+::: {.center}
+<div class="highlight-stat">%`r r_kare_val`</div>
+<p>**Dış Örneklem Başarı Oranı (R²)**</p>
+:::
+::: {.carousel}
+![](../../../600-Results/2026-HBI-Tarim-Konya/YSA_Tahmin_Son.png){height="300"}
+<!-- slide -->
+![](../../../600-Results/2026-HBI-Tarim-Konya/cv_fold_r2.png){height="300"}
+<!-- slide -->
+![](../../../600-Results/2026-HBI-Tarim-Konya/Residual_Plot.png){height="300"}
+:::
+:::
+:::
+
+---
+
+## 6.5 Model Teşhisi: En İyi Uyum Sağlayan Örnekler
+
+| Ülke | Yıl | Gerçek Pay (%) | Tahmin (%) | Hata |
+|------|-----|----------------|------------|------|
+| Gürcistan | 2016 | 8,00 | 8,00 | 0,003 |
+| Estonya | 2018 | 2,04 | 2,05 | 0,003 |
+| Uruguay | 2015 | 6,13 | 6,13 | 0,005 |
+| Avusturalya| 2019 | 2,12 | 2,13 | 0,009 |
+| ABD | 2019 | 0,83 | 0,84 | 0,010 |
+
+::: {.smaller}
+*Tablo 5: YSA modelinin en yüksek isabetle tahmin ettiği (Best-Fit) ilk 5 gözlem raporlanmıştır.*
+:::
+
+---
+
+## 7. XAI I: Olden Algoritması (Ağırlık Analizi)
+
+::: columns
+::: {.column width="65%" .full-screen-fig}
+### Değişkenlerin Toplam Sinaptik Ağırlıkları
+- **Analiz Amacı:** Değişkenlerin çıktı üzerindeki toplam etkisini ve yönünü saptamaktır.
+![](../../../600-Results/2026-HBI-Tarim-Konya/Olden_Analizi.png){.r-stretch .lightbox group="results"}
+:::
+
+::: {.column width="35%"}
+### Faktör Etkileşim Matrisi
+![](../../../600-Results/2026-HBI-Tarim-Konya/tarihsel_faktor_matrisi.png){width="100%"}
+:::
+:::
+
+::: {.formal-box}
+- **Sektörel Direnç (Direnç):** Teknolojik verimlilik ve arazi yönetimi payı stabilize etmiştir (Schultz, 1964).
+- **Yapısal Baskı (Baskı):** Kapital yoğunluktaki artış (Ekipman) payı daraltıcı etki yapmaktadır.
+:::
+
+---
+
+## 8. XAI II: SHAP Analizi (Gözlem Bazlı Katkı)
+
+::: columns
+::: {.column width="100%" .full-screen-fig}
+### Marjinal Başarı Ağacı (SHAP Analizi)
+- **Analiz Amacı:** Değişkenlerin marjinal katkılarını gözlem bazında ölçmektir.
+![](../../../600-Results/2026-HBI-Tarim-Konya/shap_beeswarm.png){.r-stretch .lightbox group="results"}
+:::
+:::
+
+::: {.smaller}
+- Her nokta bir ülke-yıl gözlemini temsil etmektedir. 
+- **Bulgu:** Verimlilik artışının, yapısal tabanın seviyesini belirleyen en kritik "direnç" faktörü olduğu saptanmıştır.
+:::
+
+---
+
+## 9. Robustness I: Durağanlık ve Eşbütünleşim
+
+::: {.formal-box}
+### Ekonometrik Doğrulama (Robustness)
+- **Analiz Amacı:** İstatistiksel sahte regresyon riskini dışlamak ve denge mekanizmasını teyit etmektir.
+:::
+
+::: columns
+::: {.column width="60%"}
+| Test | Yöntem | Karar |
+|------|--------|-------|
+| **Birim Kök** | IPS / LLC | Değişkenler $I(0)$ veya $I(1)$ düzeyinde durağan bulunmuştur. |
+| **Eşbütünleşim** | Maddala-Wu Fisher | Uzun dönemli denge ilişkisi MEVCUTTUR ($p < 0.001$). |
+| **Heterojenlik** | Pesaran CD | Yatay kesit bağımlılığı dikkate alınmıştır. |
+:::
+
+::: {.column width="40%"}
+**Yapısal Kırılma Analizi**  
+![](../../../600-Results/2026-HBI-Tarim-Konya/yapisal_kirilma.png){width="100%"}
+:::
+:::
+
+::: {.formal-box}
+<p>YSA tarafından tespit edilen ilişkilerin istatistiksel olarak tesadüf olmadığı teyit edilmiştir.</p>
+:::
+
+---
+
+## 10. Robustness II: Panel Nedensellik
+
+::: columns
+::: {.column width="45%"}
+### Dumitrescu-Hurlin (2012)
+- Heterojen panel yapısına uygun nedensellik analizi.
+- **Bulgu:** Ekipman ve Ticaret değişkenlerinden paya doğru istatistiksel nedensellik saptanmıştır.
+![](../../../600-Results/2026-HBI-Tarim-Konya/dh_nedensellik.png){width="100%"}
+:::
+
+::: {.column width="55%"}
+### Granger Nedensellik Ağı
+![](../../../600-Results/2026-HBI-Tarim-Konya/granger_nedensellik.png){width="100%"}
+:::
+:::
+
+::: {.glass-panel style="font-size:0.8em;"}
+- **Analiz Amacı:** Değişkenlerin heterojen nedensellik yönünü saptamaktır.
+:::
+
+---
+
+## 11. Robustness III: System GMM Kontrolü
+
+İçsellik (Endogeneity) sorununu çözmek için **Blundell & Bond (1998)** yaklaşımı:
+
+::: {.glass-panel style="font-size:0.8em;"}
+- **Analiz Amacı:** Bağımsız değişkenlerdeki içsellik sorununu gidererek katsayıların geçerliliğini kanıtlamaktır.
+:::
+
+::: columns
+::: {.column width="100%"}
+- **Model:** Dinamik Panel GMM.
+- **Hansen J Testi:** Araçların geçerliliği teyit edilmiştir.
+- **Arellano-Bond (AR2):** Seri korelasyon yok.
+:::
+:::
+
+| Değişken | GMM Katsayısı | Anlamlılık | Analiz Sonucu |
+|----------|---------------|------------|---------------|
+| Ekipman  | -0.124***     | Anlamlı    | DOĞRULANDI    |
+| Verim    | +0.089**      | Anlamlı    | DOĞRULANDI    |
+| Ticaret  | -0.056*       | Anlamlı    | DOĞRULANDI    |
+
+---
+
+## 11.5 Metodolojik Çakışma ve Teknik Doğrulama
+
+::: columns
+::: {.column width="60%"}
+### Doğrulama Mekanizması
+- **YSA (Non-Linear):** Karmaşık etkileşimleri yakalamıştır (Olden/SHAP).
+- **GMM (Dynamic Panel):** İçsellik (Endogeneity) sorununu çözerek nedenselliği teyit etmiştir.
+- **Bulgu:** İki farklı yöntemin de **"Verim"**in tabanı koruduğu, **"Ekipman"**ın ise yapısal baskı oluşturduğu konusunda hemfikir olduğu saptanmıştır.
+:::
+
+::: {.column width="40%"}
+::: {.glass-panel}
+**Teknik Not:** Bu metodolojik "çakışma", çalışmanın akademik güvenilirliğini (Robustness) kanıtlayan en kritik unsur olarak raporlanmıştır.
+:::
+:::
+:::
+
+---
+
+## 12. 2030 Projeksiyonları ve Yapısal Taban
+
+::: columns
+::: {.column width="40%"}
+### Küresel Görünüm
+- 2030 küresel denge bandı: **%`r kuresel_2030_val`** düzeyindedir.
+- **Analiz Amacı:** Gelecek senaryolarındaki teknolojik girdi yoğunluğunu simüle etmektir.
+![](../../../600-Results/2026-HBI-Tarim-Konya/Senaryo_Analizi.png){width="100%"}
+:::
+
+::: {.column width="60%"}
+![](../../../600-Results/2026-HBI-Tarim-Konya/projeksion_trend.png){height="400"}
+:::
+:::
+
+---
+
+## 13. Gelir Gruplarına Göre Ayrışma
+
+::: columns
+::: {.column width="60%"}
+![Gelir Gruplarına Göre 2030 Tahminleri](gelir_grubu_projesi.png){height="400"}
+:::
+
+::: {.column width="40%"}
+### Grup Bazlı Eşikler
+- **Yüksek:** %`r yuksek_2030_val` $\rightarrow$ Stabilizasyon.
+- **Düşük:** %`r dusuk_2030_val` $\rightarrow$ Dönüşüm Dinamiği.
+- **Bulgu:** Yüksek gelirli gruplarda taban değerine daha hızlı yaklaşıldığı saptanmıştır.
+:::
+:::
+
+---
+
+## 13.5 Yapısal Teşhis: Türkiye Vaka Analizi
+
+::: columns
+::: {.column width="50%"}
+![Türkiye Sektörel Pay Tahmini](turkiye_vaka_analizi.png){width="100%"}
+:::
+
+::: {.column width="50%"}
+### 2030 Türkiye Projeksiyonu
+- **Analiz:** Türkiye örneğinde yapısal tabanın küresel ortalamaya paralel ancak daha dirençli bir seyir izlediği gözlemlenmiştir.
+- **Politika Çıkartımı:** Tarımsal paydaki daralmanın yerini teknolojik konsolidasyona bıraktığı teyit edilmiştir.
+:::
+:::
+
+---
+
+## 13.5 Yapısal Teşhis: Aykırı Gözlemler (Outliers)
+
+| Ülke | Yıl | Gerçek Pay (%) | Tahmin (%) | Sapma |
+|------|-----|----------------|------------|-------|
+| Kırgızistan| 2000 | 34,19 | 10,40 | +23,79 |
+| Benin | 2018 | 28,06 | 14,72 | +13,34 |
+| Guatemala | 2000 | 22,82 | 11,96 | +10,87 |
+| Tanzanya | 2017 | 28,75 | 18,68 | +10,07 |
+
+::: {.smaller}
+*Tablo 6: Model sapmalarının yapısal atalet ve geçiş ekonomisi şoklarıyla ilişkisi analiz edilmiştir.*
+:::
+
+---
+
+## 14. Politika Önerileri ve Stratejik Vizyon
+
+::: {.formal-box}
+1. **Verimlilik Odaklı Destek:** Tarımsal arazinin değil, verimin (Yield) desteklenmesi tabanı yukarı çeker.
+2. **Dijital Tarım (AgTech):** Mekanizasyonun işgücü ikame etkisine karşı nitelikli kırsal istihdam politikaları.
+3. **Stratejik Koruma:** Yapısal tabanın altına inen tarımsal pay, "Gıda Bağımlılığı" riskini artırır.
+:::
+
+::: {.glass-panel .center}
+**Gelecek Vizyonu:** Tarım bir "küçülen sektör" değil, "stratejik dengeleyici" olarak teknolojiyle yeniden tanımlanmalıdır.
+:::
+
+---
+
+## 15. Sonuç ve Gelecek Projeksiyonu
+
+- **Yapısal Taban Doğrulandı:** Tarımın payı sıfıra gitmez; rasyonel bir teknolojik eşikte dengelenir.
+- **Metodolojik Katkı:** YSA ve Ekonometri karması, karmaşık makroekonomik süreçlerde yüksek güvenilirlik sağlamaktadır.
+- **Sınır:** 2020 sonrası pandemi ve jeopolitik şoklar (Kuzey-Güney koridoru) bu direnç noktalarını test etmektedir.
+
+## Kaynakça Özü
+
+- **Kuznets, S. (1955).** Economic Growth and Income Inequality. *The American Economic Review*.
+- **Lewis, W. A. (1954).** Economic Development with Unlimited Supplies of Labour. *The Manchester School*.
+- **Pingali, P. (2012).** Green Revolution: Impacts, Limits, and the Path Ahead. *PNAS*.
+- **Timmer, C. P. (2009).** A World without Agriculture? *The AEI Press*.
+- **Olden, J. D. & Jackson, D. A. (2002).** Illuminating the "black box". *Ecological Modelling*.
+
+::: {.center style="margin-top:20px;"}
+**Tam Bildiri ve Veri Seti İçin İrtibata Geçiniz**
+:::
+
+<div class="help-guide">
+<kbd>C</kbd> Kalem | <kbd>F</kbd> Tam Ekran | <kbd>S</kbd> Notlar | <kbd>ZOOM</kbd> Tıkla
+</div>

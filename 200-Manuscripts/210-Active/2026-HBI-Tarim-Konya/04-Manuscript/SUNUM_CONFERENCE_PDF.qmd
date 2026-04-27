@@ -1,0 +1,309 @@
+---
+title: "Küresel Tarımsal Katma Değerde Yapısal Dönüşüm"
+subtitle: "Asimptotik Yakınsama ve 2030 Projeksiyonu"
+author: 
+  - "Prof. Dr. Hacı Bayram IŞIK"
+  - "Arş. Gör. Dr. Mehmet Gökhan ÖZDEMİR"
+institute: "Kırıkkale Üniversitesi"
+date: "2026-04-01"
+format: 
+  beamer:
+    theme: Madrid
+    colortheme: beaver
+    navigation: horizontal
+    section-titles: true
+    header-includes: |
+      \usepackage{tcolorbox}
+      \newtcolorbox{theoristbox}{colback=gray!10,colframe=black!70,arc=2mm,boxrule=1.5pt,left=2mm,right=2mm,top=2mm,bottom=2mm}
+      \newtcolorbox{foundationbox}{colback=yellow!10,colframe=yellow!70!black,arc=3mm,boxrule=1pt,left=2mm,right=2mm,top=1mm,bottom=1mm}
+---
+
+\begin{foundationbox}
+\textbf{Soru:} Tarımın GSYH payı sıfıra mı yakınsıyor, yoksa teknolojik bir direnç hattında (Structural Floor) mı dengeleniyor? (Kuznets, 1955).
+\end{foundationbox}
+
+---
+
+## 2. Klasik Bir Başlangıç: Kuznets (1955)
+
+\begin{theoristbox}
+\textit{"Ekonomik büyüme süreci, sektörler arası bir kaymayı beraberinde getirir; işgücü ve katma değer tarımdan sanayiye akar."}
+\begin{flushright}--- Simon Kuznets (1955)\end{flushright}
+\end{theoristbox}
+
+\begin{foundationbox}
+\textbf{DAYANAK:} Kuznets Eğrisi (U-ters), sanayileşme evresinde tarımsal daralmanın kaçınılmazlığını raporlar; biz ise bu daralmanın asimptotik bir "tabanda" durduğunu saptıyoruz.
+\end{foundationbox}
+
+---
+
+## 3. İnsandan Makinaya: Lewis (1954)
+
+\begin{theoristbox}
+\textit{"Sınırsız emek arzına sahip ekonomilerde, işgücünün verimsiz tarımdan verimli sanayiye aktarılması kalkınmanın anahtarıdır."}
+\begin{flushright}--- W. Arthur Lewis (1954)\end{flushright}
+\end{theoristbox}
+
+\begin{foundationbox}
+\textbf{DAYANAK:} Lewis Modeli, tarımsal "artık emeği" sanayi transferinin motoru olarak tanımlar. Teknoloji ile bu transfer "sektörel bir kaleye" dönüşerek stabilize edildi.
+\end{foundationbox}
+
+---
+
+## 4. Modern Tarım: Pingali (2012)
+
+\begin{theoristbox}
+\textit{"Yeşil Devrim sonrası tarım artık sadece toprak demek değildir; teknoloji, verimlilik ve küresel ticaretin bir bileşimidir."}
+\begin{flushright}--- Prabhu Pingali (2012)\end{flushright}
+\end{theoristbox}
+
+\begin{foundationbox}
+\textbf{DAYANAK:} Modern tarım tohum/makine/verim üçgeninde yükselir.
+\end{foundationbox}
+
+---
+
+## 5. Yapısal Taban: Güvenli Liman
+
+**Hipotezimiz:** Tarım sektörü asla yok olmaz. Teknoloji ile birlikte belirli bir "alt sınırda" (Yapısal Taban) dengelenir.
+
+- İnsanlık var oldukça gıda ihtiyacı bitmez.
+- Modernizasyon payı daraltır ama katma değeri korur.
+- Akademik mühürle bu "Floor"un yerini saptıyoruz.
+
+\begin{foundationbox}
+\textbf{BULGU:} Tarım sektörünün daralmasının bir "yok oluş" değil, teknoloji ile şekillenen bir "denge" süreci olduğu raporlandı.
+\end{foundationbox}
+
+---
+
+## 6. Küresel Örneklem ve Temsiliyet
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{kuresel_dagilim_haritasi.png}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{kume_analizi_pca.png}
+\end{column}
+\end{columns}
+
+\begin{foundationbox}
+\textbf{KAPSAM:} 105 ülkelik örneklem, küresel tarımsal katma değerin \%90'ını temsil etti. PCA analizi ile grup bazlı yapısal ayrışma doğrulandı.
+\end{foundationbox}
+
+---
+
+## 7. Tarımı Şekillendiren "6 Anahtar"
+
+1. **Emek:** Kim çalışıyor?
+2. **Toprak:** Nerede ekiliyor?
+3. **Gübre:** Toprak beslenmesi.
+4. **Verim:** Üretim gücü.
+5. **Ticaret:** Küresel pazar.
+6. **Ekipman:** Makineler.
+
+\begin{foundationbox}
+\textbf{ANLAM:} Teknoloji payı azaltırken, verim ve toprak onu bir tabanda dengeler.
+\end{foundationbox}
+
+---
+
+## 8. "Dijital Bir Beyin" Tasarladık
+
+- Yapay Sinir Ağları (YSA).
+- Doğrusal olmayan karmaşık bağları çözer.
+- Verideki gizli desenleri (Thresholds) ve karmaşık etkileşimleri yakalar.
+
+\begin{foundationbox}
+\textbf{METODOLOJİ:} Karmaşık ve doğrusal olmayan ekonomik ilişkileri, geleneksel parametrik modellerden daha yüksek bir hassasiyetle simüle etmek amacıyla YSA mimarisi tercih edildi.
+\end{foundationbox}
+
+---
+
+## 9. Model Başarısı ve Kalıntı Analizi
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\includegraphics[width=\textwidth]{YSA_Tahmin_Son.png}
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{Residual_Plot.png}
+\end{column}
+\end{columns}
+
+\begin{foundationbox}
+\textbf{GÜVENİLİRLİK:} \%91.42 isabet oranı ve rastsal dağılan kalıntılar (Residuals), modelin yapısal geçerliliğini teyit etti.
+\end{foundationbox}
+
+---
+
+## 10. Değişken Karakteristiği: Marjinal Etki Analizi
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\includegraphics[width=\textwidth]{Olden_Analizi.png}
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{tarihsel_faktor_matrisi.png}
+\end{column}
+\end{columns}
+
+\begin{foundationbox}
+\textbf{TEKNİK BULGU:} Olden analizi ve etkileşim matrisi, teknolojinin sektör payını daraltırken verimin tabanı koruduğunu saptadı.
+\end{foundationbox}
+
+---
+
+## 11. Model Teşhisi: En İyi Uyum (Best-Fit)
+
+\begin{center}
+\small
+\begin{tabular}{|l|l|c|c|r|}
+\hline
+\textbf{Ülke} & \textbf{Yıl} & \textbf{Gerçek (\%)} & \textbf{Tahmin (\%)} & \textbf{Hata} \\ \hline
+Gürcistan & 2016 & 8,00 & 8,00 & 0,003 \\ \hline
+Estonya & 2018 & 2,04 & 2,05 & 0,003 \\ \hline
+Uruguay & 2015 & 6,13 & 6,13 & 0,005 \\ \hline
+Avusturalya & 2019 & 2,12 & 2,13 & 0,009 \\ \hline
+ABD & 2019 & 0,83 & 0,84 & 0,010 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{foundationbox}
+\textbf{ANALİZ:} YSA modelinin farklı kalkınma seviyelerindeki ülkelerde yüksek isabet oranı sergilediği görüldü.
+\end{foundationbox}
+
+---
+
+## 12. Değişkenlerin Marjinal Etkisi (SHAP)
+
+\begin{center}
+\includegraphics[width=0.8\textwidth]{shap_beeswarm.png}
+\end{center}
+
+\begin{foundationbox}
+\textbf{TEKNİK DAYANAK:} SHAP değerleri, verimlilik artışının yapısal tabanın seviyesini belirleyen temel direnç faktörü olduğunu doğruladı.
+\end{foundationbox}
+
+---
+
+## 12. Bilimsel Sağlamlık ve Kırılma Analizi
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+- **Eşbütünleşim:** Uzun dönemli denge.
+- **Durağanlık:** IPS ve LLC testleri.
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{yapisal_kirilma.png}
+\end{column}
+\end{columns}
+
+\begin{foundationbox}
+\textbf{GÜVENİLİRLİK:} Yapısal kırılmalar dikkate alınarak yapılan birim kök testleri, serilerin istatistiksel tutarlılığını teyit etti.
+\end{foundationbox}
+
+---
+
+## 13. Metodolojik Çakışma ve EKC
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\includegraphics[width=\textwidth]{ekc_yapi_taban_karsilastirma.png}
+\end{column}
+\begin{column}{0.4\textwidth}
+- **YSA:** Non-Linear.
+- **GMM:** Dinamik Nedensellik.
+\end{column}
+\end{columns}
+
+\begin{foundationbox}
+\textbf{ÖZET:} EKC ile uyumlu tarımsal daralma, teknolojik kısıtlar altında "Yapısal Taban" ile mühürlendi yerine teyit edildi.
+\end{foundationbox}
+
+---
+
+## 14. 2030 Projeksiyonu ve Senaryolar
+
+\begin{columns}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{projeksion_trend.png}
+\end{column}
+\begin{column}{0.5\textwidth}
+\includegraphics[width=\textwidth]{Senaryo_Analizi.png}
+\end{column}
+\end{columns}
+
+\begin{foundationbox}
+\textbf{VİZYON:} 2030 küresel tabanı \%6.13 olarak hesaplandı. Senaryo analizleri, farklı büyüme rotalarında bu tabanın korunacağını raporladı.
+\end{foundationbox}
+
+---
+
+## 14.5 Yapısal Teşhis: Aykırı Değerler (Outliers)
+
+\begin{center}
+\small
+\begin{tabular}{|l|l|c|c|r|}
+\hline
+\textbf{Ülke} & \textbf{Yıl} & \textbf{Gerçek (\%)} & \textbf{Tahmin (\%)} & \textbf{Sapma} \\ \hline
+Kırgızistan & 2000 & 34,19 & 10,40 & +23,79 \\ \hline
+Benin & 2018 & 28,06 & 14,72 & +13,34 \\ \hline
+Guatemala & 2000 & 22,82 & 11,96 & +10,87 \\ \hline
+Tanzanya & 2017 & 28,75 & 18,68 & +10,07 \\ \hline
+\end{tabular}
+\end{center}
+
+\begin{foundationbox}
+\textbf{ANALİZ:} Büyük sapmaların yapısal atalet ve post-sovyet geçiş şoklarıyla ilişkili olduğu görüldü.
+\end{foundationbox}
+
+---
+
+## 15. Gelir Grupları ve Vaka Analizi (Türkiye)
+
+\begin{columns}
+\begin{column}{0.6\textwidth}
+\includegraphics[width=\textwidth]{gelir_grubu_projesi.png}
+\end{column}
+\begin{column}{0.4\textwidth}
+\includegraphics[width=\textwidth]{turkiye_vaka_analizi.png}
+\end{column}
+\end{columns}
+
+\begin{foundationbox}
+\textbf{VAKA ANALİZİ:} Türkiye örneği, yapısal taban hipotezinin gelişmekte olan ekonomilerdeki direnç potansiyelini doğruladı.
+\end{foundationbox}
+
+---
+
+## 16. Stratejik Özet
+
+1. **Ders 1:** Verime odaklanın.
+2. **Ders 2:** Teknoloji daraltır ama kaliteyi artırır.
+3. **Ders 3:** Yapısal Taban bir "Sigorta Poliçesidir".
+
+---
+
+## 17. Güçlü Bir Gelecek İçin...
+
+- Tarım bir "gelecek" sektörüdür.
+- 2030 projeksiyonumuz, tarımın kalıcı yerini mühürlemektedir.
+- Dijitalleşme ile bu taban daha da güçlenecektir.
+
+---
+
+## 18. Teşekkürler
+
+\begin{center}
+\textbf{Prof. Dr. Hacı Bayram IŞIK}
+
+\vspace{1em}
+
+\textbf{Arş. Gör. Dr. Mehmet Gökhan ÖZDEMİR}
+
+\vspace{2em}
+
+*Akademik Bildiri ve Veri Seti İçin İrtibata Geçiniz*
+\end{center}

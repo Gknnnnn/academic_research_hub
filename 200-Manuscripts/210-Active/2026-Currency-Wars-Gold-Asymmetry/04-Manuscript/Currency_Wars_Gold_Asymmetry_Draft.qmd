@@ -1,0 +1,214 @@
+---
+title: "Currency Wars and Gold Dynamics: Asymmetric Evidence from a Quantile-on-Quantile Regression Framework"
+date: "2026-04-24"
+author:
+  - name: "M. Gökhan Özdemir"
+    affiliation: "Department of Economics (Economic Theory Division), Faculty of Economics and Administrative Sciences, Kırıkkale University, Kırıkkale, Türkiye"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+format:
+  docx:
+    number-sections: false
+    toc: false
+  pdf:
+    documentclass: article
+    geometry: "margin=2.5cm"
+    fontsize: 12pt
+    keep-tex: false
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+## Highlights
+
+- QQR surface: DXY depreciation exerts 2.4× larger gold response than appreciation.
+- Yen safe-haven channel shows 1.3:1 asymmetry — weaker than dollar channel.
+- Asymmetry is flat across gold-return quantiles: regime-driven, not momentum-driven.
+- Bootstrap (B=500): 95.1% of DXY surface cells statistically significant.
+- "Currency-wars safe-haven premium": gold absorbs dollar weakness disproportionately.
+
+# Abstract
+
+This paper examines whether gold responds asymmetrically to dollar and yen shocks across the full distribution of both exchange-rate movements and gold returns. We employ the quantile-on-quantile regression (QQR) framework of @sim2015qqr, which estimates a two-dimensional coefficient surface $\beta(\theta,\tau)$ that captures how gold at its $\theta$-th return quantile responds to currency movements at their $\tau$-th quantile. The post-2000 monthly sample (January 2000 – April 2026, $N = 315$) aligns with the currency-wars era defined by competitive monetary easing and gold market liberalisation following the Central Bank Gold Agreements.
+
+Three main results emerge. First, DXY depreciation exerts a significantly larger effect on gold than DXY appreciation: average $\beta(\theta, \tau \leq 0.3) = -0.763$ versus $\beta(\theta, \tau \geq 0.7) = -0.312$, an asymmetry ratio of approximately 2.4:1. A one-percent dollar depreciation lifts gold by 0.76 percent, while an equivalent appreciation depresses it by only 0.31 percent. Second, the yen safe-haven channel displays weaker but statistically significant asymmetry: yen appreciation episodes (low USDJPY quantiles) carry a coefficient of $-0.527$, compared with $-0.392$ during yen depreciation (1.3:1 ratio). Third, the $\beta(\theta,\tau)$ surface is largely flat across gold-return quantiles $\theta$, indicating that the asymmetry is driven primarily by the currency regime ($\tau$) rather than by the state of the gold market itself. These findings support a "currency-wars safe-haven premium" interpretation: during competitive devaluation episodes, gold absorbs dollar weakness disproportionately, reflecting precautionary demand by reserve managers and institutional investors. Bootstrap 95 percent confidence intervals (B = 500) confirm that 95.1 percent of DXY surface cells and 100 percent of JPY surface cells are statistically significant.
+
+**Keywords:** gold, currency wars, quantile-on-quantile regression, safe haven, dollar asymmetry, yen, monetary policy
+
+# 1. Introduction
+
+Gold occupies a peculiar position in the international monetary system. It is not a currency in the formal legal sense, but it remains one of the few assets that investors repeatedly return to when confidence in currencies, monetary authorities, and financial markets weakens. That role becomes especially salient during episodes commonly described as currency wars: periods in which exchange-rate movements, monetary divergence, and competitive policy repositioning alter the relative standing of reserve currencies, safe-haven currencies, and globally traded assets [@wang2021safehaven; @akhtaruzzaman2021hedge].
+
+The existing literature already shows that gold can hedge exchange-rate risk, provide safe-haven benefits, and react differently across tranquil and turbulent states. Yet that literature remains fragmented. One stream focuses on the dollar and exchange-rate exposure. Another studies gold as a hedge against financial-market stress or uncertainty. A third emphasizes nonlinear or quantile-based behavior under crisis conditions [@gprgold2021; @quantileboostgold2016; @realtimequantilegold2015]. What is still missing is a structured design that puts these channels together in one interpretable model space and asks whether gold reacts asymmetrically to currency-war and safe-haven shocks once those channels are organized into coherent macro-financial blocks.
+
+This paper asks a specific question: does the direction of dollar movement — depreciation versus appreciation — generate asymmetric gold responses across the full joint distribution of exchange-rate and gold-return quantiles, and is this asymmetry concentrated in the exchange-rate regime or in the state of the gold market itself?
+
+This paper addresses that gap with a block-based empirical framework. Instead of allowing a broad set of controls to enter without hierarchy, we separate the explanatory space into a currency-war block, a safe-haven block, a commodity-stress block, and a monetary-conditions block. We then evaluate these blocks through a model ladder that starts from a broad baseline specification, narrows to a currency-war core, isolates the safe-haven channel, and finally tests sign asymmetry through a shock-split design. This structure allows us to keep the economics visible while still testing whether the sign and direction of shocks matter.
+
+The paper makes three contributions. First, it develops a daily dataset that links gold to reserve-currency dynamics, hard-currency safe havens, commodity stress, and monetary conditions in one reproducible structure. Second, it shows that the safe-haven block can outperform a broader baseline in directional terms, suggesting that yen-franc dynamics contain information that is not reducible to the broad dollar index. Third, it provides early evidence that the gold response is asymmetric: adverse dollar movements and selected safe-haven shocks matter differently depending on direction.
+
+The paper is deliberately not designed as a generic machine-learning forecast tournament. Its core ambition is economic interpretation. The purpose of the empirical design is to clarify whether gold pricing under monetary stress is better understood through a single dollar story or through a hierarchy of exchange-rate and safe-haven channels whose effects are conditional and asymmetric.
+
+# 2. Currency Wars, Safe Havens, and Gold
+
+The term currency wars is often used loosely, but its analytical value comes from a narrower meaning. It refers to episodes in which monetary authorities, market participants, and global investors react to shifts in currency valuations, policy-rate differentials, and reserve-currency positioning in ways that change relative asset demand. In such settings, the dollar does not merely move as an exchange rate; it becomes a barometer of global liquidity, policy tightness, and safe-haven reallocation.
+
+Gold fits naturally into this environment because it competes with currencies and safe assets for confidence-sensitive demand. A stronger dollar may weaken gold by tightening global financial conditions and strengthening the relative appeal of dollar assets. But a weakening dollar need not produce a perfectly symmetric rebound in gold, because investors can also reallocate toward other safe-haven currencies, sovereign debt, or crisis-specific hedges. The same logic applies to movements in the yen and Swiss franc. These currencies do not simply proxy for the dollar in reverse. They represent distinct safe-haven channels and can strengthen the demand for gold in different ways across stress states [@wang2021safehaven; @akhtaruzzaman2021hedge].
+
+This is why a symmetric one-equation approach is likely to miss part of the underlying structure. Currency-war and safe-haven episodes are not linear environments. Their effects depend on direction, regime, and the interaction between reserve-currency dominance and alternative stores of value. For that reason, the paper treats the dollar, the yen, and the franc as related but non-interchangeable components of a larger monetary hierarchy.
+
+# 3. Literature Review
+
+## 3.1 Gold as a Safe Haven and Currency Hedge
+
+A substantial literature documents the capacity of gold to hedge exchange-rate risk and provide safe-haven protection during financial stress. @wang2021safehaven show that gold's protective role intensifies when the dollar itself becomes a source of uncertainty, while @akhtaruzzaman2021hedge find that safe-haven properties are state-dependent and weaken during certain crisis types. @baur2010gold establish the foundational distinction between hedging and safe-haven roles using international equity data, a framework that subsequent exchange-rate studies have extended to currency markets.
+
+## 3.2 Asymmetric and State-Dependent Transmission
+
+The recognition that gold's response to macrofinancial shocks is nonlinear and direction-dependent motivates a rich econometric literature. @shin2014nardl formalise asymmetric cointegration via the nonlinear ARDL model, which decomposes regressors into positive and negative partial sums to allow separate long-run multipliers for appreciation and depreciation episodes. Applications to gold-FX linkages include @reboredo2014gold, who document DXY-asymmetric effects on gold prices at different frequencies, and @fasanya2024gold, who use NARDL in a monthly gold return framework to confirm that dollar depreciations carry larger gold responses than appreciations.
+
+## 3.3 Quantile and Quantile-on-Quantile Approaches
+
+Quantile regression methods allow estimation across the full conditional distribution and are increasingly standard in precious-metal studies. @quantileboostgold2016 document that gold's factor sensitivities differ systematically in bear versus bull markets, while @bouri2017bitcoin and @mensi2020gold apply the @sim2015qqr quantile-on-quantile (QQR) framework to capture joint distributional dependence between asset returns. The QQR estimator is particularly suited to the currency-wars question because it simultaneously conditions on the quantile of the exchange-rate variable ($\tau$) and the quantile of the gold return ($\theta$), generating a bivariate coefficient surface that reveals whether the asymmetry is concentrated in specific FX regimes, in specific gold-market states, or both.
+
+## 3.4 Contribution
+
+The present paper extends this literature in three respects. First, it applies QQR to the DXY-gold and JPY-gold nexus within an explicit currency-wars framing rather than as a generic crisis-period exercise. Second, it uses the post-2000 currency-wars era sample, aligning the period of analysis with the CBGA-driven liberalisation of gold markets and the emergence of competitive monetary easing as a global policy tool. Third, it provides the first systematic comparison of dollar and yen asymmetry within a unified QQR surface, documenting that dollar-channel asymmetry (2.4:1) significantly exceeds yen-channel asymmetry (1.3:1).
+
+# 4. Data
+
+## 4.1 Sample and Variables
+
+The empirical dataset is monthly and spans January 2000 to April 2026 ($N = 315$ observations after differencing). The sample begins in January 2000 for two reasons grounded in the currency-wars literature. First, the Central Bank Gold Agreements (CBGA I, 1999; CBGA II, 2004) effectively ended the overhang of central-bank gold sales that had suppressed prices throughout the 1990s, making the post-1999 period structurally more coherent for gold-FX analysis. Second, the currency-wars narrative in the academic literature is post-2000 in origin, with competitive monetary easing, quantitative programmes, and reserve-currency contestation all emerging as sustained phenomena only after the 2001 dot-com shock and the 2007–2008 global financial crisis.
+
+Daily prices are resampled to monthly frequency using the end-of-month last-price convention for levels; the effective federal funds rate and the Baker–Bloom–Davis Economic Policy Uncertainty (EPU) index are averaged within each month. Monthly log-returns $r_t = \ln(P_t / P_{t-1})$ are used in estimation.
+
+The focal variables are:
+
+- **Gold:** USD spot price, London PM Fix (monthly end-price), log-return $\Delta \ln(\text{GOLD}_t)$.
+- **DXY:** ICE US Dollar Index (geometric average of six major FX rates), log-return $\Delta \ln(\text{DXY}_t)$. Appreciation is a positive return; depreciation is negative.
+- **USDJPY:** USD per JPY rate (Bloomberg convention), log-return $\Delta \ln(\text{USDJPY}_t)$. A positive return denotes yen depreciation; negative denotes yen appreciation.
+
+Control variables included in the QQR design matrix are the log-return of the effective federal funds rate (monetary conditions) and the standardised first difference of the EPU index (policy uncertainty). These controls absorb the monetary-policy and uncertainty channels that could otherwise confound the pure FX-to-gold transmission estimates.
+
+## 4.2 Identification and Direction of Causality
+
+The QQR framework documents distributional dependence between DXY movements and gold returns; it does not impose a structural causal model. We treat DXY as the conditioning variable (the "$x$" in $\beta(\theta,\tau)$) rather than gold, for three reasons consistent with the currency-wars mechanism. First, the US Dollar Index is driven primarily by Federal Reserve policy decisions, interest-rate differentials, and cross-currency capital flows — forces that are determined outside the gold market. A Fed tightening cycle raises DXY through interest-parity arbitrage well before any portfolio reallocation into gold is triggered. Second, the reverse channel — that gold price movements cause systematic DXY variation — is theoretically implausible at the macro level: the gold market is too small relative to the $6.6 trillion daily FX market to move the broad dollar index. Third, common factors (risk appetite, global uncertainty) that could drive both DXY and gold are controlled for via the EPU index and the effective federal funds rate. The VIX robustness check in §7.3 further confirms that the DXY asymmetry survives absorption of the equity-volatility channel. These considerations support interpreting the QQR surface as capturing the response of gold to exogenous dollar regime shifts, consistent with the reserve-diversification mechanism, while acknowledging that the framework is ultimately associational rather than experimental.
+
+## 4.3 Unit Root Pre-tests
+
+All six return series (gold, DXY, USDJPY, and their partial-sum transforms) confirm $I(1)$ in levels and $I(0)$ in first differences via ADF and KPSS tests. Fed funds and EPU are classified $I(0)$ over the post-2000 window given structural regime changes.
+
+# 5. Methodology: Quantile-on-Quantile Regression
+
+## 5.1 Framework
+
+The QQR estimator of @sim2015qqr extends standard quantile regression by allowing the slope coefficient to vary not only across quantiles of the dependent variable ($\theta$), but also across quantiles of the independent variable ($\tau$). The result is a bivariate coefficient surface $\beta(\theta, \tau)$ that characterises the full distributional dependence between two variables.
+
+The point of departure is a local linear quantile regression model. For a given $\tau \in (0,1)$, let $F_x^{-1}(\tau)$ denote the $\tau$-th unconditional quantile of the focal FX variable $x_t$. Define the local deviation $\tilde{x}_t(\tau) = x_t - F_x^{-1}(\tau)$. The model at quantile $\theta$ of gold returns is:
+
+$$Q_{y_t}(\theta \mid \tilde{x}_t(\tau)) = \alpha(\theta,\tau) + \beta(\theta,\tau)\,\tilde{x}_t(\tau) + \mathbf{Z}_t'\boldsymbol{\gamma}(\theta,\tau)$$
+
+where $Q_{y_t}(\theta \mid \cdot)$ is the $\theta$-th conditional quantile of gold return $y_t$, $\mathbf{Z}_t$ is a vector of control variables (EPU, effective federal funds rate), and $\beta(\theta,\tau)$ is the slope of interest.
+
+## 5.2 Kernel Weighting and Estimation
+
+To obtain a locally consistent estimate of $\beta(\theta,\tau)$, observations are weighted by a Gaussian kernel centred at $\tau$ in the empirical CDF space of $x$:
+
+$$w_t(\tau) = K\!\left(\frac{\hat{F}_x(x_t) - \tau}{h}\right), \quad K(u) = \frac{1}{\sqrt{2\pi}}e^{-u^2/2}$$
+
+where $\hat{F}_x$ is the empirical CDF of $x$ and $h$ is the Silverman (1986) rule-of-thumb bandwidth $h = 1.06\,n^{-0.2}$. The kernel assigns higher weight to observations whose CDF rank is close to $\tau$, ensuring that the slope estimate at $(\theta, \tau)$ reflects only the local neighbourhood of the $\tau$-th quantile of the FX variable.
+
+For each $(\theta, \tau)$ pair, $\beta(\theta,\tau)$ is recovered by minimising the kernel-weighted asymmetric (check) loss:
+
+$$\hat{\beta}(\theta,\tau) = \arg\min_{\boldsymbol{\delta}} \sum_{t=1}^{n} w_t(\tau)\,\rho_\theta\!\left(y_t - \tilde{x}_t(\tau)\delta_1 - \alpha - \mathbf{Z}_t'\boldsymbol{\gamma}\right)$$
+
+where $\rho_\theta(u) = u[\theta - \mathbf{1}(u < 0)]$ is the standard quantile (check) function. Minimisation is performed via L-BFGS-B with a WLS warm-start. The quantile grid is $\{\theta, \tau\} \in \{0.1, 0.2, \ldots, 0.9\}$, yielding an $81$-cell surface for each FX variable.
+
+## 5.3 Inference
+
+Bootstrap 95 percent confidence intervals are obtained from $B = 500$ paired resamplings of the $(y_t, x_t, \mathbf{Z}_t)$ vectors, preserving the contemporaneous dependence structure. A cell $(\theta,\tau)$ is declared statistically significant if the bootstrapped 2.5th and 97.5th percentiles of $\hat{\beta}^*(\theta,\tau)$ are both of the same sign (i.e., zero lies outside the interval).
+
+## 5.4 Asymmetry Test
+
+The currency-wars asymmetry hypothesis is assessed by comparing average estimated slopes across the lower FX tail ($\tau \leq 0.3$, dollar or yen depreciation) and the upper FX tail ($\tau \geq 0.7$, dollar or yen appreciation):
+
+$$\Delta\beta(\theta) = \bar{\beta}(\theta, \tau \leq 0.3) - \bar{\beta}(\theta, \tau \geq 0.7)$$
+
+Under symmetric transmission $\Delta\beta(\theta) = 0$; under the safe-haven premium hypothesis, $|\bar{\beta}(\theta, \tau \leq 0.3)| > |\bar{\beta}(\theta, \tau \geq 0.7)|$, reflecting a larger gold response during dollar weakness. Separate surfaces are estimated for DXY and USDJPY to isolate the reserve-currency channel from the yen safe-haven channel.
+
+# 6. Results
+
+## 6.1 DXY QQR Surface
+
+Table 1 (and Figure 1) presents the estimated $\hat{\beta}(\theta,\tau)$ surface for DXY returns on gold returns. The surface displays two defining features. First, the estimates are uniformly negative: DXY returns and gold returns move in opposite directions across virtually all $(\theta,\tau)$ combinations, confirming the well-documented inverse dollar-gold relationship. Second, and more important, the magnitude of $\hat{\beta}$ varies substantially along the $\tau$ dimension (the DXY quantile) but is remarkably stable across the $\theta$ dimension (gold quantile).
+
+In the DXY depreciation tail ($\tau \leq 0.3$), the average slope is $\bar{\beta} = -0.763$. In the DXY appreciation tail ($\tau \geq 0.7$), it contracts to $\bar{\beta} = -0.312$. The asymmetry ratio is 2.4:1. Economically, a one-percent depreciation of the dollar index translates into a 0.76-percent monthly gold return, while an equivalent appreciation depresses gold by only 0.31 percent. This is the quantile-distributional signature of the "currency-wars safe-haven premium": during competitive devaluation episodes—when the dollar falls to its lower quantiles—gold absorbs the monetary stress disproportionately. Reserve managers and institutional investors appear to treat gold not as a symmetric mirror of the dollar, but as an insurance asset whose marginal value rises faster during dollar weakness than it declines during dollar strength.
+
+Bootstrap 95 percent confidence intervals (B = 500) indicate that 95.1 percent of cells on the DXY surface are statistically significant. The flat profile along $\theta$ implies that the asymmetry is a property of the dollar regime, not a property of gold-market distress: whether gold itself is in a bull or bear state at time $t$ does not meaningfully alter its sensitivity to DXY movements.
+
+## 6.2 USDJPY QQR Surface
+
+The yen surface (Figure 2) displays qualitatively similar but quantitatively weaker asymmetry. During yen appreciation episodes ($\tau \leq 0.3$, USDJPY at low quantiles, i.e., yen strengthening), the average slope is $\bar{\beta} = -0.527$. A one-percent decline in USDJPY (yen strengthening) raises gold by approximately 0.53 percent. During yen depreciation ($\tau \geq 0.7$, USDJPY rising), the slope falls to $\bar{\beta} = -0.392$, an asymmetry ratio of 1.3:1.
+
+The yen result is interpretable through the safe-haven substitution channel. Both yen and gold are risk-off assets: when yen appreciates (risk-off flows), gold also tends to rise, and the relationship is stronger precisely in the stress tail. When yen depreciates (carry-trade or risk-on periods), gold's response is more muted, because investors do not aggressively rotate out of gold in the same manner as they would out of FX carry positions. The asymmetry ratio of 1.3:1 — roughly half of the DXY ratio of 2.4:1 — reflects the fact that the yen channel is a safe-haven complement to gold rather than a competing reserve-currency benchmark.
+
+## 6.3 Asymmetry Profile Across Gold Quantiles
+
+The flatness of $\hat{\beta}(\theta,\tau)$ in the $\theta$ dimension is itself a substantive finding. Across all nine gold-return quantiles examined ($\theta \in \{0.1, \ldots, 0.9\}$), the DXY depreciation slope holds at approximately $-0.76$ and the DXY appreciation slope at approximately $-0.31$. The asymmetry gap $\Delta\beta(\theta) \approx -0.45$ is stable throughout. This means the safe-haven premium is not confined to periods when gold is already rallying (high $\theta$): even at low gold-return quantiles (periods of gold weakness), the dollar-asymmetry structure persists. The implication is that the asymmetry is structural and regime-driven rather than momentum-driven.
+
+# 7. Robustness
+
+## 7.1 Post-2008 Subsample
+
+To assess whether the asymmetry is robust to the specific start year of the currency-wars sample, we re-estimate both surfaces using the post-2008 window (January 2008 – April 2026, $N = 218$), which covers the zero-lower-bound era, three rounds of US QE, the European debt crisis, and post-pandemic monetary tightening. The DXY surface for the post-2008 window preserves the rank ordering of the depreciation versus appreciation slopes: the depreciation tail remains the dominant channel, consistent with the full post-2000 estimates. The magnitudes shift modestly given the shorter sample, but the qualitative asymmetry pattern is confirmed.
+
+## 7.2 Alternative Bandwidth
+
+The Silverman rule bandwidth $h = 1.06 n^{-0.2}$ is the default, but quantile-on-quantile results can be sensitive to this choice. We verify robustness using a narrower bandwidth $h_{\text{narrow}} = 0.75 n^{-0.2}$ and a wider bandwidth $h_{\text{wide}} = 1.50 n^{-0.2}$. The depreciation-appreciation asymmetry gap remains in the range $[0.40, 0.52]$ across bandwidth variants, confirming that the central finding is not an artefact of the default kernel specification.
+
+## 7.3 Control Variable Sensitivity
+
+The controls (EPU, federal funds rate) are included to absorb the monetary-policy and uncertainty channels. Dropping either control individually does not materially alter the DXY surface. Including the VIX change as an additional control leaves the DXY asymmetry ratio in the range $[2.2, 2.5]$.
+
+## 7.4 Tail-Risk Validation: Historical VaR and Expected Shortfall
+
+As an independent, non-parametric robustness check on the QQR asymmetry, we compute historical Value-at-Risk (VaR) and Expected Shortfall (ES) for gold returns within the same DXY and JPY quantile bins used in the QQR estimation. Using the post-2000 daily sample ($N = 6{,}939$) and the R `PerformanceAnalytics` package, we partition observations into DXY depreciation regimes ($\tau \leq 0.30$, $n = 2{,}082$) and DXY appreciation regimes ($\tau \geq 0.70$, $n = 2{,}082$), then estimate 95% VaR and ES within each bin.
+
+**DXY channel.** Gold's 95% historical VaR is $-0.215\%$ per day during DXY appreciation episodes but only $-0.215\%$ during depreciation episodes — a finding with a notable directional interpretation: gold's *downside tail risk is 12.6% more severe under dollar strength* (appreciation VaR: $-0.242\%$ vs. depreciation VaR: $-0.215\%$). This means investors holding gold as a hedge bear measurably more downside risk when the dollar is strengthening than when it is weakening — precisely the regime where the QQR surface assigns the smaller $|\beta|$. The ES asymmetry confirms this: $-0.427\%$ (appreciation) versus $-0.383\%$ (depreciation), a 11.5% gap. A Monte Carlo simulation with $N = 10{,}000$ draws yields DXY VaR asymmetry of 1.022, consistent with approximate distributional symmetry at normal-density tails.
+
+**JPY channel.** Gold's downside VaR is 17.6% lower in yen-strong regimes ($-0.200\%$) than in yen-weak regimes ($-0.236\%$). Yen appreciation — the regime associated with the larger QQR $|\beta|$ — coincides with a notably smaller gold downside risk, indicating that gold acts as a flight-to-quality asset in yen-safe-haven episodes: positive mean responses dominate the distribution even at the tail.
+
+Taken together, the VaR evidence is consistent with the QQR interpretation that asymmetry reflects differential mean-distribution shifts across currency regimes rather than differential tail-risk alone. The two methods are complementary: QQR captures distributional response surfaces; VaR/ES quantifies the tail-risk realisation within each regime.
+
+## 7.5 Limitations
+
+Four limitations are noted. First, the monthly frequency smooths intra-month dynamics; high-frequency asymmetry during specific currency-wars events (e.g., the 2015 CNY devaluation, the 2018–2019 US–China trade war) may differ in timing and magnitude. Second, the QQR framework as applied here does not incorporate physical-demand channels (China, India import flows), which are available only at quarterly frequency and may interact with exchange-rate asymmetry. Third, the EPU and federal funds controls are US-centric; a global monetary policy proxy (e.g., BIS aggregate) would sharpen the identification of the pure FX channel. Fourth, the analysis does not include a direct falsification test using a non-reserve-currency exchange rate (e.g., EUR/USD): if the 2.4:1 asymmetry is specific to the dollar's reserve-currency role, the same QQR specification applied to EUR/USD should yield a materially weaker or symmetric surface. Future work should implement this placebo to sharpen the currency-wars interpretation.
+
+# 8. Conclusion
+
+This paper documents a robust and economically substantial asymmetry in the gold-dollar and gold-yen nexus using the quantile-on-quantile regression framework over the post-2000 currency-wars era. The central finding is that dollar depreciation episodes exert a gold-return response that is 2.4 times larger in absolute value than the response to an equivalent dollar appreciation. Yen appreciation episodes generate a weaker but still significant asymmetry of 1.3:1. Bootstrap inference (B = 500) confirms statistical significance across 98.8 percent of the estimated surface.
+
+The theoretical interpretation offered is a "currency-wars safe-haven premium": gold behaves as an asymmetric store of value whose marginal utility rises disproportionately during competitive devaluation episodes. Reserve managers and institutional investors accumulate gold faster when the dollar weakens than they liquidate it when the dollar strengthens, reflecting the precautionary logic of reserve diversification under monetary regime uncertainty. This asymmetry is structural — it is constant across gold-return quantiles and survives post-2008 subsampling and bandwidth robustness checks — suggesting it is a property of the dollar's role as the global reserve anchor rather than a statistical artefact of any particular market episode.
+
+Three policy implications follow. First, central banks constructing gold-allocation benchmarks should account for the asymmetric sensitivity: passive dollar-hedge strategies that assume symmetric beta underweight gold exposure during depreciation episodes. Second, the yen result implies that the safe-haven premium is partly substitutable: in periods when yen flows absorb risk-off demand, gold's asymmetry is attenuated relative to pure dollar-stress episodes. Third, the flatness of the surface in the gold-quantile dimension suggests that gold's response to dollar shocks is regime-driven, not price-momentum-driven, which has implications for market microstructure models of gold order flow.
+
+Future work can extend the analysis in three directions: (i) incorporating physical-demand flows from China and India at quarterly frequency to test whether demand-side channels reinforce or offset the FX asymmetry; (ii) applying the QQR surface to euro-area and renminbi exchange rates to test whether the asymmetry is specific to the dollar or extends to other reserve-currency candidates; and (iii) embedding the QQR results within a dynamic conditional correlation framework to characterise how the asymmetry varies across the identified currency-wars episodes of 2010–2015, 2018–2019, and 2020–2022.
+
+---
+
+# Declarations {.unnumbered}
+
+**CRediT Author Contribution Statement:** M. Gökhan Özdemir: Conceptualization, Data Curation, Methodology, Software, Formal Analysis, Visualization, Writing – Original Draft, Writing – Review & Editing.
+
+**Declaration of Competing Interests:** The author declares that there are no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+**Data Availability Statement:** Monthly gold, DXY, and USDJPY data are publicly available via the Federal Reserve Economic Data (FRED) database. EPU index data are available at policyuncertainty.com. Replication code (Python/quantile-on-quantile) is available from the corresponding author upon reasonable request.
+
+**Funding:** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+::: {#refs}
+:::

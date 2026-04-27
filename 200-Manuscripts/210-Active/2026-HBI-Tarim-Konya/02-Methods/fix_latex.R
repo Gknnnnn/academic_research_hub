@@ -1,0 +1,5 @@
+lines <- readLines('MGO_HBI_Tarim_Konya_v2.qmd')
+lines <- gsub('cat\\(\"\\\\n', 'cat(\"', lines)
+lines <- gsub('\\\\n\"\\)', '\")', lines)
+lines <- gsub('\\\\n\",', '\",', lines)
+writeLines(lines, 'MGO_HBI_Tarim_Konya_v2.qmd')

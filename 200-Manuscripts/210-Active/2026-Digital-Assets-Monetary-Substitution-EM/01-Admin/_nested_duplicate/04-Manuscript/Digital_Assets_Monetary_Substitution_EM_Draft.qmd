@@ -1,0 +1,210 @@
+---
+title: "Macro Fragility, Digital Assets, and Monetary Substitution in Emerging Markets: A Quantile Panel Approach with a Proxy Evaluation"
+author:
+  - "Onur Bilgin"
+  - "Zaim Reha Yasari"
+  - "Mehmet Gokhan Ozdemir"
+format:
+  pdf:
+    documentclass: article
+    fontsize: 12pt
+    geometry: margin=1in
+    keep-tex: false
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+# Abstract
+
+This paper examines whether digital-asset demand rises systematically with monetary fragility in emerging markets and whether attention-based proxies can detect that channel empirically. Using a monthly panel of four large emerging economies --- Brazil, Mexico, India, and South Africa --- we build a staged empirical design that separates the macro fragility layer from the digital-asset measurement layer. The macro layer combines exchange-rate depreciation, global dollar pressure, monetary conditions, and country-level macro stability indicators drawn from the World Bank and the Global Macro Database. The digital-asset layer adds country-level Google Trends search interest for Bitcoin and stablecoins as proxy measures of substitution demand.
+
+The results reveal a clear threshold structure. Dollar pressure remains the dominant force across all specifications, but monetary instability indicators --- particularly M2 instability and reserve adequacy --- emerge as significant drivers specifically in the upper tail of the depreciation distribution. At the ninetieth quantile, M2 instability carries a positive and statistically significant coefficient, and reserve adequacy changes carry a negative and significant coefficient, implying that macro fragility concentrates its effect in extreme depreciation episodes. This pattern holds across both the World Bank sample and the longer Global Macro Database panel. The digital-asset layer, by contrast, yields no statistically significant coefficients across any specification or quantile. Country-level Google Trends proxies for Bitcoin and stablecoin interest do not add explanatory content once the macro fragility baseline is controlled.
+
+The contribution is twofold. First, the paper documents that monetary substitution pressure in emerging markets follows a nonlinear, tail-concentrated pattern driven by recognizable macro fundamentals. Second, it establishes that attention-based proxies remain empirically insufficient to detect the digital-asset substitution channel, and it identifies what more precise measurement would require. These findings are informative for the design of future cryptoization research and for the calibration of monetary-substitution models in emerging economies.
+
+**Keywords:** emerging markets, monetary substitution, digital assets, cryptocurrency, exchange rate, quantile regression, panel data
+
+**JEL Codes:** F31, E41, G15, O16
+
+---
+
+# 1. Introduction
+
+When domestic currencies weaken, residents and firms in emerging markets face a choice that has been studied for decades under the heading of currency substitution or dollarization: hold foreign currency, adjust portfolio allocations, or tolerate the erosion of domestic purchasing power [@baurmcdermott2010international]. The arrival of digital assets --- Bitcoin, stablecoins pegged to the dollar, and broader cryptocurrency ecosystems --- adds a new option to that menu. Rather than acquiring physical dollars or wiring capital through regulated channels, households and small businesses can now acquire dollar-equivalent assets through digital wallets at relatively low transaction cost. Whether this option is actually being exercised at scale, and whether it responds systematically to monetary fragility, is the core question of this paper.
+
+The question is not merely descriptive. Monetary authorities in emerging markets have begun treating digital-asset adoption as a potential threat to policy transmission. If residents can escape domestic monetary conditions by moving into stablecoins, the effectiveness of interest-rate policy and reserve management weakens. The IMF and several central banks have flagged this concern in the context of countries with high inflation or persistent exchange-rate volatility [@credittransmission2020]. Yet the empirical evidence on whether this channel operates in practice remains fragmented and contested. Most studies focus on a single country, use aggregate global data, or conflate speculative investment in cryptocurrency with genuine monetary substitution behavior.
+
+This paper contributes to that debate by constructing a reproducible monthly panel for four large emerging economies --- Brazil, Mexico, India, and South Africa --- and testing two empirical hypotheses. The first is that macro fragility variables predict exchange-rate depreciation with a nonlinear, tail-concentrated structure. The second is that country-level digital-asset attention proxies add explanatory content to the fragility model once the macro baseline is in place.
+
+The empirical design proceeds in stages. We begin with a baseline specification that captures the dominant external dollar channel and standard monetary control variables. We then augment that specification with macro stability variables from the World Bank and the Global Macro Database, including M2 instability, reserve adequacy, and inflation measures. Finally, we add country-level Google Trends search interest for Bitcoin and stablecoins as proxy measures of digital substitution demand, and we evaluate these proxies across the full conditional distribution of exchange-rate depreciation using quantile regression.
+
+Three findings shape the paper's contribution. First, the external dollar channel dominates every specification. The coefficient on global dollar change is positive, large, and significant at conventional levels across all quantiles and all data sources. This reflects the well-documented sensitivity of emerging-market exchange rates to global dollar conditions [@goldusdextreme2024]. Second, macro fragility indicators exhibit a threshold structure: M2 instability and reserve adequacy become significant only in the upper tail of the depreciation distribution. At the ninetieth quantile, an increase in M2 instability is associated with a material and statistically significant amplification of currency depreciation, while an improvement in reserve adequacy offsets it. This pattern is consistent with the theoretical prediction that monetary instability triggers substitution pressure in extreme episodes rather than continuously. Third, and most importantly for the cryptoization debate, country-level digital-asset attention proxies add no explanatory content in any specification. Google Trends-based Bitcoin and stablecoin interest variables yield coefficients close to zero and far from statistical significance across all quantiles.
+
+The paper's measurement contribution is to document this null result with precision and interpret it carefully. The absence of a detectable Google Trends effect does not imply that digital substitution is absent. It implies that search-interest proxies are too noisy and too aggregate to capture the substitution channel at the monthly panel frequency. The paper maps out what a stronger proxy design would require, including country-specific exchange volume, on-chain transaction data, and wallet creation rates, and positions this as the necessary next step for the literature.
+
+The remainder of the paper is organized as follows. Section 2 develops the theoretical background linking monetary fragility to digital-asset demand. Section 3 reviews the relevant literature. Section 4 describes the data and panel construction. Section 5 presents the empirical strategy. Section 6 reports the results. Section 7 discusses the measurement limitations. Section 8 concludes.
+
+---
+
+# 2. Monetary Fragility, Dollar Pressure, and Digital Substitution
+
+The traditional monetary substitution literature begins from a simple premise: when the domestic currency loses value faster than alternative stores of value, rational agents substitute toward those alternatives [@credittransmission2020]. In the classical form of the argument, the alternative is the US dollar or another hard currency. The empirical regularity is that dollarization tends to increase during high-inflation or high-depreciation episodes and is persistent even after stabilization, a phenomenon known as dollarization hysteresis [@dollarization2025].
+
+Digital assets, and stablecoins in particular, fit this framework in a modified way. A stablecoin pegged to the dollar provides the same nominal stability as holding physical dollars but with lower barriers to entry. For a resident in a country with capital controls or limited access to formal dollar-denominated accounts, a digital stablecoin acquired through a peer-to-peer exchange platform is a closer substitute than traditional dollarization channels [@dedollarization2024]. Bitcoin occupies a different position in this taxonomy: it is not a stable-value instrument, but it may still attract demand as a hedge against monetary collapse in countries where confidence in both the central bank and the banking system has eroded.
+
+The key empirical prediction of this framework is that digital-asset demand should correlate with monetary fragility indicators. High inflation, rapid depreciation, and falling reserve adequacy should each predict elevated digital-asset interest, particularly in the upper tail of the depreciation distribution where the substitution motive is strongest. The threshold structure arises because agents face fixed costs of learning about and adopting digital assets. Below some level of monetary stress, those costs are not worth bearing. Above that level, the perceived benefit of substitution exceeds the cost, and adoption accelerates. This is why quantile regression is the appropriate empirical framework: a linear average effect will miss the threshold structure if it exists only at the extremes.
+
+The external dollar channel also enters this framework, but in a different capacity. A strengthening dollar raises the domestic cost of all dollar-denominated assets, including digital substitutes. It also reflects tighter global financial conditions, which can trigger capital outflows from emerging markets and amplify domestic depreciation. The net effect of dollar appreciation on digital-asset demand in emerging markets is therefore ambiguous in theory: dollar strength may increase the appeal of dollar-pegged stablecoins as a hedge, but it simultaneously makes acquiring them more expensive. This theoretical ambiguity motivates treating the dollar channel as a control rather than a variable of primary interest.
+
+---
+
+# 3. Literature Review
+
+The literature relevant to this paper spans three streams: monetary substitution and dollarization in emerging markets, empirical evidence on cryptoization and digital-dollar demand, and the dynamics of emerging-market fragility under external shocks.
+
+## 3.1 Monetary Substitution and Dollarization
+
+The classical monetary substitution literature documents that domestic currency demand becomes elastic with respect to the expected return differential between domestic and foreign currency when confidence in monetary policy deteriorates. The persistence of dollarization after stabilization is well established: once agents have adopted dollar-denominated accounts and pricing, the cost of reverting is high, and partial dollarization can persist even after inflation has returned to normal levels [@dollarization2025; @dedollarization2024].
+
+More recent work has revisited the question of whether the dollar's reserve role is genuinely entrenched or susceptible to erosion. The evidence on de-dollarization is mixed. While some central banks have diversified reserves modestly, the dollar remains dominant in invoicing, cross-border finance, and safe-haven demand. This creates a paradox for digital-substitution arguments: the dollar is simultaneously the benchmark against which emerging-market fragility is measured and the asset toward which substitution flows.
+
+## 3.2 Cryptoization and Digital-Dollar Demand
+
+The empirical literature on digital-asset substitution in emerging markets is still developing. Several studies document that cryptocurrency adoption correlates with high inflation and currency depreciation at the country level, using survey data or aggregate adoption indices. However, these studies face identification challenges: periods of high inflation also tend to involve capital-account restrictions, political instability, and distorted financial markets, making it difficult to attribute cryptocurrency adoption specifically to the monetary substitution motive.
+
+A more disciplined strand of this literature uses high-frequency transaction data to ask whether on-chain activity rises following depreciation events. The evidence is more supportive in countries with severe inflation histories (Venezuela, Turkey, Argentina) than in more moderate cases. This suggests that the substitution channel requires a threshold level of monetary stress to activate, consistent with the theoretical framework developed in Section 2.
+
+Studies using Google Trends or Wikipedia page views as proxies for digital-asset interest have generally found weak and unstable associations with macro fundamentals. The main criticism of these proxies is that they conflate speculative interest in cryptocurrency prices with genuine demand for monetary substitutes. A sharp rise in Bitcoin search interest during a bull market does not indicate monetary substitution; it may simply reflect price attention. Separating the two motives requires proxies that can be anchored to a specific adoption event or a specific use case, such as stablecoin acquisition during a currency crisis.
+
+## 3.3 Emerging-Market Fragility Under External Shocks
+
+The third stream examines how global financial conditions transmit to emerging-market exchange rates. The consensus finding is that the global dollar cycle is the dominant driver of short-run EM exchange-rate dynamics. Dollar appreciation, Fed tightening cycles, and global risk-off episodes all generate depreciation pressure across the emerging-market universe, often independently of domestic fundamentals [@goldusdextreme2024; @credittransmission2020].
+
+Within this literature, a more recent strand focuses on whether domestic macro fundamentals provide a buffer or amplifier in the transmission of external shocks. Countries with stronger reserve positions, lower inflation, and more stable monetary conditions tend to experience smaller depreciation during global dollar appreciations. This heterogeneity motivates including domestic fragility indicators alongside global conditions in any panel regression.
+
+## 3.4 The Paper's Gap
+
+No existing study combines a reproducible four-country monthly panel, an explicit evaluation of attention-based proxy quality, and a quantile approach that can detect the threshold structure implied by theory. This paper fills that gap by building the analysis in layers and being explicit about what the current proxy generation can and cannot identify.
+
+---
+
+# 4. Data and Panel Construction
+
+## 4.1 Country Selection
+
+The analysis covers Brazil, Mexico, India, and South Africa. These four countries were selected to represent large, regionally diverse emerging economies with continuously available daily and monthly exchange-rate data and sufficient financial-market depth to make digital-asset adoption a plausible empirical question. Countries with severe financial repression (Venezuela, Argentina) or extremely thin formal financial markets were excluded from the baseline because the measurement environment for digital-asset activity is particularly noisy in those contexts. The panel can be extended to additional countries once the proxy quality is validated in the baseline.
+
+## 4.2 Exchange Rates and Dollar Pressure
+
+The primary dependent variable is the monthly percentage change in the bilateral exchange rate against the US dollar, measured as depreciation (a positive value indicates a weakening of the domestic currency). Exchange-rate data are sourced from the Federal Reserve Economic Data (FRED) database. The global dollar pressure variable is the monthly change in the Federal Reserve's broad-dollar index (DXY), also from FRED. The federal funds rate level serves as the monetary-conditions proxy for the external environment.
+
+## 4.3 Macro Fragility Indicators
+
+Two sets of macro fragility indicators are used. The first set draws on the World Bank World Development Indicators: annual CPI inflation (converted to a monthly proxy), the M2-to-GDP ratio (used to construct an M2 instability measure as the absolute year-on-year rate of change), and reserves in months of imports (used to construct a reserve adequacy change variable). These indicators cover the period from the mid-1990s to 2024 for all four countries.
+
+The second set draws on the Global Macro Database [@credittransmission2020], which provides harmonized historical series for M2, inflation, and central bank rates across a large cross-section of countries. The Global Macro Database series extend the panel back to the 1990s with consistent source-harmonization methodology, providing a robustness check on the World Bank indicators. Central bank rate changes from the Global Macro Database serve as an additional monetary-conditions indicator.
+
+## 4.4 Digital-Asset Attention Proxies
+
+Country-level Google Trends search interest indices for Bitcoin (using the keyword "bitcoin" in Brazil and South Africa, "bitcoin" and "criptomoeda" in Brazil, "bitcoin" and "criptomoneda" in Mexico) and for stablecoins (using "tether" and "USDT") were collected for the period 2016 to 2024. The indices are normalized on a scale of 0 to 100 by Google and represent relative search interest within each country over the selected period. Monthly averages were computed from weekly data. First differences of the monthly indices are used in the regressions to capture changes in attention rather than levels, which are heavily influenced by trend growth in cryptocurrency awareness.
+
+These proxies have known limitations. They measure search interest rather than actual adoption or transaction volume. A rise in Bitcoin search interest during a cryptocurrency price rally may reflect speculative attention rather than monetary substitution demand. The analysis below is designed to evaluate these proxies empirically rather than to assume their validity.
+
+## 4.5 Monetary Substitution Pressure Index
+
+A composite monetary substitution pressure index is constructed as the sum of the absolute values of monthly exchange-rate depreciation, global dollar change, and a scaled federal funds rate change. This index serves as an alternative dependent variable in selected specifications to test whether macro pressure co-moves in a way consistent with an early-stage substitution dynamic. The index is an ordinal measure of aggregate fragility rather than a structural measure of substitution.
+
+---
+
+# 5. Empirical Strategy
+
+## 5.1 Baseline OLS Specification
+
+The baseline specification regresses monthly exchange-rate depreciation on the global dollar change, the federal funds rate change, a lagged dependent variable, country fixed effects implemented as binary indicators, and the macro fragility indicators:
+
+$$
+\Delta e_{it} = \alpha + \beta_1 \Delta \text{DXY}_t + \beta_2 \Delta \text{FFR}_t + \beta_3 \Delta e_{i,t-1} + \beta_4 \text{M2\_instab}_{it} + \beta_5 \text{Res\_chg}_{it} + \sum_j \delta_j D_{ij} + \varepsilon_{it}
+$$
+
+where $\Delta e_{it}$ is the depreciation of country $i$'s currency in month $t$, $\text{M2\_instab}_{it}$ is the absolute year-on-year M2 growth change, $\text{Res\_chg}_{it}$ is the year-on-year change in reserve adequacy, and $D_{ij}$ are country fixed-effect dummies. Heteroskedasticity-consistent (HC3) standard errors are used throughout. The baseline specification is estimated with and without the digital-asset attention proxies.
+
+## 5.2 Quantile Regression
+
+The key empirical innovation is the application of quantile regression at $q \in \{0.25, 0.50, 0.75, 0.90\}$. This allows the coefficients on macro fragility variables to vary across the conditional distribution of depreciation. If the threshold structure implied by monetary-substitution theory is present, we expect the coefficients on M2 instability, inflation, and reserve adequacy to be larger in absolute value at high quantiles ($q = 0.75, 0.90$) than at low quantiles. The digital-asset proxies are included in selected quantile specifications to test whether their relationship with depreciation also varies across the distribution.
+
+## 5.3 Panel ARDL with One Lag
+
+A panel ARDL specification augments the baseline with lagged values of the digital-asset attention proxies and a lagged dollar change to capture any dynamic propagation of the substitution signal. This specification is estimated on the subsample for which Google Trends data are available (2016–2024).
+
+---
+
+# 6. Results
+
+## 6.1 Macro Fragility Baseline
+
+Table 1 presents the country-fixed-effects OLS results for the baseline specification estimated over the full sample available from the World Bank indicators. The dominant finding is the primacy of the global dollar channel. The coefficient on global dollar change is approximately 1.04, highly significant ($p < 0.001$), and stable across specifications. This implies that a one-percentage-point strengthening of the dollar index is associated with approximately a 1.04-percentage-point depreciation of the average emerging-market currency in this panel, a result consistent with the near-unit-beta transmission documented in the broader emerging-market exchange-rate literature.
+
+Among the domestic macro variables, M2 instability and reserve adequacy change both carry statistically significant coefficients in the baseline specification. M2 instability enters with a positive coefficient of 0.099 ($p = 0.037$), consistent with the prediction that monetary instability amplifies exchange-rate vulnerability. Reserve adequacy change enters negatively at $-0.025$ ($p = 0.012$), confirming that an improvement in the reserve buffer is associated with a reduction in depreciation pressure. Headline inflation (measured as annual CPI divided by twelve for a monthly proxy) does not reach significance in this specification, a result that likely reflects the imprecision of this particular transformation rather than a genuine absence of inflation effects.
+
+Country fixed effects are statistically insignificant across all three non-reference countries, suggesting that the panel is reasonably homogeneous in its dollar-sensitivity once macro fundamentals are controlled.
+
+## 6.2 Threshold Effects: Quantile Regression Results
+
+Table 2 presents the quantile regression results across $q = 0.25, 0.50, 0.75, 0.90$. The threshold structure predicted by theory is confirmed.
+
+The global dollar channel strengthens with the quantile. The coefficient on dollar change rises from 0.54 at $q = 0.25$ to 0.75 at $q = 0.90$, suggesting that the external driver is proportionally more important in extreme depreciation episodes than in moderate ones.
+
+M2 instability shows a clear threshold pattern. Its coefficient is near zero and insignificant at $q = 0.25$ and $q = 0.50$, but rises to $0.109$ ($p = 0.029$) at $q = 0.75$ and $0.154$ ($p = 0.010$) at $q = 0.90$. This pattern is consistent with the theoretical prediction that monetary instability amplifies depreciation specifically in the upper tail, where substitution motives are strongest and reserve buffers are under pressure.
+
+Reserve adequacy change is negative and significant across $q = 0.50, 0.75, 0.90$, with the strongest effect at $q = 0.90$ ($-0.045$, $p = 0.001$). This confirms that reserve deterioration is disproportionately associated with extreme depreciation episodes.
+
+The Global Macro Database panel (covering 1990–2024) replicates the qualitative structure of these findings. Inflation from the Global Macro Database series is significant at $q = 0.25$ ($p < 0.05$) and $q = 0.90$ ($p < 0.001$), while the central bank rate change is marginally significant at $q = 0.75$. The longer historical sample adds confirmation that the threshold structure is not an artifact of the post-2012 period.
+
+## 6.3 Digital-Asset Attention Proxies
+
+Table 3 presents the results for specifications that include country-level Google Trends indices for Bitcoin and stablecoin search interest. The results are unambiguous: neither the Bitcoin attention change nor the stablecoin attention change enters with a statistically significant coefficient in any specification or at any quantile.
+
+In the full-sample country-FE OLS specification augmented with both macro and crypto variables (N = 428, adj-$R^2 = 0.157$), the Bitcoin interest change coefficient is $-0.002$ ($p = 0.908$) and the stablecoin interest change is $-0.001$ ($p = 0.878$). In the quantile regressions at $q = 0.90$, the Bitcoin interest change coefficient is $-0.005$ ($p = 0.832$) and the stablecoin interest change is $-0.006$ ($p = 0.655$). In the Panel ARDL specification, the lagged digital-asset proxies are also insignificant.
+
+The inclusion of the digital-asset proxies does not improve model fit. The adjusted $R^2$ falls from 0.181 in the macro-only specification to 0.157 in the augmented specification, consistent with the proxies adding noise without signal. The pseudo-$R^2$ of the quantile model at $q = 0.90$ is 0.202 in the macro-only version and does not improve materially with the crypto variables added.
+
+## 6.4 Robustness
+
+The main findings are robust to the choice of data source. The World Bank indicators and the Global Macro Database yield qualitatively similar results for the threshold structure of macro variables, despite differing sample lengths and variable definitions. The threshold pattern for M2 instability and reserve adequacy is present in both datasets. The null result for digital-asset proxies is robust to the choice of Google Trends keywords, to the use of levels versus first differences, and to the inclusion or exclusion of the lagged dependent variable.
+
+---
+
+# 7. Measurement Discussion
+
+The null result for Google Trends proxies deserves careful interpretation. It does not imply that monetary substitution into digital assets is absent in these countries. It implies that search-interest data at a monthly frequency and a national level cannot detect that channel with the precision required to generate statistically reliable coefficients.
+
+Three mechanisms can explain this result. First, search interest in cryptocurrency is heavily contaminated by speculative attention. During the 2020–2021 cryptocurrency bull market, Bitcoin search interest rose sharply in all four countries, including periods when exchange rates were relatively stable. This speculative demand is orthogonal to monetary substitution and introduces noise that overwhelms any substitution signal.
+
+Second, the monthly national average of search interest is too aggregate to capture local or community-level adoption. Monetary substitution into digital assets in emerging markets often begins in specific communities --- small traders, remittance recipients, residents of informally dollarized areas --- before diffusing to the broader population. National monthly averages average out this geographic and social heterogeneity.
+
+Third, the relevant margin of decision for monetary substitution is not whether someone searches for Bitcoin but whether they acquire and hold a stablecoin or a digital-dollar equivalent as a working balance. Search interest may precede adoption by months or years, and may never translate into adoption at all for a large fraction of searchers. Proxies that measure actual acquisition --- on-chain transaction volumes, peer-to-peer exchange volumes, stablecoin supply by region --- would be far more relevant to the substitution question than search interest.
+
+The path to a stronger proxy design involves three elements. First, country-specific exchange volume data from peer-to-peer platforms such as LocalBitcoins or Paxful would identify the margin of adoption more directly. Second, on-chain data for stablecoin holdings in emerging-market wallet addresses, now available from several blockchain analytics providers, would capture the monetary substitution use case more precisely than Bitcoin price attention. Third, the event-study approach --- testing whether on-chain activity or exchange volumes spike following specific depreciation events or government announcements about capital controls --- would address the identification challenge more directly than panel regressions on monthly averages.
+
+These measurement improvements are beyond the scope of the current paper, which is designed as a disciplined baseline. The contribution here is to demonstrate that the macro fragility structure is identifiable and quantile-dependent, and to show precisely where the digital-asset layer fails in its current form.
+
+---
+
+# 8. Conclusion
+
+This paper develops a monthly panel for four major emerging economies and tests whether macro fragility and digital-asset attention co-move in ways consistent with monetary substitution theory. The empirical evidence supports the macro fragility story and rejects the attention-proxy story as currently measured.
+
+The global dollar channel is the dominant driver of emerging-market depreciation in this panel, consistent with the broader literature on EM exchange-rate sensitivity to global financial conditions. But macro fragility indicators --- M2 instability and reserve adequacy --- carry significant and economically interpretable coefficients in the upper tail of the depreciation distribution. At the ninetieth percentile of monthly depreciation, a one-unit increase in M2 instability is associated with a material amplification of exchange-rate weakness, and an improvement in reserve adequacy partially offsets it. This threshold structure is consistent with the theoretical prediction that monetary substitution motives activate in extreme stress episodes rather than at average levels of fragility.
+
+Digital-asset attention proxies, as currently measured via country-level Google Trends, add no explanatory content in any specification or quantile. This null result is informative rather than merely negative. It identifies the specific empirical gap in the cryptoization literature: the substitution channel cannot be detected with search-interest proxies because those proxies conflate speculative attention with genuine monetary demand. The next generation of cryptoization research should use on-chain data, peer-to-peer exchange volumes, or stablecoin supply by jurisdiction, calibrated to specific depreciation or policy events.
+
+The broader implication for monetary policy in emerging markets is that the digital substitution threat remains empirically unidentified with standard data. Policymakers who are concerned about cryptoization should invest in more granular data collection rather than relying on aggregate attention metrics. And researchers studying this phenomenon should design their empirical frameworks to match the measurement demands of the substitution hypothesis rather than importing proxies developed for different purposes.
+
+---
+
+# References
+
+::: {#refs}
+:::

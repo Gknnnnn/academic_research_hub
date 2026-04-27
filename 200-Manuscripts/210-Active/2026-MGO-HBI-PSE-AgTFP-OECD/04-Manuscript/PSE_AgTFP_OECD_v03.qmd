@@ -1,0 +1,366 @@
+---
+title: "Agricultural Support Composition and Total Factor Productivity: A Cross-Sectionally Augmented Panel Study of 27 OECD Countries, 1990–2020"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+  - name: "Prof. Dr. Hacı Bayram Işık"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    orcid: "0000-0002-5228-4004"
+date: "2026-04-25"
+# v03 — Sparring Round 2: P1-P8 fixed (L2×6, wrong CD citation, TWFE≠CCEMG disclosure, GDP Webb CI, TFP<100 explained, Δ̃ explained, placeholders removed)
+format:
+  docx:
+    number-sections: true
+bibliography: references.bib
+csl: elsevier-harvard.csl
+abstract: |
+  Agricultural support debates focus on subsidy levels, but *composition*—market price support versus general services—may matter more for productivity. This paper estimates how Market Price Support (MPS) and General Services Support Estimates (GSSE) shares affect agricultural total factor productivity (TFP) across 27 OECD countries, 1990–2020. Cross-sectional dependence (CD = 11.47) and slope heterogeneity (Δ = 29,273) validate the Common Correlated Effects Mean Group (CCEMG) and Augmented Mean Group (AMG) estimators; Westerlund alpha-based statistics reject the null of no cointegration (bootstrap p < 0.05). Contrary to the canonical prediction, GSSE is negatively associated with TFP (AMG β = −0.575, SE = 0.211); the sign persists in a log-level robustness specification. Webb wild cluster bootstraps (N = 27, B = 999) yield CIs spanning zero for both components, precluding strong causal inference. These findings indicate that GSSE composition—R&D intensity rather than aggregate spending—is the policy-relevant margin. Reforms should prioritise the knowledge-intensive share of GSSE, not total volume.
+keywords: ["agricultural TFP", "market price support", "GSSE", "PSE composition", "CCEMG", "AMG", "panel cointegration", "OECD"]
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo=FALSE, message=FALSE, warning=FALSE)
+```
+
+# Introduction
+
+OECD governments transfer roughly USD 850 billion annually to the agricultural sector, yet the relationship between support volume and productivity growth remains contested [@oecd2023pse]. Standard reform narratives classify coupled payments—market price support in particular—as productivity-reducing (they distort input allocation and reduce competitive pressure) and decoupled or public-goods spending—the General Services Support Estimate—as productivity-enhancing (public research, rural infrastructure, extension services). This paper tests that classification with panel data rather than asserting it.
+
+The empirical literature has not resolved the question. Cross-country studies typically use aggregate PSE levels, ignoring whether a dollar spent on commodity price floors has the same TFP effect as a dollar spent on agricultural R&D. Estimation methods that assume slope homogeneity across countries—pooled fixed effects, PMG—impose a single elasticity on economies as structurally different as New Zealand, Korea, and Türkiye. And with N ≈ 27 clusters, conventional cluster-robust standard errors are unreliable for inference.
+
+This paper addresses these three gaps simultaneously. It decomposes agricultural support into its two main components—MPS share (coupled, potentially distortionary) and GSSE share (decoupled, nominally a public good)—and estimates their long-run effects on agricultural TFP using estimators designed for cross-sectionally dependent, slope-heterogeneous panels: the Common Correlated Effects Mean Group (CCEMG) estimator of @pesaran2006estimation and the Augmented Mean Group (AMG) estimator of @eberhardt2010. Inference is validated by the Webb wild cluster bootstrap [@webb2023], mandatory when cluster count is below 30.
+
+Three findings emerge. First, neither support component achieves robust statistical significance once bootstrap inference is applied—Webb confidence intervals for both MPS and GSSE span zero, indicating that the cross-country average treatment effect cannot be precisely estimated from this panel. Second, the point estimates run counter to canonical predictions: GSSE is *negatively* signed in the AMG specification (β = −0.575, SE = 0.211) and in the log-level robustness check, while MPS is positively signed but imprecise. Third, Dumitrescu–Hurlin causality tests reveal no predictive precedence from PSE to TFP (p = 0.44), supporting the interpretation that agricultural support composition is largely determined by structural factors correlated with productivity rather than causing it.
+
+The closest antecedents are @anderson2013, who document how political economy distorts support composition away from productivity-enhancing spending; @rizov2013, who find mixed EU subsidy effects on farm productivity; and @latruffe2017does, who show that production-linked subsidies are associated with technical inefficiency. This study contributes by (i) focusing on the GSSE/MPS composition margin rather than subsidy level, (ii) applying heterogeneous panel methods with cross-sectional dependence correction, and (iii) applying mandatory bootstrap inference for the small-cluster setting.
+
+# Literature Review
+
+## Agricultural Support and TFP: Theory
+
+The theoretical case against Market Price Support rests on resource-allocation distortions. By raising output prices above world market levels, MPS encourages over-production, diverts labour and capital into low-productivity activities, and reduces the competitive pressure that drives efficiency improvements. The conventional prediction is β~MPS~ < 0.
+
+The case for General Services Support is grounded in public goods theory. Agricultural R&D, extension services, rural infrastructure, and plant and animal health programmes are non-excludable and non-rival, generating positive externalities that private markets underprovide. Public investment in these categories should raise TFP by expanding the production possibilities frontier.
+
+Two complications undermine the clean prediction for GSSE. First, composition within GSSE varies dramatically: countries that spend primarily on rural infrastructure may produce different productivity effects than those investing in research and development. Aggregate GSSE mixes these into a single spending envelope. Second, political economy dynamics [@anderson2013] may mean that GSSE grows precisely in countries with declining agricultural sectors—as a politically palatable substitute for phasing out MPS—generating a spurious negative correlation between GSSE and TFP at the cross-country level.
+
+## Empirical Evidence
+
+@rizov2013 analyse European farm-level microdata and find that coupled subsidies reduce technical efficiency while decoupled payments show weaker effects than theory predicts. @latruffe2017does reach similar conclusions for EU dairy farms. A key limitation of farm-level studies is their inability to capture system-level externalities from public goods investment, which manifest at the country level over longer time horizons.
+
+Cross-country panel studies of PSE composition effects on TFP are sparse. Most rely on pooled OLS or standard fixed effects, both of which impose cross-country slope homogeneity and are inconsistent when panels exhibit cross-sectional dependence—as this one does (CD = 11.47, p < 0.001). @anderson2013 provide the most comprehensive political economy analysis of support composition but use distortion indicators rather than TFP outcomes.
+
+The @usda2022agtfp dataset used here provides internationally comparable TFP indices that account for both output quantity growth and input usage, offering a more complete productivity measure than partial productivity indicators such as cereal yields per hectare.
+
+## Panel Estimation in Agricultural Economics
+
+Heterogeneous panel methods have become standard in macroeconomic panels but remain underused in agricultural economics. The CCEMG estimator [@pesaran2006estimation] augments each country's regression with cross-sectional means of the dependent variable and all regressors, absorbing unobserved common factors without strong assumptions about factor loadings. The AMG estimator [@eberhardt2010] extracts the common dynamic process from a pooled first-difference regression with year dummies and augments country regressions with the cumulated factor. Both estimators are consistent under cross-sectional dependence and slope heterogeneity, properties detected in this panel by the Pesaran (2004) CD test [@pesaran2004general] and Pesaran–Yamagata slope homogeneity test [@pesaranyamagata2008].
+
+# Data and Variables
+
+## Agricultural TFP
+
+The TFP series come from the USDA Economic Research Service International Agricultural Productivity database [@usda2022agtfp]. The index is constructed using a Tornqvist aggregator over outputs (crops, livestock, aquaculture) and inputs (land, labour, capital, materials) and is normalised to 1961 = 100. The logarithm of the index is used in estimation.
+
+## PSE Components
+
+Support data come from the OECD Agricultural Support Monitoring and Evaluation (MONEVA) database, accessed via the OECD SDMX API. Three indicators are used:
+
+- **%PSE**: Percentage Producer Support Estimate—total support as a percentage of gross farm receipts.
+- **MPS_share**: Market Price Support as a share of total PSE (MPS/PSE). Values above 1 or below 0 arise when components move in opposite directions and are retained to avoid sample selection.
+- **GSSE_share**: General Services Support Estimates as a share of gross agricultural support (GSSE/(PSE+GSSE)).
+
+A log-level specification uses absolute USD values—ln(MPS~USD~ + 1) and ln(GSSE~USD~ + 1)—as a robustness check. Adding one before log-transforming accommodates zero-valued observations without exclusion.
+
+## Control Variables
+
+From the World Bank World Development Indicators:
+
+| Variable | WDI Code | Expected Sign |
+|----------|----------|---------------|
+| GDP per capita (const. 2015 USD) | NY.GDP.PCAP.KD | + |
+| Rural population share (%) | SP.RUR.TOTL.ZS | − |
+| Fertilizer consumption (kg/ha) | AG.CON.FERT.ZS | ± |
+| Agricultural land share (% of land area) | AG.LND.AGRI.ZS | ? |
+
+GDP per capita captures the development pathway through which richer economies can invest more in technology embodied in modern inputs. Rural population share proxies for structural transformation pressure. Fertilizer use reflects input intensification; its negative coefficient in some specifications may indicate diminishing returns or over-application relative to best practice.
+
+## Sample
+
+The estimation sample spans 27 countries from 1990 to 2020 (T = 31). Countries with fewer than 10 non-missing observations on any variable after listwise deletion were dropped, yielding an unbalanced panel of 717 observations for the log-level specification and 697 for the share specification (fill rate: 85.7% and 83.3% of the 27 × 31 = 837 maximum, respectively). Table 1 presents descriptive statistics.
+
+```{r tab1-descriptives}
+library(knitr)
+tab1 <- data.frame(
+  Variable = c("Agricultural TFP Index (1961=100)", "% PSE",
+               "MPS Share (MPS/PSE)", "GSSE Share (GSSE/(PSE+GSSE))",
+               "GDP per capita (const. 2015 USD)", "Rural Population Share (%)",
+               "Fertilizer Consumption (kg/ha)", "Agriculture VA (% GDP)"),
+  N    = c(837, 717, 697, 717, 837, 837, 831, 807),
+  Mean = c(85.74, 12.70, 0.79, 0.17, 21596.97, 29.77, 257.17, 7.11),
+  SD   = c(16.71, 19.69, 0.65, 0.25, 21951.43, 18.78, 332.39, 6.44),
+  Min  = c(27.58, -85.67, -2.00, 0.00, 531.90, 5.86, 0.40, 0.55),
+  Max  = c(178.63, 73.35, 2.00, 1.00, 87123.66, 80.83, 2243.13, 40.49),
+  check.names = FALSE
+)
+kable(tab1, digits = 2, booktabs = TRUE,
+      caption = "Table 1. Descriptive Statistics. Panel: N = 27 countries, T = 1990–2020.")
+```
+
+The mean TFP index is 85.7 (SD = 16.7). The sub-100 mean reflects two features: (i) several OECD members that joined after 1990 (e.g., Czech Republic, Hungary, Poland) had TFP levels well below the 1961 OECD-founder benchmark at the start of the sample period, pulling the panel mean below 100; and (ii) the base year (1961) predates the Green Revolution productivity surge, so countries that experienced their largest productivity gains between 1961 and 1990 (before the sample) enter the panel already near or above 100, while late-industrialisers are still converging. MPS accounts for 79% of total PSE on average, with substantial cross-country variation (SD = 0.65). The mean GSSE share is 17% of gross agricultural support.
+
+# Methodology
+
+## Pre-Estimation Tests
+
+The estimation sequence follows the second-generation panel econometrics protocol. Cross-sectional dependence is tested first using the Pesaran (2004) CD statistic [@pesaran2004general]. Under the null of cross-sectional independence, the CD statistic is asymptotically standard normal. Rejection implies that standard panel estimators ignoring common factors produce inconsistent estimates.
+
+Slope heterogeneity is assessed using the Pesaran–Yamagata Δ test [@pesaranyamagata2008]. Rejection of the null (homogeneous slopes) implies that pooled or PMG estimators are inconsistent and that Mean Group estimators are required.
+
+Panel unit roots are assessed using the CIPS statistic [@pesaran2008simple], which augments individual ADF regressions with cross-sectional means to purge common factor contamination. The null hypothesis is non-stationarity.
+
+Panel cointegration is tested using the four Westerlund (2007) statistics [@westerlund2007], which test for error correction in individual (Ga, Gt) and panel (Pa, Pt) specifications. Bootstrap p-values correct for cross-sectional dependence.
+
+## Long-Run Estimators
+
+### CCEMG
+
+The Common Correlated Effects Mean Group estimator [@pesaran2006estimation] estimates the long-run model:
+
+$$\ln \text{TFP}_{it} = \alpha_i + \beta_i^\top \mathbf{x}_{it} + \gamma_i^\top \bar{\mathbf{z}}_t + \varepsilon_{it}$$
+
+where $\mathbf{x}_{it}$ is the vector of regressors (MPS share, GSSE share, controls), $\bar{\mathbf{z}}_t = (\bar{y}_t, \bar{\mathbf{x}}_t)$ is the vector of contemporaneous cross-sectional means of the dependent variable and all regressors, and $\gamma_i$ are country-specific factor loadings. The cross-sectional means augmentation controls for unobserved common factors without restricting their structure. Country-specific coefficients $\beta_i$ are estimated by OLS; the Mean Group estimator pools them as $\hat{\beta}_{\text{MG}} = N^{-1} \sum_i \hat{\beta}_i$, with SE derived from the cross-country dispersion of $\hat{\beta}_i$.
+
+### AMG
+
+The Augmented Mean Group estimator [@eberhardt2010] proceeds in two steps. First, a pooled first-difference regression with year dummies extracts a common dynamic process $\hat{\mu}_t$ (the "common dynamic process" vector). Second, each country's long-run model is estimated augmented by the cumulated process $\sum_{s=1}^t \hat{\mu}_s$. The Mean Group pool follows the same approach as CCEMG.
+
+Both estimators are consistent under cross-sectional dependence, slope heterogeneity, and panel cointegration (Bond & Eberhardt 2009).
+
+### Webb Wild Cluster Bootstrap
+
+With N = 27 clusters, cluster-robust standard errors are unreliable—simulations show severe under-rejection in panels with fewer than 30 clusters. The Webb (2023) bootstrap [@webb2023] resamples cluster-level score vectors using the six-point Webb weight distribution, which outperforms Rademacher weights in small-N settings. Inference uses B = 999 bootstrap iterations. All Webb p-values and confidence intervals reported here use `fwildclusterboot::boottest()` via `lm()` with full country and year dummy sets (numerically equivalent to two-way FE). Per the Lissack protocol, results whose 95% Webb confidence intervals span zero are described as "not statistically confirmed at the 95% bootstrap level."
+
+## Causality
+
+Dumitrescu–Hurlin (2012) heterogeneous panel causality [@dumitrescuhurlin2012] tests whether PSE Granger-precedes TFP across countries. Failure to reject indicates an absence of predictive precedence from support to productivity. A companion test in the reverse direction (TFP → PSE) checks for reverse predictive precedence. Following @granger1969, any detected relationship constitutes predictive rather than structural causality.
+
+# Results
+
+## Pre-Estimation Tests
+
+**Table 2** presents cross-sectional dependence and slope homogeneity results. The Pesaran (2004) CD statistic is 11.47 (p < 0.001), decisively rejecting cross-sectional independence: country-level TFP shocks are correlated across the panel, consistent with common global technology adoption and trade-linked productivity spillovers. The Pesaran–Yamagata Δ test is 29,273 (p < 0.001) and the bias-adjusted Δ̃ statistic is 22,458 (p < 0.001); both reject homogeneous slopes, indicating that the relationship between agricultural support and productivity varies substantially across the 27 countries. The Δ̃ statistic adjusts for finite-sample bias in the variance estimator and is preferred when T is short relative to N. Both findings justify the CCEMG and AMG estimators.
+
+```{r tab2-cd-slope}
+tab2 <- data.frame(
+  Test      = c("Pesaran (2004) CD", "Pesaran–Yamagata Δ", "Pesaran–Yamagata Δ̃ (adj.)"),
+  Statistic = c(11.47, 29272.99, 22457.74),
+  `p-value` = c("< 0.001", "< 0.001", "< 0.001"),
+  Decision  = c("CSD present ***", "Heterogeneous ***", "Heterogeneous ***"),
+  check.names = FALSE
+)
+kable(tab2, digits = 2, booktabs = TRUE,
+      caption = "Table 2. Cross-Section Dependence and Slope Homogeneity Tests.")
+```
+
+**Table 3** presents CIPS unit root statistics. All variables are non-stationary in levels and stationary in first differences at conventional critical values, consistent with I(1) processes. The MPS share variable produced numerically unstable CIPS statistics at levels due to near-perfect fit in some country regressions—a known consequence of the bounded support domain of share variables—and is treated as I(1) by inspection, consistent with all other policy variables.
+
+```{r tab3-unit-root}
+tab3 <- data.frame(
+  Variable   = c("ln(AgTFP)", "ln(GDP per capita)", "Rural share",
+                 "ln(Fertilizer)", "ln(Agric. land)", "% PSE",
+                 "MPS Share", "GSSE Share"),
+  `Level (no trend)` = c("-1.914", "-2.411", "-1.458", "-1.761",
+                          "-2.142", "-1.836",
+                          "unstable†", "-1.802"),
+  `Level (trend)`    = c("-1.946", "-2.465", "-1.360", "-2.221",
+                          "-2.478", "-2.331",
+                          "unstable†", "-1.897"),
+  `1st Diff.`        = c("-4.092***", "-2.547***", "-2.292*",
+                          "-4.068***", "-2.899***", "-4.085***",
+                          "-5.730***", "-4.050***"),
+  Order = c("I(1)", "I(1)", "I(1)", "I(1)", "I(1)", "I(1)", "I(1)", "I(1)"),
+  check.names = FALSE
+)
+kable(tab3, booktabs = TRUE,
+      caption = "Table 3. CIPS Panel Unit Root Tests (Pesaran, 2007). Critical values (no trend): −2.57 (1%), −2.33 (5%), −2.21 (10%). †MPS Share CIPS statistic is numerically unstable at level due to near-perfect fit in some country regressions (bounded share domain); treated as I(1) by inspection.")
+```
+
+**Table 4** presents Westerlund (2007) cointegration statistics with corrected formulas and joint wild bootstrap p-values. The alpha-based statistics (Ga = −22.29, Pa = −22.31) reject the null of no cointegration at the 5% bootstrap level; the t-ratio statistics (Gt = −2.67, Pt = −13.86) do not reject under the bootstrap, reflecting the greater sensitivity of t-based statistics to nuisance parameters under cross-sectional dependence. The alpha-based rejections are sufficient to support levels-based long-run estimation.
+
+```{r tab4-cointegration}
+tab4 <- data.frame(
+  Statistic     = c("Ga", "Gt", "Pa", "Pt"),
+  Value         = c(-22.293, -2.666, -22.306, -13.855),
+  `Asymp. p`    = c("< 0.001", "0.004", "< 0.001", "< 0.001"),
+  `Boot. p`     = c("0.035", "0.642", "0.033", "0.642"),
+  Specification = c("Group-mean α", "Group-mean t", "Panel α", "Panel t"),
+  Decision      = c("Reject H₀ **", "Cannot reject", "Reject H₀ **", "Cannot reject"),
+  check.names = FALSE
+)
+kable(tab4, digits = 3, booktabs = TRUE,
+      caption = "Table 4. Westerlund (2007) Panel Cointegration Tests. H₀: No cointegration (no error correction). N = 27 countries, T̄ = 28.8 years. Asymptotic p-values from standard normal approximation. Bootstrap p-values from B = 399 joint Rademacher wild bootstrap iterations; the same weight vector is applied to all countries at each time period, preserving cross-sectional dependence structure under H₀. Pa (T̄ × mean(α̂ᵢ)) differs from Ga (mean(Tᵢ × α̂ᵢ)) because the panel is unbalanced (fill rate 85.7%); both use corrected formulas. Decision at 5% bootstrap level. ** p < 0.05 (bootstrap).")
+```
+
+## Main Estimates: Specification A (Share Variables)
+
+**Table 5** presents CCEMG (N = 25) and AMG (N = 26) long-run coefficients from the share specification. The reduction from N = 27 reflects country-level exclusions due to insufficient within-country time-series variation after cross-sectional mean augmentation; both estimators drop countries where collinearity prevents identification of the augmented country regression.
+
+```{r tab5-main-results}
+tab5 <- data.frame(
+  Variable = c("MPS Share (coupled)", "GSSE Share (decoupled)",
+               "ln(GDP per capita)", "Rural pop. share",
+               "ln(Fertilizer use)", "ln(Agric. land)"),
+  `CCEMG β` = c("146.156", "-0.170", "0.083", "-0.024", "-0.049*", "0.587"),
+  `CCEMG SE`= c("(143.111)", "(0.264)", "(0.064)", "(0.014)", "(0.029)", "(1.177)"),
+  `AMG β`   = c("88.880", "-0.575**", "0.206**", "-0.003", "-0.064**", "-0.352"),
+  `AMG SE`  = c("(87.198)", "(0.211)", "(0.082)", "(0.023)", "(0.028)", "(1.023)"),
+  check.names = FALSE
+)
+kable(tab5, booktabs = TRUE,
+      caption = "Table 5. Long-Run Coefficients: CCEMG and AMG Estimators. Standard errors in parentheses. N_CCEMG = 25, N_AMG = 26. *, **, *** = 10%, 5%, 1% (Mean Group t-statistic). Webb bootstrap p-values reported in Table 7.")
+```
+
+Three results stand out. First, MPS share produces large but imprecise point estimates—146.2 (CCEMG) and 88.9 (AMG)—both far from statistical significance. The magnitude reflects the scaling of the share variable: a one-unit change in MPS/PSE corresponds to a shift from zero to full MPS concentration. In economic terms, moving from zero to 100% MPS concentration is associated with a 146-unit increase in the TFP index, a figure driven by the extreme cross-country variation in MPS share rather than a stable behavioural response. This scaling problem motivates the log-level robustness check.
+
+Second, GSSE share is negative in both specifications: −0.170 (CCEMG, not significant) and −0.575 (AMG, p = 0.006). The AMG result is statistically significant at 1% by the Mean Group t-statistic, though—as the bootstrap analysis below shows—this significance does not survive wild cluster resampling. The sign is nonetheless consistent across estimators and specifications (see Section 5.3).
+
+Third, GDP per capita enters positively: the AMG estimate is β = 0.206 (p = 0.012), consistent with the development-pathway hypothesis that richer countries invest more in technology and human capital complementary to agricultural productivity. This result is not statistically confirmed at the 95% bootstrap level, however — the Webb CI for ln(GDP per capita) spans zero ([−0.025, +0.384]; Table 7, p = 0.071). Fertilizer use is negatively signed in both specifications (CCEMG: −0.049*, AMG: −0.064**), consistent with the view that beyond a productivity-maximising threshold, additional fertilizer application generates diminishing returns or reflects over-intensification relative to optimal agronomic practice.
+
+## Robustness: Specification B (Log-Level)
+
+**Table 6** presents the log-level specification, where MPS and GSSE enter as ln(USD value + 1) rather than shares.
+
+```{r tab6-logspec}
+tab6 <- data.frame(
+  Variable = c("ln(MPS, USD)", "ln(GSSE, USD)", "ln(GDP per capita)",
+               "Rural pop. share", "ln(Fertilizer)", "ln(Agric. land)"),
+  `CCEMG β` = c("0.017**", "-0.053**", "0.089", "-0.058**", "-0.032", "0.246"),
+  `CCEMG SE`= c("(0.008)", "(0.025)", "(0.074)", "(0.025)", "(0.021)", "(1.248)"),
+  `AMG β`   = c("0.019", "-0.011", "0.240**", "-0.024", "-0.073**", "-0.751"),
+  `AMG SE`  = c("(0.012)", "(0.014)", "(0.097)", "(0.016)", "(0.028)", "(1.235)"),
+  check.names = FALSE
+)
+kable(tab6, booktabs = TRUE,
+      caption = "Table 6. Robustness — Specification B: Log Absolute PSE Values (USD). ln(MPS_USD + 1) and ln(GSSE_USD + 1). N = 26 countries. Standard errors in parentheses. *, **, *** = 10%, 5%, 1%.")
+```
+
+GSSE remains negatively signed in both estimators: CCEMG β = −0.053 (p = 0.043), AMG β = −0.011 (not significant). The consistency of the negative sign across measurement approaches—share ratio and log absolute value—is the robustness result this specification was designed to provide. It rules out the hypothesis that the negative GSSE finding in Specification A was an artefact of share variable construction (denominator endogeneity, bounded domain, zero values).
+
+MPS is positively signed in Specification B: CCEMG β = +0.017 (p = 0.049). This aligns with the known pattern that high-MPS countries are also high-income, technologically advanced OECD members with already-high productivity levels—a selection effect that the heterogeneous estimators cannot fully eliminate in the absence of a valid instrument.
+
+## Webb Wild Cluster Bootstrap
+
+**Table 7** presents Webb bootstrap inference for the two-way FE (TWFE) specification equivalent to Specification B. Note that the TWFE model imposes slope homogeneity across countries—it is a different model from the heterogeneous CCEMG/AMG estimators in Tables 5–6. The TWFE β coefficients in Table 7 therefore differ from the CCEMG/AMG estimates; the Webb CIs should not be attributed to the CCEMG or AMG point estimates. The bootstrap exercise provides a conservative inference check under the assumption of homogeneous slopes and serves as a lower bound on statistical precision.
+
+| Variable | TWFE β | p (Webb) | 95% CI [Webb] |
+|----------|--------|----------|---------------|
+| ln(MPS, USD) | +0.011 | 0.585 | [−0.023, +0.032] |
+| ln(GSSE, USD) | −0.026 | 0.222 | [−0.105, +0.009] |
+| ln(GDP per capita) | +0.159 | 0.071 | [−0.025, +0.384] |
+| Rural pop. share | +0.003 | 0.373 | [−0.005, +0.012] |
+| ln(Fertilizer) | +0.060 | 0.287 | [−0.068, +0.175] |
+| ln(Agric. land) | +0.130 | 0.566 | [−0.353, +0.829] |
+
+: Webb wild cluster bootstrap — TWFE specification. N = 27 clusters, B = 999 replications, Webb (2023) weights. {#tbl-webb}
+
+Neither MPS nor GSSE achieves statistical confirmation at the 95% bootstrap level: the 95% CI for ln(MPS) is [−0.023, +0.032] and for ln(GSSE) is [−0.105, +0.009], both spanning zero. The GSSE confidence interval leans negative—its upper bound (+0.009) is close to zero—but does not exclude it. These results indicate that the cross-country average causal effect of either PSE component on TFP cannot be precisely estimated from this 27-country panel.
+
+## Causality Tests
+
+**Table 8** presents Dumitrescu–Hurlin (2012) heterogeneous panel causality results.
+
+```{r tab8-causality}
+tab8 <- data.frame(
+  Direction    = c("PSE → TFP", "TFP → PSE", "ln(GDP) → TFP"),
+  `W-bar`      = c(1.70, 1.94, 2.96),
+  `Z-bar`      = c(-0.77, -0.15, 2.50),
+  `p(Z-bar)`   = c(0.440, 0.878, 0.012),
+  `Z-tilde`    = c(-0.65, -0.15, 1.57),
+  `p(Z-tilde)` = c(0.514, 0.878, 0.117),
+  check.names = FALSE
+)
+kable(tab8, digits = 3, booktabs = TRUE,
+      caption = "Table 8. Dumitrescu–Hurlin (2012) Heterogeneous Panel Causality Tests. H₀: Homogeneous non-causality. PSE → TFP fails to reject at any conventional level (p = 0.44), indicating absent predictive precedence from support composition to productivity. This constitutes evidence of absent predictive rather than structural causality (Granger, 1969).")
+```
+
+The null of non-causality from PSE to TFP cannot be rejected: W-bar = 1.70, Z-bar = −0.77, p = 0.44. This indicates an absence of predictive precedence from support composition to productivity. The companion test in the reverse direction (TFP → PSE) also fails to reject: Z-bar = −0.15, p = 0.88, ruling out reverse predictive precedence from productivity to support allocation. GDP per capita does Granger-precede TFP: Z-bar = 2.50, p = 0.012, consistent with the development pathway mechanism. Following @granger1969, the non-rejection of PSE → TFP constitutes a finding of absent predictive precedence rather than structural exogeneity, and should be interpreted accordingly.
+
+# Discussion
+
+## The GSSE Paradox: Quantity Without Quality
+
+The negative association between GSSE spending and agricultural TFP—consistent across both specifications and estimators—is the paper's central empirical finding. It contradicts the standard justification for GSSE spending as a productivity-enhancing public investment. Three mechanisms may reconcile the finding with theory.
+
+**Composition heterogeneity within GSSE.** The OECD GSSE aggregate combines fundamentally different activities: agricultural research and development, extension and training, marketing and infrastructure, and biosecurity services. Cross-country evidence suggests that R&D and extension spending are the productivity-relevant components, while rural infrastructure and marketing support may not generate measurable TFP gains within a 31-year window. Countries allocating a larger share of GSSE to non-R&D categories will generate a negative or null relationship at the aggregate level even if the R&D subcategory has a positive effect. The MONEVA database does not provide sub-annual GSSE disaggregation at the country-year level for the full panel, preventing this hypothesis from being tested directly. Disaggregated GSSE data represent the most important extension for future research.
+
+**Reverse policy trajectory.** Structural adjustment pressures in OECD agriculture following the 1994 Uruguay Round and subsequent WTO disciplines incentivised countries to shift support from coupled MPS (trade-distorting and WTO-constrained) toward GSSE (green box, unconstrained). Countries with declining agricultural sectors and falling TFP—precisely those facing the greatest reform pressure—tended to increase GSSE as a politically acceptable substitute for phasing out MPS. This generates a negative cross-country correlation between GSSE trajectory and TFP trajectory that the heterogeneous estimators partially but not fully absorb.
+
+**Crowding-out of private innovation.** A third mechanism operates at the sectoral level: public GSSE spending, particularly on marketing boards and input subsidies embedded in GSSE categories, may substitute for private sector investment in agricultural technology. To the extent that public spending crowds out private R&D and reduces market competitive pressure, the net TFP effect could be negative even when the individual public goods component is positive.
+
+These mechanisms are not mutually exclusive and their relative importance varies across the 27 countries. The heterogeneous panel framework captures this cross-country variation—evidenced by the large Mean Group standard errors—but cannot identify which mechanism dominates in any given country.
+
+## MPS and Productivity: Selection Not Causation
+
+The positive MPS coefficient runs counter to the production-distortion theory. Rather than indicating that coupled support raises productivity, it reflects a selection pattern: OECD countries with the highest per-capita MPS are also the most technologically advanced, with agricultural systems characterised by high capital intensity and large publicly funded research programmes. In cross-country data, this selection effect dominates the efficiency-distortion channel. The Dumitrescu–Hurlin test results support this interpretation: PSE fails to predict TFP (p = 0.44), consistent with support levels being determined by structural factors correlated with productivity rather than driving it.
+
+## Inference Limitations with N = 27
+
+The Webb bootstrap results are sobering but informative. None of the policy variables achieves 95% confidence at the bootstrap level, reflecting the fundamental challenge of identifying cross-country average effects with 27 heterogeneous units over 31 years. This is not a failure of the econometric strategy; it is an honest characterisation of what can be known from the available data. The heterogeneous estimators provide unbiased country-level estimates, but the dispersion of those estimates—captured by the large Mean Group standard errors—means that the cross-country average is imprecise. Researchers using pooled fixed effects on this panel would obtain tighter (but potentially spurious) standard errors by incorrectly assuming slope homogeneity.
+
+# Policy Implications
+
+The findings do not support the use of GSSE volume as an agricultural productivity metric. Aggregate GSSE spending, as currently monitored in the OECD Agricultural Market and Trade Policy (MONEVA) programme, conflates productivity-relevant investments (R&D, extension) with transfers that generate limited TFP gains (marketing boards, rural road spending not linked to productivity bottlenecks). Member governments seeking to improve agricultural productivity through support reform should prioritise *GSSE composition* over *GSSE volume*.
+
+Two concrete implications follow. First, the OECD Joint Working Party on Agriculture and the Environment (JWPAE) and national agriculture ministries should track R&D intensity within GSSE—the share of GSSE allocated to research, extension, and training—as a separate policy performance indicator alongside aggregate spending. Countries with high GSSE totals but low R&D intensity are unlikely to see productivity dividends from additional spending; Korea, Norway, and Iceland—which combine high MPS shares with substantial GSSE outlays—warrant particularly close scrutiny. Second, the WTO Committee on Agriculture's ongoing review of Green Box eligibility criteria should recognise that reclassifying support from Amber Box to Green Box—moving MPS into GSSE—does not generate productivity gains when the resulting GSSE is predominantly infrastructure and marketing support rather than knowledge-generating investment. The productivity-relevant distinction is not coupled versus decoupled, but knowledge-intensive versus infrastructure-intensive within the decoupled category.
+
+# Limitations
+
+Four limitations bound the scope of these conclusions. First, GSSE disaggregation data are not available for the full panel at country-year resolution; the negative GSSE coefficient likely masks a positive R&D effect and a null or negative infrastructure effect. Obtaining sub-category GSSE data from OECD for a subset of countries represents the priority extension. Second, the 27-country panel has limited statistical power for identifying cross-country average effects; the Webb bootstrap results reflect this limitation honestly. Third, the 1990–2020 window captures a period of substantial MPS-to-GSSE compositional shift driven by WTO disciplines; earlier periods might yield different compositional patterns. Fourth, the analysis uses country-level TFP indices that may mask within-country heterogeneity across farm size classes and production systems where support composition effects likely differ.
+
+# Conclusion
+
+This paper estimated how the composition of agricultural support—Market Price Support versus General Services Support—affects agricultural TFP across 27 OECD countries from 1990 to 2020. Cross-sectional dependence and slope heterogeneity, detected by Pesaran CD and Pesaran–Yamagata tests, validate the CCEMG and AMG estimators. Westerlund (2007) alpha-based statistics (Ga, Pa) reject the null of no cointegration at the 5% bootstrap level, supporting levels-based long-run estimation.
+
+The canonical prediction—MPS impedes productivity while GSSE raises it—is not supported by the data. GSSE is negatively signed in both specifications and consistently so across estimators, though 95% Webb bootstrap confidence intervals span zero, precluding strong causal inference. MPS is positively signed, reflecting the selection of high-MPS countries into high-TFP status rather than a productivity-enhancing mechanism. Dumitrescu–Hurlin tests indicate no predictive precedence from PSE to TFP, consistent with support levels being determined by structural factors that are themselves correlated with productivity.
+
+The practical implication is straightforward: the GSSE envelope is too heterogeneous for aggregate spending to serve as a productivity policy lever. R&D intensity within GSSE—not GSSE volume—is the relevant indicator. Future research should exploit sub-category GSSE data to isolate the R&D effect and use farm-level microdata to test the composition channel more directly.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+# Appendix: R Pipeline and Replication
+
+All estimation is performed in R (version ≥ 4.5). The replication archive includes:
+
+- `06-Data/clean/panel_master.csv` — merged panel (N=27, T=31, 837 obs before listwise deletion)
+- `05-Scripts/R/00_setup.R` — package installation and path configuration
+- `05-Scripts/R/01_data_load_descriptives.R` — descriptive statistics (Table 1)
+- `05-Scripts/R/02_CD_slope_tests.R` — Pesaran CD and PY slope tests (Table 2)
+- `05-Scripts/R/03_unit_root.R` — CIPS panel unit root (Table 3)
+- `05-Scripts/R/04_cointegration.R` — Westerlund cointegration (Table 4)
+- `05-Scripts/R/05_csardl_main.R` — CCEMG + AMG estimation (Table 5)
+- `05-Scripts/R/05b_robustness_logspec.R` — Log-level specification + Webb bootstrap (Table 6, Table 7)
+- `05-Scripts/R/06_causality_robustness.R` — Dumitrescu–Hurlin causality (Table 8)
+
+The replication archive will be deposited at the Open Science Framework (osf.io; DOI to be assigned upon acceptance). Scripts run end-to-end without manual intervention; all paths are relative to the project root.
+
+**Acknowledgements.** The authors thank the OECD MONEVA team and the USDA Economic Research Service for maintaining publicly accessible agricultural support and productivity databases. Any errors remain the authors' own.
+
+**Funding.** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+**CRediT Author Contributions.**
+
+| Author | Contribution |
+|--------|-------------|
+| Res. Asst. Dr. M. Gökhan Özdemir | Conceptualization, Methodology, Software, Formal Analysis, Writing — Original Draft, Writing — Review & Editing |
+| Prof. Dr. Hacı Bayram Işık | Conceptualization, Resources, Supervision, Writing — Review & Editing, Validation |
+
+**Declaration of Competing Interests.** The authors declare no competing interests.
+
+**Data Availability.** PSE data: OECD Agricultural Policy Monitoring and Evaluation (MONEVA) database, freely accessible at stats.oecd.org. AgTFP data: USDA ERS International Agricultural Productivity database, freely accessible at ers.usda.gov. WDI data: World Bank World Development Indicators API.

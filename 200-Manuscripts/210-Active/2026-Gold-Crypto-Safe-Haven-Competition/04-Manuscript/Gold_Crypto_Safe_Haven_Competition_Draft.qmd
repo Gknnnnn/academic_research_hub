@@ -1,0 +1,224 @@
+---
+title: "Gold, Crypto, and Safe-Haven Competition Under Currency Wars"
+author:
+  - "Onur Bilgin"
+  - "Mehmet Gokhan Ozdemir"
+  - "Mehmet Oksuzkaya"
+format:
+  pdf:
+    documentclass: apa7
+    classoption: man
+    keep-tex: true
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+## Highlights
+
+- Gold aligns with traditional safe havens; Bitcoin tracks digital liquidity and VIX.
+- Stablecoin supply shifts predict the gold-Bitcoin spread (β=0.000402, p=0.013).
+- Altcoin-augmented Bitcoin model: directional accuracy 71.2%; spread model 72.8%.
+- Altcoin breadth and dispersion shape Bitcoin's stress behavior beyond macro signals.
+- Evidence rejects digital-gold equivalence: traditional channels dominate gold.
+
+# Abstract
+
+This paper investigates whether crypto assets compete with or complement gold during episodes of monetary stress. The core question is not whether Bitcoin is volatile, but whether gold and leading crypto assets respond differently when safe-haven demand intensifies under currency-war conditions. To address this question, we construct a daily dataset that combines gold, Bitcoin, Ethereum, a broad liquid altcoin basket, hard-currency safe-haven indicators, dollar strength, macro-stress variables, and a stablecoin liquidity proxy, and we estimate parallel models for gold, Bitcoin, and the gold-Bitcoin return spread.
+
+The results suggest an asymmetric competition structure rather than a simple replacement story. Gold remains more closely connected to traditional safe-haven channels, while Bitcoin-linked outcomes are more tightly tied to stress conditions and digital-asset liquidity. In the updated spread and crisis specifications, changes in stablecoin supply enter positively and significantly, while VIX remains the dominant macro-stress signal. The altcoin extension materially strengthens this interpretation. Broad altcoin-market returns strongly explain Bitcoin outcomes, altcoin breadth adds incremental information, and dispersion enters with the expected negative sign in Bitcoin equations. In the spread equation, the altcoin block also carries significant explanatory power. This indicates that the gold-versus-Bitcoin balance is shaped not only by broad risk conditions but also by variation in digital liquidity and wider crypto-market regime conditions. At the same time, the evidence continues to reject a clean digital-gold equivalence: traditional safe-haven channels still dominate gold more clearly than crypto-specific variables do.
+
+The contribution of the paper is to move beyond the broad rhetoric of digital gold. Gold and Bitcoin do not appear to serve identical monetary functions under stress. Instead, the evidence points to a layered safe-haven environment in which gold remains embedded in the traditional currency hierarchy while Bitcoin behaves more like a risk-sensitive digital alternative whose role is partly mediated by stablecoin liquidity and broader digital-market regime conditions. This distinction helps clarify when crypto competes with gold, when it merely co-moves within the digital asset complex, and when traditional safe-haven channels continue to dominate.
+
+**Keywords:** gold, Bitcoin, safe haven, currency wars, stablecoins, digital liquidity
+
+# 1. Introduction
+
+The rise of crypto assets has reopened an old monetary question in a new technological form: when confidence in currencies and financial markets weakens, do investors migrate toward traditional stores of value such as gold, or toward digital alternatives such as Bitcoin? Public discussion often collapses this question into the phrase digital gold. Yet that phrase is analytically too coarse. It obscures the possibility that gold and Bitcoin may respond to different types of stress, operate through different market channels, and compete only under specific monetary conditions.
+
+This paper studies that problem through a currency-war lens. Currency wars are not treated here as a slogan, but as an environment in which exchange-rate movements, safe-haven reallocations, and monetary stress reshape the relative attractiveness of reserve currencies, hard-currency hedges, and alternative monetary assets. In that environment, gold and Bitcoin should not be assumed to be functionally identical. Gold is deeply embedded in the traditional safe-haven hierarchy and is historically linked to reserve-currency stress, yen-franc reallocation, and macro-financial uncertainty. Bitcoin, by contrast, may react more strongly to digital-market co-movement, volatility stress, and liquidity conditions internal to the crypto ecosystem [@warbitcoin2025; @goldusdextreme2024].
+
+The paper makes three contributions. First, it compares gold and Bitcoin inside one common stress environment rather than studying them in isolated literatures. Second, it introduces stablecoin supply changes as a practical digital-liquidity proxy and tests whether that channel helps explain shifts in the relative performance of gold and Bitcoin. Third, it adds a broad liquid altcoin-market layer to test whether Bitcoin's stress behavior is tied only to Ethereum or to a wider crypto regime. The spread between gold and Bitcoin is still treated as a competition outcome, while explicitly acknowledging the mechanical risks that arise when spread equations are poorly designed.
+
+The central result is not that Bitcoin has replaced gold. The evidence instead points to a layered monetary hierarchy. Gold remains tied to traditional safe-haven channels, while Bitcoin-linked outcomes are more sensitive to volatility stress and digital liquidity. This makes the paper a competition-and-differentiation study rather than a crypto booster argument.
+
+# 2. Gold, Bitcoin, and Monetary Stress
+
+Gold has long occupied a special place in the monetary system. It is neither fiat money nor a standard financial claim, yet it retains safe-haven appeal when confidence in currencies and markets deteriorates. @baurlucey2010 establish the foundational distinction between a hedge (uncorrelated with stocks on average) and a safe haven (uncorrelated during market crashes), finding that gold satisfies both criteria in US, UK, and German equity markets. @baurmcdermott2010 extend this to 23 countries, confirming safe-haven properties for developed markets but noting that the relationship is weaker for emerging markets. @capie2005gold document gold's role as a hedge specifically against the US dollar, motivating the DXY channel in our empirical design. That role becomes especially visible during episodes of monetary tightening, exchange-rate disorder, or crisis-driven demand for non-sovereign stores of value [@akhtaruzzaman2021hedge; @goldusdextreme2024].
+
+Bitcoin is often presented as a functional successor to that role, but the case is not straightforward. Bitcoin has features that support the comparison: limited issuance, global tradability, and detachment from direct state control. But it also differs sharply from gold in trading structure, investor base, volatility profile, and dependence on digital-market liquidity. A monetary-stress framework therefore should not begin by assuming equivalence. It should ask under what conditions competition appears, and under what conditions the two assets remain fundamentally different.
+
+This distinction motivates the paper's architecture. Gold is treated as the traditional safe-haven benchmark. Bitcoin is treated as a candidate digital alternative whose crisis role must be earned empirically rather than assumed. Stablecoins enter not as a separate safe haven, but as a liquidity channel that may shift conditions within the digital-asset complex. The same logic applies to the altcoin basket used later in the paper. It is not interpreted as an alternative safe haven, but as a digital-market regime indicator that helps identify whether Bitcoin moves as a standalone monetary challenger or as part of a wider crypto-liquidity cycle.
+
+# 3. Literature Review
+
+The first relevant literature examines gold as a hedge or safe haven under exchange-rate and macro-financial stress. Recent work shows that gold's behavior depends on extreme conditions, currency exposure, and changing market states rather than on a single universal hedge mechanism [@goldusdextreme2024; @fadinggold2025]. This literature anchors the traditional side of the comparison.
+
+The second literature studies Bitcoin as a hedge, diversifier, or speculative alternative. The conclusions are mixed. @bouri2017hedge demonstrate that Bitcoin hedges global uncertainty in extreme bearish markets using wavelet quantile regressions, but find no evidence of a general hedge relationship in normal market conditions. @das2020bitcoin show that Bitcoin fails to hedge oil implied volatility shocks across structural breaks, performing worse than gold and the US dollar as a crisis buffer. More recent work emphasises instability, regime dependence, and sensitivity to broader market conditions [@warbitcoin2025; @cryptoregime2025]. The key lesson is that Bitcoin cannot be treated as a stable safe haven by default.
+
+The third literature considers cross-asset competition during crises. These studies are closest to the current paper because they ask whether capital rotates between gold, oil, currencies, and crypto assets under stress. But even this literature rarely places gold and Bitcoin in one common currency-war framework with both traditional safe-haven channels and digital-liquidity variables present at the same time.
+
+The present paper addresses that gap by combining four elements in one design: hard-currency safe-haven indicators, a crypto co-movement structure, a stablecoin-based digital-liquidity proxy, and a broad altcoin-market regime layer. @nonlineartail2025 show that stablecoins and crypto assets exhibit nonlinear tail dependence under monetary shifts, supporting our use of stablecoin supply dynamics as a structural feature of digital-market stress rather than a simple control variable. This allows the analysis to move beyond the abstract question of whether Bitcoin is digital gold and toward the more concrete question of how monetary stress is allocated across traditional and digital asset channels.
+
+# 4. Data and Variable Design
+
+The dataset is daily and begins in 2016, which reflects the period in which both Bitcoin and Ethereum can be observed alongside a meaningful macro-stress environment. The core variables are gold returns, Bitcoin returns, Ethereum returns, DXY changes, USD/JPY returns, USD/CHF returns, VIX changes, and a U.S. policy-uncertainty proxy. These series define the shared stress environment in which traditional and digital safe-haven claims are evaluated.
+
+The paper also constructs a gold-Bitcoin spread target to capture relative performance rather than isolated asset movement. This spread is useful because it turns the competition question into an empirical target. At the same time, spread equations can easily be contaminated by target-component leakage if the right-hand side simply reproduces one of the spread components. For that reason, the preferred spread models are designed conservatively and interpreted with caution.
+
+The most important extension in the current version is a stablecoin supply proxy. Historical changes in total stablecoin supply are used as a reduced-form indicator of digital liquidity. The interpretation is intentionally modest. Stablecoin growth does not necessarily measure safe-haven demand directly. It may instead proxy trading capacity, liquidity deepening, or reallocative flexibility within the crypto market. That is still valuable, because one of the paper's questions is whether gold-Bitcoin competition changes when the digital ecosystem becomes more liquid.
+
+A second extension introduces a broad liquid altcoin basket built from major non-Bitcoin crypto assets rather than from a literal census of the entire altcoin universe. Three reduced-form measures are constructed from that basket: equal-weight altcoin returns, market breadth, and cross-sectional dispersion. These variables are not interpreted as alternative safe havens. They are used as indicators of digital-market regime. If Bitcoin loads strongly on this block, that weakens any claim that its stress behavior can be understood independently of the wider crypto ecosystem.
+
+BTC dominance is not yet used as a daily regressor because the current workflow only produced a current snapshot rather than a clean reproducible historical series. That variable therefore remains a planned extension rather than an active ingredient in the present manuscript.
+
+| Variable | Construction | Source | Role |
+|:--|:--|:--|:--|
+| Gold return | Log daily return | FRED (GC=F) | Traditional safe haven (dep. var.) |
+| Bitcoin return | Log daily return | CoinGecko | Digital alternative (dep. var.) |
+| Ethereum return | Log daily return | CoinGecko | Crypto co-movement control |
+| Gold–BTC spread | Gold return − BTC return | Authors | Competition outcome (dep. var.) |
+| DXY return | Log daily return on USD index | FRED | Dollar strength |
+| USD/JPY return | Log daily return | FRED | Traditional safe-haven channel |
+| USD/CHF return | Log daily return | FRED | Traditional safe-haven channel |
+| VIX change | Daily change in CBOE VIX | CBOE | Macro stress |
+| EPU | US Economic Policy Uncertainty index | @baker2016epu | Policy uncertainty |
+| Currency-war flag | Binary: DXY±1% daily, 2016–2024 | Authors | Stress regime indicator |
+| Crisis flag | Binary: VIX > 30, 2016–2024 | Authors | Acute stress regime |
+| Stablecoin Δ | Daily % change in total stablecoin supply | DeFiLlama | Digital liquidity proxy |
+| Altcoin EW return | Equal-weight return, top-50 non-BTC/ETH | CoinGecko | Digital-market regime |
+| Altcoin breadth | % altcoins with positive daily return | Authors | Market participation |
+| Altcoin dispersion | Cross-sectional SD of altcoin returns | Authors | Market fragmentation |
+
+: Table 1. Variable definitions and data sources. Sample: daily, 2016–2024 (Bitcoin + stablecoin subsample). HC3 heteroskedasticity-consistent standard errors throughout.
+
+# 5. Empirical Strategy
+
+The empirical strategy combines parallel reduced-form equations with one relative-performance equation.
+
+First, a gold equation evaluates whether traditional safe-haven channels remain relevant once crypto variables are present in the broader candidate universe. The point is not to force crypto into the gold equation, but to see whether gold still loads on the conventional hard-currency hierarchy.
+
+Second, a Bitcoin equation examines whether Bitcoin behaves like a safe haven or like a stress-sensitive digital asset whose movements are shaped more strongly by crypto co-movement, digital liquidity, and broader crypto-market regime conditions than by hard-currency channels.
+
+Third, a spread equation explains the relative performance of gold and Bitcoin. This is the paper's core competition equation. It asks whether broad risk conditions, currency-war signals, crisis episodes, and stablecoin supply changes affect the balance between the two assets.
+
+Fourth, a crisis-interaction equation allows stress variables to behave differently in acute conditions. This is important because competition between monetary assets is unlikely to be constant across calm and crisis states.
+
+Fifth, an altcoin-augmented robustness layer tests whether the Bitcoin-side signal survives once Ethereum is no longer the only crypto co-movement proxy. This step is intentionally conservative. It does not redefine the paper as an altcoin paper. It simply asks whether the digital side of the competition is better understood as a wider market regime rather than as one bilateral Bitcoin-Ethereum relationship.
+
+The model comparison is descriptive rather than over-engineered. The paper reports RMSE, MAE, directional accuracy, and adjusted \(R^2\) where appropriate. The goal is economic discrimination, not a black-box forecasting race.
+
+# 6. Results
+
+## 6.1 Stablecoin-Augmented Competition
+
+The strongest results come from the stablecoin-augmented spread and crisis models. In the spread equation, stablecoin supply changes enter positively and significantly ($\hat{\beta} = 0.000402$, $p = 0.013$), while VIX dominates as the macro-stress channel ($\hat{\beta} = 0.006$, $p < 0.001$). DXY also enters positively and marginally ($\hat{\beta} = 0.514$, $p = 0.069$). In the crisis-interaction equation, stablecoin supply remains significant ($\hat{\beta} = 0.000399$, $p = 0.014$) alongside a significant VIX-crisis interaction ($\hat{\beta} = 0.003$, $p = 0.004$). The baseline spread model achieves directional accuracy of 55.5% (adj-$R^2$ = 0.092). These results imply that the gold-versus-Bitcoin balance is shaped by both broad stress conditions and shifts in digital liquidity.
+
+| Variable | Spread OLS (M3) | Stablecoin Spread (M4) | Crisis Interaction (M5) |
+|:--|:--:|:--:|:--:|
+| DXY return | 0.449 (0.105) | 0.514† (0.069) | 0.497† (0.075) |
+| USD/JPY return | 0.405† (0.098) | 0.310 (0.299) | 0.404† (0.099) |
+| VIX change | 0.0055*** (<0.001) | 0.0058*** (<0.001) | 0.0038*** (<0.001) |
+| Currency-war flag | 0.0043† (0.074) | 0.0028 (0.308) | — |
+| Crisis flag | 0.0048 (0.287) | 0.0041 (0.372) | 0.0002 (0.954) |
+| VIX × crisis | — | — | 0.0033*** (0.004) |
+| Stablecoin Δ | — | 0.000402** (0.013) | 0.000399** (0.014) |
+| Adj. R² | 0.064 | 0.092 | 0.094 |
+| Dir. accuracy | 54.9% | 55.5% | 54.3% |
+| N | 2,092 | 2,092 | 2,092 |
+
+: Table 2. Gold–Bitcoin spread competition models. Dependent variable: daily gold return minus BTC return. HC3 standard errors. p-values in parentheses. †p<0.10, \*p<0.05, \*\*p<0.01, \*\*\*p<0.001.
+
+## 6.2 Traditional Safe-Haven Channels
+
+The broader interpretation of the portfolio results remains intact in this paper. Gold continues to align more naturally with traditional safe-haven structures than with crypto-internal dynamics. The hard-currency side of the monetary hierarchy remains relevant, especially through the dollar and classic safe-haven currencies, even when Bitcoin is included in the comparative design. This matters because it prevents the paper from drifting into the implausible claim that all monetary stress is now digital.
+
+| Variable | Gold (M1) | Bitcoin (M2) |
+|:--|:--:|:--:|
+| BTC return | 0.001 (0.286) | — |
+| ETH return | 0.001 (0.467) | 0.446*** (<0.001) |
+| DXY return | 0.004 (0.766) | −0.312† (0.068) |
+| USD/JPY return | −0.027** (0.011) | — |
+| USD/CHF return | −0.029† (0.052) | — |
+| VIX change | 0.000 (0.308) | −0.002*** (<0.001) |
+| EPU (level) | 2.4e−6*** (<0.001) | 1.0e−6 (0.904) |
+| Currency-war flag | — | −0.002 (0.338) |
+| Adj. R² | 0.027 | 0.446 |
+| Dir. accuracy | 61.9% | 79.9% |
+| N | 2,092 | 2,092 |
+
+: Table 3. Baseline safe-haven equations. M1: gold return as dependent variable; M2: Bitcoin return as dependent variable. HC3 standard errors. p-values in parentheses. †p<0.10, \*p<0.05, \*\*p<0.01, \*\*\*p<0.001.
+
+## 6.3 Bitcoin as a Digital Alternative, Not a Replica
+
+The Bitcoin side of the evidence points in a different direction. Bitcoin-linked outcomes appear more responsive to volatility stress and digital-market conditions than to the traditional safe-haven hierarchy. That does not mean Bitcoin has no safe-haven role. It means its role is conditional, weaker, and mediated by the state of the digital ecosystem. The stablecoin results fit that interpretation well: digital liquidity appears to matter for the relative performance of Bitcoin against gold.
+
+## 6.4 Boundaries of the Current Evidence
+
+The spread results should still be interpreted carefully. Even after the earlier clean-up, spread equations are structurally sensitive and can be over-read if they are treated as causal statements. Likewise, the stablecoin variable should be interpreted as a liquidity proxy, not as a direct measure of flight-to-safety demand. These are meaningful results, but they are not a license to collapse the distinction between digital liquidity and safe-haven quality.
+
+A useful robustness check strengthens this caution. When Ethereum is removed entirely and Bitcoin is modeled on its own, the main stress signals remain visible: VIX stays strongly negative, the dollar channel remains important, and stablecoin supply changes remain statistically significant. But the sign on the stablecoin term turns negative in the BTC-only regressions while it is positive in the spread equations. This is precisely the kind of result that argues against simplistic interpretation. Stablecoin liquidity does not map one-for-one into Bitcoin-safe-haven strength. Instead, it appears to affect relative asset allocation and standalone Bitcoin performance through different channels.
+
+## 6.5 Altcoin Market Regime Extension
+
+The altcoin extension materially sharpens the digital-market interpretation of the paper. In the Bitcoin equation augmented with the broad altcoin basket, equal-weight altcoin returns enter strongly and positively ($\hat{\beta} = +0.597$, $p < 0.001$), market breadth is also positive and statistically significant ($\hat{\beta} = +0.009$, $p = 0.019$), and cross-sectional dispersion enters negatively ($\hat{\beta} = -0.123$, $p < 0.001$). The altcoin-augmented Bitcoin model achieves a directional accuracy of 71.2% (adj-$R^2$ = 0.572). The pattern is economically intuitive. Bitcoin performs better when the broader altcoin complex rises with wider participation, but worse when that environment becomes more fragmented. This is not a safe-haven story. It is a digital-market regime story.
+
+The spread equation shows a complementary pattern. Equal-weight altcoin returns enter strongly with a negative sign ($\hat{\beta} = -0.569$, $p < 0.001$), while altcoin breadth also enters negatively and significantly ($\hat{\beta} = -0.011$, $p = 0.003$). The altcoin-augmented spread model achieves a directional accuracy of 72.8% (adj-$R^2$ = 0.564). In practical terms, stronger altcoin-market conditions tilt relative performance away from gold and toward Bitcoin. That result is consistent with the competition interpretation of the paper, but it also disciplines it. Gold-Bitcoin competition does not occur in a vacuum. It is partly conditioned by whether the wider crypto complex is liquid, broad, and internally coherent.
+
+These findings improve on a narrower ETH-only interpretation in two ways. First, they show that Bitcoin's stress behavior is not reducible to one bilateral crypto co-movement channel. Second, they make the digital-liquidity argument more convincing by linking stablecoin dynamics to a wider market environment rather than to one crypto pair alone. Together, the stablecoin and altcoin results imply that Bitcoin's role under stress is mediated by the structure of the digital asset complex, not only by macro stress itself.
+
+| Variable | BTC + Altcoin (M6) | Spread + Altcoin (M7) |
+|:--|:--:|:--:|
+| Altcoin EW return | +0.597*** (<0.001) | −0.569*** (<0.001) |
+| Altcoin breadth | +0.009** (0.019) | −0.011*** (0.003) |
+| Altcoin dispersion | −0.123*** (<0.001) | — |
+| DXY return | −0.283† (0.083) | +0.238 (0.148) |
+| VIX change | −0.001† (0.091) | +0.001** (0.041) |
+| Stablecoin Δ | −0.000177 (0.114) | +0.000215† (0.056) |
+| Adj. R² | 0.572 | 0.564 |
+| Dir. accuracy | 71.2% | 72.8% |
+| N | 2,092 | 2,092 |
+
+: Table 4. Altcoin-augmented models. M6: BTC return as dependent variable; M7: gold–BTC spread as dependent variable. Both models include altcoin block (EW return, breadth, dispersion). HC3 standard errors. p-values in parentheses. †p<0.10, \*p<0.05, \*\*p<0.01, \*\*\*p<0.001.
+
+# 7. Interpretation
+
+The paper supports a layered view of monetary competition. Gold remains embedded in the traditional currency hierarchy. Its safe-haven role is linked to hard-currency signals and broad monetary stress. Bitcoin, by contrast, behaves more like a digital alternative whose crisis relevance depends on the internal conditions of the crypto ecosystem.
+
+This is why the phrase digital gold is misleading when used as an unconditional descriptor. The evidence does not show that Bitcoin simply replaces gold under stress. It shows something more nuanced: relative performance shifts when digital liquidity changes and when the broader altcoin regime strengthens or fragments, but traditional safe-haven channels still dominate gold more clearly than crypto-specific variables do. Stablecoin supply therefore matters not because it proves Bitcoin is a safe haven, but because it helps explain how the digital side of the competition becomes more or less active.
+
+This interpretation also clarifies why the paper belongs in the portfolio as a separate contribution. It is not a crypto asset-pricing paper in general. It is a monetary competition paper in which gold and Bitcoin are compared under one shared stress architecture.
+
+# 8. Robustness and Extensions
+
+The first robustness step has now been completed: a BTC-only specification removes Ethereum to ensure that crypto co-movement is not dominating the entire Bitcoin signal. The result is reassuring but nuanced. Bitcoin remains highly sensitive to VIX and dollar conditions even without Ethereum in the equation, and stablecoin supply stays significant. However, the sign difference between the BTC-only and spread equations confirms that stablecoin liquidity should be read as a channel of digital reallocation rather than as a simple safe-haven indicator.
+
+The second robustness step introduces the broad altcoin basket. This extension addresses a natural reviewer objection: Bitcoin's apparent stress sensitivity might simply reflect one narrow ETH-linked co-movement channel. The broader basket rejects that narrower reading. Bitcoin still loads heavily on digital-market conditions when the crypto block is widened, and the spread equation also absorbs significant altcoin-regime information. The altcoin layer therefore strengthens the paper without changing its identity. It remains a gold-versus-Bitcoin competition paper, but one that now acknowledges that Bitcoin competes from inside a wider digital ecosystem.
+
+The third extension concerns BTC dominance. A clean daily historical series would allow the paper to distinguish between general digital-liquidity effects and changes in Bitcoin's relative position inside the crypto universe.
+
+The fourth extension concerns central-bank and physical-demand channels. These variables matter for gold but belong to a different frequency structure and a different paper logic. Importing them directly here would blur the competition design rather than clarify it.
+
+# 9. Conclusion
+
+This paper asks whether Bitcoin competes with gold as a safe-haven asset under currency-war conditions. The answer is qualified. Gold and Bitcoin do not appear to serve identical monetary functions under stress. Gold remains more closely tied to the traditional safe-haven hierarchy, while Bitcoin behaves more like a conditional digital alternative whose relative performance is shaped by both volatility stress and digital liquidity.
+
+The stablecoin extension is especially informative. Changes in stablecoin supply are positively associated with gold-Bitcoin competition outcomes, suggesting that the relative attractiveness of Bitcoin depends in part on the liquidity conditions of the digital ecosystem. The altcoin extension deepens that result. Bitcoin responds not only to one crypto benchmark but to a broader digital-market regime defined by altcoin returns, breadth, and dispersion. This does not establish Bitcoin as a full replacement for gold. It does, however, show that competition between the two assets is partly mediated by channels that have no direct analogue in the traditional gold literature.
+
+The broader implication is that monetary stress is no longer allocated exclusively across sovereign currencies and traditional hedges. Part of it now runs through digital liquidity structures and wider crypto-market regimes. But the evidence here suggests that these new channels complement rather than eliminate the old hierarchy in which gold remains the more traditional safe-haven anchor.
+
+---
+
+# Declarations {.unnumbered}
+
+**CRediT Author Contribution Statement:** Onur Bilgin: Conceptualization, Data Curation, Software, Formal Analysis, Writing – Original Draft. Mehmet Gokhan Ozdemir: Methodology, Formal Analysis, Writing – Review & Editing, Supervision. Mehmet Oksuzkaya: Writing – Review & Editing, Validation.
+
+**Declaration of Competing Interests:** The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+**Data Availability Statement:** Daily gold, Bitcoin, Ethereum, and macro-financial data are publicly available via Bloomberg, CoinGecko, Federal Reserve Economic Data (FRED), and CBOE. Stablecoin supply data are available via DeFiLlama. Replication code is available from the corresponding author upon reasonable request.
+
+**Funding:** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+::: {#refs}
+:::

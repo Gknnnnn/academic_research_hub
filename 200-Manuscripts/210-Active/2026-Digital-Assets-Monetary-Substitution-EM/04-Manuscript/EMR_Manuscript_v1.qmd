@@ -1,0 +1,279 @@
+---
+title: "Macro Fragility, Digital Assets, and Monetary Substitution in Emerging Markets: A Multi-Estimator Panel Approach"
+author:
+  - name: "Onur Bilgin"
+    affiliation: "Kirikkale University, Department of Economics, Kirikkale, Turkiye"
+  - name: "Zaim Reha Yasar"
+    affiliation: "Kirikkale University, Department of Economics, Kirikkale, Turkiye"
+  - name: "Mehmet Gokhan Ozdemir"
+    affiliation: "Kirikkale University, Department of Economics, Kirikkale, Turkiye"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+format:
+  docx:
+    number-sections: true
+  html:
+    toc: true
+    number-sections: true
+bibliography: references.bib
+csl: emerging-markets-review.csl
+execute:
+  echo: false
+  warning: false
+---
+
+# Abstract {.unnumbered}
+
+This paper investigates the short-run and long-run dynamics of monetary substitution in six major emerging economies --- Argentina, Brazil, India, Mexico, Nigeria, and South Africa --- over the period 1983--2024. We employ eight methodologically independent estimators to discipline the headline magnitudes under cross-section dependence and slope heterogeneity: pooled country fixed-effects OLS, Common Correlated Effects Mean Group (CCEMG), Augmented Mean Group (AMG), Grouped Fixed Effects (GFE), break-augmented fixed effects with Bai-Perron endogenous structural breaks, Westerlund panel error-correction cointegration, Mean Group ARDL, and Dumitrescu-Hurlin panel Granger non-causality. Three heterogeneous-slope estimators converge on a short-run inflation pass-through of 0.30--0.32, providing a triple-replication of the headline coefficient. Westerlund tests confirm a stable long-run cointegrating relationship between the exchange rate and cumulated price levels (group-mean $G_t$, $p = 0.029$), and the MG-ARDL reveals a two-cluster structure: Argentina and Nigeria exhibit near-PPP long-run elasticities ($\hat{\theta} \approx 1.0$), while Brazil, India, Mexico, and South Africa show anchored regimes ($\hat{\theta} \approx 0.005$). Among digital-asset proxies, Google Trends search interest yields uniformly insignificant coefficients, whereas the Bitcoin--local-currency price premium carries a statistically significant negative association with exchange-rate depreciation under Webb wild cluster bootstrap inference ($p = 0.045$), consistent with the monetary substitution channel operating through price-based rather than attention-based margins. All inference employs @webb2023 six-point wild cluster bootstrap weights, which are mandatory given $N = 6$ clusters.
+
+**Keywords:** emerging markets; monetary substitution; digital assets; cryptocurrency; exchange rate; panel data; cross-section dependence; wild cluster bootstrap
+
+**JEL Codes:** F31, E41, G15, O16
+
+---
+
+# 1. Introduction
+
+When domestic currencies weaken, residents and firms in emerging markets face a familiar portfolio problem: hold domestic currency and accept the erosion, or substitute into foreign-currency assets. The monetary economics literature has studied this choice for decades under the heading of currency substitution. The classical channel, acquiring physical US dollars or opening foreign-currency accounts, remains dominant, but the spread of decentralised digital assets has opened a parallel route that bypasses conventional banking infrastructure. Bitcoin, dollar-pegged stablecoins, and peer-to-peer exchanges now let households in countries with weak nominal anchors acquire dollar-equivalent stores of value at low transaction costs. Whether this route operates at macroeconomically detectable magnitudes is the question we address.
+
+The question matters for policy. Monetary authorities in several emerging markets have flagged digital-asset adoption as a threat to interest-rate transmission and reserve management [@he2022; @imf2023_crypto_small_open]. If residents can sidestep domestic monetary conditions by shifting into stablecoins, conventional policy tools lose traction at the moments they are needed most. Yet the empirical base for these concerns is thin: most existing studies cover a single country, rely on global aggregate data, or fail to separate speculative cryptocurrency investment from genuine monetary substitution.
+
+We construct a monthly panel of six high-adoption emerging economies (Argentina, Brazil, India, Mexico, Nigeria, and South Africa) and apply eight methodologically independent estimators suited to the cross-section dependence and slope heterogeneity that define small-$N$, large-$T$ emerging-market panels. The empirical design targets three questions. What is the magnitude of the short-run inflation pass-through, and does it survive controls for cross-section dependence and heterogeneous slopes? Does a stable long-run cointegrating relationship hold between exchange-rate levels and cumulated price levels, and does the error-correction speed vary across countries? Do digital-asset proxies, measured by both attention-based (Google Trends) and price-based (Bitcoin premium) instruments, add explanatory power once macro fundamentals are controlled?
+
+On the methodological side, we show that the conventional pooled fixed-effects estimator produces an attenuated pass-through coefficient ($\hat{\beta} = 0.006$) that understates the true magnitude by two orders. The @pesaran_yamagata2008 $\tilde{\Delta}$-test rejects slope homogeneity ($\tilde{\Delta} = 18.79$, $p \approx 0$), and the @pesaran2021cd CD-test confirms strong cross-section dependence (CD $= 5.88$, $p \approx 0$). Three heterogeneous-slope estimators that account for these features --- CCEMG [@pesaran2006ccemg], AMG [@eberhardt_bond2009], and MG-ARDL [@pesaran_shin_smith1999] --- converge on a short-run pass-through of $+0.30$ to $+0.32$, a convergence achieved under radically different identification strategies that disciplines the headline magnitude where $N = 6$ makes standard-error inflation unavoidable.
+
+On the substantive side, we evaluate two proxy families for the digital-asset channel: country-level Google Trends search interest for Bitcoin and stablecoins, and the Bitcoin local-currency price premium constructed from CryptoCompare daily data. The attention-based proxies yield insignificant coefficients across all specifications, consistent with the contamination of search interest by speculative price attention. The price-based proxy, the crypto premium, enters at $p = 0.045$ under Webb wild cluster bootstrap, with a negative coefficient: a higher domestic Bitcoin premium (indicating stronger demand for monetary substitutes) is associated with reduced exchange-rate depreciation. This result is consistent with @niu2024bitcoin, who shows that under capital controls, FX transaction costs translate into BTC premiums that function as shadow exchange rates. The monetary substitution channel, in other words, appears to operate through price-based margins, where real capital is deployed, not through attention-based margins that mix speculative curiosity with actual adoption.
+
+All inference relies on the Webb (2023) six-point wild cluster bootstrap, which @mackinnon_webb2017 show is necessary when $N = 6$ clusters. Conventional cluster-robust standard errors appear for comparison but are not the basis for hypothesis testing.
+
+Section 2 develops the theoretical framework. Section 3 reviews the literature. Section 4 describes the data. Section 5 lays out the econometric strategy. Section 6 reports the results. Section 7 discusses implications and limitations. Section 8 concludes.
+
+# 2. Theoretical Framework
+
+## 2.1. Monetary Substitution Under Weak Nominal Anchors
+
+When a domestic currency loses purchasing power faster than available alternatives, rational agents shift into those alternatives [@dollarization2025]. In the @calvo_reinhart2002 framework, the alternative is the US dollar, and the substitution dynamic follows from the expected return differential between domestic and foreign currency holdings [@baurmcdermott2010international]. Dollarization hysteresis, the persistence of dollar holdings even after stabilisation, implies that adoption and de-adoption both involve non-trivial fixed costs [@dedollarization2024].
+
+Digital assets modify this framework along two dimensions. Stablecoins pegged to the US dollar offer the same nominal stability as physical dollars but require no bank account, no formal FX transaction, and no regulatory overhead beyond internet access and a digital wallet [@gorton_zhang2021; @brunnermeier2019]. At the same time, the peer-to-peer architecture of cryptocurrency exchanges means the effective exchange rate faced by a domestic user can diverge from the official rate, producing a "shadow exchange rate" embedded in the local-currency price of Bitcoin [@niu2024bitcoin]. This premium reflects the marginal cost of escaping the domestic monetary system.
+
+## 2.2. Threshold Structure and Quantile Dependence
+
+Digital-asset demand should correlate with monetary fragility in a nonlinear, threshold-dependent pattern. Below some level of monetary stress, the fixed costs of learning about and adopting digital assets outweigh the benefits. Above that threshold, the perceived benefit of substitution exceeds the adoption cost and take-up accelerates. If this threshold structure exists, it concentrates in the upper tail of the depreciation distribution, making linear average-effect regressions a poor tool for detection. Quantile regression [@koenker_bassett1978] is better suited to uncover such tail-concentrated effects.
+
+## 2.3. The External Dollar Channel
+
+A strengthening global dollar raises the domestic cost of all dollar-denominated assets, including digital substitutes, and at the same time signals tighter global financial conditions that pull capital out of emerging markets [@goldusdextreme2024]. The net effect on digital-asset demand is ambiguous: dollar strength increases the appeal of dollar-pegged stablecoins as a hedge but makes acquiring them more expensive. We therefore treat the dollar channel as a control rather than a variable of primary interest.
+
+# 3. Literature Review
+
+## 3.1. Currency Substitution and Dollarization
+
+The persistence of dollarization after stabilisation is well established. @dollarization2025 document that inflation jumps create dollarization ratchets that are costly to reverse, while @dedollarization2024 find that de-dollarization has proceeded more slowly than optimists predicted. The dollar remains dominant in invoicing, cross-border finance, and safe-haven demand, creating a structural asymmetry in the global monetary system that emerging-market digital-substitution channels must navigate.
+
+## 3.2. Digital Dollarization and Cryptoization
+
+@he2022 formalise the concept of "digital dollarization" and show that stablecoin adoption can undermine monetary sovereignty in small open economies. @murakami_viswanath2025 demonstrate that stablecoin demand in emerging markets correlates with local-currency depreciation, particularly in countries with underdeveloped financial systems. @imf2023_crypto_small_open model the macrofinancial implications for small developing economies and find that unbridled crypto adoption can amplify procyclical capital flows. @auer_cornelli_frost2023 survey the rise of central bank digital currencies, documenting how CBDCs represent the official-sector response to the same monetary-substitution pressures that drive private stablecoin adoption. @bis_wp1340_stablecoin_fx2025 document significant stablecoin-to-FX spillovers in high-frequency data. @globalsurgeadoption2025 map the spatial determinants of cryptocurrency adoption globally and find that institutional quality and financial access are the strongest predictors.
+
+## 3.3. Proxy Measurement in the Crypto-Substitution Literature
+
+Proxy quality is the weakest link in the existing literature. Studies using Google Trends or Wikipedia page views as measures of crypto demand have found weak and unstable associations with macro fundamentals. The main objection is that these proxies mix speculative price attention with genuine monetary substitution demand. @niu2024bitcoin takes a different approach, constructing Bitcoin price premiums as shadow exchange rates and showing that under capital controls the BTC premium captures the marginal cost of capital flight. We build on this insight by testing both proxy families in a unified panel framework.
+
+## 3.4. Research Gap
+
+No existing study combines a six-country panel spanning both high- and moderate-inflation emerging economies, eight methodologically independent estimators designed for cross-section dependence and slope heterogeneity, an explicit comparison of attention-based versus price-based digital-asset proxies, and Webb wild cluster bootstrap inference throughout.
+
+# 4. Data and Panel Construction
+
+## 4.1. Country Selection
+
+The panel covers six countries: Argentina, Brazil, India, Mexico, Nigeria, and South Africa. These were selected to represent regionally diverse emerging economies with high documented levels of cryptocurrency adoption (all six rank in the top 20 of the Chainalysis Global Crypto Adoption Index [@chainalysis2024]) and sufficient financial-market depth to make digital-asset substitution empirically detectable. Argentina and Nigeria were added to the baseline four-country panel to capture the high-inflation tail of the distribution, where the substitution motive is theoretically strongest.
+
+## 4.2. Exchange Rates and Dollar Pressure
+
+The dependent variable is the monthly percentage change in the bilateral exchange rate against the US dollar (positive values indicate depreciation). Exchange-rate data are sourced from the Federal Reserve Economic Data (FRED) database. The global dollar pressure variable is the monthly change in the broad dollar index (DXY), and the federal funds rate level proxies the external monetary-conditions stance.
+
+## 4.3. Macro Fragility Indicators
+
+Two indicator sets are employed. The first draws on World Bank World Development Indicators: monthly inflation (for Argentina, INDEC IPC Cobertura Nacional is used directly to ensure CPI precision during the hyperinflationary episodes; @indec2024), an M2 instability measure constructed as the absolute year-on-year rate of change in the M2-to-GDP ratio, and a reserve adequacy change variable based on reserves in months of imports. The second set draws on the Global Macro Database [@mueller2025gmd], which provides harmonised historical series extending back to 1983 for several countries.
+
+## 4.4. Digital-Asset Proxies
+
+Two proxy families are evaluated. The first is country-level Google Trends search interest for Bitcoin and stablecoins (monthly averages from weekly indices, first-differenced to capture changes in attention). The second is the Bitcoin--local-currency price premium, constructed from CryptoCompare daily closing prices as the percentage deviation of the local BTC price (converted at the official exchange rate) from the global BTC price in USD. This premium measures the cost of acquiring dollar-equivalent assets through the crypto channel and is directly interpretable as a shadow exchange-rate wedge.
+
+## 4.5. Panel Dimensions
+
+The resulting panel is unbalanced, with $T$ varying by country and specification. The baseline macro panel contains 2,378 country-month observations across the six countries. The Google Trends subsample covers 2016--2024 ($N_{\text{obs}} = 336$, $N_{\text{clusters}} = 4$). The crypto-premium subsample covers 2017--2024 ($N_{\text{obs}} = 348$, $N_{\text{clusters}} = 6$).
+
+# 5. Econometric Strategy
+
+## 5.1. Diagnostic Pre-Tests
+
+Before estimation, two diagnostic tests are conducted. The @pesaran2021cd CD-test assesses cross-section dependence in pooled fixed-effects residuals. The @pesaran_yamagata2008 $\tilde{\Delta}$-test assesses slope homogeneity across panels. Both are necessary preconditions for selecting appropriate estimators.
+
+## 5.2. Estimator Menu
+
+Given that both tests reject their null hypotheses decisively, we deploy eight estimators that bracket the parameter space under different assumptions:
+
+**Short-run estimators:**
+
+(i) Pooled country-FE OLS (biased baseline for comparison).
+(ii) @pesaran2006ccemg CCEMG: heterogeneous slopes with cross-section averages to absorb common factors.
+(iii) @eberhardt_bond2009 AMG: heterogeneous slopes with a common dynamic process (CDP).
+(iv) @bonhomme_manresa2015 GFE: data-driven latent group structure with group-specific time effects $\alpha_{g,t}$.
+(v) @bai_perron2003 break-augmented FE: country-specific endogenous structural breaks in the pass-through coefficient.
+
+**Long-run estimators:**
+
+(vi) @westerlund2007 panel error-correction cointegration test.
+(vii) @pesaran_shin_smith1999 MG/PMG-ARDL: long-run equilibrium elasticity $\hat{\theta}$ and error-correction speed $\hat{\phi}$.
+
+**Causality:**
+
+(viii) @dumitrescu_hurlin2012 panel Granger non-causality test.
+
+## 5.3. Inference Protocol
+
+All hypothesis testing employs the @webb2023 six-point wild cluster bootstrap with $B = 999$ replications, following the recommendation of @mackinnon_webb2017 for settings with $N \leq 8$ clusters. Conventional cluster-robust standard errors are reported for transparency but are not used for inference. The @webb2023 bootstrap delivers correctly sized tests at $N = 6$ by construction, addressing the severe under-rejection problem documented in the cluster-robust literature [@cameron_miller2015; @roodman2019].
+
+# 6. Results
+
+## 6.1. Diagnostic Pre-Tests
+
+The @pesaran_yamagata2008 $\tilde{\Delta}$-test on the baseline panel yields $\tilde{\Delta} = 18.79$ ($p \approx 0$), rejecting slope homogeneity. The @pesaran2021cd CD-test on pooled-FE residuals returns CD $= 5.88$ ($p \approx 0$), confirming cross-section dependence. Together, these results rule out the pooled FE estimator and call for the heterogeneous-slope, CSD-robust battery that follows.
+
+## 6.2. Short-Run Inflation Pass-Through: Triple Replication
+
+Table 1 presents the short-run inflation-to-depreciation pass-through across the five short-run estimators.
+
+Table 1: Short-Run Inflation Pass-Through Estimates
+
+| Estimator | $\hat{\beta}_{\text{inflation}}$ | SE | adj-$R^2$ | Heterogeneity | CSD |
+|---|---|---|---|---|---|
+| Pooled FE | +0.006 | 0.001 | 0.098 | No | No |
+| CCEMG | +0.304 | 0.242 | --- | Yes | Yes (CSA) |
+| AMG | +0.319 | 0.235 | --- | Yes | Yes (CDP) |
+| GFE ($G=2$) | $-0.002$ | 0.003 | 0.261 | Within-group | Yes ($\alpha_{g,t}$) |
+| MG-ARDL | +0.322 | 0.201 | --- | Yes | Partial |
+
+The pooled FE estimate (+0.006) is attenuated by a factor of 50 relative to the heterogeneous-slope estimators, a direct consequence of imposing a common slope across countries with very different inflation histories. CCEMG (+0.304), AMG (+0.319), and MG-ARDL (+0.322) converge to within 6% of each other. That three independent identification strategies (cross-section averages, a common dynamic process, and autoregressive distributed lags) produce near-identical point estimates disciplines the headline magnitude in a setting where any single estimator's confidence interval would be wide.
+
+## 6.3. Long-Run Cointegration and Error Correction
+
+The @westerlund2007 panel error-correction tests yield group-mean $G_t = -1.896$ (asymptotic $p = 0.029$) and pooled $P_t = -3.947$ ($p < 0.0001$). All six country-specific error-correction terms carry the theoretically correct negative sign, establishing a stable long-run relationship between log exchange-rate levels and cumulated log CPI panel-wide.
+
+The MG-ARDL [@pesaran_smith1995mg] long-run elasticity is $\hat{\theta}_{\text{MG}} = +0.322$ (SE = 0.201, $t = 1.60$), while the PMG estimate is $\hat{\theta}_{\text{PMG}} = +0.894$ (SE = 0.051, $t = 17.41$). The Hausman test rejects long-run homogeneity ($H = 8.66$, $p = 0.003$), indicating that the MG estimator is consistent while PMG is biased by the high-$T$ observations from Brazil, India, Mexico, and South Africa pulling the common $\theta$ toward their near-zero individual estimates.
+
+Country-level decomposition reveals a two-cluster structure:
+
+Table 2: Long-Run Equilibrium Elasticities by Cluster
+
+| Cluster | Countries | $\hat{\theta}_i$ | Interpretation |
+|---|---|---|---|
+| High pass-through | Argentina, Nigeria | $\approx 1.0$ | Near-PPP; no effective nominal anchor |
+| Anchored regime | Brazil, India, Mexico, South Africa | $\approx 0.005$ | Credible monetary framework absorbs shocks |
+
+This two-cluster structure is corroborated independently by the @bonhomme_manresa2015 GFE ($G = 2$, BIC-preferred), confirming that the heterogeneity is data-driven rather than imposed.
+
+## 6.4. Structural Breaks: Bai-Perron Analysis
+
+Country-specific @bai_perron2003 endogenous break detection identifies the following regime transitions:
+
+Table 3: Bai-Perron Endogenous Structural Breaks
+
+| Country | $\hat{m}$ | Break dates | Economic context |
+|---|---|---|---|
+| Argentina | 3 | 2018-09, 2022-07, 2024-01 | IMF \$57bn programme; Fed tightening; Milei devaluation |
+| Brazil | 1 | 2002-09 | Pre-Lula capital flight |
+| India | 2 | 1983-07, 1991-07 | First RBI intervention; BoP crisis and reform |
+| Mexico | 1 | 1998-09 | Russia-Brazil-LTCM contagion |
+| Nigeria | 1 | 2016-05 | CBN multi-window devaluation |
+| South Africa | 2 | 1993-07, 2002-12 | Post-apartheid transition; ZAR 2001--02 crisis |
+
+Argentina's break-augmented pass-through exhibits a structural decline across regimes: $\hat{\beta} = 3.28$ (pre-2018) $\to$ 2.02 (IMF programme) $\to$ 1.81 (Fed cycle) $\to$ 1.20 (Milei era). Nigeria shows the opposite trajectory: a seven-fold amplification from $+0.27$ to $+1.94$ after the 2016 multi-window arrangement, contradicting the orthodox prediction that managed-float regimes attenuate pass-through.
+
+## 6.5. Causality: Dumitrescu-Hurlin Panel Granger Non-Causality
+
+Table 4: Dumitrescu-Hurlin Panel Granger Non-Causality Tests
+
+| Lag | Direction | $\bar{Z}^{\text{HNC}}$ | $p$ |
+|---|---|---|---|
+| 1 | Inflation $\to$ FX depreciation | +1.96 | 0.050 |
+| 1 | FX depreciation $\to$ Inflation | +35.74 | $<0.001$ |
+| 2 | Inflation $\to$ FX depreciation | +4.46 | $<0.001$ |
+| 2 | FX depreciation $\to$ Inflation | +28.29 | $<0.001$ |
+
+Bidirectional Granger causality is confirmed at all lag orders. The FX $\to$ inflation direction is one order of magnitude stronger, consistent with the standard EM pass-through literature: devaluation transmits to prices mechanically through tradeable channels and dollarised liabilities, while inflation feeds back into FX via slower expectations and PPP convergence.
+
+## 6.6. Digital-Asset Proxies: Attention vs. Price
+
+Table 5 presents the Webb wild cluster bootstrap results for the three model specifications.
+
+Table 5: Webb Wild Cluster Bootstrap Results for Digital-Asset Proxy Models
+
+| Model | Key variable | $\hat{\beta}$ | Webb $p$ | $N$ | $N_{\text{clusters}}$ |
+|---|---|---|---|---|---|
+| M_base | Inflation | +0.004 | $<0.001$ | 2255 | 6 |
+| M_base | Broad money instability | $-0.004$ | $<0.001$ | 2255 | 6 |
+| M_trends | Google Trends BTC interest | $\approx 0$ | 0.435 | 336 | 4 |
+| M_crypto | Bitcoin price premium | $-0.008$ | 0.045 | 348 | 6 |
+
+**M_base** ($N = 2255$, $N_{\text{clusters}} = 6$): Inflation carries a highly significant positive coefficient ($\hat{\beta} = +0.004$, Webb $p < 0.001$). Broad money instability is significant with a negative sign ($\hat{\beta} = -0.004$, Webb $p < 0.001$).
+
+**M_trends** ($N = 336$, $N_{\text{clusters}} = 4$): Country-level Google Trends Bitcoin interest change is insignificant ($\hat{\beta} \approx 0$, Webb $p = 0.435$). The attention-based proxy adds no explanatory content once macro fundamentals are controlled.
+
+**M_crypto** ($N = 348$, $N_{\text{clusters}} = 6$): The Bitcoin--local-currency price premium enters with a significant negative coefficient ($\hat{\beta} = -0.008$, Webb $p = 0.045$). A one-unit increase in the crypto premium --- indicating stronger domestic demand for BTC as a monetary substitute --- is associated with reduced exchange-rate depreciation in the same month. This sign is consistent with the @niu2024bitcoin shadow exchange-rate interpretation: the premium absorbs part of the depreciation pressure that would otherwise manifest in the official rate.
+
+## 6.7. AMG Common Dynamic Process Loadings
+
+The AMG common dynamic process (CDP) loadings reveal the cross-country dispersion in exposure to global liquidity cycles:
+
+Table 6: AMG Common Dynamic Process Loadings
+
+| Country | $\hat{d}_i$ |
+|---|---|
+| Brazil | +0.999 |
+| South Africa | +0.677 |
+| Argentina | +0.622 |
+| Mexico | +0.395 |
+| India | +0.232 |
+| Nigeria | +0.069 |
+
+Brazil and South Africa load almost fully on the global factor; Nigeria is largely insulated. This cross-country dispersion in factor exposure is the reason pooled FE produces biased estimates: the common slope cannot accommodate countries that respond to global liquidity at very different intensities.
+
+# 7. Discussion
+
+## 7.1. The Triple-Replication Result
+
+CCEMG, AMG, and MG-ARDL agree on a pass-through of $+0.30$ to $+0.32$, a degree of estimator convergence that, to our knowledge, has not been documented in small-$N$ emerging-market exchange-rate panels. The convergence matters because individual-estimator uncertainty at $N = 6$ is substantial: MG-type standard errors are wide by construction. Economically, the estimate implies that a one-percentage-point increase in monthly inflation is associated with a 0.30--0.32 percentage-point contemporaneous depreciation on average across the six countries, a partial pass-through consistent with managed-float regimes in which central bank intervention absorbs part of the inflationary signal.
+
+## 7.2. The Two-Cluster Structure
+
+The AR/NG versus BR/IN/MX/ZA split, confirmed independently by the MG-ARDL country-level elasticities and the @bonhomme_manresa2015 GFE latent-group estimator, maps directly onto the @ilzetzki_reinhart_rogoff2019 classification of de facto exchange-rate arrangements. Argentina and Nigeria operate under regimes where the nominal anchor has effectively collapsed (or been repeatedly abandoned), producing near-PPP long-run elasticities. The remaining four countries maintain credible monetary frameworks that absorb shocks before they pass through to the exchange rate.
+
+## 7.3. Attention vs. Price: Why Google Trends Fails
+
+The null result for Google Trends proxies is informative. Search interest in cryptocurrency is contaminated by speculative price attention during bull markets, by geographic aggregation that washes out localised adoption patterns, and by the lag between searching for cryptocurrency and actually acquiring monetary substitutes. The crypto premium, by contrast, is a revealed-preference measure: it reflects the marginal cost of deploying real capital into the crypto channel.
+
+The negative coefficient on the crypto premium ($p = 0.045$) suggests that when domestic Bitcoin premiums rise, indicating capital-flight pressure, some of the depreciation that would otherwise appear in the official rate is absorbed into the parallel crypto market. This interpretation is consistent with @niu2024bitcoin's theoretical prediction and with the @bis_wp1340_stablecoin_fx2025 evidence on stablecoin-FX spillovers.
+
+## 7.4. Policy Implications
+
+For monetary authorities monitoring digital-substitution risks, the results point toward tracking price-based indicators (exchange premiums, stablecoin trading volumes) rather than attention-based metrics such as Google Trends. The two-cluster structure also suggests that the digital substitution threat concentrates in countries where the nominal anchor has collapsed (Argentina, Nigeria) rather than in anchored regimes where the central bank retains credibility. The Bai-Perron evidence on Argentina, where the pass-through declined from 3.28 to 1.20 across four regimes, further suggests that regime changes can alter the substitution dynamic even in high-inflation settings.
+
+## 7.5. Limitations
+
+The analysis has limitations that affect how far the conclusions can be pushed. $N = 6$ is small. The Webb bootstrap is correctly sized by construction, but the resulting confidence intervals are wide and statistical power is limited. The Chainalysis GCAI data for Mexico and Nigeria over 2020--2022 have not been verified at the cell level, which introduces measurement uncertainty in the adoption rankings. The crypto-premium proxy is available only from 2017, restricting the subsample for the most informative specification to 348 observations. The Westerlund cointegration results use asymptotic critical values; bootstrap-based panel cointegration tests would be a useful cross-check. Finally, the Bai-Perron supF $p$-values are $\chi^2(q)$ approximations. We have cross-validated the Argentine 2018-09 break using R `strucchange``strucchange` [@zeileis2002strucchange], but the remaining break dates would benefit from the same treatment.
+
+# 8. Conclusion
+
+Monetary substitution dynamics in emerging markets are identifiable with appropriate econometric tools, even when the panel contains only six countries. The digital-asset channel, however, operates through price-based margins rather than through the attention-based proxies that dominate the existing literature.
+
+Three heterogeneous-slope estimators converge on a short-run pass-through of $+0.30$ to $+0.32$, providing a credible benchmark for the inflation-depreciation nexus. @westerlund2007 cointegration tests and MG-ARDL confirm a stable long-run relationship with a two-cluster equilibrium: near-PPP for Argentina and Nigeria, effectively anchored for the remaining four countries. @dumitrescu_hurlin2012 tests confirm bidirectional causality, with the FX-to-inflation direction dominating. The @webb2023 wild cluster bootstrap validates the Bitcoin price premium as a significant predictor of exchange-rate dynamics while ruling out Google Trends search interest.
+
+The Bitcoin premium and stablecoin exchange volumes represent the measurement frontier for this line of research. Combining these price-based proxies with on-chain transaction data and wallet creation rates in a panel framework that separates speculative from monetary-substitution demand is the natural next step.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

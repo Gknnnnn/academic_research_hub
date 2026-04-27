@@ -1,0 +1,269 @@
+---
+title: "HBI Konya Tarim: Analizleri Teknik Olarak Anlatma Notlari"
+subtitle: "Soru gelirse ne ise yaradigini ve sekillerin nasil okunacagini anlatan yedek sunum"
+author:
+  - "Mehmet Gokhan Ozdemir"
+date: "3 Nisan 2026"
+lang: tr
+format:
+  beamer:
+    theme: Madrid
+    colortheme: seahorse
+    aspectratio: 169
+    slide-level: 2
+    toc: false
+    section-titles: false
+header-includes:
+  - \setbeamertemplate{navigation symbols}{}
+---
+
+## 1. Bu Dosya Ne Icin?
+
+- Amac:
+  sunumda gelebilecek teknik sorulara hazir olmak
+- Iki odak var:
+  hangi analiz ne ise yariyor
+- ve her sekil nasil okunur
+- Gerektiginde bunu dogrudan yedek sunum olarak da kullanabilirsin
+
+## 2. Calismanin Ana Sorusu
+
+- Tarimin GSYH icindeki payi sonsuza kadar dusuyor mu?
+- Yoksa belli bir esikte dengeleniyor mu?
+- Bu esige calismada "yapisal taban" deniyor
+
+## 3. Veri Yapisi
+
+- 105 ulke
+- 2000-2020
+- Tam dengeli panel
+- 2.205 gozlem
+- Bagimli degisken:
+  tarimsal katma deger payi
+
+## 4. Neden Tek Yontem Yetmedi?
+
+- Sadece ekonometri:
+  dogrusal olmayan etkileri kacirabilir
+- Sadece YSA:
+  kara kutu elestirisi alir
+- Bu nedenle hibrit kurgu kullanildi:
+  YSA + XAI + panel ekonometrisi
+
+## 5. Yontem Mimarisi
+
+1. YSA ile karmasik iliskileri ogren
+2. Olden ve SHAP ile modeli ac
+3. Birim kok ve esbutunlesim ile sahte iliski riskini test et
+4. Nedensellik ve GMM ile yon ve saglamlik kontrolu yap
+
+## 6. YSA Neden Kullanildi?
+
+- Tarimsal pay ile aciklayici degiskenler arasindaki iliski lineer olmayabilir
+- Esik etkileri olabilir
+- Bazi degiskenler ayni anda hem asindirici hem koruyucu etki yapabilir
+- YSA bu karmasik yapilari daha iyi yakalar
+
+## 7. YSA Sonucu Nasildi?
+
+- Mimari: 6-7-5-1
+- MSE: 0.0011
+- Test R2: %91.55
+- Yorum:
+  model verideki ana oruntuyu guclu yakaliyor
+
+## 8. Tahmin Grafigi Nasil Okunur?
+
+![](../03-Results/YSA_Tahmin_Son.png){width=72%}
+
+- Noktalar gercek ve tahminin ne kadar ortustugunu gosterir
+- Diyagonale yakinlik iyi uyumu anlatir
+- Diyagonalden uzaklasan noktalar hata alanlaridir
+
+## 9. CV ve Kalinti Sekilleri Neden Var?
+
+![](../03-Results/cv_fold_r2.png){width=46%}
+\hfill
+![](../03-Results/Residual_Plot.png){width=46%}
+
+- CV grafigi:
+  model tek bir bolmeye bagli mi diye bakar
+- Kalinti grafigi:
+  hata sistematik bir patern mi tasiyor diye bakar
+- Sunum cümlesi:
+  "Model sadece tek bir parca veriye ezber yapmiyor."
+
+## 10. Olden Analizi Ne Ise Yarar?
+
+![](../03-Results/Olden_Analizi.png){width=72%}
+
+- Sinir agindaki toplam agirlik etkisini toplar
+- Degiskenin yonunu ve goreli gucunu gosterir
+- Burada sunman gereken mesaj:
+  hangi degisken yapisal tabani koruyor, hangisi baski kuruyor
+
+## 11. Olden Sekli Nasil Okunur?
+
+- Pozitif etki:
+  tarimsal payi yukari iten kanal
+- Negatif etki:
+  tarimsal payi asagı iten kanal
+- Cok buyuk bar:
+  model o degiskene daha cok yaslaniyor
+- Ana yorum:
+  verim koruyucu, ekipman donusturucu baski kanali
+
+## 12. SHAP Analizi Ne Ise Yarar?
+
+![](../03-Results/shap_beeswarm.png){width=80%}
+
+- Kara kutuyu gozlem bazinda acar
+- Her nokta bir ulke-yil gozlemidir
+- Her renk degisken duzeyini, her yatay konum katkıyı temsil eder
+
+## 13. SHAP Sekli Nasil Okunur?
+
+- Saga kayan nokta:
+  o gozlemde tahmini artiriyor
+- Sola kayan nokta:
+  o gozlemde tahmini dusuruyor
+- Dagilim ne kadar genisse:
+  degiskenin etkisi o kadar heterojen
+- Sunum cümlesi:
+  "SHAP sayesinde modelin neden o sonuca gittigini gozlem bazinda gorebiliyoruz."
+
+## 14. Birim Kok Testleri Ne Ise Yarar?
+
+- Panel veri serilerinin durağan olup olmadigini kontrol eder
+- Neden onemli?
+  durağan olmayan seriler sahte regresyon riski dogurabilir
+- IPS ve LLC bu riskin ilk kapisidir
+
+## 15. Esbutunlesim Neden Test Edildi?
+
+- Degiskenler uzun donemde birlikte hareket ediyor mu?
+- Eger evet ise:
+  iliski sadece gecici degil, yapisal olabilir
+- Sunum cümlesi:
+  "Uzun donemli denge iliskisi oldugu icin yapisal taban iddiasi daha anlamli hale geliyor."
+
+## 16. Yapisal Kirilma Sekli Nasil Okunur?
+
+![](../03-Results/yapisal_kirilma.png){width=52%}
+
+- Amac:
+  seride tek rejim mi var yoksa kirilma noktasi var mi
+- Bu sekil, tarih boyunca ayni dinamikle ilerlenmedigini hatirlatir
+- Yani model tek duz bir azalis varsaymiyor
+
+## 17. DH ve Granger Neden Kullanildi?
+
+- Iliskinin sadece birlikte hareket olup olmadigini degil
+- yon tasiyip tasimadigini test eder
+- Dumitrescu-Hurlin:
+  heterojen panel icin daha uygun
+- Granger:
+  yon bilgisini daha klasik dille destekler
+
+## 18. DH ve Granger Sekilleri Nasil Okunur?
+
+![](../03-Results/dh_nedensellik.png){width=45%}
+\hfill
+![](../03-Results/granger_nedensellik.png){width=45%}
+
+- Okuma mantigi:
+  degiskenden tarimsal paya dogru yon var mi
+- Anlamli sonuc:
+  yalniz korelasyon degil, yonlu iliski var
+- Sunum cümlesi:
+  "Degiskenler yalnizca beraber oynamiyor; tarimsal paya dogru aciklayici yon de tasiyor."
+
+## 19. System GMM Neden Gerekliydi?
+
+- Panel veride icsellik sorunu olabilir
+- Gecikmeli bagimli degisken kullanildiginda OLS yanli olabilir
+- GMM bunu arac degisken mantigiyla duzeltmeye calisir
+
+## 20. GMM Sonucu Teknik Olarak Ne Diyor?
+
+- Sargan:
+  araclar ciddi sorun gostermiyor
+- AR(2):
+  ikinci derece seri korelasyon sorunu gorunmuyor
+- Bu, sonucn "sadece YSA hikayesi" olmadigini guclendirir
+
+## 21. En Onemli Teknik Savunma
+
+- YSA tek basina degil
+- Olden/SHAP ile aciklanmis
+- DH/Granger ile yon kontrol edilmis
+- GMM ile icsellik kontrol edilmis
+- Tek cümle:
+  "Farkli metodolojik aileler ayni hikayede bulusuyor."
+
+## 22. 2030 Senaryo Kismindaki Onceki Sorun Neydi?
+
+- Eski sunumdaki tek-patika 2030 grafiği
+  uc senaryolu kuresel yol gostermiyordu
+- O figür esasen tek patika mantigina yakin duruyordu
+- Senin fark ettigin problem dogruydu:
+  iyi-orta-kotu ayni anda net gozukmeli
+
+## 23. Duzeltilmis Kuresel Senaryo Grafigi
+
+![](../03-Results/scenario_global_paths.png){width=82%}
+
+- Siyah cizgi:
+  2000-2020 gercek kuresel ortalama
+- Renkli cizgiler:
+  2020'den 2030'a giden uc ayri senaryo
+- Kuresel 2030:
+  Kotu %5.79, Orta %6.13, Iyi %6.27
+
+## 24. Gelir Gruplarina Gore Senaryo Sekli
+
+![](../03-Results/scenario_group_bars.png){width=82%}
+
+- Yuksek gelirli grup:
+  dar bir bantta sikisiyor
+- Orta gelirli grup:
+  8-9 bandinda kaliyor
+- Dusuk gelirli grup:
+  en genis bant, en yuksek duyarlilik
+- Teknik mesaj:
+  yapisal taban gelir grubuna kosullu
+
+## 25. Bu Sekilleri Sunarken Ne Demelisin?
+
+- "Bu kisim kesin kehanet degil, senaryo simulasyonu."
+- "Amac tek bir gelecek tahmini vermek degil, denge bandini gostermek."
+- "Yapisal taban tek rakam degil; kosullara gore hareketli bir asimptot."
+
+## 26. Olasi Zor Soru: Neden 2020'de Bitiyor?
+
+- Cunku model 2000-2020 veri setiyle kurulmus
+- 2021-2025 polikriz donemi dogrudan dahil degil
+- Bu bir zayifliktir ama saklanmamali
+- En iyi cevap:
+  "Bu nedenle 2030 sonuclari tahmin degil, senaryo degeridir."
+
+## 27. Olasi Zor Soru: Bu Taban Gercekten Ekonomik mi, Politik mi?
+
+- Cok iyi soru
+- Ozellikle yuksek gelirli ulkelerde
+  subsidi ve koruma politikalari etkili olabilir
+- Bu nedenle tabani "dogal yasa" degil
+- "ekonomik ve kurumsal olarak uretilen denge bandi" diye anlatmak daha guclu
+
+## 28. Son Ezber Karti
+
+- Problem:
+  tarim sifira mi gider?
+- Bulgumuz:
+  hayir, yapisal tabana gelir
+- Kanit:
+  YSA + SHAP/Olden + DH/Granger + GMM
+- Sinir:
+  veri 2020'de bitiyor
+- Temkinli ifade:
+  2030 sonuclari senaryo degeridir

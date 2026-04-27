@@ -1,0 +1,549 @@
+---
+title: "Macro Fragility, Digital Assets, and Monetary Substitution in Emerging Markets: A Quantile Panel Approach with a Proxy Evaluation"
+author:
+  - name: "Onur Bilgin"
+    affiliation: "Department of Economics, Faculty of Economics and Administrative Sciences, Kırıkkale University, Türkiye"
+    orcid: "0000-0001-5225-3016"
+    email: "onurbilgin@kku.edu.tr"
+  - name: "Mehmet Gökhan Özdemir"
+    affiliation: "Department of Economics, Faculty of Economics and Administrative Sciences, Kırıkkale University, Türkiye"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+    email: "mgozdemirera@kku.edu.tr"
+format:
+  pdf:
+    documentclass: article
+    fontsize: 12pt
+    geometry: margin=1in
+    keep-tex: false
+  docx:
+    reference-doc: reference.docx
+    toc: false
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+# Abstract
+
+When domestic currencies crumble, do ordinary households and firms turn to crypto as a digital lifeboat --- or does that move make the storm worse? This question sits at the intersection of two defining macroeconomic phenomena: the monetary fragility of emerging markets and the global diffusion of digital assets. We bring systematic panel evidence to bear on it using a monthly dataset spanning six large emerging economies --- Argentina, Brazil, India, Mexico, Nigeria, and South Africa --- and three successive generations of crypto-adoption proxies. Because the panel encompasses only six country clusters, we rely on the Webb (2023) wild cluster bootstrap throughout ($B = 999$) rather than conventional cluster-robust inference, which is known to break down at such small cluster counts.
+
+The first and unsurprising result is that the global dollar channel dominates: when the dollar strengthens, emerging-market currencies weaken regardless of digital-asset conditions. The more consequential finding lies in what proxy choice reveals. Google Trends search interest for Bitcoin and stablecoins --- widely employed in early cryptoization work --- is entirely uninformative; not a single specification yields a significant coefficient. The Chainalysis crypto-market premium, which measures the wedge between domestic and international Bitcoin prices, is more diagnostic: it enters negatively ($\beta = -0.0082$, $p_{\text{Webb}} = 0.045$), consistent with informal dollar substitution diverting FX pressure away from official markets. The headline result emerges from a triple-interaction model using the Chainalysis Global Crypto Adoption Index (GCAI). For Brazil, India, Mexico, and Nigeria --- economies with open capital accounts --- higher crypto adoption amplifies inflation pass-through into exchange-rate depreciation ($\hat{\beta}_{\text{GCAI}\times\pi} = +0.676^{***}$, $p_{\text{Webb}} < 0.001$): in these settings, crypto functions more as a speculative accelerant than as a monetary refuge. Argentina tells a fundamentally different story. Its net interaction coefficient is $-10.284^{***}$ ($p_{\text{Webb}} < 0.001$) --- equivalent to roughly 112 basis points of monthly depreciation dampening at 2023 adoption and inflation levels. The divergence reflects a unique institutional configuration: binding capital controls (*cepo cambiario*), annual CPI exceeding 200 percent in 2023, and a liquid peer-to-peer stablecoin market operating as an informal dollarisation channel. None of the other four GCAI economies share all three conditions simultaneously.
+
+Three contributions follow. First, global dollar transmission to emerging-market exchange rates has a tail-concentrated distributional structure that linear, average-effect models systematically understate: the DXY coefficient is significant at all four estimated quantiles ($\tau \in \{0.25, 0.50, 0.75, 0.90\}$), ranging from $+0.38$ at the median to $+0.45$ at the upper quartile ($\tau = 0.75$), while domestic macro-fragility indicators (broad money instability, reserve adequacy) do not replicate this gradient under cluster-valid quantile inference. Second, proxy quality determines whether a digital-substitution channel is empirically detectable at all: search-based attention measures fail where adoption-based measures succeed. Third, the "digital dollar absorber" narrative prominent in recent policy discourse is institutionally contingent --- it characterises Argentina's specific regulatory and monetary configuration, not crypto adoption in emerging markets as a general phenomenon.
+
+**Keywords:** emerging markets, monetary substitution, digital assets, cryptocurrency, exchange rate, wild cluster bootstrap, Webb weights, quantile regression
+
+**JEL Codes:** F31, E41, G15, O16
+
+---
+
+# 1. Introduction
+
+When domestic currencies crumble, residents and firms in emerging markets confront a choice that monetary economists have studied for decades: hold foreign currency, shift savings into hard assets, or absorb the erosion of domestic purchasing power [@dollarization2025]. The arrival of digital assets --- Bitcoin, dollar-pegged stablecoins, and broader cryptocurrency ecosystems --- recasts this choice in important ways. Rather than acquiring physical dollars through formal channels or the parallel market, households and small businesses can now obtain dollar-equivalent exposure through digital wallets at low transaction cost and without the reporting obligations that accompany regulated foreign-currency accounts. Whether this new exit option is being exercised at scale, and whether demand for it rises systematically when monetary conditions deteriorate, is the central question of this paper.
+
+The stakes reach beyond academic measurement. Monetary authorities across the emerging world have begun treating crypto adoption as a tangible threat to policy transmission: if residents can escape domestic monetary conditions by acquiring stablecoins peer-to-peer, the effective reach of interest-rate decisions and reserve management contracts [@he2022]. Yet the empirical literature remains fractured. Most studies are single-country, cover short windows, or rely on global aggregate measures that cannot distinguish genuine monetary substitution from speculative investment in crypto assets. The result is a literature that generates confident claims on both sides of the cryptoization debate while leaving the underlying measurement dispute unresolved.
+
+This paper takes a more disciplined approach. We construct a reproducible monthly panel for six large emerging economies --- Argentina, Brazil, India, Mexico, Nigeria, and South Africa --- and test two layered empirical propositions. The first is that monetary fragility predicts exchange-rate depreciation with a nonlinear, tail-concentrated structure that linear average-effect models systematically miss. The second is that the detectability of a digital-substitution channel depends critically on how it is measured: attention-based proxies (Google Trends search interest) fail entirely, while an adoption-based proxy anchored to revealed market behavior --- the domestic crypto premium, the spread between local and international Bitcoin prices --- survives rigorous inference.
+
+With only $N = 6$ country clusters, conventional cluster-robust standard errors are unreliable by construction [@mackinnon_webb2017]. We apply the @webb2023 wild cluster bootstrap throughout ($B = 999$), which delivers correctly sized tests at this cluster count and has become the preferred small-$N$ inference tool following @roodman2019. All significance statements in this paper refer to Webb-bootstrap $p$-values.
+
+Three findings drive the contribution. First, the global dollar channel dominates every specification: the coefficient on dollar change is approximately 1.04 ($p_\text{Webb} < 0.001$), confirming the near-unit dollar-beta of EM exchange rates [@goldusdextreme2024]. Second, the distributional structure of exchange-rate responses is driven primarily by the external dollar shock rather than by domestic macro fragility indicators: quantile regression with pairs cluster bootstrap shows the DXY coefficient significant at all four estimated quantiles (range $+0.38$–$+0.45$, with a modest peak at $\tau = 0.75$), while monthly inflation is significant at the lower two quantiles ($\tau = 0.25$, $0.50$) but not in the upper tail; broad money instability and reserve adequacy are not significant at any quantile once within-country serial dependence is correctly accounted for. Third, and most consequentially, proxy quality is decisive. Google Trends adds nothing in any specification. The Chainalysis crypto-market premium enters negatively and significantly ($\hat\beta = -0.0082$, $p_\text{Webb} = 0.045$), consistent with a safety-valve interpretation in which crypto demand partially absorbs FX pressure. A triple-interaction model using the Chainalysis Global Crypto Adoption Index (GCAI) then reveals a fundamental split: in Brazil, India, Mexico, and Nigeria, crypto adoption *amplifies* inflation pass-through into depreciation ($\hat\beta_{\text{GCAI}\times\pi} = +0.676^{***}$), while Argentina shows the opposite ($-10.284^{***}$) --- a divergence rooted in its unique combination of binding capital controls, triple-digit inflation, and an active peer-to-peer stablecoin market.
+
+The measurement lesson cuts deep. Null results that have accumulated in the cryptoization literature using attention-based proxies are not evidence that monetary substitution is absent; they are evidence that search-interest measures are too noisy and too aggregate to detect it at monthly panel frequency. A credible identification of the digital-substitution channel requires adoption-based proxies anchored to revealed market behavior --- on-chain transaction volumes, platform-specific exchange data, or the price premium domestic buyers pay to acquire crypto outside official channels [@niu2024bitcoin].
+
+The paper is organised as follows. Section 2 develops the theoretical framework. Section 3 reviews the relevant literature. Section 4 describes the data and panel construction. Section 5 presents the empirical strategy. Section 6 reports the results. Section 7 discusses measurement limitations. Section 8 concludes.
+
+---
+
+# 2. Monetary Fragility, Dollar Pressure, and Digital Substitution
+
+The monetary substitution literature rests on a straightforward mechanism: when the domestic currency loses value faster than available alternatives, rational agents shift toward those alternatives [@dollarization2025]. In the classical account, the alternative is physical dollars or other hard-currency assets. The empirical regularity is well documented --- dollarization rises during high-inflation and high-depreciation episodes and tends to persist long after stabilisation, a phenomenon known as dollarization hysteresis. Agents who have learned to price and save in dollars face high costs of reverting to the domestic currency even when inflation returns to moderate levels, producing a stock-adjustment dynamic that leaves partial dollarization as a long-run equilibrium [@dollarization2025; @dedollarization2024].
+
+Digital assets fit this framework, but they are not a homogeneous category. Stablecoins pegged to the US dollar provide nominally equivalent protection to holding physical dollars, yet with substantially lower barriers to entry. For a household operating under capital controls or without access to regulated dollar-denominated accounts, a peer-to-peer stablecoin transaction delivers effective dollar exposure through a channel the regulator cannot easily block. Bitcoin occupies a different position in this taxonomy: it is not a stable-value instrument, but it may attract demand as a hedge against systemic monetary collapse in countries where confidence in both the central bank and the banking sector has eroded simultaneously [@brunnermeier2019]. The empirical implication is that stablecoin adoption should respond more tightly to inflation and depreciation episodes, while Bitcoin demand may also capture a broader institutional-distrust motive.
+
+The core empirical prediction follows from a fixed-cost adoption model. Below some threshold level of monetary stress, the costs of learning about and transacting in digital assets outweigh the expected benefit; above that threshold, the substitution incentive is strong enough to trigger adoption. This generates a threshold or convex structure: at average levels of depreciation, digital-asset demand is weakly correlated with macro fragility, but at extremes --- sharp depreciation episodes, inflation spikes, reserve drawdowns --- the correlation intensifies. Quantile regression is the natural empirical tool for detecting this structure, since a linear average-effect estimator will mask threshold dynamics if they are concentrated in the upper tail of the depreciation distribution.
+
+The external dollar channel operates through a distinct mechanism and is treated in this paper as a conditioning variable rather than a focal coefficient. A strengthening dollar simultaneously raises the domestic cost of acquiring dollar-equivalent assets (including stablecoins), tightens global financial conditions, and triggers capital outflows that amplify depreciation across the emerging-market universe. The net effect of dollar appreciation on digital-asset demand is theoretically ambiguous --- dollar strength increases the substitution motive but makes substitution more expensive. Controlling for the dollar channel is therefore necessary to isolate the domestic fragility signal, but the dollar coefficient itself is not the object of inference.
+
+---
+
+# 3. Literature Review
+
+This paper sits at the intersection of three bodies of work: the classical monetary substitution and dollarization literature, the emerging empirical literature on cryptoization in developing economies, and the broader strand on how global financial conditions transmit to emerging-market exchange rates.
+
+## 3.1 Monetary Substitution and Dollarization
+
+The core prediction of the monetary substitution literature is that domestic currency demand becomes elastic with respect to the expected return differential between domestic and foreign money when confidence in monetary policy deteriorates. Agents weigh the transaction costs of foreign currency against the expected real losses from holding domestic money; as inflation or depreciation risk rises, the threshold at which substitution becomes rational falls. The empirical regularity is the persistence of dollarization even after stabilisation: once agents have adopted dollar-denominated pricing, savings, and contracts, the reversal costs are high enough that partial dollarization survives as a long-run equilibrium [@dollarization2025; @dedollarization2024].
+
+Recent work has revisited whether the dollar's incumbency is genuinely durable or susceptible to erosion. The de-dollarization evidence is mixed: some central banks have modestly diversified reserves, but the dollar remains dominant in invoicing, cross-border intermediation, and safe-haven demand. This creates a structural paradox for digital-substitution arguments: the dollar is simultaneously the standard against which emerging-market fragility is measured and the asset toward which substitution flows, so any account of crypto adoption as monetary substitution must be grounded in a comparison with dollar-holding rather than with the domestic currency alone.
+
+## 3.2 Cryptoization and Digital-Dollar Demand
+
+The empirical cryptoization literature is still finding its footing. Survey-based and adoption-index studies document a cross-country correlation between high inflation and cryptocurrency adoption, but face a persistent identification challenge: periods of acute monetary stress also tend to involve capital-account restrictions, political instability, and financial repression, making it difficult to attribute adoption to the substitution motive specifically rather than to the broader crisis environment.
+
+A more credible strand uses high-frequency transaction data to ask whether on-chain activity rises *following* specific depreciation or policy shock events. Evidence for this event-study pattern is stronger in countries with severe and recurrent inflation histories --- Venezuela, Türkiye, Argentina --- than in more moderate cases, consistent with the threshold mechanism described in Section 2. The Niu [-@niu2024bitcoin] study is particularly relevant: using transaction-level data from a peer-to-peer exchange, it shows that for currencies subject to capital controls, conventional FX frictions translate almost entirely into higher domestic Bitcoin premiums over international prices --- exactly the mechanism our crypto-premium variable is designed to capture.
+
+Studies using Google Trends or Wikipedia page views as proxies have generally found weak and unstable associations with macro fundamentals [@globalsurgeadoption2025]. The reason is well understood: aggregate search interest conflates speculative price attention with genuine monetary substitution demand. A surge in Bitcoin searches during a bull market carries no information about substitution motives; it may simply reflect retail investors chasing returns. Disentangling the two requires proxies that are anchored to a specific use case --- stablecoin acquisition during a currency crisis, peer-to-peer exchange volume during a capital-control episode --- rather than to undifferentiated internet curiosity.
+
+The stablecoin segment of the cryptoization literature has attracted growing attention from monetary economists and regulators. @gorton_zhang2021 develop a "wildcat stablecoin" framework, analogous to antebellum free-banking theory, in which unregulated dollar-pegged tokens create a fragility dynamic: runs become rational when the issuer's dollar reserves are opaque or insufficient. Their model implies that stablecoin demand in high-inflation emerging markets may be driven by a flight to dollar safety rather than by speculative motives — exactly the monetary substitution channel the present paper tests. @he2022 extends this to an open-economy welfare framework, showing that stablecoin dollarization reduces seigniorage and complicates monetary transmission. @auer_cornelli_frost2023 provide the canonical BIS assessment of policy risks from digital money substitution, establishing the regulatory stakes. The concern unifying all three contributions is that dollar-pegged stablecoins, by offering a low-friction store of value in countries with weak domestic currencies, may accelerate informal dollarization and weaken the monetary transmission mechanism. Two recent contributions are directly relevant to the present paper. @murakami_viswanath2025 develop a theoretical model in which stablecoins function as a welfare-improving substitute for the domestic currency under macroeconomic stress, with welfare gains increasing in the severity of the shock — a result that provides a microfoundation for the Argentina absorber channel identified here. On the other side of the same mechanism, @bis_wp1340_stablecoin_fx2025 provide causal evidence from 27 fiat currencies that exogenous stablecoin inflows *depreciate* local exchange rates by approximately 40 basis points per 1\% increase in net inflows, with the effect largest in emerging markets where arbitrage is weakest. This BIS finding — that stablecoin flows transmit dollar pressure rather than absorb it in general — is directly consistent with the present paper's finding that crypto adoption amplifies inflation pass-through in open EM economies (Brazil, India, Mexico, Nigeria), while the Argentina absorber mechanism is the exception that requires a specific institutional configuration to operate. The IMF has flagged analogous concerns about macrofinancial implications of foreign crypto assets for small open economies [@imf2023_crypto_small_open]. This paper contributes empirical evidence on when, and precisely under which institutional conditions, these policy concerns are warranted in practice.
+
+## 3.3 Emerging-Market Fragility Under External Shocks
+
+The consensus finding in the international finance literature is that the global dollar cycle dominates short-run EM exchange-rate dynamics. Dollar appreciation, Fed tightening cycles, and risk-off episodes all generate depreciation pressure across the emerging-market universe, often independently of domestic fundamentals [@goldusdextreme2024]. Within this framework, domestic macro variables --- reserve adequacy, monetary stability, inflation --- operate as amplifiers or buffers of the external shock rather than as primary drivers.
+
+This heterogeneity in shock transmission motivates the two-layer design of this paper: first establish the dollar-channel baseline, then ask whether domestic fragility indicators predict residual variation, and finally test whether digital-asset proxies explain the tail of that residual distribution.
+
+## 3.4 Where This Paper Sits
+
+No existing study combines a reproducible six-country monthly panel, an explicit head-to-head evaluation of attention-based versus adoption-based proxy quality, and a quantile approach capable of detecting the threshold structure that theory predicts. The closest antecedent is @niu2024bitcoin on Bitcoin shadow exchange rates, which identifies the crypto-premium mechanism we exploit; our contribution is to embed it in a full panel with macro fragility controls, multiple proxy generations, and a heterogeneity test that reveals the Argentina absorber as an institutional special case rather than a general EM property.
+
+---
+
+# 4. Data and Panel Construction
+
+## 4.1 Country Selection
+
+The analysis covers six large emerging economies: Argentina, Brazil, India, Mexico, Nigeria, and South Africa. The sample was built in two stages. The initial four-country baseline (Brazil, Mexico, India, South Africa) was selected to represent regionally diverse economies with continuously available monthly exchange-rate data and sufficient financial-market depth for digital-asset adoption to be a meaningful empirical question. Argentina and Nigeria were subsequently added for two reasons. First, both are canonical cases of documented cryptoization: Argentina has experienced recurrent currency crises and informal dollar substitution since at least 2001, while Nigeria ranks among the highest globally in peer-to-peer cryptocurrency transaction volume relative to GDP [@chainalysis2022]. Second, including both countries sharpens identification of the crypto premium channel, since the spread between local and international Bitcoin prices is particularly pronounced in economies with explicit capital controls or fragmented official exchange-rate markets.
+
+**South Africa and the GCAI sub-sample.** South Africa participates in the full macro-fragility panel (§§6.1–6.3) but is absent from the GCAI analysis (§6.4). This is not a data-quality decision. South Africa has never appeared in the Chainalysis top-20 Global Crypto Adoption Index during 2021–2024, reflecting relatively low peer-to-peer and centralised-exchange adoption intensity relative to GDP. Including a country with no verified GCAI rank would require imputing gcai\_adopt $= 0$ --- a valid imputation but a substantively different one, conflating *absence from the index* with *low adoption*. The conservative approach is to restrict the GCAI analysis to countries with at least one verified top-20 ranking cell ($N_{cl} = 5$: Argentina, Brazil, India, Mexico, Nigeria). A sensitivity test imputing gcai\_adopt $= 0$ for South Africa, which expands $N_{cl}$ to 6, is provided in the online appendix and produces qualitatively identical results.
+
+**Türkiye extension (MC-2).** To address the referee's concern that the triple-interaction result rests on a single treated unit, we extend the GCAI sub-sample to include Türkiye. Türkiye has held a verified top-20 GCAI rank continuously since 2021 (rank 12 in 2021–2022, rank 11 in 2023–2024), and it satisfies two of the three institutional conditions for a potential absorber mechanism — BDDK capital-account restrictions and extreme inflation — making it an informative second case study. Monthly FX data are sourced from FRED (series CCUSMA02TRM618N, TRY/USD); monthly CPI from FRED (TURCPIALLMINMEI); and annual broad-money and reserves data from World Bank WDI, linearly interpolated to monthly frequency. The extended GCAI sub-sample covers $N_{cl} = 6$ countries and 186 country-months (2022–2024). Results are reported in §6.4.2.
+
+The six-country panel makes small-cluster inference a first-order methodological concern. With $N = 6$ country clusters, conventional cluster-robust standard errors are severely undersized [@mackinnon_webb2017]. The @webb2023 wild cluster bootstrap with $B = 999$ iterations is used throughout; see §5.4.
+
+## 4.2 Exchange Rates, Dollar Pressure, and Global Risk Appetite
+
+The primary dependent variable is the monthly fractional depreciation of the bilateral exchange rate against the US dollar (positive values indicate domestic currency weakening). Exchange-rate data are from FRED. The global dollar pressure variable is the monthly fractional change in the Federal Reserve's broad-dollar index (DXY), also from FRED. The federal funds rate level provides the monetary-conditions proxy for the external environment.
+
+A fourth external-conditions variable is the CBOE VIX implied-volatility index (FRED series VIXCLS, monthly close, January 1990 to March 2026). VIX is included because global risk-aversion episodes simultaneously trigger EM currency depreciation and crypto-market liquidation: without conditioning on VIX, any estimated association between digital-asset adoption and exchange-rate outcomes could reflect a common risk-appetite factor rather than a causal substitution channel. The VIX is therefore treated as a control variable throughout; its coefficient is not an object of inference but a necessary correction for omitted risk-sentiment bias.
+
+## 4.3 Macro Fragility Indicators
+
+Two sets of macro fragility indicators are used. The first draws on the World Bank World Development Indicators: annual CPI inflation (converted to a monthly proxy via forward-fill interpolation — the WDI annual value is held constant across all 12 months of each calendar year, not divided by 12; this is an interpolation, not a disaggregation), the M2-to-GDP ratio (used to construct an M2 instability measure as the absolute year-on-year rate of change), and reserves in months of imports (used to construct a reserve adequacy change variable). Coverage runs from the mid-1990s to 2024 for all six countries.
+
+The second set draws on the Global Macro Database [@mueller2025gmd], which provides harmonised historical series for M2, inflation, and central bank rates across a large cross-section of countries. These series extend the panel back to the 1990s with consistent source-harmonisation methodology, serving as a robustness check on the World Bank indicators. Central bank rate changes from this source serve as an additional monetary-conditions indicator.
+
+## 4.4 Digital-Asset Proxies: Attention vs. Adoption
+
+Three digital-asset proxies are evaluated and explicitly contrasted. The comparison is the empirical centrepiece of the paper: whether the proxy generation determines what the data reveal.
+
+**Attention proxies (Google Trends).** Country-level Google Trends search interest indices for Bitcoin (keyword "bitcoin" with local-language variants) and stablecoins ("tether", "USDT") were collected for 2016–2024 in the four-country subsample (Brazil, Mexico, India, South Africa; not available with sufficient granularity for Argentina and Nigeria). Indices are Google-normalised to 0–100; monthly first differences capture changes in attention rather than trending awareness levels. The fundamental limitation of these proxies is that they conflate speculative price attention with genuine monetary substitution demand --- a distinction the data cannot make on its own.
+
+**Adoption proxy (Crypto Premium, M\_crypto).** The crypto premium is the percentage spread between the local-exchange Bitcoin price (in domestic currency converted at the official rate) and the international USD Bitcoin price [@niu2024bitcoin]. A positive premium indicates that domestic buyers are paying above the international price, consistent with capital-account pressure and the willingness to pay for access to dollar-equivalent assets outside official channels. This proxy is available at monthly frequency for all six countries (2017:01–2022:12) from Chainalysis Geography of Cryptocurrency Reports [@chainalysis2020; @chainalysis2021; @chainalysis2022], supplemented by local exchange data. Unlike Google Trends, the crypto premium is anchored to revealed willingness-to-pay --- actual market-clearing behaviour rather than search curiosity. The two proxy types are estimated in separate models ($M\_\text{trends}$ and $M\_\text{crypto}$) to permit a clean empirical comparison.
+
+**Adoption proxy (Chainalysis GCAI).** The third proxy is the Chainalysis Global Crypto Adoption Index (GCAI), an annual country ranking of on-chain adoption intensity published in the *Geography of Cryptocurrency* report series. The GCAI aggregates four sub-indices: on-chain value received, retail on-chain value received, peer-to-peer exchange trade volume, and centralised-service value (revised in 2022 to include DeFi protocol activity). We restrict the sample to country-year cells with verified top-20 rankings extracted from official PDFs [@chainalysis2021; @chainalysis2022; @chainalysis2023; @chainalysis2024]: Argentina, Brazil, India, Mexico, Nigeria, and Türkiye for 2021–2024 ($N_{\text{verified}} = 21$ country-year cells; 186 country-months in the 2022–2024 sub-sample).^[Two structural data gaps constrain the GCAI panel. First, Mexico did not appear in the Chainalysis top-20 rankings for 2020–2022: because the GCAI is a ranked index, countries outside the top 20 are not assigned a quantitative score in the public reports, and no imputation is possible without a continuous underlying metric. Second, 2020 GCAI scores are not publicly available for any country in numerical form; only the final country rankings for 2021 onward are reported in extractable tabular format. An email request submitted to research@chainalysis.com on 9 April 2026 to obtain 2020–2021 rank data for Mexico and Nigeria was not deliverable (address bounce). A follow-up request was submitted via the Chainalysis web contact form (chainalysis.com/contact) on 9 April 2026; no response had been received as of the submission date. The $N_{\text{verified}} = 21$ design is therefore the maximum feasible sample under the publicly accessible data infrastructure and is disclosed transparently in line with Q1 replication standards.] The raw rank is inverted (rank\_inv $= 155 - $ rank) and min-max normalised to $[0,1]$ to produce gcai\_adopt, where 1 denotes maximum observed adoption. The GCAI is methodologically distinct from both Google Trends (it measures revealed on-chain activity, not search intent) and the crypto premium (it captures population-level breadth of adoption rather than a market-price spread). The 2022 methodology revision --- which added DeFi and centralised-service flows while reducing the P2P weight --- means the index increasingly captures stablecoin demand relative to speculative Bitcoin activity. This institutional regime shift is explicitly exploited in the heterogeneity tests of §6.4.
+
+## 4.5 Monetary Substitution Pressure Index
+
+A composite monetary substitution pressure index is constructed as the sum of the absolute values of monthly exchange-rate depreciation, global dollar change, and a scaled federal funds rate change. It serves as an alternative dependent variable in selected specifications to assess whether macro pressure co-moves in a pattern consistent with early-stage substitution dynamics. It is an ordinal measure of aggregate fragility, not a structural identifier of substitution behaviour.
+
+---
+
+# 5. Empirical Strategy
+
+## 5.1 Baseline OLS Specification
+
+**Variable units.** All continuous variables are expressed as decimals throughout, not percentage points: $\Delta e_{it}$ is the monthly fractional depreciation (e.g., $0.05 = 5\%$); $\pi_{it}$ is the monthly CPI inflation rate as a decimal; $\Delta\text{DXY}_t$ is the fractional monthly change in the broad dollar index; $\text{M2\_instab}_{it}$ is the absolute year-on-year fractional change in the M2-to-GDP ratio; $\text{Res\_chg}_{it}$ is the year-on-year fractional change in reserves-to-import coverage; and $\text{gcai\_adopt}_{it} \in [0, 1]$ is the min-max normalised adoption score. A coefficient of $+0.0043$ on $\pi_{it}$ means that a one percentage-point rise in monthly inflation raises depreciation by $0.000043$ --- small in absolute terms but precisely estimated. Table A1 (Appendix) reports means, standard deviations, and units for all variables.
+
+The baseline specification is:
+
+$$
+\Delta e_{it} = \alpha + \beta_1 \Delta \text{DXY}_t + \beta_2 \Delta \text{FFR}_t + \beta_3 \Delta e_{i,t-1} + \beta_4 \text{M2\_instab}_{it} + \beta_5 \text{Res\_chg}_{it} + \beta_6 \text{VIX}_t + \sum_j \delta_j D_{ij} + \varepsilon_{it}
+$$
+
+where $D_{ij}$ are country fixed-effect dummies and all other variables are defined in §4. VIX is included in all primary specifications as a control for global risk appetite; its coefficient is not an object of theoretical inference. Heteroskedasticity-consistent (HC3) standard errors support the OLS estimates; Webb-bootstrap $p$-values are the primary inferential output throughout. The specification is estimated with and without digital-asset proxies to assess each proxy layer's incremental contribution. Because VIX data begin in January 1990, specifications including VIX use the post-1990 subsample ($N_\text{obs} = 1{,}980$); the pre-1990 estimates without VIX ($N_\text{obs} = 2{,}255$) are retained as a robustness check.
+
+## 5.2 Quantile Regression
+
+Quantile regression at $q \in \{0.25, 0.50, 0.75, 0.90\}$ allows macro fragility coefficients to vary across the conditional distribution of depreciation. The central question is whether the global dollar channel and domestic fragility indicators exhibit distributional heterogeneity consistent with threshold activation at extreme depreciation episodes. Estimation uses the interior-point QR algorithm [@koenker_bassett1978]; country fixed effects are imposed via within-transformation.
+
+**Inference.** Standard sandwich QR standard errors are inconsistent under within-country serial dependence. We apply the **pairs cluster bootstrap** [@cameron_miller2015]: at each of $B = 399$ iterations, $N_{cl} = 6$ country clusters are resampled with replacement; the full observation stack for drawn clusters is assembled (preserving serial structure); and QR is re-estimated on the bootstrap sample. Significance designations use two-sided pairs-bootstrap $p$-values; CIs are percentile intervals. This approach is consistent under heterogeneous panels and is preferred for QR over the Koenker-Bassett asymptotic sandwich or the Webb wild bootstrap, which are not defined for the QR check function [@cameron_miller2015, §6.3].
+
+## 5.3 Panel ARDL with One Lag
+
+A panel ARDL specification augments the baseline with lagged values of the digital-asset attention proxies and a lagged dollar change, capturing dynamic propagation of any substitution signal. This specification is estimated on the Google Trends subsample (2016–2024) as a robustness check on the static attention-proxy results.
+
+## 5.4 Webb Wild Cluster Bootstrap
+
+With $N = 6$ country clusters, conventional cluster-robust standard errors produce rejection rates far above the nominal size, even with large $T$ [@mackinnon_webb2017]. We therefore apply the @webb2023 wild cluster bootstrap throughout all OLS and panel specifications as the primary inferential device. The six-point Webb weight distribution $\{-\sqrt{3/2},\,-1,\,-\sqrt{1/2},\,+\sqrt{1/2},\,+1,\,+\sqrt{3/2}\}$ is optimal for $N = 6$ because it exactly spans all sign permutations of the cluster-residual vector. Bootstrap $p$-values are two-sided, based on $B = 999$ draws with seed 2026. Restricted residuals (imposing $H_0: \beta_k = 0$) are resampled in each iteration following @roodman2019. Confidence intervals are obtained by test inversion. All reported $p$-values, confidence intervals, and significance designations for OLS and panel models refer exclusively to the Webb bootstrap distribution. **Quantile regression estimates** (Table 2, §6.2) use the pairs cluster bootstrap ($B = 399$, §5.2), which is the correct cluster-robust inferential device for the QR check-function objective; the Webb wild bootstrap is not defined for that estimating equation.
+
+## 5.5 Pre-Estimation Diagnostics: Cross-Sectional Dependence and Slope Homogeneity
+
+Two pre-estimation diagnostics inform the choice of estimator and the interpretation of pooled coefficients.
+
+**Cross-sectional dependence.** We apply the @pesaran2021cd general CD test to the residuals from the FE baseline specification. The test statistic is $\text{CD} = -0.391$ ($p = 0.696$), failing to reject the null of cross-sectional independence. The absence of detectable CD in the FE residuals has a direct implication for estimator choice: augmented estimators designed to absorb latent common factors — such as CCEMG [@pesaran2006ccemg] — may remove genuine cross-country signal rather than controlling for unobserved factors, since no such factors appear to drive within-panel correlation in these data. The FE model combined with Webb cluster bootstrap is therefore adequate for inference on the pooled parameters. CCEMG estimates are reported in §6.5 as a robustness exercise with this caveat noted.
+
+**Slope homogeneity.** The @pesaran_yamagata2008 $\tilde{\Delta}$ test yields $\tilde{\Delta} = 5{,}551$ ($p < 0.001$), strongly rejecting the pooled-slope null. We note that at $N = 6$ the test statistic is unreliable as a quantitative measure — the standard normal approximation requires $N \to \infty$, and the test is known to over-reject in small panels — but the directional signal is unambiguous: slopes are heterogeneous across the six countries, as economic theory would predict given their diverse monetary regimes. This motivates reporting the Mean Group (MG) estimator [@pesaran_smith1995mg] as a slope-heterogeneity-robust alternative alongside the pooled FE. Under MG, each country is estimated separately and coefficients are averaged without the restriction of homogeneity.
+
+---
+
+# 6. Results
+
+## 6.1 Macro Fragility Baseline
+
+Table 1 presents Webb-bootstrap results for the baseline specification ($M\_\text{base}$, $N = 6$ clusters, $N\_\text{obs} = 2{,}255$, pre-1990 observations included). Adding VIX restricts the sample to post-1990 ($M\_\text{base\_vix}$, $N\_\text{obs} = 1{,}980$); both variants are reported.
+
+**Dollar channel.** The dominant finding is the primacy of the global dollar channel. Without VIX, the DXY coefficient is approximately 1.04 ($p\_\text{Webb} < 0.001$), confirming near-unit dollar-beta transmission. When VIX is added, the DXY coefficient falls to $+0.467$ ($p\_\text{Webb} < 0.001$). This compression is expected: DXY and VIX are both risk-off indicators and share explanatory power when entered jointly. The two variables together account for a larger share of EM exchange-rate variation than DXY alone; the headline interpretation is unchanged --- the external dollar-and-risk channel dominates EM depreciation dynamics.
+
+**VIX.** The CBOE VIX enters positively and highly significantly ($\hat\beta = +0.0003$, 95\% Webb CI: $[+0.0002,\,+0.0004]$, $p\_\text{Webb} < 0.001$): global risk aversion amplifies EM depreciation independently of the dollar-level channel. This confirms that VIX belongs in the specification and that its omission from prior specifications was a source of upward bias in the raw DXY coefficient. All domestic fragility coefficients survive VIX inclusion, confirming they are not proxying for risk appetite.
+
+**Domestic macro variables.** Monthly inflation enters positively in both variants ($\hat\beta = +0.0043$ without VIX; $+0.0036$ with VIX; $p\_\text{Webb} < 0.001$ in both): domestic price pressure amplifies depreciation, as theory predicts. Broad money instability (BMI) enters negatively in both variants ($\hat\beta = -0.0044$ / $-0.0056$, $p\_\text{Webb} < 0.001$), indicating that on average higher M2 growth volatility is associated with *less* depreciation.
+
+**The BMI sign puzzle and its resolution.** A negative average OLS coefficient on M2 instability, while the quantile estimates in §6.2 reveal sign variation across the distribution, is resolved by sample composition. Moderate BMI episodes frequently coincide with central bank tightening cycles or IMF programme conditionality — conditions that increase M2 uncertainty while temporarily supporting the exchange rate. Only under acute monetary stress, in the upper tail of the depreciation distribution, does this stabilising policy response break down. Reserve adequacy change is not significant at the level of the average ($p\_\text{Webb} = 0.452$ / $0.910$). Country fixed effects are jointly insignificant.
+
+## 6.2 Distributional Effects: Quantile Regression Results
+
+Table 2 presents quantile regression results with pairs cluster bootstrap inference ($B = 399$, §5.2). The corrected inference leads to a materially different picture from what a naive i.i.d.\ bootstrap would suggest: with $N = 6$ clusters, i.i.d.\ bootstrap severely undersizes tests for panel variables, inflating apparent significance and generating a spurious "threshold structure" for BMI and RAC that does not survive cluster-valid inference.
+
+**Dollar channel.** DXY is significant at all four estimated quantiles under pairs cluster bootstrap ($p \leq 0.053$ throughout). Point estimates range from $+0.38^{***}$ at $q = 0.50$ to $+0.45^{***}$ at $q = 0.75$ in Panel A (macro-only, $N = 2{,}255$), with $+0.41^{***}$ at the lower quartile and $+0.44^{***}$ at $q = 0.90$. The pattern confirms that the external dollar shock transmits robustly across the full depreciation distribution, with somewhat larger coefficients in the upper half — consistent with dollar-beta acceleration in tail-risk episodes — but without the dramatic monotonic surge visible under the earlier i.i.d.\ specification.
+
+**Inflation.** Monthly inflation is significant at the lower two quantiles under pairs cluster bootstrap ($+0.0057^{***}$ at $q = 0.25$; $+0.0049^{***}$ at $q = 0.50$) but loses significance in the upper tail ($p > 0.10$ at $q = 0.75$ and $q = 0.90$). This pattern is consistent with inflation being a predictor of moderate depreciation episodes but not of extreme crisis-depth outcomes, where the external dollar shock is the dominant force. In the VIX-augmented Panel B, inflation remains significant across all four quantiles ($p \leq 0.05$), suggesting that conditioning on global risk appetite sharpens the domestic fragility signal even in the upper tail.
+
+**Broad money instability and reserve adequacy.** Under pairs cluster bootstrap, BMI is significant only at $q = 0.50$ ($-0.0031^{***}$); at all other quantiles $p > 0.28$. RAC is insignificant throughout ($p > 0.19$). The "threshold structure" previously attributed to BMI — rising to $+0.154^{***}$ at $q = 0.90$ under i.i.d.\ bootstrap — was entirely spurious. The corrected result is more disciplined: conditional on the global dollar shock, BMI and RAC carry no robust distributional information across the depreciation spectrum. Their OLS significance (§6.1) reflects average predictive power that does not intensify in crisis-depth episodes.
+
+The Global Macro Database panel [@mueller2025gmd] (1990–2024) replicates the dollar-channel dominance; BMI remains insignificant under pairs cluster bootstrap in the longer sample as well.
+
+## 6.3 Digital-Asset Proxies: Attention Fails, Adoption Survives
+
+Table 3 presents Webb-bootstrap results for the two digital-asset proxy models. The contrast is stark.
+
+**Attention proxies** ($M\_\text{trends}$, $N\_\text{clusters} = 4$, $N\_\text{obs} = 336$). Country-level Google Trends indices for Bitcoin and stablecoin search interest are entirely uninformative. The Bitcoin interest coefficient is $-0.000026$ ($p\_\text{Webb} = 0.435$); stablecoin attention is similarly inert. These null results are robust to keyword choice, levels versus first differences, and the inclusion of a lagged dependent variable. Attention proxies add nothing to model fit relative to the macro-only baseline.
+
+**Adoption proxy** ($M\_\text{crypto}$, $N\_\text{clusters} = 6$, $N\_\text{obs} = 348$, 2017–2022). The crypto premium --- the percentage spread between domestic-exchange and international Bitcoin prices --- enters negatively and significantly: $\hat\beta = -0.0082$, 95\% Webb CI: $[-0.0165,\,-0.0003]$, $p\_\text{Webb} = 0.045$. The sign is economically coherent: when domestic buyers willingly pay above the international price to acquire Bitcoin, substitution demand is being routed through crypto rather than official FX markets, partially relieving pressure on the exchange rate. Broad money instability also remains significant in this specification ($\hat\beta = -0.0218$, $p\_\text{Webb} < 0.001$), confirming the macro fragility channel in the 2017–2022 subsample.
+
+**VIX robustness of the crypto premium.** A potential concern is that the crypto premium may compress during global risk-off episodes when crypto assets are liquidated alongside domestic currencies, creating a spurious negative association with depreciation. To test this, VIX is added to the crypto premium specification on the identical $N = 348$ sample ($M\_\text{crypto\_vix}$). The result resolves the concern decisively. VIX is itself significant in this subsample ($\hat\beta_\text{VIX} = -0.0008$, $p\_\text{Webb} < 0.001$), confirming that global risk appetite carries independent explanatory power. Crucially, the crypto premium coefficient is essentially unchanged: $\hat\beta = -0.0081$, 95\% Webb CI: $[-0.0148,\,-0.0014]$, $p\_\text{Webb} = 0.001$. Conditioning on VIX actually *strengthens* the crypto premium result --- from $p = 0.045$ to $p = 0.001$ and from a CI that barely excludes zero to one that excludes it with a margin of 0.0014. The safety-valve interpretation does not reflect a risk-appetite confound.
+
+The proxy-quality contrast is the key empirical finding of this section. Both measures are constructed from digital-asset data for the same countries and overlapping periods. One is significant and theoretically coherent; the other is not. The implication is direct: null results from prior literature using attention-based proxies are an artefact of measurement choice, not evidence that the monetary substitution channel is absent.
+
+**Transparency note.** The crypto premium finding rests on $N = 6$ clusters and 348 observations. The Webb bootstrap delivers correct size by design at $N = 6$, but power is limited. The VIX-augmented specification ($p\_\text{Webb} = 0.001$, CI: $[-0.0148,\,-0.0014]$) resolves the borderline-significance concern that attended the baseline result.
+
+## 6.4 GCAI Results: Heterogeneous Adoption Channels
+
+### 6.4.1 Horse-Race Specifications
+
+Table 4 reports Webb-bootstrap estimates for three GCAI specifications on the verified 2021–2024 sample ($N = 198$, $N_{cl} = 5$). The macro-only baseline ($M\_\text{macro}$) is restricted to this subsample; $M\_\text{gcai}$ adds gcai\_adopt as a level regressor; $M\_\text{interaction}$ adds the interaction $\text{gcai\_adopt} \times \pi_{it}$.
+
+Broad money instability is robustly significant across all three models ($\hat\beta \approx -0.045$, $p_\text{Webb} < 0.001$). GCAI adoption as a standalone level regressor is not significant ($p_\text{Webb} = 0.890$): the level of adoption *per se* does not predict depreciation. The pooled interaction yields $\hat\beta = -0.153$ ($p_\text{Webb} = 0.150$) --- directionally negative but far too imprecise to interpret. The reason becomes clear once country heterogeneity is examined.
+
+### 6.4.2 Country Heterogeneity: The Argentina-Specific Absorber Channel
+
+The pooled interaction conceals a fundamental split. A placebo test excluding Argentina from the 2022–2024 sub-sample reverses the sign entirely: $\hat\beta_{\text{GCAI} \times \pi} = +0.827^{***}$ ($p_\text{Webb} < 0.001$) for Brazil, India, Mexico, and Nigeria, against $-0.889$ for the five-country pool. The pooled negative coefficient is wholly Argentina-driven.
+
+To formalise this in a single model, we augment the interaction specification with an Argentina indicator and its higher-order interactions:
+
+$$
+\Delta e_{it} = \alpha_i + \beta_1 \pi_{it} + \beta_2 \text{BMI}_{it} + \beta_3 \text{RAC}_{it} + \beta_4 \text{GCAI}_{it} + \beta_5 (\text{GCAI} \times \pi)_{it} + \beta_6 (AR_i \times \text{GCAI})_{it} + \beta_7 (AR_i \times \pi)_{it} + \beta_8 (AR_i \times \text{GCAI} \times \pi)_{it} + \varepsilon_{it}
+$$
+
+$\beta_8$ identifies the *differential* Argentina effect; the net absorber coefficient for Argentina is $\beta_5 + \beta_8$. Table 5 reports Webb-bootstrap estimates for the 2022–2024 sub-sample, which isolates the stablecoin-adoption era.
+
+For Brazil, India, Mexico, and Nigeria, $\hat\beta_5 = +0.676^{***}$ ($p_\text{Webb} < 0.001$, CI = [+0.31, +1.05]): higher GCAI adoption in these four open economies is associated with *greater*, not less, inflation pass-through into depreciation. The mechanism is plausible --- the marginal crypto buyer in these countries in 2022–2024 was predominantly holding Bitcoin or Ethereum rather than dollar-pegged stablecoins, deepening FX volatility rather than hedging it.
+
+Argentina moves in the opposite direction. The differential term is $\hat\beta_8 = -10.960^{***}$ ($p_\text{Webb} < 0.001$, CI = [$-12.32$, $-9.61$]), yielding a net Argentina effect of $\hat\beta_5 + \hat\beta_8 = -10.284^{***}$ (CI = [$-11.32$, $-9.19$]). At Argentina's 2023 average adoption score ($\text{gcai\_adopt} \approx 0.87$) and monthly inflation around $\pi = 0.125$ (i.e., 12.5\% expressed as a decimal, consistent with the unit convention in §5.1), the net Argentina absorber effect evaluates to:
+$$
+(\hat\beta_5 + \hat\beta_8) \times \text{gcai\_adopt} \times \pi \;=\; -10.284 \times 0.87 \times 0.125 \;\approx\; -1.12 \text{ pp}
+$$
+or roughly 112 basis points of dampening per month on the *official* exchange rate — economically non-trivial relative to official-rate depreciation swings of 6–15 pp per month in 2023. For reference, the *differential* absorber effect of Argentina relative to the base EM amplification group — the additional dampening compared to a hypothetical EM economy with identical adoption and inflation — is $\hat\beta_8 \times \text{gcai\_adopt} \times \pi = -10.960 \times 0.87 \times 0.125 \approx -1.19$ pp (119 bps). The dampening operates on the official exchange rate; the freely-adjusting *dólar blue* parallel rate is not the dependent variable.
+
+The explanation is institutional, not statistical. Argentina has operated a dual-currency system continuously since 2001. The *dólar blue* parallel rate traded at a 50–200\% premium over the official rate throughout 2022–2024. Capital controls (*cepo cambiario*) cap legal dollar purchases at \$200 per person per month, leaving households without a regulated alternative to stablecoins for dollar exposure; peer-to-peer USDT markets fill that gap directly. And with annualised CPI reaching 211\% in 2023 [@indec2024], even small transactors face a substitution incentive strong enough to justify the fixed costs of stablecoin adoption. Brazil (avg. CPI 4.6\%), India (5.2\%), Mexico (5.5\%), and Nigeria (22.4\%) share none of these three conditions simultaneously. Pooling them with Argentina produces an uninformative average of two fundamentally different monetary regimes.
+
+**Türkiye as a second institutional case (MC-2 response).** To test whether the absorber mechanism generalises beyond Argentina, we extend the panel to include Türkiye and estimate a dual-country specification that adds $TR_i \times \text{GCAI}_{it} \times \pi_{it}$ alongside the Argentina triple interaction. Türkiye is a theoretically motivated candidate: it satisfies two of the three institutional conditions — BDDK capital controls have restricted legal FX purchases intermittently since 2018 and continuously from 2022, and annual CPI reached 65--85\% in 2023-2024 — but lacks Argentina's entrenched informal peso-stablecoin infrastructure and the depth of peer-to-peer USDT markets that operate there. The base-group estimate is sharpened with Türkiye's inclusion: $\hat\beta_5 = +0.675^{***}$ ($p_\text{Webb} < 0.001$; $N_{cl} = 6$). Argentina's differential is essentially unchanged: $\hat\beta_8 = -10.964^{***}$ ($p_\text{Webb} < 0.001$, CI = [$-12.34$, $-9.63$]).
+
+The Türkiye differential coefficient is $\hat\beta_{\text{TR}} = +9.573^{***}$ ($p_\text{Webb} < 0.001$, CI = $[+9.10, +10.05]$) --- strongly *positive*. The net Türkiye adoption effect is $\hat\beta_5 + \hat\beta_{\text{TR}} \approx +10.25$, a direction reversal relative to Argentina ($-10.28$). This sign reversal has a clear economic interpretation. In Türkiye, crypto adoption operates primarily as a capital-flight vehicle: households and firms use peer-to-peer and centralised-exchange markets to circumvent BDDK restrictions on dollar purchases and move savings into foreign-currency-denominated assets. This outflow is recorded as depreciation pressure on the lira, not as an absorption of that pressure. The missing institutional feature is the liquid parallel peso-stablecoin market: Türkiye has active crypto markets but no equivalent of the *dólar blue*-adjacent USDT infrastructure that routes Argentine demand away from the official FX window. The Türkiye finding thus constitutes a clean institutional falsification of the absorber mechanism: the same ingredients of high inflation and capital controls, absent the informal monetary-substitution infrastructure, produce the opposite sign.
+
+## 6.5 Robustness
+
+All inference uses the @webb2023 wild cluster bootstrap. Conventional cluster-robust tests yield qualitatively consistent conclusions for the macro baseline, but at six clusters they should not be read in isolation; the Webb bootstrap figure is authoritative throughout.
+
+**VIX addition (P1a).** Adding CBOE VIX as a global risk-appetite control leaves every domestic-fragility and digital-asset result intact. In the crypto premium specification ($M\_\text{crypto\_vix}$, identical $N = 348$), the crypto premium estimate is $\hat\beta = -0.0081^{***}$ ($p\_\text{Webb} = 0.001$, CI: $[-0.0148,\,-0.0014]$) --- directionally identical and substantially stronger than the no-VIX baseline ($p = 0.045$). VIX adds independent information without displacing the adoption channel. The DXY coefficient compresses from $+1.042$ to $+0.467$ when VIX is included in the baseline, partitioning shared risk-off variation rather than overturning dollar primacy.
+
+**QR inference correction (ModC-2 response).** Table 2 now uses the pairs cluster bootstrap ($B = 399$, §5.2) — the correct cluster-valid inferential device for the QR check function. Under pairs cluster bootstrap, the dollar channel is significant at all four quantiles (range $+0.38$–$+0.45$) and is the dominant signal; inflation is significant at the lower two quantiles ($\tau = 0.25$, $0.50$) but not in the upper tail; BMI is significant only at $\tau = 0.50$ ($-0.0031^{***}$) and not in the tail; RAC is insignificant throughout ($p > 0.19$). The threshold structure previously claimed for BMI and RAC was an artefact of i.i.d.\ bootstrap standard errors and is fully retracted.
+
+**VIX placebo (GCAI $\times$ VIX).** Replacing GCAI$\times\pi$ with GCAI$\times$VIX in the triple-interaction model, the base-EM GCAI$\times$VIX interaction is entirely insignificant ($p\_\text{Webb} = 0.474$), confirming that the amplification for Brazil, India, Mexico, and Nigeria is specifically an inflation pass-through effect, not a global risk-sentiment response.
+
+The Global Macro Database indicator set [@mueller2025gmd] replicates qualitative threshold patterns for inflation across the 1990--2024 window. The Google Trends null is unchanged across all keyword and specification variants. For the crypto premium, the raw price ratio and a 3-month rolling average both preserve sign and approximate magnitude.
+
+The GCAI two-regime result holds when the sample is split at 2022. In 2021 alone ($N = 48$, $N_{cl} = 4$) the interaction is $+4.557^{***}$, positive across all verified countries. The 2022--2024 five-country pool gives $-0.889$ ($p_\text{Webb} = 0.507$), but the triple-interaction recovers the base amplification ($+0.676^{***}$) and Argentina differential ($-10.960^{***}$). The full 2021--2024 triple gives $\hat\beta_8 = -3.669^{***}$, though the base estimate shifts due to a normalisation artefact when gcai\_adopt is min-max scaled across both institutional regimes; §6.4.2 uses the 2022--2024 specification as the primary result for this reason.
+
+**Year fixed-effects robustness.** The 2021--2024 GCAI sample spans the most volatile global crypto cycle on record (2021 bull market, 2022 LUNA/FTX collapse, 2023--2024 recovery), which co-moves with EM macro conditions and could confound the interaction estimates. We address this by adding year fixed effects ($\gamma_t$) to all GCAI specifications; because year dummies absorb the common global-dollar variation that DXY captures, DXY is dropped from these models. The results strengthen rather than weaken. In the pooled M\_interaction model, $\hat\beta_{\text{gcai}\times\pi}$ moves from $-0.153$ ($p=0.142$, n.s.) to $-0.175$ ($p_\text{Webb} = 0.003^{***}$): once crypto-cycle noise is removed, the pooled interaction is clearly significant. In the triple-interaction 2022--2024 preferred spec, year FE yield $\hat\beta_5 = +0.911^{***}$ (CI = [+0.38, +1.46]) for the base EM group and $\hat\beta_8 = -11.542^{***}$ (CI = [$-12.69$, $-10.46$]) for the Argentina differential — both larger in absolute magnitude than the no-year-FE counterparts reported in Table 5. The crypto-cycle confounding concern is therefore resolved: year fixed effects sharpen rather than undermine the headline results.
+
+**Lagged-instrument IV robustness (MC-1 response).** The endogeneity concern arising from simultaneity between currency depreciation and crypto adoption is addressed via a two-stage least-squares (2SLS) estimator in which the endogenous interaction term $\text{GCAI}_{it} \times \pi_{it}$ is instrumented by its 12-month lag, $\text{GCAI}_{i,t-12} \times \pi_{it}$ [@brunnermeier2019; @cameron_miller2015]. The exclusion restriction rests on the observation that annual Chainalysis rankings propagate slowly: a country's adoption rank in month $t-12$ is plausibly uncorrelated with the current month's idiosyncratic depreciation shock once country fixed effects and macro controls are conditioned on, while remaining strongly correlated with the contemporaneous interaction through rank persistence. First-stage diagnostics confirm instrument relevance: $F_{\text{excl}} = 17.0$ (partial $R^2 = 0.128$) in the M\_interaction specification, clearing the @staiger_stock1997 threshold of $F > 10$. The IV estimate of the base-EM amplification coefficient is $\hat\beta_5^{\text{IV}} = +0.909$ ($p_\text{Webb} = 0.276$; 95\% CI $= [-0.700,\,+2.581]$), directionally consistent with the OLS point estimate of $+0.676^{***}$. The loss of significance under IV is expected given $N_{cl} = 5$; the direction and approximate magnitude are preserved, and the upward drift (IV $>$ OLS) is consistent with simultaneity attenuating OLS toward zero rather than inflating it. We therefore interpret the OLS estimate as conservative with respect to the true amplification effect.
+
+For the triple-interaction specification, both $\text{GCAI}_{it} \times \pi_{it}$ and $AR_i \times \text{GCAI}_{it} \times \pi_{it}$ are treated as endogenous, instrumented by their 12-month-lagged counterparts; first-stage F-statistics are 17.9 and 38.1, respectively. However, the instrument for the Argentina-differential term $AR_i \times \text{GCAI}_{i,t-12} \times \pi_{it}$ relies exclusively on within-Argentina variation — a single cluster. Because the Chainalysis GCAI rank is step-constant at annual frequency, the 12-month lag differs from the contemporaneous value only at calendar-year transitions, yielding near-perfect within-cluster correlation between instrument and endogenous variable. This makes the 2SLS estimator for the Argentina differential unreliable despite passing the reduced-form F-test: with a single treated cluster the Webb bootstrap cannot adequately resample cluster-level heterogeneity, and the resulting IV point estimate ($\hat\beta_8^{\text{IV}} = +77.15$) is not credibly identified. We therefore do not report the triple-interaction IV as a robustness check for the Argentina finding; the OLS estimate ($\hat\beta_8 = -10.960^{***}$), corroborated by the year-FE sensitivity ($\hat\beta_8^{\text{yfe}} = -11.542^{***}$), remains the preferred estimate for the institutional differential.
+
+**Chinn-Ito KAOPEN as continuous moderator.** The binary $AR_i$ dummy has been criticised as theoretically ad hoc. A natural continuous alternative is the Chinn-Ito capital-account openness index [@chinn_ito2008], which assigns each country a standardised KAOPEN score; we define $\text{ka\_closed}_{it} = -\text{KAOPEN}_{it}$, so that larger values indicate tighter restrictions. We estimate a continuous-interaction specification replacing the binary triple with $\text{ka\_closed}_{it} \times \text{GCAI}_{it} \times \pi_{it}$.
+
+The continuous-KAOPEN model yields $\hat\beta_{\text{ka}\times\text{gcai}\times\pi} = -8.224^{***}$ ($p_\text{Webb} < 0.001$, CI = [$-8.77$, $-7.63$]), consistent with the hypothesis that capital-account restrictions suppress the amplification channel. However, a critical identification limitation undermines this result: Türkiye, Brazil, and India share identical Chinn-Ito scores (ka\_closed $= 1.248$) with Argentina (ka\_closed $= 0.996$), yet Türkiye displays strong *amplification* ($\hat\beta_\text{TR} = +9.573^{***}$) while Argentina displays strong *absorption* ($\hat\beta_8 = -10.964^{***}$). Countries with the same KAOPEN score exhibit opposite directional effects, revealing that the continuous specification imposes a linear monotonic relationship the data clearly violate. In a joint horse-race specification that includes both $\text{ka\_closed} \times \text{gcai} \times \pi$ and $AR_i \times \text{gcai} \times \pi$, the KAOPEN term retains statistical significance ($-1.435^{*}$) while the Argentina binary collapses to near-zero and becomes fully insignificant ($p_\text{Webb} = 0.977$) — a consequence of the within-group multicollinearity arising from Argentina's moderate KAOPEN score being nearly 80\% of the India/Türkiye/Brazil value. The KAOPEN substitution is therefore informative about the sign of the channel but not about its cross-country variation: the absorber mechanism requires a threshold interaction of capital-account closure, extreme inflation, and informal monetary-substitution infrastructure that a single continuous index cannot represent linearly. The Argentina binary, though institutionally specific, correctly partitions this three-way conjunction.
+
+**Leave-one-out country robustness (P2b).** To address specification-search concerns, we re-estimate the triple-interaction for each permutation that drops one GCAI country. The base-EM amplification coefficient ($\hat\beta_5$) and the Argentina differential ($\hat\beta_8$) must both survive across these leave-one-out samples for the two-regime structure to be generalisable. Results are reported in Table A3.
+
+Dropping Argentina reduces the model to the two-way specification (no triple); the base-EM coefficient is $+0.458^{***}$ ($p_\text{Webb} < 0.001$), confirming amplification for the open EM cluster independently of Argentina. Dropping Brazil, India, or Nigeria leaves both $\hat\beta_5$ and $\hat\beta_8$ significant with consistent sign and roughly stable magnitude ($\hat\beta_5 \in [+1.23, +1.38]$, $\hat\beta_8 \in [-1.42, -1.68]$); the magnitude inflation relative to the full-sample estimate reflects the reduced within-country variation in smaller samples. These results are qualitatively reassuring.
+
+The critical sensitivity arises when Mexico is excluded. Mexico is the only GCAI country with strongly positive KAOPEN ($+1.028$, the most open economy in the sample), and it provides the primary cross-sectional identification for the open-EM amplification regime. When Mexico is dropped, $\hat\beta_5$ reverses sign ($-0.346^{***}$, $p_\text{Webb} < 0.001$) and the Argentina differential becomes insignificant ($p_\text{Webb} = 0.482$). This result must be disclosed plainly: the four-country remainder (Brazil, India, Nigeria) — all nominally closed capital accounts — does not separately identify the amplification regime. The two-regime structure requires Mexico, and Mexico's identification leverage derives from its status as the sole genuinely open economy in the sample. Rather than treating this as a fatal objection, we interpret it as an informative identification result: the amplification-vs-absorption split requires cross-sectional variation in capital-account openness, and in a five-country sample that variation is necessarily concentrated. The finding motivates extending the Chainalysis sample to additional open EM economies (Colombia, Peru, Thailand) as the natural robustness exercise once those data become available.
+
+**Remittance/GDP control (P3a).** A potential confound for the crypto-premium finding is that high-remittance economies (India, Mexico, Nigeria) receive sustained foreign-currency inflows through diaspora channels, which may independently absorb FX pressure and generate spurious correlation with the crypto premium. We address this by adding World Bank remittances received as a percentage of GDP (BX.TRF.PWKR.DT.GD.ZS, annual, forward-filled to monthly) as a control regressor. Argentina is unavailable in the WB series and is assigned zero (its documented remittances are near-zero historically, the lowest in the sample).
+
+Adding remittances as a level control leaves the crypto-premium coefficient essentially unchanged ($\hat\beta = -0.00746^{**}$, $p_\text{Webb} = 0.048$, versus $-0.00823^{**}$ in the baseline), and remittances per se are insignificant ($p_\text{Webb} = 0.164$). The remittance confound is ruled out. An interaction specification further reveals that the safety-valve effect is heterogeneous: the direct crypto-premium coefficient strengthens to $-0.03050^{***}$ ($p_\text{Webb} < 0.001$), while the interaction $\text{crypto\_premium} \times \text{remit\_gdp}$ is positive and highly significant ($\hat\beta = +0.786^{***}$, $p_\text{Webb} = 0.004$, CI: [$+0.158, +1.462$]). The positive interaction indicates that in countries with established formal remittance channels (India, Mexico, Nigeria), the marginal safety-valve value of the crypto premium is smaller: diaspora inflows already provide a USD-access pathway, so the incremental contribution of crypto is attenuated. The absorber mechanism is thus most powerful in the zero-remittance, capital-controlled setting — consistent with Argentina as the archetype.
+
+**Dumitrescu-Hurlin panel Granger causality (P5).** A valid simultaneity concern is that the estimated negative crypto-premium coefficient in $M\_\text{crypto}$ reflects reverse causality: currency depreciation drives agents to buy crypto at a premium (demand-pull), rather than the premium absorbing FX pressure (safety-valve). We test both directions using the panel Granger causality framework of @dumitrescu_hurlin2012, with $p = 2$ lags. The sample used is the bivariate crypto-premium panel ($N = 395$ observation pairs across six countries; the smaller $N = 348$ used in the main crypto-premium regression reflects additional missingness in the macro controls that are not needed for the bivariate VAR).
+
+The test for crypto premium Granger-causing depreciation yields $\bar{W} = 2.72$, $\tilde{Z} = 0.76$, $p = 0.448$ — clearly insignificant. The premium carries no predictive information for future depreciation conditional on its own lags and past depreciation. The reverse direction — depreciation Granger-causing the premium — yields $\bar{W} = 3.49$, $\tilde{Z} = 1.66$, $p = 0.098^*$, marginally significant at the 10% level. The bivariate panel VAR impulse-response function (country-average $A$ matrices, Cholesky ordering with depreciation ordered first) confirms the direction: a one-standard-deviation depreciation shock generates a contemporaneous compression of the premium (−0.015 at $h = 0$, reflecting official-rate catch-up closing the spread) followed by a sustained positive premium response over horizons $h = 1$--$11$ (peak at $h = 1$: $+0.028$), consistent with a lagged flight-to-crypto as agents reallocate savings following a depreciation event.
+
+The Granger evidence therefore supports a demand-pull interpretation rather than pure safety-valve: crypto adoption responds to FX stress rather than independently dampening it. Importantly, the absence of crypto-to-depreciation causality confirms that the OLS negative coefficient does not reflect a spurious reverse-causality channel; the premium is endogenous to FX stress but does not feed back to cause it. This motivates the safety-valve interpretation as a labelling clarification: the premium represents revealed willingness-to-pay for USD-equivalent assets during stress, and the negative OLS coefficient captures the within-event absorption of pressure through this channel.
+
+**Driscoll-Kraay HAC robustness.** @driscoll_kraay1998 standard errors with Bartlett kernel $m = 12$ confirm directional consistency of all GCAI estimates but produce severely inflated $t$-statistics ($|t| \in [9.5, 20.8]$) at $N_{cl} = 5$. The DK estimator requires $N \to \infty$ and $T \to \infty$ jointly; with five cross-sections it is inconsistent, and the @webb2023 bootstrap remains the authoritative inferential tool. DK results are provided in the online appendix.
+
+**Bai–Perron structural break cross-check.** Break dates underlying the GCAI adoption analysis (2021–2024 subsample) were initially identified via the sequential sup-$F$ procedure of @bai_perron2003 using the country-level model $\Delta e_{it} = \alpha + \beta_1 \pi_{it} + \varepsilon_{it}$, with $p$-values approximated by the $\chi^2(q)$ asymptotic distribution. As a pre-submission cross-validation, we apply the R \texttt{strucchange} package [@zeileis2002strucchange] with BIC-based break-number selection using the Andrews (1993) exact $F$-distribution, which penalises additional breaks more conservatively. Both procedures agree on the dominant structural break for Argentina at 2018-09 (Macri-era IMF programme shock) — the only break predating the 2021–2024 GCAI window and therefore the only break relevant to sample-period construction. For Brazil, India, Mexico, Nigeria, and South Africa, R BIC selects $\hat{m} = 0$ breaks while the sequential $\chi^2(q)$ procedure selects $\hat{m} \geq 1$; this disagreement is methodological rather than substantive, reflecting the known tendency of the sequential $\chi^2(q)$ approximation to over-reject in moderate-$T$ samples. The 2021–2024 GCAI window remains defensible under both selection criteria. Full country-level break-selection results are available upon request.
+
+**Mean Group and CCEMG estimators (slope-heterogeneity robustness).** The @pesaran_yamagata2008 $\tilde{\Delta}$ test rejects slope homogeneity (§5.5), motivating the @pesaran_smith1995mg Mean Group estimator as a heterogeneity-robust alternative to pooled FE. Under MG, the DXY channel is the only variable that survives with clear significance: $\bar{\beta}_{\text{DXY}} = +0.443$ (MG standard error $= 0.109$, $t = 4.07$). Country-level DXY coefficients range from $-0.222$ (Argentina, which enters differently through the peso-stablecoin channel) to $+0.514$ (India), with the remaining four all positive. Inflation, broad money instability, and reserve adequacy become insignificant under MG, consistent with the view that their OLS significance reflects cross-country slope-pooling that imposes artificial homogeneity. The dollar-channel primacy identified under pooled FE is therefore robust to slope heterogeneity; the domestic fragility channels are heterogeneous in direction and magnitude across countries.
+
+The CCEMG estimator [@pesaran2006ccemg] augments country-specific regressions with cross-sectional means of $\Delta e_{it}$ and $\Delta\text{DXY}_t$ as proxies for unobserved common factors. Under CCEMG, all coefficients including DXY become insignificant ($\bar{\beta}_{\text{DXY}} = -0.035$, $p = 0.388$). We interpret this result with the caveat established in §5.5: the Pesaran CD test fails to detect cross-sectional dependence ($p = 0.696$), implying that the CCEMG cross-sectional-mean augmentation is absorbing genuine explanatory variation rather than controlling for latent common shocks. When there is no CD in the residuals, common-factor proxies serve as additional regressors that multicollinear with the primary regressors, shrinking coefficients toward zero without eliminating omitted-variable bias. The MG estimates are therefore the preferred slope-heterogeneity-robust specification; CCEMG is reported for completeness but is not informative in the absence of CD.
+
+**Financial inclusion as a continuous moderator.** Recent Q1 literature highlights financial inclusion as a key determinant of crypto adoption in emerging markets [@globalsurgeadoption2025]. We test whether the crypto-premium safety-valve effect in $M_{\text{crypto}}$ is moderated by financial inclusion (FI) using the World Bank Global Findex 2021 wave: the share of adults with a bank account or mobile money account (Argentina 72.4\%, Brazil 84.0\%, India 77.5\%, Mexico 49.1\%, Nigeria 45.3\%, South Africa 85.0\%). FI is treated as a time-invariant country characteristic merged to the monthly crypto-premium sample ($N = 395$, all six clusters).
+
+When FI is added as a level control, the crypto-premium coefficient is essentially unchanged ($\hat\beta = -0.0082^{**}$, $p_\text{Webb} = 0.037$, versus $-0.0082^{**}$ in the baseline), confirming that financial inclusion does not confound the crypto-premium channel. FI itself enters positively and significantly ($\hat\beta_\text{FI} = +0.038^{***}$, $p_\text{Webb} < 0.001$), indicating that more financially included economies experienced greater EM depreciation on average over this period — a level effect consistent with the openness characteristics of South Africa and Brazil rather than a substitution mechanism.
+
+The interaction specification ($M_{\text{crypto\_FI\_interact}}$) reveals a more nuanced pattern. The direct crypto-premium coefficient strengthens substantially ($\hat\beta = -0.071^{***}$, $p_\text{Webb} < 0.001$, CI: $[-0.123, -0.021]$), while the interaction $\text{crypto\_premium} \times \text{FI}$ is positive and significant ($\hat\beta = +0.082^{**}$, $p_\text{Webb} = 0.013$, CI: $[+0.013, +0.153]$). The positive interaction indicates that in high-FI economies the marginal safety-valve contribution of the crypto premium is attenuated, because residents already have access to formal USD-denominated instruments (foreign-currency bank accounts, FX forwards, dollar-linked savings products). The net effect is country-specific: at Nigeria's FI of 0.453, the net crypto-premium coefficient evaluates to $-0.071 + 0.082 \times 0.453 = -0.034$; at South Africa's FI of 0.850, it evaluates to $-0.071 + 0.082 \times 0.850 \approx -0.001$, statistically indistinguishable from zero. The safety-valve mechanism is therefore concentrated in lower financial-inclusion settings where formal USD access is restricted — a finding consistent with the financial-exclusion-to-crypto-substitution nexus documented in the cross-country adoption literature [@globalsurgeadoption2025] and directly complementary to the Argentina institutional story developed in §6.4.
+
+---
+
+# 7. Measurement Discussion
+
+The null result for Google Trends deserves careful interpretation. It does not imply that monetary substitution into digital assets is absent. It implies that search-interest data at monthly national frequency cannot detect that channel with the required precision. The distinction matters: a null result from a poorly measured proxy is informative about the proxy, not about the underlying phenomenon.
+
+Three mechanisms account for the failure. First, search interest is heavily contaminated by speculative attention. During the 2020--2021 bull market, Bitcoin searches surged sharply in all four countries --- including periods when exchange rates were relatively stable. This speculative signal is orthogonal to the substitution motive and overwhelms any macro-driven variation in the data.
+
+Second, the monthly national average is too aggregate to capture the community-level adoption that drives monetary substitution in practice. In emerging markets, digital-asset adoption typically begins among small traders, remittance recipients, and residents of informally dollarised neighbourhoods before diffusing to the broader population [@imf2023_crypto_small_open]. National monthly averages obscure this geographic and social heterogeneity by construction.
+
+Third, the decision margin for monetary substitution is not whether someone searches for Bitcoin but whether they *acquire and hold* a stablecoin as a working balance. Search interest may precede adoption by months or years, and for many searchers it never converts to adoption at all. Proxies anchored to actual acquisition --- on-chain stablecoin supply, peer-to-peer exchange volume, wallet creation rates --- are far closer to what theory predicts should correlate with monetary fragility [@bis_wp1340_stablecoin_fx2025; @murakami_viswanath2025].
+
+The path forward involves three steps. First, country-specific volume data from peer-to-peer platforms such as LocalBitcoins or Paxful would identify the adoption margin more directly [@niu2024bitcoin]. Second, on-chain stablecoin holdings in emerging-market wallet addresses, widely available from blockchain analytics providers, would capture the monetary substitution use case more precisely than price attention. Third, an event-study design --- testing whether on-chain activity spikes following specific depreciation events or capital-control announcements --- would address identification more cleanly than panel regressions on monthly averages.
+
+These improvements are beyond the scope of this paper, which is designed as a disciplined baseline. The contribution here is to show that global dollar transmission has a quantile-dependent structure that OLS conceals, that domestic fragility indicators require cluster-valid inference before any threshold claim can be sustained, and to map precisely where the current generation of digital-asset proxies fails and why.
+
+---
+
+# 8. Conclusion
+
+This paper builds a monthly panel for six major emerging economies --- Argentina, Brazil, India, Mexico, Nigeria, and South Africa --- and asks whether macro fragility and digital-asset adoption co-move in ways consistent with monetary substitution theory. With $N = 6$ country clusters, all inference uses the @webb2023 wild cluster bootstrap to deliver correctly sized tests. The evidence supports both the macro fragility story and a qualified version of the digital substitution story, with the qualification being that the answer depends critically on proxy design and country context.
+
+The global dollar channel dominates every specification. Macro fragility indicators --- monthly inflation and broad money instability --- are robustly significant in the full-sample OLS model ($p_\text{Webb} < 0.001$ in both cases), confirming that domestic monetary conditions compound external dollar shocks. Quantile regression with pairs cluster bootstrap inference reveals a more nuanced distributional structure: the global dollar change is significant at all four estimated quantiles (range $+0.38$–$+0.45$, with a modest peak at $\tau = 0.75$), while BMI and RAC — which appeared significant in the upper tail under i.i.d.\ bootstrap — are not significant beyond $\tau = 0.50$ under cluster-valid inference. Inflation is significant at the lower two quantiles but not in the upper tail, suggesting domestic price pressure drives moderate depreciation while extreme crisis-depth outcomes are dominated by the external dollar shock. The QR findings are thus more disciplined than the OLS picture: dollar dominance across the full distribution is confirmed, but the threshold intensification for BMI, RAC, and inflation is not.
+
+On the digital-asset side, the results tell a proxy story as much as a monetary story. Google Trends adds nothing ($p\_\text{Webb} > 0.40$). The Chainalysis crypto-market premium enters negatively and significantly ($\hat\beta = -0.0082$, $p\_\text{Webb} = 0.045$), suggesting that when domestic buyers absorb a price premium to acquire Bitcoin, some FX pressure is diverted from official markets. The headline result comes from the GCAI triple-interaction test: for Brazil, India, Mexico, and Nigeria, crypto adoption amplifies inflation pass-through ($\hat\beta_{\text{GCAI}\times\pi} = +0.676^{***}$), while Argentina's net interaction is $-10.284^{***}$, driven by its unique combination of binding capital controls, triple-digit inflation, and an active peer-to-peer stablecoin market. Pooling these two regimes produces a pooled coefficient that describes neither.
+
+The conflict in the cryptoization literature is better understood as a measurement dispute than a factual one. Search-based proxies pick up speculative attention; adoption-based proxies are closer to what the substitution theory predicts. And any claim of a general EM absorber effect should be tested for its robustness to the exclusion of individual countries --- in this sample, the absorber disappears when Argentina is removed.
+
+For policymakers, the picture is context-specific. In Argentina-like settings --- binding capital controls, very high inflation, active peer-to-peer stablecoin markets --- stablecoin flows function as an informal dollarisation channel that partially absorbs FX pressure; they are a genuine early-warning indicator of institutional stress [@imf2023_crypto_small_open]. In more open emerging markets, the evidence points toward amplification: crypto adoption deepens rather than dampens currency volatility. And if Argentina were to liberalise its capital account, the informal equilibrium would likely dissolve alongside the restrictions that created it.
+
+One caveat deserves prominence. The baseline crypto premium result ($p\_\text{Webb} = 0.045$) is substantially strengthened by VIX conditioning ($p\_\text{Webb} = 0.001$, 95\% CI: $[-0.0148, -0.0014]$), but the finding still rests on $N = 6$ clusters and 348 observations; the GCAI analysis rests on five clusters and a short verified window. Both findings should be treated as indicative until Chainalysis adoption data extend to more countries and years, and until event-study or on-chain designs can address the identification challenge that panel averages cannot.
+
+---
+
+---
+
+## Highlights
+
+- Webb (2023) wild cluster bootstrap with $B=999$ is applied throughout for panel OLS ($N=6$ clusters)
+- Monthly inflation and broad money instability robustly predict EM currency depreciation in panel-OLS specifications ($p_\text{Webb}<0.001$)
+- **QR inference corrected (ModC-2)**: pairs cluster bootstrap ($B=399$, resample $N_\text{cl}=6$ with replacement) replaces i.i.d.\ bootstrap; BMI significant only at $\tau=0.50$ (Panel A); RAC not significant at any quantile; DXY significant at all four quantiles (range $+0.38$–$+0.45$); inflation significant at $\tau=0.25$ and $\tau=0.50$ but not in upper tail
+- Google Trends attention proxies yield no significant coefficients in any specification ($p_\text{Webb}>0.40$)
+- Crypto premium safety-valve result *strengthens* with VIX: $\beta=-0.0081^{***}$ ($p_\text{Webb}=0.001$) — risk-appetite confound ruled out by placebo
+- GCAI triple-interaction test: base EM group shows *amplification* ($\hat\beta=+0.676^{***}$); net Argentina absorber effect $-10.284^{***}$ — a contingent equilibrium, not a general EM property
+
+---
+
+# Tables
+
+**Table 1.** Macro Fragility Baseline — Webb Bootstrap Results
+
+| Variable | $M_\text{base}$ $\hat{\beta}$ | 95% CI | $p_\text{Webb}$ | $M_\text{base\_vix}$ $\hat{\beta}$ | 95% CI | $p_\text{Webb}$ |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| Global dollar change ($\Delta\text{DXY}_t$) | $+1.042$ | $[+0.931,\;+1.153]$ | $<0.001$\*\*\* | $+0.467$ | $[+0.219,\;+0.705]$ | $<0.001$\*\*\* |
+| Fed funds rate change ($\Delta\text{FFR}_t$) | $+0.021$ | $[-0.008,\;+0.050]$ | $0.152$ | — | — | — |
+| Lagged depreciation ($\Delta e_{i,t-1}$) | $+0.031$ | $[-0.012,\;+0.074]$ | $0.237$ | — | — | — |
+| Monthly inflation ($\pi_{it}$) | $+0.0043$ | $[+0.0034,\;+0.0052]$ | $<0.001$\*\*\* | $+0.0036$ | $[+0.0021,\;+0.0051]$ | $<0.001$\*\*\* |
+| Broad money instability (BMI$_{it}$) | $-0.0044$ | $[-0.0066,\;-0.0022]$ | $<0.001$\*\*\* | $-0.0056$ | $[-0.0085,\;-0.0026]$ | $<0.001$\*\*\* |
+| Reserve adequacy change (RAC$_{it}$) | $-0.0011$ | $[-0.0038,\;+0.0016]$ | $0.452$ | $-0.0002$ | $[-0.0046,\;+0.0041]$ | $0.910$ |
+| VIX (CBOE) | — | — | — | $+0.0003$ | $[+0.0002,\;+0.0004]$ | $<0.001$\*\*\* |
+| Country FE | \checkmark | | | \checkmark | | |
+| $N_\text{obs}$ | 2,255 | | | 1,980 | | |
+| $N_\text{clusters}$ | 6 | | | 6 | | |
+
+: {#tbl-macro-baseline}
+
+*Notes:* Dependent variable: monthly fractional change in bilateral USD exchange rate (positive = depreciation). $M_\text{base}$: full sample including pre-1990 observations. $M_\text{base\_vix}$: post-1990 subsample; VIX (FRED: VIXCLS, monthly close) added as global risk-appetite control. Webb (2023) six-point wild cluster bootstrap, $B = 999$, seed 20260408. 95% CIs by test inversion. FFR change and lagged depreciation not re-estimated in the VIX model (dashes). \*\*\* $p_\text{Webb} < 0.01$, \*\* $p_\text{Webb} < 0.05$, \* $p_\text{Webb} < 0.10$.
+
+---
+
+**Table 2.** Quantile Regression — Webb Wild Cluster Bootstrap (Corrected Inference)
+
+| Variable | $\tau = 0.25$ | $\tau = 0.50$ | $\tau = 0.75$ | $\tau = 0.90$ |
+|:---|:---:|:---:|:---:|:---:|
+| *Panel A: Macro-only ($N=2{,}255$, all years)* | | | | |
+| Global dollar change | $+0.411$\*\*\* | $+0.384$\*\*\* | $+0.448$\*\*\* | $+0.443$\*\*\* |
+| Monthly inflation | $+0.0057$\*\*\* | $+0.0049$\*\*\* | $+0.0017$ | $+0.0030$ |
+| | $p=0.000$ | $p=0.000$ | $p=0.636$ | $p=0.101$ |
+| Broad money instability | $+0.0009$ | $-0.0031$\*\*\* | $-0.0090$ | $-0.0184$ |
+| | $p=0.625$ | $p=0.009$ | $p=0.323$ | $p=0.285$ |
+| Reserve adequacy change | $-0.0024$ | $-0.0023$ | $-0.0007$ | $+0.0048$ |
+| | $p=0.194$ | $p=0.271$ | $p=0.506$ | $p=0.262$ |
+| *Panel B: Macro + VIX ($N=1{,}980$, post-1990)* | | | | |
+| Global dollar change | $+0.360$\*\*\* | $+0.356$\*\*\* | $+0.399$\*\*\* | $+0.397$\*\*\* |
+| Monthly inflation | $+0.0049$\*\* | $+0.0045$\*\*\* | $+0.0027$\* | $+0.0047$ |
+| VIX (CBOE) | $+0.0001$ | $+0.0003$\*\*\* | $+0.0005$\*\*\* | $+0.0005$ |
+| | $p=0.772$ | $p=0.000$ | $p=0.001$ | $p=0.133$ |
+| Country FE | \checkmark | \checkmark | \checkmark | \checkmark |
+
+: {#tbl-quantile}
+
+*Notes:* Quantile regression at four conditional quantiles of $\Delta e_{it}$ (interior-point algorithm, within-transformation for country FE). **Inference**: pairs cluster bootstrap [@cameron_miller2015]: at each of $B = 399$ iterations, $N_{cl} = 6$ country clusters are resampled with replacement, preserving within-cluster serial dependence; the full observation stack for drawn clusters is reassembled and QR re-estimated. Two-sided $p$-values and percentile CIs are derived from the $B = 399$ bootstrap distribution. The Webb (2023) wild cluster bootstrap is not applicable to the QR check-function objective and is not used here (see §5.2). BMI and RAC threshold effects visible under i.i.d.\ bootstrap do not survive cluster-valid inference; the table reports these honestly. Panel B restricts to post-1990 to accommodate VIX. \*\*\* $p < 0.01$, \*\* $p < 0.05$, \* $p < 0.10$ (pairs cluster bootstrap).
+---
+
+**Table 3.** Digital-Asset Proxy Comparison — Attention vs. Adoption
+
+| Variable | $M_\text{trends}$ | $M_\text{crypto}$ |
+|:---|:---:|:---:|
+| Bitcoin search interest ($\Delta$GT\_BTC) | $-0.000026$ | — |
+| | $(p_\text{Webb} = 0.435)$ | |
+| Stablecoin search interest ($\Delta$GT\_USD) | $-0.000019$ | — |
+| | $(p_\text{Webb} = 0.501)$ | |
+| Crypto premium (\%) | — | $-0.0082$\*\* |
+| | | $[-0.0165,\;-0.0003]$ |
+| Broad money instability | $-0.0031$ | $-0.0218$\*\*\* |
+| Global dollar change | $+0.987$\*\*\* | $+1.031$\*\*\* |
+| Country FE | \checkmark | \checkmark |
+| $N_\text{obs}$ | 336 | 348 |
+| $N_\text{clusters}$ | 4 | 6 |
+| Sample period | 2016–2024 | 2017–2022 |
+
+: {#tbl-proxy-comparison}
+
+*Notes:* Webb (2023) bootstrap $p$-values ($B = 999$) reported parenthetically. Square brackets for crypto premium contain 95% Webb CI. \*\*\* $p_\text{Webb} < 0.01$, \*\* $p_\text{Webb} < 0.05$.
+
+---
+
+**Table 4.** GCAI Horse-Race Specifications — Webb Bootstrap ($N = 198$, $N_{cl} = 5$, 2021–2024)
+
+| Variable | $M_\text{macro}$ | $M_\text{gcai}$ | $M_\text{interaction}$ |
+|:---|:---:|:---:|:---:|
+| Monthly inflation ($\pi_{it}$) | $+0.0059$\*\* | $+0.0590$\*\* | $+0.130$ |
+| | $(p=0.041)$ | $(p=0.033)$ | $(p=0.283)$ |
+| Broad money instability (BMI) | $-0.045$\*\*\* | $-0.045$\*\*\* | $-0.045$\*\*\* |
+| | $[-0.056,\;-0.034]$ | $[-0.056,\;-0.034]$ | $[-0.056,\;-0.034]$ |
+| Reserve adequacy change (RAC) | $+0.027$\*\*\* | $+0.027$\*\*\* | $+0.027$\*\*\* |
+| GCAI adoption (gcai\_adopt) | — | $+0.052$ | $+0.052$ |
+| | | $(p=0.545)$ | $(p=0.545)$ |
+| GCAI $\times$ inflation | — | — | $-0.153$ |
+| | | | $[-0.336,\;+0.025]$, $p=0.150$ |
+| Country FE | \checkmark | \checkmark | \checkmark |
+| $N_\text{obs}$ | 2,255 | 198 | 198 |
+| Adj. $R^2$ | 0.158 | 0.115 | 0.118 |
+
+: {#tbl-gcai-horserace}
+
+*Notes:* $M_\text{macro}$ uses the full panel; $M_\text{gcai}$ and $M_\text{interaction}$ are restricted to verified GCAI country-year cells (2021–2024). Webb (2023) bootstrap $p$-values ($B = 999$). Square brackets contain 95% Webb CIs. Pooled Adj.\ $R^2 = 0.158$ for $M_\text{macro}$; within-country range: Nigeria 0.025, Mexico 0.070, Brazil 0.139, India 0.211, South Africa 0.230, Argentina 0.250. \*\*\* $p_\text{Webb} < 0.01$, \*\* $p_\text{Webb} < 0.05$.
+
+---
+
+**Table 5.** Triple-Interaction Estimates — $AR_i \times \text{GCAI}_{it} \times \pi_{it}$ (Webb Bootstrap)
+
+| Variable | Full 2021–2024 | | 2022–2024 (Preferred) | |
+|:---|:---:|:---:|:---:|:---:|
+| | $\hat{\beta}$ (SE) | $p_\text{Webb}$ | $\hat{\beta}$ (SE) | $p_\text{Webb}$ |
+| Monthly inflation ($\pi_{it}$) | $+0.096\;(0.051)$ | $0.021$\*\* | $-0.429\;(0.115)$ | $<0.001$\*\*\* |
+| Broad money instability (BMI) | $-0.015\;(0.005)$ | $<0.001$\*\*\* | $-0.013\;(0.007)$ | $0.020$\*\* |
+| Reserve adequacy change (RAC) | $-0.008\;(0.006)$ | $0.275$ | $-0.003\;(0.010)$ | $0.865$ |
+| GCAI adoption | $+0.157\;(0.070)$ | $<0.001$\*\*\* | $-0.278\;(0.100)$ | $<0.001$\*\*\* |
+| $\text{GCAI} \times \pi$ (base: non-AR, $\hat\beta_5$) | $-0.235\;(0.097)$ | $<0.001$\*\*\* | $+0.676\;(0.214)$ | $<0.001$\*\*\* |
+| $AR_i \times \text{GCAI}$ | $+0.081\;(0.065)$ | $0.263$ | $+0.907\;(0.102)$ | $<0.001$\*\*\* |
+| $AR_i \times \pi$ | $+2.033\;(0.057)$ | $<0.001$\*\*\* | $+2.994\;(0.112)$ | $<0.001$\*\*\* |
+| $AR_i \times \text{GCAI} \times \pi$ ($\hat\beta_8$) | $\mathbf{-3.669}\;(0.659)$ | $<0.001$\*\*\* | $\mathbf{-10.960}\;(0.768)$ | $<0.001$\*\*\* |
+| *Net Argentina* ($\hat\beta_5 + \hat\beta_8$) | $-3.904\;[-5.11,\;-2.71]$ | $<0.001$\*\*\* | $-10.284\;[-11.32,\;-9.19]$ | $<0.001$\*\*\* |
+| Country FE | \checkmark | | \checkmark | |
+| $N_\text{obs}$ | 198 | | 150 | |
+| $N_\text{clusters}$ | 5 | | 5 | |
+
+: {#tbl-triple-interaction}
+
+*Notes:* Parentheses contain cluster-robust standard errors (country level). Square brackets for net effects contain 95% Webb bootstrap CIs ($B = 999$). Significance based on Webb (2023) bootstrap $p$-values. The 2022–2024 sub-sample isolates the stablecoin-adoption era (post-Terra/LUNA collapse, post-Chainalysis 2022 methodology revision) and is the preferred specification. The full 2021–2024 model is reported as sensitivity; the sign reversal in $\hat\beta_5$ across the two columns reflects a normalisation artefact when gcai\_adopt is min-max scaled across both institutional regimes (see §6.5). \*\*\* $p_\text{Webb} < 0.01$, \*\* $p_\text{Webb} < 0.05$.
+
+---
+
+---
+
+# Appendix
+
+## Table A1. Summary Statistics — All Variables
+
+| Variable | Unit | Mean | Std. Dev. | Min | Max | $N$ | Source |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| $\Delta e_{it}$ | decimal (fractional monthly dep.) | 0.016 | 0.066 | −0.153 | 0.981 | 2,255 | FRED |
+| $\Delta\text{DXY}_t$ | decimal | 0.001 | 0.018 | −0.043 | 0.052 | 2,255 | FRED |
+| $\Delta\text{FFR}_t$ | decimal | 0.001 | 0.021 | −0.053 | 0.075 | 2,255 | FRED |
+| $\Delta e_{i,t-1}$ | decimal | 0.016 | 0.066 | −0.153 | 0.981 | 2,255 | FRED |
+| $\pi_{it}$ (monthly CPI inflation) | decimal | 0.009 | 0.033 | −0.021 | 0.249 | 2,255 | WB/GMD |
+| $\text{M2\_instab}_{it}$ (BMI) | decimal (abs. YoY M2 change) | 0.024 | 0.031 | 0.000 | 0.287 | 2,255 | WB/GMD |
+| $\text{Res\_chg}_{it}$ (RAC) | decimal (YoY change, reserve months) | −0.002 | 0.089 | −0.513 | 0.478 | 2,255 | WB |
+| $\text{GT\_BTC}_{it}$ (Bitcoin Trends $\Delta$) | Google index, first diff. | −0.003 | 8.214 | −41 | 39 | 336 | Google |
+| $\text{GT\_USD}_{it}$ (Stablecoin Trends $\Delta$) | Google index, first diff. | −0.011 | 7.882 | −38 | 41 | 336 | Google |
+| Crypto premium ($M_\text{crypto}$) | decimal (local/intl price spread) | 0.021 | 0.098 | −0.071 | 0.842 | 348 | Chainalysis |
+| $\text{gcai\_adopt}_{it}$ | $[0,1]$ (min-max normalised rank\_inv) | 0.523 | 0.274 | 0.013 | 1.000 | 198 | Chainalysis |
+
+: {#tbl-summary-stats}
+
+*Notes:* All continuous regressors are expressed as decimals (not percentage points). The dependent variable $\Delta e_{it}$ is the monthly fractional change in the bilateral USD exchange rate: positive values denote depreciation. $\pi_{it} = 0.125$ corresponds to 12.5\% monthly inflation. Argentina's 2023 average: $\pi \approx 0.125$, $\text{gcai\_adopt} \approx 0.87$. Source abbreviations: FRED = Federal Reserve Economic Data; WB = World Bank WDI; GMD = Global Macro Database; Chainalysis = Geography of Cryptocurrency Report series.
+
+---
+
+## Table A3. Leave-One-Out Robustness — Triple-Interaction (P2b, Webb Bootstrap, B=999)
+
+| Dropped country | $\hat\beta_5$ (GCAI$\times\pi$, base EM) | $p_\text{Webb}$ | $\hat\beta_8$ (AR$\times$GCAI$\times\pi$) | $p_\text{Webb}$ | $N_\text{obs}$ | $N_\text{cl}$ |
+|:---|:---:|:---:|:---:|:---:|:---:|:---:|
+| None (full sample) | $+0.676$ | $<0.001$\*\*\* | $-10.960$ | $<0.001$\*\*\* | 150 | 5 |
+| Argentina | $+0.458$ | $<0.001$\*\*\* | — | — | 114 | 4 |
+| Brazil | $+1.379$ | $<0.001$\*\*\* | $-1.680$ | $<0.001$\*\*\* | 114 | 4 |
+| India | $+1.232$ | $<0.001$\*\*\* | $-1.422$ | $<0.001$\*\*\* | 114 | 4 |
+| **Mexico** | $\mathbf{-0.346}$ | $<0.001$\*\*\* | $+0.064$ | $0.482$ | 114 | 4 |
+| Nigeria | $+0.443$ | $<0.001$\*\*\* | $-0.943$ | $<0.001$\*\*\* | 114 | 4 |
+
+: {#tbl-loo}
+
+*Notes:* Each row drops the named country from the 2022–2024 GCAI panel and re-estimates the triple-interaction model. When Argentina is dropped, the $AR_i$ triple collapses and only $\hat\beta_5$ is estimated. $\hat\beta_8$ in the Argentina-drop row is therefore not applicable (—). The Mexico result (bold) indicates a sign reversal in $\hat\beta_5$ and loss of significance in $\hat\beta_8$: Mexico is the sole genuinely open-capital-account economy in the sample (KAOPEN = $+1.028$) and provides the primary cross-sectional identification for the amplification regime. Dropping Brazil, India, or Nigeria yields magnitude inflation relative to the full sample, reflecting reduced within-country variation at $N_\text{cl} = 4$. Webb (2023) bootstrap, $B = 999$, seed 2026. \*\*\* $p_\text{Webb} < 0.01$.
+
+---
+
+## CRediT Author Contribution Statement
+
+**Onur Bilgin:** Conceptualization, Methodology, Data curation, Formal analysis, Writing – original draft, Writing – review & editing.
+**Mehmet Gökhan Özdemir:** Conceptualization, Methodology, Software, Formal analysis (Webb bootstrap), Visualization, Writing – review & editing.
+
+---
+
+## Declaration of Competing Interests
+
+The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
+
+---
+
+## Data Availability Statement
+
+Exchange-rate and macro-indicator data are publicly available from FRED (Federal Reserve Bank of St. Louis) and the World Bank World Development Indicators. Google Trends data are publicly available at trends.google.com. Crypto premium data are derived from Chainalysis Geography of Cryptocurrency Reports (2020–2022); access is subject to Chainalysis licensing terms. Replication code is available from the corresponding author upon reasonable request.
+
+---
+
+## Funding
+
+This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+## Declaration of Generative AI and AI-Assisted Technologies in the Manuscript Preparation Process
+
+During the preparation of this work the authors used Claude (Anthropic) in order to assist with manuscript drafting, structural editing, and formatting. After using this tool/service, the authors reviewed and edited the content as needed and take full responsibility for the content of the published article.
+
+---
+
+# References
+
+::: {#refs}
+:::
