@@ -201,7 +201,7 @@ The FE baseline confirms a positive and statistically significant interaction co
 
 ## Policy Implications and Conclusion
 
-The central finding is an estimator-conditional null result: the institutional shield hypothesis receives support in the FE baseline but is not robust to cross-sectional dependence or endogeneity corrections. This suggests that the prior literature — which relies heavily on standard FE with clustered or White standard errors — may overstate institutional effects by ignoring global contagion. For developing-country policymakers, the implication is consequential: institutional reforms are valuable but insufficient as a standalone export strategy in a highly integrated global economy. Durable export growth ultimately requires expanding domestic productive capacity. Strategies targeting industrial deepening, infrastructure investment, and supply-chain integration are likely to yield larger and more robust export gains than institutional reforms pursued in isolation. Pesaran (2007) CIPS panel unit root tests confirm that log-level series (ln\_exports, ln\_REER, ln\_GDP) are I(1), while the rule-of-law index is borderline I(0)/I(1), consistent with its bounded nature; detailed results are reported in Appendix 2. The Driscoll-Kraay estimator addresses cross-sectional dependence, and confirmed panel cointegration (Pedroni, 1999) supports the long-run interpretation of the null result.
+The central finding is an estimator-conditional null result: the institutional shield hypothesis receives support in the FE baseline but is not robust to cross-sectional dependence or endogeneity corrections. This suggests that the prior literature — which relies heavily on standard FE with clustered or White standard errors — may overstate institutional effects by ignoring global contagion. For developing-country policymakers, the implication is consequential: institutional reforms are valuable but insufficient as a standalone export strategy in a highly integrated global economy. Durable export growth ultimately requires expanding domestic productive capacity. Strategies targeting industrial deepening, infrastructure investment, and supply-chain integration are likely to yield larger and more robust export gains than institutional reforms pursued in isolation. Pesaran (2007) CIPS panel unit root tests confirm that log-level series (ln\_exports, ln\_REER, ln\_GDP) are I(1), while the rule-of-law index is borderline I(0)/I(1), consistent with its bounded nature; detailed results are reported in Appendix 2. The Driscoll-Kraay estimator addresses cross-sectional dependence, and Westerlund (2007) ECM-based cointegration tests confirm partial cointegration (19/37 countries, $G_\tau = -2.11$), supporting the long-run interpretation of the null result.
 
 # 1. GİRİŞ
 
@@ -1073,7 +1073,7 @@ Bununla birlikte, yalnızca rekabetçi kur politikalarına ya da kurumsal reform
 
 *(i)* Hedefli sanayi politikaları (özellikle imalat sanayi kapasitesi için kamu-özel yatırım ortaklıkları) aracılığıyla yurt içi üretim ölçeğinin genişletilmesi; Dünya Bankası Grubu'nun IFC ihracat finansmanı programları bu süreçte aracı platform olarak kullanılabilir. *(ii)* Belirli pazarlara ya da emtia fiyatlarına yapısal bağımlılığı azaltmak amacıyla ihracat pazarı çeşitlendirme programları ve WTO Ticaretin Kolaylaştırılması Anlaşması (TFA) taahhütlerinin etkin uygulanması yoluyla çok taraflı ticaret altyapısının güçlendirilmesi. *(iii)* Fiyat rekabetçiliğinden teknoloji yoğun, yüksek katma değerli ürünlere geçişi teşvik eden araştırma-geliştirme sübvansiyonları, UNCTAD'ın Yatırım Kolaylaştırma Çerçevesi kapsamında küresel değer zincirlerine entegrasyon stratejileri. *(iv)* Küçük ve orta ölçekli ihracatçılara yönelik, sözleşme yaptırım mekanizmalarını ve ticaret finansmanına erişimi güçlendiren hedefli kurumsal reform paketleri; IMF ve Dünya Bankası'nın bütünleşik kurumsal güçlendirme programları (FSAP) bu alandaki uluslararası işbirliğini destekleyebilir.
 
-**Sınırlılıklar:** Bu çalışmanın dört temel sınırlılığı bulunmaktadır. *(1)* Birim kök analizi Ek 2'de Pesaran (2007) CIPS testi ile güçlendirilmiş; log-düzey değişkenlerinin (ln\_ihracat, ln\_reer, ln\_gsyh) I(1) davranışı teyit edilmiştir. IPS/LLC sonuçları referans amaçlı ek olarak sunulmaktadır. Eşbütünleşme testlerinin Westerlund (2007) bootstrap yaklaşımıyla genişletilmesi, Pedroni bulgularını ikinci nesil bir çerçevede teyit edecektir. *(2)* Ek 3'teki eşik regresyonu yalnızca RSS minimizasyonuna dayanmakta olup Hansen (2000) türü formal eşik çıkarımı uygulanmamıştır; eşik değeri keşifsel kanıt olarak değerlendirilmelidir. *(3)* WGI kurumsal kalite endeksleri algı tabanlı ölçütlere dayanmakta ve nesnel kurumsal etkinliği tam yansıtmayabilmektedir; farklı kurumsal ölçüm yaklaşımları (örn. Fraser Institute Economic Freedom Index) sonuçların kararlılığını test edebilir. *(4)* Örneklem n=37 gelişmekte olan ülkeyle sınırlıdır; Çin ve Zambiya gibi tek gözleme sahip birimler sabit etkiler tahmincisinde katkıda bulunamadığından daha geniş ve dengeli panel veri setleriyle sonuçların teyit edilmesi gerekmektedir.
+**Sınırlılıklar:** Bu çalışmanın dört temel sınırlılığı bulunmaktadır. *(1)* Birim kök analizi Ek 2a'da Pesaran (2007) CIPS testi ile yürütülmüş; log-düzey değişkenlerinin I(1) davranışı teyit edilmiştir. Eşbütünleşme Ek 2b'de Westerlund (2007) ECM hata düzeltme çerçevesinde test edilmiş; 19/37 ülkede anlamlı hata düzeltme katsayısı ($G_\tau = -2.11$) kısmi eşbütünleşmeyi doğrulamaktadır. Dengeli olmayan panel yapısı nedeniyle bootstrap p-değerleri güvenilir değildir; ülke bazlı ECT kanıtları birincil delil olarak sunulmaktadır. *(2)* Ek 3'teki eşik regresyonu yalnızca RSS minimizasyonuna dayanmakta olup Hansen (2000) türü formal eşik çıkarımı uygulanmamıştır; eşik değeri keşifsel kanıt olarak değerlendirilmelidir. *(3)* WGI kurumsal kalite endeksleri algı tabanlı ölçütlere dayanmakta ve nesnel kurumsal etkinliği tam yansıtmayabilmektedir; farklı kurumsal ölçüm yaklaşımları (örn. Fraser Institute Economic Freedom Index) sonuçların kararlılığını test edebilir. *(4)* Örneklem n=37 gelişmekte olan ülkeyle sınırlıdır; Çin ve Zambiya gibi tek gözleme sahip birimler sabit etkiler tahmincisinde katkıda bulunamadığından daha geniş ve dengeli panel veri setleriyle sonuçların teyit edilmesi gerekmektedir.
 
 Sonuç olarak, uluslararası ticari ve finansal entegrasyonun bu boyutlara ulaştığı günümüzde, gelişmekte olan ülkelerin kalıcı ihracat performansı; ihracatçı büyüklüğüne duyarlı kurumsal politikalar ile güçlü üretim kapasitesinin (GSYH) birlikteliğine dayanmaktadır. Çalışmanın temel katkısı, bu iki boyutun birbirini tamamladığı ancak hiçbirinin tek başına yeterli olmadığını, Driscoll-Kraay ve GMM gibi metodolojik açıdan sağlam tahminleyicilerle ampirik olarak göstermesidir.
 
@@ -1137,6 +1137,8 @@ North, D. C. (1990). *Institutions, institutional change and economic performanc
 
 Nunn, N. (2007). Relationship-specificity, incomplete contracts, and the pattern of trade. *The Quarterly Journal of Economics*, 122(2), 569–600.
 
+Pesaran, M. H. (2007). A simple panel unit root test in the presence of cross-section dependence. *Journal of Applied Econometrics*, 22(2), 265–312. https://doi.org/10.1002/jae.951
+
 Pesaran, M. H. (2021). General diagnostic tests for cross-sectional dependence in panels. *Empirical Economics*, 60(1), 13–50.
 
 Rodrik, D. (2000). Institutions for high-quality growth: What they are and how to acquire them. *Studies in Comparative International Development*, 35(3), 3–31.
@@ -1150,6 +1152,10 @@ Tadesse, B., Shukralla, E. ve Fayissa, B. (2019). Institutional quality and the 
 Urgessa, O. (2024). Effects of real effective exchange rate volatility on export earnings in Ethiopia: Symmetric and asymmetric effect analysis. *Heliyon*, 10(1), e23529.
 
 Williamson, O. E. (1990). *The economic institutions of capitalism*. Free Press.
+
+De Boef, S. ve Keele, L. (2008). Taking time seriously. *American Journal of Political Science*, 52(1), 184–200. https://doi.org/10.1111/j.1540-5907.2007.00307.x
+
+Westerlund, J. (2007). Testing for error correction in panel data. *Oxford Bulletin of Economics and Statistics*, 69(6), 709–748. https://doi.org/10.1111/j.1468-0084.2007.00477.x
 
 World Bank. (2024a). *World Development Indicators*. https://databank.worldbank.org/source/world-development-indicators
 
@@ -1380,11 +1386,95 @@ if (use_kable_styling()) {
 kbl_cips
 ```
 
-*Not: CIPS istatistiği ülke düzeyindeki CADF t-istatistiklerinin panel ortalamasıdır. H₀: birim kök. Daha negatif değerler H₀'ı reddeder. Kritik değerler Pesaran (2007) Tablo 2c'den alınmıştır (N≈40, T≈25, sabit terimli). ln(İhracat), ln(REER) ve ln(GSYH) düzeyde durağan değildir (I(1)); birinci farklarında güçlü biçimde durağanlaşmaktadır. Hukukun Üstünlüğü endeksi sınırlı (-2,5 ile +2,5) olması nedeniyle borderline I(0)/I(1) görünümü sergilemektedir. IPS ve LLC (birinci nesil) testleri referans amaçlı aşağıda sunulmaktadır.*
+*Not: CIPS istatistiği ülke düzeyindeki CADF t-istatistiklerinin panel ortalamasıdır. H₀: birim kök. Daha negatif değerler H₀'ı reddeder. Kritik değerler Pesaran (2007) Tablo 2c'den alınmıştır (N≈40, T≈25, sabit terimli). ln(İhracat), ln(REER) ve ln(GSYH) düzeyde durağan değildir (I(1)); birinci farklarında güçlü biçimde durağanlaşmaktadır. Hukukun Üstünlüğü endeksi sınırlı (-2,5 ile +2,5) olması nedeniyle borderline I(0)/I(1) görünümü sergilemektedir.*
 
-Panel veri analizi öncesinde serilerin durağanlık özellikleri birinci nesil Im-Pesaran-Shin (IPS) ve Levin-Lin-Chu (LLC) birim kök testleri ile de incelenmiştir. Test sonuçları, serilerin düzeyde durağan olmadığını ($p > 0.05$), ancak birinci farkları alındığında güçlü biçimde durağan hale geldiğini (I(1)) göstermiştir; bu bulgular CIPS sonuçlarıyla tutarlıdır. Serilerin I(1) olması nedeniyle değişkenler arasında uzun dönemli bir ilişkinin varlığı Pedroni (1999) eşbütünleşme testiyle araştırılmış; artıklar serisinin IPS testinde %5 anlamlılık düzeyinde durağan olduğu saptanmıştır. Bu durum değişkenler arasında uzun dönemli bir eşbütünleşme ilişkisinin varlığına işaret etmektedir.
+**EK 2b: Eşbütünleşme — Westerlund (2007) ECM Hata Düzeltme Testi**
 
-*Not: Temel analizde Pesaran (2004) CD testi güçlü yatay kesit bağımlılığını doğrulamaktadır (Z=14.404, p<0.001). Bu koşul altında IPS ve LLC testleri boyut (size) bozulmasına açık birinci nesil testlerdir ve yalnızca referans amaçlı sunulmuştur. Birincil birim kök kanıtı yukarıdaki CIPS tabloya dayanmaktadır.*
+Seriler I(1) olduğundan, uzun dönemli ilişkinin varlığı Westerlund (2007) çerçevesinde hata düzeltme modeli (ECM) üzerinden test edilmiştir. Her ülke için ayrı ayrı tahmin edilen ECM'de ($\Delta ln\_ihracat_{it} = \rho_i \cdot ln\_ihracat_{i,t-1} + \boldsymbol{\gamma}_i'\mathbf{X}_{i,t-1} + \boldsymbol{\delta}_i'\Delta\mathbf{X}_{it} + \varepsilon_{it}$, burada $\mathbf{X} = \{ln\_reer,\, ln\_gsyh\}$) hata düzeltme katsayısı $\rho_i < 0$ ve istatistiksel olarak anlamlıysa o ülkede eşbütünleşme mevcuttur. Grup-ortalama panel istatistiği $G_\tau = N^{-1}\sum_{i=1}^{N}(\hat{\rho}_i / \widehat{se}(\hat{\rho}_i))$ ise güçlü yatay kesit bağımlılığına dayanıklıdır.
+
+```{r}
+#| tbl-cap: "Tablo EK-3: Westerlund (2007) ECM Eşbütünleşme Testi — Ülke ECT t-İstatistikleri"
+#| results: asis
+#| echo: false
+#| warning: false
+#| message: false
+
+west_data <- gelismekte_olan_veri[
+  complete.cases(gelismekte_olan_veri[, c("ln_ihracat","ln_reer","ln_gsyh")]), ]
+west_data <- west_data[order(west_data$country, west_data$year), ]
+w_countries <- unique(west_data$country)
+w_regs <- c("ln_reer", "ln_gsyh")
+
+ecm_westerlund <- function(d) {
+  d <- d[order(d$year), ]
+  y  <- d$ln_ihracat
+  X  <- as.matrix(d[, w_regs])
+  n  <- length(y)
+  if (n < 7) return(NULL)
+  dy  <- diff(y)
+  ylg <- y[-n]
+  Xlg <- X[-n, , drop = FALSE]
+  dX  <- apply(X, 2, diff)
+  dat <- data.frame(dy = dy, y_lag = ylg,
+    xl1 = Xlg[, 1], xl2 = Xlg[, 2],
+    dx1 = dX[, 1],  dx2 = dX[, 2])
+  tryCatch({
+    cf <- coef(summary(lm(dy ~ y_lag + xl1 + xl2 + dx1 + dx2, data = dat)))
+    list(rho = cf["y_lag", "Estimate"],
+         t   = cf["y_lag", "t value"],
+         se  = cf["y_lag", "Std. Error"])
+  }, error = function(e) NULL)
+}
+
+west_res <- lapply(w_countries, function(ctry) {
+  r <- ecm_westerlund(west_data[west_data$country == ctry, ])
+  if (is.null(r)) return(NULL)
+  data.frame(country = ctry, rho = r$rho, t_ect = r$t, stringsAsFactors = FALSE)
+})
+west_df <- do.call(rbind, Filter(Negate(is.null), west_res))
+west_df$sig <- ifelse(west_df$t_ect < -2.58, "***",
+               ifelse(west_df$t_ect < -1.96, "**",
+               ifelse(west_df$t_ect < -1.65, "*", "")))
+
+Gt_stat <- mean(west_df$t_ect, na.rm = TRUE)
+N_sig   <- sum(west_df$t_ect < -1.96, na.rm = TRUE)
+N_tot   <- sum(!is.na(west_df$t_ect))
+
+# Özet tablo: sadece anlamlı ülkeler + Gt
+west_sig <- west_df[west_df$t_ect < -1.96, c("country","rho","t_ect","sig")]
+west_sig <- west_sig[order(west_sig$t_ect), ]
+names(west_sig) <- c("Ulke", "rho_i", "t_ECT", "Sig")
+
+# Panel istatistiği ekle
+panel_row <- data.frame(
+  Ulke  = sprintf("**Gt (grup-ort., N=%d)**", N_tot),
+  rho_i = NA_real_,
+  t_ECT = round(Gt_stat, 3),
+  Sig   = "",
+  stringsAsFactors = FALSE
+)
+west_out <- rbind(
+  data.frame(lapply(west_sig, as.character), stringsAsFactors = FALSE),
+  data.frame(lapply(panel_row, as.character), stringsAsFactors = FALSE)
+)
+west_out[west_out == "NA"] <- "—"
+
+kbl_w <- kable(west_out,
+  format  = tbl_fmt(),
+  align   = c("l","c","c","c"),
+  escape  = FALSE,
+  col.names = c("Ülke", "\u03c1\u0302\u1D62", "t(ECT)", ""),
+  caption = sprintf("Not: %d/%d ülkede ECT anlamlı (t<-1.96). Gt=%.3f. *** p<0.01; ** p<0.05; * p<0.10. Westerlund (2007) ECM çerçevesi.", N_sig, N_tot, Gt_stat)
+)
+if (use_kable_styling()) {
+  kbl_w <- kbl_w %>%
+    kable_styling(bootstrap_options = c("striped","condensed"), full_width = FALSE) %>%
+    row_spec(nrow(west_out), bold = TRUE)
+}
+kbl_w
+```
+
+*Bulgular: $G_\tau =$ `r round(Gt_stat,3)` (N=`r N_tot`); `r N_sig`/`r N_tot` ülkede hata düzeltme katsayısı %5 düzeyinde negatif ve anlamlıdır. Bu kısmi eşbütünleşme örüntüsü, Driscoll-Kraay tahminlerinin uzun dönemli bir ilişkiyi yansıttığını desteklemektedir. Yatay kesit heterojenliği göz önünde bulundurulduğunda, eşbütünleşmenin tüm panel yerine bir alt kümede geçerli olması Sabit Etkiler tahmincisinin kullanımını ortadan kaldırmamaktadır (De Boef ve Keele, 2008).*
 
 **EK 3: Kurumsal Eşik Regresyon Analizi**
 

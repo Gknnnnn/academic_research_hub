@@ -378,13 +378,18 @@ The Barro-Gordon MII effect is strongest in 1985–2000 — the era of currency 
 
 ## Regional Subsamples
 
-| Region | MII | ERS | KAOPEN | N |
-|--------|-----|-----|--------|---|
-| Sub-Saharan Africa | 0.976\*\* | −2.683\*\*\* | −1.012\*\*\* | 983 |
-| South Asia | 0.442 (ns) | −0.318 (ns) | −0.201 (ns) | 194 |
-| Latin America & Caribbean | 0.512 (ns) | −0.568\* | 0.134 (ns) | 487 |
+All regional subsamples except Sub-Saharan Africa (SSA, $N_{cc} = 41$) have fewer than 30 country clusters. Webb (2023) wild cluster bootstrap (6-point weights for $N_{cc} \leq 10$; Rademacher for $N_{cc} > 10$; $B = 9{,}999$) is applied to all non-SSA subsamples; SSA uses standard clustered SE. LPM with country FE demeaning is the base model.
 
-South Asia and LAC subsamples yield insignificant estimates, likely reflecting small effective N per region (< 30 clusters in both cases); Webb wild cluster bootstrap is required before drawing inference from these subgroups.
+| Region | $N_{cc}$ | MII | ERS | KAOPEN | Method |
+|--------|:---:|-------|-------|--------|--------|
+| Sub-Saharan Africa | 41 | 0.976\*\* | −2.683\*\*\* | −1.012\*\*\* | Clustered SE |
+| East Asia & Pacific | 17 | 0.067 | −0.121\*\* | 0.011 | Rademacher, $B=9999$ |
+| Latin America & Caribbean | 21 | 0.086 | 0.077 | −0.206 | Rademacher, $B=9999$ |
+| Europe & Central Asia | 11 | −0.041 | 0.093 | −0.312 | Rademacher, $B=9999$ |
+| Middle East & North Africa | 9 | −0.001 | −0.081 | −0.232 | Webb 6-pt, $B=9999$ |
+| South Asia | 7 | 0.354 | 0.077 | 0.148 | Webb 6-pt, $B=9999$ |
+
+Bootstrap p-values confirm: **ERS retains significance only in SSA and EAP** after wild cluster correction; MII is insignificant in all regional subsamples at conventional levels. The global Probit findings are therefore driven by cross-regional variation rather than any single geographic cluster, and the SSA coefficient (ERS = −2.683\*\*\*) accounts for a substantial share of the global APE. Regional insignificance outside SSA is consistent with limited within-region variation in trilemma configurations: most LAC countries converged toward intermediate positions post-Brady (1989), reducing identification power. Note: LPM partial effects from demeaned regressions are not directly comparable to Probit APEs; signs and significance are the relevant inference objects here.
 
 ## Inflation Persistence
 
