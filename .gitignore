@@ -83,5 +83,23 @@ _book/
 .playwright-cli/
 node_modules/
 
+# ── Python virtual environments (non-dotted) ─────────────────
+venv/
+venv_*/
+env/
+
+# ── Git recovery / backup dirs ────────────────────────────────
+.git_corrupted_backup/
+.git_backup*/
+
+# ── Database & index files (LightRAG, vector DBs) ────────────
+960-Infrastructure/lightrag_db/
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Cloned tool repos (transient) ────────────────────────────
+setup-miniconda/
+
 # ── OneDrive macOS metadata ──────────────────────────────────
 .849C9593-D756-4E56-8D6E-42412F2A707B
