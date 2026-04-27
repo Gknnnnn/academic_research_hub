@@ -1,0 +1,61 @@
+name: research
+channels:
+  - conda-forge
+  - defaults
+
+dependencies:
+  - python=3.11
+  - pip
+
+  # ── Scientific core ─────────────────────────────
+  - numpy
+  - pandas
+  - scipy
+  - matplotlib
+  - seaborn
+
+  # ── Econometrics (conda-forge) ───────────────────
+  - statsmodels
+  - linearmodels      # panel: PanelOLS, BetweenOLS, FamaMacBeth
+  - arch              # GARCH, bootstrap inference
+
+  # ── Data I/O ─────────────────────────────────────
+  - requests
+  - openpyxl
+  - xlrd
+  - pyarrow
+  - pyyaml
+  - bibtexparser
+
+  # ── Jupyter / reporting ───────────────────────────
+  - jupyter
+  - ipykernel
+  - nbformat
+
+  # ── pip-only packages (Roudane ecosystem + others) ─
+  - pip:
+    - pynardl          # NARDL bounds test
+    - pydcce           # CS-ARDL / DOLS / FMOLS panel
+    - pyardl           # ARDL bounds (Pesaran 2001)
+    - wqr              # Wavelet quantile regression
+    - qardl            # Quantile ARDL
+    - wavenardl        # Wavelet NARDL
+    - hybridnonlinur   # Fourier smooth transition unit root
+    - fwadf            # Fourier-wavelet ADF
+    - qadf             # Quantile ADF
+    - boundedtest      # Bounded KPSS
+    - tarur            # TAR unit root (ESTAR)
+    - robcointeg       # Robust cointegration (Student-t)
+    - fouriercoint     # Fourier cointegration
+    - cointhatemij     # Cointegration with double breaks
+    - vecmbreak        # VECM with Group LASSO breaks
+    - selectbreakcoint # Selection-based break cointegration
+    - nearkpss         # Near-integrated KPSS
+    - funitroot        # Fourier unit root suite
+    - fredapi          # FRED data access
+    - wbdata           # World Bank WDI
+    - world-bank-data  # Alternative WB API wrapper
+    - borsapy          # BIST price data (fiyat verisi only)
+    - scikit-learn
+    - dowhy            # Causal inference (DoWhy)
+    - econml           # Double ML, IV forests

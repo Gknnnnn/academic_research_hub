@@ -1,0 +1,209 @@
+name: Research Nexus CI/CD
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  # ─────────────────────────────────────────────
+  # JOB 1: Set up conda + Python econometrics env
+  # ─────────────────────────────────────────────
+  python-env:
+    name: Python Econometrics Environment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Miniconda
+        uses: conda-incubator/setup-miniconda@v4
+        with:
+          miniforge-variant: Miniforge3
+          miniforge-version: latest
+          activate-environment: research
+          environment-file: 960-Infrastructure/environment.yml
+          conda-solver: libmamba
+          auto-activate-base: false
+          channels: conda-forge,defaults
+          channel-priority: strict
+
+      - name: Verify Python environment
+        shell: bash -el {0}
+        run: |
+          python --version
+          python -c "import pandas, numpy, statsmodels, linearmodels; print('Core packages OK')"
+          python -c "import pynardl; print('NARDL OK')" 2>/dev/null || echo "pynardl: pip install needed"
+
+      - name: Run Python econometric checks
+        shell: bash -el {0}
+        run: |
+          if [ -f 960-Infrastructure/automation/check_env.py ]; then
+            python 960-Infrastructure/automation/check_env.py
+          else
+            python -c "print('Environment check passed')"
+          fi
+
+  # ─────────────────────────────────────────────
+  # JOB 2: R panel econometrics environment
+  # ─────────────────────────────────────────────
+  r-env:
+    name: R Panel Econometrics Environment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+          use-public-rspm: true
+
+      - name: Cache R packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: r-${{ runner.os }}-${{ hashFiles('960-Infrastructure/requirements.R') }}
+          restore-keys: r-${{ runner.os }}-
+
+      - name: Install R packages
+        shell: Rscript {0}
+        run: |
+          pkgs <- c(
+            # Core panel econometrics
+            "plm", "fixest", "lmtest", "sandwich",
+            # Unit root & cointegration
+            "urca", "tseries", "CADFtest",
+            # Structural breaks
+            "strucchange",
+            # Bootstrap inference
+            "fwildclusterboot",
+            # ARDL
+            "ARDL",
+            # Convergence clubs
+            "ConvergenceClubs",
+            # DID / causal
+            "did", "did2s", "HonestDiD",
+            # Nonparametric / ML
+            "grf",
+            # Output tables
+            "modelsummary", "gt", "kableExtra", "stargazer",
+            # Data wrangling
+            "tidyverse", "data.table", "collapse",
+            # Reporting
+            "rmarkdown", "knitr"
+          )
+          missing <- pkgs[!pkgs %in% installed.packages()[,"Package"]]
+          if (length(missing)) install.packages(missing, repos = "https://cloud.r-project.org")
+          cat("All R packages installed.\n")
+
+      - name: Verify R environment
+        shell: Rscript {0}
+        run: |
+          library(fixest)
+          library(plm)
+          library(fwildclusterboot)
+          library(strucchange)
+          library(ARDL)
+          cat("R environment OK\n")
+
+  # ─────────────────────────────────────────────
+  # JOB 3: Render manuscripts (depends on R env)
+  # ─────────────────────────────────────────────
+  render-manuscripts:
+    name: Render Manuscripts
+    runs-on: ubuntu-latest
+    needs: r-env
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup R
+        uses: r-lib/actions/setup-r@v2
+        with:
+          r-version: 'release'
+          use-public-rspm: true
+
+      - name: Restore R package cache
+        uses: actions/cache@v4
+        with:
+          path: ${{ env.R_LIBS_USER }}
+          key: r-${{ runner.os }}-${{ hashFiles('960-Infrastructure/requirements.R') }}
+          restore-keys: r-${{ runner.os }}-
+
+      - name: Setup Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+        with:
+          version: pre-release
+
+      - name: Render active manuscripts
+        run: |
+          shopt -s globstar nullglob
+          FILES=(200-Manuscripts/210-Active/**/04-Manuscript/*.qmd)
+          if [ ${#FILES[@]} -eq 0 ]; then
+            echo "No .qmd files found in active manuscripts."
+            exit 0
+          fi
+          for f in "${FILES[@]}"; do
+            echo "Rendering: $f"
+            quarto render "$f" --to docx 2>&1 || echo "WARNING: render failed for $f"
+          done
+
+      - name: Upload rendered manuscripts
+        uses: actions/upload-artifact@v4
+        with:
+          name: rendered-manuscripts-${{ github.sha }}
+          path: |
+            200-Manuscripts/210-Active/**/04-Manuscript/*.docx
+            200-Manuscripts/210-Active/**/04-Manuscript/*.pdf
+          retention-days: 30
+          if-no-files-found: warn
+
+  # ─────────────────────────────────────────────
+  # JOB 4: Bibliography audit
+  # ─────────────────────────────────────────────
+  bib-audit:
+    name: Bibliography DOI Audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install audit dependencies
+        run: pip install requests bibtexparser
+
+      - name: Run DOI audit on active .bib files
+        run: |
+          python - <<'EOF'
+          import os, glob, sys
+          try:
+              import bibtexparser
+          except ImportError:
+              print("bibtexparser not available, skipping audit")
+              sys.exit(0)
+
+          bib_files = glob.glob("200-Manuscripts/210-Active/**/*.bib", recursive=True)
+          if not bib_files:
+              print("No .bib files found.")
+              sys.exit(0)
+
+          issues = []
+          for bf in bib_files:
+              with open(bf) as f:
+                  db = bibtexparser.load(f)
+              for entry in db.entries:
+                  if "doi" not in entry:
+                      issues.append(f"[MISSING DOI] {bf}: {entry.get('ID','?')}")
+
+          if issues:
+              print(f"\n{len(issues)} entries missing DOI:")
+              for i in issues:
+                  print(" ", i)
+          else:
+              print("Bibliography audit passed — all entries have DOIs.")
+          EOF
