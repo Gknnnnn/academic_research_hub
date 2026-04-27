@@ -1,0 +1,146 @@
+---
+title: "Gold, Monetary Regimes, and Safe-Haven Repricing"
+author:
+  - name: "M. Gökhan Özdemir"
+    affiliation: "Department of Economics (Economic Theory Division), Faculty of Economics and Administrative Sciences, Kırıkkale University, Kırıkkale, Türkiye"
+    orcid: "0000-0002-6756-7285"
+    email: "mgozdemirera@kku.edu.tr"
+    corresponding: true
+format:
+  pdf:
+    documentclass: apa7
+    classoption: man
+    keep-tex: true
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+# Highlights
+
+- Direct EPU changes are statistically weak in the daily gold equation benchmark.
+- Policy stance and tightening regime are stronger gold drivers than the EPU index.
+- Safe-haven repricing (DXY, JPY, CHF) retains explanatory power beyond EPU control.
+- Tightening regime dummy is significant; EPU×tightening interaction is not.
+- Monetary repricing framework outperforms uncertainty-only gold specifications.
+
+# Abstract
+
+This paper examines whether gold's safe-haven role is repriced under shifts in monetary policy conditions and policy-related uncertainty. Rather than assuming that uncertainty indices alone drive gold, the paper studies a broader repricing channel in which policy stance, dollar strength, and safe-haven currencies jointly shape gold's response. Using a daily dataset that combines gold, policy uncertainty, policy-rate conditions, Treasury yields, and hard-currency safe-haven indicators, we estimate a set of models that compare a policy-core specification, a safe-haven repricing specification, and a tightening-regime interaction design.
+
+The first finding is that direct policy-uncertainty changes do not dominate the gold equation on their own in the current benchmark. Instead, the stronger signals come from the policy environment and the repricing channels around it. Policy stance remains statistically relevant, and the tightening regime itself appears to alter the gold response. The second finding is that once safe-haven repricing variables are added, the dollar and hard-currency indicators retain explanatory power even when broad uncertainty is controlled for. This suggests that monetary stress reaches gold less through a pure uncertainty index and more through the revaluation of competing safe-haven assets and policy conditions.
+
+The paper contributes by shifting the focus from a narrow uncertainty-only interpretation toward a regime-sensitive repricing framework. Gold does not merely respond to uncertainty in the abstract; it is repriced through a monetary environment in which the dollar, policy tightening, and alternative safe-haven destinations jointly matter. This repositioning helps distinguish policy uncertainty from policy regime, and it offers a cleaner basis for linking gold behavior to modern monetary stress episodes.
+
+**Keywords:** gold, monetary policy, repricing, safe havens, uncertainty, tightening regime
+
+# 1. Introduction
+
+Gold is often discussed as a hedge against uncertainty, but uncertainty is not a sufficient description of the monetary environment in which gold is priced. Changes in policy rates, shifts in tightening regimes, and reallocation across safe-haven assets can matter at least as much as the movement of a broad uncertainty index. When monetary conditions change, gold is not merely reacting to information shocks in the abstract. It is being repriced relative to the dollar, Treasury yields, and competing hard-currency havens.
+
+This paper starts from that premise. It does not ask whether policy uncertainty matters in isolation. It asks whether gold's safe-haven role is repriced when the monetary regime changes and when investors rebalance across alternative safe-haven channels. This reframing is important because a narrow uncertainty-only interpretation is too weak for the current data. In the benchmark results, direct uncertainty changes are not the dominant driver. The stronger evidence comes from policy stance, tightening conditions, and safe-haven repricing variables.
+
+The paper makes three contributions. First, it distinguishes policy uncertainty from policy regime. Second, it combines monetary variables with safe-haven repricing variables inside one daily design rather than treating them as separate literatures. Third, it shows that a tightening regime can matter even when direct uncertainty changes are weak. This allows the analysis to move beyond a binary question of whether EPU matters and toward a more realistic question of how policy conditions reprice gold.
+
+The result is a monetary-regime paper rather than a pure uncertainty paper. Gold appears to respond less to uncertainty indices on their own and more to the policy environment through which uncertainty is transmitted.
+
+# 2. Monetary Policy, Safe Havens, and Gold Repricing
+
+There are at least three ways monetary policy can affect gold. First, policy changes alter the opportunity cost of holding a non-yielding asset. Second, they affect the dollar and Treasury yields, thereby changing the relative attractiveness of alternative safe-haven assets. Third, they alter the broader macro-financial environment in which uncertainty is interpreted.
+
+These channels should not be collapsed into one uncertainty mechanism. A rise in policy uncertainty does not mechanically imply a rise in gold if the monetary regime simultaneously strengthens the dollar or shifts safe-haven demand toward other assets. Likewise, tightening can affect gold through both direct rate channels and indirect repricing channels involving currencies and bond yields.
+
+This is why the paper emphasizes repricing. Gold's behavior under monetary stress is not simply a referendum on uncertainty. It reflects a joint revaluation across the safe-haven hierarchy. In that hierarchy, the dollar, the yen, the Swiss franc, and U.S. Treasuries all matter because they provide alternative destinations for stress-driven capital.
+
+# 3. Literature Review
+
+The first relevant literature studies how gold responds to monetary policy shocks and regime changes. Recent work shows that gold returns and volatility react to policy shocks, while related evidence suggests that the monetary environment conditions how uncertainty reaches gold [@goldmp2024; @goldzlb2023]. This literature supports the paper's decision to emphasize monetary regime rather than uncertainty alone.
+
+The second literature focuses on uncertainty-driven gold dynamics. These studies show that uncertainty can matter for gold, particularly in volatility settings and under special monetary conditions such as the zero lower bound [@golduncertaintymidas2024; @goldzlb2023]. But they also imply that uncertainty effects are conditional, which is precisely why a standalone uncertainty-index paper would be too narrow for the current design.
+
+The third literature concerns safe-haven repricing. Gold does not compete with uncertainty in the abstract; it competes with other safe-haven assets that become more or less attractive as monetary conditions shift. This broader repricing perspective is less developed in the gold-policy literature, especially at daily frequency where policy stance, the dollar, Treasury yields, and hard-currency havens can be observed together. The present paper therefore uses the policy literature to motivate a repricing design rather than claiming a pure uncertainty effect.
+
+The gap, then, is not whether uncertainty matters. It is whether uncertainty, policy stance, and safe-haven repricing can be separated conceptually and empirically inside one design. This paper addresses that gap by treating uncertainty as one channel within a broader monetary-regime framework.
+
+# 4. Data and Variables
+
+The dataset is daily and combines gold returns with a compact set of policy and safe-haven variables. The policy block includes U.S. economic policy uncertainty changes, the effective federal funds rate, Treasury yield changes, and policy-shock markers. The repricing block includes DXY returns, USD/JPY returns, USD/CHF returns, and VIX changes. A tightening-regime indicator captures periods in which monetary stance is materially more restrictive.
+
+This variable design is intentional. The paper is not a generic forecasting exercise. It uses a small number of interpretable series to test whether gold reacts more strongly to direct uncertainty changes or to the broader repricing environment around monetary policy.
+
+The current daily frequency is appropriate for this purpose because it allows the paper to study repricing without forcing a high-frequency event-study design. At the same time, the paper remains cautious: the current shock-window indicator is only a first-pass event proxy and does not attempt to reproduce intraday identification strategies from the policy-shock literature.
+
+# 5. Empirical Strategy
+
+The empirical strategy follows a simple model ladder.
+
+First, a policy-core model estimates gold returns as a function of policy uncertainty, policy stance, Treasury yields, and a shock-window marker. This model answers the narrow question directly: does uncertainty dominate on its own?
+
+Second, a safe-haven repricing model adds the dollar, the yen, the Swiss franc, and market volatility. This model asks whether policy-related stress reaches gold through repricing across the broader safe-haven hierarchy.
+
+Third, a tightening-interaction model allows uncertainty to behave differently during restrictive monetary periods. This model tests whether the policy regime itself changes the relevance of uncertainty.
+
+Fourth, a policy-shock window model acts as a bounded event-style check. Its role is not to replace high-frequency identification, but to see whether simple shock-window structure changes the daily gold response.
+
+The paper evaluates models comparatively through RMSE, MAE, directional accuracy, and coefficient behavior. Economic interpretation remains primary.
+
+# 6. Results
+
+## 6.1 Policy-Only Benchmark
+
+The policy-core model does not support a strong uncertainty-only story. The coefficient on policy-uncertainty changes is small and statistically weak. By contrast, the policy stance variable is strongly significant, indicating that the monetary environment matters even when uncertainty changes do not.
+
+This is the paper's first important result. A daily gold equation framed only around EPU would be empirically underpowered. The stronger signal lies in the policy regime rather than in the uncertainty index alone.
+
+## 6.2 Safe-Haven Repricing Results
+
+Once the repricing block is added, the structure becomes more coherent. The dollar and hard-currency channels retain explanatory relevance, with DXY and the yen-franc variables showing economically meaningful signs. This indicates that gold is being repriced within a competitive safe-haven environment rather than reacting only to policy information as an isolated shock.
+
+The safe-haven repricing model is therefore not valuable because it radically improves fit. It is valuable because it clarifies transmission. Monetary stress appears to reach gold through the revaluation of competing havens.
+
+## 6.3 Tightening Regime Effects
+
+The tightening-interaction model provides the clearest policy-regime result. The tightening regime itself is statistically significant, while the interaction between tightening and uncertainty remains weak. This is analytically useful. It suggests that regime matters more than uncertainty amplification in the current benchmark.
+
+The policy implication is subtle but important: gold is sensitive to the policy environment, but not because uncertainty indices mechanically become stronger during tightening. Instead, the broader regime changes how gold is positioned inside the safe-haven hierarchy.
+
+## 6.4 What Uncertainty Does and Does Not Explain
+
+Taken together, the results show that uncertainty is not irrelevant, but it is not the headline carrier of the gold response. It is better understood as one part of a broader monetary repricing environment. That is why the paper should not be written as a victory or defeat of EPU. The more accurate interpretation is that uncertainty alone is too thin a summary of the policy channel.
+
+# 7. Interpretation and Boundaries
+
+The evidence supports a repricing interpretation. Gold reacts to modern monetary stress less through a pure uncertainty channel and more through policy stance, dollar behavior, and safe-haven substitution. This is consistent with the idea that modern monetary regimes work through revaluation of relative asset attractiveness rather than through abstract uncertainty alone.
+
+This framing also helps keep the paper distinct from the broader currency-war manuscript. Paper 1 studies the hierarchy of currency-war and safe-haven blocks more generally. The present paper is narrower and more policy-centered. Its unique contribution is to show that once policy conditions are brought into the design, uncertainty loses its monopoly as the explanatory language of gold.
+
+The paper also has clear boundaries. It is not an intraday policy-shock paper, and it should not pretend to be one. The current shock-window model is a bounded extension only. A cleaner event structure can be added later, but the present draft stands on the daily repricing argument.
+
+# 8. Conclusion
+
+This paper examines whether gold is driven mainly by policy uncertainty or by the broader repricing environment created by monetary regime shifts. The evidence favors the second interpretation. Direct policy-uncertainty changes do not dominate the daily gold equation. Policy stance, tightening conditions, and repricing across the safe-haven hierarchy matter more.
+
+This finding matters because it changes how the gold-policy relationship should be written. Gold does not simply respond to uncertainty in the abstract. It responds to a monetary environment in which the dollar, Treasury yields, and hard-currency safe havens are being jointly revalued. That is a richer and more defensible story than an uncertainty-only interpretation.
+
+The next step is clear but bounded. A cleaner event-day table or a more refined policy-window design could strengthen the paper. But even in its current form, the daily evidence already supports the core argument that policy regime and safe-haven repricing provide a more useful framework for gold than uncertainty alone.
+
+# CRediT Author Contribution Statement {.unnumbered}
+
+**Zaim Reha Yaşar:** Conceptualization, Methodology, Formal Analysis, Data Curation, Writing – Original Draft.
+
+
+**Mehmet Gökhan Özdemir:** Conceptualization, Methodology, Writing – Review & Editing, Supervision.
+
+# Declaration of Competing Interests {.unnumbered}
+
+The authors declare no competing interests.
+
+# Funding {.unnumbered}
+
+The authors received no specific funding for this work.
+
+# References
+
+::: {#refs}
+:::

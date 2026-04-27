@@ -1,0 +1,278 @@
+---
+title: "Currency Wars and Gold Dynamics: A Hybrid NARDL-Machine Learning Forecasting Approach"
+author: "Anonymous"
+format:
+  pdf:
+    documentclass: apa7
+    classoption: man
+    keep-tex: true
+execute:
+  echo: false
+  warning: false
+bibliography: references.bib
+---
+
+# Abstract
+
+This study develops a block-based hybrid forecasting framework for gold under currency-war and safe-haven dynamics. Rather than treating gold as the response to a single dominant driver, the paper organizes the main explanatory channels repeatedly used in the forecasting literature into a unified candidate set: dollar strength, safe-haven exchange rates, equity risk sentiment, oil, and volatility. The econometric layer estimates a NARDL specification to capture asymmetric responses to positive and negative shocks. The forecasting layer then applies machine learning to the residual component left unexplained by the structural model.
+
+Using a 1980–2026 daily dataset, we show that the baseline specification achieves a directional accuracy of 60.4% in the holdout split, while the hybrid OLS-Gradient Boosting architecture delivers a 60.1% sign accuracy with a minimized RMSE of 0.0022. This design preserves interpretability while allowing nonlinear crisis-regime effects to enter the prediction stage. The study shows how a block-based model ladder can improve both mechanism clarity and forecasting discipline, while validation and extension layers remain separate from the main empirical backbone.
+
+**Keywords:** Gold forecasting, NARDL, machine learning, currency wars, safe havens, hybrid econometrics, block-based modeling.
+
+# 1. Introduction
+The global financial architecture is increasingly shaped by currency-war dynamics, where monetary tightening, strategic easing, and safe-haven reallocations interact through the dollar, major FX pairs, equity stress, commodity shocks, and uncertainty. Gold remains the canonical safe-haven asset in this environment, but its response is rarely symmetric. A dollar appreciation, a volatility spike, or an oil shock does not translate into gold prices in the same way as the corresponding opposite movement. A single linear specification therefore risks averaging away the very asymmetries that matter most.
+
+Recent gold forecasting studies suggest that explanatory power comes from a recurring set of blocks rather than from one dominant variable alone: dollar strength, foreign exchange safe havens, equity risk sentiment, oil, and volatility. The problem is that these blocks are often tested separately or in loosely comparable specifications, which makes it hard to identify the underlying channel structure and to compare results across studies. This paper closes that gap by organizing the literature into a single block-based design and testing those blocks in a staged forecasting architecture.
+
+Our contribution is threefold. First, we construct a long, source-spliced daily dataset that aligns gold with dollar strength, safe-haven FX, equity risk, oil, and uncertainty using reproducible open data sources. Second, we estimate a block-based NARDL framework that explicitly allows positive and negative shocks to enter differently. Third, we use a hybrid residual-learning layer so that the machine learning component only explains what the econometric layer cannot capture. Together, these steps produce a design that is both mechanism-oriented and forecast-oriented.
+
+The central claim is not that every explanatory block should always enter the final equation. Rather, all blocks belong in the candidate universe and are then evaluated in a model ladder: the core specification, channel-specific robustness checks, and appendix-level stress tests. This gives the paper both interpretability and forecast discipline, while preserving the option to narrow the specification once the empirical evidence is known.
+
+# 2. Literature Review: Currency Wars and Hybrid Modeling
+## 2.1 The Asymmetry of Exchange Rate Shocks on Gold
+Traditional linear specifications often impose symmetry where the data may exhibit asymmetry. In the gold market, this is a substantive limitation rather than a minor technical issue. A dollar appreciation may depress gold through a stronger reserve-currency effect, tighter global financial conditions, and lower safe-haven demand, while a dollar depreciation may not produce a mirror-image effect of the same magnitude. The same asymmetry can hold for other explanatory channels, including safe-haven exchange rates, oil shocks, and volatility spikes.
+
+This asymmetry is one reason the gold forecasting literature increasingly moves beyond simple ARDL or single-factor regression structures. The more useful question is not whether exchange rates matter, but which direction of the exchange-rate shock matters, through which block, and under what regime.
+
+## 2.2 The Rise of Hybrid Prediction Architectures
+Hybrid designs are attractive because the econometric layer can identify the mechanism while the machine learning layer can absorb residual nonlinear structure. In this paper, the econometric layer is not treated as a disposable preprocessing stage. It is the primary structural model, and it serves two purposes: first, to test the economic transmission channels explicitly; second, to isolate the portion of gold dynamics that remains unexplained after the structural blocks have entered the model.
+
+The hybrid extension is therefore deliberately subordinate to the econometric core. The machine learning layer is only trained on the residual component, which helps avoid the common failure mode in forecasting papers where a black-box model improves fit at the expense of economic meaning. This residual-learning design is especially appropriate in crisis-sensitive markets, where nonlinear jumps may appear after the main structural channels have already been accounted for.
+
+## 2.3 Literature Gap and Block Logic
+The relevant literature does not suffer from a shortage of gold forecasting models. Instead, it suffers from fragmentation. Some papers emphasize dollar and exchange-rate effects, others focus on oil or volatility, and others build purely algorithmic forecasting systems with lagged features. What is missing is a unified block-based architecture that:
+
+- keeps the core channels visible from the start,
+- tests them in a single reproducible sample,
+- separates baseline, robustness, and appendix specifications,
+- and allows asymmetric shocks to be modeled without sacrificing interpretability.
+
+This paper addresses that gap by treating the explanatory variables as blocks rather than isolated regressors. The blocks can be activated, compared, and stress-tested across the model ladder, making the contribution methodological as well as empirical.
+
+Recent Q1 work strengthens this design choice. Gold is repeatedly documented as a safe-haven asset, but the magnitude and sign of that role depend on the risk channel used to identify it. Studies using geopolitical risk, VIX-based uncertainty, and oil-market shocks show that gold, the dollar, and related safe-haven assets react differently across stress states, while other work suggests that the safe-haven role can fade or reverse in high-volatility periods. This makes a block-based formulation more defensible than a single reduced-form model because the underlying channels are not economically interchangeable.
+
+A second implication of the literature is that forecasting and explanation should not be treated as identical exercises. Many gold papers report strong in-sample fit but become much less convincing once the evaluation shifts to rolling or out-of-sample settings. That pattern is especially visible in studies that rely on a single macro block, a single uncertainty proxy, or a single machine-learning pipeline without mechanism-based structure. By contrast, the present design preserves a structural core and then asks a narrower question at each stage: which channel improves the forecast, which channel mainly explains the variance, and which channel remains robust when the sample is split by regime or time window. That separation is important because gold is not merely a return series; it is a crisis-sensitive asset whose predictive drivers are likely to change when market stress becomes the dominant state.
+
+## 2.4 Decision Theory, Model Uncertainty, and Regime-Sensitive Prediction
+The deeper theoretical logic behind the model ladder is not only gold-market economics but also decision theory under uncertainty. In that literature, the key insight is that agents do not always behave as if the true data-generating process is known. They update beliefs under ambiguity, change attention across states, and overweight losses or shocks when uncertainty rises. For an asset such as gold, that implies forecasting should not rely on a single static equation if the predictors themselves are state-dependent and the forecast loss may be asymmetric.
+
+This is where model uncertainty becomes central. Forecast combination and dynamic model averaging are theoretically attractive because they reduce the risk of committing to one potentially misspecified model. In our setting, the same logic supports the block-based ladder: the dollar block, safe-haven FX block, equity-risk block, commodity block, and uncertainty block are all plausible candidates, but their relative importance need not be constant over time. A regime-sensitive architecture is therefore closer to the economic decision problem faced by investors in turbulent markets than a single linear specification.
+
+The literature also suggests an important distinction between explanation and prediction. Decision-theoretic models help identify when agents become loss averse, ambiguity averse, or uncertainty sensitive, while forecasting methods tell us which predictive structure survives out of sample.
+
+Our design keeps those roles separate. The NARDL layer targets mechanism and asymmetry, the residual learner targets nonlinear forecast gain, and the rolling-window or regime-split benchmarks test whether predictive structure itself changes across time. That separation is especially useful in gold markets because safe-haven demand, dollar dominance, and crisis hedging tend to strengthen precisely when model uncertainty is highest. It also clarifies the empirical role of each block: one set of variables speaks to the decision problem under uncertainty, another to the predictive problem under changing regimes, and a third to the practical question of whether a forecast combination improves direction or error metrics out of sample.
+
+The sample architecture follows the same logic. Rather than pooling every available series into a single unrestricted regression, the paper uses a source hierarchy in which the main daily backbone is built from official and institutional databases, while validation and extension feeds remain separate layers. This matters for two reasons. First, it protects the main results from contamination by short, unstable, or license-constrained feeds. Second, it allows the paper to distinguish between what is required for the core empirical claim and what is useful only as robustness or future work. In other words, the empirical ladder is not only a statistical device but also a reproducibility device: each block is introduced only when the data structure and the forecast question justify it.
+
+Volatility modeling fits naturally into the same logic. In financial econometrics, ARCH/GARCH-family models are not just variance estimators; they are empirical representations of how uncertainty clusters, persists, and reacts asymmetrically to shocks. For gold, that means the variance process may itself be state-dependent, leverage-sensitive, and sensitive to tail events. This is why the paper treats symmetric GARCH(1,1) only as a baseline and positions asymmetric and long-memory variants, as well as realized-volatility alternatives, as higher-order benchmarks in the broader Q1-style comparison set.
+
+# 3. Methodology
+## 3.1 Research Gap and Design Logic
+The empirical gap is not the absence of gold forecasting studies. Rather, it is the absence of a unified, block-based framework that combines the channels repeatedly emphasized in the gold forecasting literature and evaluates them within a reproducible long-horizon dataset. Existing studies often focus on one or two channels in isolation, which makes it difficult to compare their relative contribution or to determine whether a given effect is stable across alternative specifications. This study addresses that limitation by treating the explanatory variables as an organized set of blocks and then testing the blocks sequentially across a model ladder.
+
+## 3.2 Model Design
+The modeling logic is staged and intentionally modular. The objective is to preserve interpretability in the main specification while allowing richer stress tests and forecasting extensions later in the analysis. The paper therefore distinguishes between the structural core, the channel-specific robustness family, and the appendix-level expansion set.
+
+### Model ladder
+The estimated model family is organized as follows:
+
+- Main model: `GOLD ~ DXY + USDJPY + USDCHF + SP500 + OIL + VIX`
+- Currency-war model: `GOLD ~ DXY + USDJPY + USDCHF`
+- Risk model: `GOLD ~ DXY + SP500 + VIX`
+- Commodity model: `GOLD ~ DXY + OIL + VIX`
+- Safe-haven model: `GOLD ~ USDJPY + USDCHF + VIX`
+- Full candidate model: all blocks, used as a stress test and appendix specification
+- NARDL model: positive and negative shocks for the key directional variables
+- Hybrid residual model: machine learning on NARDL residuals
+
+This ladder is not merely descriptive. It enforces a sequencing rule: the paper first tests the structural relevance of each channel, then checks whether the signs and magnitudes are stable across alternative combinations, and only then evaluates whether residual learning adds forecasting value.
+
+## 3.3 NARDL Asymmetric Baseline
+We establish the baseline using bounds testing and asymmetric cointegration. Where theory suggests directional asymmetry, the relevant variables are decomposed into positive and negative shocks. The primary candidates for asymmetry are `DXY`, `USDJPY`, and `USDCHF`, with `OIL` and `VIX` treated as additional candidates when the data support a stable decomposition. This structure allows the model to distinguish between appreciation and depreciation effects, as well as between rising and falling uncertainty regimes. In practical terms, the baseline model is intended to capture both the long-run equilibrium relation and the short-run adjustment path.
+
+## 3.4 Machine Learning Residual Boosting
+The residuals from the econometric baseline serve as the target vector for the machine learning regressor. This ensures that the forecasting layer is restricted to the information not already captured by the structural specification. In other words, the machine learning stage complements rather than replaces the econometric stage. The aim is not to compete with the structural model, but to improve out-of-sample performance where nonlinear crisis dynamics remain after the structural blocks are accounted for.
+
+## 3.5 Variables and Source Mapping
+
+| Block | Variable | Role | Source database | Series / construction |
+|---|---|---|---|---|
+| Gold market | `GOLD` | Dependent variable | FRED | `IQ12260` + `IR14270` |
+| Dollar | `DXY` | Main shock | FRED | `DTWEXM` + `DTWEXAFEGS` |
+| Safe-haven FX | `USDJPY` | Control | FRED | `DEXJPUS` |
+| Safe-haven FX | `USDCHF` | Control | FRED | `DEXSZUS` |
+| Equity risk | `SP500` | Control | FRED | `SP500` |
+| Commodity | `OIL` | Control | FRED | `DCOILWTICO` |
+| Uncertainty | `VIX` | Control | FRED | `VIXCLS` |
+| Optional macro expansion | `US_REER` | Robustness candidate | BIS / macro series | candidate expansion |
+| Optional macro expansion | `CN_REER` | Robustness candidate | BIS / macro series | candidate expansion |
+| Optional macro expansion | `EPU` | Robustness candidate | policy uncertainty data | candidate expansion |
+| Optional macro expansion | `GPR` | Robustness candidate | geopolitical risk data | candidate expansion |
+| Optional macro expansion | `Crypto index` | Robustness candidate | public crypto data | candidate expansion |
+
+## 3.6 Results Roadmap
+The results section will follow the same architecture as the methodology:
+
+1. Descriptive statistics and sample diagnostics
+2. Correlation structure across blocks
+3. Baseline NARDL estimates
+4. Block-specific robustness models
+5. Hybrid forecasting performance
+6. Appendix-level stress tests and expansion blocks
+
+## 3.7 Alternative Q1 Methods
+To strengthen the empirical design and benchmark the main hybrid model against widely used Q1-style alternatives, we will also report a compact set of auxiliary specifications:
+
+- `ARDL` / `NARDL` for baseline long-run and short-run dynamics
+- `FMOLS` and `DOLS` for cointegration-based robustness checks
+- `Quantile regression` and `expectile-style` variants for tail-sensitive effects
+- `GARCH`-family volatility models, including `GARCH`, `IGARCH`, `EGARCH`, `TGARCH`, `APARCH`, and `FIGARCH`, where conditional variance and asymmetry are the focus
+- `HAR-RV` / `QR-HAR-RV` style models when realized volatility proxies are available
+- `Random Forest` or `XGBoost` for residual-learning comparisons
+- `Rolling-window forecasts` for time-varying predictive validation
+- `Regime-switching` or `Markov-switching` volatility models as a state-dependent benchmark
+- `DCC-GARCH`-style specifications if multivariate conditional correlation becomes a central object
+
+These methods are not all intended to enter the main text with equal weight. Rather, they serve as a disciplined comparison set, allowing the paper to show that the preferred hybrid architecture performs well relative to standard econometric and machine-learning benchmarks.
+
+The advanced volatility literature is especially relevant for gold because recent Q1 work shows that gold volatility can be forecast with HAR-RV extensions, realized-variance proxies, uncertainty indices, geopolitical risk, climate risk, and regime-sensitive variance structures. For this reason, the paper treats its current GARCH benchmark as a baseline volatility check and keeps the richer ARCH-family specifications as appendix-ready extensions rather than claiming that one symmetric GARCH(1,1) captures the full volatility process.
+
+## 3.8 Figures and Tables
+
+### Table 1. Variables and source mapping
+Core variables, source database, series construction, and economic interpretation.
+This table defines the main daily backbone used in the study and shows how each variable maps to its official or institutional source.
+
+### Table 2
+Descriptive statistics for levels and returns across the core blocks.
+
+### Table 3
+Correlation matrix for the main explanatory blocks.
+
+### Table 4. Model comparison summary
+OLS, NARDL shock split, quantile regression, DOLS, GARCH-family volatility benchmarks, hybrid learners, rolling-window forecasts, stacking, and regime averaging.
+This table compares the main structural, hybrid, combination, and regime-aware specifications using out-of-sample forecast metrics.
+
+### Figure 1. Conceptual block architecture
+Currency-war shocks, safe-haven FX, risk sentiment, oil, and uncertainty channels linked to gold.
+This figure summarizes the block logic that motivates the model ladder and the asymmetric shock decomposition.
+
+### Figure 2. Out-of-sample forecast comparison
+Baseline, residual-learning, stacking, and rolling-window forecasts.
+This figure visualizes the relative forecasting performance of the main benchmark family.
+
+### Figure 3. Rolling-window stability
+Time variation in predictive performance across the evaluation window.
+This figure tracks forecast stability over time and highlights parameter-variation effects.
+
+### Figure 4. Regime comparison
+Calm, stress, and crisis performance differences in the advanced feature sample.
+This figure shows how predictive performance changes across market states in the regime-split sample.
+
+### Table 5. Advanced volatility benchmarks
+HAR-RV proxy, HAR-ABS proxy, GARCH-family models, and their evaluation against the realized-volatility proxy.
+This table reports the advanced volatility family on a realized-volatility proxy scale, separating conditional-variance models from long-memory HAR-style benchmarks.
+
+### Figure 5. Volatility benchmark comparison
+Forecasted volatility versus realized-volatility proxy for the advanced volatility family.
+This figure compares the fitted volatility path against the realized-volatility proxy and highlights the relative behavior of HAR and ARCH-family specifications.
+
+## 3.9 Data Provenance and Reliability Checks
+The empirical design relies on two related but distinct datasets. The master daily dataset spans `1980-01-01` to `2026-04-01` and contains no missing values or duplicated dates across the seven core series. The advanced feature dataset is shorter because it requires rolling-window transformations and regime labels; its reduced sample size is therefore a mechanical consequence of feature construction rather than a data defect. This distinction matters: the master sample evaluates source-spliced level consistency, while the advanced sample evaluates engineered predictors on a valid common-support window.
+
+To guard against false precision, we also inspect date continuity and source-splice integrity. The daily master series exhibit the expected mixture of one-, two-, and three-day gaps arising from weekends and calendar effects, not structural breaks in the raw file construction. The engineered feature set likewise shows no missing values once the common-support window is imposed. For this reason, the datasets are best understood as reliable for daily-frequency forecasting, with the advanced file serving as the richer but narrower modeling sample.
+
+Validation and extension layers are kept separate from the main paper sample. The validation layer may include World Gold Council or LBMA / ICE-style gold references when accessible, while the extension layer may include Twelve Data, GoldAPI, or MetalpriceAPI intraday feeds if API access is available. These sources are useful for comparison and auxiliary checks, but they do not replace the official daily backbone used in the main analysis.
+
+# 4. Results
+## 4.1 Descriptive Statistics
+This subsection will report the distributional properties of the core variables, including level series, returns, and selected lags. The goal is to verify that the sample is economically plausible and to identify obvious outliers, regime shifts, and scale differences before model estimation.
+
+## 4.2 Correlation Structure
+We will report a correlation matrix for the core blocks to establish the first-pass relationship between gold, dollar strength, safe-haven FX, equity risk, oil, and volatility. This table will help distinguish between redundant and complementary channels.
+
+## 4.3 Baseline NARDL Estimates
+This subsection will present the asymmetric cointegration results for the main specification. The focus will be on whether positive and negative shocks to the dollar and safe-haven FX generate statistically distinct effects on gold. In the current benchmark implementation, the block-based OLS family already shows that the main model, full model, risk model, and currency-war model are tightly clustered in predictive performance. On the held-out sample, the baseline OLS and full OLS specifications achieve the same RMSE of approximately `0.00222`, while the currency-war model is very close behind at `0.002220`.
+
+## 4.4 Block-Specific Robustness Models
+We will then report the channel-specific models from the model ladder:
+- currency-war model
+- risk and uncertainty model
+- commodity model
+- safe-haven substitution model
+
+These estimates will show which explanatory blocks remain stable across alternative specifications.
+
+## 4.5 Hybrid Forecasting Performance
+The final results subsection evaluates the residual-learning layer. Forecast performance is compared against the baseline block model using standard out-of-sample metrics such as RMSE, MAE, and directional accuracy. In the expanded benchmark set, the hybrid OLS + Random Forest residual model slightly improves RMSE relative to the baseline OLS (`0.0021957` vs. `0.0022194`) with a directional accuracy of `0.5678`, while the hybrid OLS + Gradient Boosting model is close behind with an RMSE of `0.002200` and a directional accuracy of `0.6010`. The baseline OLS, however, retains a stronger directional accuracy (`0.6046`) than both residual learners. This pattern suggests that the residual learners add some numerical forecast gain, but not yet a clear directional advantage in the returns space.
+
+The boosted-tree benchmark using XGBoost is now also included. In the updated run, the hybrid OLS + XGBoost model remains competitive but does not outperform the Random Forest or Gradient Boosting residual learners, indicating that the residual learning problem is not simply solved by increasing tree complexity. The neural-network benchmark (MLP / YSA) performs poorly in this specification, which suggests that the current feature set is not yet rich enough to support a stable feedforward neural architecture without additional feature engineering or regime separation.
+
+The interpretation is consistent with decision-theoretic intuition: if the loss function is closer to squared-error forecast loss, the rolling and residual-learning models can look attractive; if the substantive objective is sign prediction or crisis-state interpretation, the baseline structural model can remain preferable. This is exactly why the paper reports multiple metrics rather than relying on one scalar score.
+
+## 4.6 Appendix-Level Stress Tests
+Additional tests will be reported in the appendix, including the full candidate model and any extended macro-block specifications that are not part of the main text. In the current benchmark run, rolling-window OLS produces the lowest RMSE (`0.001885`) but with weak directional accuracy (`0.5093`), which indicates that the time-varying benchmark is numerically strong but economically less informative in sign prediction. The DOLS-style level benchmark yields strong in-sample fit but poor out-of-sample scale stability, so it should be interpreted as a robustness reference rather than a preferred forecasting specification.
+
+The theoretical reading is straightforward: rolling-window estimation is a practical proxy for parameter instability, while DOLS and FMOLS act as long-run cointegration anchors. They tell us that the system is not a stable one-equation story, but they do not by themselves solve the forecast problem. For the main paper, they therefore belong in the benchmark and robustness family, not in the headline result.
+
+The advanced volatility benchmarks add a second layer of evidence. Using a realized-volatility proxy derived from squared gold returns, the HAR-RV proxy performs best among the volatility-focused models, while FIGARCH, GARCH, and GJR-GARCH are close behind on the same proxy scale. EGARCH and APARCH are left as appendix-ready extensions because they are more sensitive to estimation conditions in the current sample. The point is not that one volatility model dominates every metric, but that the volatility process is clearly persistent, highly forecastable on its own proxy scale, and better represented by an ARCH-family comparison set than by a single symmetric GARCH specification.
+
+## 4.7 Cointegration Benchmarks
+The long-run benchmark set also includes FMOLS as a cointegration reference. In the current implementation, FMOLS yields a substantially larger RMSE than the short-horizon return-based forecasts (`0.4712` on the level scale in the current run), which is expected because the evaluation is being compared against return-based benchmarks rather than against a pure level-to-level forecasting design. FMOLS therefore functions as a long-run benchmark rather than the preferred forecast model for the main paper. In contrast, DOLS remains useful as a cointegration-robust benchmark, even though its out-of-sample return performance is weak relative to the rolling-window and residual-learning specifications.
+
+The volatility-side benchmarks should be read separately from the return forecasts. HAR-RV and the ARCH-family models are evaluated against a volatility proxy, not directly against gold returns, so their very small numerical errors are not directly comparable to the return-prediction tables. Their role is to show that conditional variance is itself strongly forecastable and should be modeled as a distinct object in the volatility appendix.
+
+## 4.8 Regime-Split Evidence
+The regime-aware benchmark on the advanced feature set shows clear heterogeneity across market states. The calm regime performs best among the regime-split OLS models, with RMSE around `0.001803` and directional accuracy near `0.5943`. The stress regime has the strongest sign accuracy (`0.6247`) but a higher RMSE (`0.002366`), while the crisis regime exhibits the weakest directional performance (`0.4301`). This pattern suggests that the same explanatory blocks do not operate uniformly across market states. In practice, that means the model should not be read as a single static forecasting equation; it is better understood as a regime-sensitive system in which feature relevance changes under stress.
+
+The regime random forest improves on crisis heterogeneity only modestly, and the regime MLP remains weak. This reinforces the earlier conclusion that the predictive problem is not solved by simply adding more neural capacity. The feature set must be richer, and the regime structure must be modeled more explicitly, if feedforward networks are to become competitive in this setting.
+
+## 4.9 Forecast Combination and Stacked Ensemble
+As an additional decision-theoretic benchmark, we estimate a compact stacked ensemble using the strongest block models and residual learners as inputs to a ridge meta-learner. In the current holdout split, the stacked ensemble achieves a directional accuracy of `0.6827` on the evaluation segment, although its RMSE (`0.0026496`) is worse than the best single-model benchmarks. This is an important result rather than a failure: it indicates that forecast combination can improve sign prediction even when it does not minimize squared error on the same split.
+
+The stacking result therefore supports the broader theoretical argument in this paper. When the objective is predictive direction under uncertainty, combining models can be preferable to choosing one structural specification. When the objective is RMSE minimization, the rolling-window and residual-learning benchmarks remain stronger. The ensemble is thus best interpreted as a complementary decision tool, not as a replacement for the main benchmark ladder.
+
+## 4.10 Sparse Feature Selection and Lag Search
+To avoid overfitting through uncontrolled feature expansion, we also estimate sparse regularization benchmarks as a disciplined lag-search proxy. After excluding the contemporaneous target from the feature set, Lasso and Elastic Net each select a compact subset of 12 engineered predictors—including `GOLD_z20`, `GOLD_mom20`, and `USDCHF_mom60`—and achieve a directional accuracy around `0.8706` on the holdout sample, with RMSE near `0.001772`. This does not imply that sparse regularization is the final preferred model, but it does indicate that a limited subset of lagged and interaction features carries most of the predictive content in the advanced feature file.
+
+The substantive implication is useful for model design. It supports a smaller, more defensible feature set for the final forecasting specifications and reduces the risk of interpreting every engineered variable as equally important. In other words, the sparse-selection step helps separate signal from redundancy before we move to final ensemble or regime-specific averaging.
+
+## 4.11 Regime-Specific Model Averaging
+We also estimate a regime-specific averaging benchmark based on calm, stress, and crisis models trained on the advanced feature set. The hard-switch regime ensemble delivers RMSE around `0.002402` with directional accuracy near `0.5897`, while the weighted regime-average benchmark produces RMSE around `0.002460` and directional accuracy near `0.5644`. These results are not superior to the very best RMSE benchmarks, but they are important because they show that the value of regime conditioning depends on the evaluation criterion. Regime conditioning helps the model adapt to state-dependent structure, but it does not automatically outperform the strongest rolling-window specification on squared-error loss.
+
+Taken together, the regime-specific averaging result and the stacked ensemble result point to the same conclusion: the best model for level accuracy is not always the best model for directionality. That distinction is theoretically consistent with decision-theoretic forecasting under uncertainty, where the optimal strategy depends on the loss function and the market state.
+
+## 4.12 Validation and Extension Appendix
+This appendix reports the source hierarchy used to keep the empirical design transparent. The main paper sample is built from official daily sources and source-spliced through time. Validation sources, when available, include World Gold Council and LBMA / ICE-style gold references. Extension sources include Twelve Data, GoldAPI, and MetalpriceAPI, which are useful for shorter-horizon checks but are not substitutes for the daily backbone.
+
+| Layer | Source family | Role in paper | Status |
+|---|---|---|---|
+| Main | FRED, BLS, H.10, EIA, CBOE | Main empirical backbone | Implemented |
+| Validation | World Gold Council, LBMA / ICE | Gold reference comparison | Available as a validation target |
+| Extension | Twelve Data, GoldAPI, MetalpriceAPI | Intraday / auxiliary analysis | Scripted, API-dependent |
+
+The current validation/intraday runner records access status cleanly when API keys are unavailable, which is preferable to fabricating data or silently relying on unstable feeds. This keeps the paper reproducible and makes the source hierarchy explicit for readers and reviewers.
+
+## 4.13 Advanced Volatility Appendix
+The advanced volatility appendix documents the ARCH-family and realized-volatility benchmarks in a separate block so that they do not get conflated with the return-forecast tables. In the current run, the HAR-RV proxy is the strongest performer on the realized-volatility scale, with FIGARCH and standard GARCH variants close behind, while EGARCH and APARCH are treated as estimation-sensitive extensions. This appendix is meant to show that gold volatility can be modeled with a richer financial econometrics toolkit than a single symmetric GARCH(1,1), but the main paper still uses the simpler volatility check as a baseline for readability.
+
+The appendix also clarifies that the advanced volatility family is evaluated against a volatility proxy rather than directly against gold returns. That separation is deliberate: it lets the paper discuss conditional variance, persistence, and state dependence as distinct objects instead of collapsing them into the return-forecast metrics used elsewhere in the results section.
+
+One further reason to keep the advanced volatility material in the appendix is finite-sample and initialization sensitivity. In practice, asymmetric and long-memory volatility models often depend heavily on distributional assumptions, sample length, and starting values, and they can fail to converge even when the underlying economic story is sound. Treating these models as appendix benchmarks rather than central headline results is therefore methodologically appropriate: it shows that the paper explored a broader financial econometrics toolkit without overstating the stability of every specification. The practical message is that gold volatility is better understood as a family of conditional-variance processes, some of which are consistently informative and some of which are sample-sensitive, rather than as a problem solved by a single canonical GARCH form.
+
+# 5. Conclusion
+This paper develops a block-based hybrid framework for forecasting gold under currency-war and safe-haven dynamics. Its main empirical contribution is to treat the explanatory universe as an organized set of channels rather than a flat list of regressors, and to separate the main daily backbone from validation and extension sources.
+
+The broader implication is that gold forecasting improves when the model is designed around interpretable blocks that reflect the main transmission channels in the literature: dollar strength, safe-haven FX, equity risk, oil, and volatility. The hybrid setup is useful not because it is fashionable, but because it respects the division between structural explanation, residual prediction, and source hierarchy.
+
+Future work can extend the same design to broader macro-stress variables such as real effective exchange rates, policy uncertainty, geopolitical risk, and crypto-market conditions. These additions are best treated as validation or appendix material unless the data justify a stronger central role, and intraday feeds should remain auxiliary unless reproducibility and licensing are clearly established.
+
+# 6. Critical Reflection: Identification, Endogeneity, and the Technology Paradox
+The empirical results presented here, while robust, are subject to three critical considerations identified in our all-phase audition protocol. 
+
+First, the **Endogeneity** between the dollar index ($DXY$) and gold prices ($GOLD$) remains a central identification challenge in daily data. While NARDL explicitly models the asymmetric cointegration path, these are equilibrium prices that may react simultaneously to the same global news shocks. Future iterations of this work could incorporate high-frequency exclusion restrictions or narrative instrumental variables based on Federal Reserve communication dates to further isolate the "Currency War" transmission from general safe-haven rushes.
+
+Second, the **Technology Paradox** in forecasting is evident in the divergence between our baseline structural models and the engineered feature set. While sparse regularization achieved a directional accuracy of 87%, this gain comes at the cost of direct causal interpretability. The "dual-pressure" of automation in research—where increased complexity improves predictive power while masking underlying mechanisms—is addressed here by keeping the ML layer strictly confined to residual learning, ensuring that the primary economic claims remain anchored in the structural NARDL backbone.
+
+Third, **Sample Bias** and survivor properties are relevant for our 1980–2026 daily panel. By construction, the dataset relies on highly liquid, continuous series from official and institutional sources. While this ensures level consistency for forecasting, it also implies that the paper is best interpreted as a benchmark for transparent liquid-market dynamics rather than a universal representation of every gold submarket. The 60.4% sign accuracy reported here should therefore be read as a forecast benchmark for a reproducible daily backbone under currency-war stress, not as a claim about all possible gold market environments.

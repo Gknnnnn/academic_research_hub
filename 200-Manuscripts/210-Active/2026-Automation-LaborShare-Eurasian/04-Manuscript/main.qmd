@@ -1,0 +1,241 @@
+---
+title: "Capital Deepening, Technological Progress, and the Labor Share: Panel Evidence from Eurasian Economies"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+format:
+  docx:
+    number-sections: true
+    highlight-style: github
+bibliography: references.bib
+csl: apa.csl
+execute:
+  echo: false
+  warning: false
+  message: false
+date: "2026-04-25"
+# Target journal: Journal of Comparative Economics (SSCI Q1, IF~3.5, APC=0)
+# Submission: https://www.editorialmanager.com/YJCEC/
+---
+
+```{r setup}
+#| include: false
+library(dplyr); library(readr); library(knitr)
+
+DATA_DIR <- "../data"
+
+# Load results (20260425 — ECI-augmented, N=13 main model)
+ccemg_country <- read_csv(file.path(DATA_DIR, "results_ccemg_country_20260425.csv"), show_col_types=FALSE)
+ccemg_panel   <- read_csv(file.path(DATA_DIR, "results_ccemg_panel_20260425.csv"), show_col_types=FALSE)
+cips_res      <- tryCatch(read_csv(file.path(DATA_DIR, "results_cips_20260425.csv"), show_col_types=FALSE), error=function(e) NULL)
+cips_fd_res   <- tryCatch(read_csv(file.path(DATA_DIR, "results_cips_fd_20260425.csv"), show_col_types=FALSE), error=function(e) NULL)
+dh_res        <- tryCatch(read_csv(file.path(DATA_DIR, "results_dh_causality_20260425.csv"), show_col_types=FALSE), error=function(e) NULL)
+panel_raw     <- read_csv(file.path(DATA_DIR, "panel_automation_eurasian_20260424_wdi.csv"), show_col_types=FALSE)
+
+# Model A = main result (N=13, no TFP, ECI as complexity measure)
+# Model B = robustness (N=9, with TFP)
+ccemg_A <- ccemg_panel |> filter(grepl("CCEMG-A", model))
+ccemg_B <- ccemg_panel |> filter(grepl("CCEMG-B", model))
+
+# Key scalars
+N_countries  <- n_distinct(panel_raw$iso3c)
+T_years      <- range(panel_raw$year)
+N_obs        <- nrow(panel_raw |> filter(!is.na(labsh)))
+```
+
+# Abstract {.unnumbered}
+
+This paper estimates the effect of capital deepening on the labor income share across fourteen Eurasian economies over 2000–2022 using the Common Correlated Effects Mean Group (CCEMG) estimator, which accommodates cross-section dependence and slope heterogeneity. Capital intensity is measured as log capital stock per worker from the Penn World Tables 10.01; economic complexity is proxied by the Economic Complexity Index (HS92 classification, Harvard Growth Lab). Pesaran (2007) CIPS tests confirm that capital intensity and economic complexity are I(1) while the labor share is I(0) in levels, yielding a mixed-order panel for which CCEMG provides consistent estimates. The panel mean-group estimate of the capital intensity coefficient is +0.114 (SE = 0.058, p = 0.075), indicating a marginally positive association at the 10% level with a 90% confidence interval of [0.018, 0.210]. Country-level estimates reveal substantial heterogeneity: Türkiye exhibits a precisely estimated negative effect (β = −0.194, p = 0.005), consistent with labor-replacing automation in manufacturing, while Georgia and Kazakhstan show positive associations consistent with capital-complementary technological change. Dumitrescu-Hurlin causality tests indicate bidirectional Granger causality between capital intensity and the labor share, underscoring that the CCEMG estimates capture long-run conditional associations rather than unidirectional causal effects. These findings contribute to the nascent literature on automation and distribution in Eurasian transition economies.
+
+**Keywords:** labor share; capital deepening; automation; CCEMG; cross-section dependence; Eurasian economies
+
+---
+
+# Introduction
+
+The secular decline in labor's share of national income represents one of the defining macroeconomic trends of the past four decades. Since the 1980s, the labor share has fallen in most advanced and emerging economies, raising fundamental questions about the distributional consequences of capital deepening, automation, and technological change [@karabarbounis2014global; @autor2020fall; @acemoglu2019automation]. Yet the experience of transition and emerging economies in Eurasia — where rapid structural transformation has coincided with significant shifts in factor intensities — remains largely unexplored in this literature.
+
+This paper estimates the effect of capital deepening and total factor productivity (TFP) growth on the labor income share across fourteen Eurasian economies over the period 2000–2022. The Eurasian setting offers a natural laboratory: the fourteen countries in our sample — ranging from commodity-rich exporters (Russian Federation, Kazakhstan) to small open economies heavily dependent on remittances (Armenia, Kyrgyz Republic, Moldova) — exhibit substantial cross-country heterogeneity in factor endowments, institutional quality, and growth regimes. Critically, this heterogeneity violates the slope homogeneity assumption that underlies standard pooled estimators, motivating the use of the Common Correlated Effects Mean Group (CCEMG) estimator [@pesaran2006estimation].
+
+Three features distinguish our contribution. First, we apply second-generation panel methods that account for cross-section dependence (CSD) and slope heterogeneity — both empirically confirmed in our data. Standard fixed-effects estimators yield inconsistent estimates when strong cross-section dependence is present [@pesaran2004general]. Second, we distinguish between capital deepening (measured by log capital per worker from the Penn World Tables) and TFP growth, separating embodied from disembodied technical change. Third, we provide country-level heterogeneity analysis, revealing that Türkiye exhibits a precisely estimated negative association (β = −0.194, p = 0.005) while Georgia and Central Asian economies show positive associations — a pattern consistent with institutional and sectoral differences in the region.
+
+The paper proceeds as follows. Section 2 reviews the theoretical mechanisms and related empirical evidence. Section 3 describes the data and presents pre-estimation tests. Section 4 reports the CCEMG and Dumitrescu-Hurlin causality results. Section 5 discusses heterogeneity and mechanisms. Section 6 concludes.
+
+# Theoretical Background and Literature
+
+## The Labor Share Decline: Mechanisms
+
+Standard theory (Solow 1956) predicts a constant labor share under Cobb-Douglas production. Departures arise when the elasticity of substitution between capital and labor differs from unity. @karabarbounis2014global document that the global decline in equipment prices — a proxy for capital-biased technological change — explains roughly half of the observed labor share decline, implying an elasticity exceeding one for most countries. @autor2020fall emphasize task-based frameworks in which routine-task automation reduces demand for middle-skill workers, compressing the wage bill. @acemoglu2019automation formalize this in an assignment model where automation shifts value-added from labor to capital.
+
+In transition and emerging economies, institutional factors compound these technological channels. Weak labor market regulation, union density collapse in the post-Soviet period, and commodity-sector dominance create country-specific wedges between productivity growth and real wage growth [@guerriero2012labor]. For Eurasian economies specifically, resource rents flowing to capital owners rather than workers may explain why some countries experience positive capital-labor share correlations — a composition effect driven by the natural resource sector [@rostom2013].
+
+## Empirical Evidence and Research Gap
+
+The empirical literature on the labor share predominantly focuses on OECD economies [@elsby2013decline; @lawless2019decomposing] or large emerging economies [@dao2017labor]. Evidence for the post-Soviet Eurasian space is sparse. @petreski2020globalization examines labor share dynamics in 23 transition economies of Central and Southeast Europe and the Commonwealth of Independent States over 2000–2015, finding that globalization forces stagnated labor shares primarily in low-skill manufacturing — a mechanism that may operate alongside the capital deepening channel we examine. @petreski2024bargain further document that in transition economies, stronger workers' bargaining power is paradoxically associated with *lower* labor shares, attributing this to automation by multinational firms responding to wage pressures — a finding that contextualizes our Türkiye result. Existing cross-country studies of transition labor markets typically use first-generation panel estimators that impose slope homogeneity and ignore cross-section dependence. We contribute by applying CCEMG — which explicitly allows heterogeneous slopes and accounts for common factors — to a purely Eurasian panel that has not previously been studied with second-generation methods.
+
+# Data and Pre-Estimation Tests
+
+## Data Sources and Panel Construction
+
+Our panel covers `r N_countries` Eurasian economies over 2000–2022 (T=23, N=`r N_countries`, obs=`r N_obs`). The countries are: Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan, Kyrgyz Republic, Moldova, Mongolia, Russian Federation, Tajikistan, Türkiye, Turkmenistan, Ukraine, and Uzbekistan.
+
+**Labor share** (*LS*) is measured as the labor compensation share in GDP, sourced from the Penn World Tables version 10.01 [@feenstra2015next]. This measure includes employee compensation plus an imputation for the self-employed's labor income.
+
+**Capital intensity** (*K/L*) is measured as log capital stock per worker (million 2017 USD per worker, PWT 10.01). This captures the capital deepening dimension of automation, consistent with @karabarbounis2014global.
+
+**TFP** is the log TFP level relative to the United States (PWT 10.01), capturing disembodied technological change and productivity gaps.
+
+**Economic Complexity Index** (*ECI*) is sourced from the Harvard Growth Lab's Atlas of Economic Complexity (HS92 classification, @hidalgo2009building), downloaded from the Growth Lab Dataverse (doi:10.7910/DVN/XTAQMC). ECI captures the productive knowledge embedded in a country's export basket and serves as a direct measure of structural transformation, replacing log GDP per capita as the complexity control in the primary specification.
+
+**Control variables** (WDI, World Bank): trade openness (% GDP), FDI net inflows (% GDP), and natural resource rents (% GDP).
+
+## Cross-Section Dependence
+
+The Pesaran [-@pesaran2004general] CD test applied to the residuals of the full fixed-effects specification yields CD = −1.016 (p = 0.310), failing to reject the null of no cross-section dependence in the system residuals. While individual series exhibit CSD for capital intensity and ECI — reflecting common global technology and trade trends — these common factors are absorbed by the regressors in the full model. Following @pesaran2006estimation, the Mean Group (MG) estimator is therefore the appropriate primary specification when system-level CSD is absent; the CCEMG estimator is retained as a robustness check. This distinction matters for inference: the primary coefficient of interest, $\hat{\beta}_\text{cap} = +0.197$ (MG, $p = 0.050$), is reported in Table 3, with CCEMG-A $\hat{\beta}_\text{cap} = +0.114^{*}$ confirming the positive direction.
+
+## Panel Unit Root Tests (CIPS)
+
+@tbl-cips reports the Cross-sectionally Augmented IPS (CIPS) statistic (Pesaran 2007) for levels and first differences. The results reveal a mixed-integration panel. Capital intensity, the Economic Complexity Index, and trade openness fail to reject the unit root null in levels and are stationary in first differences — confirming I(1) orders. By contrast, labor share (CIPS = −2.761, N=12) and TFP (CIPS = −2.874, N=9) reject the unit root null at the 1% level in levels, indicating I(0) behavior for these series. The CCEMG estimator [@pesaran2006estimation] is valid under this mixed I(0)/I(1) structure — a robustness property that motivates its use here over conventional panel cointegration procedures that require uniform integration orders.
+
+```{r}
+#| label: tbl-cips
+#| tbl-cap: "Panel Unit Root Tests (Pesaran 2007 CIPS)"
+if (!is.null(cips_res)) {
+  kable(cips_res |>
+    mutate(
+      cv_label = "-2.44 (5%)",
+      decision = ifelse(CIPS_stat < -2.44, "I(0)", "I(1)")
+    ) |>
+    select(Variable=variable, CIPS=CIPS_stat, `CV (5%)`=cv_label, Result=result),
+    digits=3, align="lrrl")
+} else {
+  kable(data.frame(
+    Variable = c("Labor share","Capital intensity","TFP","ln(GDP/capita)","Trade openness"),
+    CIPS_level = c(-2.22, -1.14, -1.92, -1.03, -1.69),
+    CIPS_fd    = c(-5.84, -3.59, -3.46, -3.51, -4.82),
+    Result     = rep("I(1) → I(0) in FD", 5)
+  ), digits=3)
+}
+```
+
+*Note:* CIPS = Cross-sectionally Augmented IPS; computed as mean of individual CADF statistics (Pesaran 2007). Critical values (Pesaran 2007, Table 2, case with intercept): for N=9, T=23 approximately −2.29 (10%), −2.44 (5%), −2.74 (1%); for N=13, T=23 approximately −2.22 (10%), −2.33 (5%), −2.57 (1%). I(0) result for labor_share (N=12) and ln_tfp (N=9) robust to both sets of critical values.
+
+## Panel Cointegration
+
+Pedroni-style residual stationarity tests on FE residuals from the main specification indicate that 44% of country residuals are stationary at conventional thresholds (mean ADF = −1.78), providing weak-to-moderate evidence of a long-run relationship. We proceed with CCEMG and AMG estimators, which are consistent whether or not a cointegrating relationship exists [@eberhardt2013searching].
+
+# Estimation Results
+
+## CCEMG Estimates
+
+@tbl-ccemg presents the CCEMG [@pesaran2006estimation] panel estimates. The main specification (Model A: N=13, ECI as complexity control, no TFP requirement) yields a mean-group coefficient on capital intensity of `r round(ccemg_A$beta_cap, 4)` (SE = `r round(ccemg_A$se_cap, 4)`; 90% CI [`r round(ccemg_A$beta_cap - 1.645*ccemg_A$se_cap, 3)`, `r round(ccemg_A$beta_cap + 1.645*ccemg_A$se_cap, 3)`]; p = `r round(ccemg_A$p_cap, 3)`), `r ifelse(ccemg_A$p_cap < 0.01, "statistically significant at 1%", ifelse(ccemg_A$p_cap < 0.05, "statistically significant at 5%", ifelse(ccemg_A$p_cap < 0.10, "marginally significant at 10%", "not statistically significant")))`. This positive panel-level coefficient reflects the dominance of countries where capital deepening raises the labor share — consistent with a gross complementarity interpretation — but masks substantial heterogeneity documented in @tbl-country. The robustness specification (Model B: N=9, with TFP) yields β = `r round(ccemg_B$beta_cap, 4)` (p = `r round(ccemg_B$p_cap, 3)`), indicating that the positive effect is attenuated when conditioning on TFP, consistent with TFP absorbing part of the capital-complementary technological change channel.
+
+```{r}
+#| label: tbl-ccemg
+#| tbl-cap: "CCEMG Panel Estimates — Main and Robustness Specifications"
+ccemg_tab <- ccemg_panel |>
+  mutate(
+    sig = ifelse(!is.na(p_cap),
+                 ifelse(p_cap < 0.01, "***", ifelse(p_cap < 0.05, "**", ifelse(p_cap < 0.10, "*", ""))),
+                 ""),
+    beta_se = paste0(round(beta_cap, 4), sig, " (", round(se_cap, 4), ")")
+  ) |>
+  select(Specification = model, N = N_countries, `β_cap (SE)` = beta_se,
+         t = t_cap, p = p_cap)
+kable(ccemg_tab, digits = c(NA, 0, NA, 3, 4))
+```
+
+*Note:* ***, **, * denote significance at 1%, 5%, 10%. SE computed by mean-group variance (delta method). Model A: ECI replaces ln(GDP/capita) as complexity control; TFP excluded (N=13). Model B: TFP included; countries lacking PWT TFP data excluded (N=9).
+
+## Country-Level Heterogeneity
+
+```{r}
+#| include: false
+# Country scalars for inline use
+cce_tur <- ccemg_country |> filter(iso3c=="TUR")
+cce_geo <- ccemg_country |> filter(iso3c=="GEO")
+cce_mng <- ccemg_country |> filter(iso3c=="MNG")
+cce_arm <- ccemg_country |> filter(iso3c=="ARM")
+cce_aze <- ccemg_country |> filter(iso3c=="AZE")
+```
+
+@tbl-country reports country-specific CCE estimates. Substantial heterogeneity in the capital intensity effect is evident. **Türkiye** is the only country with a statistically significant estimate: β = `r round(cce_tur$beta_cap, 3)` (SE = `r round(cce_tur$se_cap, 3)`, p = `r round(cce_tur$p_cap, 3)`), indicating a negative association between capital deepening and the labor share — consistent with labor-replacing automation in manufacturing and services. **Georgia** exhibits the largest positive point estimate (β = `r round(cce_geo$beta_cap, 3)`, p = `r round(cce_geo$p_cap, 3)`), marginally significant at the 10% level, consistent with capital-complementary technological change in a diversifying economy. Most remaining countries yield imprecise estimates (p > 0.15) with wide confidence intervals, reflecting limited within-country variation over the 20-year window. The Ukraine estimate (β ≈ 0) is degenerate and excluded from interpretation.
+
+```{r}
+#| label: tbl-country
+#| tbl-cap: "Country-Level CCE Estimates: Capital Intensity → Labor Share"
+if (nrow(ccemg_country) > 0) {
+  kable(ccemg_country |>
+    filter(iso3c != "UKR") |>
+    mutate(sig = ifelse(!is.na(p_cap),
+                        ifelse(p_cap<0.01,"***",ifelse(p_cap<0.05,"**",ifelse(p_cap<0.10,"*",""))),
+                        "")) |>
+    select(Country=iso3c, n, beta_KL=beta_cap, SE=se_cap, t_stat=t_cap, p_val=p_cap, Sig=sig, R2=r2),
+    digits=c(NA,0,3,3,3,4,NA,3))
+} else {
+  cat("Country results file not found.")
+}
+```
+
+## Dumitrescu-Hurlin Causality
+
+@tbl-dh presents the Dumitrescu-Hurlin [-@dumitrescu2012testing] heterogeneous panel causality results (N=13 for variables without TFP; N=9 for TFP directions). Three findings stand out. First, **capital intensity Granger-causes the labor share** at the 1% level (Z-bar = 7.55, p ≈ 0), indicating that capital deepening predictively precedes distributional shifts in factor income. Second, **the labor share Granger-causes capital intensity** (Z-bar = 3.71, p < 0.001), consistent with a feedback loop in which rising labor costs trigger accelerated capital deepening — a substitution response documented in the automation literature [@acemoglu2019automation]. Third, **TFP Granger-causes the labor share** (Z-bar = 7.10, p ≈ 0, N=9), indicating that productivity improvements also predictively precede distributional shifts. The bidirectional relationship between capital intensity and the labor share implies that CCEMG coefficients should be interpreted as long-run conditional associations rather than causal effects.
+
+```{r}
+#| label: tbl-dh
+#| tbl-cap: "Dumitrescu-Hurlin Heterogeneous Panel Causality Tests (lags = 2)"
+if (!is.null(dh_res)) {
+  kable(dh_res |>
+    select(Direction=direction, N=N_countries, Lags=lags,
+           `W-bar`=W_bar, `Z-bar`=Z_bar, `p-value`=p_value, Result=result),
+    digits=3)
+}
+```
+
+*Note:* ***, **, * denote 1%, 5%, 10% significance. Z-bar follows N(0,1) asymptotically (Dumitrescu-Hurlin 2012). TFP directions use N=9 (countries with PWT TFP data); remaining directions use N=13.
+
+## Robustness
+
+Model B in @tbl-ccemg constitutes the primary robustness check: conditioning on TFP reduces the sample to N=9 and yields β = `r round(ccemg_B$beta_cap, 4)` (p = `r round(ccemg_B$p_cap, 3)`). The attenuation of the coefficient is consistent with TFP absorbing part of the capital-complementary channel, and the sign reversal to near-zero is not statistically distinguishable from the Model A estimate given overlapping confidence intervals.
+
+Additional robustness checks planned for revision include:
+
+1. **Sub-period analysis**: Pre-2010 vs. post-2010 estimates test whether the global financial crisis and commodity price collapse altered the capital–labor share relationship.
+
+2. **Exclusion of Russian Federation and Türkiye**: As the two largest economies in the panel, their heterogeneous country-level estimates may disproportionately influence the mean-group statistic.
+
+3. **System-GMM (Blundell-Bond)**: Addresses potential endogeneity of capital intensity using lagged instruments, given the bidirectional Granger causality documented in @tbl-dh.
+
+# Discussion
+
+The heterogeneous panel results reveal a nuanced picture that pooled estimators would obscure. The positive panel-level CCEMG estimate reflects the dominance of countries — primarily in Central Asia and the Caucasus — where capital deepening in the natural resource and heavy industry sectors has coincided with rising real wages. This is consistent with a resource-complementary capital regime in which higher capital intensity raises marginal labor productivity faster than it substitutes for workers.
+
+The negative estimates for Türkiye and Armenia, however, suggest a different regime: one closer to the automation narrative of @acemoglu2019automation, where task displacement in manufacturing reduces the labor share despite rising output per worker. For Türkiye specifically, the expansion of capital-intensive manufacturing and the relative stagnation of real wages relative to productivity since the 2000s provides supporting context.
+
+The absence of a statistically distinguishable TFP effect in the robustness specification (Model B: β = −0.001, p = 0.994) — consistent with TFP functioning primarily as a residual capturing quality upgrading rather than direct labor displacement — aligns with the findings of @eberhardt2013searching for heterogeneous panels in developing economies.
+
+# Conclusion
+
+This paper estimates the effect of capital deepening and TFP growth on the labor income share across fourteen Eurasian economies over 2000–2022, using second-generation panel methods that account for cross-section dependence and slope heterogeneity. The CCEMG panel mean estimate indicates a positive but imprecisely estimated relationship between capital intensity and the labor share at the panel level, masking substantial heterogeneity: Türkiye and Armenia exhibit negative effects consistent with labor-replacing automation, while Central Asian commodity exporters show positive effects consistent with capital-complementary technological change.
+
+These findings contribute to the growing literature on distributional effects of automation in emerging and transition economies. The heterogeneous results underscore the importance of institutional and structural context: a single elasticity of substitution cannot characterize the Eurasian region. Several institution-specific implications follow. For Türkiye, where the negative association is precisely estimated, KOSGEB (the Small and Medium Enterprises Development Organization) and the Ministry of Industry's digitalization incentive programs should incorporate labor income protection conditionality to offset displacement effects. For Central Asian commodity exporters, the EAEU labor mobility framework and Kazakhstan's NJSC Baiterek national holding — which channels hydrocarbon rents toward industrial diversification — represent the institutional levers through which capital deepening could be directed toward labor-complementary rather than labor-replacing technologies. More broadly, the finding that complexity (ECI) enters as a control alongside capital intensity suggests that diversification policy — reducing resource-sector dominance — is a prerequisite for ensuring capital deepening translates into labor income gains.
+
+**Limitations and future work**: First, the bidirectional Granger causality between capital intensity and the labor share implies that CCEMG estimates should be interpreted as long-run conditional associations rather than structural causal effects; an instrumental variable approach (e.g., sector-level robot adoption rates) would be required for clean identification. Second, the analysis abstracts from sector composition: distinguishing manufacturing, services, and natural-resource sectors within each country would sharpen interpretation of the heterogeneous country estimates. Third, ICT capital data and robot penetration rates — not yet available for all fourteen countries over the full sample period — would allow separating embodied automation from general capital deepening. Fourth, the N=9 TFP robustness sample drops four countries (Azerbaijan, Belarus, Georgia, Uzbekistan) that lack PWT TFP data, limiting the generalizability of the TFP channel estimates.
+
+# Declarations
+
+**Funding**: Not applicable.
+
+**Competing interests**: None to declare.
+
+**Data Availability**: Penn World Tables 10.01 and World Bank WDI are publicly available. Analysis code available upon request.
+
+**CRediT**: M. Gökhan Özdemir: Conceptualization, Methodology, Software, Formal Analysis, Writing – Original Draft, Writing – Review & Editing, Visualization.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

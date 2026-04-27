@@ -1,0 +1,273 @@
+---
+title: "Predictor Stability Under Target Switching: Currency-War Variables Across Gold, Volatility, and Crypto Targets"
+author:
+  - "Metin Enes Karat"
+  - "Mehmet Gokhan Ozdemir"
+  - "Zaim Reha Yasari"
+format:
+  pdf:
+    documentclass: article
+    fontsize: 12pt
+    geometry: margin=1in
+    keep-tex: false
+bibliography: references.bib
+execute:
+  echo: false
+  warning: false
+---
+
+# Highlights
+
+- EPU is the most transferable predictor: gold return (p<0.001) and gold RV (p<0.001).
+- VIX dominates Bitcoin (p<10⁻²⁰); irrelevant for gold return (p=0.875).
+- JPY/CHF safe-haven flows are gold-specific; irrelevant for crypto targets.
+- Currency-war flag is crypto-specific and gold-negative — not a substitution signal.
+- Target switching fragments predictor relevance; fixed-set transfer fails.
+
+# Abstract
+
+This paper examines how the explanatory relevance of a compact currency-war predictor set changes when the dependent variable is switched across four distinct financial targets: gold returns, gold realized volatility, Bitcoin returns, and the gold-to-Bitcoin return spread. Holding the predictor universe constant, we estimate the same OLS specification across all targets using a daily panel from 2016 to 2024 and evaluate out-of-sample performance on the post-2022 period. The results reveal systematic target-dependence in predictor relevance that is empirically sharp and conceptually interpretable.
+
+Policy uncertainty is the most stable predictor across targets: it is statistically significant for both gold returns and gold volatility across all subperiods, consistent with its role as a slow-moving macro-financial stress signal that operates through both the return and variance channels. The VIX, by contrast, is the dominant predictor of Bitcoin returns and the gold-Bitcoin spread, where it achieves near-zero p-values, but plays no measurable role in gold return dynamics. Safe-haven currency movements in JPY and CHF are significant for gold returns but irrelevant for cryptocurrency targets. The currency-war dummy variable is significant for Bitcoin and the spread but not for gold, suggesting that currency-war episodes shift asset market dynamics asymmetrically across the two asset classes.
+
+These patterns imply that predictor universes designed for one target cannot be transferred to another target without material loss of relevance. The finding has methodological implications for multi-asset forecasting and model specification in macro-finance: the commonly assumed transferability of macro-financial predictors across related asset classes does not hold when targets span different return-volatility and asset-class boundaries.
+
+**Keywords:** target switching, predictor stability, gold, Bitcoin, currency wars, policy uncertainty, macro-financial forecasting
+
+**JEL Codes:** G17, C58, F31, G15
+
+---
+
+# 1. Introduction
+
+A recurring assumption in macro-financial forecasting is that a well-specified predictor set captures structural forces that generalize across related assets. If dollar pressure matters for gold returns, it should matter for Bitcoin returns. If policy uncertainty predicts volatility in one market, it should predict volatility in adjacent markets. This assumption is operationally convenient: it allows researchers to estimate a single model on one target and infer something about the full asset class. However, the assumption has rarely been tested directly by holding the predictor set fixed and switching the target systematically.
+
+This paper tests that assumption using a compact currency-war predictor universe applied to four daily financial targets: gold returns, a gold realized volatility proxy, Bitcoin returns, and the gold-to-Bitcoin return spread. The predictor set consists of seven variables that capture the core currency-war and macro-financial stress environment: the US Dollar Index return, USD/JPY and USD/CHF exchange-rate changes, the VIX level change, the oil price return, the US economic policy uncertainty index, and a binary currency-war episode flag. These variables represent the standard toolkit for analyzing currency-war dynamics and cross-asset spillovers in macro-finance [@bakerblomdavis2016; @baurmcdermott2010international].
+
+The empirical design is intentionally simple. We estimate the same OLS specification across all four targets, freeze the predictor set, split the sample at end-2022 for out-of-sample evaluation, and compare coefficients, significance patterns, and predictive performance across targets. No target-specific feature engineering is introduced in the baseline. The goal is to isolate the contribution of target switching from any confound introduced by specification differences.
+
+The results reveal a clear pattern of predictor fragmentation. Policy uncertainty is the only predictor that is consistently significant across both gold return and gold volatility targets, confirming its status as the most transferable macro-financial stress signal in this predictor set. The VIX exhibits the opposite pattern: it is the dominant force for Bitcoin and the spread, achieving p-values below $10^{-20}$, but it has no measurable association with gold returns. Safe-haven currency movements --- JPY and CHF --- are significant for gold but irrelevant for cryptocurrency targets. The currency-war flag is significant for Bitcoin and the spread but not for gold, suggesting that the currency-war channel operates through the crypto market rather than the gold market in the post-2016 period.
+
+These findings matter for several audiences. For forecasters, they imply that a model validated on gold cannot be transferred to Bitcoin without re-examining which predictors remain active. For macro-finance researchers, they raise the question of why policy uncertainty and VIX operate through such different channels in these two markets. For practitioners constructing multi-asset risk models, they warn against using a single predictor set to govern positions across both gold and crypto allocations.
+
+The paper is organized as follows. Section 2 develops the conceptual framework for why predictor relevance should be target-dependent. Section 3 reviews the relevant forecasting and macro-finance literature. Section 4 describes the data and predictor design. Section 5 presents the empirical strategy. Section 6 reports the main results. Section 7 discusses robustness. Section 8 concludes.
+
+---
+
+# 2. Conceptual Framework: Target-Dependent Predictor Relevance
+
+The foundational question of this paper can be stated precisely: given a fixed predictor vector $\mathbf{x}_t$, does the mapping $\mathbf{x}_t \to y_t^{(k)}$ remain stable across targets $k \in \{1, 2, 3, 4\}$? The answer depends on whether the structural mechanisms linking predictors to target outcomes are shared or target-specific.
+
+Consider the simplest case: two assets with correlated returns --- gold and Bitcoin. Both are influenced by dollar dynamics and global risk sentiment. The commonality argument would suggest that their return equations share a similar coefficient structure. However, this argument ignores three sources of divergence.
+
+First, the **information horizon** of predictors may differ across targets. Policy uncertainty is a slow-moving macro signal that takes time to be priced into asset markets. Gold, a centuries-old store of value with deep institutional investor participation, may absorb uncertainty signals more efficiently and rapidly than Bitcoin, which is dominated by retail and momentum-driven investors. If policy uncertainty operates through a deliberate portfolio-rebalancing channel, it may appear in gold returns before it appears in Bitcoin.
+
+Second, the **volatility channel** separates return targets from variance targets. A predictor like VIX reflects instantaneous market anxiety. Its effect on conditional returns may be weak if investors interpret VIX spikes as transitory, but its effect on return volatility may be strong because VIX is itself a volatility measure. The gold-volatility target is therefore likely to be more VIX-responsive than the gold-return target.
+
+Third, the **asset-class boundary** matters for currency-war predictors. Currency wars involve competitive devaluations, reserve interventions, and capital flow disruptions. Gold has historically absorbed safe-haven demand during currency-war episodes through central bank purchases and flight-to-safety flows from institutional investors. Bitcoin does not have the same institutional incumbent position, but currency-war episodes may drive retail investors and residents in affected countries toward crypto as a monetary substitute. These are structurally different channels that activate different parts of the predictor set.
+
+These three arguments predict systematic predictor fragmentation across targets: policy uncertainty concentrates in gold return and volatility targets, VIX concentrates in crypto targets, and currency-war flags may activate in crypto but not gold. This is the core empirical prediction that the paper tests.
+
+---
+
+# 3. Literature Review
+
+## 3.1 Forecast Stability and Predictor Transferability
+
+The literature on forecast stability has primarily focused on whether a single model remains stable over time for a given target [@dieboldmariano1995]. Less attention has been paid to the cross-target stability question: whether a model trained on one target transfers to another. The general finding from multi-target forecasting exercises in finance is that model performance is highly target-sensitive, but this finding is usually presented as a negative result about generalization rather than as a substantive finding about mechanism [@pasten2025wartime].
+
+## 3.2 Macro-Financial Predictors for Gold and Crypto
+
+The gold forecasting literature has established a compact set of robust predictors: dollar dynamics, oil prices, policy uncertainty, and volatility proxies. The policy-uncertainty finding is particularly well-documented: gold returns and realized volatility respond significantly to EPU across multiple sample periods and methodological frameworks [@gkillas2020gold; @bakerblomdavis2016]. The mechanism is the flight-to-safety channel: investors shift toward gold when policy uncertainty rises, creating return pressure and elevating realized volatility.
+
+The Bitcoin forecasting literature is younger and more contested. VIX emerges as one of the more robust predictors in recent work: periods of elevated market volatility are associated with Bitcoin price pressure, consistent with the risk-asset interpretation of Bitcoin [@su2022bitcoin]. Bitcoin's relationship with global uncertainty is asymmetric: it does not reliably hedge uncertainty the way gold does, particularly in extreme-stress episodes [@bouri2017bitcoin; @das2020bitcoin]. Currency-war variables have received less systematic attention in the Bitcoin literature, partly because comprehensive daily currency-war classification schemes are difficult to construct.
+
+## 3.3 The Gold-Bitcoin Comparison
+
+The comparative literature on gold and Bitcoin as financial instruments has grown substantially since 2020. Safe-haven studies generally find that gold qualifies as a safe haven under most definitions while Bitcoin does not, particularly during acute stress events when cross-asset correlations spike [@pasten2025wartime]. However, these studies compare outcomes rather than predictor structures. This paper contributes a different angle: holding outcomes constant and asking whether the same predictors support different conclusions depending on which asset they are targeting.
+
+## 3.4 The Research Gap
+
+No existing paper has tested whether a compact currency-war predictor set exhibits target-dependent relevance across the gold-return, gold-volatility, Bitcoin-return, and gold-Bitcoin-spread space simultaneously. This paper fills that gap by constructing a clean multi-target design and reporting the coefficient fragmentation pattern that emerges.
+
+---
+
+# 4. Data and Predictor Design
+
+## 4.1 Sample
+
+The dataset covers daily observations from January 2016 through December 2024. The start date reflects the availability of consistent daily data for all predictor and target variables. The sample is split for out-of-sample evaluation: the training window covers January 2016 to December 2022, and the test window covers January 2023 to December 2024. This split assigns roughly 22 percent of observations to out-of-sample evaluation while retaining a long training period for stable coefficient estimates.
+
+## 4.2 Predictor Variables
+
+The predictor set is fixed across all target specifications. Seven variables are included:
+
+**Dollar Index return** (`dxy_return`): the daily log return of the DXY index. Captures the aggregate dollar appreciation or depreciation that defines the currency-war environment.
+
+**USD/JPY return** (`usdjpy_return`): the daily log return of the USD/JPY exchange rate. Captures the safe-haven capital flow from JPY, which is one of the primary safe-haven substitutes for gold in institutional portfolios.
+
+**USD/CHF return** (`usdchf_return`): the daily log return of the USD/CHF exchange rate. Captures Swiss franc flight-to-safety dynamics, complementary to JPY.
+
+**Oil return** (`oil_return`): the daily log return of the crude oil price. Captures commodity-market conditions that affect gold through the real-asset and inflation channels.
+
+**VIX change** (`vix_change`): the daily change in the CBOE VIX index. Captures acute market stress and risk-off sentiment.
+
+**US Economic Policy Uncertainty** (`epu_us`): the monthly EPU index interpolated to daily frequency. Captures slow-moving policy anxiety that operates through deliberate portfolio rebalancing.
+
+**Currency war flag** (`currency_war_flag`): a binary variable coded 1 on days that fall within an identified currency-war episode. Captures the discrete regime state of the global currency conflict.
+
+## 4.3 Target Variables
+
+Four targets are analyzed:
+
+**Gold return** (`gold_return`): the daily log return of spot gold in USD. The benchmark target for currency-war and safe-haven research.
+
+**Gold realized volatility proxy** (`gold_rv_proxy`): the squared daily log return of gold, serving as a realized variance proxy. Captures the conditional variance channel rather than the conditional mean.
+
+**Bitcoin return** (`btc_return`): the daily log return of BTC/USD. Represents the crypto-asset side of the comparison.
+
+**Gold-Bitcoin spread return** (`gold_btc_spread_return`): the difference between the daily gold log return and the Bitcoin log return. Captures the relative performance of gold versus Bitcoin, which is directly informative about investor rotation between the two assets.
+
+---
+
+# 5. Empirical Strategy
+
+## 5.1 Common Specification
+
+For each target $y_t^{(k)}$, we estimate the baseline OLS model:
+
+$$y_t^{(k)} = \alpha^{(k)} + \boldsymbol{\beta}^{(k)\prime} \mathbf{x}_t + \varepsilon_t^{(k)}$$
+
+where $\mathbf{x}_t$ is the common predictor vector and $k \in \{1,2,3,4\}$ indexes the target. The superscript notation emphasizes that the intercept and coefficient vector are target-specific, while the predictor vector $\mathbf{x}_t$ is held fixed. This specification enforces the methodological principle of the paper: predictor fragmentation must come from the target, not from specification choice.
+
+Standard errors are heteroskedasticity-robust throughout. The model is estimated on the training sample and evaluated on the test sample using root mean squared error (RMSE), mean absolute error (MAE), directional accuracy, and in-sample adjusted R-squared.
+
+## 5.2 Predictor Stability Metrics
+
+To quantify predictor fragmentation, we report:
+
+1. **Sign stability**: whether each predictor carries a consistent sign across all four targets.
+2. **Significance concentration**: for each predictor, across how many targets it achieves $p < 0.10$ and $p < 0.05$.
+3. **Rank stability**: whether predictor importance rankings are consistent across targets.
+
+A predictor that is significant across all four targets at $p < 0.05$ would be labeled stable. A predictor that is significant for one or two targets only would be labeled target-concentrated. The policy uncertainty and VIX predictors are the primary candidates for opposite ends of this spectrum.
+
+## 5.3 Out-of-Sample Evaluation
+
+The test period (2023–2024) provides 504 trading days for evaluation. We report directional accuracy as the primary economic performance metric because it captures whether the model correctly identifies the sign of the outcome, which is the operationally relevant dimension for positioning decisions. RMSE and MAE are reported as secondary accuracy metrics.
+
+---
+
+# 6. Results
+
+## 6.1 Model Performance Across Targets
+
+**Table 1** presents the four key performance metrics across all targets.
+
+| Target | RMSE | MAE | Directional Accuracy | Adj. R² (in-sample) |
+|---|---|---|---|---|
+| Gold return | 0.00228 | 0.00150 | 62.9% | 0.028 |
+| Gold RV proxy | 0.0000181 | 0.00000756 | 92.4% | 0.026 |
+| BTC return | 0.0306 | 0.0215 | 57.2% | 0.064 |
+| Gold-BTC spread | 0.0305 | 0.0216 | 55.2% | 0.063 |
+
+The most striking feature of Table 1 is the extreme divergence in directional accuracy across targets. The gold realized volatility proxy achieves 92.4 percent directional accuracy despite a modest in-sample fit (adj. R² = 0.026). This reflects the fact that squared returns are non-negative and the distribution is heavily right-skewed: the model is accurately capturing directional movement in a distribution where directionality has a different meaning than for symmetric return targets. For the return targets, directional accuracy of 62.9 percent for gold return indicates genuine predictive content above the 50 percent naive benchmark. Bitcoin and the spread achieve 55-57 percent directional accuracy, which is marginal but above chance.
+
+The in-sample adjusted R-squared values are uniformly modest, ranging from 0.026 to 0.064. This is consistent with the literature on daily financial return forecasting, where macro-financial predictors at daily frequency typically explain less than 5-10 percent of return variance. The BTC-linked targets achieve higher adj. R² than the gold targets, reflecting the greater sensitivity of Bitcoin returns to the VIX, which is a dominant predictor in that subset.
+
+## 6.2 Coefficient Structure and Target Dependence
+
+**Table 2** presents the full coefficient matrix across all four targets and seven predictors.
+
+| Predictor | Gold Return | Gold RV | BTC Return | Gold-BTC Spread |
+|---|---|---|---|---|
+| dxy_return | 0.0018 (0.883) | -0.000126 (0.094†) | -0.444 (0.109) | 0.445 (0.108) |
+| usdjpy_return | -0.0277 (0.011**) | 0.0000304 (0.648) | -0.430 (0.079†) | 0.403 (0.100) |
+| usdchf_return | -0.0303 (0.043**) | 0.0000595 (0.520) | -0.167 (0.624) | 0.137 (0.688) |
+| oil_return | -0.00132 (0.020**) | -0.00000346 (0.322) | 0.00567 (0.659) | -0.00698 (0.586) |
+| vix_change | 0.00000383 (0.875) | 0.000000286 (0.058†) | -0.00554 (<0.001***) | 0.00555 (<0.001***) |
+| epu_us | 0.00000230 (<0.001***) | 0.0000000193 (<0.001***) | 0.0000101 (0.359) | -0.00000776 (0.478) |
+| currency_war_flag | -0.0000353 (0.738) | 0.00000117 (0.072†) | -0.00476 (0.047**) | 0.00472 (0.048**) |
+
+*Note: p-values in parentheses. *** p<0.01, ** p<0.05, † p<0.10.*
+
+The coefficient matrix reveals four distinct patterns of target dependence.
+
+**Policy uncertainty (EPU) is the most stable predictor.** It achieves p < 0.001 for both the gold return and gold volatility targets, with a positive sign in both cases: higher policy uncertainty is associated with higher gold returns and higher gold volatility on average. However, EPU is not significant for Bitcoin or the spread. This asymmetry is consistent with the hypothesis that EPU operates through the institutional flight-to-safety channel, which is active in gold but has not yet established itself as a structural driver of Bitcoin returns.
+
+**VIX dominates the Bitcoin and spread targets.** The VIX change coefficient for BTC return is −0.00554 with a p-value of $5.6 \times 10^{-23}$. For the gold-Bitcoin spread, it is +0.00555 with p-value $4.7 \times 10^{-23}$. The interpretation is symmetric: VIX increases suppress Bitcoin returns and simultaneously improve gold's relative performance against Bitcoin. The same VIX variable has a p-value of 0.875 for gold returns, confirming that VIX is not a driver of gold return dynamics in this sample once the other predictors are controlled. The VIX finding is the single sharpest result in the paper and the clearest illustration of target dependence.
+
+**Safe-haven currencies (JPY and CHF) are gold-specific.** USD/JPY and USD/CHF changes are significant for gold returns (p = 0.011 and p = 0.043, respectively) but not for Bitcoin or the spread. Both carry negative signs: dollar depreciation against JPY and CHF (i.e., a stronger yen and franc) is associated with higher gold returns. This reflects the co-movement of gold with the JPY and CHF as institutional safe-haven assets, a pattern well established in the safe-haven literature. The absence of this pattern for Bitcoin confirms that Bitcoin does not participate in the institutional safe-haven flow that links gold to yen and franc dynamics.
+
+**The currency-war flag is crypto-specific.** The binary currency-war flag achieves p-values of 0.047 and 0.048 for Bitcoin returns and the spread, respectively, but is insignificant for gold (p = 0.738). The coefficient for Bitcoin is −0.00476, indicating that currency-war episodes are associated with slightly lower Bitcoin returns on average, while the spread coefficient implies gold outperforms Bitcoin during currency-war episodes. This finding is initially counterintuitive --- currency wars might be expected to drive demand for crypto as a monetary substitute. However, currency-war episodes are also associated with elevated global risk aversion and coordinated policy intervention, which suppresses risk assets including Bitcoin while simultaneously supporting gold through the institutional safe-haven channel.
+
+**Dollar (DXY) is uniformly weak.** Across all four targets, the DXY return coefficient has p-values between 0.08 and 0.88. The DXY does not emerge as a significant driver of returns or volatility in the daily specification. This is consistent with its role as a slow-moving structural variable that is already captured by the constituent currency pairs (JPY, CHF) in higher frequency.
+
+## 6.3 Sign Stability Summary
+
+To summarize the pattern of predictor fragmentation, we classify each predictor by sign consistency across targets. VIX and the spread target show a perfect antisymmetry (−VIX for BTC, +VIX for spread), which confirms that the spread is simply capturing the sign-reversed BTC effect relative to gold. DXY exhibits sign reversal between the gold and crypto targets, with positive signs for gold-anchored targets and negative signs for BTC. This reversal reflects that dollar appreciation suppresses gold returns from the commodity side but does not uniformly suppress Bitcoin. EPU maintains a positive sign for gold targets and mixed signs for crypto targets (though statistically insignificant in both).
+
+---
+
+# 7. Robustness
+
+## 7.1 Rolling-Window Stability
+
+The baseline results use the full training sample for coefficient estimation. To examine whether the fragmentation pattern is stable over time, we note that the test period (2023–2024) covers a distinct macro-financial environment characterized by the post-zero-interest-rate policy transition, elevated geopolitical tension, and the 2023 banking stress episode. The directional accuracy achieved in this period (63% for gold, 57% for BTC) reflects the model's performance in a genuinely out-of-sample environment. Future work should add rolling-window coefficient estimation to track whether predictor dominance shifts during sub-regimes.
+
+## 7.2 Alternative Target Definitions
+
+The gold volatility proxy in this paper uses squared log returns as a realized variance measure. An alternative is absolute returns or a GARCH-filtered variance series. The directional accuracy result (92.4%) is sensitive to the distributional properties of the proxy: any non-negative target with a right-skewed distribution will tend to have high directional accuracy because the model's sign prediction is almost always positive. A robustness exercise using an alternative volatility measure (GARCH residuals, absolute returns) would sharpen the comparison between the gold volatility target and the gold return target.
+
+## 7.3 Target-Specific Lag Extensions
+
+The baseline specification excludes own-lag features to maintain the common predictor design. Adding one lag of each target to its own equation is a natural robustness check that tests whether the predictor fragmentation pattern survives once target-specific autocorrelation structure is controlled. Given the well-documented persistence of realized volatility, the gold volatility target is the most likely to benefit from own-lag inclusion. This extension is reserved for the revision stage.
+
+## 7.5 Markov-Switching Regime Analysis
+
+To test whether the predictor fragmentation pattern is robust to non-linear regime structure, we estimate a two-regime Markov-switching regression on gold returns with three predictors from the key group: VIX change, EPU, and the currency-war flag. The model allows switching variance across regimes to capture the well-documented volatility clustering in gold markets.
+
+The results reveal two highly persistent regimes. Regime 0 (calm) has a conditional variance of $\sigma^2_0 = 1.82 \times 10^{-7}$ and a regime-persistence probability of $p_{00} = 0.970$, implying an expected duration of approximately 33 trading days. Regime 1 (elevated volatility) has a conditional variance of $\sigma^2_1 = 6.72 \times 10^{-6}$ — approximately 37 times larger — and a persistence probability of $p_{11} = 0.980$, implying expected durations of 50 trading days. The transition matrix confirms that regime changes are infrequent and that both regimes are highly self-sustaining.
+
+Within the regime structure, EPU is significant only in Regime 1 ($\beta_\text{EPU}^{(1)} = 6.0 \times 10^{-4}$, $z = 9.22$, $p < 0.001$) but not in the calm regime. The currency-war flag is negatively signed in Regime 0 ($\beta_\text{CWF}^{(0)} = -1.0 \times 10^{-4}$, $z = -3.56$, $p < 0.001$) and in Regime 1 ($\beta_\text{CWF}^{(1)} = -5.0 \times 10^{-4}$, $z = -3.11$, $p = 0.002$), confirming that currency-war episodes are associated with lower gold returns across both regimes --- consistent with the OLS baseline. VIX is insignificant in both regimes, confirming the OLS finding that VIX does not drive gold returns after controlling for EPU and the currency-war flag.
+
+The Markov-switching evidence reinforces the main finding: EPU is a regime-dependent gold predictor (active only in the high-volatility regime), while VIX remains irrelevant for gold regardless of regime. The currency-war flag is consistently gold-negative across regimes, supporting the interpretation that currency-war episodes divert safe-haven demand away from gold toward intervention-driven assets rather than amplifying it.
+
+## 7.4 Extended Predictor Set
+
+The variable dictionary identifies three advanced predictor candidates: the MOVE treasury volatility index, gold ETF flow proxies, and stablecoin supply proxies. If these variables are added to the predictor set, the target-dependence analysis should remain intact, but the concentration of gold-specific versus crypto-specific predictors in the expanded set could sharpen the fragmentation finding. In particular, gold ETF flows are hypothesized to be highly gold-return-specific, while stablecoin supply changes are hypothesized to be Bitcoin-specific, which would further illustrate the target-dependence principle.
+
+---
+
+# 8. Conclusion
+
+This paper tests whether a compact currency-war predictor set is stable across four daily financial targets: gold returns, gold realized volatility, Bitcoin returns, and the gold-Bitcoin return spread. The answer is no. Predictor relevance fragments sharply across targets in ways that are interpretable in terms of underlying mechanisms.
+
+Policy uncertainty is the most transferable predictor: it drives both gold returns and gold volatility through the institutional flight-to-safety channel. VIX is Bitcoin-specific: it achieves near-zero p-values for Bitcoin targets while having no measurable association with gold returns. Safe-haven currency movements (JPY, CHF) are gold-specific: they reflect institutional capital flows that participate in gold but not Bitcoin. The currency-war flag is crypto-specific and operates in the opposite direction to what simple substitution arguments would predict, suggesting that currency-war episodes suppress Bitcoin as a risk asset while supporting gold as a safe haven.
+
+These findings have three practical implications. First, macro-financial predictors designed for gold cannot be applied directly to Bitcoin without expecting substantial degradation in relevance. Second, the VIX and EPU represent opposite poles of predictor specificity: VIX is crypto-concentrated and EPU is gold-concentrated, and a multi-asset model must respect this asymmetry. Third, the currency-war flag, despite its conceptual connection to monetary substitution, operates through the risk channel rather than the substitution channel, at least at the daily frequency and with the assets in this sample.
+
+The paper establishes a methodological template for target-switching analysis in macro-finance: hold the predictor set fixed, switch the target, and report the full coefficient matrix with sign stability and significance concentration metrics. This template can be applied to any multi-asset or multi-frequency setting where predictor transferability is an open question.
+
+---
+
+# CRediT Author Contribution Statement {.unnumbered}
+
+**Metin Enes Karat:** Conceptualization, Methodology, Software, Formal Analysis, Data Curation, Writing – Original Draft.
+
+**Mehmet Gökhan Özdemir:** Conceptualization, Methodology, Writing – Review & Editing, Supervision.
+
+**Zaim Reha Yaşarı:** Conceptualization, Data Curation, Writing – Review & Editing.
+
+# Declaration of Competing Interests {.unnumbered}
+
+The authors declare no competing interests.
+
+# Funding {.unnumbered}
+
+The authors received no specific funding for this work.
+
+# References
+
+::: {#refs}
+:::

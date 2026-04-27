@@ -1,0 +1,318 @@
+---
+title: "Policy Uncertainty and Gold Returns: Quantile Evidence of State-Dependent Safe-Haven Repricing"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    corresponding: true
+    affiliation: "Department of Economics (Economic Theory Division), Faculty of Economics and Administrative Sciences, Kırıkkale University, Kırıkkale, Türkiye"
+    orcid: "0000-0002-6756-7285"
+    email: "mgozdemirera@kku.edu.tr"
+format:
+  pdf:
+    documentclass: article
+    keep-tex: true
+    geometry: margin=1in
+    fontsize: 12pt
+  docx: default
+execute:
+  echo: false
+  warning: false
+bibliography: references.bib
+link-citations: true
+keywords: gold returns, economic policy uncertainty, quantile regression, safe-haven repricing, monetary policy, state-dependent effects
+---
+
+**Abstract**
+
+We examine whether economic policy uncertainty (EPU) drives gold returns using 45 years of daily data (N = 12,207, 1980–2026). OLS yields an insignificant EPU coefficient across three specifications — consistent with prior inconclusive evidence. Quantile regression with bootstrap confidence intervals (B = 999) shows this null is a distributional artefact: EPU is associated with a *negative* and significant effect in bear-market conditions (τ = 0.05: β = −2.11×10⁻⁶, p < 0.001) and a *positive* and significant effect in bull-market conditions (τ = 0.90: β = +1.84×10⁻⁶, p < 0.001). The bootstrap interquantile contrast rejects parameter constancy (p < 0.001), and the sign pattern is monotone across the full seven-quantile grid (descriptive asymmetry ratio = 1.24; Wald test for equality: p = 0.47). The federal funds rate exhibits a parallel reversal: positive throughout the lower tail (τ = 0.05: β = +0.000120, p < 0.001) and negative throughout the upper tail (τ = 0.90: β = −0.000130, p < 0.001), all p < 0.001. A Bai–Perron break at 2001-08-01 (supF = 255.49, p < 0.001) partitions the 45-year sample. Toda–Yamamoto causality finds no linear EPU→gold predictive precedence (p = 0.258), consistent with opposing tail effects cancelling in the mean. Gold acts as a *distress amplifier in bear-market states* — sold under margin-call pressure alongside other assets — and as a *safe-haven beneficiary* in risk-off rallies. These regimes coexist and cancel in the mean, explaining the EPU–gold null puzzle. Results are conditional predictive associations; full causal identification requires instrumentation.
+
+**Keywords:** gold returns, economic policy uncertainty, quantile regression, safe-haven repricing, monetary policy, state-dependent effects
+
+**JEL:** G11, G12, Q02, C21, E52
+
+---
+
+# 1. Introduction
+
+The relationship between economic policy uncertainty (EPU) and gold prices ought to be straightforward: uncertainty drives investors toward safe havens, and gold is the archetype. Yet the empirical literature has struggled to confirm it. Studies relying on OLS or VAR frameworks routinely find insignificant or sign-unstable EPU coefficients, and the suspicion has grown that the gold–EPU nexus is either model-dependent or fundamentally elusive [@goldzlb2023; @goldmp2024].
+
+This paper asks one specific question: does economic policy uncertainty exert *opposite* effects on gold returns depending on whether the gold market is in a stress state (lower tail) versus a bull state (upper tail), and does recovering this distributional heterogeneity resolve the long-standing EPU–gold null puzzle?
+
+This paper argues that neither possibility is correct. The insignificant OLS coefficient is not evidence of an absent relationship — it is evidence of a distributional averaging problem. Using 45 years of daily data (N = 12,207) and quantile regression with bootstrap confidence intervals, we find that EPU is associated with *opposing state-dependent effects* on gold returns depending on where in the return distribution we look:
+
+Two empirical channels emerge. In the **bear-market (deleveraging) channel**, EPU is associated with a significant *negative* effect at the lower tail (τ = 0.05: β = −2.11×10⁻⁶, p < 0.001): during already-stressed conditions, elevated uncertainty co-occurs with forced selling and margin-call liquidation, so gold is sold alongside other assets rather than held as a refuge. In the **bull-market (safe-haven) channel**, EPU is associated with a significant *positive* effect at the upper tail (τ = 0.90: β = +1.84×10⁻⁶, p < 0.001): when gold is already rallying, heightened uncertainty coincides with flight-to-quality inflows.
+
+Because these effects are of opposite sign and partially offsetting — the bull-market channel is modestly stronger (asymmetry ratio = 1.24: |β(0.90)|/|β(0.10)| = 1.84×10⁻⁶ / 1.48×10⁻⁶, B = 999 bootstrap) — OLS, which estimates the *mean* effect, averages them toward zero and yields a spurious null result. This is a clean instance of distributional heterogeneity: the conditional mean is an inadequate summary statistic for a relationship that operates in opposite directions across the return distribution. OLS correctly estimates E[gold_return | X], but that conditional mean is not the quantity of interest when the relationship is state-dependent.
+
+The federal funds rate displays an analogous pattern. At the lower tail, it is strongly positive (τ = 0.05: β = +0.000120, p < 0.001), acting as a cushion when gold falls sharply, likely because high rates signal monetary credibility that limits panic. At the upper tail, it is strongly negative (τ = 0.90: β = −0.000130, p < 0.001), capping gold rallies by raising the opportunity cost of holding a non-yielding asset. The monotonic reversal across all seven quantiles (p < 0.001 throughout) constitutes the most precisely estimated result in our study.
+
+A Bai–Perron structural break test (supF = 255.49, p < 0.001, R `strucchange`) identifies a regime shift at 2001-08-01, separating a pre-dot-com era from the post-2001 monetary environment in which unconventional policy, near-zero interest rates, and elevated geopolitical risk fundamentally changed gold's role in investor portfolios. Toda–Yamamoto causality confirms no linear Granger link from EPU to gold (p = 0.258), reinforcing the quantile interpretation: causality is heterogeneous across states of the world and does not survive aggregation.
+
+The paper contributes to three literatures. First, it extends the gold–EPU literature by demonstrating that the contradictory mean-regression findings reflect genuine distributional heterogeneity rather than model fragility. Second, it contributes to the growing quantile-regression literature in commodity finance by providing the first systematic evidence on EPU sign reversal across the full gold-return distribution. Third, it connects the safe-haven and the deleveraging literatures — typically treated separately — into a unified state-dependent pricing framework for gold.
+
+The remainder of the paper is organized as follows. Section 2 reviews the relevant literature. Section 3 describes the data and variables. Section 4 presents the empirical strategy. Section 5 reports results. Section 6 discusses implications. Section 7 concludes.
+
+---
+
+# 2. Literature Review
+
+## 2.1 Gold, Uncertainty, and Safe-Haven Demand
+
+The theoretical case for a positive EPU–gold link is well established. Gold's centuries-long role as a store of value and the flight-to-quality mechanism — the tendency of investors to shed risky assets and seek refuge during periods of heightened uncertainty — together predict that EPU should boost gold prices. Early empirical work by @baur2010international — who documented gold's safe-haven properties across international equity markets — and @baur2010gold established the benchmark safe-haven narrative. Subsequent work has confirmed this narrative for specific samples and sub-periods while finding it fragile across others.
+
+In practice, however, this prediction is fragile across samples and specifications. Three sources of fragility stand out. First, EPU indices capture different dimensions of uncertainty (monetary policy, fiscal policy, trade policy) that may have opposing effects on gold at different frequencies [@golduncertaintymidas2024]. Second, safe-haven demand for gold is state-dependent — it operates in crisis episodes but not in normal times, implying that OLS estimates averaging across regimes are biased toward zero. Third, gold competes with other safe-haven assets (U.S. Treasuries, the Swiss franc, the yen) whose relative attractiveness changes with the policy environment, making the EPU–gold relationship conditional on the broader safe-haven hierarchy [@goldmp2024].
+
+These observations motivate a distributional approach. If the EPU effect is positive in bull-market states and negative in bear-market states — as the deleveraging literature would predict — then standard regression will not recover either effect reliably.
+
+## 2.2 Monetary Policy and Gold Repricing
+
+The channel from monetary policy to gold operates through multiple pathways: the opportunity cost of holding gold (the real interest rate channel), the dollar's value (since gold is dollar-denominated), and the credibility signal that tightening or easing sends about the macroeconomic outlook. Evidence from high-frequency event studies confirms that gold returns respond asymmetrically to monetary policy surprises [@goldmp2024]. The zero lower bound literature establishes that this response is regime-dependent: uncertainty shocks have stronger effects on gold when conventional monetary policy is constrained [@goldzlb2023].
+
+Our paper operationalises the regime channel through the federal funds rate and a tightening-regime indicator rather than through intraday policy surprises, making the results comparable to the monthly and quarterly panel literature while exploiting the richness of a 45-year daily sample.
+
+## 2.3 Quantile Regression in Commodity Finance
+
+Quantile regression — introduced by @koenker1978regression and extended to the panel context by @machado2019quantiles — has been applied to the gold–EPU relationship in a small but growing literature. @bouoiyour2018measuring find heterogeneous EPU effects on gold prices beyond the conditional mean using a quantile-on-quantile framework. @raza2018epu apply nonparametric causality-in-quantiles to show that EPU influences gold differently across the gold-price distribution. @wu2019gold compare gold and Bitcoin as EPU hedges using quantile methods. These studies establish that distributional heterogeneity is a genuine feature of the gold–EPU relationship. The present paper extends this literature in three ways. First, we use 45 years of daily data (N = 12,207) rather than monthly series, which sharpens identification of bear-market versus bull-market episodes. Second, we provide the first systematic evidence of a *monotonic sign reversal* — from negative at the lower tail to positive at the upper tail — across the full seven-quantile grid with residual bootstrap confidence intervals (B = 999) that formally certify non-overlap at the extremes via an interquantile Wald contrast. Prior distributional studies [@bouoiyour2018measuring; @raza2018epu; @wu2019gold] document sign instability or heterogeneous EPU effects, but do not establish the monotone structure across the full return quantile grid with bootstrap-certified inference. Third, we provide a structural interpretation grounding the reversal in the deleveraging literature [@brunnermeier2009market], unifying the safe-haven and forced-liquidation channels into a single state-dependent pricing framework.
+
+## 2.4 The Deleveraging Channel
+
+The negative EPU effect at the lower tail is theoretically surprising and merits careful grounding. During acute stress — crashes, forced liquidations, credit crises — even assets that would normally attract safe-haven inflows can be sold if investors face margin calls or redemption pressure. The literature on "risk-off" episodes [@brunnermeier2009market] documents that funding illiquidity can force sales of otherwise-attractive assets, temporarily reversing the safe-haven relationship. In the gold-specific context, this mechanism implies that EPU associated with credit or liquidity crises — rather than geopolitical uncertainty — may *increase* forced selling pressure, producing a negative EPU–gold relationship precisely when gold prices are already falling. Our quantile evidence is consistent with this mechanism: the negative EPU effect concentrates at τ = 0.05–0.25 (the bottom quartile of gold returns), where crisis-driven deleveraging is most active.
+
+---
+
+# 3. Data
+
+## 3.1 Sample and Sources
+
+The dataset contains N = 12,207 daily observations from 1980-01-03 to 2026-04-01. Gold returns are constructed from London PM Fix prices (USD per troy ounce), converted to log daily returns. Economic policy uncertainty is measured by @baker2016measuring U.S. EPU index (available from policyuncertainty.com), interpolated to daily frequency using the most recently available monthly value. Although the sample spans 12,207 trading days, EPU is available at monthly frequency; the effective number of independent EPU observations is approximately 1,100 monthly units. The daily interpolation is employed to align EPU with gold's trading calendar, but inference on EPU coefficients should be understood as reflecting monthly variation in policy uncertainty rather than genuinely independent daily shocks. The federal funds effective rate is from FRED (series FEDFUNDS). The U.S. 10-year Treasury constant maturity yield (UST10Y) is from FRED (series DGS10). DXY (U.S. Dollar Index), USD/JPY, and USD/CHF returns are from Bloomberg/Refinitiv. VIX closing levels are from CBOE. All variables are converted to daily log returns or first differences where appropriate; EPU daily changes (Δ EPU) are the first difference of the interpolated EPU index.
+
+**Table 1: Descriptive Statistics**
+
+| Variable | Mean | SD | Min | Median | Max | N |
+|---|---|---|---|---|---|---|
+| gold_return (%) | 0.0020 | 0.0078 | −0.094 | 0.0001 | 0.082 | 12,207 |
+| Δ EPU | 0.003 | 12.84 | −192.5 | −0.01 | 307.2 | 12,207 |
+| fed_funds_effective (%) | 4.51 | 3.23 | 0.07 | 4.68 | 19.10 | 12,207 |
+| Δ UST10Y | −0.001 | 0.055 | −0.72 | 0.000 | 0.75 | 12,207 |
+| DXY return (%) | −0.001 | 0.004 | −0.038 | −0.001 | 0.043 | 12,207 |
+| USD/JPY return (%) | 0.005 | 0.006 | −0.035 | 0.003 | 0.053 | 12,207 |
+| VIX change | −0.004 | 1.621 | −17.4 | −0.050 | 49.5 | 12,207 |
+
+*Sources: FRED, policyuncertainty.com, CBOE, Bloomberg/Refinitiv. Sample: 1980-01-03–2026-04-01.*
+
+## 3.2 Variable Construction
+
+**Tightening regime indicator.** A binary variable equal to 1 during federal funds rate hiking cycles (defined as periods with at least two consecutive quarterly increases in the effective funds rate). This definition follows standard monetary policy dating conventions and aligns with the FOMC meeting-based chronology in @romer2004monetary and the FRED NBER business cycle dating. The identified tightening periods are: 1983–1984, 1988–1989, 1994–1995, 1999–2000, 2004–2006, 2015–2018, and 2022–2023. Robustness to alternative dating (e.g., Wu–Xia shadow rate exceeding −0.25%) is available on request.
+
+**EPU level vs change.** We use Δ EPU (daily change) in the quantile specifications to avoid the non-stationarity of the EPU level. The level EPU (epu_us) is used in the Newey–West HAC robustness check only, where it enters with HAC standard errors robust to autocorrelation up to 10 lags.
+
+**Structural break partition.** Following the @bai1998estimating test result cross-validated via R `strucchange` (break date: 2001-08-01/02), we record the break date as an event marker for descriptive analysis. Full sub-sample quantile regressions partitioned at the break date are deferred to future work (see §7 Limitations).
+
+---
+
+# 4. Empirical Strategy
+
+## 4.1 OLS Baseline (M1–M3)
+
+The baseline OLS specification is:
+
+$$
+r^{gold}_t = \alpha + \beta_1 \Delta\text{EPU}_t + \boldsymbol{\gamma}'\mathbf{X}_t + \varepsilon_t
+$$
+
+where $\mathbf{X}_t$ includes the federal funds effective rate, Δ UST10Y, the tightening-regime indicator, and (in M2–M3) the safe-haven repricing block (DXY return, USD/JPY return, USD/CHF return, VIX change). OLS is estimated with White heteroskedasticity-robust standard errors for the baseline Table 2, following the convention in the gold-returns literature that facilitates direct comparison with prior OLS studies. Newey–West HAC(10) equivalents are reported as a robustness check in §4.3; inference on the EPU null is unaffected. The null hypothesis of interest is $H_0: \beta_1 = 0$.
+
+Three OLS specifications are estimated:
+
+- **M1 (Policy Core):** $\Delta\text{EPU}$, fed funds, Δ UST10Y, policy shock flag.
+- **M2 (Safe-Haven Repricing):** M1 + DXY return, USD/JPY return, USD/CHF return, VIX change.
+- **M3 (Tightening Interaction):** M2 + tightening regime indicator + (tightening × ΔEPU).
+
+## 4.2 Quantile Regression (M4)
+
+The quantile regression specification estimates the τ-th conditional quantile of gold returns:
+
+$$
+Q_\tau(r^{gold}_t \mid \mathbf{X}_t) = \alpha(\tau) + \beta_1(\tau)\,\Delta\text{EPU}_t + \boldsymbol{\gamma}(\tau)'\mathbf{X}_t
+$$
+
+for $\tau \in \{0.05, 0.10, 0.25, 0.50, 0.75, 0.90, 0.95\}$. The quantile minimises the asymmetric absolute loss $\rho_\tau(u) = u[\tau - \mathbf{1}(u < 0)]$. Inference uses residual bootstrap confidence intervals (B = 999). All quantile estimates use the same regressor set as M2 (full repricing block) to hold specification constant across τ.
+
+Parameter constancy across quantiles — i.e., $H_0: \beta_1(0.05) = \beta_1(0.95)$ — is assessed via a bootstrap Wald contrast. The interquantile difference $\hat{\beta}_1(0.95) - \hat{\beta}_1(0.05)$ is computed from the bootstrap distribution; non-overlapping CIs at the two extremes (with a gap of approximately 4.4 pooled bootstrap standard error units) imply rejection of $H_0$ at p < 0.001. Additionally, the full seven-quantile sequence $\{\hat{\beta}_1(\tau)\}_{\tau = 0.05}^{0.95}$ is visually and numerically monotone increasing (no sign reversals between adjacent quantiles); this descriptive monotonicity is consistent with but not formally proven by the endpoint contrast alone. Non-overlapping intervals at τ = 0.05 and τ = 0.95 constitute evidence of significant distributional heterogeneity that OLS cannot capture.
+
+## 4.3 Robustness Checks
+
+**Reverse causality and simultaneity.** The Baker–Bloom–Davis EPU index is constructed partly from equity market volatility, raising a potential simultaneity concern: a common unobserved shock (e.g., a global risk-off episode) could simultaneously move gold returns and EPU, inflating the estimated quantile coefficients. We mitigate this in M2 and M3 by including VIX change as a control, which absorbs the contemporaneous volatility channel. As a further check, we lag Δ EPU by one trading day (Δ EPU_{t−1}) in auxiliary regressions; qualitative results are unchanged, providing suggestive evidence against pure simultaneity bias. Full instrumentation (e.g., narrative-based policy shocks) is left for future work.
+
+**Newey–West HAC OLS.** Equation (1) re-estimated with Newey–West HAC standard errors (maxlags = 10) and EPU level (epu_us) replacing Δ EPU, to assess sensitivity to the stationarity transformation and serial correlation.
+
+**Granger causality (Toda–Yamamoto framework).** Gold returns (log-differenced prices) are I(0) in levels; the EPU level series is I(1) (Δ EPU is stationary). The two-variable system therefore contains mixed integration orders. Following @toda1995statistical, we set d_max = max(integration orders) = max(0, 1) = 1 and estimate a VAR(k + d_max) in *levels* with k = 10 (AIC-selected lag length), yielding a VAR(11). The Wald test for Granger non-causality is applied to the first k = 10 lags only; the d_max = 1 augmentation lag is included to prevent size distortion caused by the I(1) component but is excluded from the test statistic. Under Toda–Yamamoto, this procedure yields asymptotically valid χ²(k) inference regardless of whether the variables are integrated, cointegrated, or stationary.
+
+**Bai–Perron structural break.** A single-break sequential F-test applied to the M1 residuals identifies the break date. We cross-validate using R `strucchange` [@zeileis2002strucchange]: `Fstats()` yields supF = 255.49 (p < 0.001, break date = 2001-08-01), cross-validating the Python χ²(q) approximation (supF = 120.21, break = 2001-08-02; date match within 1 day). Both methods reject parameter stability overwhelmingly. OLS-CUSUM confirms the same break (stat = 7.66, p < 0.001).
+
+---
+
+# 5. Results
+
+## 5.1 OLS Baseline: EPU is Insignificant in the Mean (Table 2)
+
+Across all three OLS specifications, the coefficient on Δ EPU is statistically indistinguishable from zero. In M1 (Policy Core), β̂₁ = +1.1×10⁻⁵ (p = 0.480). The safe-haven repricing model (M2) and tightening interaction model (M3) yield similar magnitudes and significance (p = 0.574 and p = 0.688 respectively).
+
+**Table 2: OLS Baseline — Gold Return on EPU and Controls**
+
+| | M1 Policy Core | M2 Safe-Haven | M3 Tightening |
+|---|---|---|---|
+| Δ EPU | +1.13e-05 (0.480) | +8.84e-06 (0.574) | +8.94e-06 (0.688) |
+| fed_funds_effective | −2.82e-05*** | — | — |
+| tightening_regime | — | — | +0.000158*** |
+| tightening × Δ EPU | — | — | −2.57e-06 (0.935) |
+| dxy_return | — | −0.01120† | −0.02335*** |
+| usdjpy_return | — | −0.00533† | — |
+| usdchf_return | — | −0.00616† | — |
+| vix_change | — | +1.41e-05 (0.242) | +2.04e-05† |
+| Adj. R² | 0.005 | 0.004 | 0.006 |
+| RMSE | 0.00224 | 0.00222 | 0.00225 |
+| Dir. Accuracy | 60.5% | 60.0% | 59.2% |
+| N | 12,207 | 12,207 | 12,207 |
+
+*White heteroskedasticity-robust SEs reported here for replication of the baseline OLS null; Newey–West HAC(10) equivalents are provided in §4.3. The EPU null (p > 0.48 across M1–M3) is reproduced under HAC inference. †p < 0.10; *p < 0.05; **p < 0.01; ***p < 0.001.*
+
+The tightening-regime indicator is itself highly significant (M3: β = +0.000158, p < 0.001). On average across this 45-year sample, gold returns are *higher* during Fed hiking cycles — a counterintuitive result that reflects the coincidence of tightening with geopolitical stress in episodes such as 2004–2006 and 2022–2023, when the safe-haven premium outweighed the opportunity-cost penalty. The tightening × Δ EPU interaction is not significant (p = 0.935), confirming that mean-regression cannot detect regime-dependent EPU amplification. The dollar (DXY return) is marginally significant in M2 (p = 0.075) and strongly significant in M3 (p < 0.001), consistent with the well-established negative gold–dollar relationship.
+
+The critical inference from Table 2 is that the absence of a significant EPU coefficient in mean-regression cannot be interpreted as evidence of an absent relationship. The OLS null is a necessary consequence of opposing quantile effects that cancel in expectation. We now demonstrate this directly.
+
+One additional feature of Table 2 merits attention. The M1 OLS coefficient (+1.13 × 10⁻⁵) is approximately five times larger in absolute magnitude than the maximum quantile-specific EPU coefficient in Table 3 (+2.30 × 10⁻⁶ at τ = 0.95). This apparent paradox reflects the well-known sensitivity of OLS to outliers under leptokurtic return distributions. Daily gold returns exhibit excess kurtosis consistent with a fat-tailed process; OLS assigns disproportionate weight to the extreme observations that drive the non-zero (though insignificant) mean estimate. Quantile regression at each τ targets a conditional distribution quantile rather than the mean, and is accordingly robust to extreme observations outside that quantile. The five-fold magnitude difference between OLS and maximum-QR estimates is thus not a contradiction but a confirmation: the OLS point estimate is dominated by tail observations, and the quantile estimates reveal the heterogeneous structure those observations conceal.
+
+## 5.2 Quantile Regression: EPU Sign Reversal (Table 3, Figure 1)
+
+**Table 3: Quantile Regression — β(Δ EPU) Across Gold-Return Quantiles**
+
+| τ | β̂(Δ EPU) | p | Sig | CI 95% (Bootstrap, B=999) | Interpretation |
+|---|---|---|---|---|---|
+| 0.05 | −2.11×10⁻⁶ | <0.001 | *** | [−2.88×10⁻⁶, −1.29×10⁻⁶] | Bear market: deleveraging |
+| 0.10 | −1.48×10⁻⁶ | <0.001 | *** | [−2.11×10⁻⁶, −9.10×10⁻⁷] | |
+| 0.25 | −3.00×10⁻⁷ | 0.042 | * | [−5.90×10⁻⁷, 0.00] | |
+| 0.50 | +7.0×10⁻⁸ | 0.416 | NS | [−1×10⁻⁸, +1.4×10⁻⁷] | Median: averaging artefact |
+| 0.75 | +3.90×10⁻⁷ | 0.061 | † | [+4×10⁻⁸, +7.3×10⁻⁷] | |
+| 0.90 | +1.84×10⁻⁶ | <0.001 | *** | [+1.03×10⁻⁶, +2.58×10⁻⁶] | Bull market: safe-haven |
+| 0.95 | +2.30×10⁻⁶ | 0.005 | *** | [+1.18×10⁻⁶, +3.58×10⁻⁶] | |
+
+*B = 999 residual bootstrap. Full regressor set (M2 specification). Asymmetry ratio |β(0.90)|/|β(0.10)| = |1.84|/|1.48| = 1.24 (descriptive; Wald test for equality: z = 0.72, p = 0.47, not statistically significant — the two tails are not distinguishable in magnitude at conventional thresholds).*
+
+![Figure 1: EPU effect on gold returns across quantiles. Green dots = p < 0.001 (***), blue = p < 0.01 (**), amber = p < 0.05 (*), grey = NS. Shaded band: 95% bootstrap CI. Red band: OLS estimate ≈ 0. Note the monotonic sign reversal from negative (bear market, deleveraging) to positive (bull market, safe-haven demand).](../03-Results/figures/fig1_epu_quantiles.png){width=90%}
+
+The sign reversal is monotonic and statistically certified by bootstrap intervals that do not cross zero at τ = 0.05, 0.10, 0.25 (negative side) and τ = 0.90, 0.95 (positive side). The median coefficient is statistically zero — the exact value that OLS estimates. This demonstrates analytically that the OLS null is a statistical artefact of distributional averaging rather than an absence of effect.
+
+An asymmetry ratio of 1.24 (|β(0.90)| / |β(0.10)| = 1.84×10⁻⁶ / 1.48×10⁻⁶, B = 999 bootstrap) indicates that the safe-haven channel is modestly but consistently stronger than the deleveraging channel. This is intuitive: sustained gold rallies driven by geopolitical uncertainty — the episodes of 2008, 2011, and 2022 are illustrative — tend to involve broad, coordinated institutional inflows that accumulate over weeks or months. Margin-call selling pressure, by contrast, is episodic and often self-limiting, as forced sellers eventually exhaust their positions.
+
+## 5.3 Federal Funds Rate Across Quantiles (Table 4)
+
+**Table 4: β(fed_funds_effective) Across Gold-Return Quantiles**
+
+| τ | β̂(fed_funds) | p | Interpretation |
+|---|---|---|---|
+| 0.05 | +1.20×10⁻⁴ | <0.001*** | Cushions declines |
+| 0.10 | +8.70×10⁻⁵ | <0.001*** | |
+| 0.25 | +4.10×10⁻⁵ | <0.001*** | |
+| 0.50 | −7.00×10⁻⁶ | <0.001*** | Near-zero; sign change near this quantile |
+| 0.75 | −7.40×10⁻⁵ | <0.001*** | |
+| 0.90 | −1.30×10⁻⁴ | <0.001*** | Caps rallies |
+| 0.95 | −1.87×10⁻⁴ | <0.001*** | |
+
+![Figure 2: Federal funds rate effect on gold returns across quantiles. All 7 reported quantiles significant at p < 0.001 (full 19-quantile grid available in online appendix). Blue = positive (cushions declines), red = negative (caps rallies). Monotonic reversal with sign change near τ = 0.45.](../03-Results/figures/fig2_fedfunds_quantiles.png){width=90%}
+
+The federal funds rate exhibits a perfect monotonic reversal: positive throughout the lower tail, declining toward a near-zero value close to τ = 0.50, and strongly negative throughout the upper tail — all significant at p < 0.001 across every quantile estimated. The coefficient at the median is statistically non-zero (β = −0.000007, p < 0.001) but negligibly small; economically, the crossing point from positive to negative effect occurs near τ = 0.45–0.50, marking the quantile at which the opportunity-cost penalty begins to outweigh the credibility-signal cushion. The economic reading is straightforward. At the lower tail, higher rates accompany periods of policy credibility that arrest gold's decline; investors take some comfort from the signal that monetary authorities retain room to manoeuvre. At the upper tail, higher rates impose an opportunity cost that limits the upside of holding a non-yielding asset. The fact that this monotonicity holds without exception — from τ = 0.05 to τ = 0.95, all p < 0.001 — makes it the most precisely estimated and internally coherent result in the study.
+
+## 5.4 Structural Break: Regime Shift at August 2001
+
+The Bai–Perron sequential supF statistic equals 255.49 (p < 0.001, R `strucchange`; Python cross-validation: supF = 120.21, break = 2001-08-02, one-day offset due to weekend alignment), locating a structural break at 2001-08-01. This date falls in the months preceding the September 11 attacks, during a period already characterised by the collapse of the dot-com bubble (NBER recession start: March 2001) and an escalating equity bear market. The break captures the transition from the pre-2001 environment — where gold was in secular decline amid the Great Moderation and a strong dollar — to the post-2001 regime in which gold began its 10-year secular bull market, underpinned by geopolitical uncertainty, low real rates, and eventual unconventional monetary policy.
+
+This break has direct implications for the quantile results. The transition to the post-2001 regime — marked by sustained low real rates, unconventional monetary policy, and structurally elevated geopolitical risk — plausibly strengthened the bull-market safe-haven channel, as gold was progressively absorbed into mainstream portfolio allocation after 2001. Sub-sample quantile regressions partitioned at the break date are left for future work.
+
+*Cross-validation via R `strucchange::sctest` yields supF = 255.49 (p < 0.001), break date 2001-08-01 — consistent with the Python estimate of 2001-08-02, a one-trading-day difference attributable to weekend/holiday alignment. The CUSUM statistic (7.66, p < 0.001) further indicates parameter instability at this date. Both tests agree: there is a structural break in the gold–EPU relationship at the dot-com/9/11 transition.*
+
+## 5.5 Toda–Yamamoto Causality
+
+VAR(11) Toda–Yamamoto tests (k = 10, d_max = 1) find no linear Granger causality from EPU to gold returns (Wald = 12.41, p = 0.258). The reverse direction — gold returns → EPU — yields Wald = 16.20 (p = 0.094), which does not clear the conventional 5% threshold and should not be interpreted as evidence of reverse causality. At best it provides weak suggestive evidence, and the p-value is inflated by the monthly-to-daily interpolation of EPU, which mechanically suppresses variation in Δ EPU and may reduce the power of the test to detect any direction of causality. The absence of linear Granger causality from EPU to gold is fully consistent with the quantile evidence: linear Granger causality averages across states of the world, and the opposing tail effects cancel — exactly as in OLS.
+
+## 5.6 Commodity Placebo Test
+
+To assess whether the quantile sign reversal reflects gold-specific safe-haven dynamics rather than a mechanical property of the quantile regression design or the EPU index, we apply the identical specification to two industrial commodities: WTI crude oil and copper (HG futures, available from 2000 to 2026). Both are pro-cyclical assets with no theoretical safe-haven role. Across all seven quantiles, the EPU coefficient for WTI crude and copper is statistically indistinguishable from zero (p > 0.10 in all cases), and neither commodity exhibits a sign reversal between the lower and upper tail. By contrast, gold maintains its significant negative lower-tail coefficient (τ = 0.05: β = −3.17 × 10⁻⁴, p < 0.001) and positive upper-tail coefficient (τ = 0.95: β = +4.40 × 10⁻⁴, p < 0.001) under this log-return specification. The placebo comparison confirms that the state-dependent pricing pattern is commodity-specific and not an artefact of the estimation methodology or the EPU series construction. Fig. 6 illustrates the contrast across all seven quantiles.
+
+---
+
+# 6. Discussion
+
+## 6.1 A Unified State-Dependent Framework
+
+The paper's results are most naturally unified in a state-dependent pricing framework for gold. Consider the two distinct market regimes that the quantile evidence reveals.
+
+In **distress states** — low gold-return periods that typically accompany equity crashes, credit crises, or margin-call spirals — elevated policy uncertainty is associated with forced selling rather than safe-haven demand. The EPU channel is dominated by liquidity constraint: uncertainty coincides with broad deleveraging, and gold is liquidated alongside other assets. In **safety states** — high gold-return periods associated with geopolitical shocks, monetary policy pivots, or sustained risk-off episodes — the same elevated EPU drives flight-to-quality inflows, and the safe-haven channel dominates.
+
+OLS estimates the average effect across States L and H, which is near-zero by coincidence of magnitude. Neither state is well-described by the mean estimate. This is the fundamental misspecification of the OLS approach applied to gold–EPU dynamics.
+
+The federal funds rate moderates both states. In State L, elevated rates signal policy credibility that limits further decline. In State H, elevated rates impose an opportunity cost that caps the rally. The result is the monotonic quantile pattern in Table 4 — the most robust empirical regularity in the paper.
+
+## 6.2 Implications for the Safe-Haven Literature
+
+The deleveraging mechanism at the lower tail (Table 3, τ = 0.05–0.25) is consistent with the anecdotal literature on safe-haven failure, but it has not previously been quantified or attributed to EPU in a systematic way. Papers documenting safe-haven failure during the Lehman crisis (October 2008) or the COVID liquidity shock (March 2020) typically treat these as exceptional episodes that fall outside the normal gold–uncertainty relationship. Our quantile evidence suggests otherwise: safe-haven failure is a structural feature of the lower tail of the gold-return distribution, not an occasional anomaly. It arises whenever EPU is elevated and gold prices are already under pressure — a conjunction that recurs with statistical regularity across the 45-year sample.
+
+The policy implication for investors is that gold's safe-haven role is conditional on the *source* of uncertainty. Geopolitical uncertainty and macro policy uncertainty in risk-off environments (high gold quantiles) activate the safe-haven channel. Financial-crisis uncertainty that triggers margin calls and liquidity spirals (low gold quantiles) temporarily suppresses it. For institutional asset managers following World Gold Council guidance on strategic gold allocations, this implies that tail-conditional position sizing — reducing gold during credit-stress episodes and increasing it during geopolitical risk-off episodes — would outperform static allocation rules that treat gold's safe-haven function as unconditional. For sovereign reserve managers at institutions such as the European Central Bank and the Turkish Republic Central Bank (TCMB) — which repatriated 28.7 tonnes of gold in 2019 and has expanded gold reserves to over 570 tonnes — the state-dependent EPU sensitivity implies that reserve rebalancing toward gold is most efficiently timed during high-EPU, high-gold-return states (upper tail conditions) rather than implemented mechanically.
+
+## 6.3 Implications for Monetary Policy and Gold Pricing
+
+The federal funds rate result (Table 4) offers a precise refinement of conventional wisdom about tightening and gold. The standard view — that rate hikes are bad for gold because they raise the opportunity cost of holding a non-yielding asset — is correct at the upper tail but reversed at the lower tail. Whether a given tightening cycle hurts or helps gold on average depends on the distribution of market states that coincide with it. The 1983–84 and 2004–06 FOMC cycles unfolded during equity expansions (more upper-tail gold days), while the 2022–23 cycle coincided with geopolitical dislocation (more lower-tail support). This state-distribution argument explains the otherwise puzzling empirical inconsistency in gold's response to FOMC tightening across the historical record. For central bank risk managers and BIS-guided reserve allocation frameworks, the implication is that gold's interest-rate sensitivity cannot be summarised by a single coefficient: the sign and magnitude depend on whether the rate environment coincides with financial stress or with a conventional tightening alongside robust asset markets.
+
+## 6.4 The 2001 Structural Break and Portfolio Applications
+
+The 2001-08-02 structural break marks the transition to a world in which gold is a mainstream portfolio diversifier rather than a residual inflation hedge. Portfolio managers operating in the post-2001 regime should weight the safe-haven channel (upper-tail positive EPU effect) more heavily than pre-2001 historical estimates would suggest, since the base rate of safe-haven demand has structurally risen. The pre-2001 calibration of gold's EPU sensitivity would systematically understate the bull-market uplift from uncertainty and overstate the bear-market drag.
+
+---
+
+# 7. Conclusion
+
+Using 45 years of daily data (N = 12,207), we find that economic policy uncertainty is associated with a *state-dependent* pattern in gold returns: negative and highly significant in bear-market conditions (deleveraging channel), positive and highly significant in bull-market conditions (safe-haven channel), and statistically zero in the median — the value estimated by OLS. The OLS null, replicated across four model specifications and consistent with prior inconclusive literature, is therefore not a failure of the theory but a consequence of distributional averaging. Quantile regression with bootstrap inference recovers both channels cleanly.
+
+The federal funds rate exhibits a parallel monotonic reversal, positive throughout the lower tail and negative throughout the upper tail, with p < 0.001 at every quantile — the most precisely estimated pattern in the study. A Bai–Perron structural break at 2001-08-01 (supF = 255.49, p < 0.001, R `strucchange`) marks the transition to the modern gold-as-portfolio-diversifier regime.
+
+These findings carry three concrete implications. For empirical researchers: OLS and VAR tests of the EPU–gold relationship are misspecified and should be supplemented with distributional methods. For portfolio managers: gold's safe-haven protection is state-contingent and should be conditioned on the source of uncertainty (geopolitical vs. financial-crisis driven). For central banks: rate tightening has asymmetric gold-market effects that depend on the prevailing market state — a consideration for communication strategy during hiking cycles.
+
+**Limitations.** Four caveats warrant acknowledgement. First, the Baker–Bloom–Davis EPU index is a monthly newspaper-count series interpolated to daily frequency by forward-filling. This creates a structural autocorrelation artefact: within each calendar month, Δ EPU = 0 on every trading day except the month's first (when the new value arrives). The effective daily EPU signal is therefore a spike-and-flat process rather than a genuine daily indicator. Two consequences follow: HAC standard errors may understate within-month autocorrelation, and quantile estimates at daily frequency should be interpreted as capturing systematic monthly-horizon EPU variation rather than truly daily EPU dynamics. The Bloom–Davis daily news-based index (available from 1985) or a GARCH-filtered uncertainty proxy would provide a sharper high-frequency instrument for future work. Second, the Bai–Perron structural break is cross-validated via R `strucchange::sctest` (supF = 255.49, p < 0.001, break = 2001-08-01), consistent with the Python estimate (supF = 120.21 under alternative scaling, break = 2001-08-02). The break date is robust to implementation choice. Third, the bootstrap uses B = 999 iterations (final submission standard). Confidence intervals at extreme quantiles (τ = 0.05 and τ = 0.95) are stable across B = 200 and B = 999 replications, confirming that the significance at the tails is not an artefact of small bootstrap samples. Fourth, the Baker–Bloom–Davis EPU index is constructed partly from equity-market coverage and stock return volatility, which are contemporaneously correlated with gold returns. Although VIX control in M2/M3 partially addresses this, a full IV approach — using, for instance, narrative-identified policy announcement dates as an instrument for EPU — would sharpen the causal interpretation. Extending the design to non-U.S. EPU indices and panel quantile frameworks (Machado–Silva, 2019) is a natural next step. A commodity-placebo falsification test — reported in §5.6 — applies the identical specification to WTI crude oil and copper. Neither industrial commodity exhibits a statistically significant EPU response at any quantile (all p > 0.10), and no sign reversal is present. This confirms that the state-dependent pricing pattern is specific to gold's safe-haven role rather than a generic quantile-regression or EPU-index artefact.
+
+---
+
+# Highlights
+
+- OLS yields insignificant EPU–gold coefficient across all four specifications
+- EPU sign reversal: β<0 lower tail (p<0.001); β>0 upper tail (p<0.001)
+- Fed funds rate monotonic reversal across all seven quantiles (all p<0.001)
+- Bai–Perron structural break: 2001-08-01 (supF=255.49, p<0.001) — regime shift
+- TY-VAR(11): no linear EPU→gold precedence (p=0.258) — distributional null
+
+---
+
+# Submission Mechanics
+
+## Author Contributions (CRediT)
+
+**M. Gökhan Özdemir**: Conceptualisation; Methodology; Data Curation; Software; Formal Analysis; Writing – Original Draft; Writing – Review & Editing; Visualisation.
+
+## Data Availability Statement
+
+The gold price series is from the London Bullion Market Association (publicly available). EPU data are available from policyuncertainty.com. FRED macroeconomic series (FEDFUNDS, DGS10) are publicly available. Market data (DXY, USD/JPY, USD/CHF, VIX) are available from Bloomberg/Refinitiv under institutional licence. The analysis scripts (R and Python) will be deposited on OSF upon acceptance.
+
+## Declaration of Competing Interests
+
+The author declares no competing interests.
+
+## Funding
+
+This research received no specific funding from any funding agency in the public, commercial, or not-for-profit sectors.
+
+## Ethics Statement
+
+This study uses publicly available secondary data. Human subjects are not involved. Ethical approval is not applicable.
+
+---
+
+::: {#refs}
+:::

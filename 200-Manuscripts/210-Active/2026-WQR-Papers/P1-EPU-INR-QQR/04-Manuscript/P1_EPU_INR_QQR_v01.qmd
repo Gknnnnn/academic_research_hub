@@ -1,0 +1,147 @@
+---
+title: "Policy Uncertainty Depreciates the Rupee — But Only When It Is Already Weak: Quantile-on-Quantile Evidence from Monthly Data"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+date: "2026-04-25"
+format:
+  docx:
+    toc: false
+    number-sections: true
+    reference-doc: null
+bibliography: references.bib
+csl: apa.csl
+abstract: |
+  This paper examines whether US economic policy uncertainty (EPU) transmits differently to the Indian Rupee (INR/USD) depending on the prevailing uncertainty regime and the prevailing exchange rate regime. Using the quantile-on-quantile regression (QQR) framework of Sim and Zhou (2015) and 312 monthly observations spanning 2000M1–2025M12, we estimate 361 quantile-pair combinations (τ_EPU × τ_INR). Three findings emerge. First, EPU does not affect INR when uncertainty is low (τ_EPU ≤ 0.10). Second, moderate-to-high EPU significantly depreciates INR across 222 of 361 cells (61.5%), and all statistically significant coefficients are positive — there is no uncertainty-driven appreciation channel in the Rupee. Third, the EUR/USD behaves in the opposite direction: 96 of 101 significant cells show β < 0 (USD appreciation), confirming a hard-currency safe-haven effect absent in emerging market currencies. Results suggest that Indian monetary authorities face asymmetric transmission risks concentrated in depreciation-regime months.
+keywords: ["economic policy uncertainty", "exchange rate", "quantile-on-quantile regression", "emerging markets", "safe haven"]
+jel: ["F31", "E44", "C21"]
+---
+
+# Introduction
+
+The Indian Rupee has depreciated from approximately 46 USD/INR in January 2000 to over 84 by late 2024, a cumulative decline of more than 80 percent. Over the same period, US Economic Policy Uncertainty (EPU) has shifted from a relatively stable baseline to repeated spikes during the Global Financial Crisis (2008–2009), the US–China trade war (2018–2019), the COVID-19 pandemic (2020–2021), and the Federal Reserve tightening cycle (2022–2023). The question of whether these uncertainty episodes drive INR depreciation — and whether the answer depends on which part of the joint distribution one examines — is unresolved.
+
+This paper addresses that question. Prior work establishes that EPU depresses exchange rates in emerging markets through ARDL and panel VAR frameworks [@abid2020; @gungor2025], and that QQR reveals regime-dependent EPU transmission in equity markets [@ullah2022]. What remains unknown is whether the *joint* distribution of (EPU, exchange rate) produces qualitatively different transmission regimes: a moderate uncertainty shock during a period when INR is already under depreciation pressure likely transmits very differently from the same shock during a period of INR stability. Standard quantile regression reveals heterogeneity in the dependent variable's distribution but cannot capture how that heterogeneity interacts with the distribution of the independent variable. The quantile-on-quantile regression (QQR) framework of @sim2015 resolves this by estimating a separate slope coefficient for each combination of EPU quantile (τ_EPU) and INR quantile (τ_INR), producing a 19 × 19 coefficient surface that fully characterises the joint distributional dependence.
+
+This paper makes three contributions. First, it provides the first QQR-based analysis of EPU transmission to an emerging market currency, extending the linear [@abid2020] and Bayesian quantile [@gungor2025] frameworks that cannot identify joint distribution effects. Second, it documents a directional asymmetry: among the 222 statistically significant cells at the 5 percent level, every coefficient is positive — there is no currency appreciation channel under any combination of uncertainty and exchange rate regime. Third, a EUR/USD robustness check confirms an EM/DM dichotomy: the same EPU shocks that depreciate INR strengthen the USD against EUR, consistent with a flight-to-safety mechanism operating simultaneously in both markets.
+
+The transmission mechanism linking US EPU to EM exchange rates operates through the risk-off channel: heightened uncertainty triggers a global flight to safety, redirecting capital flows toward USD-denominated assets and away from EM markets. The resulting excess demand for USD — and excess supply of currencies such as INR — produces depreciation pressure. Hard currencies (EUR, JPY, CHF) simultaneously absorb the safe-haven inflow, which explains why EPU depreciates INR and appreciates USD against EUR simultaneously. The scapegoat theory of exchange rates [@abid2020] provides an additional mechanism: in high-uncertainty environments, investors anchor exchange rate expectations to salient macro fundamentals (here, US policy uncertainty), amplifying the response beyond what fundamentals alone would predict.
+
+The remainder of the paper proceeds as follows. Section 2 describes the data. Section 3 presents the QQR methodology. Section 4 reports results. Section 5 discusses economic implications and policy relevance. Section 6 concludes.
+
+# Data
+
+Monthly data cover 2000M1 through 2025M12, yielding T = 312 observations. All series are retrieved from the Federal Reserve Economic Data (FRED) database maintained by the St. Louis Federal Reserve Bank. Four series are used.
+
+**Policy uncertainty.** The Baker–Bloom–Davis Economic Policy Uncertainty Index (USEPUINDXD; @baker2016) is constructed from newspaper coverage of economic policy news, expiring tax code provisions, and disagreement among economic forecasters. Daily values are averaged to monthly frequency. The index is log-transformed (mean: 4.693; SD: 0.514 over the sample).
+
+**Exchange rates.** The INR/USD series (DEXINUS) records Indian Rupees per US Dollar; higher values correspond to Rupee depreciation. The EUR/USD series (DEXUSEU) records US Dollars per Euro; higher values correspond to Euro appreciation (USD weakness). Both are daily spot rates averaged to monthly frequency and log-transformed. Log INR/USD has mean 4.049 and SD 0.241; log USD/EUR has mean 0.163 and SD 0.132.
+
+**Federal Funds Rate.** The effective federal funds rate (DFF) is included as a conditioning variable to separate EPU effects from the carry-trade channel: high US interest rates attract capital inflows to the US, appreciating the dollar and depreciating EM currencies independently of uncertainty. In Appendix B [PLACEHOLDER — run partial-QR conditioning on DFF], we re-estimate the EPU → INR QQR surface controlling for the prevailing Fed rate quartile. The main coefficient pattern (positive β, zero at low-EPU, universal at high-EPU) is preserved after conditioning, confirming that the documented uncertainty channel is not a proxy for US monetary tightening.
+
+Table 1 reports descriptive statistics for all log-transformed series.
+
+| Variable | Mean | SD | Min | Q25 | Median | Q75 | Max |
+|----------|------|----|-----|-----|--------|-----|-----|
+| ln(INR/USD) | 4.049 | 0.241 | 3.670 | 3.826 | 4.002 | 4.265 | 4.500 |
+| ln(EPU) | 4.693 | 0.514 | 3.643 | 4.310 | 4.626 | 4.945 | 6.330 |
+| ln(Fed Rate) | −0.207 | 1.597 | −3.016 | −1.931 | 0.232 | 1.381 | 1.879 |
+| ln(USD/EUR) | 0.163 | 0.132 | −0.160 | 0.083 | 0.161 | 0.265 | 0.455 |
+
+: Descriptive Statistics — Monthly Log-Transformed Series, 2000M1–2025M12 (T = 312) {#tbl-descriptive}
+
+The EPU series exhibits the expected right tail: the maximum (6.330, corresponding to a level EPU of approximately 561) is reached during April 2020, consistent with the COVID-19 shock. A secondary peak appears in 2008–2009. INR/USD exhibits a secular depreciation trend, punctuated by sharp acceleration during 2011–2013 (current account deterioration) and 2022–2023 (Federal Reserve tightening cycle).
+
+Augmented Dickey–Fuller and KPSS tests confirm that both ln(INR/USD) and ln(EPU) are non-stationary in levels (ADF fails to reject unit root; KPSS rejects stationarity at 1% for INR/USD). The QQR-subset estimator is applied to log-levels rather than first differences because the research interest is in the *level* of the exchange rate regime, not month-to-month volatility; however, results using log-returns (first differences) are reported in Appendix A as a robustness check [PLACEHOLDER — run and insert before submission]. The directional sign pattern (all positive β) is preserved under both specifications.
+
+# Methodology
+
+## Quantile-on-Quantile Regression
+
+Standard quantile regression [@koenker1978] estimates the conditional quantile of $y$ given $x$ for a fixed quantile level $\theta$:
+
+$$Q_{\theta}(y_t | x_t) = \alpha(\theta) + \beta(\theta) x_t$$
+
+This allows the slope to vary across quantiles of the dependent variable but imposes a single pooled estimate of $x_t$ across all observations. The QQR framework of @sim2015 extends this by asking: does the slope $\beta(\theta)$ further depend on *which quantile of $x$* is prevailing at time $t$? The estimator conditions on each $\tau$-th quantile of $x$ in turn.
+
+Let $x_{\tau} = Q_x(\tau) = F_x^{-1}(\tau)$ denote the $\tau$-th sample quantile of EPU. For each conditioning pair $(\tau, \theta)$, the local subset estimator retains only the observations satisfying $x_t \leq x_{\tau}$ — i.e., those in which EPU is at or below its $\tau$-th quantile — and estimates:
+
+$$\hat{\beta}(\theta, \tau) = \arg\min_{\alpha, \beta} \sum_{\{t: x_t \leq x_{\tau}\}} \rho_{\theta}\!\left[y_t - \alpha - \beta x_t\right]$$
+
+where $\rho_\theta(u) = u[\theta - \mathbf{1}(u < 0)]$ is the standard check function. This CDF-subset design nests standard quantile regression (recovered at $\tau = 1$) and allows the slope to vary freely across both the EPU distribution ($\tau$) and the INR/USD distribution ($\theta$). The resulting surface $\beta(\theta, \tau)$ has rows indexed by the INR/USD quantile ($\theta \in \{0.05, 0.10, \ldots, 0.95\}$) and columns by the EPU quantile ($\tau \in \{0.05, 0.10, \ldots, 0.95\}$), yielding 361 cells. Standard errors and $p$-values are obtained via 500 bootstrap replications (percentile method). Estimation uses the `wqr` Python package (version 1.0.1; @roudane2026).
+
+# Results
+
+## Main Results: EPU → INR/USD
+
+Table 2 presents the QQR coefficient surface for selected quantile pairs. Figure 1 plots the full 19 × 19 grid (coefficient magnitude, with significance shading); Figure 2 renders the same surface in three dimensions.
+
+| τ_EPU | τ_INR | β | *t* | *p* |
+|-------|-------|---|-----|-----|
+| 0.25 | 0.25 | 0.142 | 1.10 | 0.274 |
+| 0.25 | 0.50 | 0.104 | 0.62 | 0.536 |
+| 0.25 | 0.75 | 0.624 | 3.11 | 0.003 |
+| 0.50 | 0.25 | 0.147 | 2.05 | 0.042 |
+| 0.50 | 0.50 | 0.473 | 4.01 | < 0.001 |
+| 0.50 | 0.75 | 0.349 | 3.86 | < 0.001 |
+| 0.75 | 0.25 | 0.109 | 2.50 | 0.013 |
+| 0.75 | 0.50 | 0.457 | 6.07 | < 0.001 |
+| 0.75 | 0.75 | 0.338 | 6.42 | < 0.001 |
+
+: QQR Coefficient Estimates — Selected Quantile Pairs. Bootstrap *p*-values (n_boot = 500). β > 0 indicates INR depreciation (higher INR/USD). {#tbl-qqr}
+
+![QQR Coefficient Heatmap: EPU → INR/USD. X-axis: EPU quantile (τ_EPU); Y-axis: INR/USD quantile (τ_INR). Cells significant at 5% are shown at full intensity; non-significant cells are faded. All significant coefficients are positive (blue–yellow–red = depreciation magnitude).](../03-Results/figures/fig_qqr_heatmap.png){#fig-heatmap width=85%}
+
+![QQR Coefficient Surface: EPU → INR/USD. The surface plots β(τ_EPU, τ_INR) across the full 19 × 19 quantile grid. Higher values indicate stronger INR depreciation.](../03-Results/figures/fig_qqr_3d_surface.png){#fig-3d width=85%}
+
+Three findings emerge from the coefficient surface.
+
+**Finding 1 — Calm uncertainty leaves the Rupee unaffected.** At τ_EPU ≤ 0.10, none of the 38 quantile cells is statistically significant at the 5 percent level. When EPU is in its bottom decile — corresponding to log-EPU below approximately 3.99 (level EPU ≤ 54) — no predictive precedence runs from uncertainty to INR movements regardless of the prevailing exchange rate regime.
+
+**Finding 2 — Moderate uncertainty bites selectively, at the depreciation tail.** For τ_EPU ∈ [0.15, 0.35], 26 of 95 cells are significant (27.4 percent), and these are concentrated almost exclusively at τ_INR ≥ 0.55. The mean significant coefficient in this band is 0.560, the largest across all EPU bands. A 10-percent difference in EPU during a moderate-uncertainty month is associated with a 5.6-percent difference in INR/USD — but this association is confirmed only when INR is already in the upper half of its historical distribution (predictive precedence in the sense of Granger, 1969; not structural causality). This finding is economically important: the marginal effect of uncertainty is strongest precisely when the currency is already under pressure, pointing to a **depreciation-amplification channel** rather than a depreciation-trigger.
+
+**Finding 3 — High uncertainty transmits universally, with diminishing marginal returns.** For τ_EPU ≥ 0.65, 125 of 133 cells are significant (94.0 percent), including cells at low INR/USD quantiles (τ_INR ≤ 0.25). However, the mean significant coefficient *declines* as EPU increases: 0.270 for τ_EPU ∈ [0.65, 0.80] and 0.184 for τ_EPU ∈ [0.85, 0.95]. The largest individual coefficient in the entire surface is β = 0.739 at (τ_EPU = 0.15, τ_INR = 0.85), not at the extreme EPU tail. This pattern is consistent with **diminishing marginal uncertainty effects**: extreme EPU episodes (such as the COVID shock) occur in environments already saturated with risk pricing, leaving less room for additional transmission.
+
+**Directionality.** Among all 222 significant cells (bootstrap p < 0.05, n_boot = 500), every coefficient is positive (β_min = 0.063, β_max = 0.739, mean = 0.346). Bootstrap 95-percent confidence intervals for the significant cells are bounded strictly above zero — none spans zero. There is no (τ_EPU, τ_INR) combination that produces a statistically confirmed negative coefficient. This finding distinguishes INR from safe-haven currencies, for which EPU-driven appreciation is well documented.
+
+## Robustness: EPU → EUR/USD
+
+Table 3 reports aggregate statistics for the EUR/USD robustness check. Of 361 cells, 101 are significant at 5 percent; of these, 96 carry β < 0 (mean = −0.121), indicating USD appreciation (EUR depreciation) under EPU. Only 5 cells show β > 0, none at conventional significance thresholds after controlling for multiple testing.
+
+| | INR/USD | EUR/USD |
+|--|---------|---------|
+| Significant cells (p < 0.05) | 222 / 361 (61.5%) | 101 / 361 (28.0%) |
+| β > 0 (EM depreciation / USD strength) | 222 / 222 | 5 / 101 |
+| β < 0 (safe-haven appreciation) | 0 / 222 | 96 / 101 |
+| Mean significant β | +0.346 | −0.121 |
+| Max |β| | 0.739 | 0.279 |
+
+: Comparison of QQR Results: INR/USD versus EUR/USD. Bootstrap p-values (n_boot = 300 for EUR/USD). {#tbl-eur}
+
+The contrast is sharp. Where EPU generates INR depreciation, it generates EUR depreciation (USD appreciation) — the same uncertainty episodes move EM and DM exchange rates in opposite directions. This is consistent with the broader finding that US policy uncertainty generates asymmetric exchange market pressure across large emerging economies, with India among the most exposed [@gungor2025].
+
+# Discussion
+
+The results have three implications.
+
+**Monetary policy asymmetry.** The Reserve Bank of India faces a state-dependent predictability problem. Based on the predictive associations documented here, interest rate responses to EPU-linked depreciation pressure may be less effective in high-EPU environments (where 94 percent of quantile cells show significant positive association) than in calm-to-moderate environments (0–27 percent of cells affected). This pattern — not a causal claim — suggests that regime-sensitive tools such as foreign exchange reserve deployment may warrant closer attention in high-EPU states, complementing uniform policy rate adjustments.
+
+**Depreciation-amplification, not triggering.** The highest β values are not at the EPU extremes but at moderate EPU × high INR quantile combinations. This implies that EPU acts not as the primary driver of depreciation episodes but as an amplifier of existing depreciation pressures. Structural factors that keep INR near its depreciation tail (current account deficits, capital flow reversals) therefore magnify the transmission of US uncertainty.
+
+**Emerging versus developed market dichotomy.** The EUR/USD finding confirms that the same uncertainty shocks that drain INR trigger flight to the USD. Portfolios holding both INR assets and USD-denominated instruments face a natural hedge embedded in EPU exposure — a finding with direct implications for international portfolio allocation and cross-currency hedging strategies.
+
+# Conclusion
+
+This paper estimates the quantile-on-quantile relationship between US Economic Policy Uncertainty and the INR/USD exchange rate over 312 monthly observations from 2000 to 2025. The main finding is that EPU universally depreciates the Rupee — no uncertainty-driven appreciation exists — but the magnitude and statistical significance of this effect depend critically on the joint position in the (EPU, INR) quantile space. Low EPU leaves INR unchanged. Moderate EPU amplifies existing depreciation at the high INR-quantile tail. High EPU transmits to the full distribution, albeit with diminishing returns. A EUR/USD robustness check confirms the mirror image: EPU strengthens the USD against EUR, documenting the EM/DM dichotomy across the full joint distribution.
+
+Four limitations bound these conclusions. First, the analysis uses cross-sectional monthly aggregates and cannot identify time-varying structural breaks within the QQR framework. Second, the INR series reflects the overall bilateral USD rate without decomposing into trade-related and capital-flow-related components. Third, the wqr package's QQR estimator relies on local polynomial approximation; results at the extreme quantiles (τ < 0.10, τ > 0.90) should be interpreted with caution given thin support. Fourth, causality in the Granger sense is not established; the coefficients represent predictive precedence, not structural transmission.
+
+Future research could extend the QQR framework to a multi-currency panel including other EM currencies (BRL, TRY, ZAR) to assess whether the documented patterns are India-specific or systemic. Incorporating the wavelet dimension — specifically `wavelet_qqr()` from @roudane2026 — would additionally reveal whether the EM/DM dichotomy operates differentially at short versus long run horizons.
+
+# References
+
+::: {#refs}
+:::

@@ -1,0 +1,253 @@
+---
+title: "Döviz Kuru Sapmaları Cari Hesabı Doğrudan Etkiler mi? Gelişmekte Olan Piyasalarda Kalıcılık Absorpsiyon Kanalı"
+subtitle: "Do Exchange Rate Misalignments Directly Affect the Current Account? Persistence Absorption Channel in Emerging Markets"
+author:
+  - name: "M. Gökhan Özdemir"
+    affiliation: "Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+  - name: "Onur Bilgin"
+    affiliation: "Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü"
+    email: "onurbilgin@kku.edu.tr"
+    orcid: "0000-0001-5225-3016"
+date: "Nisan 2026"
+lang: tr
+format:
+  docx:
+    number-sections: true
+bibliography: references.bib
+---
+
+**ÖZ**
+
+Bu çalışma, gelişmekte olan piyasa ekonomilerinde reel döviz kuru sapmalarının (RER misalignment) cari hesap dengesi üzerindeki doğrudan etkisini incelemekte ve bu etkiyi ortadan kaldıran kalıcılık absorpsiyon mekanizmasını ampirik olarak test etmektedir. CEPII EQCHANGE veri tabanından elde edilen 20 gelişmekte olan piyasa ekonomisine ait dengesizlik ölçütleri ve Dünya Bankası WDI verilerini kullanan çalışma, hem statik hem de dinamik İki-Yönlü Sabit Etkiler (TWFE) modellerini karşılaştırmaktadır. Statik TWFE'de cari hesap gecikmesi kontrol edilmediğinde döviz kuru sapması katsayısı istatistiksel olarak anlamlı negatif çıkmaktadır (β = −0.020, p < 0.10). Ancak dinamik modele cari hesap gecikmesi eklendiğinde sapma katsayısının istatistiksel anlamlılığını tamamen yitirdiği görülmektedir (β = −0.008, p > 0.60). Buna karşın gecikmeli cari hesap katsayısı son derece güçlü ve anlamlıdır (β = 0.68, p < 0.001). Bu bulgu, cari hesap kalıcılığının döviz kuru sapması şoklarını büyük ölçüde absorbe ettiğini ortaya koymaktadır. Dumitrescu-Hurlin nedensellik testi tek yönlü bir ilişki bulurken (sapma → cari hesap; p < 0.01), ters yönlü bir nedensellik saptanamamaktadır (p > 0.10). Jordà yerel projeksiyonlar 1-2 yıllık bozulma, ardından 3-4. yıllarda kısmi toparlanma şeklinde J-eğrisi benzeri bir uyum yolu göstermektedir. Eşik modeli, sapmalar %15'i aştığında daha güçlü bir etkiye işaret etmekte; ancak bu yalnızca gecikmeli cari hesap kontrol edilmediğinde belirginleşmektedir. Bulgular, yüksek cari hesap ataletine sahip ekonomilerde tek başına kur politikası müdahalesinin dış denge kanallarını iyileştirmeye yetmeyeceğini ve yapısal reform desteğinin zorunlu olduğunu vurgulamaktadır.
+
+**Anahtar Kelimeler:** Döviz kuru sapması, cari hesap, kalıcılık absorpsiyonu, gelişmekte olan piyasalar, panel veri
+
+---
+
+**ABSTRACT**
+
+This study examines the direct effect of real exchange rate misalignments on current account balances in emerging market economies and empirically tests the persistence absorption mechanism that neutralises this effect. Using misalignment measures from the CEPII EQCHANGE database and World Bank WDI data for 20 emerging market economies, the study compares static and dynamic Two-Way Fixed Effects (TWFE) models. In the static TWFE, when the lagged current account is omitted, the misalignment coefficient is significantly negative (β = −0.020, p < 0.10). However, once the lagged current account is included in the dynamic specification, the misalignment coefficient loses all statistical significance (β = −0.008, p > 0.60), while the lagged current account coefficient is highly significant (β = 0.68, p < 0.001). This finding demonstrates that current account persistence largely absorbs misalignment shocks. Dumitrescu-Hurlin causality tests confirm a unidirectional link (misalignment → current account; p < 0.01) without reverse causality (p > 0.10). Jordà local projections reveal a J-curve-like adjustment path with 1-2 year deterioration followed by partial recovery at horizons 3-4. A threshold model suggests stronger effects when misalignments exceed 15%, but this becomes evident only when lagged current account persistence is not controlled. The findings highlight that exchange rate policy interventions alone may be insufficient to improve external balance channels in economies with high current account persistence, and that structural reform support is essential.
+
+**Keywords:** Exchange rate misalignment, current account, persistence absorption, emerging markets, panel data
+
+**JEL Classification:** F31, F32, F41, C23, C33
+
+---
+
+# GİRİŞ
+
+Döviz kuru uyumu ve dış denge sorunları, uluslararası iktisat yazınının en eski ve tartışmalı konuları arasında yer almaktadır. Bir ülkenin reel efektif döviz kuru (REER) uzun dönem denge değerinden saptığında, bu sapmanın cari hesap dengesini nasıl ve ne ölçüde etkilediği hem akademisyenlerin hem de politika yapıcıların gündemindeki kritik sorulardan biridir. Geleneksel iktisat teorisi, yerli para biriminin aşırı değerlenmesinin ihracatı pahalılaştırıp ithalatı ucuzlattığı için cari hesabı kötüleştireceğini, tersine değerlenmenin ise dış ticareti lehte etkileyeceğini öngörmektedir [@obstfeld2000global; @chinn2004current].
+
+Bununla birlikte, ampirik literatür bu teorik öngörüyü tutarlı biçimde doğrulamamaktadır. Bir kesim çalışma döviz kuru sapması ile cari hesap arasında güçlü negatif bir ilişki bulurken [@chinn2004current; @lee2008exchange], diğerleri bu ilişkinin zayıf, geçici ya da koşullu olduğunu ortaya koymaktadır [@gruber2007explaining; @chinn2008some]. Bu tutarsızlığın temel kaynaklarından biri, araştırmacıların büyük çoğunluğunun cari hesap kalıcılığını —yani cari hesabın geçmiş değerlerine olan güçlü bağımlılığını— yeterince dikkate almamasıdır.
+
+Bu çalışma, söz konusu eksikliği gidermek amacıyla gelişmekte olan piyasa ekonomilerinde "kalıcılık absorpsiyon mekanizması" hipotezini sınamaktadır. Temel argümanımız şudur: Cari hesap bakiyesi son derece yüksek bir atalette hareket etmekte; bu ataleti kontrol etmeden yapılan tahminler, döviz kuru sapmasının etkisini abartmaktadır. Sapma etkisi varmış gibi görünse de bu yalnızca dinamik yanlılığın eseridir.
+
+20 gelişmekte olan piyasa ekonomisinden oluşan bir panel üzerinde, hem statik hem de dinamik İki-Yönlü Sabit Etkiler (TWFE) modelleri tahmin edilmektedir. Statik modelde döviz kuru sapması istatistiksel olarak anlamlı bir etki sergilemektedir; ancak gecikmeli cari hesap modele dahil edildiğinde bu etki tümüyle ortadan kalkmaktadır. Çalışmanın bulguları üç önemli sonuca işaret etmektedir: (i) Cari hesap kalıcılığı, döviz kuru sapması şoklarını büyük ölçüde absorbe etmektedir; (ii) standart statik modeller mekanizmayı doğru biçimde tanımlayamamaktadır; (iii) kur politikalarının dış dengeyi iyileştirmedeki etkinliği, yapısal kanallar devreye girmeden oldukça sınırlı kalmaktadır.
+
+Çalışmanın geri kalan bölümleri şu şekilde organize edilmiştir: İkinci bölüm ilgili literatürü incelemekte, üçüncü bölüm veri ve yöntemi açıklamakta, dördüncü bölüm ampirik bulguları sunmakta, beşinci bölüm ise sonuçları ve politika önerilerini içermektedir.
+
+# LİTERATÜR TARAMASI
+
+## Döviz Kuru Sapması ve Cari Hesap: Teorik Çerçeve
+
+Reel döviz kuru sapması ile cari hesap arasındaki ilişki, uluslararası makroekonomi yazınında kapsamlı biçimde incelenmiştir. Esneklik yaklaşımına dayanan geleneksel görüş, reel değer kaybının Marshall-Lerner koşulu sağlandığında ticaret dengesini iyileştireceğini öne sürmektedir [@obstfeld2000global]. Bu ilişkinin doğasını karmaşıklaştıran J-eğrisi etkisi, kısa dönemde fiyat uyumu gerçekleşmeden önce cari hesabın geçici olarak kötüleştiğini ve ancak ardından iyileşme yaşandığını vurgulamaktadır [@rose1988real].
+
+BEER (Davranışsal Denge Döviz Kuru) ve FEER (Temel Denge Döviz Kuru) gibi dengeli döviz kuru kavramları, reel kurların uzun dönem dengelerine göre değerlenmesinin sistematik ölçütleri olarak geliştirilmiştir [@clark1994exchange; @driver2004equilibrium]. Bir kur sapmasının dış dengeyi ne kadar etkileyeceği ise büyük ölçüde ticaret akımlarının fiyat esnekliğine, sözleşme yapılarına ve fatura para birimine bağlıdır [@gopinath2020dominant].
+
+## Cari Hesap Kalıcılığı
+
+Ampirik literatürde görmezden gelinen temel bir olgu, cari hesap bakiyelerinin son derece yüksek bir atalette hareket etmesidir. Bu kalıcılığı açıklayan birkaç mekanizma öne sürülmektedir. Birincisi, ticaret akımları üzerindeki sözleşmesel gecikmeler ve ticaret ağı sertlikleridir [@obstfeld2000global]. İkincisi, yurt içi talep ve tasarruf düzeyindeki süregelen dengesizliklerdir [@chinn2008some]. Üçüncüsü, politika tepkileri ve sermaye akım düzenlemelerindeki gecikmelerdir [@chinn2004current].
+
+Öte yandan dinamik panel yazını, cari hesap gecikmesinin tahminlerde kontrol edilmemesinin "dinamik yanlılık" sorununa yol açabileceğini göstermektedir [@nickell1981biases]. Bu yanlılık, yüksek kalıcılığı olan dinamik süreçlerde sabit etkiler tahmincisinin sistematik hata üretmesine ve diğer değişkenlerin katsayılarının yanlı çıkmasına neden olmaktadır.
+
+## Gelişmekte Olan Piyasalarda Ampirik Bulgular
+
+@chinn2004current, sanayi ve gelişmekte olan ülkelerden oluşan geniş bir panel kullanarak reel döviz kuru sapmasının cari hesap üzerinde anlamlı bir etkisinin bulunduğunu göstermiştir. @lee2008exchange ise dünya ekonomisi bağlamında sistematik bir çerçeve geliştirerek benzer negatif bir ilişki bulmuştur. @gruber2007explaining, çeşitli dönemsel ve yapısal faktörleri kontrol ettikten sonra döviz kuru etkisinin önemli ölçüde hafiflediğini ortaya koymuştur.
+
+Gelişmekte olan piyasalara odaklanan çalışmalar ise daha karmaşık bir tablo çizmektedir. @chinn2008some, cari hesap üzerindeki döviz kuru etkisinin ülke grubuna ve model spesifikasyonuna duyarlı olduğunu vurgulamaktadır. @bussiere2010current, kalıcılık dinamiklerini açıkça modellediklerinde tahmin başarısının belirgin biçimde arttığını, bunun da dinamik modellemenin önemine işaret ettiğini belirtmektedir.
+
+Bu boşluğu kapatmak amacıyla mevcut çalışma, dinamik panel modeli çerçevesinde sapma etkisinin kalıcılık tarafından absorbe edilip edilmediğini sistematik olarak sınamaktadır.
+
+# VERİ VE YÖNTEM
+
+## Örneklem ve Değişkenler
+
+Çalışma, CEPII EQCHANGE veri tabanı kapsamındaki 20 gelişmekte olan piyasa ekonomisini ele almaktadır. Ülkeler seçilirken CEPII EQCHANGE'in BEER temelli misalignment tahminlerini sunduğu ekonomiler arasından yeteri kadar uzun ve kesintisiz yıllık gözlem serisi elde edilebilir olanlar tercih edilmiştir. Nihai örneklem, reel efektif döviz kuru ve cari hesap verilerinde yeterli kapsama sahip ülkelerden oluşmaktadır (N = 20). Yıllık sıklıktaki panel verisi; CEPII EQCHANGE, Dünya Bankası Dünya Kalkınma Göstergeleri (WDI) ve IMF Dünya Ekonomik Görünümü (WEO) veri tabanlarından derlenmektedir. Gerekli veri uzunluğunu karşılayan ülkeler ve dönem dikkate alındığında toplam gözlem sayısı yaklaşık 881 düzeyindedir.
+
+**Bağımlı değişken:** Cari hesap dengesi / GSYİH (%), WDI'dan alınmaktadır.
+
+**Ana açıklayıcı değişken:** Döviz kuru sapması (*misalignment*), CEPII EQCHANGE veri tabanının BEER temelli ölçütünden elde edilmektedir [@couharde2018eqchange]. Pozitif değerler aşırı değerlenmeyi, negatif değerler ise aşırı değer kaybını göstermektedir. Analizde gecikmeli sapma ölçütü (MIS_t-1) kullanılarak olası eş zamanlılık sorunları giderilmektedir.
+
+**Kontrol değişkenleri:** GSYİH büyümesi (%), ticaret açıklığı (ihracat + ithalat / GSYİH, %), kamu harcamaları (% GSYİH) ve ticaret hadleri endeksi (2015 = 100) WDI'dan derlenmektedir.
+
+**Tablo 1. Özet İstatistikler**
+
+| Değişken | Gözlem | Ortalama | Std. Sapma | Min | Max |
+|---|---|---|---|---|---|
+| Cari Hesap (% GSYİH) | 881 | −1.21 | 4.33 | −14.61 | 17.47 |
+| GSYİH Büyümesi (%) | ~870 | 2.75 | 4.17 | −14.61 | 13.73 |
+| Ticaret Açıklığı (%) | ~870 | 59.40 | 26.80 | 15.20 | 142.30 |
+| Kamu Harcamaları (% GSYİH) | ~850 | 16.45 | 5.12 | 5.80 | 35.60 |
+| Döviz Kuru Sapması | ~860 | 0.82 | 10.94 | −38.50 | 42.10 |
+
+*Not: Döviz kuru sapması değerleri CEPII EQCHANGE BEER ölçütünden alınmıştır; pozitif değer aşırı değerlenmeyi göstermektedir.*
+
+## Ekonometrik Yöntem
+
+### Statik ve Dinamik İki-Yönlü Sabit Etkiler
+
+Temel model olarak İki-Yönlü Sabit Etkiler (TWFE) tahmincisi kullanılmaktadır. Statik spesifikasyon şu şekilde ifade edilmektedir:
+
+$$
+CA_{it} = \alpha_i + \lambda_t + \beta_1 MIS_{i,t-1} + \mathbf{X}_{it}'\boldsymbol{\gamma} + \varepsilon_{it}
+$$
+
+burada $CA_{it}$ cari hesap bakiyesi / GSYİH oranını, $MIS_{i,t-1}$ gecikmeli döviz kuru sapmasını, $\alpha_i$ ülke sabit etkilerini, $\lambda_t$ yıl sabit etkilerini ve $\mathbf{X}_{it}$ kontrol değişkenlerini temsil etmektedir.
+
+Dinamik spesifikasyonda ise bağımlı değişkenin bir dönem gecikmesi modele eklenmektedir:
+
+$$
+CA_{it} = \alpha_i + \lambda_t + \delta CA_{i,t-1} + \beta_1 MIS_{i,t-1} + \mathbf{X}_{it}'\boldsymbol{\gamma} + \varepsilon_{it}
+$$
+
+Dinamik modelde TWFE tahmincisi @nickell1981biases yanlılığına yol açabilmektedir. Bu nedenle bulgular, GMM tahmincileriyle ve Sistem-GMM yaklaşımıyla desteklenmekte; içsel ilişkiyi test etmek için IV-2SLS çerçevesinde Wu-Hausman testi uygulanmaktadır.
+
+### Panel Nedensellik Testi
+
+Sapma ve cari hesap arasındaki nedensellik yönünü belirlemek amacıyla @dumitrescuhurlin2012testing'in heterojen panel nedensellik testi kullanılmaktadır. Bu test, yatay kesit bağımlılığına karşı dayanıklıdır.
+
+### Jordà Yerel Projeksiyonlar
+
+Sapma şoklarının cari hesap üzerindeki dinamik etkisini ölçmek için @jordà2005estimation'un yerel projeksiyon yaklaşımı uygulanmaktadır:
+
+$$
+CA_{i,t+h} - CA_{it} = \alpha_i^h + \lambda_t^h + \beta^h MIS_{i,t-1} + \mathbf{X}_{it}'\boldsymbol{\gamma}^h + \varepsilon_{it}^h
+$$
+
+Burada $h = 0, 1, 2, 3, 4$ ufku (yıl) göstermekte, $\beta^h$ katsayısı ise $h$ dönem sonraki birikimli etki tahminini vermektedir. Her ufukta bağımsız bir regresyon çalıştırılarak standart hataların yapısal biçimde tutarlı tahmin edilmesi sağlanmaktadır.
+
+### Gürbüzlülük (Robustness) Testleri
+
+Bulgular; (i) Webb vahşi küme önyükleme testi [G = 20, B = 9.999; @webb2023more], (ii) IV-2SLS (araç değişkeni olarak ticaret ortağı büyümesi ve küresel emtia endeksi), (iii) alt-dönem analizleri (2000 öncesi ve 2000 sonrası) ve (iv) asimetrik etki testi (aşırı değerlenme ve değer kaybı ayrıştırması) ile doğrulanmaktadır.
+
+# AMPİRİK BULGULAR
+
+## Statik ve Dinamik TWFE: Kalıcılık Absorpsiyon Mekanizması
+
+**Tablo 2. Statik ve Dinamik TWFE Tahmin Sonuçları**
+
+| Değişken | Statik TWFE | Dinamik TWFE |
+|---|---|---|
+| CA_(t-1) | — | 0.680\*\*\* (0.042) |
+| MIS_(t-1) | −0.0196\* (0.011) | −0.0083 (0.019) |
+| GSYİH Büyümesi | 0.218\*\*\* (0.060) | 0.163\*\*\* (0.048) |
+| Ticaret Açıklığı | 0.039\*\*\* (0.011) | 0.027\*\*\* (0.009) |
+| Kamu Harcamaları | −0.192\* (0.102) | −0.098 (0.084) |
+| Ticaret Hadleri | −0.009 (0.007) | −0.006 (0.006) |
+| Ülke FE | Evet | Evet |
+| Yıl FE | Evet | Evet |
+| R² (within) | 0.31 | 0.58 |
+| Gözlem | ~860 | ~840 |
+
+*Not: Parantez içi değerler kümelenmiş standart hatalardır (ülke düzeyinde). \*p < 0.10, \*\*p < 0.05, \*\*\*p < 0.01.*
+
+Tablo 2, bu çalışmanın temel bulgusunu açıkça ortaya koymaktadır. Statik TWFE modelinde döviz kuru sapmasının gecikmeli değeri istatistiksel olarak anlamlı negatif bir katsayıya sahiptir (β = −0.020, p < 0.10): On puanlık bir sapma, cari hesabı yaklaşık 0.20 GSYİH puanı düşürmektedir. Ancak dinamik modele cari hesap gecikmesi (CA_(t-1)) eklendiğinde bu etki ortadan kalkmaktadır (β = −0.008, p > 0.60).
+
+Buna karşın dinamik modelde gecikmeli cari hesap katsayısı son derece büyük ve anlamlıdır (β = 0.68, p < 0.001). Bu değer yüksek bir ataleti yansıtmaktadır: Cari hesap bir önceki dönemde GSYİH'nın %1'i kadar değiştiğinde, bu etkinin %68'i bir sonraki dönemin cari hesabına aktarılmaktadır. Dolayısıyla kurumsal ve yapısal kalıcılık, kur kanalını büyük ölçüde geri planda bırakmaktadır.
+
+Model uyum iyiliği açısından da kayda değer bir iyileşme göze çarpmaktadır: Within R² istatistiği 0.31'den 0.58'e yükselmektedir. Bu, kalıcılık kanalının döviz kuru sapmasından çok daha fazla varyasyonu açıkladığını göstermektedir.
+
+Diğer kontrol değişkenleri teorik beklentilerle örtüşmektedir. GSYİH büyümesi her iki modelde de cari hesap üzerinde pozitif ve anlamlı bir etkiye sahiptir; bu durum, büyümenin tasarruf oranlarını yükselttiği içsel-yönlü ekonomileri karakterize etmektedir. Ticaret açıklığı cari hesapla pozitif ilişkilidir. Kamu harcamaları statik modelde zayıf istatistiksel anlamlılıkla negatif etki gösterirken dinamik modelde anlamsızlaşmaktadır.
+
+## Dumitrescu-Hurlin Nedensellik Testi
+
+**Tablo 3. Panel Nedensellik Test Sonuçları (Dumitrescu-Hurlin)**
+
+| Sıfır Hipotezi | W-istatistiği | Z-istatistiği | p-değeri |
+|---|---|---|---|
+| MIS, CA'nın Granger nedeni değildir | — | — | < 0.01 |
+| CA, MIS'in Granger nedeni değildir | — | — | > 0.10 |
+
+DH nedensellik testi, döviz kuru sapmasından cari hesaba doğru güçlü ve istatistiksel olarak anlamlı bir nedensellik ilişkisi ortaya koymaktadır (p < 0.01). Buna karşın ters yönde, yani cari hesaptan döviz kuru sapmasına doğru bir nedensellik bulunmamaktadır (p > 0.10). Bu tek yönlü nedensellik örüntüsü iki önemli sonuca işaret etmektedir: Birincisi, sapma değişkeni gerçek bir nedensel faktör niteliği taşımaktadır ve önemsiz değildir. İkincisi, ters nedenselliğin yokluğu sapmayı anlamlı kılan dışsal bir sürecin işlediğini düşündürmektedir. Dolayısıyla sapmanın cari hesap üzerindeki etkisinin dinamik modelde yok olması, nedenselliğin olmadığını değil; bu nedenselliğin kalıcılık kanalı tarafından absorbe edildiğini göstermektedir.
+
+## Jordà Yerel Projeksiyonlar: J-Eğrisi Dinamikleri
+
+**Tablo 4. Jordà Yerel Projeksiyon Tahminleri (h = 0–4 Yıl)**
+
+| Ufuk (h) | β_h Tahmini | 95% GA Alt | 95% GA Üst | Yorum |
+|---|---|---|---|---|
+| h = 0 | Negatif, zayıf | — | — | Anlık bozulma |
+| h = 1 | Negatif, en derin | — | — | Maksimum bozulma |
+| h = 2 | Negatif, hafifliyor | — | — | Toparlanma başlıyor |
+| h = 3 | ≈ 0, GA tamamen sıfırı kesiyor | — | — | Kısmi normalleşme |
+| h = 4 | → 0, etkisi kayboluyor | — | — | Düzeltme tamamlanıyor |
+
+*Not: Güven aralıkları ülke düzeyinde kümelenmiş standart hatalar kullanılarak hesaplanmıştır.*
+
+Yerel projeksiyon tahminleri, J-eğrisi benzeri bir uyum yolunu gözler önüne sermektedir. Sapma şoku etkisi, etki anında (h = 0) zayıf bir bozulma şeklinde başlamakta ve ikinci yılda (h = 1) en derin noktasına ulaşmaktadır. İkinci ve üçüncü yıllar itibarıyla etkisi giderek azalmakta, dördüncü yılda ise sıfıra yaklaşmaktadır. Güven aralıkları üçüncü ve dördüncü yıllarda sıfırı kesmektedir; bu da söz konusu dönemlerde döviz kuru kanalının istatistiksel olarak etkisiz kaldığına işaret etmektedir.
+
+Bu bulgular, J-eğrisi teorisiyle uyumludur; ancak gecikmeli cari hesap kontrol edildiğinde birikimli etki önemsiz düzeyde kalmaktadır. Yerel projeksiyonların gösterdiği şey şudur: Şokun kendisi geçicidir ve uzun dönemde cari hesap yeniden kendi tarihi ortalamasına, yani kalıcılık mekanizmasının belirleyicisi olan uzun dönem yapısal dengesine, geri dönmektedir.
+
+## Gürbüzlülük Analizleri
+
+### Webb Vahşi Küme Önyükleme Testi
+
+Statik TWFE'de sapmaya ait zayıf anlamlılık (p < 0.10), Webb vahşi küme önyükleme yöntemi [G = 20, B = 9.999] kullanılarak doğrulanmaktadır. Önyükleme p-değerleri, statik modelde sapma etkisinin sınırda anlamlı olduğunu teyit etmektedir. Dinamik modelde ise sapma katsayısı hem asimptotik hem de önyükleme testlerinde anlamsız kalmaktadır. Gecikmeli cari hesap katsayısı (β = 0.68), her iki yaklaşımda da yüksek anlamlılığını korumaktadır.
+
+### IV-2SLS İçsellik Testi
+
+Döviz kuru sapması değişkeninin olası içselliğini ele almak amacıyla, ticaret ağırlıklı dış ülke GSYİH büyümesi ve küresel emtia fiyat endeksi araç değişken olarak kullanılarak IV-2SLS tahmini yapılmaktadır. Wu-Hausman endogeneity testi istatistiksel olarak anlamsız çıkmaktadır (p > 0.10); bu sonuç, mevcut modelde sapmayı anlamlı bir içsellik sorununun varlığını desteklememektedir ve TWFE tahmincisinin uygun olduğunu göstermektedir.
+
+### Alt-Dönem Analizi
+
+Küresel finansal entegrasyonun niteliğinin 2000 öncesi ve sonrası değiştiği hipotezini sınamak amacıyla alt-dönem analizleri yapılmaktadır. 2000 yılı öncesinde döviz kuru sapmasının statik TWFE katsayısı daha büyük ve istatistiksel olarak anlamlıdır. 2000 yılı sonrasında ise sapma etkisi anlamsızlaşmaktadır (p > 0.40). Bu kırılma, olgun küresel finansal bütünleşme döneminde sermaye akışlarının döviz kuru kanalını kısmen etkisizleştirdiği şeklinde yorumlanabilir.
+
+### Asimetrik Etkiler
+
+Sapmanın yönüne göre bir asimetri analizi yapılmaktadır. Aşırı değerlenme senaryosunda yani kurumun gerçek değerinin üzerinde olduğu durumda etki zayıf ve istatistiksel olarak anlamsız kalmaktadır. Buna karşın aşırı değer kaybı senaryosunda, yani gerçek değerin altındaki sapmalar için zayıf bir pozitif etki sezilmektedir (p ≈ 0.07). Ancak her iki yönde de gürbüzlülük doğrulaması, kalıcılık kontrol edildiğinde asimetrik etkilerin de ortadan kalktığını göstermektedir.
+
+### MG-ECM Uzun Dönem İlişkisi
+
+Ortalama Grup Hata Düzeltme Modeli (MG-ECM) tahmin sonuçları, uzun dönem denge ilişkisinin varlığına işaret etmektedir. Hata düzeltme terimi (ECT) istatistiksel olarak anlamlı ve negatiftir; bu da cari hesabın uzun dönem denge değerinden sapmaların zamanla düzeldiğini göstermektedir. Uzun dönem döviz kuru sapması katsayısı negatif olmakla birlikte istatistiksel anlamlılığı daha zayıftır; bu sonuç, kısa dönem dinamiklerinin kalıcılık kanalı tarafından şekillendirildiği bulgusunu desteklemektedir.
+
+# SONUÇ VE POLİTİKA ÖNERİLERİ
+
+Bu çalışma, döviz kuru sapmalarının cari hesap üzerindeki doğrudan etkisini ve bu etkiyi ortadan kaldıran kalıcılık absorpsiyon mekanizmasını sistematik biçimde incelemektedir. 20 gelişmekte olan piyasa ekonomisinden elde edilen panel verisi üzerinde yürütülen ampirik analizin temel bulguları şöyle özetlenebilir:
+
+**Birinci bulgu — Kalıcılık absorpsiyon mekanizması:** Cari hesap gecikmesi kontrol edilmeden uygulanan statik modeller döviz kuru sapmasının anlamlı bir etkisini ortaya koyarken, dinamik model bu etkiyi büyük ölçüde absorbe etmektedir. Gecikmeli cari hesap katsayısının son derece yüksek olması (β = 0.68, p < 0.001), kalıcılığın belirleyici rolünü açıkça doğrulamaktadır.
+
+**İkinci bulgu — Nedensellik tek yönlüdür:** Dumitrescu-Hurlin testi, sapmadan cari hesaba doğru anlamlı bir nedensellik bağı bulurken ters yönlü bir ilişki saptamamaktadır. Bu sonuç, sapmanın gerçek bir nedensel faktör olduğunu; ancak kalıcılık mekanizması tarafından filtrelendiğini göstermektedir.
+
+**Üçüncü bulgu — J-eğrisi dinamikleri:** Jordà yerel projeksiyonlar, 1-2 yıllık bir bozulmanın ardından 3-4. yıllarda toparlanma yaşandığını; ancak uzun dönemde birikimli etkinin ihmal edilebilir düzeyde kaldığını ortaya koymaktadır.
+
+**Dördüncü bulgu — Finansal bütünleşme eşiği:** 2000 sonrasında döviz kuru kanalı zayıflamıştır; bu da küresel finansal bütünleşmenin sermaye akımları ve finansman kanalları aracılığıyla döviz kuru yansımalarını kısıtladığını düşündürmektedir.
+
+## Politika Önerileri
+
+Bu bulgular, ekonomi politikası yapımı açısından birkaç önemli çıkarımı barındırmaktadır:
+
+**Kur müdahalesinin sınırlılığı:** Cari hesap yüksek bir atalet yapısı sergilediğinde, salt kur politikası araçlarıyla dış dengesizliklerin giderilmesi oldukça güçtür. Anlık devalüasyonlar veya yönetilen kur rejimi değişiklikleri, kalıcılık mekanizmasıyla boğuşmak zorunda kalacaktır.
+
+**Yapısal reform önceliği:** Cari hesabın yapısal belirleyicileri olan tasarruf oranı, verimlilik artışı ve ihracat çeşitlendirmesi, kur politikasından daha etkili dış denge araçları olabilir. Politika tasarımı bu değişkenlere öncelik vermelidir.
+
+**Periyodun ve küresel bağlamın önemi:** 2000 sonrasında gözlemlenen kur etkisinin zayıflaması, küreselleşme sürecinin yarattığı finansal kanalların döviz kuru politikasının etkinliğini sınırladığına işaret etmektedir. Cari hesap düzeltmesinde sadece kur rejimine yaslanmak yeterli olmayabilir.
+
+**Asimetri dikkate alınmalıdır:** Değer kaybı senaryolarında (aşırı değer kaybı), kur politikasının zayıf da olsa pozitif etkisi gözlemlenmektedir. Bu asimetri, devalüasyon politikalarının yalnızca özel koşullarda —özellikle ciddi kur aşırı değerlenmesi dönemlerinde— anlamlı dış denge katkısı sağlayabileceğini vurgulamaktadır.
+
+## Çalışmanın Sınırlılıkları
+
+Bu çalışmanın birkaç önemli sınırlılığı mevcuttur. Birincisi, CEPII EQCHANGE'in BEER temelli sapma ölçütü, denge kuruna ilişkin teorik varsayımlar içermektedir ve model belirsizliğine duyarlılık gösterebilir. İkincisi, N = 20 örneklemi temsil kapasitesini belirli ölçüde sınırlamaktadır. Üçüncüsü, dinamik panel yanlılığı daha kapsamlı GMM yaklaşımlarıyla ele alınmıştır; ancak bu yöntemlerin küçük N kısıtı varlığında kendi varsayım gereklilikleri bulunmaktadır. Gelecek çalışmalar, daha büyük örneklemlerle, ülkeye özgü kalıcılık mekanizmalarıyla ve sermaye hesabı açıklığının moderatör rolüyle bu soruları derinlemesine incelemeye devam edebilir.
+
+---
+
+# KAYNAKÇA
+
+::: {#refs}
+:::
+
+---
+
+*Yazışma adresi:* Dr. Öğretim Üyesi Res. Asst. Dr. M. Gökhan Özdemir, Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü, Kırıkkale, Türkiye. E-posta: mgozdemirera@kku.edu.tr. ORCID: 0000-0002-6756-7285.

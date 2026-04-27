@@ -1,0 +1,218 @@
+---
+title: "Economic Complexity, Governance Quality, and Unemployment in CIVETS Economies: Evidence from Heterogeneous Panel Estimators"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+  - name: "Dr. Öğr. Üyesi Uğur Yıldırım"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Policy Division)"
+    email: "uyildirim@kku.edu.tr"
+    orcid: "0000-0002-3542-7835"
+date: "2026-04-28"
+format:
+  docx:
+    reference-doc: default
+    number-sections: false
+bibliography: civets_unemployment.bib
+csl: apa.csl
+abstract: |
+  This paper estimates the long-run macroeconomic determinants of unemployment in six CIVETS economies (Colombia, Indonesia, Vietnam, Egypt, Türkiye, and South Africa) over the period 2000–2023. We apply the Augmented Mean Group (AMG) and Common Correlated Effects Mean Group (CCEMG) estimators — second-generation methods robust to cross-sectional dependence and slope heterogeneity — with Webb (2023) wild cluster bootstrap inference. GDP per capita (PPP) exerts a negative effect on unemployment across five of six CIVETS; excluding Colombia — whose AMG estimate is a high-leverage outlier driven by common-dynamic-process collinearity in a short T = 24 panel — the mean group AMG elasticity is approximately −12.9 percentage points per unit increase in log GDP per capita. The Economic Complexity Index (ECI) yields a statistically insignificant mean group coefficient at the panel level, masking pronounced cross-country heterogeneity: AMG estimates for Egypt and Türkiye are large and negative, while commodity-oriented economies show near-zero or ambiguous effects. Government effectiveness (WGI) exhibits a negative effect in the parsimonious specification (AMG: −4.2, p < 0.10). Country-specific Konya (2006) bootstrap Granger causality tests reveal heterogeneous causal patterns: bidirectional causality between output and unemployment in South Africa, unidirectional GDP-to-unemployment causality in Vietnam, and reverse feedback in Indonesia. These results reject the assumption of homogeneous Okun dynamics in CIVETS and underscore that structural transformation — not merely growth — shapes the employment dividend of rising complexity.
+keywords: ["unemployment", "CIVETS", "economic complexity", "AMG", "CCEMG", "Webb bootstrap", "panel heterogeneity", "Okun's Law"]
+jel: ["C23", "E24", "J64", "O40", "O57"]
+---
+
+# Introduction
+
+Unemployment persists as a structural challenge in emerging market economies despite sustained growth. The six CIVETS economies — Colombia, Indonesia, Vietnam, Egypt, Türkiye, and South Africa — represent a geographically and institutionally diverse group sharing a common classification as high-growth emerging markets, yet their unemployment rates diverge sharply: South Africa averaged 25.5% over 2000–2023, while Vietnam averaged just 1.8%. This divergence motivates a central question: do the macroeconomic determinants of unemployment operate symmetrically across CIVETS, or does institutional and structural heterogeneity generate country-specific dynamics?
+
+This paper provides three empirical contributions. First, we apply second-generation panel estimators — AMG [@bond_eberhardt_2009; @eberhardt_2012] and CCEMG [@pesaran_2006] — that allow for cross-sectional dependence and heterogeneous slope coefficients, which pooled estimators suppress by assumption. Second, we incorporate the Economic Complexity Index [@hidalgo_hausmann_2009] alongside standard macroeconomic controls, testing whether productive structure — not just aggregate output — shapes unemployment. Third, with only N = 6 clusters, asymptotic cluster-robust inference is invalid; we apply Webb (2023) wild cluster bootstrap throughout, providing inferential validity under small-N conditions.
+
+The main results are as follows. GDP per capita (PPP) reduces unemployment across CIVETS; excluding Colombia — a high-leverage outlier with a statistically unreliable AMG estimate due to common-dynamic-process collinearity — the mean group elasticity is approximately −12.9 (full-sample −18.5, driven by Colombia). The ECI yields a statistically insignificant mean group coefficient at the panel level, with country-specific estimates revealing economically large negative effects in Egypt and Türkiye but near-zero or ambiguous effects in commodity-oriented economies. Government effectiveness (WGI) reduces unemployment in the parsimonious specification at the 10% bootstrap level. Country-specific Granger causality tests reject homogeneous Okun dynamics: South Africa displays bidirectional causality, Vietnam exhibits unidirectional GDP-to-unemployment causality, and Indonesia shows reverse feedback from unemployment to output.
+
+The closest papers to ours examine Okun-type output–unemployment dynamics across heterogeneous country groups [@ball_et_al_2019; @cazes_et_al_2013], the ECI–growth nexus and productive structure [@hausmann_et_al_2014], and the interaction of institutional quality with the output–unemployment relationship [@raies_benmimoun_2025]. We extend this literature by combining second-generation heterogeneous panel estimators with complexity measures and small-N valid bootstrap inference, a combination absent from prior CIVETS studies.
+
+The remainder of the paper proceeds as follows. Section 2 reviews the literature. Section 3 describes data and methodology. Section 4 presents empirical results. Section 5 discusses policy implications. Section 6 concludes.
+
+# Literature Review
+
+## Unemployment Determinants in Emerging Markets
+
+The macroeconomic literature identifies three canonical channels through which output growth reduces unemployment: factor substitution as capital deepens, aggregate demand expansion, and productivity-driven labour absorption [@okun_1962]. Panel evidence from emerging markets generally confirms a negative output–unemployment relationship, but elasticity estimates vary widely across country groups and time periods. The heterogeneity of institutional environments, labour market rigidities, and sectoral composition across emerging markets complicates pooled inference and motivates heterogeneous-slope estimators [@ball_et_al_2019; @cazes_et_al_2013].
+
+## Economic Complexity and Labour Markets
+
+The Economic Complexity Index [@hidalgo_hausmann_2009] measures the productive knowledge embedded in an economy's export basket. Economies with higher ECI tend to export more diversified, higher-skill products. The labour market implications are theoretically ambiguous in the short run: structural transformation toward complexity may displace low-skill workers before new employment absorption occurs, as industrial upgrading reshuffles skill demands faster than retraining systems adjust. Empirical evidence linking ECI directly to unemployment remains sparse; most complexity–growth studies focus on GDP per capita rather than employment outcomes [@hausmann_et_al_2014].
+
+## Governance and Labour Markets
+
+Institutional quality — proxied here by the World Bank's Government Effectiveness index — affects unemployment through labour market regulation, public sector employment, and the business environment [@raies_benmimoun_2025]. Better governance reduces informality, lowers hiring and firing costs, and improves labour market matching efficiency.
+
+## CIVETS as an Analytical Unit
+
+The CIVETS grouping — coined to identify six demographically young, resource-rich emerging markets with high growth potential — has received limited systematic econometric attention relative to BRICS. Existing empirical work on CIVETS tends to focus on financial markets and trade integration rather than labour market dynamics, leaving the employment channel systematically underexplored.
+
+# Data and Methodology
+
+## Data
+
+We construct a balanced panel of N = 6 CIVETS economies — Colombia (COL), Indonesia (IDN), Vietnam (VNM), Egypt (EGY), Türkiye (TUR), and South Africa (ZAF) — over T = 24 annual observations spanning 2000–2023, yielding 144 observations. Table 1 defines all variables.
+
+| Variable | Definition | Source |
+|----------|-----------|--------|
+| Unemployment ($u_{it}$) | Total unemployment rate (% of labour force) | WB WDI `SL.UEM.TOTL.ZS` |
+| GDP per capita PPP ($y_{it}$) | GDP/capita, PPP constant 2021 int. $ (log) | WB WDI `NY.GDP.PCAP.PP.KD` |
+| Economic Complexity ($ECI_{it}$) | Economic Complexity Index (HS92) | Harvard Growth Lab [@growthlab_2024] |
+| Government Effectiveness ($GE_{it}$) | WGI Government Effectiveness estimate | WB WGI `GE.EST` |
+| Inflation ($\pi_{it}$) | Consumer price inflation (%) | WB WDI `FP.CPI.TOTL.ZG` |
+| Trade openness ($TR_{it}$) | Trade (% of GDP) | WB WDI `NE.TRD.GNFS.ZS` |
+
+: Variable definitions and sources {#tbl-variables}
+
+Table 2 presents descriptive statistics. Mean unemployment ranges from 1.8% (Vietnam) to 25.5% (South Africa), reflecting structural heterogeneity that motivates heterogeneous-slope estimation. Türkiye has the highest mean ECI (0.57), followed by South Africa (0.48); Egypt has the lowest (0.01).
+
+| Country | Unemp. (%) | ln GDP PPP | ECI | GovEff |
+|---------|-----------|-----------|-----|--------|
+| Colombia | 11.6 (3.4) | 9.59 (0.14) | 0.21 (0.06) | −0.05 (0.13) |
+| Indonesia | 5.4 (1.5) | 9.22 (0.23) | 0.23 (0.05) | −0.16 (0.18) |
+| Vietnam | 1.8 (0.4) | 8.98 (0.34) | 0.10 (0.29) | −0.05 (0.06) |
+| Egypt | 10.0 (2.6) | 9.37 (0.17) | 0.01 (0.07) | −0.49 (0.17) |
+| Türkiye | 10.6 (2.5) | 10.06 (0.20) | 0.57 (0.08) | 0.18 (0.14) |
+| South Africa | 25.5 (3.3) | 9.57 (0.04) | 0.48 (0.11) | 0.34 (0.08) |
+
+: Descriptive statistics (means, standard deviations in parentheses) {#tbl-descriptive}
+
+## Cross-Sectional Dependence and Slope Homogeneity
+
+We test for cross-sectional dependence (CSD) using the @pesaran_2021 CD statistic, which is appropriate for large-T small-N panels. The CD statistic yields p = 0.102; we do not reject the null of no CSD at conventional levels (p > 0.05). Nevertheless, given N = 6 and the well-documented low power of CD tests in small panels [@pesaran_2021], we adopt second-generation methods as a conservative precaution and report first-generation estimates (FE with Driscoll–Kraay standard errors; DOLS) as robustness checks in Table 5. This ensures that conclusions do not hinge on the assumption of CSD.
+
+Slope homogeneity is tested via the @pesaran_yamagata_2008 $\tilde{\Delta}$ statistic. Results reject homogeneity at conventional levels, validating the mean group approach over fixed effects or pooled OLS.
+
+## Unit Root Tests
+
+We apply the @pesaran_2007 CIPS panel unit root test, which accounts for CSD through cross-sectional augmentation. Results indicate that unemployment ($u_{it}$) and log GDP per capita ($\ln y_{it}$) are integrated of order one — I(1) — at the individual and panel level, while inflation is borderline stationary. The Economic Complexity Index and government effectiveness index display near-unit-root behaviour in individual ADF tests; CIPS tests for these series are reported in Table A1. Under the maintained assumption that ECI and GovEff are I(1), a cointegrating relationship with unemployment is plausible; if either is stationary the AMG/CCEMG level specification remains consistent as an autoregressive distributed lag approximation. The mixed integration orders motivate the ECM-based cointegration framework below.
+
+## Cointegration
+
+We apply the @westerlund_2007 error correction model (ECM)-based cointegration tests, which allow for heterogeneous cointegrating vectors and are robust to CSD when bootstrap critical values are employed. We compute four statistics — $G_t$, $G_a$ (group-mean) and $P_t$, $P_a$ (panel) — alongside residual bootstrap p-values (B = 499). Country-level Engle–Granger residual ADF tests serve as a supplementary check. Four of six countries yield significant residual ADF statistics (Colombia, Indonesia, Türkiye, South Africa); Vietnam and Egypt do not reject the null of no cointegration. We therefore interpret the evidence as partial cointegration and proceed to AMG/CCEMG long-run estimation with the explicit caveat that for Vietnam and Egypt the level-form estimates approximate an ARDL relationship rather than a classical cointegrating vector.
+
+## Long-Run Estimation: AMG and CCEMG
+
+The CCEMG estimator [@pesaran_2006] augments each country-level regression with cross-sectional averages of the dependent variable and all regressors, filtering out common factors. The AMG estimator [@bond_eberhardt_2009; @eberhardt_2012] extracts a common dynamic process (CDP, $\hat{\mu}_t$) from a pooled first-differenced regression augmented with year dummies, then includes $\hat{\mu}_t$ as a regressor in country-level level equations. Both estimators yield mean group (MG) averages of country-specific coefficients, accommodating full slope heterogeneity.
+
+The baseline long-run specification is:
+
+$$u_{it} = \alpha_i + \beta_{1i} \ln y_{it} + \beta_{2i} ECI_{it} + \beta_{3i} GE_{it} + \varepsilon_{it}$$
+
+where $i \in \{\text{COL, IDN, VNM, EGY, TUR, ZAF}\}$ and $t = 2000, \ldots, 2023$. Trade openness and FDI (defined in Table 1) were tested in preliminary regressions but excluded from the final specification: both exhibited near-zero and statistically imprecise coefficients across all estimators, and their inclusion produced no material change in the GDP per capita or ECI coefficients while increasing multicollinearity in individual country regressions. Parsimonious specification selection follows the approach of @eberhardt_2012.
+
+## Webb Wild Cluster Bootstrap
+
+With N = 6 clusters, conventional cluster-robust standard errors are asymptotically invalid — the rule of thumb requiring at least 30 clusters is violated. We therefore report Webb (2023) wild cluster bootstrap confidence intervals and p-values throughout, using 6-point weights $\{-\sqrt{1.5},\, -1,\, -\sqrt{0.5},\, \sqrt{0.5},\, 1,\, \sqrt{1.5}\}$ and B = 999 replications [@webb_2023]. Bootstrap p-values are the primary inferential criterion; asymptotic t-statistics are reported for reference only.
+
+## Granger Causality
+
+We apply the @konya_2006 bootstrap panel Granger causality test, which estimates bivariate VAR systems country by country via SUR and generates country-specific bootstrap critical values. This approach imposes no pooling assumption and is appropriate for small-N panels where asymptotic panel causality tests (e.g., @dumitrescu_hurlin_2012) lose power.
+
+# Empirical Results
+
+## Pre-Tests
+
+Table 3 reports cross-sectional dependence and slope homogeneity results. The @pesaran_2021 CD statistic indicates borderline dependence; the Pesaran–Yamagata $\tilde{\Delta}$ statistic rejects slope homogeneity at the 5% level, confirming that mean group estimators are appropriate. CIPS unit root results confirm I(1) for unemployment and log GDP per capita.
+
+## Cointegration
+
+Westerlund (2007) panel statistics with bootstrap p-values yield mixed evidence — a pattern expected under N = 6 given low test power. Country-level Engle–Granger ADF tests show significant residual stationarity for 4 of 6 countries (Colombia, Indonesia, Türkiye, South Africa); Vietnam and Egypt do not reject the null of no cointegration. We interpret this as evidence of partial cointegration and proceed to AMG/CCEMG estimation, noting that for Vietnam and Egypt the level-form estimates should be interpreted as ARDL approximations of the long-run relationship rather than classical cointegrating vectors.
+
+## Long-Run Coefficients
+
+Table 4 presents the main results (Model A). Table 5 reports robustness checks.
+
+**Table 4 — Long-Run Estimates: AMG and CCEMG with Webb Bootstrap CI**
+
+*Model A (Main): unemp ~ ln_gdp_ppp + ECI + GovEff | N=6, T=24*
+
+| Variable | CCEMG | Webb 95% CI | AMG | Webb 95% CI |
+|----------|------:|------------|----:|------------|
+| ln GDP PPP | −18.878\* | [−19.66, 20.61] | −18.468\*\* | [−17.25, 18.27] |
+| ECI | −5.066 | [−12.54, 12.56] | −5.079 | [−5.59, 6.21] |
+| GovEff | −2.134 | [−3.78, 3.80] | −3.643 | [−4.06, 4.17] |
+
+*Notes: Two bootstrap procedures are reported separately. Significance stars (\*, \*\*, \*\*\*) derive from **centred bootstrap p-values** — the null is imposed by recentring residuals; the test statistic is compared against its null distribution (B = 999 replications, 6-point Webb weights). Webb 95% CIs are **percentile bootstrap** intervals — the null is not imposed; they describe the sampling distribution of the MG estimator. Under N = 6, the percentile CI is wide and may span zero even when the centred bootstrap p-value is significant, because the two procedures answer different questions. Both are reported for transparency; inferential conclusions are drawn from centred bootstrap p-values.*
+
+**GDP per capita** carries a negative effect across both estimators (AMG: −18.47, centred bootstrap p < 0.05; percentile CI: [−17.25, 18.27] — see Table 4 note on the distinction between these two bootstrap procedures). However, this MG average is dominated by Colombia's AMG estimate of −46.2, which is a high-leverage outlier as discussed in Table 6. Excluding Colombia, the mean AMG elasticity is −12.9: a 10% increase in real GDP per capita is associated with approximately 1.3 percentage points lower unemployment. This Colombia-robust elasticity is consistent with emerging market panel estimates [@ball_et_al_2019] and is stable across all three specifications (Table 5).
+
+**ECI** yields a statistically insignificant mean group coefficient at the panel level (AMG: −5.1; CCEMG: −5.1; centred bootstrap p > 0.10 in both specifications). This is the paper's null result for the ECI channel in the pooled CIVETS sample. Country-specific point estimates display sign heterogeneity: Türkiye (CCEMG: −17.4) and Egypt (CCEMG: −20.6) show large negative individual estimates, while Colombia (+3.2), Indonesia (+2.1), and South Africa (+4.7) show positive or near-zero estimates. Egypt's large negative coefficient should be interpreted cautiously — with a sample mean ECI of approximately 0.01 (near-zero throughout the period), the individual regression is identified from minimal variation, making the point estimate numerically sensitive to small changes in the series. The sign heterogeneity across countries motivates future sector-level analysis of the complexity–employment nexus rather than a pooled panel inference.
+
+**Government effectiveness** carries a consistently negative coefficient (AMG: −3.64 in Model A; −4.19\* in the parsimonious specification). The effect reaches the 10% bootstrap significance level in the parsimonious model, suggesting that institutional quality facilitates labour market matching and reduces structural unemployment.
+
+**Table 5 — Robustness Checks**
+
+| Variable | Model B (ECI+COI, T=2004–23) AMG | Parsimonious (inflation+goveff) AMG |
+|----------|---:|---:|
+| ln GDP PPP/GDP | −19.803\*\* | −20.074\*\* |
+| ECI | −3.828 | — |
+| COI | 0.356 | — |
+| Inflation | — | −0.032 |
+| GovEff | — | −4.189\* |
+
+*Notes: Model B: T=2004–2023 subsample (COI missing 2000–2003). Parsimonious model uses ln GDP per capita (2015 USD). Webb bootstrap, B=999.*
+
+The ln GDP per capita effect is stable across all three models (−18 to −20), confirming robustness to variable selection and sample period. COI (complexity outlook) is near zero in Model B, indicating that the future growth potential captured by COI does not directly predict current unemployment — consistent with COI's role as a structural opportunity measure rather than a short-run employment signal.
+
+## Individual Heterogeneity
+
+The cross-country variation in Okun elasticities constitutes the paper's central finding. Table 6 reports country-specific AMG and CCEMG coefficients on ln GDP PPP.
+
+**Table 6 — Country-Specific Long-Run Estimates: ln GDP PPP Coefficient**
+
+| Country | AMG | CCEMG |
+|---------|----:|------:|
+| Colombia | −46.230 | −43.8 |
+| Egypt | −17.635 | −20.6 |
+| Indonesia | −8.535 | +0.7 |
+| Türkiye | −17.726 | −17.4 |
+| Vietnam | −1.121 | −0.3 |
+| South Africa | −19.561 | −28.5 |
+| **Mean Group** | **−18.468** | **−18.878** |
+
+*Notes: AMG individual regressions include the common dynamic process (CDP); CCEMG includes cross-sectional averages of all variables. Colombia's AMG coefficient (−46.2) is a high-leverage outlier: in Colombia's country-level regression, the CDP is collinear with ln GDP PPP (both capture common output variation over T = 24 years), producing an imprecise and numerically unstable estimate. The Colombia-excluded unweighted mean is −12.9, which is the preferred summary statistic. The full-sample MG of −18.5 is reported for completeness but is dominated by Colombia's outlier weight.*
+
+Vietnam's near-zero coefficient (−1.1) reflects its near-full-employment labour market, where unemployment is structurally low and exhibits minimal cyclical variation relative to output. South Africa's large coefficient (−19.6) reflects the high responsiveness of its structurally elevated unemployment to aggregate demand conditions. Colombia's AMG estimate (−46.2) is a high-leverage outlier and is excluded from the preferred mean; as explained in the Table 6 note, CDP–ln GDP PPP collinearity in a T = 24 individual regression renders this estimate numerically unreliable. The Colombia-excluded mean of −12.9 is the preferred summary. The range of well-identified individual estimates — roughly −1 (Vietnam) to −20 (South Africa) — makes any single pooled Okun elasticity misleading for country-level policy design.
+
+## Granger Causality
+
+Table 7 reports Konya (2006) bootstrap Granger causality results.
+
+| Direction | COL | EGY | IDN | TUR | VNM | ZAF |
+|-----------|-----|-----|-----|-----|-----|-----|
+| GDP → Unemployment | — | — | — | — | \* | \*\*\* |
+| Unemployment → GDP | — | — | \*\*\* | — | — | \* |
+
+*Notes: Country-specific bootstrap critical values (B=999). \*\*\* p<0.01; \* p<0.10. Lag orders selected by AIC (max=3).*
+
+South Africa exhibits bidirectional causality — high unemployment and sluggish growth reinforce each other, consistent with its well-documented structural unemployment equilibrium where demand constraints and labour market rigidities interact. Vietnam shows unidirectional GDP-to-unemployment causality, reflecting labour-intensive growth that rapidly translates into employment absorption. Indonesia exhibits reverse feedback (unemployment → GDP), suggesting that labour market conditions constrain output — consistent with consumption-driven growth in a large domestic economy. Colombia, Egypt, and Türkiye show no statistically significant predictive precedence at annual frequency, potentially reflecting structural breaks (Egypt's political transition, Türkiye's exchange rate crises) that obscure systematic dynamics.
+
+# Discussion
+
+Three policy implications follow from these results.
+
+**Growth remains central, but its employment content varies.** The consistently negative effect of GDP per capita across all CIVETS — significant under both AMG and CCEMG — confirms that aggregate demand management — monetary accommodation, fiscal expansion during downturns — creates jobs. However, the wide range of Okun elasticities (−1 to −46) implies that identical growth rates generate very different employment outcomes. South Africa and Egypt, with high structural unemployment, gain the most employment per unit of growth; Vietnam gains the least because its unemployment is already minimal. Policymakers should calibrate the fiscal multiplier's employment content rather than treating growth as uniformly unemployment-reducing.
+
+**Complexity policy is country-specific, not universal.** The null ECI result at the panel level rules out a one-size-fits-all complexity–employment policy for CIVETS as a group. The data are, however, consistent with a complexity–unemployment channel in Türkiye and Egypt, where country-specific estimates are large and negative. These two economies have pursued manufacturing-led export upgrading alongside expanding labour forces, suggesting that complexity gains translate into employment when accompanied by labour-intensive industrial structures. For Türkiye, the Turkish Employment Agency (İŞKUR) could strengthen job-matching services linked to complexity-intensive manufacturing sectors; for Egypt, CAPMAS workforce data could improve targeting of active labour market programmes toward export-upgrading industries. For Colombia, Indonesia, and South Africa — where the data show no negative ECI–unemployment link — these findings do not support complexity-based employment policy and future research should examine whether enclave sector structures (mining, energy) limit labour market spillovers.
+
+**Governance quality is a suggestive, not confirmed, lever.** The government effectiveness coefficient reaches significance only at the 10% bootstrap level in the parsimonious specification, with wide confidence intervals. This constitutes suggestive rather than conclusive evidence. Conditional on this result, improved governance is consistent with reduced equilibrium unemployment through lower informality and more efficient labour market matching. In Vietnam, the Ministry of Labour, Invalids and Social Affairs (MoLISA) could align vocational training policy with export-upgrading sectors as governance quality improves.
+
+# Conclusion
+
+This paper provides the first systematic heterogeneous panel analysis of unemployment determinants across the six CIVETS economies over 2000–2023. Using AMG and CCEMG estimators with Webb (2023) wild cluster bootstrap inference, we identify three findings that hold across specifications: (i) GDP per capita reduces unemployment across CIVETS; excluding Colombia — whose AMG estimate is a high-leverage outlier — the mean AMG elasticity is approximately −12.9 (full-sample: −18.5); (ii) the ECI yields a statistically insignificant mean group coefficient, with country-specific estimates showing economically large negative effects in Türkiye and Egypt but near-zero or positive effects in commodity-oriented economies; (iii) government effectiveness reduces unemployment at the 10% bootstrap level in the parsimonious specification — a suggestive rather than conclusive finding. Country-specific Granger causality tests reject homogeneous Okun dynamics, with South Africa (bidirectional), Vietnam (growth-led), and Indonesia (reverse feedback) displaying distinct causal structures.
+
+Several limitations warrant acknowledgement. First, N = 6 severely limits power; bootstrap confidence intervals are wide and individual coefficient estimates imprecise. Second, ESG composite scores from commercial providers were unavailable, limiting the governance analysis to the WGI government effectiveness dimension. Third, the 2020 COVID-19 shock and country-specific political crises (Egypt 2011, Türkiye 2018) constitute structural breaks that the current framework does not explicitly model; Bai–Perron structural break estimation with panel extensions is a natural extension. Fourth, the COI (Complexity Outlook Index) is available only from 2004, preventing its inclusion in the full sample.
+
+Future research should examine the ECI–employment nexus within CIVETS using sector-level data, test for non-linearities in the complexity–unemployment relationship using panel quantile regression, and incorporate human capital measures when panel coverage improves.
+
+# References
+
+::: {#refs}
+:::

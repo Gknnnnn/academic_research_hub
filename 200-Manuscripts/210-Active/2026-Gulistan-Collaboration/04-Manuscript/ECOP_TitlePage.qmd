@@ -1,0 +1,37 @@
+---
+title: "Title Page"
+format: 
+  docx: default
+---
+
+# Title Page
+
+**Title:** Determinants of Sub-Saharan Africa's Agricultural Value Added and 2030 Projection: Multilayer Artificial Neural Networks and Scenario Analysis Across 29 Countries
+
+## Author Information
+
+**Author 1:**
+
+- Name: Arş. Gör. Gülistan ALPASLAN
+- Affiliation: Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, Siyaset Bilimi ve Kamu Yönetimi Bölümü, Kırıkkale, Türkiye
+- Email: gulistan@kku.edu.tr
+- ORCID: 0000-0001-7839-4773
+
+**Author 2 (Corresponding Author):**
+
+- Name: Arş. Gör. Dr. Mehmet Gökhan ÖZDEMİR
+- Affiliation: Kırıkkale Üniversitesi, İktisadi ve İdari Bilimler Fakültesi, İktisat Bölümü, Kırıkkale, Türkiye
+- Email: mgozdemirera@kku.edu.tr
+- ORCID: 0000-0002-6756-7285
+
+## Statements and Declarations
+
+- **Funding:** The authors declare that no financial support was received for the research, authorship, and/or publication of this article.
+- **Competing Interests:** The authors declare they have no financial or non-financial interests that are directly or indirectly related to the work submitted for publication.
+- **Data Availability:** The datasets used and/or analyzed during the current study are available from the corresponding author on reasonable request.
+- **Code Availability:** The R codes and models generated during the current study are available from the corresponding author on reasonable request.
+- **Author Contributions:** All authors contributed equally to the study conception, design, data analysis, and manuscript preparation.
+
+## Acknowledgments
+
+The authors would like to thank the World Bank for making the World Development Indicators dataset publicly available.

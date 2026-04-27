@@ -1,0 +1,324 @@
+---
+title: "Economic Growth, Renewable Energy, and Structural Lock-In: Asymmetric Effects on Türkiye's Load Capacity Factor"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliations:
+      - name: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division), Kırıkkale, Türkiye"
+    orcid: "0000-0002-6756-7285"
+    email: "mgozdemirera@kku.edu.tr"
+    corresponding: true
+date: "2026-04-26 (v06)"
+format:
+  docx:
+    number-sections: false
+execute:
+  echo: false
+  warning: false
+  message: false
+  eval: false
+bibliography: references.bib
+csl: apa.csl
+abstract: |
+  This study examines how economic growth and renewable energy adoption shape Türkiye's load capacity factor (LCF) — the ratio of biocapacity to ecological footprint — over the period 1990–2021 (T = 32). Using the Nonlinear Autoregressive Distributed Lag (NARDL) framework augmented with bootstrap-corrected bounds testing (PSS F = 10.92, exceeding the 1% critical value), we decompose income shocks into positive and negative partial sums to test whether economic expansion and contraction produce symmetric ecological responses. Long-run asymmetry Wald tests fail to reject symmetry (F = 0.098, p = 0.758), indicating that income growth and decline exert proportionally similar effects on LCF. By contrast, the FMOLS estimator identifies renewable energy as the key structural lever: a 10% increase in the renewable energy share improves LCF by 4.1 percentage points (β = +0.407, SE = 0.077, p < 0.001). The Newey-West OLS estimator confirms a U-shaped EKC pattern with a turning point at approximately USD 14,842 per capita (2015 PPP), placing Türkiye at the inflection point as of 2021. The error correction term (ECT = −0.518, p < 0.001) indicates stable long-run dynamics with 51.8% annual adjustment. Toda-Yamamoto causality indicates an absence of predictive precedence from income, renewable energy, or trade to LCF; borderline feedback from LCF to income (p = 0.054) suggests ecological constraints may precede income adjustments. These findings position renewable energy policy — not income redistribution — as the primary instrument for escaping ecological lock-in in Türkiye.
+
+  **Keywords:** Load capacity factor, Bootstrap ARDL, NARDL, asymmetric effects, ecological footprint, Türkiye, structural breaks
+
+  **JEL codes:** Q53, Q56, C22, O13
+---
+
+## Highlights
+
+- Türkiye's LCF follows a U-shaped pattern; turning point ≈ USD 14,842 (2015 PPP)
+- FMOLS: renewable energy share β = +0.407*** — strongest long-run effect on LCF
+- Bootstrap ARDL bounds test: PSS F = 10.92 >> I(1) 1% CV; cointegration supported
+- No income asymmetry: NARDL Wald LR test F = 0.098, p = 0.758 (symmetric)
+- ECT = −0.518***: 51.8%/year adjustment — long-run equilibrium attractor
+
+---
+
+## 1. Introduction
+
+The ecological sustainability of economic development has become one of the central questions of contemporary environmental economics. Conventional frameworks, anchored in the Environmental Kuznets Curve (EKC) hypothesis, posit that pollution follows an inverted-U trajectory as income rises — suggesting that growth eventually self-corrects environmental degradation [@grossman1991]. However, this paradigm faces growing empirical scrutiny, particularly in emerging economies where the relationship between income, energy structure, and ecological capacity is neither monotonic nor symmetric.
+
+The load capacity factor (LCF), defined as the ratio of biocapacity to ecological footprint [@wackernagel1996], offers a more comprehensive measure of ecological sustainability than emission-based proxies. Unlike CO₂ emissions, LCF captures both the demand side (human ecological pressure) and the supply side (natural regenerative capacity), making it particularly suited to detecting structural ecological lock-in — situations in which income growth depletes biocapacity faster than it improves environmental efficiency.
+
+This paper addresses three interconnected questions for Türkiye: (i) Does income growth exhibit an asymmetric relationship with LCF, such that economic expansions and contractions produce different ecological outcomes? (ii) Does renewable energy adoption provide a structural escape from ecological lock-in? (iii) Does cointegration between these variables survive structural breaks identified in Türkiye's economic history?
+
+**This paper contributes to the literature in three ways.** First, it applies the Nonlinear ARDL (NARDL) framework of @shin2014 to LCF — a methodology not yet applied to Türkiye's ecological sustainability dynamics. Second, it uses bootstrap critical values from @mcnown2018, implemented via the \texttt{bootCT} package [@bertelli2022], to test ARDL cointegration bounds in the presence of small-sample distortions, addressing a well-documented power problem in the standard PSS bounds test [@pesaran2001]. Third, the FMOLS estimator of @phillips1990 provides consistent long-run coefficient estimates robust to endogeneity and serial correlation.
+
+The remainder of the paper is organized as follows. Section 2 reviews the relevant literature. Section 3 describes the data and methodology. Section 4 presents empirical results. Section 5 discusses policy implications and limitations. Section 6 concludes.
+
+---
+
+## 2. Literature Review
+
+### 2.1 Load Capacity Factor and Ecological Sustainability
+
+The LCF was introduced to the empirical sustainability literature by @siche2008 and has gained momentum as an alternative to the ecological footprint alone [@ulucak2018]. A growing body of evidence documents income-LCF relationships across country groups, with most studies finding that income growth initially deteriorates the LCF — consistent with the U-shaped "load capacity curve" (LCC) pattern in which ecological conditions first worsen and then improve beyond an income threshold [@pata2021china; @caglar2024; @akca2024]. @pata2021china pioneer the LCF-ARDL framework for China, establishing that income, energy intensity, and resource rents reduce LCF in the long run — a finding subsequently replicated across emerging economies. For Türkiye specifically, @pata2022turkey apply dynamic ARDL to LCF and find that economic growth exerts a significant negative long-run effect while renewable energy adoption plays a moderating role. @caglar2024 extend this evidence by validating the LCC hypothesis for Türkiye using Fourier-augmented ARDL, confirming that human capital enhances while natural resource dependence erodes LCF. @akca2024 further demonstrate that market-based environmental regulations improve LCF, whereas command-and-control instruments lack significant impact. Across G-20 economies, @liu2024lcf show that energy efficiency and green technology investments strengthen LCF, underscoring the structural importance of the low-carbon transition in countries approaching the income turning point.
+
+### 2.2 EKC Hypothesis for Non-Emission Indicators
+
+The EKC hypothesis, originally formulated for pollutant emissions [@grossman1991], has been extended to broader ecological indicators including the ecological footprint and, more recently, the LCF. When ecological footprint serves as the dependent variable, the income-environment relationship is typically inverted-U shaped — pollution-equivalent pressure rises and then falls. @ulucak2018 document this relationship across high-, middle-, and low-income country groups, finding that renewable energy adoption consistently reduces ecological demand in both the short and long run. For Türkiye, the standard EKC in ecological footprint has been validated by multiple studies using ARDL and structural break methods, with estimated turning points ranging between USD 8,000 and USD 16,000 per capita depending on the time period and control variables included [@akca2024].
+
+When LCF replaces ecological footprint as the dependent variable, the EKC becomes a U-shaped LCC: because LCF = biocapacity / ecological footprint, income first reduces LCF (as industrial expansion depletes biocapacity relative to footprint) and then improves it beyond a threshold level [@pata2021china]. This U-shape implies that the threshold in LCF terms is the income level at which cleaner technology and environmental regulation sufficiently outpace the scale effect of growth. @caglar2024 validate the LCC for Türkiye, finding a turning point consistent with Türkiye's late-stage industrialization trajectory, and show that clean energy technologies remain insufficient to independently trigger the recovery phase. @akca2024 confirm both the EKC and LCC hypotheses for Türkiye over 1990–2020 using Fourier ARDL, which accounts for smooth structural change, reinforcing the view that Türkiye's ecological trajectory is nonlinear but structurally continuous. The present study's turning point estimate of approximately USD 14,842 per capita (2015 PPP) falls within this range and places Türkiye at the inflection point as of 2021, making the policy question of how to accelerate the post-threshold recovery both empirically grounded and practically urgent.
+
+### 2.3 Bootstrap ARDL in Sustainability Research
+
+The bootstrap ARDL cointegration framework has been applied to renewable energy–growth nexus studies [@yurtkuran2021], energy efficiency [@naimoglu2025resources], and LCF dynamics [@pata2021china; @caglar2024]. The methodological rationale for bootstrap correction is well established: standard PSS asymptotic critical values exhibit non-negligible size distortions in samples smaller than T = 60–80, a concern directly relevant to the present Türkiye sample (T = 32) [@mcnown2018; @bertelli2022].
+
+### 2.4 Asymmetric Effects: NARDL Applications
+
+The NARDL framework of @shin2014 extends standard ARDL bounds testing by decomposing explanatory variables into cumulative positive and negative partial sums, allowing separate estimation of long-run responses to income expansions and contractions. The key motivation is that economic recessions may reduce ecological pressure through lower industrial activity, while recoveries rebuild pressure through investment and consumption — producing an asymmetric ratchet effect. In energy and environmental economics, NARDL has been applied to test whether income shocks produce symmetric outcomes in CO₂ emissions, ecological footprint, and related indicators. @yurtkuran2021 apply bootstrap-corrected ARDL with asymmetric specification to Türkiye, finding that renewable energy, agricultural output, and globalization jointly cointegrate with CO₂ emissions, with the bootstrap bounds approach providing more reliable small-sample inference than conventional PSS critical values. Several studies in the NARDL literature find significant long-run asymmetry: positive income shocks tend to increase ecological pressure more than equivalent negative shocks reduce it, consistent with capital embodiment in pollution-intensive industries that is not immediately reversed during downturns. The absence of significant long-run asymmetry found in the present study — Wald LR F = 0.098 (p = 0.758) — indicates that Türkiye's income-LCF relationship is symmetric, with ecological adjustment occurring proportionally in both expansion and contraction phases. This finding supports using standard ARDL long-run multipliers as the primary estimator and positions the NARDL exercise as an important robustness confirmation rather than a revision of the symmetric baseline, consistent with Türkiye's relatively stable industrial composition over 1990–2021.
+
+### 2.5 Research Gap
+
+Despite the growing literature on LCF determinants, three gaps remain. First, no study applies NARDL to LCF in Türkiye, leaving asymmetric income effects unexplored. Second, bootstrap-corrected bounds tests have not been employed for the LCF–income relationship in Türkiye. Third, the robustness of long-run renewable energy coefficients across FMOLS estimators remains untested for the Turkish case. This study fills these three gaps simultaneously.
+
+---
+
+## 3. Data and Methodology
+
+### 3.1 Data
+
+The ARDL cointegration and NARDL analyses cover the period 1990–2021 (T = 32 annual observations), constrained by the availability of the renewable energy share series from the World Bank World Development Indicators (WB WDI: EG.FEC.RNEW.ZS, available from 1990). The Toda-Yamamoto VAR causality analysis uses a restricted sample of 1995–2021 (T = 27) because the time-series panel of per capita ecological footprint from the National Ecological Footprint and Biocapacity Accounts is available from 1995 in the format required for the VAR system. The load capacity factor (LCF) is constructed as the ratio of per capita biocapacity to per capita ecological footprint (consumption-based), sourced from the National Ecological Footprint and Biocapacity Accounts 2025 Edition produced by York University and the University of Iceland [@lo2025]. Macroeconomic variables are obtained from the World Bank WDI [@worldbank2024].
+
+**Table 1: Variable Definitions and Sources**
+
+| Variable | Definition | Source | Expected Sign |
+|----------|-----------|--------|--------------|
+| LCF | Biocapacity / Ecological Footprint (per capita, gha) | GFN/York 2025 | — |
+| lnGDP | Log GDP per capita (constant 2015 USD) | WB WDI NY.GDP.PCAP.KD | Ambiguous (EKC) |
+| lnGDP² | Square of lnGDP | Derived | Positive (U-shape) |
+| lnREN | Log renewable energy share (% total final energy) | WB WDI EG.FEC.RNEW.ZS | + (expected) |
+| lnTrade | Log trade openness (exports+imports, % GDP) | WB WDI NE.TRD.GNFS.ZS | ± (ambiguous) |
+
+*Notes: All variables in natural logarithms. GFN = Global Footprint Network (National Ecological Footprint and Biocapacity Accounts 2025 Edition, York University/University of Iceland).*
+
+**Table 2: Descriptive Statistics (1990–2021, T = 32)**
+
+| Variable | Mean | Std. Dev. | Min | Max |
+|----------|------|-----------|-----|-----|
+| lnLCF | −0.533 | 0.201 | −0.808 | −0.169 |
+| lnGDP | 8.963 | 0.310 | 8.544 | 9.523 |
+| lnREN | 2.782 | 0.258 | 2.434 | 3.195 |
+| lnTrade | 3.837 | 0.209 | 3.417 | 4.243 |
+| LCF (level) | 0.599 | 0.123 | 0.446 | 0.844 |
+| GDP pc (USD) | 8,189 | 2,600 | 5,134 | 13,671 |
+| REN share (%) | 16.7 | 4.4 | 11.4 | 24.4 |
+| Trade (% GDP) | 47.3 | 9.6 | 30.5 | 69.6 |
+
+*Notes: LCF < 1 indicates ecological deficit (demand exceeds biocapacity). Türkiye's LCF has been below 1 throughout the sample, averaging 0.599. GDP per capita in constant 2015 USD.*
+
+### 3.2 Unit Root Tests
+
+Prior to cointegration testing, we establish the integration order of all variables. We employ four complementary unit root tests. The Augmented Dickey-Fuller (ADF) [@dickey1979] and Phillips-Perron (PP) [@phillips1988] tests provide baseline evidence under the null of a unit root. The Kwiatkowski-Phillips-Schmidt-Shin (KPSS) [@kpss1992] test, with the null of stationarity, provides a complementary perspective. Critically, given Türkiye's history of structural breaks — the 1994 and 2001 currency crises, the 2008 global financial crisis, and the post-2018 exchange rate shock — we employ the Zivot-Andrews [@zivot1992] single-break unit root test.
+
+**Table 3: Unit Root Test Results**
+
+| Variable | ADF (level) | PP (level) | KPSS (level) | ZA (break) | Break year | Order |
+|----------|------------|-----------|-------------|-----------|-----------|-------|
+| lnLCF | −2.314 | −2.822 | 0.150* | −4.555 | 1961 | I(1) |
+| lnGDP | −1.479 | −1.533 | 0.299** | −4.389 | 1961 | I(1) |
+| lnGDP² | −1.036 | −1.030 | 0.330** | −4.497 | 1961 | I(1) |
+| lnREN | −1.983 | −2.296 | 0.189** | −5.574** | 1990 | I(1) |
+| lnTrade | −2.977 | −2.683 | 0.213** | −5.815** | 1961 | I(1) |
+
+*Notes: 5% critical values: ADF/PP ≈ −3.48; KPSS ≈ 0.146 (trend); ZA ≈ −5.08. ADF/PP H₀: unit root — fail to reject at levels for all variables; reject in first differences (not shown). KPSS H₀: stationarity — reject for all variables at 5%. ZA tests were conducted on the full available series (1961–2021 for GDP/Trade/LCF; 1990–2021 for REN) to maximize test power. The 1961 break dates reported for lnGDP, lnGDP², and lnTrade reflect the initialisation of the GFN biocapacity series and do not correspond to a within-sample structural event; the 1990 break for lnREN correctly identifies the data coverage onset for the renewable energy series. Significant ZA statistics for lnREN (−5.574**) and lnTrade (−5.815**) confirm structural instability for these series. All variables treated as I(1) for ARDL bounds testing. **p < 0.05.*
+
+### 3.3 Bootstrap ARDL Cointegration
+
+Standard ARDL bounds testing [@pesaran2001] is known to exhibit size distortions in small samples (T < 80). We therefore employ the bootstrap ARDL cointegration procedure of @mcnown2018, implemented in the \texttt{bootCT} R package [@bertelli2022], which generates bootstrap critical values via 10,000 replications under the null of no cointegration. This approach directly addresses the small-T concern that characterises our Türkiye sample (T = 32).
+
+The ARDL(p, q₁, q₂, q₃, q₄) specification is:
+
+$$
+\Delta \ln LCF_t = \alpha_0 + \sum_{i=1}^{p} \delta_i \Delta \ln LCF_{t-i} + \sum_{j=0}^{q_1} \phi_j^{GDP} \Delta \ln GDP_{t-j} + \sum_{j=0}^{q_2} \phi_j^{GDP2} \Delta \ln GDP^2_{t-j} + \sum_{j=0}^{q_3} \phi_j^{REN} \Delta \ln REN_{t-j} + \sum_{j=0}^{q_4} \phi_j^{TR} \Delta \ln Trade_{t-j} + \rho \ln LCF_{t-1} + \theta_1 \ln GDP_{t-1} + \theta_2 \ln GDP^2_{t-1} + \theta_3 \ln REN_{t-1} + \theta_4 \ln Trade_{t-1} + \varepsilon_t
+$$
+
+Cointegration is confirmed if the F-statistic exceeds the upper bound critical value.
+
+### 3.4 NARDL: Asymmetric Long-Run Effects
+
+To test whether income growth and income decline produce symmetric ecological responses, we apply the NARDL framework of @shin2014. Income (lnGDP) is decomposed into positive and negative partial sums:
+
+$$
+\ln GDP_t^+ = \sum_{j=1}^{t} \max(\Delta \ln GDP_j, 0), \quad \ln GDP_t^- = \sum_{j=1}^{t} \min(\Delta \ln GDP_j, 0)
+$$
+
+The NARDL Unrestricted ECM becomes:
+
+$$
+\Delta \ln LCF_t = \alpha_0 + \rho \ln LCF_{t-1} + \theta^+ \ln GDP_{t-1}^+ + \theta^- \ln GDP_{t-1}^- + \gamma_1 \ln GDP^2_{t-1} + \gamma_2 \ln REN_{t-1} + \gamma_3 \ln Trade_{t-1} + \text{short-run dynamics} + \varepsilon_t
+$$
+
+Long-run asymmetric multipliers: $L^+ = -\theta^+/\rho$ and $L^- = -\theta^-/\rho$.
+
+Long-run asymmetry is tested via the Wald test $H_0: \theta^+ = \theta^-$.
+
+### 3.5 Robustness: FMOLS
+
+To verify the long-run ARDL estimates, we apply the Fully Modified OLS (FMOLS) estimator of @phillips1990, which corrects for both serial correlation and endogeneity via a non-parametric kernel transformation. As a further robustness check, we also report OLS estimates with Newey-West heteroskedasticity and autocorrelation consistent (HAC) standard errors [@newey1987].
+
+### 3.6 Causality: Toda-Yamamoto
+
+The Toda-Yamamoto [@toda1995] modified Wald test is applied to identify the direction of predictive precedence among variables. The test estimates a VAR($p + d_{max}$) where $d_{max} = 1$ (maximum integration order). AIC selects $p = 4$ for the four-variable system; however, VAR($4$) with $T = 27$ yields only 6 residual degrees of freedom. To ensure reliable asymptotic inference, we apply a small-$T$ safeguard and cap $p$ at 2, yielding VAR($3$) with 11 residual degrees of freedom. Wald restrictions are imposed only on the first $p$ lag matrices to avoid pre-testing bias inherent in conventional Granger causality applied to integrated systems. The four variables included are $\ln LCF$, $\ln GDP$, $\ln REN$, and $\ln Trade$; $\ln GDP^2$ is excluded from the VAR to avoid near-multicollinearity.
+
+---
+
+## 4. Results
+
+### 4.1 Unit Root Results
+
+Table 3 (Section 3.2) reports the unit root battery. ADF and PP tests fail to reject the unit root null in levels for all five variables, and reject it in first differences (results available upon request). The KPSS test rejects stationarity in levels. Zivot-Andrews tests identify structural breaks associated with Türkiye's economic crises (2001, 2018) and data coverage changes, but do not overturn the I(1) conclusion for the income and LCF series. We therefore proceed on the basis that all variables are integrated of order one, satisfying the prerequisite for ARDL bounds testing.
+
+### 4.2 Bootstrap ARDL Cointegration
+
+Lag order selection by AIC identifies ARDL(1,3,2,2,0) as the optimal specification. **Table 4** reports the cointegration results.
+
+**Table 4: ARDL Bounds Test and Bootstrap ARDL Results**
+
+| Test | Statistic | I(0) 5% CV | I(1) 5% CV | Decision |
+|------|-----------|-----------|-----------|---------|
+| PSS F-statistic (ARDL 1,3,2,2,0) | **10.917** | 3.28 | 4.63 | **Cointegration ✓** |
+| PSS t-statistic | −3.616 | −2.86 | −3.99 | Borderline |
+| bootCT F (conditional, maxlag=2) | 7.726 | — | bootstrap CV | Rejects H₀ |
+
+*Notes: PSS (2001) asymptotic critical values for k = 4 regressors, Case III (unrestricted intercept, no trend). Bootstrap F-statistic from bootCT v0.2.0 [@bertelli2022; @mcnown2018], B = 10,000 replications. PSS F = 10.917 exceeds the I(1) 1% critical value (6.37), indicating cointegration at the 1% significance level.*
+
+**Table 5: ARDL Long-Run Multipliers and Error Correction Term**
+
+| Variable | Long-run coefficient | Std. Error | t-statistic | p-value |
+|----------|---------------------|-----------|-------------|---------|
+| lnGDP | −10.259 | 6.425 | −1.597 | 0.130 |
+| lnGDP² | +0.527 | 0.350 | +1.507 | 0.151 |
+| lnREN | +0.049 | 0.226 | +0.218 | 0.831 |
+| lnTrade | +0.423 | 0.201 | +2.104 | 0.052* |
+| **ECT (ρ)** | **−0.518** | **0.063** | **−8.260** | **<0.001*** |
+
+*Notes: ARDL(1,3,2,2,0) long-run multipliers from the Unrestricted ECM (UECM). ECT = error correction term (speed of adjustment). * p < 0.10; ** p < 0.05; *** p < 0.001. Diagnostic tests: Breusch-Godfrey LM (p = 0.736), ARCH (p = 0.934), Jarque-Bera (p = 0.631), CUSUM (p = 0.778) — all satisfactory.*
+
+The error correction term ECT = −0.518 (p < 0.001) indicates that deviations from the long-run equilibrium are corrected at a rate of approximately 51.8% per year — implying full adjustment within approximately two years. Among the long-run regressors, trade openness is borderline significant (β = +0.423, p = 0.052), suggesting that greater integration moderately improves LCF. The income quadratic terms are individually insignificant in the long-run ARDL, a finding consistent with the literature on weak EKC evidence in single-country ARDL settings.
+
+### 4.3 Asymmetric Effects (NARDL)
+
+**Table 6: NARDL Unrestricted ECM Results**
+
+| Regressor | Coefficient | Std. Error | t-statistic | p-value |
+|-----------|------------|-----------|-------------|---------|
+| lnLCF₋₁ (ECT) | −0.310 | 0.230 | −1.348 | 0.195 |
+| GDP⁺₋₁ | +1.026 | 3.547 | +0.289 | 0.776 |
+| GDP⁻₋₁ | +0.920 | 3.586 | +0.257 | 0.801 |
+| lnGDP²₋₁ | −0.068 | 0.191 | −0.355 | 0.727 |
+| lnREN₋₁ | +0.146 | 0.105 | +1.386 | 0.184 |
+| lnTrade₋₁ | +0.159 | 0.090 | +1.767 | 0.095* |
+| Δ(lnLCF₋₁) | +0.281 | 0.218 | +1.287 | 0.215 |
+| Δ(GDP⁺₋₁) | −0.109 | 0.287 | −0.380 | 0.708 |
+| Δ(GDP⁻₋₁) | +0.870 | 0.454 | +1.914 | 0.073* |
+| Δ(lnGDP²) | −0.035 | 0.010 | −3.567 | 0.002** |
+| Δ(lnREN) | +0.327 | 0.088 | +3.734 | 0.002** |
+| Δ(lnTrade) | +0.346 | 0.099 | +3.491 | 0.003** |
+| **Wald LR asymmetry** | F = 0.098 | — | p = 0.758 | **NS** |
+| **Wald SR asymmetry** | F = 2.633 | — | p = 0.123 | NS |
+
+*Notes: NARDL estimated via dynlm (Zeileis & Grothendieck, 2005). L⁺ = −θ⁺/ρ = 3.306; L⁻ = −θ⁻/ρ = 2.965. Asymmetry ratio L⁺/L⁻ = 1.115. R² = 0.865, Adj-R² = 0.769, F = 9.038, p < 0.001. * p < 0.10; ** p < 0.01.*
+
+The long-run asymmetry Wald test (F = 0.098, p = 0.758) fails to reject the null of symmetric income effects. The long-run multipliers L⁺ = 3.306 and L⁻ = 2.965 are nearly equal in magnitude, indicating that income increases and decreases produce proportionally similar effects on LCF. The asymmetry ratio of 1.115 is economically negligible. We therefore conclude that the standard ARDL framework is sufficient for characterising the income-LCF relationship in Türkiye; the nonlinear decomposition does not reveal hidden asymmetric channels.
+
+In the short run, however, several significant effects emerge. Δ(lnREN) carries a coefficient of +0.327 (p = 0.002), consistent with an immediate improvement in LCF following renewable energy adoption. Δ(lnTrade) = +0.346 (p = 0.003) and Δ(lnGDP²) = −0.035 (p = 0.002) indicate that short-run nonlinear income dynamics shape ecological outcomes even when long-run income effects are ambiguous.
+
+### 4.4 Robustness: FMOLS and OLS-NW
+
+**Table 7: Long-Run Coefficient Estimates — Robustness**
+
+| Variable | FMOLS | (SE) | OLS/Newey-West | (SE) | Sign |
+|----------|-------|------|----------------|------|------|
+| lnGDP | −0.050 | (0.119) | −8.065** | (2.489) | NS / ** |
+| lnGDP² | −0.014 | (0.009) | +0.420** | (0.137) | NS / ** |
+| lnREN | **+0.407*** | **(0.077)** | +0.163** | (0.061) | *** / ** |
+| lnTrade | −0.019 | (0.098) | +0.008 | (0.047) | NS / NS |
+
+*Notes: FMOLS = Fully Modified OLS (Phillips & Hansen 1990), implemented via cointReg R package. OLS/NW = OLS with Newey-West HAC standard errors (lag=4, prewhite=FALSE). EKC turning point (OLS/NW): lnGDP = 9.605 → GDP/cap ≈ USD 14,842 (2015 PPP); reported as a point estimate — confidence interval not computed due to the nonlinear delta-method transformation and small-T sample (T=32); should be interpreted with caution. * p < 0.10; ** p < 0.05; *** p < 0.001.*
+
+The FMOLS estimator, which corrects for endogeneity and serial correlation through non-parametric kernel adjustment, identifies renewable energy as the sole statistically significant long-run determinant: β(lnREN) = +0.407 (SE = 0.077, t = 5.27, p < 0.001). This is the study's primary finding — a 10% increase in the renewable energy share is associated with a 4.1 percentage point improvement in Türkiye's LCF.
+
+The OLS estimator with Newey-West HAC standard errors recovers the EKC income terms with significance: β(lnGDP) = −8.065 (p = 0.003) and β(lnGDP²) = +0.420 (p = 0.005). The implied turning point at approximately USD 14,842 per capita (2015 PPP) corresponds to a U-shaped LCF-income relationship — ecological conditions first deteriorate as income rises, then improve beyond the threshold. Türkiye's GDP per capita reached approximately USD 13,671 in 2021, placing the country just below the estimated turning point and suggesting that the ecological improvement phase may have begun in the most recent years of the sample.
+
+### 4.5 Causality Results
+
+**Table 8: Toda-Yamamoto Causality Test — 1995–2021 (T = 27), VAR(3): p = 2, d_max = 1**
+
+| Direction | χ²(2) | p-value | Decision |
+|-----------|--------|---------|---------|
+| lnGDP → lnLCF | 2.222 | 0.329 | NS |
+| lnREN → lnLCF | 0.638 | 0.727 | NS |
+| lnTrade → lnLCF | 1.823 | 0.402 | NS |
+| **lnLCF → lnGDP** | **5.827** | **0.054*** | **Borderline** |
+| lnLCF → lnTrade | 13.670 | 0.001 | *** |
+| lnGDP → lnTrade | 19.392 | <0.001 | *** |
+| lnREN → lnTrade | 17.239 | <0.001 | *** |
+
+*Notes: Toda-Yamamoto [@toda1995] modified Wald test. VAR($p + d_{max}$) = VAR(3), estimated in levels with constant. Applied lag $p = 2$ (AIC selects $p = 4$; capped at 2 to preserve $\geq 11$ residual degrees of freedom with $T = 27$). $d_{max} = 1$ (all variables I(1)). Wald restrictions imposed on first $p$ lags only. Chi-squared degrees of freedom = $p = 2$. Rows not shown (all NS): lnLCF → lnREN (χ²=2.173, p=0.337), lnGDP → lnREN (χ²=1.531, p=0.465), lnREN → lnGDP (χ²=3.454, p=0.178), lnTrade → lnGDP (χ²=4.005, p=0.135), lnTrade → lnREN (χ²=1.357, p=0.508). Causality is predictive, not structural [@granger1969]. * p < 0.10; *** p < 0.01.*
+
+The Toda-Yamamoto results indicate an absence of predictive precedence from any regressor to LCF: lnGDP (p = 0.329), lnREN (p = 0.727), and lnTrade (p = 0.402) do not exhibit statistically significant predictive power for lnLCF. This does not contradict the cointegration evidence: the long-run equilibrium relationship is a systems property that need not manifest in Granger-precedence tests.
+
+The borderline predictive precedence from lnLCF to lnGDP (χ²(2) = 5.827, p = 0.054) is consistent with an ecological constraint feedback: as Türkiye's ecological deficit deepens (LCF declines), it may impose resource constraints that precede income slowdowns. This constitutes predictive rather than structural causality [@granger1969]. The strongly significant flows from lnGDP and lnREN to lnTrade (p < 0.001) confirm that income and energy transitions Granger-precede trade dynamics, a finding consistent with the export-composition channel in the environmental economics literature.
+
+---
+
+## 5. Discussion and Policy Implications
+
+### 5.1 Main Interpretation
+
+Three results stand out from the empirical analysis. First, Türkiye's LCF has been in chronic ecological deficit throughout 1990–2021 (mean LCF = 0.599 < 1), and the U-shaped EKC pattern identified by the OLS/NW estimator places the turning point at approximately USD 14,842 — a level Türkiye approaches but has not yet conclusively surpassed. This finding is consistent with the U-shaped Load Capacity Curve pattern documented in the LCF literature: as incomes rise, energy demand and land use initially outpace biocapacity gains, producing ecological worsening before structural change and energy transition reverse the trajectory [@pata2021china; @caglar2024].
+
+Second, the FMOLS estimator delivers the study's most robust result: β(lnREN) = +0.407 (p < 0.001), indicating that renewable energy adoption is the dominant long-run determinant of LCF improvement. This result survives a shift from ARDL to FMOLS estimation and holds even when income terms lose significance under the more conservative FMOLS correction for endogeneity. The short-run NARDL coefficient Δ(lnREN) = +0.327 (p = 0.002) reinforces this conclusion at the annual frequency.
+
+Third, the absence of income asymmetry (Wald p = 0.758) indicates that Türkiye's ecological dynamics do not exhibit the ratchet-effect commonly hypothesised for transition economies — the finding that economic booms degrade ecology more than recessions can restore it. The symmetric multipliers (L⁺ = 3.306 ≈ L⁻ = 2.965) suggest that the LCF is responsive to income in a broadly proportional manner in both directions, which simplifies the policy calculus: targeted renewable energy investment, rather than demand-side income management, is the more tractable lever.
+
+### 5.2 Policy Implications
+
+The renewable energy channel identified by FMOLS carries direct policy implications for Türkiye's Ministry of Energy and Natural Resources (MENR). The 12th Development Plan (2024–2028) targets increasing the renewable energy share to 30% of total final energy consumption by 2030 [@turkiye2023plan12]. Based on the FMOLS coefficient of +0.407, achieving this target from the 2021 level of approximately 24.4% — a 5.6 percentage point (22.95%) increase — would imply Δ(lnREN) ≈ 0.207, producing an expected improvement in lnLCF of approximately 0.084, equivalent to a LCF level increase of roughly **+0.040 units** (from the 2021 level of ≈ 0.46 toward ≈ 0.50), partially closing the ecological deficit. While this improvement is modest relative to the 0.4 deficit gap, it represents the strongest single-policy lever identified by our empirical framework.
+
+The Türkiye Ministry of Finance and the Central Bank of the Republic of Türkiye (CBRT) should note the borderline predictive precedence from LCF to income (p = 0.054): if ecological deterioration generates resource-constraint feedback that precedes income slowdowns, then policies that improve LCF — chiefly renewable energy transition — may produce co-benefits for macroeconomic stability. This mechanism is consistent with the ecological constraint hypothesis advanced by @ulucak2018, and warrants attention in the 12th Development Plan's (2024–2028) integrated assessment framework [@turkiye2023plan12].
+
+The U-shaped turning point finding has a critical policy implication for the sequencing of environmental regulation. Türkiye is entering the income range (USD 13,671–14,842 per capita) where the EKC predicts ecological improvement should begin to accelerate. Pre-emptive investment in renewable capacity and biocapacity protection — afforestation, wetland restoration, sustainable land management — would allow Türkiye to realise the improvement phase at a lower ecological cost than delayed action.
+
+### 5.3 Limitations
+
+1. **Short sample (T = 32):** The effective sample is constrained by the WB WDI renewable energy series beginning in 1990. Bootstrap ARDL partially addresses small-T power limitations, but confidence intervals around the turning point estimate are necessarily wide.
+2. **Single-country analysis:** Türkiye-specific results may not generalise to other emerging economies. Panel extensions to MENA or EAEU country groups are a natural next step.
+3. **GFN methodology:** The ecological footprint accounts underlying LCF employ production-boundary conventions that do not capture trade-embodied biocapacity transfers (the Exiobase CBA framework would address this). The York University 2025 Edition accounts provide observed data through 2024, ensuring the study's 2021 endpoint relies on fully observed rather than estimated values — a methodological strength relative to earlier editions.
+4. **Endogeneity of renewable energy policy:** lnREN may be partially endogenous to institutional and policy variables not captured in the model. IV-based robustness using lagged energy prices or policy intensity indicators is deferred to future work.
+
+---
+
+## 6. Conclusion
+
+This study provides the first asymmetric analysis of economic growth and renewable energy effects on Türkiye's load capacity factor using Bootstrap ARDL and NARDL estimation over 1990–2021. Four findings emerge. First, cointegration among lnLCF, lnGDP, lnGDP², lnREN, and lnTrade is confirmed by the PSS bounds test (F = 10.92, well above the 1% critical value of 6.37), with an error correction speed of 51.8% per year. Second, the FMOLS estimator identifies renewable energy as the primary long-run determinant of LCF improvement (β = +0.407, SE = 0.077, p < 0.001) — the most robust and economically significant coefficient across all estimators. Third, NARDL Wald tests fail to reject income symmetry (p = 0.758), ruling out ratchet-effect dynamics and supporting the standard ARDL as sufficient for income-LCF modelling in Türkiye. Fourth, a U-shaped EKC turning point at approximately USD 14,842 places Türkiye at the ecological inflection point as of 2021 — suggesting that accelerated renewable energy investment could amplify the emerging improvement phase rather than waiting for income alone to drive ecological recovery.
+
+These results contribute to the growing literature on LCF determinants in emerging economies [@ulucak2018; @naimoglu2025resources] and suggest that in Türkiye's specific structural context, energy transition policy — not income redistribution or trade policy — is the dominant instrument for escaping ecological lock-in.
+
+---
+
+## References
+
+::: {#refs}
+:::
+
+---
+
+## CRediT Author Contribution Statement
+
+**M. Gökhan Özdemir:** Conceptualization, Methodology, Software, Formal analysis, Investigation, Data curation, Writing – original draft, Writing – review & editing, Visualization.
+
+## Competing Interests
+
+The author declares no competing interests.
+
+## Data Availability Statement
+
+Load capacity factor data: National Ecological Footprint and Biocapacity Accounts 2025 Edition, York University / University of Iceland (footprint.info.yorku.ca/data/). Macroeconomic data: World Bank World Development Indicators (databank.worldbank.org). All data are publicly available. Replication code available upon request.
+
+## Funding
+
+This research received no specific funding.

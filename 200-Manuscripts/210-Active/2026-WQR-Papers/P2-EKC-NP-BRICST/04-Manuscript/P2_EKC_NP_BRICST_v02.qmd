@@ -1,0 +1,217 @@
+---
+title: "Ecological Constraints Bind Income Growth at the Median: Nonparametric Quantile Causality Evidence from BRICS-T"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+date: "2026-04-25"
+# v02 — sparring P1-P8 applied 2026-04-25
+format:
+  docx:
+    toc: false
+    number-sections: true
+bibliography: references.bib
+abstract: |
+  This paper tests whether income growth drives ecological footprint (the Environmental Kuznets Curve hypothesis) or whether ecological footprint constrains income growth, using a nonparametric causality-in-quantile framework applied to nine BRICS-T economies over 1995–2021. Two findings stand out. First, the within-country (fixed-effect-demeaned) panel evidence shows that ecological footprint Granger-causes income across quantiles τ = 0.10 through τ = 0.90 (test statistics reaching 8.46 at the median), while GDP-to-footprint causality is confined to the central quantiles τ = 0.25 and τ = 0.50. Second, at the country level, ecological binding is concentrated in Asia's two largest economies — China (stat = 3.48, exceeding the 5% critical value 1.96) and India (stat = 2.79, exceeding the 5% critical value) — with additional marginal evidence for Indonesia, Mexico, and Nigeria (10% level), while Brazil, Russia, Türkiye, and South Africa show no cross-quantile linkage. The standard EKC income-driving-environment pathway, by contrast, is not observed at the 5% level for any individual country. These results challenge the "grow first, clean later" paradigm: ecological efficiency is a prerequisite for sustained income growth in densely populated emerging economies, not its byproduct.
+keywords: ["ecological footprint", "BRICS-T", "nonparametric causality-in-quantiles", "Environmental Kuznets Curve", "income–environment nexus"]
+jel: ["Q56", "O44", "C14"]
+---
+
+# Introduction
+
+The Environmental Kuznets Curve (EKC) posits that per capita income and environmental degradation follow an inverted-U relationship: pollution rises with early industrialisation and then falls as economies grow wealthy enough to demand and afford environmental quality [@grossman1991]. The causal backbone of this hypothesis is income Granger-causing environmental outcomes — without that directional precedence, the EKC is a correlation, not a mechanism.
+
+This paper examines whether that directional precedence actually holds — and whether the answer depends on which quantile of the joint distribution one examines. Standard time-series and panel Granger causality tests impose a linear, mean-regression framework that masks distributional heterogeneity: a causal link operating only when GDP is at the median regime is invisible to a mean test. The nonparametric causality-in-quantile test [@jeong2012] resolves this by estimating whether the lagged value of one variable predicts the current quantile of another, independently at each quantile level τ ∈ (0, 1).
+
+We apply this framework to nine BRICS-T economies (Brazil, China, Indonesia, India, Mexico, Nigeria, Russia, Türkiye, and South Africa) using annual data from 1995 to 2021. The BRICS-T grouping is appropriate: these nine economies span four continents and collectively represent the world's largest emerging-market ecological pressures, exhibiting the full spectrum of income–environment trajectories — from China's rapid industrialisation to Brazil's resource curse dynamics to Türkiye's middle-income transition.
+
+Three findings emerge. First, in the within-demeaned panel (country-mean-differenced to remove country fixed effects), ecological footprint Granger-causes GDP across a wide quantile range (τ = 0.10 to τ = 0.90), while GDP-to-footprint causality is narrower (τ = 0.25 to τ = 0.50). Second, at the country level, the ecological-binding channel is confirmed at the 5-percent level for China and India — the world's two most populous economies — and marginally for Indonesia, Mexico, and Nigeria. Brazil, Russia, Türkiye, and South Africa show no evidence of either directional link. Third, the standard EKC causality (GDP → EF) is not confirmed for any individual country at the 5-percent level.
+
+The remainder of the paper proceeds as follows. Section 2 reviews the literature. Section 3 describes the data. Section 4 presents the methodology. Section 5 reports results. Section 6 discusses economic implications. Section 7 concludes.
+
+# Literature Review
+
+The EKC literature has grown substantially since @grossman1991, producing a contested empirical record. Early cross-sectional studies [@selden1994] appeared to confirm the inverted-U, but panel studies with country fixed effects largely rejected it for CO₂ [@stern2004]. More recent work uses ecological footprint rather than CO₂ as the environmental indicator [@ulucak2019], finding mixed results that depend on the regional sample and estimation strategy.
+
+A strand of literature tests the *causal* direction rather than the level relationship. @he2014 examine the EKC for Canada using threshold models and find nonlinear income–CO₂ dynamics. @al-mulali2015 and @dogan2019 document that causality patterns differ fundamentally by income group and region. These studies share a common limitation: Granger tests in mean regression impose linearity and a single causation regime across the full distribution.
+
+The causality-in-quantile approach of @jeong2012 lifts this constraint by testing whether lagged $x_{t-1}$ predicts the τ-th conditional quantile of $y_t$, independently at each τ. The framework has been applied to energy, commodity, and financial market nexuses, but — to our knowledge — has not been applied to the EKC causality question for BRICS-T economies. This is the gap we fill.
+
+# Data
+
+Annual data cover 1995–2021 (T = 27 per country), yielding a balanced panel of N = 9 countries and 243 observations. All series are in natural logarithms.
+
+**Ecological footprint (ln EF).** Global Footprint Network provides per capita ecological footprint in global hectares. This composite indicator captures land and sea area required to support consumption and absorb waste — a more comprehensive measure than single-pollutant proxies [@ulucak2019].
+
+**GDP per capita (ln GDP).** Constant 2015 USD from World Bank WDI (NY.GDP.PCAP.KD). Log-transformed to yield percentage interpretations.
+
+**Control variables.** The causality tests focus on the bivariate EF–GDP pair by design. This isolates the raw distributional predictive precedence between ecological footprint and income without imposing a parametric control structure. Multivariate extension of the @jeong2012 nonparametric framework — conditioning jointly on EF, GDP, and additional covariates — is computationally demanding and beyond the current scope. The bivariate design implies that detected causality may partially reflect common drivers (trade openness, energy mix, institutional quality); this is acknowledged as a limitation in §6.4.
+
+@tbl-descriptive reports summary statistics. @tbl-unitroot presents unit root pre-diagnostics.
+
+| Country | ln EF Mean | ln EF SD | ln GDP Mean | ln GDP SD |
+|---------|------------|----------|-------------|-----------|
+| Brazil | 0.991 | 0.062 | 8.972 | 0.124 |
+| China | 0.914 | 0.301 | 8.408 | 0.636 |
+| Indonesia | 0.337 | 0.109 | 7.840 | 0.264 |
+| India | −0.156 | 0.151 | 7.013 | 0.370 |
+| Mexico | 1.085 | 0.092 | 9.157 | 0.058 |
+| Nigeria | −0.013 | 0.080 | 7.581 | 0.224 |
+| Russia | 1.638 | 0.053 | 8.917 | 0.279 |
+| Türkiye | 1.123 | 0.097 | 9.035 | 0.277 |
+| South Africa | 1.252 | 0.066 | 8.602 | 0.123 |
+
+: Descriptive Statistics — ln Ecological Footprint and ln GDP per capita, 1995–2021 {#tbl-descriptive}
+
+| Country | ADF ln EF | p | ADF ln GDP | p | Order (EF / GDP) |
+|---------|-----------|---|------------|---|------------------|
+| Brazil | −3.03 | 0.124 | −0.77 | 0.968 | I(1) / I(1) |
+| China | −1.81 | 0.701 | −2.12 | 0.534 | I(1) / I(1) |
+| Indonesia | −3.09 | 0.109 | −2.31 | 0.429 | I(1) / I(1) |
+| India | −2.05 | 0.573 | −2.84 | 0.182 | I(1) / I(1) |
+| Mexico | −4.68 | 0.001 | −3.48 | 0.042 | I(0) / I(0) |
+| Nigeria | −1.32 | 0.883 | 1.00 | 1.000 | I(1) / I(1) |
+| Russia | −3.07 | 0.115 | −0.74 | 0.971 | I(1) / I(1) |
+| Türkiye | −2.93 | 0.153 | −3.76 | 0.019 | I(1) / I(0) |
+| South Africa | −2.47 | 0.345 | 0.14 | 0.995 | I(1) / I(1) |
+
+: Country-level ADF Unit Root Tests (trend-constant specification, AIC lag selection) {#tbl-unitroot}
+
+Unit root tests reveal predominantly I(1) series across the BRICS-T sample. Two exceptions: Mexico shows both ln EF and ln GDP as I(0), and Türkiye's ln GDP rejects the unit root (p = 0.019). The nonparametric causality-in-quantile framework does not require equal integration orders — unlike the Toda-Yamamoto extension for VAR, the test evaluates predictive precedence in the quantile dimension independently of the integration structure [@jeong2012]. The mixed orders reinforce the choice of the nonparametric approach over standard linear Granger tests.
+
+# Methodology
+
+## Nonparametric Causality-in-Quantile
+
+The nonparametric causality-in-quantile framework [@jeong2012] tests whether $x_{t-1}$ Granger-causes the τ-th conditional quantile of $y_t$, without imposing any functional form. The null hypothesis is:
+
+$$H_0: Q_\tau(y_t \mid y_{t-1}, x_{t-1}) = Q_\tau(y_t \mid y_{t-1})$$
+
+That is, the lagged value of $x$ carries no additional information about the τ-th quantile of $y$ beyond what $y$'s own history provides. Rejection of $H_0$ at quantile τ implies $x$ Granger-causes $y$ in the τ-th distributional regime.
+
+The test statistic is based on kernel regression residuals:
+
+$$T_n(\tau) = \frac{1}{n(n-1)h^2} \sum_{t \neq s} K\!\left(\frac{y_{t-1} - y_{s-1}}{h}, \frac{x_{t-1} - x_{s-1}}{h}\right) \hat{\varepsilon}_t(\tau) \hat{\varepsilon}_s(\tau)$$
+
+where $K(\cdot)$ is a product kernel, $h$ is the Silverman plug-in bandwidth, and $\hat{\varepsilon}_t(\tau) = \mathbf{1}[y_t \leq \hat{Q}_\tau(y_t \mid y_{t-1})] - \tau$ are indicator residuals from a local linear quantile regression. Under the null, $\sqrt{n} T_n(\tau) \xrightarrow{d} N(0, \sigma^2_\tau)$, and the standardised test statistic is compared to the critical value 1.96 (two-tailed, 5% level).
+
+We implement this test using the `wqr` Python package (v1.0.1, @roudane2026). The test is applied separately at each quantile τ ∈ {0.10, 0.25, 0.50, 0.75, 0.90}. The reported test statistics are the standardised form $\hat{T}_n(\tau) = T_n(\tau)/\hat{\sigma}_n$, which converges to $N(0,1)$ under $H_0$; the critical value 1.96 (two-tailed, 5% level) applies throughout.
+
+One limitation of the implementation is the one-lag embedding ($p = 1$ Granger structure), which may understate causality when the true order exceeds one. With T = 27, higher-lag models exhaust degrees of freedom rapidly, making $p = 1$ the operationally feasible choice. This imposes a conservative bias on the test: detected causality is robust to misspecification; absence of detected causality may reflect lag truncation rather than true absence.
+
+## Estimation Strategy
+
+Two complementary exercises are conducted:
+
+**Panel-level analysis.** All 243 observations (9 countries × 27 years) are pooled after within-country demeaning (country-mean removal, analogous to a fixed-effects transformation). The demeaned panel isolates *within-country* variation. A caveat: pooling the nine BRICS-T observations assumes cross-sectional independence — no cross-section dependence test is applied to the stacked series. Given the documented interdependence among large emerging economies (shared commodity cycles, global financial conditions), the panel statistics should be interpreted as approximate bounds rather than exact inference.
+
+**Country-level analysis.** The test is applied separately to each country's 27-year time series. This reveals heterogeneity in the causality pattern across the BRICS-T group and avoids the cross-dependence concern that affects the pooled panel.
+
+For each exercise, two directions are tested: GDP → EF (income causes footprint, EKC direction) and EF → GDP (footprint constrains income, reverse-causality direction).
+
+# Results
+
+## Panel-level Results
+
+@tbl-panel presents the within-demeaned panel results. The critical value is 1.96 at the 5-percent level.
+
+| Direction | τ = 0.05 | τ = 0.10 | τ = 0.25 | τ = 0.50 | τ = 0.75 | τ = 0.90 | τ = 0.95 |
+|-----------|----------|----------|----------|----------|----------|----------|----------|
+| GDP → EF | 0.72 | 1.09 | 2.35** | 2.97** | 1.50 | 1.01 | 0.74 |
+| EF → GDP | 0.72 | 1.99** | 6.30** | 8.46** | 7.96** | 2.64** | 0.97 |
+
+: Within-Demeaned Panel Nonparametric Quantile Causality (N = 9, T = 27, n = 243) {#tbl-panel}
+
+*Notes:* Test statistics (standardised). Critical value = 1.96 at 5% level (**). Silverman plug-in bandwidth. Country means removed prior to pooling.
+
+Two asymmetries are evident. First, EF → GDP shows predictive precedence at five of seven quantile points (τ = 0.10 through τ = 0.90), with the statistic peaking at the median (8.46). The τ = 0.10 cell is marginally significant (stat = 1.99, barely exceeding the 1.96 threshold); the core finding rests on the robust τ = 0.25–0.90 cluster where statistics range from 2.64 to 8.46. GDP → EF shows predictive precedence at two points only (τ = 0.25 and τ = 0.50, statistics of 2.35 and 2.97), indicating a weaker and narrower distributional pattern. Second, the tails are uniformly below the critical value for both directions (τ = 0.05 and τ = 0.95), indicating that distributional linkages operate in the interior of the distribution and weaken in recession/boom regimes.
+
+## Country-level Results
+
+@tbl-country presents country-level statistics for both directions across the five focal quantiles. @fig-heatmap displays the full significance pattern as a heatmap.
+
+| Country | τ = 0.10 | τ = 0.25 | τ = 0.50 | τ = 0.75 | τ = 0.90 |
+|---------|----------|----------|----------|----------|----------|
+| **Panel A: EF → GDP** | | | | | |
+| Brazil | 0.24 | 0.57 | 1.62 | 1.38 | 0.36 |
+| China | 0.36 | 1.55 | **3.48**\*\* | 1.18 | 0.41 |
+| Indonesia | 0.34 | 1.00 | 1.73\* | 1.60 | 0.42 |
+| India | 0.34 | 1.40 | **2.79**\*\* | 1.41 | 0.41 |
+| Mexico | 0.65 | 0.81 | 1.77\* | 1.23 | 0.36 |
+| Nigeria | 0.29 | 0.85 | 1.82\* | 1.41 | 0.28 |
+| Russia | 0.31 | 0.96 | 1.12 | 1.04 | 0.38 |
+| Türkiye | 0.34 | 0.72 | 0.50 | 1.30 | 0.41 |
+| South Africa | 0.41 | 0.82 | 1.60 | 0.63 | 0.25 |
+| **Panel B: GDP → EF** | | | | | |
+| Brazil | 0.41 | 0.38 | 0.43 | 0.37 | 0.27 |
+| China | 0.33 | 1.55 | 1.33 | 1.23 | 0.28 |
+| Indonesia | 0.30 | 0.41 | 0.99 | 0.45 | 0.42 |
+| India | 0.56 | 0.75 | 1.06 | 1.41 | 0.41 |
+| Mexico | 0.73 | 0.94 | 0.83 | 0.65 | 0.29 |
+| Nigeria | 0.58 | 1.14 | 1.72\* | 0.87 | 0.36 |
+| Russia | 0.74 | 0.46 | 1.27 | 0.31 | 0.21 |
+| Türkiye | 0.65 | 0.48 | 0.38 | 0.44 | 0.25 |
+| South Africa | 0.29 | 0.66 | 0.77 | 0.80 | 0.35 |
+
+: Country-level Nonparametric Quantile Causality Statistics (T = 27) {#tbl-country}
+
+*Notes:* Standardised test statistics; $\hat{T}_n(\tau) \sim N(0,1)$ under $H_0$. \*\* statistic exceeds 5% critical value 1.96; \* statistic exceeds 10% critical value 1.645. Bandwidth: Silverman plug-in rule.
+
+**EF → GDP (ecological constraint).** China and India are the only countries where ecological footprint shows significant predictive precedence over income at the 5-percent level, and both effects are confined to the median regime (τ = 0.50: China stat = 3.48, India stat = 2.79 — both exceeding critical value 1.96). Three additional countries show marginal evidence at the 10-percent level (critical value 1.645): Indonesia (τ = 0.50, stat = 1.73), Mexico (τ = 0.50, stat = 1.77), and Nigeria (τ = 0.50, stat = 1.82). Brazil, Russia, Türkiye, and South Africa show no evidence of distributional predictive precedence at any quantile.
+
+**GDP → EF (EKC direction).** No country shows significant GDP-to-footprint causality at the 5-percent level. Nigeria shows marginal evidence at τ = 0.50 (stat = 1.72, p < 10%). All other country-quantile cells are clearly insignificant.
+
+![Nonparametric Quantile Causality Heatmap — BRICS-T, 1995–2021. Left panel: EF → GDP (ecological constraint). Right panel: GDP → EF (EKC hypothesis). Color intensity corresponds to test statistic magnitude. \*\*p < 5%; \*p < 10%.](../03-Results/fig1_np_causality_heatmap.png){#fig-heatmap}
+
+# Discussion
+
+## Why Ecological Binding Is Concentrated at the Median
+
+A consistent finding across both panel and country levels is that the significant cells cluster at the median quantile (τ = 0.50) and adjacent quantiles, with insignificance at the tails (τ ≤ 0.10 and τ ≥ 0.90). This pattern carries three interpretations.
+
+First, the nonparametric test has lower power at the tails due to fewer observations in the conditioning region [@jeong2012]. The insignificance at extreme quantiles may partially reflect this power limitation with T = 27.
+
+Second, the ecological-binding mechanism may genuinely operate only when both variables are in their typical ranges. In severe recessions (low τ), GDP declines regardless of ecological conditions — the business cycle dominates. In boom periods (high τ), growth may temporarily decouple from ecological constraints. The median regime — normal economic operation — is precisely where ecological efficiency binds.
+
+Third, the absence of any significant cells for the EKC direction (GDP → EF) at the country level implies that the income-drives-environment mechanism, if it exists in this sample, is either weak or operates over longer horizons than the annual frequency captures.
+
+## Heterogeneity: Resource Endowments vs. Ecological Pressure
+
+The country-level heterogeneity follows a coherent economic pattern. The binding ecological constraint (EF → GDP) is concentrated in China, India, Indonesia, Mexico, and Nigeria — five of the world's six most populous nations, with a combined population exceeding 3.5 billion. These economies face genuine ecological overshoot: their ecological footprints exceed their biocapacity, meaning they cannot fully compensate for environmental degradation through natural regeneration.
+
+Brazil, Russia, and South Africa are resource-rich economies with documented biocapacity surpluses — their national biocapacity exceeds their ecological footprint according to Global Footprint Network country accounts, meaning domestic natural capital absorbs the ecological demand without incurring a deficit. Türkiye sits between these groups: a middle-income economy without the population-driven overshoot of the Asian giants but also without the natural resource slack of the resource exporters.
+
+## Implications for the EKC Paradigm
+
+These findings complicate the EKC narrative in two ways. First, the causal driver in this sample runs primarily from ecology to income, not income to ecology — the foundational assumption of the EKC (income causes pollution) is not confirmed at the individual country level for any BRICS-T economy. Second, the distributional evidence reveals that ecological binding operates at the centre of the income distribution, not at extremes, suggesting that ecological efficiency constraints are a routine feature of normal economic operation in overshoot economies, not only crisis-time phenomena.
+
+The policy implication is direct: for China, India, Indonesia, Mexico, and Nigeria, reducing ecological footprint is not a luxury that follows from growth; it is a precondition for sustaining growth at the median regime. China's National Development and Reform Commission (NDRC) circular economy action plans and India's National Action Plan on Climate Change (NAPCC) — targeting 500 GW of non-fossil capacity by 2030 — represent institutional frameworks already aligned with the ecological-efficiency-first logic. For Indonesia, Mexico, and Nigeria, the IEA–IRENA Just Energy Transition Partnerships provide multilateral financing channels for accelerating the renewable energy transition. These investments yield a double dividend — environmental improvement and income growth — rather than requiring an income sacrifice, consistent with the distributional predictive precedence documented here.
+
+## Limitations {#sec-limitations}
+
+Five limitations bound these conclusions. First, T = 27 annual observations limit the power of the nonparametric test, particularly at the tails; the marginally significant τ = 0.10 panel cell (stat = 1.99) underscores this concern. Monthly ecological footprint data, if available, would substantially improve precision. Second, the bivariate design excludes potential common drivers — trade openness, energy mix, institutional quality — that affect both EF and GDP. Detected predictive precedence may partially reflect these shared determinants rather than a direct EF–GDP channel. Third, the one-lag Granger embedding may miss long-horizon causality operating over multi-year cycles; higher-order specifications are infeasible at T = 27. Fourth, pooling the nine BRICS-T observations in the panel exercise assumes cross-sectional independence, which is likely violated given shared global financial and commodity cycles; the panel results should be read as approximate rather than exact inference. Fifth, the results apply to the BRICS-T grouping and should not be generalised to high-income economies, where biocapacity surpluses and decoupling dynamics differ fundamentally.
+
+# Conclusion
+
+This paper tests the directional causality between ecological footprint and income for nine BRICS-T economies over 1995–2021 using the nonparametric causality-in-quantile framework. Two main conclusions follow.
+
+Ecological footprint constrains income growth more robustly than income drives ecological footprint. At the within-demeaned panel level, EF → GDP causality is confirmed across five of seven quantile points, while GDP → EF is confined to two. At the country level, no economy shows GDP → EF causality at the 5-percent level; China and India show EF → GDP causality at the median, with marginal evidence for Indonesia, Mexico, and Nigeria.
+
+The binding mechanism is concentrated at the median distributional regime and vanishes at the tails, consistent with a normal-operation ecological constraint rather than a crisis-driven one. Countries without biocapacity surplus — the populous Asian economies — face the strongest ecological binding. Resource-rich economies (Brazil, Russia, South Africa) do not.
+
+These findings call for redirecting EKC policy debates from "when will growth solve the environment problem?" toward "how can ecological efficiency unlock sustained growth in ecologically overshoot economies?" For China, India, Indonesia, Mexico, and Nigeria, the ecological path is not a detour from the growth path — it *is* the growth path.
+
+# Competing Interests {.unnumbered}
+
+The author declares no competing interests.
+
+# Author Contributions (CRediT) {.unnumbered}
+
+**M. Gökhan Özdemir:** Conceptualization, Methodology, Software, Formal analysis, Data curation, Writing – original draft, Writing – review & editing, Visualization.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

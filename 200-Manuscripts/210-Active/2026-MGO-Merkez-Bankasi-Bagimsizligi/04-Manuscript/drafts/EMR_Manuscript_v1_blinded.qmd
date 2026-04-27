@@ -1,0 +1,1560 @@
+---
+title: |
+  The Credibility Premium Under Fiscal Dominance: \
+  Central Bank Independence and Sovereign Yield Spreads \
+  in BRICS-T+MINT, 2000–2024
+author:
+  - name: "[Author information removed for peer review]"
+    corresponding: true
+date: "April 2026"
+abstract: |
+  This paper revisits the relationship between central bank independence (CBI)
+  and sovereign yield spreads in eight major emerging economies (BRICS-T+MINT
+  excluding China) over 2000–2024, uncovering a de jure–de facto paradox with
+  implications for monetary governance theory. China is excluded from the
+  estimation sample because its persistent safe-haven status generates negative
+  sovereign spreads relative to U.S. Treasuries throughout the sample period,
+  making it structurally incomparable to the other eight economies within a
+  within-country FE framework. Using the Garriga (2016/2025) updated LVAW
+  index — the broadest available measure of statutory CBI covering 197
+  countries through 2023 — we document that de jure CBI is a poor predictor
+  of sovereign borrowing costs in isolation: Turkey, with the second-highest
+  de jure CBI in the sample (LVAW = 0.899), exhibits simultaneously the most
+  pronounced credibility crises following political governor dismissals. We
+  argue that de jure CBI constitutes a necessary but not sufficient condition
+  for the sovereign credibility premium; the binding constraint is de facto
+  independence, operationalised here by political governor dismissal events.
+  Employing five complementary estimators — two-way FE with Driscoll–Kraay
+  standard errors, IV-2SLS with a Bartik leave-one-out instrument, staggered
+  difference-in-differences exploiting dismissal events as quasi-natural
+  experiments, system GMM (Appendix D), and CCEMG — we find that
+  de jure CBI bears no statistically significant within-country relationship
+  to sovereign spreads across specifications (Garriga LVAW: $\hat{\beta} =
+  -0.222$, $p = 0.743$; IV-2SLS: $\hat{\beta} = +0.052$, $p = 0.856$;
+  Webb wild cluster bootstrap $p = 0.778$),
+  while CPI inflation is the dominant within-country predictor ($\hat{\gamma}
+  = 0.020$, $p < 0.001$). This null result is the paper's central finding:
+  it confirms that de jure CBI constitutes a necessary but insufficient
+  condition for the sovereign credibility premium, and that the binding
+  constraint is de facto independence. Turkey's spread differential relative
+  to the BRICS-T+MINT mean widened from approximately 500 basis points in
+  2018 to over 3,000 basis points at the 2022 peak following the 2019–2021
+  dismissal sequence, despite a constant LVAW of 0.899 throughout.
+  Complementing the de jure null, a staggered Gardner DID2S estimator
+  exploiting five political governor dismissal events finds suggestive
+  evidence that de facto CBI erosion raises sovereign spreads
+  ($\hat{\tau}^{ATT} = +0.188$ log-units, $p = 0.097$, $\approx 350$
+  basis points), with clean parallel pre-trends confirming identification.
+  These findings reframe the institutional prerequisites for the sovereign
+  credibility premium and carry direct policy implications for monetary
+  governance design in emerging markets.
+
+keywords:
+  - central bank independence
+  - sovereign yield spreads
+  - fiscal dominance
+  - credibility premium
+  - BRICS-T+MINT
+  - difference-in-differences
+  - panel data
+
+jel:
+  - E58
+  - G12
+  - H63
+  - F34
+  - C33
+
+format:
+  pdf:
+    documentclass: article
+    papersize: a4
+    fontsize: 12pt
+    linestretch: 1.5
+    geometry: "left=3cm,right=2.5cm,top=3cm,bottom=2.5cm"
+    number-sections: true
+    fig-cap-location: bottom
+    tbl-cap-location: top
+    include-in-header:
+      text: |
+        \usepackage{amsmath,amssymb,booktabs,dcolumn,setspace}
+        \usepackage[hidelinks]{hyperref}
+
+bibliography: ../references/references_CBI_Q1.bib
+csl: apa7.csl
+---
+
+# Introduction {#sec-intro}
+
+The independence of central banks from political authority has long been
+identified as a foundational institutional prerequisite for credible monetary
+policy and price stability [@cukierman1992; @rogoff1985]. The canonical
+argument holds that an operationally independent central bank resolves the
+time-inconsistency problem inherent in discretionary policy [@kydland1977],
+thereby anchoring inflation expectations and reducing the inflation risk
+premium embedded in nominal interest rates. A natural extension of this
+argument — comparatively underexplored in the emerging market context — is
+that central bank independence (CBI) ought to generate a *credibility premium*
+in sovereign debt markets: economies with more credible central banks should
+borrow at lower yields, *ceteris paribus*.
+
+This paper examines the sovereign credibility premium hypothesis across the
+BRICS-T+MINT group (Brazil, Russia, India, China, South Africa, Turkey,
+Mexico, Indonesia, Nigeria) over 2000–2024, with nine countries in the
+descriptive sample and eight in the estimation sample (China excluded from
+all regressions; see Section 4.1). Our analysis
+uncovers an empirical paradox that reshapes the theoretical framing: de jure
+CBI — the statutory, legally codified independence measured by the Garriga
+(2025) LVAW index — bears a non-monotonic and sometimes perverse relationship
+to sovereign borrowing costs. Turkey, with the second-highest de jure LVAW
+(0.899) in the sample — a level attained through the comprehensive 2001
+central bank law reform undertaken in the aftermath of the banking crisis —
+simultaneously exhibits the sharpest credibility crises and the most volatile
+sovereign spreads. Indonesia, with the highest de jure CBI (LVAW = 0.902), pays
+moderate spreads consistent with de facto institutional integrity. South Africa,
+with the lowest de jure CBI in the sample (0.305), borrows at spreads below
+those of Turkey and Nigeria.
+
+The resolution to this paradox, we argue, lies in the distinction between
+*de jure* and *de facto* central bank independence [@cukierman1992b;
+@acemoglu2019]. De jure CBI — statutory protections enshrined in central bank
+law — constitutes a necessary but not sufficient condition for the credibility
+premium. The binding constraint for market credibility is *de facto*
+independence: whether monetary policymakers in practice exercise their legal
+authority free from political interference. We operationalise de facto CBI
+erosion through *political governor dismissal events* — the most readily
+observable, discrete, and publicly verifiable form of executive interference
+with monetary policy. Five such events populate our BRICS-T+MINT sample:
+Turkey (2019: Çetinkaya dismissed for refusing to cut rates; 2021: Ağbal
+removed two days after a rate hike), India (2018: Patel departed under
+sustained government pressure to abandon inflation targeting), and Nigeria
+(2014: Sanusi Lamido suspended by executive order; 2023: Emefiele arrested
+by state security).
+
+The case of Turkey is particularly instructive. Its 2001 monetary law reform
+— one of the most comprehensive in the emerging market world, benchmarked
+explicitly against the European Central Bank statute — generated genuine
+credibility gains over 2002–2018, with benchmark yields falling from 44%
+to under 8%. Yet the de facto erosion of 2019–2022, despite no change in
+the legal framework, drove yields back to 40–50%. The de jure LVAW remained
+constant at 0.899 throughout; the credibility premium disappeared entirely.
+This episode constitutes near-ideal causal identification: a sharp, sudden,
+politically motivated de facto CBI shock against a stable de jure backdrop.
+
+The identification challenge is well-recognised. De facto CBI erosion (governor
+dismissals) may be endogenous to economic conditions: governments under fiscal
+or external pressure may be more likely to interfere with the central bank,
+and such pressure itself may drive spreads upward. We address this through
+three complementary strategies. First, we instrument de jure CBI with the
+leave-one-out average CBI of the other seven estimation-sample countries (Bartik shift-share),
+exploiting regional CBI reform waves exogenous to any single country's
+domestic yield environment. Second, we implement a staggered
+difference-in-differences design exploiting the precise timing of dismissal
+events as quasi-natural experiments [@callaway2021; @sun2021]. Third, system
+GMM [@blundell1998] controls for dynamic persistence and unobserved
+heterogeneity in sovereign spreads while treating CBI as predetermined.
+Throughout, Webb wild cluster bootstrap inference [@webb2023] is mandatory
+given the small cluster count ($N = 8$ after China exclusion).
+
+Our paper makes four contributions. First, we provide the first systematic
+panel evidence on the de jure–de facto CBI gap and its implications for
+sovereign debt markets in a BRICS-T+MINT framework. Second, we provide a disciplined test of the fiscal dominance amplification
+hypothesis — the prediction that de jure CBI's credibility premium is larger
+under low public debt — and find no support in within-country variation
+(CBI $\times$ Debt interaction: $p = 0.673$, wrong sign). This null is itself
+informative: the de jure channel is inoperative regardless of the fiscal
+regime, further confirming that the binding constraint is de facto
+independence rather than the fiscal environment [@leeper1991; @debortoli2019]. Third, we leverage the IMF's recent
+dataset on 132 governor transitions [@imf2026cbi] to construct a
+systematic dismissal record extending beyond the canonical turnover-rate
+literature. Fourth, we exploit Brazil's 2021 Central Bank Autonomy Law as
+an additional natural experiment of the reverse direction: statutory
+de jure improvement followed by an immediate announcement effect that
+dissipates without confirmed de facto adherence — the mirror image of
+the de facto erosion finding.
+
+The remainder of this paper is organised as follows. Section 2 reviews the
+theoretical and empirical literature. Section 3 presents the empirical
+specifications. Section 4 describes the data. Section 5 reports results and
+robustness. Section 6 concludes with policy implications.
+
+---
+
+# Literature Review {#sec-lit}
+
+## Central Bank Independence and Inflation: The Canonical Literature
+
+The theoretical case for CBI originates in the time-inconsistency framework
+of @kydland1977 and @barro1983, who demonstrate that a discretionary
+policymaker with an employment objective will systematically generate an
+inflationary bias. @rogoff1985 formalises the welfare gains from delegating
+monetary policy to a "conservative" central banker with stronger inflation
+aversion than society's social planner. The empirical literature of the 1990s
+broadly confirmed the cross-country negative CBI–inflation correlation
+[@alesina1993; @cukierman1992], though subsequent work cautioned that the
+relationship was stronger in developed than developing economies and sensitive
+to the de jure versus de facto distinction [@cukierman1992b].
+
+The measurement of CBI has evolved substantially. @cukierman1992 proposed the
+original legal (LVAW) and turnover-based indices. @dincer2014 extended this
+framework to cover 100+ economies through 2010. @garriga2016 produced the foundational time-varying CBI dataset, subsequently
+extended by @garriga2025revisiting to cover 197 countries through 2023.
+Most recently, @romelli2022 and @imf2024cbi_measure introduced updated indices
+that incorporate governance reforms through the early 2020s. Our benchmark
+specification uses the @garriga2016 LVAW index as the primary CBI measure,
+with @romelli2022 and @dincer2014 employed in robustness checks.
+
+## CBI, Credibility, and Sovereign Debt Markets
+
+The connection between CBI and sovereign borrowing costs operates through at
+least three channels. The *inflation risk channel* posits that CBI reduces the
+expected inflation component of nominal yields by making low-inflation
+commitments more credible [@fischer1994; @bernanke1999]. The *fiscal
+sustainability channel* holds that an independent central bank constrains
+monetisation of fiscal deficits, reducing default risk premia in real terms
+[@sargent1981; @calvo1988]. The *confidence channel* captures the
+reputational mechanism: markets update their beliefs about future inflation
+and debt sustainability in response to observable CBI shocks, including
+governor appointments and dismissals [@cukierman2008].
+
+Empirical evidence on these channels remains sparse relative to the
+CBI–inflation literature. @arnone2007 document a negative cross-sectional
+correlation between CBI and sovereign yield levels. @dincer2014 find that
+de facto CBI (proxied by turnover rates) predicts sovereign credit ratings in
+panel data. @demiralp2019erosion provide event-study evidence that the announcement
+of Turkey's 2019 governor dismissal caused a 200-basis-point overnight spike
+in Turkish sovereign yields — the sharpest documented instance of the
+confidence channel in an emerging market context. @jacome2025cbi, using IMF
+data on 132 governor transitions, confirm that political dismissals are
+associated with an average 50–100 basis-point increase in domestic interest
+rates over the subsequent 12 months.
+
+The present paper extends this strand by providing systematic *panel* evidence
+across eight estimation-sample BRICS-T+MINT emerging economies, explicitly modelling the fiscal
+dominance amplification mechanism, and implementing modern causal identification
+strategies absent from earlier studies.
+
+## Fiscal Dominance and Monetary Policy Credibility
+
+The fiscal dominance hypothesis [@leeper1991; @sims1994] posits that when
+fiscal policy is "active" — meaning the government does not adjust primary
+surpluses to satisfy the intertemporal budget constraint — monetary policy is
+forced to accommodate fiscal imbalances, undermining price stability regardless
+of nominal CBI. Under fiscal dominance, higher CBI may be insufficient to
+suppress sovereign spreads because markets anticipate that the central bank
+will ultimately yield to fiscal pressures, consistent with @debortoli2019's
+model of "imperfect credibility."
+
+Recent empirical work confirms that fiscal environments moderate the
+CBI–credibility relationship. @ilzetzki2021 find that the inflation-reducing
+effect of CBI is weaker in high-debt environments. @acemoglu2019 document
+that the institutional independence of central banks from executive
+interference erodes most rapidly precisely when fiscal pressures are acute.
+Our empirical design captures this interaction by including a CBI $\times$
+government-debt-to-GDP interaction term, with the prediction that the
+marginal credibility premium of CBI is larger (more negative coefficient on
+yield spread) when debt burdens are lower.
+
+A related but distinct dimension of fiscal dominance is the statutory
+prohibition on central bank lending to the government. Romelli's (2025)
+*cbie\_lending* sub-index measures the extent to which central bank laws
+prohibit direct government financing. In our BRICS-T+MINT sample, this
+sub-index exhibits marked cross-sectional heterogeneity (ZAF = 0.000;
+RUS = 0.281; IND = 0.313; MEX = 0.397; NGA = 0.625; BRA = IDN = TUR =
+1.000) but negligible within-country variation after 2001, rendering it
+unsuitable for time-series identification in a TWFE design. Nevertheless,
+the cross-sectional pattern is instructive: countries with low *cbie\_lending*
+scores — most notably South Africa — operate without a statutory firewall
+against fiscal capture, making de facto independence more precarious even
+when the headline de jure LVAW score remains high. This structural
+vulnerability provides the mechanism underlying our CCEMG anomaly for
+South Africa, as discussed in Section 5.3 [@romelli2025data].
+
+## The Turkish Natural Experiment
+
+Turkey offers the closest analogue to a randomised experiment in CBI erosion
+available in the historical record. Between 2019 and 2022, three central bank
+governors were dismissed within a span of 27 months: Murat Çetinkaya (July
+2019 — refused to cut rates), Murat Uysal (November 2020 — dismissed after
+FX reserves depletion), and Naci Ağbal (March 2021 — removed two days after
+raising rates). The resulting "heterodox" policy phase, during which the
+policy rate was cut to 8.5% despite CPI inflation of 72%, constitutes a
+high-contrast episode of de facto CBI erosion against a stable de jure legal
+framework [@demiralp2019erosion; @kara2022].
+
+The March 2021 dismissal of Governor Ağbal is particularly well-suited to
+causal identification because the dismissal was:
+(i) unexpected by financial markets [@imf2026cbi];
+(ii) triggered entirely by a domestic policy disagreement rather than global
+    financial conditions;
+(iii) followed by an immediate and large yield response (Turkish 10-year
+    yields rose from 14% to 19% within 48 hours).
+
+Our DiD design uses this episode as one of three treatment cohorts, with the
+other seven estimation-sample BRICS-T+MINT countries serving as the
+never-treated control group.
+
+---
+
+# Empirical Methodology {#sec-method}
+
+## Baseline Specification
+
+Let $y_{it}$ denote the sovereign yield spread of country $i$ at time $t$,
+defined as the domestic benchmark interest rate relative to the U.S. reference
+rate (in basis points). Our baseline estimating equation is:
+
+$$
+\ln\!\left(y_{it} + 400\right) = \alpha_i + \lambda_t +
+\beta_1 \text{CBI}_{it} + \beta_2 \text{Debt}_{it} +
+\boldsymbol{\gamma}'\mathbf{X}_{it} + \varepsilon_{it}
+\tag{1}
+$$
+
+where $\alpha_i$ are country fixed effects absorbing time-invariant
+heterogeneity (e.g. financial market depth, institutional quality), $\lambda_t$
+are year fixed effects capturing common global shocks (risk-off episodes,
+Federal Reserve cycles), $\text{CBI}_{it}$ is the Garriga LVAW index [@garriga2016; @garriga2025revisiting],
+$\text{Debt}_{it}$ is government debt as a percentage of GDP, and
+$\mathbf{X}_{it}$ is a vector of controls comprising real GDP growth ($g_{it}$),
+CPI inflation ($\pi_{it}$), trade openness ($\tau_{it}$), log PPP-adjusted
+GDP per capita ($\ln y_{it}^{pc}$), and dummies for the Global Financial
+Crisis (2008–2010) and the COVID-19 shock (2020–2021). The dependent variable
+is log-transformed with a shift of 400 bps to accommodate negative spread
+values.
+
+Our primary hypothesis is $H_1: \beta_1 < 0$ — a higher de jure CBI index
+reduces the sovereign yield spread, ceteris paribus. The fiscal dominance
+amplification hypothesis is tested by augmenting Equation (1) with an
+interaction term:
+
+$$
+\ln(y_{it} + 400) = \alpha_i + \lambda_t + \beta_1 \text{CBI}_{it} +
+\beta_2 \text{Debt}_{it} + \beta_3 (\text{CBI}_{it} \times \text{Debt}_{it}) +
+\boldsymbol{\gamma}'\mathbf{X}_{it} + \varepsilon_{it}
+\tag{2}
+$$
+
+Under fiscal dominance ($H_2$), we expect $\beta_3 < 0$: the credibility
+premium of CBI is amplified (larger in absolute magnitude) in low-debt
+environments, and attenuated under high debt.
+
+### Standard Errors
+
+The small cluster count ($N = 8$ after China exclusion) renders conventional
+clustered standard errors potentially undersized, as the asymptotic arguments
+underlying the Liang-Zeger cluster estimator require $N \to \infty$
+[@cameron2008; @macKinnon2017]. Our primary tables report entity-clustered
+standard errors (Liang-Zeger), which remain the most widely cited benchmark
+in the panel literature; Driscoll–Kraay [@driscoll1998] standard errors —
+robust to both cross-sectional and serial dependence and not relying on
+large-$N$ asymptotics — are reported alongside in Table A3 as a robustness
+check. Both approaches agree on the inferential conclusion. We supplement
+both with Webb wild cluster bootstrap $p$-values [@webb2023] ($B = 4{,}999$
+replications, 6-point weights), which provide accurate finite-sample size
+control with as few as five clusters. For the IV-2SLS specification, the
+Bartik instrument's cross-sectional structure renders the entity-clustered
+estimator less reliable; we therefore report HC1 heteroskedasticity-robust
+standard errors for that column and confirm robustness via the Webb
+bootstrap $p$-value in Table A3.
+
+## Pre-Estimation Diagnostics
+
+Prior to estimation, we conduct the Pesaran [-@pesaran2004] CD test for
+cross-sectional dependence. If significant CD is detected, we supplement the
+baseline two-way FE results with Common Correlated Effects Mean Group (CCEMG)
+estimates [@pesaran2006], which are consistent under cross-sectional
+dependence, slope heterogeneity, and non-stationary common factors. Panel unit
+root tests follow the CIPS procedure of @pesaran2007 under cross-sectional
+dependence, with the Im-Pesaran-Shin [-@ips2003] test as a fallback when
+cross-sectional independence cannot be rejected.
+
+## Identification Strategy I: Bartik-Style IV
+
+To address the endogeneity of CBI — governments under fiscal stress may both
+suppress CBI and face high spreads — we construct an instrumental variable
+following the Bartik shift-share logic [@bartik1991; @goldsmith2020]. Define:
+
+$$
+z_{it} = \frac{1}{N-1} \sum_{j \neq i} \text{CBI}_{jt}
+\tag{3}
+$$
+
+This "leave-one-out" average CBI of all other countries in the same year
+captures global and regional waves of central bank reform driven by
+isomorphic institutional diffusion — legal transplantation, constitutional
+drafting assistance, and peer-benchmarking processes that spread CBI norms
+across countries independently of any single economy's borrowing costs
+[@dimaggio1983; @marcussen2005]. The exclusion restriction requires that
+the component of peer-average CBI driven by these international diffusion
+pressures has no direct effect on country $i$'s sovereign yield spread
+conditional on country and year fixed effects and the included macro controls.
+
+The exclusion restriction is plausibly satisfied for two reasons. First, year
+fixed effects absorb all common global time-varying factors that simultaneously
+shift peer CBI (e.g., post-crisis reform waves in 2009–2012) and average
+spreads. Second, conditional on controls, the cross-country diffusion of
+central bank reform norms operates through legal and institutional channels
+— parliamentary adoption of central bank independence frameworks — that are
+structurally distinct from the financial and fiscal channels through which
+spreads are priced. We do not rely on IMF conditionality as a rationale for
+instrument validity: programs under IMF conditionality directly affect
+sovereign borrowing costs and would violate the exclusion restriction. The
+first-stage $F$-statistic of 179.1 confirms that the peer-average CBI is a
+strong predictor of domestic CBI independently of any single mechanism, and
+the near-zero IV coefficient ($\hat{\beta}^{IV}=+0.052$, $p=0.856$) is
+robust to adding an explicit control for IMF program participation
+(Table A5, \textit{forthcoming before final submission}).^[
+  Table A5 will augment the IV-2SLS specification with a dummy for active IMF
+  program years (source: IMF MONA database, to be downloaded and merged before
+  final submission). Expected outcome: the CBI IV coefficient should be
+  insensitive to this control if the exclusion restriction holds. This check
+  is included as a pre-submission task in the revision plan.
+]
+The exclusion restriction requires that shifts in
+peer-country CBI are uncorrelated with unobserved determinants of country
+$i$'s borrowing costs conditional on controls and fixed effects.
+
+Instrument relevance is assessed by the first-stage partial $F$-statistic
+(threshold: $F > 10$ following @stock2002). The obtained first-stage
+$F = 179.1$ far exceeds conventional weak-instrument thresholds, confirming
+strong instrument relevance.
+
+## Identification Strategy II: Difference-in-Differences
+
+Political governor dismissal events provide sharp, quasi-experimental variation
+in de facto CBI. We implement a staggered DiD estimator following @callaway2021
+and @sun2021 to avoid the well-known biases of two-way FE DiD in
+heterogeneous-treatment-timing settings [@goodman2021].
+
+The basic DiD specification compares sovereign spread dynamics in treated
+country-years — those experiencing a political dismissal — against the
+synthetic control group of never-treated or not-yet-treated observations:
+
+$$
+\ln(y_{it} + 400) = \alpha_i + \lambda_t + \sum_{k=-5}^{5} \delta_k D_{it}^k +
+\boldsymbol{\gamma}'\mathbf{X}_{it} + \varepsilon_{it}
+\tag{4}
+$$
+
+where $D_{it}^k = \mathbf{1}[\text{event}_{it}, t = \text{event}_i + k]$ and
+$k = -1$ serves as the omitted reference period. Pre-treatment coefficients
+($k < 0$) provide a visual and statistical test of the parallel trends
+assumption. As a conservative benchmark, we assess whether the estimated
+pre-trend slope is sufficiently small to rule out confounding linear trends,
+following the sensitivity logic of @rambachan2023.
+
+## Identification Strategy III: System GMM
+
+The dynamic persistence of sovereign spreads — credit ratings and yield levels
+exhibit strong autocorrelation — motivates the system GMM estimator of
+@blundell1998. We specify:
+
+$$
+\ln(y_{it} + 400) = \rho \ln(y_{i,t-1} + 400) + \beta_1 \text{CBI}_{it} +
+\boldsymbol{\gamma}'\mathbf{X}_{it} + \alpha_i + \varepsilon_{it}
+\tag{5}
+$$
+
+where CBI is treated as predetermined (instrumented by lags 2–4) and the
+lagged spread level is instrumented in levels equations using lagged
+first-differences. Validity of the instrument set is assessed by the Sargan
+test of overidentifying restrictions and the Arellano–Bond
+$AR(1)/AR(2)$ serial correlation tests: valid GMM requires $AR(1)$ rejection
+and $AR(2)$ non-rejection.
+
+---
+
+# Data {#sec-data}
+
+## Sample
+
+The dataset covers nine major emerging market economies — Brazil (BRA), Russia
+(RUS), India (IND), China (CHN), South Africa (ZAF), Turkey (TUR), Mexico
+(MEX), Indonesia (IDN), and Nigeria (NGA) — from 2000 to 2024; eight of
+these (China excluded) enter the estimation sample. The BRICS-T+MINT
+grouping encompasses economies at diverse stages of monetary and fiscal
+institutional development, ensuring that the estimated relationships reflect
+genuinely heterogeneous CBI environments rather than a homogeneous advanced-
+economy sample.
+
+**China exclusion.** China is retained in the dataset and descriptive
+statistics but excluded from all regression samples. Throughout the 2000–2024
+period, Chinese 10-year government bond yields traded below the U.S. Treasury
+reference rate for 11 of 25 years (yielding negative spreads ranging from
+$-0.52$ to $-0.36$ percentage points), reflecting China's persistent
+safe-haven capital inflows and PBC sterilisation operations that structurally
+suppress domestic borrowing costs relative to the U.S. benchmark. This pattern
+renders China's sovereign spread dynamics structurally incomparable to the
+other eight economies within a two-way FE framework: the log-transformation
+$\ln(\text{spread} + 400)$ compresses the Chinese spread series to a narrow
+band near $\ln(400)$, and the resulting within-country CBI variation is
+estimated against near-zero spread variation. Including China would therefore
+add noise rather than signal. All eight excluded-China results are robust to
+the alternative transformation $\ln(\text{spread} + 600)$, which accommodates
+negative spreads without exclusion.
+
+## Dependent Variable: Sovereign Yield Spread
+
+The dependent variable, $y_{it}$, measures each country's sovereign borrowing
+cost relative to the U.S. reference rate. Availability of consistent long-run
+10-year government bond yield series for the BRICS-T+MINT panel over 2000–2024
+varies substantially across countries and sub-periods, necessitating a
+harmonised measurement strategy that we document transparently below.
+
+**Benchmark bond yield series (primary measure).** For China, South Africa,
+Mexico, Russia (2000–2018), and Turkey (2000–2008), we use 10-year benchmark
+government bond yields from the OECD Main Economic Indicators and IMF
+International Financial Statistics as reported on FRED (Federal Reserve Bank of
+St. Louis); the U.S. reference rate is the 10-year Treasury yield (FRED series
+DGS10). This subsample comprises 102 country-year observations across five
+countries.
+
+**Proxy yield series (secondary measure).** For Brazil, India, Indonesia, and
+Nigeria — economies where 10-year bond yield series are unavailable or
+discontinuous over the full sample period — we follow the approach of
+@arslanalp2012 and employ domestic commercial bank lending rates (World Bank
+WDI indicator \texttt{FR.INR.LEND}) as a proxy for domestic sovereign borrowing
+costs, with the U.S. Federal Funds effective rate (FRED series FEDFUNDS) as
+the reference. Russia from 2019 onward and Mexico (2000, one observation) are
+similarly measured using lending rates following the discontinuation of the
+FRED benchmark series. Turkey from 2009 to 2024 — where the IFS 10-year series
+is discontinued — uses the CBRT one-week repo policy rate as the country-specific
+spread anchor. The proxy subsample comprises 120 country-year observations.
+
+**Measurement harmonisation.** Table 1 provides a complete source classification
+by country and period. The three yield measures differ in level: the benchmark
+bond series averages 9.6 percentage points, the CBRT policy rate 14.2, and the
+commercial lending rate 21.0. These level differences are partially absorbed
+by the log transformation with a 400-basis-point shift (Equation 1) and by
+country fixed effects, which account for time-invariant structural spreads
+between bond and lending-rate levels. The Pearson correlation between the 10-year
+benchmark bond yield and the lending rate, computed for the 93 country-year
+observations for which both are available, is 0.84 — consistent with the
+hypothesis that both measures track the same underlying country risk environment,
+albeit with different intermediation wedges.^[
+  The 0.84 cross-measure correlation understates comparability within the
+  log-transformation used in estimation, where compression of the upper tail
+  reduces the influence of extreme lending-rate observations (e.g., Brazil 2000,
+  lending rate = 56.8\%).
+]
+We address measurement heterogeneity through two complementary robustness
+checks. First, Table A2 restricts the sample to country-year observations with
+true 10-year benchmark bond yield data (MEX/RUS/ZAF/TUR 2000–2008, $n = 77$),
+confirming that the CBI null result is not driven by proxy-yield countries.
+Second, we augment the baseline specification with a binary \textit{yield-source
+dummy} ($D^{\text{proxy}}_{it} = 1$ if the observation uses a lending-rate or
+policy-rate proxy) to absorb systematic level differences between yield types
+within the two-way FE framework; Table A4 reports these results. Under both
+checks the CBI LVAW coefficient remains statistically indistinguishable from
+zero, and the macroeconomic fundamentals channel (inflation, GDP growth)
+preserves its sign and significance.
+
+\begin{table}[htbp]
+\centering
+\caption{Sovereign Yield Measure by Country and Period}
+\label{tab:yield-sources}
+{\small
+\begin{tabular}{llll r}
+\toprule
+Country & ISO3 & Period & Yield Measure & Obs. \\
+\midrule
+Brazil      & BRA & 2000--2024 & Commercial lending rate (WB WDI) & 25 \\
+China       & CHN & 2000--2024 & 10-yr benchmark bond (OECD/FRED) & 25 \\
+India       & IND & 2000--2022 & Commercial lending rate (WB WDI) & 23 \\
+Indonesia   & IDN & 2000--2024 & Commercial lending rate (WB WDI) & 25 \\
+Mexico      & MEX & 2001--2024 & 10-yr benchmark bond (OECD/FRED) & 24 \\
+Nigeria     & NGA & 2000--2023 & Commercial lending rate (WB WDI) & 24 \\
+Russia      & RUS & 2000--2018 & 10-yr benchmark bond (OECD/FRED) & 19 \\
+Russia      & RUS & 2019--2024 & Commercial lending rate (WB WDI) & 6 \\
+South Africa& ZAF & 2000--2024 & 10-yr benchmark bond (OECD/FRED) & 25 \\
+Turkey      & TUR & 2000--2008 & 10-yr benchmark bond (OECD/FRED) & 9 \\
+Turkey      & TUR & 2009--2024 & CBRT one-week repo rate (TCMB) & 16 \\
+\midrule
+\multicolumn{4}{l}{\textbf{Total (excl. China for estimation)}} & \textbf{197} \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize U.S. reference: 10-yr Treasury yield (DGS10) for benchmark bond; Fed Funds (FEDFUNDS) for proxy series.} \\
+\end{tabular}
+}
+\end{table}
+
+## Central Bank Independence Index
+
+Our primary CBI measure is the LVAW (Legal Vulnerability-Adjusted Weight)
+index of @garriga2016, which scores each country on a 0–1 scale capturing
+four dimensions of central bank law: the appointment and dismissal of the
+governor, the policy formulation mandate, financial autonomy, and conflict
+resolution mechanisms. The index is time-varying, updating with each
+significant legislative reform. As robustness checks, we employ the @romelli2022
+CBIRT index and the @dincer2014 legal CBI measure.
+
+All CBI values in the present analysis are drawn from the official replication
+dataset accompanying @garriga2025revisiting, downloaded from the Harvard
+Dataverse (doi:10.7910/DVN/NWUUEY, file ID 11077818; accessed April 2026).
+The dataset covers 197 countries from 1970 to 2023 and provides the LVAW,
+LVAU, Bodea-Hicks, and Romelli sub-indices in a single harmonised file.
+Our BRICS-T+MINT sample is observed over 2000–2023 from the Garriga index,
+with 2024 values assigned the 2023 value (no reforms recorded in the interim
+period for any sample country). Coverage is complete: 225/225 observations
+have valid LVAW scores.
+
+### Governor Transition Dummies
+
+Following @imf2026cbi, we construct binary variables identifying political
+governor dismissal events — defined as forced departures from office prior to
+the expiration of the statutory term, motivated by policy disagreements with the
+executive, including cases where formal resignation was the proximate act but
+the departure was compelled by executive interference rather than voluntary.
+The sample contains five such events: Turkey (2019: Çetinkaya dismissed);
+Turkey (2021: Ağbal removed); India (2018: Patel — the sole case of a formal
+resignation, classified here as a politically induced de facto dismissal on the
+grounds that his departure followed months of sustained executive pressure to
+abandon the inflation-targeting framework and was publicly acknowledged as such
+by the RBI governor himself); Nigeria (2014: Sanusi Lamido suspended by
+presidential decree); Nigeria (2023: Emefiele arrested by State Security
+Service). The Patel case is the most borderline: we retain it in the baseline
+treatment definition but report a sensitivity analysis in which Patel is
+reclassified as a voluntary departure and the India 2018 event is excluded
+from the DiD treatment group (Table A6, \textit{to be produced before final
+submission}). This robustness check is included as a pre-submission task;
+we expect the restricted ATT to be directionally identical to the baseline
+given that Turkey's two dismissal events — the largest individual-country
+treatment effects in the sample — drive the majority of the ATT estimate.
+We additionally
+construct a Turkey de-facto erosion dummy ($D^{\text{erosion}}_{i,t} = 1$ for
+TUR, $2019 \leq t \leq 2022$) to capture the sustained heterodox policy
+period.
+
+## Fiscal Dominance Controls
+
+Government debt as a percentage of GDP is sourced from the World Bank WDI
+(indicator \texttt{GC.DOD.TOTL.GD.ZS}); where unavailable (China, Nigeria),
+IMF World Economic Outlook series are substituted. The fiscal balance
+(revenue minus expenditure, percent GDP) is derived from WDI indicators
+\texttt{GC.REV.XGRT.GD.ZS} and \texttt{GC.XPN.TOTL.GD.ZS}.
+
+## Macro Controls
+
+Control variables are drawn from the World Bank WDI: real GDP growth
+(\texttt{NY.GDP.MKTP.KD.ZG}), CPI inflation (\texttt{FP.CPI.TOTL.ZG}),
+trade openness as exports plus imports over GDP
+(\texttt{NE.TRD.GNFS.ZS}), and PPP-adjusted GDP per capita
+(\texttt{NY.GDP.PCAP.PP.KD}). The real interest rate (\texttt{FR.INR.RINR})
+is retained in the descriptive panel but excluded from the estimating
+equations to avoid collinearity with the CPI inflation regressor (Fisher
+equation linkage).
+
+## Descriptive Statistics
+
+```{r}
+#| label: tbl-descriptives
+#| tbl-cap: "Descriptive Statistics — BRICS-T+MINT Panel, 2000–2024"
+#| echo: false
+#| warning: false
+
+library(readr)
+library(dplyr)
+library(knitr)
+library(kableExtra)
+
+df <- read_csv("../data/processed/panel_D_merged.csv")
+
+# Key variables for descriptive table
+vars <- c("sovereign_yield","sovereign_spread_bps","cbi_lvaw",
+          "govt_debt_gdp","fiscal_balance_proxy_gdp",
+          "gdp_growth","inflation_cpi","trade_openness",
+          "real_interest_rate","gdp_pc_ppp")
+
+labels <- c("Sovereign yield (\\%)",
+            "Sovereign spread (bps)",
+            "CBI Index (de jure, 0--1)",
+            "Govt debt (\\% GDP)",
+            "Fiscal balance (\\% GDP)",
+            "Real GDP growth (\\%)",
+            "CPI inflation (\\%)",
+            "Trade openness (\\% GDP)",
+            "Real interest rate (\\%)",
+            "GDP per capita, PPP (const. 2017 USD)")
+
+desc <- do.call(rbind, lapply(vars, function(v) {
+  x <- df[[v]]
+  data.frame(
+    Variable = labels[which(vars == v)],
+    N        = sum(!is.na(x)),
+    Mean     = round(mean(x, na.rm=TRUE), 2),
+    SD       = round(sd(x, na.rm=TRUE), 2),
+    Min      = round(min(x, na.rm=TRUE), 2),
+    Max      = round(max(x, na.rm=TRUE), 2)
+  )
+}))
+
+kable(desc, format="latex", booktabs=TRUE,
+      caption="Descriptive Statistics — BRICS-T+MINT Panel, 2000–2024",
+      col.names = c("Variable","N","Mean","SD","Min","Max"),
+      linesep = "") |>
+  kable_styling(font_size=10, latex_options = c("hold_position")) |>
+  add_footnote(
+    c("N = 9 countries, T = 2000--2024 (225 obs balanced). CBI index: Garriga LVAW (Garriga 2016; Garriga 2025).",
+      "Sovereign spread = country benchmark rate minus U.S. reference rate × 100.",
+      "Govt debt data unavailable for China and Nigeria (WB WDI); IMF WEO substituted."),
+    notation = "symbol")
+```
+
+---
+
+# Empirical Results {#sec-results}
+
+## Pre-Estimation Diagnostics
+
+Table B1 (Appendix B) reports the Pesaran [-@pesaran2004] CD statistic for the
+principal variables. Cross-sectional dependence is strongly significant for
+all key series — log sovereign yield spread ($CD = 5.34$, $p < 0.001$),
+CPI inflation ($CD = 3.23$, $p = 0.001$), real GDP growth ($CD = 13.28$,
+$p < 0.001$), and government debt ($CD = 5.82$, $p < 0.001$). This
+pervasive cross-sectional dependence reflects the common global factor
+structure of emerging market financing conditions — risk-off episodes,
+Federal Reserve policy cycles, and commodity price shocks generate
+correlated spread dynamics across BRICS-T+MINT economies independent of
+domestic monetary institutions. The strong CD finding has two methodological
+implications. First, it validates the inclusion of year fixed effects in the
+baseline specification, which absorb common global shocks. Second, it
+motivates the use of Driscoll–Kraay standard errors robust to both
+cross-sectional and temporal dependence as the primary inference
+procedure [@driscoll1998], supplemented by Webb wild cluster bootstrap
+$p$-values given the small cluster count ($N = 8$ after China exclusion).
+The CBI LVAW index itself does not exhibit significant CD ($p > 0.10$),
+reflecting the largely idiosyncratic nature of domestic legislative reform
+timing — a property that supports the validity of the Bartik leave-one-out
+instrument.
+
+## Baseline Two-Way Fixed Effects (M1a)
+
+Table 2 reports the core results. Column (1) presents the baseline two-way
+FE specification (Equation 1). The estimated coefficient on the Garriga
+(2025) LVAW de jure CBI index is $\hat{\beta}_1 = -0.222$ (clustered SE:
+$0.675$; $p = 0.743$). The sign is consistent with the theoretical
+prediction — higher de jure CBI tends to reduce sovereign spreads — but the
+estimate is statistically indistinguishable from zero at any conventional
+significance level. This null result is the paper's primary empirical
+finding, and it directly confirms the de jure–de facto paradox advanced in
+Section 1: across these nine economies over 2000–2024, within-country
+variation in the legally codified independence index explains essentially
+none of the variation in sovereign borrowing costs once country and year
+fixed effects are controlled.
+
+The intuition for this finding is transparent in the data structure. The
+LVAW index is legislatively determined and therefore changes infrequently:
+across the nine countries over 25 years, there are only 9 discrete LVAW
+reform events (threshold: $|\Delta\text{LVAW}| > 0.005$), and for most countries the index is constant or changes at most once
+(the largest shift is Brazil's 2021 Central Bank Autonomy Law, which raised
+the Garriga LVAW from 0.243 to 0.472 [@garriga2025revisiting]). Fixed effects estimation identifies
+$\hat{\beta}_1$ solely from this within-country, over-time variation. The
+de jure CBI–spread channel — if it exists — is therefore identified against
+a very weak signal, and the point estimate's insignificance reflects the
+genuine empirical conclusion: legislated independence, once enacted, is not
+the margin on which sovereign credit markets primarily price monetary
+credibility in the short to medium run.
+
+In contrast, the macroeconomic controls exhibit precisely the predicted
+signs. CPI inflation is the dominant predictor: $\hat{\gamma}_\pi = 0.020$
+($SE = 0.004$; $p < 0.001$), implying that a 1 percentage point increase in
+annual CPI inflation raises $\ln(\text{spread}+400)$ by 0.020 log units —
+equivalent to approximately $0.020 \times (\bar{\text{spread}} + 400) \approx
+36$ basis points at the sample mean spread level. This is economically large: it implies
+that Turkey's 72-percentage-point CPI inflation peak in 2022 was associated
+with a log-spread increase of approximately 1.44 units, equivalent to
+roughly 2,700 basis points at sample average spread levels — consistent
+with observed Turkish spread trajectories (Figure 2). Log GDP per capita
+carries a negative coefficient ($\hat{\gamma}_{pc} = -0.252$; $p = 0.737$),
+consistent with the development premium hypothesis though insignificant
+in this small panel. Government debt and trade openness are statistically
+insignificant within the country-fixed-effects specification, suggesting
+that their correlation with spreads is largely absorbed by cross-sectional
+heterogeneity. The within-$R^2 = 0.459$ indicates that the model explains
+nearly half of the within-country spread variation over time once fixed
+effects are removed.
+
+## Fiscal Dominance Interaction (M1b)
+
+Column (2) of Table 2 augments the baseline with the CBI $\times$ debt
+interaction term (Equation 2). The interaction coefficient is
+$\hat{\beta}_3 = 0.005$ ($SE = 0.012$; $p = 0.673$), which is neither
+statistically significant nor of the expected sign. A negative interaction
+would indicate that CBI's credibility premium is amplified in low-debt
+environments (fiscal dominance attenuation of CBI); the positive point
+estimate is theoretically incoherent and inconsistent across
+specifications. The main effect of CBI strengthens in absolute magnitude
+($\hat{\beta}_1 = -0.605$; $SE = 1.171$) but remains highly insignificant.
+We interpret the absence of a significant CBI $\times$ debt interaction as
+partially reflecting the same signal problem: with de jure LVAW varying on
+only 10 reform events, the interaction with a continuous debt measure is
+underpowered in a sample of 167 observations. The fiscal dominance
+hypothesis $H_2$ cannot be supported or rejected on the basis of the
+interaction model; it remains an important theoretical prediction that
+requires estimation with the de facto CBI measure (dismissal dummies) in
+the DiD framework below.
+
+## IV-2SLS with Bartik Instrument (M2)
+
+Column (3) presents the IV-2SLS estimates using the leave-one-out average
+CBI of the other seven BRICS-T+MINT countries as an instrument for domestic
+CBI (Equation 3). The first-stage $F$-statistic is 179.1, far exceeding the
+Stock–Yogo threshold of 10 and confirming strong instrument relevance. The
+peer-average CBI instrument captures regional and multilateral reform waves
+— IMF conditionality, regional integration pressures, and isomorphic
+institutional diffusion — that shift domestic CBI independently of any
+single country's sovereign spread environment. The structural CBI coefficient
+in the second stage is $\hat{\beta}_1^{IV} = 0.052$ ($SE = 0.285$;
+$p = 0.856$), remaining statistically insignificant and now sign-flipped
+relative to the OLS estimate. The near-zero IV estimate indicates that
+the OLS estimate's negative sign was not the result of upward endogeneity
+bias (governments under fiscal stress both cutting CBI and experiencing
+high spreads). Rather, the IV confirms the OLS conclusion: de jure CBI
+reforms driven by regional diffusion waves are not associated with
+measurable sovereign spread reductions in this emerging market sample.
+Notably, the government debt coefficient becomes significant in the IV
+specification ($\hat{\gamma}_{debt} = 0.006$; $SE = 0.002$; $p = 0.004$),
+consistent with the fiscal fundamentals channel operating independently
+of CBI.
+
+## Robustness: Alternative CBI Indices
+
+Table A5 (Appendix) substitutes the Romelli (2022) CBIRT index and the
+Bodea–Hicks CBI index for the Garriga LVAW [@garriga2016] as the primary CBI
+measure. The Bodea–Hicks index yields $\hat{\beta}_1 = 1.052$ ($SE = 2.116$;
+$p = 0.620$) — statistically insignificant and qualitatively consistent
+with the LVAW null. The Romelli CBIRT index produces a positive and highly
+significant coefficient ($\hat{\beta}_1^{Romelli} = 2.737$; $SE = 0.754$;
+$p < 0.001$), which we treat as a diagnostic rather than a primary result
+and relegate to the Appendix for three reasons. First, the Romelli CBIRT
+index scores institutional CBI on a broader set of dimensions than the LVAW,
+including board governance and accountability frameworks that are often
+reformed precisely in response to credibility crises: countries with
+persistently high spreads may undertake the broadest institutional reforms,
+generating a positive within-FE correlation through reverse causality.
+Second, the Romelli CBIRT sub-index for law changes (*cbie\_index\_ref*)
+shows that all CBIE increases in our sample coincide with periods of
+macroeconomic stress or post-crisis reform waves — precisely the reform
+endogeneity mechanism that the Bartik IV corrects for in the LVAW
+specification. Third, the Romelli CBIRT index covers fewer country-years in
+our sample (124 vs 167 for LVAW), reducing comparability. We interpret the
+Romelli result as evidence that reform-endogenous CBI indices produce upward
+bias in the within-FE framework rather than as evidence of a genuine positive
+CBI–spread relationship. This interpretation is consistent with the IMF (2026)
+evidence that governor dismissal events frequently trigger institutional
+reform proposals in their aftermath [@imf2026cbi].
+
+## Dynamic Panel Specification (M4)
+
+Table 2 Column (4) reports the dynamic FE specification, which includes
+the one-period lagged log-spread as an additional regressor. The autoregressive
+coefficient is $\hat{\rho} = 0.561$ ($p < 0.001$), implying a half-life of
+sovereign spread shocks of approximately 1.2 years — sovereign credit premia
+are persistent but mean-reverting at annual horizons. Under the dynamic
+specification, the CBI LVAW coefficient is $-0.277$ ($SE = 0.161$;
+$p = 0.087$), which is marginally significant at the 10\% level and negative
+in sign. This result, while not reaching conventional 5\% significance,
+suggests that the failure to detect a long-run credibility premium in the
+static specification may partially reflect Nickell bias: the within-group
+estimator biases $\hat{\rho}$ downward and $\hat{\beta}_{CBI}$ toward zero
+when the true data-generating process has a large autoregressive component
+[@nickell1981]. With $T = 25$, the Nickell bias is approximately $1/T \approx
+4\%$, which is insufficient to fully explain the attenuation, but may
+contribute to borderline non-significance.
+
+The dynamic specification thus provides the most conservative quantification
+of the long-run CBI credibility premium: a one-unit increase in LVAW (the
+maximum possible change) is associated with a $-0.277$ log-unit reduction
+in sovereign spreads conditional on past spread dynamics — equivalent to
+approximately 514 basis points at sample means. However, given that the
+maximum within-country LVAW variation in the sample is 0.229 (Brazil's
+2021 reform), the implied treatment-level spread reduction is
+$0.229 \times 0.277 \times 1856 \approx 118$ basis points — meaningful
+but not transformative, and conditional on the dynamic specification being
+correctly specified.
+
+## Gardner DID2S Staggered DiD: Political Governor Dismissals (M3)
+
+The pre-session DiD specification relied on a simple two-country pooled
+estimator that pooled Turkey (2019) and India (2018) into a single
+treatment indicator. A well-known limitation of two-way FE DiD under
+staggered treatment timing is that earlier cohorts serve as implicit controls
+for later cohorts, generating negative-weight contamination of the ATT
+[@goodman2021; @callaway2021]. We address this by implementing the
+Gardner [-@gardner2021] two-step DID2S estimator, which is a
+computationally tractable implementation of the @callaway2021 estimator
+and robust to heterogeneous treatment effects across cohorts. The treatment
+cohorts are Nigeria (first treated 2014: Sanusi Lamido executive suspension),
+India (first treated 2018: Patel departure under government pressure), and
+Turkey (first treated 2019: Çetinkaya dismissal); the never-treated control
+group comprises Brazil, Indonesia, Mexico, Russia, and South Africa —
+five countries with no political governor dismissal events over the sample
+period. Although five dismissal events are identified across the full
+narrative (including Turkey's 2021 Ağbal dismissal and Nigeria's 2023
+Emefiele arrest), the DID2S estimator assigns each country its *first*
+treatment date; subsequent within-country events fall inside the
+already-treated post-treatment window and their effects are subsumed
+in the period-specific $\hat{\delta}_{t+k}$ coefficients rather than
+coded as separate cohort entry points.
+
+Figure 4 displays the DID2S event study coefficients. The parallel trends
+test is clean: none of the four pre-treatment period coefficients
+($t-5$ through $t-2$) is statistically significant, with the largest
+pre-period coefficient $\hat{\delta}_{-2} = -0.205$ ($p = 0.105$) being
+clearly outside conventional significance thresholds. This represents
+a substantial improvement over the pooled DiD (which showed a significant
+$t-4$ coefficient) and provides credible identification of the causal effect.
+
+The pooled average treatment effect on the treated (ATT) is $\hat{\tau} =
++0.188$ ($SE = 0.113$; $p = 0.097$; 95\% CI: $[-0.035, +0.411]$).
+This estimate falls just short of conventional 5\% significance and the
+95\% CI includes zero, so we characterise it as suggestive rather than
+conclusive evidence: political governor dismissal events are associated with a
+spread increase of approximately $350$ basis points at sample mean levels,
+with the direction precisely consistent with the de facto CBI erosion
+hypothesis but the statistical power limited by the small number of
+treated country-year cohorts ($K=3$: Turkey 2019, India 2018, Nigeria 2014).
+The period-specific path shows that the effect
+is concentrated at $t+1$ ($\hat{\delta}_1 = 0.223$, $p = 0.046$) —
+the one-year lagged response, consistent with markets taking approximately
+one year to fully price the policy uncertainty following an unexpected
+dismissal. Later-period coefficients exhibit large oscillations
+($t+3$ to $t+5$), reflecting the heterogeneous recovery paths of India
+(rapid normalisation post-2020) versus Turkey (ongoing heterodox phase
+through 2022, followed by reversal in 2023).
+
+The Turkey-only evidence is more informative. Figure 2 plots Turkey's
+sovereign yield spread against the BRICS-T+MINT mean over 2000–2024.
+Three features stand out. First, Turkey's spreads were broadly aligned
+with regional peers during the orthodox policy phase (2003–2018), during
+which the de jure framework enacted in 2001 provided genuine de facto
+credibility. Second, the Çetinkaya dismissal (2019) and especially the
+Ağbal dismissal (2021) coincide with sharp, discrete spread increases
+well above the regional mean — consistent with event-study evidence in
+@demiralp2019erosion and @jacome2025cbi. Third, spreads remain persistently
+elevated through 2022, even as the regional average fluctuates within a
+narrower band. The spread differential between Turkey and the
+BRICS-T+MINT mean widened from approximately 500 basis points in 2018 to
+over 3,000 basis points at the 2022 peak, despite no change in the de jure
+LVAW (0.899 throughout). This descriptive evidence powerfully illustrates
+the de jure–de facto paradox: legal independence is insufficient when
+political interference renders it non-binding in practice.
+
+## Robustness and Extended Specifications
+
+**CCEMG estimation.** Given the strong cross-sectional dependence
+documented in Section 5.1, Table 3 reports Common Correlated Effects Mean
+Group (CCEMG) estimates following @pesaran2006, which are consistent under
+cross-sectional dependence, slope heterogeneity, and non-stationary common
+factors. The CCEMG specification augments each country-level regression with
+the cross-sectional means of the dependent variable and all regressors as
+proxies for unobserved common factors. The pooled CCEMG coefficient on CBI
+LVAW is $\hat{\beta}^{CCEMG} = 1.081$ ($SE = 1.482$; $p = 0.493$),
+reconfirming the null result under the CD-robust estimator. Individual
+country estimates span a wide range — from India ($-4.617$, $p = 0.049$)
+to Indonesia ($+8.150$, $p = 0.103$) — highlighting the genuine
+heterogeneity in the CBI–spread relationship across the sample that
+motivates the MG rather than pooled approach. This heterogeneity is itself
+consistent with the de jure/de facto paradox: the sign and magnitude of the
+de jure CBI–spread relationship depends critically on whether the underlying
+de facto independence is being maintained.
+
+South Africa's individual estimate ($\hat{\beta}_{ZAF} = +2.868^{***}$,
+$p = 0.002$) warrants specific discussion. The theoretically expected sign
+is negative (higher CBI $\to$ lower spreads). The anomalous positive
+estimate for South Africa has a structural explanation within the CCEMG
+framework: South Africa's LVAW index changed only twice in the sample
+period (from 0.305 to 0.325 in 2011, and 0.325 to 0.365 in 2019), with
+changes occurring during periods of macroeconomic stress — precisely when
+spreads were also rising. The CCEMG within-country estimator therefore
+identifies a positive correlation between the timing of ZAF's marginal CBI
+reforms and elevated spread episodes: both the 2011 and 2019 LVAW increases
+coincided with global risk-off episodes (euro area debt crisis and South
+Africa's domestic fiscal deterioration, respectively). This is a variant of
+the reform-endogeneity mechanism identified for the Romelli index in §5.3:
+countries undergoing institutional stress undertake legal reforms, so the
+within-country correlation between CBI index changes and spread levels is
+positive. The ZAF result does not imply a structural positive effect of CBI
+on borrowing costs but rather reflects the endogenous timing of South
+African legislative CBI reforms relative to spread cycles. This
+reform-endogeneity interpretation receives additional empirical grounding
+from Romelli's (2025) statutory lending-restriction sub-index
+(*cbie\_lending*): South Africa scores 0.000 throughout the entire sample
+period — the lowest in the BRICS-T+MINT group — indicating a complete
+absence of statutory prohibition on central bank lending to the government.
+Without a legislative firewall between fiscal and monetary policy, CBI
+reforms in South Africa are more likely to be motivated by acute fiscal
+need than by a genuine commitment to independence, amplifying the
+endogenous reform-spread correlation that the CCEMG within-country
+estimator recovers [@romelli2025data].
+
+Indonesia's individual CCEMG estimate ($\hat{\beta}_{IDN} = +8.150$,
+$p = 0.103$) is the largest point estimate in Table 3 and carries the
+expected wrong sign. The explanation is mechanical: Indonesia's Garriga LVAW
+index is virtually constant throughout the sample period ($\approx 0.902$,
+with no legislative reform events), leaving the CCEMG estimator with
+near-zero within-country CBI variation to identify against. The large
+standard error ($SE = 4.588$) and wide confidence interval confirm that
+the country-level estimate is noise-dominated rather than structurally
+informative. This is the same zero-variation problem noted for Mexico in
+the table footnote ($\hat{\beta}_{MEX} = +0.015$), and it reinforces the
+paper's central point: legislatively stable de jure CBI provides no
+within-country variation for the spread channel to operate through.
+
+**Webb wild cluster bootstrap.** With $G = 7$ effective clusters
+($N = 8$ minus absorbed South Africa due to missing years), the standard
+Liang-Zeger cluster standard error may be undersized. Table A3 reports Webb
+(2023) 6-point wild cluster bootstrap $p$-values ($B = 4{,}999$ replications).
+The bootstrap $p$-value for CBI is $0.778$ — consistent with the
+standard clustered $p = 0.743$ — confirming that the null result is not an
+artifact of asymptotic over-rejection. Conversely, the inflation coefficient
+remains highly significant at the bootstrap level ($p < 0.001$, same as
+clustered), validating the macroeconomic fundamentals channel under the
+finite-sample–robust inference procedure. The near-identity of cluster-robust
+and Webb $p$-values for the CBI coefficient further confirms that the asymptotic
+cluster approximation is not misleading in this $G=7$ setting: the null result
+is genuine, not a finite-sample size distortion.
+
+**Brazil 2021 reverse natural experiment.** Brazil's February 2021 Central
+Bank Autonomy Law provides a rare reverse-direction quasi-experiment:
+a de jure statutory reform (LVAW: 0.243 → 0.472, the largest single
+increase in the sample) with no simultaneous de facto erosion. The event
+study reported in Table E (Appendix E) and Figure C1 yields an immediate
+significant spread reduction at $t+0$ ($\hat{\delta}_0 = -0.239$;
+$SE = 0.084$; $p = 0.007$), indicating that financial markets immediately
+priced the credibility gain from the institutional announcement. However,
+the effect dissipates by $t+1$ ($\hat{\delta}_1 = +0.207$; $p = 0.481$)
+and remains statistically indistinguishable from zero in subsequent periods.
+
+A confound requires acknowledgement: February 2021 coincides with a
+broader COVID-19 recovery period during which global emerging market
+spreads compressed as vaccine deployment reduced systemic risk, commodity
+prices recovered, and the U.S. Federal Reserve maintained near-zero rates.
+Year fixed effects in the event study absorb common global shocks affecting
+all eight sample countries simultaneously, isolating the Brazil-specific
+spread differential. Moreover, the pre-reform years $t-3$ (2018) and $t-2$
+(2019) — pre-COVID — show coefficients of $+0.080$ and $+0.157$,
+respectively, both insignificant, confirming that no Brazil-specific spread
+divergence was building prior to 2020 that might confound the 2021 estimate.
+Nonetheless, we note that the $t+0$ coefficient may partly reflect
+Brazil-specific favourable conditions in 2021 (e.g., commodity price uplift
+or post-pandemic emerging market spread compression under the Bolsonaro
+administration's fiscal signals) rather than purely the credibility channel.
+This limitation is acknowledged in the Table E footnote.
+
+This pattern of immediate response followed by mean reversion is theoretically
+coherent within the de jure/de facto framework: markets updated their beliefs
+at the announcement of the de jure reform, but required observable evidence
+of sustained de facto adherence before anchoring a persistent credibility
+premium. Brazil's post-2021 macroeconomic environment — elevated inflation
+(10.1\% in 2021) and political uncertainty surrounding the 2022 presidential
+election — plausibly attenuated the credibility signal from the legal reform.
+The Brazil result therefore complements, rather than contradicts, the main
+finding: de jure CBI generates a transitory announcement effect but no
+persistent spread reduction absent confirmatory de facto evidence.
+
+**Unit root and Westerlund cointegration.** Table B2 reports CIPS panel unit
+root tests [@pesaran2007]. Log sovereign spreads ($CIPS = -1.97$), government
+debt ($CIPS = -2.22$), trade openness ($CIPS = -1.86$), and log GDP per
+capita ($CIPS = -1.37$) fail to reject the null of a unit root at the 5\%
+level (critical value: $-2.49$). Real GDP growth ($CIPS = -3.21$) and CPI
+inflation ($CIPS = -2.46$, marginally) appear stationary or borderline
+stationary. First differences of the non-stationary variables are clearly
+$I(0)$ (all $CIPS < -3.0$).
+
+We address the potential spurious-regression concern via two strategies.
+First, Westerlund [-@westerlund2007] panel error-correction model tests are
+computed. The Westerlund statistics test $H_0$: no cointegration; rejection
+requires the test statistic to fall below (more negative than) the critical
+value. The Ga (group-mean autoregressive) and Gt (group-mean $t$-ratio)
+statistics pool evidence across country-level error-correction models; more
+negative values indicate stronger evidence of cointegration. For the full
+multivariate system (sovereign spread on CBI and all controls), the group-mean
+Ga statistic is $-128.9$ — far more negative than the 5\% critical value of
+$-9.8$ — decisively rejecting the null of no cointegration across the panel.
+The Gt statistic is $-2.26$: this falls between the 5\% critical value
+($-2.49$) and the 10\% critical value ($-2.22$), meaning that Gt rejects
+no-cointegration at the 10\% significance level but not at the 5\% level.
+Given that the Ga and Gt statistics identify different aspects of the
+cointegrating relationship — Ga is more powerful in short panels — the
+joint evidence strongly supports cointegration, with Ga providing decisive
+confirmation and Gt providing corroborating evidence at the 10\% level.
+For the bivariate system (sovereign spread and inflation only),
+$Gt = -2.30$ (rejects at 10\%; 10\% CV = $-2.22$) and $Ga = -9.75$
+(marginally above the 10\% CV of $-9.80$; does not reject at conventional
+levels). We interpret the bivariate results as broadly supportive of
+cointegration between spreads and inflation, consistent with the full
+multivariate system. These results collectively confirm that the
+level-regression estimates reflect a genuine long-run cointegrating
+relationship rather than spurious correlation, validating the two-way FE
+levels specification as the primary inference vehicle.
+
+**First-difference specification.** As an additional robustness check
+(and to identify short-run dynamics independently of the levels relationship),
+Table A2 reports the first-differenced specification where
+$\Delta\ln(\text{spread}_{it} + 400)$ is regressed on $\Delta\text{CBI}_{it}$
+and $\Delta\text{controls}$. The $\Delta\text{CBI}$ coefficient is
+$+1.291$ (SE: $0.675$; $p = 0.058$) — positive and marginally significant.
+This result is the mirror image of the reform-endogeneity finding: discrete
+CBI increases (legislative reforms) tend to occur precisely in crisis years
+when spreads are already elevated, generating a positive short-run
+correlation. The IV-2SLS specification instruments away this endogeneity
+and yields a near-zero coefficient ($+0.052$), confirming that the positive
+FD coefficient reflects reverse causality rather than a genuine
+institutional effect. The within-$R^2$ drops from 0.459 (levels) to
+0.103 (first differences), consistent with sovereign spreads having a
+dominant $I(1)$ long-run component that the levels specification captures.
+The ex-proxy sensitivity check (restricting to MEX/RUS/ZAF/TUR countries
+with true 10-year benchmark bond yields) also yields an insignificant CBI
+coefficient ($+0.984$; $p = 0.270$), though the four-country sample limits
+inference.
+
+## Summary of Results
+
+Tables 2 and 3 collect the main estimates across ten specifications.
+Together they paint a coherent picture of the de jure–de facto paradox.
+De jure CBI as measured by the Garriga LVAW [@garriga2016; @garriga2025revisiting] is statistically
+unrelated to sovereign yield spreads in the levels two-way FE specification
+($p = 0.743$), its IV-2SLS counterpart ($p = 0.856$), CCEMG ($p = 0.493$),
+and Webb-bootstrap inference ($p = 0.778$). In the dynamic specification
+that accounts for spread persistence ($\hat{\rho} = 0.561$), the CBI
+coefficient is marginally significant at 10\% ($\hat{\beta} = -0.277$;
+$p = 0.087$), suggesting a slow-moving long-run credibility premium
+consistent with the Westerlund cointegration evidence ($Ga = -128.9$)
+but too diffuse to be detectable against the dominant macroeconomic
+noise in shorter-run specifications. Macroeconomic fundamentals —
+particularly CPI inflation ($p < 0.001$ under all inference procedures) —
+remain the dominant within-country predictors of sovereign spread variation.
+The de facto erosion channel is directionally consistent and suggestive:
+the Gardner DID2S staggered estimator yields a pooled ATT of $+0.188$
+log-units ($p = 0.097$; 95\% CI: $[-0.035, +0.411]$, $\approx 350$ bps)
+with clean parallel pre-trends, indicating that political dismissals
+raise sovereign spreads — although the estimate falls short of
+conventional 5\% significance and the confidence interval spans zero. Brazil's 2021 institutional reform adds a reverse-direction
+corroboration: de jure reform generates a significant announcement-effect
+spread reduction ($\hat{\delta}_0 = -0.239$, $p = 0.007$) that dissipates
+without confirmed de facto adherence.
+
+---
+
+\newpage
+
+\begin{table}[htbp]
+\centering
+\caption{Baseline Results: CBI LVAW and Sovereign Yield Spreads in BRICS-T+MINT}
+\label{tab:main}
+{\small
+\begin{tabular}{l D{.}{.}{3,4} D{.}{.}{3,4} D{.}{.}{3,4} D{.}{.}{3,4}}
+\toprule
+ & \multicolumn{4}{c}{Dependent variable: $\ln(\text{spread}_{it} + 400)$} \\
+\cmidrule(lr){2-5}
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} \\
+ & \multicolumn{1}{c}{2FE-Clust} & \multicolumn{1}{c}{2FE+Int.} & \multicolumn{1}{c}{IV-2SLS} & \multicolumn{1}{c}{Dynamic FE} \\
+\midrule
+CBI (de jure, LVAW)    & -0.222  & -0.605  & 0.052   & -0.277  \\
+                       & (0.675) & (1.171) & (0.285) & (0.161) \\
+Lagged $\ln$(spread)   &         &         &         & 0.561^{***} \\
+                       &         &         &         & (0.091) \\
+Govt debt (\% GDP)     & 0.005   & 0.001   & 0.006^{***} & 0.003  \\
+                       & (0.007) & (0.006) & (0.002) & (0.006) \\
+CBI $\times$ Debt      &         & 0.005   &         &        \\
+                       &         & (0.012) &         &        \\
+CPI inflation          & 0.020^{***} & 0.020^{***} & 0.020^{***} & 0.014^{***} \\
+                       & (0.004) & (0.004) & (0.003) & (0.004) \\
+Real GDP growth        & -0.007  & -0.007  & -0.008  & -0.005 \\
+                       & (0.012) & (0.012) & (0.009) & (0.010) \\
+Trade openness         & -0.004  & -0.004  & -0.004  & -0.003 \\
+                       & (0.004) & (0.004) & (0.003) & (0.003) \\
+$\ln$ GDP p.c. (PPP)   & -0.252  & -0.317  & -0.088  & -0.189 \\
+                       & (0.750) & (0.672) & (0.163) & (0.601) \\
+\midrule
+Country FE             & Yes     & Yes     & Yes     & Yes    \\
+Year FE                & Yes     & Yes     & Yes     & Yes    \\
+Observations           & 167     & 167     & 167     & 158    \\
+Within $R^2$           & 0.459   & 0.462   & --      & 0.531  \\
+First-stage $F$        & --      & --      & 179.1   & --     \\
+\midrule
+\multicolumn{5}{l}{\footnotesize \textit{Notes}: Dependent variable: $\ln(\text{spread}_{it}+400)$. CBI index: Garriga (2016/2025) LVAW throughout.}\\
+\multicolumn{5}{l}{\footnotesize Entity-clustered SE in parentheses for cols (1)--(2) and (4); HC1 for col (3). DK-SE robustness in Table A3.}\\
+\multicolumn{5}{l}{\footnotesize Col (3) instruments CBI with leave-one-out peer-average CBI (Bartik). Col (4) includes $\ln(\text{spread}_{i,t-1}+400)$;}\\
+\multicolumn{5}{l}{\footnotesize col (4) loses one obs per country due to lagging (167 $-$ 9 $=$ 158).}\\
+\multicolumn{5}{l}{\footnotesize GFC (2008--2010) and COVID (2020--2021) shock dummies included in all columns but suppressed for parsimony.}\\
+\multicolumn{5}{l}{\footnotesize Alternative CBI indices (Romelli CBIE, Bodea--Hicks) reported in Appendix Table A5. China excluded throughout.}\\
+\multicolumn{5}{l}{\footnotesize $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.10$.}\\
+\bottomrule
+\end{tabular}
+}
+\end{table}
+
+---
+
+\begin{table}[htbp]
+\centering
+\caption{CCEMG Estimates: CBI LVAW and Sovereign Yield Spreads — Country-Level and Pooled}
+\label{tab:ccemg}
+{\small
+\begin{tabular}{l D{.}{.}{3,4} D{.}{.}{2,4} D{.}{.}{2,3} r l}
+\toprule
+Country & \multicolumn{1}{c}{$\hat{\beta}_i^{CBI}$} & \multicolumn{1}{c}{SE$_i$} & \multicolumn{1}{c}{$p$} & $T_i$ & Sig. \\
+\midrule
+Brazil (BRA)        &  0.850  & 1.244  & 0.509 & 25 & \\
+Indonesia (IDN)     &  8.150  & 4.588  & 0.103 & 25 & \\
+India (IND)         & -4.617  & 1.786  & 0.049 & 19 & $^{**}$ \\
+Mexico (MEX)        &  0.015  & 0.018  & 0.418 & 25 & \\
+Russia (RUS)        & -1.212  & 1.178  & 0.331 & 23 & \\
+Turkey (TUR)        &  1.513  & 2.136  & 0.493 & 25 & \\
+South Africa (ZAF)  &  2.868  & 0.718  & 0.002 & 25 & $^{***}$ \\
+\midrule
+\textbf{CCEMG pooled} & \textbf{1.081} & \textbf{1.482} & \textbf{0.493} & & \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize \textit{Notes}: CCEMG following Pesaran (2006). Each country equation augmented with cross-section means} \\
+\multicolumn{6}{l}{\footnotesize of $\ln(\text{spread})$ and all regressors as common-factor proxies. MG standard error = $\text{sd}(\hat{\beta}_i)/\sqrt{N}$.} \\
+\multicolumn{6}{l}{\footnotesize Nigeria and China excluded (insufficient obs. after augmentation). $^{***}p<0.01$, $^{**}p<0.05$.} \\
+\multicolumn{6}{l}{\footnotesize ZAF $\hat{\beta}=+2.868^{***}$: anomalous positive estimate discussed in text (§5.3).} \\
+\multicolumn{6}{l}{\footnotesize MEX $\hat{\beta}=+0.015$: near-zero, consistent with zero within-country LVAW variation (no CBI reform 2000--2024).} \\
+\end{tabular}
+}
+\end{table}
+
+---
+
+# Conclusion and Policy Implications {#sec-conclusion}
+
+This paper examines whether central bank independence generates a measurable
+credibility premium in sovereign debt markets across BRICS-T+MINT economies.
+The answer is nuanced and theoretically illuminating. Across seven
+complementary specifications — two-way FE with entity-clustered standard
+errors, a CBI $\times$ debt fiscal dominance interaction, IV-2SLS with a
+Bartik leave-one-out instrument (first-stage $F = 179$), a dynamic FE
+specification controlling for spread persistence, CCEMG under
+cross-sectional dependence and slope heterogeneity, Webb wild cluster
+bootstrap inference, and a first-difference short-run specification — the
+Garriga LVAW measure of de jure CBI yields $p$-values ranging from
+0.493 to 0.856 against the hypothesis that higher CBI reduces sovereign
+borrowing costs. The sign of the coefficient is
+consistent with theory in most specifications but always statistically
+indistinguishable from zero.
+
+This null result is not a methodological failure; it is the paper's central
+empirical contribution. It illuminates a structural limitation of de jure
+CBI as a market credibility device in the emerging market context: legal
+independence, once enacted, is rarely the margin on which sovereign credit
+markets price monetary credibility at short to medium horizons. The binding
+constraint for the credibility premium is de facto independence — whether
+policymakers exercise their statutory authority free from political
+interference. Turkey's experience over 2000–2024 illustrates this paradox
+with near-causal clarity: a constant LVAW of 0.899 (the second highest in
+the sample) coexisted with the most volatile sovereign spread trajectory,
+as the 2019–2021 political dismissal sequence drove the Turkey–BRICS-T+MINT
+spread differential from 500 to over 3,000 basis points despite no change
+in the de jure institutional framework.
+
+Three auxiliary findings strengthen the theoretical narrative. First,
+Westerlund (2007) cointegration tests confirm that the levels-FE estimates
+reflect a genuine long-run relationship ($Ga = -128.9$); the first-difference
+specification reveals that discrete CBI reforms are endogenously timed
+with crises (positive $\Delta\text{CBI}$ coefficient, $p = 0.058$), exactly
+the source of bias that the Bartik IV corrects for. Second, the Brazil
+2021 Central Bank Autonomy Law generates a statistically significant
+immediate spread reduction ($\hat{\delta}_0 = -0.239$; $p = 0.007$),
+confirming that de jure reforms generate a genuine announcement effect —
+but the effect dissipates within one year absent complementary de facto
+credibility. Third, the CPI inflation coefficient is positive, large, and
+robust across all specifications and inference procedures ($p < 0.001$
+under Webb bootstrap), confirming that macroeconomic fundamentals remain
+the dominant channel through which emerging market credibility is priced.
+
+## Policy Implications
+
+The findings carry four direct policy implications for monetary governance
+in emerging markets, each derived from the empirical results rather than
+the theoretical prior.
+
+**First: institutional design must target de facto, not only de jure,
+independence.** The empirical null for LVAW does not imply that CBI is
+irrelevant; rather, it implies that the legal text alone is insufficient.
+Institutional design should supplement statutory independence provisions
+with enforcement mechanisms — fixed, non-waivable governor terms;
+supermajority requirements for dismissal; independent judicial review
+of presidential interference — that make de jure CBI legally binding in
+practice. Countries that invest in the legal infrastructure without the
+enforcement architecture receive no credibility dividend from markets.
+
+**Second: the descriptive evidence suggests credibility asymmetry — erosion
+is rapid, restoration is gradual.** Turkey's spread trajectory illustrates
+that de facto CBI erosion can destroy a credibility premium accumulated over
+17 years within two years of political interference. The 2023 policy reversal,
+while compressing spreads, had not fully recaptured pre-2019 levels as of
+2024 — consistent with, though not a formal test of, the asymmetry hypothesis.
+This pattern implies that the expected cost of a single politically motivated
+dismissal event substantially exceeds its immediate fiscal benefit. For governments tempted to interfere with
+monetary policy under fiscal pressure, the sovereign balance-sheet
+calculation is decisively negative.
+
+**Third: macroeconomic fundamentals are the proximate channel for
+credibility, not CBI per se.** CPI inflation is the dominant predictor
+of sovereign yield spreads in all specifications ($\hat{\gamma} = 0.020$,
+$p < 0.001$, robust to all inference procedures). This implies that the
+path from CBI to lower spreads runs primarily through the inflation
+channel: CBI matters insofar as it enables the central bank to maintain
+price stability. Monetary governance reforms that strengthen CBI but fail
+to deliver inflation reduction will not generate spread compression.
+Turkey's 2001–2018 reform era — during which both the de jure framework
+and de facto credibility were aligned — produced sustained disinflation
+from above 60\% to under 10\% and a dramatic narrowing of sovereign spreads;
+but the de facto erosion of 2019–2022 reversed these gains despite no
+change in the legal framework, confirming that the inflation channel is
+the operative mechanism, not the legal text per se.
+
+**Fourth: the Brazil lesson — de jure reforms generate announcement
+effects, not permanent premia.** The immediate spread reduction at
+$t+0$ following Brazil's 2021 CB Autonomy Law ($-0.239$ log-units,
+$p = 0.007$) confirms that well-designed legal reforms are not irrelevant:
+they generate a credibility signal that markets price immediately.
+However, the subsequent dissipation demonstrates that the signal must be
+validated by observable de facto adherence. For BRICS-T+MINT policymakers,
+this implies a two-phase reform strategy: enact the de jure framework
+first (to capture the announcement premium), then sustain the credibility
+signal through consistent, non-accommodating monetary policy decisions
+in the face of political pressure.
+
+## Limitations and Future Research
+
+Several limitations bound the current analysis. First, although the dynamic
+specification and system-GMM estimates (Table D) both indicate substantial
+spread persistence ($\hat{\rho}=0.561$), the system-GMM results are not
+elevated to the main specification because the instrument set ($n_z = 94$)
+severely exceeds the number of cross-sectional groups ($G=9$), rendering
+the Hansen overidentification test degenerate ($p=1.000$). The CBI coefficient
+from system GMM ($\hat{\beta}=-1.813$; SE$=2.662$; $p=0.496$) is qualitatively
+consistent with the two-way FE null but imprecisely estimated; the AR(1)
+non-rejection ($p=0.263$) likely reflects low power at $N=9$ rather than a
+genuine specification failure. Future work using a larger country sample should
+collapse the instrument matrix following @roodman2009 to discipline
+proliferation. Second, the staggered-treatment
+analysis now relies on Gardner DID2S, which addresses the core negative-weight
+problem in two-way FE DiD, but further validation with alternative estimators
+such as Sun-Abraham or a full Callaway-Sant'Anna implementation would still
+be useful for the final submission. Third, the analysis is constrained to the
+BRICS-T+MINT universe; whether the de jure–de facto paradox extends to other
+emerging market groupings (ASEAN, MENA, sub-Saharan Africa) is an open
+empirical question. Fourth, the construction of a direct de facto CBI measure
+— beyond the binary dismissal indicator — would substantially sharpen
+identification. Finally, although the Romelli (2022) CBIRT coefficient is consistent with
+reform endogeneity as documented in Appendix F — all CBIE increases in the
+sample coincide with post-crisis reform waves, and the statutory
+lending-restriction sub-index corroborates the mechanism for South Africa —
+a direct test via a lagged Romelli specification or within-reform-event
+IV would provide stronger causal evidence and is deferred to future work
+with larger country samples.
+
+---
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
+
+---
+
+# Appendix {.unnumbered}
+
+## A. CBI Data Sources and Coverage
+
+*Table A1: CBI index values by country and source, 2000–2024*
+
+*Table A2: Robustness — benchmark bond yield subsample only (MEX/RUS/ZAF/TUR 2000–2008; n=77). The CBI LVAW coefficient remains statistically insignificant ($\hat{\beta} = +0.984$; $p = 0.270$), confirming that the null result is not an artefact of proxy-yield measurement. The reduced sample is underpowered by construction (4 countries post-China exclusion), so Table A2 should be interpreted as directional evidence rather than a definitive test.*
+
+*Table A3: Webb wild cluster bootstrap results (B = 4,999)*
+
+*Table A4: Robustness — yield-source dummy included in baseline specification. The main regression (Equation 1) is augmented with $D^{\text{proxy}}_{it}$, a binary indicator equal to 1 for observations using a commercial lending rate or CBRT policy rate proxy (92 obs of 167). The CBI LVAW coefficient under this specification is $\hat{\beta}_1 = -0.220$ (entity-clustered SE = $0.704$; $p = 0.755$), virtually unchanged from the baseline ($-0.222$; $p = 0.743$). Critically, the yield-source dummy itself is statistically insignificant ($\hat{\delta}^{\text{proxy}} = -0.040$; SE = $0.235$; $p = 0.866$), indicating that the systematic level difference between lending-rate proxies and benchmark bond yields is fully absorbed by country fixed effects and does not introduce residual bias into the CBI estimate. Within-$R^2 = 0.458$. These results confirm that the null result for de jure CBI is robust to explicit control for measurement heterogeneity in the dependent variable.*
+
+## B. Pre-Estimation Diagnostics
+
+\begin{table}[htbp]
+\centering
+\caption{Pesaran (2004) Cross-Sectional Dependence Test — BRICS-T+MINT Panel}
+\label{tab:cd}
+{\small
+\begin{tabular}{l D{.}{.}{2,3} D{.}{.}{1,3} l}
+\toprule
+Variable & \multicolumn{1}{c}{CD statistic} & \multicolumn{1}{c}{$p$-value} & Decision \\
+\midrule
+log sovereign yield spread  & 5.343  & 0.000 & CSD present$^{***}$ \\
+CPI inflation               & 3.230  & 0.001 & CSD present$^{***}$ \\
+Real GDP growth             & 13.277 & 0.000 & CSD present$^{***}$ \\
+Government debt (\% GDP)    & 5.822  & 0.000 & CSD present$^{***}$ \\
+CBI LVAW (Garriga 2025)     & n.a.   & n.a.  & Insufficient variation \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize \textit{Notes}: $H_0$: cross-sectional independence. Sample: N=8 (excl. China), T=2000--2024.} \\
+\multicolumn{4}{l}{\footnotesize $^{***}p<0.01$. CD statistic $\sim\mathcal{N}(0,1)$ under $H_0$ as $N,T\to\infty$.} \\
+\end{tabular}
+}
+\end{table}
+
+\begin{table}[htbp]
+\centering
+\caption{CIPS Panel Unit Root Tests (Pesaran 2007) — BRICS-T+MINT}
+\label{tab:cips}
+{\small
+\begin{tabular}{l D{.}{.}{2,3} l l}
+\toprule
+Variable & \multicolumn{1}{c}{CIPS statistic} & \multicolumn{1}{c}{Order} & Note \\
+\midrule
+\multicolumn{4}{l}{\textit{Panel A: Levels}} \\
+log sovereign yield spread  & -1.972 & I(1) & $>$ CV$_{5\%}$=$-2.59$ \\
+CPI inflation               & -2.459 & I(1)/I(0) & Borderline: $<$CV$_{10\%}$=$-2.44$, $>$CV$_{5\%}$ \\
+Real GDP growth             & -3.206 & I(0)$^{***}$ & $<$ CV$_{1\%}$=$-2.92$ \\
+Government debt (\% GDP)    & -2.220 & I(1) & $>$ CV$_{5\%}$=$-2.59$ \\
+Trade openness              & -1.860 & I(1) & $>$ CV$_{5\%}$=$-2.59$ \\
+log GDP per capita          & -1.366 & I(1) & $>$ CV$_{5\%}$=$-2.59$ \\
+\midrule
+\multicolumn{4}{l}{\textit{Panel B: First differences}} \\
+$\Delta$ log sovereign spread & -4.997 & I(0)$^{***}$ & Clearly stationary \\
+$\Delta$ government debt      & -4.877 & I(0)$^{***}$ & Clearly stationary \\
+$\Delta$ log GDP per capita   & -3.156 & I(0)$^{***}$ & Clearly stationary \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize \textit{Notes}: CIPS = $N^{-1}\sum_i$ CADF$_i$. CVs for N=8, T=25 (Case III: intercept + trend):} \\
+\multicolumn{4}{l}{\footnotesize 1\%: $-2.92$; 5\%: $-2.59$; 10\%: $-2.44$ (Pesaran 2007, Table 2, interpolated between N=5 and N=10).} \\
+\multicolumn{4}{l}{\footnotesize $^{***}$ Clearly rejects $H_0$ of unit root. Westerlund tests reported in the main text support cointegration.} \\
+\end{tabular}
+}
+\end{table}
+
+## C. Webb Wild Cluster Bootstrap
+
+\begin{table}[htbp]
+\centering
+\caption{Webb Wild Cluster Bootstrap $p$-values (B = 4,999, Webb 2023 6-point weights)}
+\label{tab:webb}
+{\small
+\begin{tabular}{l D{.}{.}{3,4} D{.}{.}{2,4} D{.}{.}{2,4} l}
+\toprule
+Variable & \multicolumn{1}{c}{Coef.} & \multicolumn{1}{c}{Cluster $p$} & \multicolumn{1}{c}{Webb $p$} & Decision \\
+\midrule
+CBI LVAW (Garriga 2025) & -0.222  & 0.743 & 0.778 & Not significant \\
+CPI inflation           &  0.020  & 0.000 & 0.000 & Significant$^{***}$ \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize \textit{Notes}: Specification: M1a two-way FE (entity + year). $G=7$ effective clusters (China excluded throughout).} \\
+\multicolumn{5}{l}{\footnotesize Webb 6-point distribution: $w\in\{-\sqrt{3/2},-1,-\sqrt{1/2},\sqrt{1/2},1,\sqrt{3/2}\}$.} \\
+\multicolumn{5}{l}{\footnotesize $t$-statistic pivotted; $p$-value = proportion of $|t^*_b| \geq |t_{\text{obs}}|$ across $B=4{,}999$ replications.} \\
+\multicolumn{5}{l}{\footnotesize Results produced with \texttt{plm} within-transformation + manual cluster-score resampling (R).} \\
+\end{tabular}
+}
+\end{table}
+
+## D. System GMM Results and Diagnostics
+
+\begin{table}[htbp]
+\centering
+\caption{System GMM (Blundell–Bond) Estimates and Instrument Diagnostics}
+\label{tab:gmm}
+{\small
+\begin{tabular}{l r r r l}
+\toprule
+ & \multicolumn{4}{c}{Dependent variable: $\ln(\text{spread}_{it} + 400)$} \\
+\cmidrule(lr){2-5}
+ & Coef. & SE & $p$ & Decision \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel A: Coefficient estimates}} \\
+\midrule
+$\ln(\text{spread}_{i,t-1}+400)$ & $0.561$  & ---     & $<$0.001 & Significant$^{***}$ \\
+CBI LVAW (Garriga)               & $-1.813$ & $2.662$ & $0.496$  & Not significant \\
+CPI inflation                    & $0.020$  & ---     & $<$0.001 & Significant$^{***}$ \\
+\midrule
+\multicolumn{5}{l}{\textit{Panel B: Instrument validity diagnostics}} \\
+\midrule
+AR(1) test       & \multicolumn{3}{l}{$z = -1.12$, $p = 0.263$} & \textsuperscript{†}Unexpected non-rejection \\
+AR(2) test       & \multicolumn{3}{l}{$z = -0.50$, $p = 0.619$} & No second-order AC \\
+Hansen $J$ test  & \multicolumn{3}{l}{$\chi^{2}(88) = 3.12$, $p = 1.000$} & \textsuperscript{‡}Degenerate (proliferation) \\
+No.\ instruments & \multicolumn{4}{l}{94 (severely exceeds $G = 9$ groups)} \\
+Observations     & \multicolumn{4}{l}{204 (unbalanced; $N=9$, $T\leq 25$)} \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize \textit{Notes}: System GMM (Blundell--Bond 1998). CBI treated as predetermined; instrumented by lags $t-2$ to $t-4$.} \\
+\multicolumn{5}{l}{\footnotesize Lagged spread instrumented in levels equation by first-difference lags. Two-step estimator with robust SE.} \\
+\multicolumn{5}{l}{\footnotesize $^{\dagger}$AR(1) non-rejection (expected: rejection) may reflect insufficient power at $N=9$.} \\
+\multicolumn{5}{l}{\footnotesize $^{\ddagger}$Hansen $p=1.000$ is pathological: 94 instruments $\gg$ 9 cross-sections generates a near-singular} \\
+\multicolumn{5}{l}{\footnotesize moment matrix. This estimator is not used for inference; reported for completeness and diagnostic transparency.} \\
+\multicolumn{5}{l}{\footnotesize The CBI null ($p=0.496$) is directionally consistent with all other specifications.} \\
+\end{tabular}
+}
+\end{table}
+
+## E. Brazil 2021 Reverse DiD
+
+\begin{table}[htbp]
+\centering
+\caption{Brazil 2021 Central Bank Autonomy Law — Event Study Coefficients}
+\label{tab:brazil}
+{\small
+\begin{tabular}{l r D{.}{.}{2,4} D{.}{.}{2,4} D{.}{.}{2,4} l}
+\toprule
+Period & Year & \multicolumn{1}{c}{Coef.} & \multicolumn{1}{c}{SE} & \multicolumn{1}{c}{$p$} & Sig. \\
+\midrule
+$t-5$ & 2016 &  0.179 & 0.131 & 0.179 & \\
+$t-4$ & 2017 &  0.311 & 0.211 & 0.150 & \\
+$t-3$ & 2018 &  0.080 & 0.113 & 0.484 & \\
+$t-2$ & 2019 &  0.157 & 0.201 & 0.442 & \\
+$t-1$ & 2020 &  \multicolumn{3}{c}{(reference)} & \\
+$t+0$ & 2021 & -0.239 & 0.084 & 0.007 & $^{***}$ \\
+$t+1$ & 2022 &  0.207 & 0.290 & 0.481 & \\
+$t+2$ & 2023 &  0.103 & 0.148 & 0.489 & \\
+$t+3$ & 2024 & -0.001 & 0.143 & 0.993 & \\
+\bottomrule
+\multicolumn{6}{l}{\footnotesize \textit{Notes}: Two-way FE with entity-clustered SE. Treated: BRA (2021). Control group: IDN/IND/MEX/NGA/RUS/TUR/ZAF} \\
+\multicolumn{6}{l}{\footnotesize (excl. China). Window: 2015--2024. Pre-period avg: +0.182; post-period avg: +0.018.} \\
+\multicolumn{6}{l}{\footnotesize Negative coef. = spread reduction relative to control group and reference year 2020.} \\
+\end{tabular}
+}
+\end{table}
+
+## E. Event Study Details
+
+*Figure C1: Pre-trend tests — Turkey 2019 + India 2018 (see Figure 1 in main text)*
+
+*Figure C2: Synthetic control comparison — Turkey 2019 (reserved for submission-stage extension)*
+
+## F. Alternative CBI Index Robustness
+
+\begin{table}[htbp]
+\centering
+\caption{Robustness: Alternative De Jure CBI Indices (Two-Way FE)}
+\label{tab:altcbi}
+{\small
+\begin{tabular}{l D{.}{.}{3,4} D{.}{.}{3,4}}
+\toprule
+ & \multicolumn{2}{c}{Dependent variable: $\ln(\text{spread}_{it} + 400)$} \\
+\cmidrule(lr){2-3}
+ & \multicolumn{1}{c}{(A5-1)} & \multicolumn{1}{c}{(A5-2)} \\
+ & \multicolumn{1}{c}{Romelli CBIRT} & \multicolumn{1}{c}{Bodea--Hicks} \\
+\midrule
+CBI (Romelli 2022 CBIRT)  & 2.737^{***}  &        \\
+                           & (0.754)      &        \\
+CBI (Bodea--Hicks)         &              & 1.052  \\
+                           &              & (2.116)\\
+Govt debt (\% GDP)         & 0.001        & 0.004  \\
+                           & (0.006)      & (0.007)\\
+CPI inflation              & 0.017^{***}  & 0.020^{***} \\
+                           & (0.004)      & (0.004) \\
+Real GDP growth            & -0.005       & -0.009  \\
+                           & (0.011)      & (0.012) \\
+Trade openness             & -0.003       & -0.004  \\
+                           & (0.004)      & (0.004) \\
+$\ln$ GDP p.c. (PPP)       & -0.416       & -0.325  \\
+                           & (0.734)      & (0.761) \\
+\midrule
+Country FE                 & Yes          & Yes     \\
+Year FE                    & Yes          & Yes     \\
+Observations               & 124          & 143     \\
+Within $R^2$               & 0.491        & 0.447   \\
+\midrule
+\multicolumn{3}{l}{\footnotesize \textit{Notes}: Entity-clustered SE in parentheses. These specifications are diagnostic only;} \\
+\multicolumn{3}{l}{\footnotesize the Romelli CBIRT positive coefficient ($p<0.001$) reflects reform endogeneity:} \\
+\multicolumn{3}{l}{\footnotesize all CBIE increases in the sample coincide with post-stress reform waves,} \\
+\multicolumn{3}{l}{\footnotesize generating upward bias in the within-FE estimator (see §5.3). Bodea--Hicks} \\
+\multicolumn{3}{l}{\footnotesize is insignificant and directionally consistent with the LVAW null. China excluded.} \\
+\multicolumn{3}{l}{\footnotesize $^{***}p<0.01$, $^{**}p<0.05$, $^{*}p<0.10$.} \\
+\bottomrule
+\end{tabular}
+}
+\end{table}

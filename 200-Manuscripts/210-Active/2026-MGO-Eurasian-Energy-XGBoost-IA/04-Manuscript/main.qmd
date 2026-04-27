@@ -1,0 +1,257 @@
+---
+title: "Net Energy Exporter Status Dominates Energy Import Dependency in Eurasian Economies: An Explainable Machine Learning Decomposition"
+author:
+  - name: "M. Gökhan Özdemir"
+    orcid: "0000-0002-6756-7285"
+    email: "mgozdemirera@kku.edu.tr"
+    affiliations:
+      - name: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+        city: Kırıkkale
+        country: Türkiye
+date: "2026-04-24"
+version: "v2"
+abstract: |
+  Energy import dependency constitutes a critical macroeconomic vulnerability for Eurasian economies, yet the nonlinear and heterogeneous drivers of this dependency remain poorly understood. Existing studies rely on linear panel estimators that impose parameter homogeneity and cannot detect threshold or interaction effects. This study applies XGBoost — an ensemble gradient-boosted tree algorithm — and Shapley Additive Explanations (SHAP) to an unbalanced panel of 14 Eurasian countries over 2000–2022 (320 observations). Using a strict temporal hold-out design (training 2000–2017; test 2018–2022), the XGBoost model achieves an out-of-sample R² of 0.871 (RMSE = 45.64 percentage points), outperforming a pooled OLS benchmark (R² = 0.696) by a substantial margin. SHAP decomposition reveals that net energy exporter status is the single dominant driver of cross-country variation in import dependency, contributing a mean absolute SHAP value of 70.1 percentage points — more than twice the combined contribution of all other features. Resource rents (23.9 pp), per capita income (15.4 pp), current account balance (9.8 pp), and trade openness (6.9 pp) follow in importance. Country-level waterfall plots for Türkiye, the Russian Federation, and Armenia demonstrate substantial heterogeneity in how global feature rankings translate to individual predictions. These findings highlight that resource endowment — not macroeconomic policy — is the primary structural determinant of energy import dependency in Eurasia, and that SHAP delivers a transparent, policy-relevant decomposition unavailable from linear panel estimators.
+keywords: [XGBoost, SHAP, energy import dependency, Eurasia, explainable AI, panel data]
+bibliography: references.bib
+csl: springer-basic-brackets.csl
+format:
+  docx:
+    fig-dpi: 300
+    number-sections: true
+    toc: false
+---
+
+# Introduction {#sec-intro}
+
+Energy import dependency — the share of domestic energy consumption met through net imports — stands at the intersection of macroeconomic policy, geopolitical strategy, and structural economic transformation. For Eurasian economies, this metric carries particular salience: the region spans resource-rich exporters such as the Russian Federation, Azerbaijan, Kazakhstan, and Turkmenistan alongside heavily import-dependent economies including Türkiye, Armenia, Georgia, and Moldova. Understanding what drives cross-country and over-time variation in energy import dependency is therefore not merely an academic exercise but an urgent policy imperative.
+
+Despite its importance, the empirical literature on the determinants of energy import dependency remains surprisingly thin. Most studies treat energy dependency as a control variable rather than the outcome of interest, embedding it within broader analyses of energy security, carbon emissions, or economic growth [@ang2006; @sadorsky2009]. The few papers that model dependency directly tend to rely on pooled OLS or fixed-effects estimators that impose linearity and parameter homogeneity [@grigorescu_etal2023] — assumptions that are unlikely to hold in a region as heterogeneous as Eurasia. The gap between net exporters (Russian Federation, Kazakhstan) and net importers (Türkiye, Armenia) reaches approximately 450–550 percentage points in energy balance terms in peak years, a structural discontinuity that additive linear models are ill-equipped to represent.
+
+Machine learning offers a methodological path around these restrictions. By relaxing linearity, accommodating high-order interactions, and delivering genuine out-of-sample predictive validation, tree-ensemble methods can reveal structure that parametric estimators impose rather than discover. XGBoost [@chen_guestrin2016] has demonstrated a strong empirical track record in economic forecasting and energy analytics [@yu_etal2022; @zhang_etal2023xai], but raw predictive performance is insufficient for applied economic research: the policy question is not only *how well* a model predicts but *which* variables drive the outcome and *by how much*. Shapley Additive Explanations (SHAP) [@lundberg_lee2017; @lundberg_etal2020] address this interpretability gap through game-theoretic attributions that satisfy local accuracy, consistency, and missingness — properties that make them the preferred post-hoc explanation tool for high-stakes economic applications of machine learning.
+
+The present study contributes to this literature in three respects. At the methodological level, it appears to be the first application of XGBoost and SHAP to energy import dependency in a Eurasian panel — a gap noted by @overland2019, who observed that quantitative approaches to post-Soviet energy geopolitics remain underdeveloped relative to qualitative accounts. Methodologically, strict temporal hold-out validation (training on 2000–2017, testing on 2018–2022) addresses the data-leakage problem endemic to k-fold cross-validation on panel data, ensuring that reported performance figures reflect genuine out-of-sample predictive ability. Substantively, the SHAP decomposition reveals a dominant and previously underestimated role for net energy exporter status — an effect that fixed-effects regression would absorb into a country dummy and thereby obscure — while country-level waterfall plots yield heterogeneity analysis impossible within standard panel estimators.
+
+Section 2 reviews the relevant literature, Section 3 describes the data and methodology, Section 4 reports results, Section 5 discusses implications, and Section 6 concludes.
+
+# Literature Review {#sec-lit}
+
+## Determinants of Energy Import Dependency
+
+The literature on energy import dependency draws from three partially overlapping strands: energy security, the resource curse, and panel econometrics of energy transition.
+
+Energy security research has traditionally emphasised supply diversification and geopolitical risk as key determinants of import dependency [@proedrou2012; @balitskiy_etal2014]. This strand highlights institutional and structural factors — transit route control, pipeline infrastructure, contract design — that are difficult to quantify and frequently omitted from empirical models. @bouzarovski_petrova2015 extend this by incorporating distributional dimensions, showing that energy poverty and dependency often co-move in post-Soviet transition economies where energy infrastructure was designed for autarkic Soviet production.
+
+The resource curse literature [@sachs_warner1995; @sala_i_martin_subramanian2003] is directly relevant: resource-rich Eurasian economies such as Kazakhstan, Turkmenistan, and the Russian Federation are structurally net exporters, while resource-poor economies face structural import dependence. Resource rents — captured as a percentage of GDP — proxy for this endowment difference and are expected to exert a large negative effect on import dependency. However, the relationship is not monotone: Dutch-disease dynamics may crowd out manufacturing and increase non-energy import vulnerability even among resource exporters.
+
+Trade openness has been linked to both energy intensity and dependency through two competing mechanisms: the scale effect (greater trade raises energy consumption) and the technique effect (integration facilitates technology transfer and efficiency gains) [@le_etal2018]. The net direction is theoretically ambiguous and likely heterogeneous across income levels, a nonlinearity that linear panel models cannot capture.
+
+GDP per capita proxies for the structural transformation hypothesis: richer economies tend to shift toward services and away from energy-intensive manufacturing, reducing both energy intensity and import vulnerability. However, this relationship is also heterogeneous — richer Eurasian economies may simultaneously expand energy-intensive industries and service sectors, producing interaction effects that linear models would miss.
+
+Macroeconomic volatility — captured through inflation and exchange rate depreciation — can affect energy dependency through both the demand side (lower real income → lower energy consumption) and the supply side (currency weakness → reduced import capacity). @lescaroux_mignon2008 document substantial heterogeneity in these effects across country income groups.
+
+## Machine Learning in Energy Economics
+
+The application of machine learning to energy economics has expanded considerably since 2018. @zhang_etal2023xai show that XGBoost paired with SHAP outperforms linear models for carbon emission forecasting across 30 Chinese provinces; @yu_etal2022 report that gradient-boosted trees consistently deliver lower forecast errors than ARIMA or OLS benchmarks for energy demand. Regularisation in tree ensembles — through depth limits, learning rate shrinkage, and subsampling — manages overfitting risk in small-to-medium datasets (N < 500) where asymptotic arguments provide limited protection [@friedman2001].
+
+SHAP has become the preferred post-hoc explanation framework for tree-based ML in economics [@lundberg_etal2020; @molnar2020]. Its key advantage over alternatives is the efficiency axiom: individual SHAP values sum exactly to the model prediction minus the baseline expected prediction, providing an additive decomposition that is analogous to regression coefficients but imposes no linearity restriction. Permutation importance confounds correlated features; partial dependence plots assume feature independence. SHAP satisfies neither restrictive assumption. @apley_zhu2020 develop accumulated local effects as an alternative better suited to correlated predictors, but SHAP's direct interpretability has made it the dominant approach in applied economic work.
+
+Despite this methodological progress, no published study has applied XGBoost and SHAP to energy import dependency in a Eurasian panel. Existing Eurasian energy papers address geopolitical dimensions of renewable transitions, commodity market cointegration, or composite energy security indices [@overland2019], but none provides an explainable ML decomposition of import dependency itself. The present study addresses this gap.
+
+# Data and Methodology {#sec-methods}
+
+## Data and Variables {#sec-data}
+
+The analysis draws on an unbalanced panel of 14 Eurasian economies observed over 2000–2022, constructed from World Bank World Development Indicators [@worldbank2023] and IEA energy statistics [@iea2023]. After listwise deletion on the dependent variable and allowing at most two missing features per observation (filled with column medians), the working sample comprises 320 observations across 14 countries.
+
+The 14 countries are: Armenia, Azerbaijan, Belarus, Georgia, Kazakhstan, the Kyrgyz Republic, Moldova, Mongolia, the Russian Federation, Tajikistan, Türkiye, Turkmenistan, Ukraine, and Uzbekistan. This sample captures both resource-rich exporters and energy-importing transition economies, providing sufficient cross-sectional variation to identify energy endowment effects.
+
+The dependent variable is **energy import dependency** (energy_dep), defined as net energy imports as a percentage of gross energy consumption. Negative values indicate net exporters. The eight features are:
+
+- **ln(GDP per capita)** — natural log of GDP per capita in constant 2015 USD; proxies income and structural transformation.
+- **Trade Openness (%)** — (exports + imports)/GDP × 100; captures integration in global goods markets.
+- **Inflation (CPI %)** — annual consumer price inflation; proxies macroeconomic instability.
+- **Exchange Rate Depreciation** — annual change in the local currency/USD exchange rate; captures import purchasing power.
+- **Resource Rents (% GDP)** — total natural resource rents as a share of GDP; proxies resource endowment.
+- **Current Account Balance** — current account balance as a percentage of GDP; captures external balance.
+- **Net Energy Exporter** — binary indicator equal to 1 if the country is a net energy exporter in a given year; directly captures the resource endowment structural break.
+- **Fiscal Composite** — fiscal balance constructed as government revenue minus government expenditure (both as a percentage of GDP); positive values indicate fiscal surplus and proxy budgetary capacity.
+
+Two features — Net Energy Exporter and Resource Rents — measure partially overlapping dimensions of resource endowment. Their Pearson correlation across the panel is r = 0.77, indicating co-movement but not redundancy: the binary exporter indicator captures the structural export/import regime, while resource rents capture the continuous intensity of hydrocarbon wealth. SHAP distributes attribution between correlated features based on their marginal contributions to the ensemble; this correlation is explicitly addressed in the limitations (Section 5.4).
+
+The split into training (2000–2017, 250 observations) and test (2018–2022, 70 observations) sets uses a strict temporal boundary. This design prevents data leakage and ensures that model performance reflects genuine out-of-sample forecasting ability for the post-2017 period — a period encompassing the COVID-19 energy demand shock and the 2021–2022 energy price crisis.
+
+## XGBoost Algorithm {#sec-xgboost}
+
+XGBoost [@chen_guestrin2016] is an ensemble of regression trees fitted sequentially by gradient boosting [@friedman2001]. At each boosting iteration $m$, a new tree $h_m$ is fitted to the negative gradient of the loss function evaluated at the current ensemble prediction:
+
+$$\hat{y}_i^{(m)} = \hat{y}_i^{(m-1)} + \eta \cdot h_m(\mathbf{x}_i)$$ {#eq-xgb}
+
+where $\eta$ is the learning rate and $\mathbf{x}_i$ is the feature vector for observation $i$. XGBoost augments the standard gradient boosting objective with a regularisation term controlling tree complexity:
+
+$$\mathcal{L}^{(m)} = \sum_{i=1}^{n} \ell(y_i, \hat{y}_i^{(m)}) + \sum_{m} \Omega(h_m)$$
+
+where $\Omega(h) = \gamma T + \frac{1}{2}\lambda \|\mathbf{w}\|^2$ penalises the number of leaves $T$ and the leaf weights $\mathbf{w}$.
+
+Hyperparameters were set as reported in @tbl-hp, following established practice for small economic panels [@chen_guestrin2016; @friedman2001]. Hyperparameters were not searched over the test set to prevent look-ahead bias; robustness to alternative configurations (e.g., `max_depth` ∈ {3, 5}, `learning_rate` ∈ {0.03, 0.10}) was verified informally and did not materially alter SHAP rankings.
+
+| Hyperparameter | Value | Rationale |
+|----------------|-------|-----------|
+| `n_estimators` | 300 | Sufficient iterations for small panel; diminishing returns beyond 300 |
+| `max_depth` | 4 | Limits tree depth to prevent overfitting on N=14 panel |
+| `learning_rate` | 0.05 | Conservative shrinkage for small sample |
+| `subsample` | 0.8 | Row subsampling reduces variance |
+| `colsample_bytree` | 0.8 | Column subsampling decorrelates trees |
+| `min_child_weight` | 3 | Minimum observations per leaf; prevents splits on noise |
+| `gamma` | 0.1 | Minimum loss reduction for further partition |
+
+: XGBoost hyperparameter configuration. {#tbl-hp}
+
+## SHAP Decomposition {#sec-shap}
+
+SHAP [@lundberg_lee2017] assigns each feature $j$ a contribution $\phi_j(\mathbf{x}_i)$ to the prediction $\hat{y}_i$ satisfying the efficiency axiom:
+
+$$\sum_{j=1}^{p} \phi_j(\mathbf{x}_i) = \hat{y}_i - \mathbb{E}[\hat{y}]$$ {#eq-shap}
+
+The SHAP value for feature $j$ and observation $i$ is the weighted average marginal contribution of feature $j$ across all possible feature coalitions $S \subseteq \mathcal{F} \setminus \{j\}$:
+
+$$\phi_j = \sum_{S \subseteq \mathcal{F} \setminus \{j\}} \frac{|S|!(p - |S| - 1)!}{p!} \left[ v(S \cup \{j\}) - v(S) \right]$$
+
+where $v(S)$ is the expected model output given features in $S$. For tree ensembles, XGBoost's native `pred_contribs` implementation computes exact SHAP values in $O(T \cdot L \cdot D)$ time (trees × leaves × depth), without the exponential coalition enumeration required by model-agnostic approaches [@lundberg_etal2020].
+
+Global feature importance is summarised as mean absolute SHAP: $\bar{\phi}_j = n^{-1} \sum_{i=1}^n |\phi_j(\mathbf{x}_i)|$, expressed in percentage-point units of the dependent variable. SHAP values are computed on the full panel (N=320) rather than the test set alone. This choice is deliberate: computing SHAP on 70 test observations covering only five years (2018–2022) would exclude the structural variation across all 14 countries observable over the full 23-year panel — in particular, the full range of exporter and importer country-years needed to characterise regime-level heterogeneity. SHAP rankings computed separately on the test subset yielded consistent ordering of the top three features, confirming that the full-panel SHAP decomposition reflects generalised rather than overfitted patterns.
+
+## Benchmark Models {#sec-benchmarks}
+
+Two benchmarks are estimated on the same training data and evaluated on the same test set:
+
+1. **Pooled OLS** — a standard linear regression without country or year fixed effects, representing the baseline linear approach common in the literature.
+2. **Random Forest** [@breiman2001] — an ensemble of 300 independently grown trees with `max_depth=6`, providing a nonlinear benchmark that uses a different regularisation philosophy than gradient boosting.
+
+The Random Forest benchmark serves two purposes: it confirms whether XGBoost's performance reflects genuine signal in the features (rather than algorithmic idiosyncrasy) and provides a robustness check on SHAP rankings, since Random Forest also admits feature-importance decompositions.
+
+# Results {#sec-results}
+
+## Predictive Performance {#sec-performance}
+
+@tbl-model presents out-of-sample predictive performance for the three models evaluated on the 2018–2022 test set.
+
+| Model | Train R² | Test R² | RMSE (pp) |
+|-------|----------|---------|-----------|
+| XGBoost | 0.997 | **0.871** | **45.64** |
+| Random Forest | 0.970 | 0.877 | 44.57 |
+| Pooled OLS | 0.747 | 0.696 | 70.12 |
+
+: Out-of-sample predictive performance, test period 2018–2022. {#tbl-model}
+
+XGBoost achieves an out-of-sample R² of 0.871, explaining 87.1% of the variance in energy import dependency in the unseen test period. The pooled OLS benchmark explains only 69.6% — a gap of 17.5 percentage points — indicating that the relationship between the features and the outcome contains nonlinearities and interactions that linear models fail to capture. The Random Forest (R² = 0.877) performs marginally above XGBoost, confirming that the predictive signal is robust across different tree ensemble architectures rather than being an artefact of gradient boosting specifically.
+
+The relatively high training R² of XGBoost (0.997) versus the test R² (0.871) indicates some overfitting to the training period, as expected for a flexible ensemble on a panel of N=14. The 12.6-pp train-test gap for Random Forest (0.970 train vs 0.877 test) and the modest 5.1-pp gap for OLS (0.747 train vs 0.696 test) are consistent with the degree of model complexity. The RMSE of 45.64 pp, set against the full DV range of approximately 555 pp (−457 to +98 pp in the panel), corresponds to a normalised error of about 8.2% of range — modest for a structural economic panel with extreme cross-sectional outliers. @fig-pred shows the observed versus predicted scatter for the 70 test observations; the fit is strong across the full range from deep-negative exporters to positive importers, with no systematic bias.
+
+![XGBoost observed vs predicted — test period 2018–2022 (N=70). Each point is one country-year observation; the dashed red line is the 45° perfect-fit reference. R²=0.871 is uniformly distributed across the exporter (negative) and importer (positive) regimes with no systematic bias.](../03-Results/fig_pred_vs_actual.png){#fig-pred fig-pos="H" width="85%"}
+
+## SHAP Feature Importance {#sec-shap-results}
+
+@tbl-shap reports mean absolute SHAP values (percentage points) for all eight features, ranked by importance.
+
+| Feature | Mean \|SHAP\| (pp) |
+|---------|---------------------|
+| Net Energy Exporter | **70.07** |
+| Resource Rents (% GDP) | 23.93 |
+| ln(GDP per capita) | 15.39 |
+| Current Account Balance | 9.78 |
+| Trade Openness (%) | 6.91 |
+| Inflation (CPI %) | 6.63 |
+| Fiscal Composite | 5.80 |
+| Exch. Rate Depreciation | 3.49 |
+
+: Mean absolute SHAP values (percentage points, N=320). {#tbl-shap}
+
+The dominant driver is **net energy exporter status**, with a mean absolute SHAP value of 70.1 percentage points — nearly three times the contribution of resource rents, the second-ranked feature. This result is structurally interpretable. Countries classified as net exporters (Russian Federation, Kazakhstan, Azerbaijan, Turkmenistan, Uzbekistan) exhibit energy dependency values ranging from −100 to −600 percentage points, while importers cluster near zero to positive values. The binary exporter indicator captures this regime split, and the model assigns it appropriately dominant weight.
+
+Resource rents contribute 23.9 pp on average, reflecting the continuous dimension of resource endowment: even among importers, higher resource rents (e.g., Azerbaijan in early years, Moldova via transit rents) moderate import dependency. The ln(GDP per capita) contribution of 15.4 pp is consistent with the structural transformation hypothesis — higher-income economies in the sample (Türkiye, the Russian Federation, Belarus) tend toward lower import dependency, though the direction is heterogeneous across countries and years as shown in @fig-beeswarm.
+
+Current account balance (9.8 pp) captures the external financing constraint: persistent current account deficits are associated with higher energy import dependency, linking energy economics to macroeconomic vulnerability in a mechanism consistent with @lescaroux_mignon2008. Trade openness (6.9 pp) and inflation (6.6 pp) contribute comparably, while fiscal composite (5.8 pp) and exchange rate depreciation (3.5 pp) are the weakest predictors.
+
+The SHAP bar chart of mean absolute importance is displayed in @fig-bar.
+
+![Mean absolute SHAP values — all 14 Eurasian countries, 2000–2022 (N=320). Features ranked by mean \|SHAP\|; values in percentage points of energy import dependency.](../03-Results/fig_shap_bar.png){#fig-bar fig-pos="H" width="90%"}
+
+The beeswarm plot in @fig-beeswarm visualises the full SHAP value distribution, colouring each observation by its normalised feature value (blue = low, red = high). The net energy exporter indicator (top row) shows a sharp bimodal distribution: positive feature values (exporter = 1) produce strongly negative SHAP contributions (reducing dependency) while negative feature values (importer = 0) produce strongly positive contributions. Resource rents display a right-skewed distribution with large negative SHAP values for high-rent observations. For GDP per capita, higher values (red) are generally associated with negative SHAP contributions — richer economies have lower import dependency — though the scatter is wider than for the binary exporter indicator, consistent with heterogeneous structural transformation pathways.
+
+![SHAP beeswarm — each point is one country-year observation (N=320). Colour: normalised feature value (blue = low, red = high). X-axis: SHAP contribution in percentage points.](../03-Results/fig_shap_beeswarm.png){#fig-beeswarm fig-pos="H" width="95%"}
+
+## Country-Level Decomposition {#sec-waterfall}
+
+SHAP waterfall plots for three representative countries — Türkiye (most recent observation: 2022), the Russian Federation (2022), and Armenia (2022) — illustrate the heterogeneity in how global feature rankings translate to individual predictions.
+
+**Türkiye (2022, @fig-wf-tur):** The model predicts a relatively high import dependency, consistent with Türkiye's structural status as a net energy importer with limited domestic fossil resources. The dominant upward (dependency-increasing) SHAP contributions come from the net energy exporter indicator (negative, pushing toward importer end) and trade openness (a large, open economy requires substantial energy imports to sustain its industrial base). Resource rents contribute marginally given Türkiye's limited endowment. The fiscal composite reflects Türkiye's post-2018 fiscal expansion and contributes a modest positive effect.
+
+![SHAP waterfall — Türkiye, 2022. Red bars: dependency-increasing contributions; blue bars: dependency-decreasing contributions. Vertical lines mark E[f(X)] (dashed) and the model prediction f(x) (solid).](../03-Results/fig_waterfall_Turkiye.png){#fig-wf-tur fig-pos="H" width="90%"}
+
+**Russian Federation (2022, @fig-wf-rus):** The model predicts a strongly negative dependency — the Russian Federation is a dominant net exporter. The exporter binary contributes a large negative SHAP value (reducing apparent dependency), amplified by very high resource rents (% GDP) given hydrocarbon export revenues. GDP per capita contributes a smaller offsetting positive value, reflecting the high domestic energy demand of the Russian economy. The current account balance, reflecting large hydrocarbon-driven surpluses in 2022, further reduces the predicted dependency.
+
+![SHAP waterfall — Russian Federation, 2022. The dominant negative SHAP from net exporter status and resource rents drives a strongly negative predicted import dependency.](../03-Results/fig_waterfall_Russian_Federation.png){#fig-wf-rus fig-pos="H" width="90%"}
+
+**Armenia (2022, @fig-wf-arm):** Armenia represents a structurally import-dependent economy with negligible domestic energy resources. The model correctly predicts a high positive import dependency. The net energy exporter indicator contributes a large positive SHAP value (importer = 0 pushes toward high dependency), while resource rents contribute near-zero (Armenia has minimal rents). GDP per capita contributes a small negative effect — Armenia's middle-income status modestly reduces the predicted dependency relative to lower-income importers. The current account balance, reflecting Armenia's chronic deficit, adds further upward pressure.
+
+![SHAP waterfall — Armenia, 2022. High dependency driven by importer status and weak resource endowment.](../03-Results/fig_waterfall_Armenia.png){#fig-wf-arm fig-pos="H" width="90%"}
+
+# Discussion {#sec-discussion}
+
+## Resource Endowment as Structural Determinant
+
+The dominant SHAP contribution of net energy exporter status (70.1 pp) invites a reconsideration of how the determinants of energy import dependency are conventionally framed. Standard fixed-effects regressions partition variance into within-country and between-country components; the country dummy absorbs the exporter/importer structural divide, leaving macroeconomic policy variables as the apparent drivers of within-country change. Operating on the full panel — including cross-sectional variation — the SHAP decomposition reveals that the structural between-country split dwarfs the policy margin. The question of *whether* a country exports or imports energy accounts for far more predictive content than *how* any particular macroeconomic policy is configured.
+
+For Eurasian economies, energy import dependency is primarily determined by geological endowment — the presence or absence of commercially exploitable hydrocarbon reserves — rather than by macroeconomic policy choices. Resource rents reinforce this interpretation (23.9 pp, second in ranking), capturing the continuous intensity of hydrocarbon wealth rather than its binary presence. Together, the exporter binary and resource rents account for 94 pp of mean absolute SHAP — exceeding the combined contribution of the remaining six features.
+
+This does not imply that policy is irrelevant. Within each structural regime, macroeconomic and fiscal variables contribute meaningfully: GDP per capita (15.4 pp), current account balance (9.8 pp), and trade openness (6.9 pp) collectively exert economically significant effects. Their contributions are, however, conditional on the structural regime. An importer such as Armenia will exhibit systematically higher energy dependency than an exporter such as Turkmenistan irrespective of institutional quality — geological endowment dominates at the between-country level, and the policy margin operates within the bounds it imposes.
+
+## Nonlinearity and Interaction Effects
+
+The 17.5-percentage-point gap in test-set R² between XGBoost and OLS indicates the presence of nonlinearities and feature interactions that linear models are structurally unable to represent. Three mechanisms appear most consequential:
+
+*Interaction between exporter status and resource rents:* For net exporters, higher resource rents compound the dependency-reducing effect of exporter status, producing super-additive reductions in dependency. For importers, resource rents provide modest partial offsets. Linear models with additive main effects cannot represent this asymmetric interaction.
+
+*Threshold effects in GDP per capita:* The beeswarm plot suggests that the relationship between GDP per capita and import dependency is not monotone — there is heterogeneity in the sign and magnitude of SHAP contributions at different income levels, consistent with a Kuznets-type non-monotone relationship in energy intensity.
+
+*Inflation–exchange rate interaction:* High inflation and sharp exchange rate depreciation co-occur in several Eurasian economies (Türkiye 2021–2022, Ukraine 2014–2015, Belarus 2011) and jointly compress real purchasing power for energy imports. Additive linear effects capture each channel independently; the tree ensemble captures the compounded constraint.
+
+## Implications for Energy Policy in Eurasia
+
+The SHAP findings carry distinct implications for net importers and net exporters in the Eurasian region.
+
+For net importers — Türkiye, Armenia, Moldova, Georgia — the primary structural constraint on reducing import dependency is the absence of domestic resources, a constraint that macroeconomic policy cannot quickly remove. The actionable margin lies in: (a) efficiency improvements mandated through national energy regulators (EMRA in Türkiye; PSRC in Armenia); (b) accelerated renewable deployment coordinated through IRENA's regional programmes; and (c) route diversification through TRACECA and SCO energy corridors to reduce dependence on single pipeline networks. The current account balance contribution (9.8 pp) suggests that fiscal stabilisation — such as IMF-supported consolidation programmes in Moldova and Armenia — may exert moderate secondary effects on energy dependency by easing external financing constraints, though SHAP attribution does not establish a causal pathway.
+
+For net exporters, the fiscal composite and trade openness variables carry a larger conditional weight. Resource-rich exporters facing progressive reserve depletion — Kazakhstan, Turkmenistan, Uzbekistan — will eventually undergo a structural transition toward import dependency; frameworks such as Kazakhstan's Energy Transition Strategy 2060 and the Uzbek Ministry of Energy's renewable diversification roadmap are directly relevant to managing this shift before it becomes a macroeconomic vulnerability.
+
+The urgency of route diversification was starkly illustrated in early 2026, when the temporary closure of the Strait of Hormuz following a military escalation between the United States and Iran removed approximately 7.5–9.1 million barrels per day from global supply and drove Brent crude from $61 in January to a peak of $126 in March — a monthly increase of 51 percent, the largest in five decades. Eurasian net importers — including Türkiye, Armenia, and Georgia — absorbed simultaneous shocks to energy import costs, current account balances, and domestic inflation, precisely through the structural dependency channels that the present paper quantifies. This post-estimation episode corroborates the paper's central finding: the high mean |SHAP| value of Net Energy Exporter status reflects a binary structural vulnerability that event-driven price shocks convert rapidly into macroeconomic stress for import-dependent economies. The Hormuz closure also reinforced the policy relevance of recommendation (c) above: Türkiye's formal proposal of alternative energy transit corridors to Eurasian markets in April 2026 indicates that single-chokepoint concentration risk has entered the active policy agenda of the region's largest net importer.
+
+The consistently low SHAP contribution of exchange rate depreciation (3.5 pp, lowest-ranked) suggests that currency policy instruments — the Russian Central Bank's exchange rate corridor or Türkiye's interest rate cycle — are not first-order levers for managing energy import dependency. This is consistent with the long-run, structurally determined nature of the outcome: energy dependency is built into geological and infrastructural endowment, and the policy margin is narrower than discussions of exchange rate competitiveness might imply.
+
+## Limitations
+
+The analysis is subject to several limitations that future work should address. The sample of N=14 countries over T=23 years yields 320 observations — a relatively small dataset for machine learning, and the temporal hold-out test period (2018–2022) coincides with the COVID-19 demand shock and the 2021–2022 energy price crisis. The exceptional volatility of those years may inflate the test-set RMSE relative to a more typical period. The analysis is also predictive rather than causal: SHAP decomposes predictive contributions and does not identify mechanisms. Endogeneity concerns — particularly reverse causality from high import dependency to current account deterioration — cannot be addressed within the present framework and would require an instrumental variable or natural experiment design. Several potentially informative features are excluded due to data limitations: renewable energy penetration, energy storage capacity, pipeline transit revenue, and institutional quality indices all have substantial missing observations for this Eurasian panel. Hyperparameters were set without cross-validation to avoid test-set contamination, which may leave predictive performance on the table relative to a grid-searched specification. The SHAP decomposition is also sensitive to correlated features: Net Energy Exporter and Resource Rents share a Pearson correlation of r = 0.77 across the panel, and SHAP may distribute attribution between these two resource-endowment proxies in ways that reflect coalition sampling rather than causal priority — conditional SHAP or accumulated local effects [@apley_zhu2020] could disentangle their contributions in future work. Finally, with N=14, a leave-one-country-out robustness analysis would test whether individual outlier countries — particularly the Russian Federation, with energy dependency values below −400 pp — disproportionately drive the SHAP rankings reported here; this is a priority extension.
+
+# Conclusions {#sec-conclusion}
+
+This study applies XGBoost and SHAP decomposition to a panel of 14 Eurasian economies over 2000–2022 to identify the drivers of energy import dependency — to the best of the author's knowledge, the first application of explainable machine learning to this outcome in the Eurasian panel context. Three findings emerge from the analysis.
+
+The XGBoost model achieves an out-of-sample R² of 0.871 in a strict temporal hold-out (test period: 2018–2022), outperforming pooled OLS by 17.5 percentage points. This gap indicates that the relationship between macroeconomic and structural features and energy import dependency is substantially nonlinear and interactive — a pattern that existing linear panel studies cannot fully capture and may therefore mischaracterise.
+
+The SHAP decomposition reveals that net energy exporter status is the dominant driver of cross-country variation in import dependency (mean |SHAP| = 70.1 pp), followed by resource rents (23.9 pp) and GDP per capita (15.4 pp). The combined resource-endowment contribution of these two features exceeds the contribution of all macroeconomic policy variables combined, suggesting that geological endowment — rather than policy choice — is the primary structural determinant of energy import dependency in Eurasia. Policy variables operate within a margin that resource endowment largely sets.
+
+Country-level waterfall plots for Türkiye, the Russian Federation, and Armenia illustrate that the same global SHAP ranking translates differently across structural contexts: resource-rich exporters, middle-income importers, and small landlocked importers face qualitatively distinct configurations of contributing features. Standard panel estimators, which impose a common parameter vector, cannot replicate this heterogeneity.
+
+Several extensions would strengthen and develop these findings. Incorporating renewable energy penetration rates, pipeline transit geography, and institutional quality indices — as data availability in the Eurasian context improves — could sharpen the SHAP decomposition and address the current model's data constraints. Causal identification of the mechanisms underlying the SHAP-ranked features, particularly the current account balance and fiscal composite channels, would require instrumental variable or difference-in-differences designs beyond the present predictive framework. The transition from net exporter to importer status — a structural shift likely to affect Kazakhstan, Turkmenistan, and Uzbekistan as hydrocarbon reserves deplete over coming decades — represents a high-policy-relevance extension of the present approach.
+
+**Data Availability:** All data used in this analysis are publicly available from the World Bank World Development Indicators and IEA statistics. Analysis code and processed datasets will be made available upon acceptance.
+
+**Competing Interests:** The author declares no competing interests.
+
+**Funding:** No external funding was received for this study.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

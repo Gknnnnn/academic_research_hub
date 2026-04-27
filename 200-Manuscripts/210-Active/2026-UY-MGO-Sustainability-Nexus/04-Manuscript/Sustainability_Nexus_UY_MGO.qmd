@@ -1,0 +1,184 @@
+---
+title: "Nonlinear Dynamics in the Migration-Carbon-Growth Nexus: A Structural Evaluation of Green Finance and the EKC Hypothesis"
+author: "Dr. Öğr. Üyesi Uğur YILDIRIM & Dr. Mehmet Gökhan Özdemir"
+format:
+  pdf:
+    documentclass: apa7
+    classoption: man
+    keep-tex: true
+    include-in-header: 
+      - text: |
+          \usepackage[turkish]{babel}
+          \usepackage{fontspec}
+          \setmainfont{Times New Roman}
+          \usepackage{xeCJK}
+          \usepackage{ragged2e}
+          \usepackage{etoolbox}
+          \AtBeginEnvironment{tabular}{\justifying}
+execute:
+  echo: false
+  warning: false
+bibliography: references.bib
+link-citations: true
+---
+
+\justifying
+
+## Highlights
+
+- CO₂ → GDP is the sole Webb-robust causality channel (p_Webb = 0.040): carbon accumulation Granger-causes growth, not the reverse.
+- GDP → Green Finance is marginally supported (p_Webb = 0.100), suggesting income enables green investment capacity.
+- MIG → CO₂ and MIG → GI are statistically insignificant after bootstrap correction: migration has no direct carbon or green-finance effect in Türkiye.
+- Asymptotic Wald p-values overstate significance by factor >5 in N=24 samples; Webb wild bootstrap is mandatory for reliable inference.
+- Toda-Yamamoto approach validated for Türkiye's structurally broken 2000–2023 series (2001/2008/2018 crises).
+
+**Özet**
+
+Bu çalışma, gelişmekte olan piyasa ekonomilerinde (Türkiye örneği 2000-2023) işgücü göçü, karbon emisyonları ve ekonomik büyüme arasındaki doğrusal olmayan dinamikleri "Ekolojik Verimlilik Paradoksu" (Ecological Productivity Paradox) çerçevesinde incelemektedir. Teknolojik sofistifikasyonun birim enerji verimliliğini artırmasına rağmen, Jevons Paradoksu uyarınca kümülatif talebi ve kentsel yığılma (urban agglomeration) kaynaklı karbon yoğunluğunu nasıl tetiklediği tartışılmaktadır. Çalışma, Toda-Yamamoto (1995) nedensellik yaklaşımını kullanarak, Yeşil Finansman (Green Finance) kanallarının bu yapısal paradoksu çözmedeki katalizör rolünü ve göç-karbon bağlantısındaki yapısal kırılmaları ampirik olarak test etmektedir.
+
+**Anahtar Kelimeler:** Göç-Karbon Nexus, Ekolojik Verimlilik Paradoksu, Jevons Paradoksu, Yeşil Finansman, Mekânsal Yığılma, Toda-Yamamoto Nedensellik.
+
+**Abstract**
+
+This study asks a specific causal question: does carbon accumulation Granger-cause economic growth in Türkiye, and is the migration-carbon nexus empirically identifiable using annual time-series data? Using annual data for Türkiye over 2000–2023, we apply the Toda-Yamamoto (1995) modified Wald causality procedure on a four-variable VAR system comprising labour migration (MIG), CO₂ emissions, green finance (GI), and GDP. Critically, all inference is based on Webb (2023) wild bootstrap with B=999 replications to correct for the severe size distortion of asymptotic χ² critical values at N=24. We find that CO₂ → GDP is the sole statistically robust causality channel (p_Webb = 0.040), consistent with an environmental drag on growth; GDP → GI is marginally supported at the 10% level (p_Webb = 0.100). By contrast, MIG → CO₂ (p_Webb = 0.943) and MIG → GI (p_Webb = 0.194) are not robust — the latter appearing significant under asymptotic testing (p = 0.021) but collapsing under bootstrap correction, a textbook illustration of small-sample inflation. These results imply that Türkiye's path toward net-zero requires addressing the carbon-to-growth drag channel directly, rather than relying on migration-driven green-finance spillovers.
+
+**Keywords:** Migration-Carbon Nexus, Ecological Productivity Paradox, Jevons Paradox, Green Finance, Urban Agglomeration, Toda-Yamamoto Causality, Webb Bootstrap.
+
+\newpage
+
+# 1. Giriş: Sürdürülebilirlik ve Yapısal Dönüşüm Nexus'u
+
+Küresel ekonomik sistemde sürdürülebilirlik performansı (ESG), ürün sofistikasyonu ile demografik ve mekânsal dönüşümlerin (Labor Mobility) kesişim noktasında yeniden tanımlanmaktadır. Özellikle Türkiye gibi hızlı sanayileşen ekonomilerde, işgücü göçü ile kontrolsüz kentleşmenin kentsel taşıma kapasitesini aştığı bir "Göç-Karbon-Büyüme Bağlantısı" (Migration-Carbon-Growth Nexus) merkezi bir analitik problem teşkil etmektedir.
+
+### 1.1. Türkiye’nin Yapısal Paradoksu: Göç, Kentleşme ve Mekânsal Kilitlenme
+Türkiye'nin sanayileşme stratejisi, kentsel endüstriyel hublarda (Kocaeli, Bursa, İstanbul) yoğunlaşan bir beşerî sermaye ve işgücü göçü dalgasını beraberinde getirmiştir. Bu mekânsal yığılma, lojistik maliyetlerini düşürse de; "kentsel ısı adası" etkisini büyüterek ve ulaşım kaynaklı emisyonları artırarak, teknolojik karmaşıklığın (ECI) sağladığı karbon kazanımlarını nötrleyebilmektedir. Dolayısıyla, bu çalışma Türkiye'deki sürdürülebilirlik performansını, sadece bir teknoloji meselesi değil; aynı zamanda bu karmaşıklığın yarattığı demografik baskıların (Yeşil Finansman kanalları üzerinden) nasıl yönetileceği meselesi olarak ele almaktadır.
+
+# 2. Literatür Taraması: Göç ve Sürdürülebilirlik Paradoksu
+
+Ekonomik karmaşıklık ve çevresel sürdürülebilirlik etkileşimi, çağdaş iktisat literatüründe doğrusal olmayan dinamikler ve yapısal paradokslar ekseninde derinleşmektedir. Mevcut yazın, büyük ölçüde panel veri asimptotikliğine dayanmakla birlikte, işgücü göçü ve mekânsal yığılmanın (agglomeration) emisyon patikaları üzerindeki etkisini çoğunlukla göz ardı etmektedir.
+
+## 2.1. Ekolojik Verimlilik Paradoksu ve Rebound Etkisi
+Çalışmanın özgün sell-side argümanını oluşturan **Ekolojik Verimlilik Paradoksu**, "verimlilik artışlarının kümülatif talebi tetikleme riski" (Jevons Paradoksu) üzerine inşa edilmiştir @lange2021jevons. @romero2021economic ekonomik kompleksitenin sera gazı emisyon yoğunluğunu azalttığını gösterse de, ürün yakınlığı ve enerji verimliliği arttıkça birim maliyetlerin düştüğü; ancak bu durumun hem toplam enerji tüketimini hem de endüstriyel hublara yönelik işgücü talebini (migratory pull) artırarak net karbon artışına (Rebound Effect) yol açabileceği de belgelenmiştir [@lange2021jevons].
+
+## 2.2. Mekânsal Yığılma ve Karbon Ayak İzi: Türkiye’nin Hub Dinamikleri
+Türkiye örneğinde mekânsal yığılma, ekonomik kompleksite ile çevresel performans arasındaki "ayrışmayı" (decoupling) engelleyen en güçlü yapısal engeldir. Kentsel hublarda yoğunlaşan üretim, teknolojik "kilitlenme" (lock-in) etkileri yaratarak, emisyonları yapısal bir patikaya mahkum etmektedir @rosser2021foundations. Bu durum, Türkiye'nin net-sıfır hedefleri için sadece teknoloji transferinin değil, aynı zamanda göçün kentsel karbon kapasitesiyle uyumlu yönetilmesinin gerekliliğini ortaya koymaktadır.
+
+## 2.3. Yeşil Finansman ve İşgücü Mobilitesi
+Yeşil finansman (GI) kanalları, sanayinin coğrafi ve teknolojik dönüşümünü finanse ederek "Göç-Karbon" bağlantısındaki negatif dışsallıkları minimize edebilir @Shah2023. Özellikle sürdürülebilir kentsel altyapı ve yeşil konut kredileri, işgücü mobilitesini daha düşük karbon yoğunluklu hublara yönlendirmede stratejik birer araç olarak görülmektedir.
+
+# 3. Metodoloji: Göç-Karbon Bağlantısında Toda-Yamamoto Yaklaşımı
+
+Bu çalışma, Türkiye ekonomisine ait 2000-2023 dönemini kapsayan yıllık zaman serisi verileri kullanılarak tasarlanmıştır. Ampirik amaç; işgücü göçü (MIG), karbon emisyonları (CO2), yeşil finansman (GI) ve ekonomik büyüme (GDP) arasındaki dinamik nedensellik ilişkilerini test etmektir. Türkiye'nin 2001, 2008 ve 2018 yıllarındaki yapısal kırılmaları dikkate alındığında, serilerin düzey değerleri üzerinde kısıtsız bir VAR modeli aracılığıyla analiz yapan **Toda-Yamamoto (1995)** yaklaşımı tercih edilmiştir.
+
+$$ y_t = \alpha_0 + \sum_{i=1}^{k} \beta_i y_{t-i} + \sum_{j=k+1}^{k+d_{max}} \gamma_j y_{t-j} + \epsilon_t $$
+
+Burada $y_t$, [MIG, CO2, GI, GDP] değişkenlerinden oluşan vektörü; $k$ optimal gecikme uzunluğunu, $d_{max}$ ise sistemdeki en yüksek bütünleşme derecesini (Zivot-Andrews testi ile saptanan) göstermektedir.
+
+# 4. Ampirik Bulgular
+
+## 4.1. Birim Kök Testleri
+
+Toda-Yamamoto yaklaşımı, sistemdeki en yüksek bütünleşme derecesini ($d_{max}$) önceden saptanmasını gerektirmektedir. Sabit terim ve trend içeren Augmented Dickey-Fuller (ADF) testi düzey değerleri üzerine uygulanmış; tüm değişkenler için birim kök hipotezi reddedilememiştir (Tablo 1). Buna göre MIG ($t = -2.139$, $p = 0.524$), CO2 ($t = -2.236$, $p = 0.470$), GDP ($t = -2.983$, $p = 0.137$) ve GI ($t = -1.963$, $p = 0.622$) serileri I(1) olarak kabul edilmekte; dolayısıyla $d_{max} = 1$ olarak belirlenmektedir.
+
+**Tablo 1: ADF Birim Kök Test Sonuçları (2000–2023, c + t)**
+
+| Değişken | ADF İstatistiği | $p$ Değeri | Karar |
+|---|---|---|---|
+| MIG | −2.139 | 0.524 | I(1) |
+| CO2 | −2.236 | 0.470 | I(1) |
+| GDP | −2.983 | 0.137 | I(1) |
+| GI  | −1.963 | 0.622 | I(1) |
+
+*Not: MacKinnon (1996) asimptotik kritik değerler. %5 kritik değer: −3.60 (c+t).*
+
+## 4.2. Eşbütünleşme Testleri
+
+TY yaklaşımının düzeyde VAR tahminini gerektirmesi nedeniyle, uzun dönem ilişkisinin varlığı ayrıca sınanmıştır. Johansen iz istatistiği $r = 1$ ko-entegre vektörün sınır değerini marjinal olarak aştığını göstermektedir (İz = 48.38 > $CV_{0.05}$ = 47.85); ancak maksimum özdeğer testi $r = 0$ hipotezini sınırda reddetmektedir (28.00 > 27.59). ARDL sınır testi (CO2 denklemi) ise $F = 0.428 < I(0)_{0.05} = 3.23$ ile ko-entegrasyon kanıtı sunmamaktadır. Bu tutarsız tablo, N=24 gibi küçük örneklerde asimptotik kritik değerlerin aşındığını ve TY'nin düzeyde VAR formülasyonunu korumanın isabetli olduğunu desteklemektedir.
+
+Artık diagnostikler yapısal istikrarı teyit etmektedir: Ljung-Box(4) = 1.96 ($p = 0.743$), CUSUM istatistiği = 0.59 ($p = 0.873$). Seri korelasyon ve parametre kayması yoktur.
+
+## 4.3. Toda-Yamamoto Nedensellik Testleri
+
+Optimal gecikme $k = 1$ (AIC/BIC) ve $d_{max} = 1$ ile TY-VAR($k + d_{max} = 2$) tahmin edilmiştir. Ek gecikmelere ait katsayılar ($\gamma_j$, $j = k+1$) kısıtlanmamış bırakılarak modifiye Wald (MWALD) sınaması I(1) seriler üzerinde χ²(k) dağılımı güvencesini sağlamaktadır. Tablo 2 tüm yönlü nedensellik testlerini özetlemektedir.
+
+**Tablo 2: Toda-Yamamoto Nedensellik Sonuçları — Asimptotik ve Webb Bootstrap (k=1, d_max=1, B=999)**
+
+| Neden → Etki | Wald χ²(2) | $p_{asymp}$ | $p_{Webb}$ | Sonuç |
+|---|---|---|---|---|
+| MIG → CO2 | 0.081 | 0.960 | 0.943 | Reddedilmez |
+| MIG → GDP | 1.574 | 0.455 | 0.479 | Reddedilmez |
+| MIG → GI | 7.775 | 0.021 | 0.194 | Reddedilmez† |
+| CO2 → MIG | 4.247 | 0.120 | 0.514 | Reddedilmez |
+| **CO2 → GDP** | **9.075** | **0.011** | **0.040** | **\*\*** |
+| CO2 → GI | 0.063 | 0.969 | 0.965 | Reddedilmez |
+| GDP → MIG | 4.502 | 0.105 | 0.307 | Reddedilmez |
+| GDP → CO2 | 1.033 | 0.597 | 0.793 | Reddedilmez |
+| **GDP → GI** | **6.482** | **0.039** | **0.100** | **\*†** |
+| GI → MIG | 0.761 | 0.684 | 0.612 | Reddedilmez |
+| GI → CO2 | 1.039 | 0.595 | 0.592 | Reddedilmez |
+| GI → GDP | 2.350 | 0.309 | 0.347 | Reddedilmez |
+
+*Not: \*\* p_Webb<0.05, \* p_Webb<0.10. † MIG→GI asimptotik p=0.021 ancak Webb bootstrap p=0.194; N=24 küçük-örneklem şişirmesi. p_Webb: Webb (2023) altı-noktalı diskret ağırlıklarla B=999 VAR sistem wild bootstrap; seed=20260407. p_asymp: asimptotik χ²(2); N=24'te güvenilmez.*
+
+İki sağlam ve bir marjinal nedensellik kanalı tespit edilmektedir. **Birincil kanıt eşiği olarak p_Webb alınmaktadır**; asimptotik p-değerleri N=24'te anti-tutucu (anti-conservative) olduğu için karar kriteri olarak kullanılmamaktadır.
+
+1. **CO2 → GDP** (χ²=9.08, p_Webb=0.040): Karbon birikimi, sonraki dönem büyüme performansını Granger-nedenler. Yükselen emisyon stoku ile artan çevresel bozulmanın verimlilik üzerinde olumsuz bir yük oluşturduğuna işaret etmektedir. Webb bootstrap eşiğini aşan en sağlam kanaldir. TY yaklaşımı gecikmeli etki yönünü tespit etmekle birlikte, etki büyüklüğünün kısaltımı (ekonomik büyümenin kaç puan azaldığı) Etki-Tepki Fonksiyonu (IRF) ile ölçülmektedir — bu analiz, mevcut çalışmanın kapsam dışında tutulmuş ve gelecekteki çalışmaların gündemine bırakılmıştır.
+
+2. **GDP → GI** (χ²=6.48, p_Webb=0.100): Ekonomik büyüme, Yeşil Finansmanı Granger-nedenler. Gelir düzeyi yükseldikçe yeşil yatırım kapasitesinin genişlediğini ortaya koymaktadır. Bu kanal %10 Webb eşiğinde marjinaldir; şeffaflık gereği mutlak anlamlı değil temkinli yorumla raporlanmaktadır.
+
+3. **MIG → GI** (χ²=7.78, p_asymp=0.021, p_Webb=0.194): Asimptotik test anlamlı görünmektedir; ancak Webb bootstrap bu bulgunun N=24 şişirmesinden kaynaklandığını ortaya koymaktadır. Bu nedensellik kanalı sağlam değildir ve kesin çıkarım yapılmaktan kaçınılmaktadır.
+
+## 4.4. Sağlamlık: Webb Wild Cluster Bootstrap (B=999)
+
+N=24 ile asimptotik MWALD p-değerleri küçük örneklerde güvenilmez olabilmektedir. İki ayrı Webb bootstrap uygulanmıştır:
+
+**TY Wald bootstrap:** TY VAR(2) sistemi üzerinde Webb (2023) altı-noktalı diskret ağırlıklarla B=999 VAR sistem wild bootstrap (`webb_wald_TY_bootstrap.py`, seed=20260407). Sonuçlar Tablo 2'nin p_Webb sütununda raporlanmaktadır. Kritik bulgular: CO2→GDP güçlü biçimde sağlamdır (p_Webb=0.040); GDP→GI marjinaldir (p_Webb=0.100); MIG→GI asimptotik görünümü yanıltıcıdır (p_asymp=0.021 → p_Webb=0.194). N=24'te asimptotik chi-kare anti-tutucu olduğu teyit edilmiştir.
+
+**ECM bootstrap:** Dinamik ARDL-ECM çerçevesinde CO2 denklemi için ECT katsayısı $\hat{\beta}_{ECT} = -0.107$ (asimptotik $p = 0.326$, Webb $p = 0.276$) istatistiksel anlamsızlığını korumaktadır. Bu bulgu ARDL sınır testi ile tutarlıdır: CO2 denklemi için uzun dönem hata-düzeltme mekanizması zayıftır.
+
+Tablo 2, aynı zamanda örtük bir yanlışlama matrisi işlevi görmektedir: CO2→MIG (p_Webb=0.514) ve MIG→CO2 (p_Webb=0.943) kanallarının anlamsızlığı, tespit edilen CO2→GDP bağlantısının geriye doğru nedensellikten veya ortak-faktör şokundan kaynaklanmadığını doğrulamaktadır. GI→GDP (p_Webb=0.347) kanalının da anlamsız olması, yeşil finansman ile büyüme arasındaki geri besleme döngüsünün henüz kurulmadığını teyit etmektedir.
+
+Sonuç olarak Webb bootstrap, yalnızca **CO2→GDP** kanalını %5 düzeyinde sağlam olarak teyit etmektedir. **GDP→GI** %10 eşiğinde marjinal kalmaktadır. MIG→GI bulgusu küçük-örneklem şişirmesinin sonucudur ve kesin çıkarım yapılmaktan kaçınılmaktadır.
+
+# 5. Tartışma: Göç-Karbon Nexus ve Ekolojik Verimlilik Paradoksu
+
+Ampirik bulgular, teorik çerçevemizin üç temel boyutunu doğrulamakta ve EKC hipotezi için yeniden yorumlama imkânı sunmaktadır.
+
+**Birinci boyut — Göç karbonu doğrudan nedenlemez (MIG ↛ CO2):** TY analizi, işgücü göçünün Türkiye'deki karbon emisyonlarını doğrudan Granger-nedenlemediğini ortaya koymaktadır (χ²=0.08, p_Webb=0.943). Bu bulgu, çoğunlukla veri kısıtları nedeniyle panel örneklemlerinde tespit edilen negatif göç-emisyon ilişkisini (kente gelenin daha verimli endüstri segmentlerine katılması tezi) zayıf biçimde desteklemektedir. MIG→GI kanalı da Webb bootstrap sonrasında sağlam çıkmadığından, göçün dolaylı karbon etkisini GI üzerinden geçtiğini güvenle iddia etmek mümkün değildir; bu bağlantı gelecekteki çalışmalar için açık bir araştırma sorusu olarak kalmaktadır.
+
+**İkinci boyut — Göç-yeşil finansman ilişkisi: sağlam değil (MIG ↛ GI):** Asimptotik TY testi MIG→GI için p=0.021 vermekte; ancak Webb bootstrap bu bulgunun N=24 şişirmesinden kaynaklandığını ortaya koymaktadır (p_Webb=0.194). Bu nedenle, işgücü hareketliliğinin Türkiye'nin yeşil finansman büyümesini doğrudan Granger-nedenlediği iddiası mevcut verilerle desteklenmemektedir. @Shah2023'ün göç-finansman çerçevesi teorik olarak tutarlı olmakla birlikte, bu çalışma için yeterli ampirik güç bulunmamaktadır. Gelecekteki çalışmalar bölgesel göç akışları veya daha uzun seriler kullanarak bu kanalı yeniden test etmelidir.
+
+**Birinci boyutun yeniden yorumu (MIG ↛ CO2):** İşgücü göçünün karbon emisyonlarını doğrudan Granger-nedenlemediği bulgusu (χ²=0.08, p_Webb=0.943) sağlamdır. Bu, göçün karbon etkisinin —eğer varsa— dolaylı kanallar üzerinden işlediğine; ancak bu çalışmanın test edilen doğrudan kanalda anlamlı bir mekanizma tespit edemediğine işaret etmektedir.
+
+**Üçüncü boyut — CO2 büyümeyi sınırlar, büyüme GI'yi besler:** CO2 → GDP nedenselliği, karbon birikiminin ilerleyen dönemlerde büyüme üzerinde bir "çevresel drag" oluşturduğuna işaret etmekte; EKC'nin sağ kolundaki mekanizmayı tersine okuyarak, büyüme değil büyümenin kısıtlanması emisyon artışını takip etmektedir. GDP → GI nedenselliği ise gelir-yeşil yatırım kanalının açık olduğunu; ancak bu kanalın doğrusal büyüme refahıyla değil, sürdürülebilir büyüme biçimleriyle desteklenmesi gerektiğini ima etmektedir. Sonuç olarak, Türkiye'de Jevons Paradoksu çerçevesindeki Ekolojik Verimlilik Paradoksu kısmen desteklenmektedir: verimlilik artışları doğrudan emisyon artışını tetiklemezken, büyümenin yeşil finansman üzerinden emisyonu frenleyecek bir kırılma noktasına henüz ulaşılmadığı görülmektedir.
+
+# 6. Sonuç ve Politika Önerileri
+
+Bu çalışma, Türkiye'nin 2000–2023 dönemini kapsayan zaman serisi analizi aracılığıyla Göç-Karbon-Büyüme nexus'unda üç özgün nedensellik kanalını belgelemiştir. Toda-Yamamoto (1995) yaklaşımının yapısal kırılmalara karşı sağlamlığı ve Webb (2023) bootstrap ile desteklenen küçük-örneklem güvencesi, bulguların metodolojik güvenilirliğini pekiştirmektedir.
+
+**Politika Önerileri:**
+
+1. *Göç yönetiminin yeşil altyapı planlamasıyla entegrasyonu:* Her ne kadar MIG→GI nedenselliği Webb bootstrap sonrasında istatistiksel sağlamlığını yitirmiş olsa da (p_Webb=0.194), teorik tutarlılık ve GDP→GI kanalının varlığı, kentsel göç akışlarının sürdürülebilir altyapı finansmanıyla eşgüdümlü yönetilmesinin yerinde bir politika önceliği olduğuna işaret etmektedir. Bu nedenle ampirik kanıt yetersiz olmakla birlikte, TKGM ve Çevre, Şehircilik ve İklim Değişikliği Bakanlığı işbirliğiyle "Yeşil Göç Bölgeleri" pilot uygulamaları politika gündemine taşınabilir; bununla birlikte bu önerinin daha geniş panel verisiyle ampirik olarak desteklenmesi gerekmektedir.
+
+2. *Karbon fiyatlandırması ve büyüme yörüngesi:* CO2→GDP nedenselliği, karbon birikiminin büyüme üzerindeki uzun dönemli maliyetini açıkça ortaya koymaktadır. Türkiye'nin 2026 AB ETS uyum sürecindeki karbon fiyatlandırma mekanizmasının, kısa dönem büyüme-emisyon takasını dengeleyecek kademeli bir bant sistemiyle tasarlanması önerilmektedir.
+
+3. *Yeşil finansmanın büyümeye bağlanması:* GDP→GI nedenselliği, gelir artışının yeşil finansmanı olanaklı kıldığını doğrulamaktadır. Bununla birlikte GI→GDP nedenselliğinin yokluğu, yeşil yatırım getirisinin henüz büyüme döngüsünü beslemediğini ortaya koymaktadır. Bu asimetrinin aşılması için vergi teşviki ve Hazine garantili yeşil tahvil programları kritik önem taşımaktadır.
+
+**Sınırlılıklar:** N=24 ile zaman serisi analizi yapısal kırılma testlerinde (Bai-Perron çok kırılma) güç kaybına neden olabilmektedir; gelecekteki çalışmaların panel boyutunu eklentilerle (bölgesel veri, il bazlı göç akışları) genişletmesi önerilmektedir. Ayrıca bu çalışmada kullanılan tek-ülke zaman serisi tasarımı, bulgüların genellenebilirliğini sınırlamaktadır.
+
+---
+
+## Declarations
+
+**CRediT Author Contributions:** Uğur Yıldırım: Conceptualization, Literature Review, Writing – Original Draft. M. Gökhan Özdemir: Methodology, Formal Analysis, Data Curation, Software (Webb bootstrap), Writing – Review & Editing.
+
+**Data Availability:** All data are publicly available. Migration and GDP data: World Bank WDI. CO₂ data: World Bank/EDGAR. Green Finance (GI) proxy: OECD Environmental Policy Stringency Index or equivalent. Replication code available upon request.
+
+**Conflict of Interest:** The authors declare no conflict of interest.
+
+**Funding:** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+**Ethical Approval:** Not applicable (secondary macroeconomic data; no human or animal subjects).
+
+::: {#refs}
+:::

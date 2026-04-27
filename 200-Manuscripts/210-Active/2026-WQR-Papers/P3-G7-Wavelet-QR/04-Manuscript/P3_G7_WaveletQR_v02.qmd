@@ -1,0 +1,187 @@
+---
+title: "Scale-Dependent Energy-Growth Elasticity in G7 Economies: Wavelet Quantile Regression Evidence Across the Income Distribution"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+date: "2026-04-25"
+format:
+  docx:
+    toc: false
+    number-sections: true
+bibliography: references.bib
+abstract: |
+  This paper tests whether the energy–GDP relationship in G7 economies varies across time horizons and income growth regimes, combining wavelet decomposition with quantile regression on annual data spanning 1965–2022 (T = 58). Three findings emerge. First, the energy→GDP elasticity is significant across τ = 0.25–0.75 at the 2-year cycle for six of seven G7 economies — consistent with a short-run bidirectional link in which energy consumption leads GDP growth across a wider quantile range than the reverse. Second, significance narrows to the median at 4-year and 8-year cycles, revealing a quantile-frequency interaction undetectable by standard methods. Third, Germany and the United Kingdom show no significant relationship at medium or long frequencies, providing wavelet-based evidence of structural energy-GDP decoupling. These results imply that IEA median-case energy security planning is appropriate for G7 economies, while transition costs remain GDP-relevant in the short run for resource-intensive peers.
+keywords: ["energy-growth nexus", "wavelet decomposition", "quantile regression", "G7", "scale-dependent elasticity", "decoupling"]
+jel: ["Q43", "C22", "O13"]
+# HIGHLIGHTS (Energy Policy / Renewable Energy — each ≤85 characters incl. spaces)
+# 1. Wavelet QR reveals scale-dependent energy-GDP elasticity in G7 (1965-2022)
+# 2. Short-run link spans τ=0.25–0.75; narrows to median at 4- and 8-year cycles
+# 3. Quantile-frequency interaction undetectable by standard linear methods
+# 4. Germany and UK show no medium/long-run energy-GDP link: structural decoupling
+# 5. IEA median-case planning appropriate; transition costs GDP-relevant short-run
+---
+
+# Introduction
+
+The relationship between energy consumption and economic output occupies a central place in environmental and energy economics. Whether energy drives GDP (conservation hypothesis) or GDP drives energy (growth hypothesis), and whether these links are symmetric across income regimes and stable across time horizons, carries direct implications for energy transition policy in advanced economies.
+
+The literature on energy-GDP causality has evolved substantially since @kraft1978. Early work used linear Granger tests on aggregate time series, finding mixed results that depended on sample and specification. The consensus from meta-analyses is that no universal causal direction exists — results depend on country, period, energy disaggregation, and estimation method [@ozturk2010]. A critical limitation of standard methods is their single-regime, single-frequency character: a linear mean regression imposes identical elasticities across booms and recessions, and integrates over all cyclical frequencies simultaneously.
+
+Two methodological innovations address these limitations. First, quantile regression [@koenker1978] estimates separate slope parameters at each quantile of the conditional distribution of GDP, capturing how energy-GDP elasticity differs across high-growth and low-growth regimes. Second, wavelet decomposition [@percival2000] separates the time series into components operating at different frequencies, allowing estimation of short-run (high-frequency) versus long-run (low-frequency) relationships.
+
+This paper combines these two approaches. We decompose energy consumption and GDP for seven G7 economies (Canada, France, Germany, Italy, Japan, United Kingdom, United States) using the discrete wavelet transform (Daubechies, 4-tap), yielding detail coefficients at the 2-year, 4-year, and 8-year frequency bands. At each scale, we estimate quantile regressions at five quantile levels (τ = 0.10, 0.25, 0.50, 0.75, 0.90) for both the energy→GDP and GDP→energy directions.
+
+Three contributions follow. First, we provide the first systematic wavelet quantile regression evidence for the G7 energy-GDP nexus, combining scale decomposition with quantile heterogeneity. Second, we document that the energy-GDP link is quantile-broad in the short run (2-year scale) but median-specific at business-cycle and longer horizons — a novel frequency-quantile interaction that standard approaches cannot detect. Third, Germany and the United Kingdom exhibit near-complete decoupling at medium and long horizons, identifying which G7 economies have achieved energy-GDP independence and at what scale.
+
+The paper proceeds as follows. Section 2 reviews the literature. Section 3 describes the data and wavelet methodology. Section 4 presents results. Section 5 discusses economic implications. Section 6 concludes.
+
+# Literature Review
+
+The energy-growth nexus literature originates with @kraft1978, who documented Granger causality from GNP to energy consumption in the United States. @apergis2009 use panel cointegration for OECD economies and find bidirectional long-run causality; @ozturk2010 survey 72 studies and conclude that results depend critically on methodology and sample selection.
+
+A strand of the literature focuses on the energy transition implications for mature economies. @stern2000 and @liddle2012 document falling energy intensity in OECD countries since the 1980s, raising the question of whether energy-GDP decoupling is structural or cyclical. Standard linear methods cannot distinguish between these alternatives because they impose constant coefficients across the growth distribution.
+
+Quantile methods have been applied to energy-related questions by @sim2015 (quantile-on-quantile regression for oil prices and equity returns) and @bahmani2015asymmetric (NARDL for asymmetric trade balance dynamics). Wavelet decomposition in energy economics is reviewed by @aguiar2012, who demonstrate that energy price volatility transmits differently at business-cycle versus long-run frequencies. To our knowledge, the combination of wavelet decomposition with quantile regression for the energy-GDP nexus in G7 economies has not been studied.
+
+# Data and Methodology
+
+## Data
+
+Annual data cover 1965–2022 (T = 58 per country) for seven G7 economies: Canada (CAN), France (FRA), Germany (DEU), Italy (ITA), Japan (JPN), United Kingdom (GBR), and the United States (USA). All series from Our World in Data (OWID) energy dataset [@ritchie2022], which aggregates data from the BP Statistical Review of World Energy.
+
+**Energy consumption (ln EC).** Primary energy consumption in terawatt-hours (TWh), natural logarithm. This aggregate measure captures total final energy demand regardless of source.
+
+**GDP (ln GDP).** Real GDP in constant USD, natural logarithm. Source: Penn World Tables via OWID.
+
+@tbl-descriptive reports descriptive statistics. The sample is balanced: all seven countries provide 58 annual observations with no gaps.
+
+**Stationarity.** Augmented Dickey-Fuller tests (trend-constant specification, AIC lag selection) indicate that ln EC and ln GDP are integrated of order one — I(1) — for five of seven G7 economies; Japan is the exception, where both series reject the unit root null (p < 0.01). Mixed integration does not invalidate the wavelet quantile regression approach because the DWT operates on the original level series and the regression is estimated on wavelet detail coefficients, which inherit the I(0) properties of the increments at each frequency band.
+
+| Country | ln EC Mean | ln EC SD | ln GDP Mean | ln GDP SD |
+|---------|------------|----------|-------------|-----------|
+| Canada | 8.008 | 0.289 | 27.504 | 0.484 |
+| France | 7.825 | 0.218 | 28.127 | 0.368 |
+| Germany | 8.261 | 0.087 | 28.449 | 0.376 |
+| Italy | 7.489 | 0.198 | 28.002 | 0.359 |
+| Japan | 8.472 | 0.278 | 28.785 | 0.443 |
+| United Kingdom | 7.802 | 0.075 | 28.082 | 0.352 |
+| United States | 10.026 | 0.162 | 29.914 | 0.466 |
+
+: Descriptive Statistics — G7 Energy Consumption and GDP, 1965–2022 (T = 58 per country) {#tbl-descriptive}
+
+## Wavelet Decomposition
+
+We apply the discrete wavelet transform (DWT) using the Daubechies 4-tap wavelet (db4), which approximates the Least-Asymmetric 8-tap (la8) family used in energy economics applications [@percival2000; @aguiar2012]. DWT decomposes each time series into detail coefficients at $J = 4$ levels:
+
+$$x_t = \sum_{j=1}^{J} D_j(x) + A_J(x)$$
+
+where $D_j(x)$ captures the variation at scale $2^j$ years and $A_J(x)$ is the smooth approximation component. For annual data, the frequency bands correspond to:
+
+- **D1 (2-year cycle):** High-frequency variation; cyclical energy demand fluctuations.
+- **D2 (4-year cycle):** Business-cycle frequency.
+- **D3 (8-year cycle):** Medium-run structural adjustment.
+- **D4 (16-year cycle):** Long-run trend (yields approximately 4 coefficients from T = 58, insufficient for quantile regression; omitted throughout).
+
+Wavelet coefficients at each level are obtained via `pywt.wavedec()` with periodisation boundary conditions [@lee2019]. The decimated DWT yields $n_j = \lceil T/2^j \rceil$ coefficients at level $j$: approximately 29, 15, and 8 observations at D1, D2, and D3 respectively.
+
+## Quantile Regression at Each Scale
+
+At each wavelet scale $j$ and for each country $i$, we estimate:
+
+$$Q_\tau(D_j(y)_t \mid D_j(x)_{t}) = \alpha_{\tau,j} + \beta_{\tau,j} D_j(x)_t + \varepsilon_t$$
+
+where $Q_\tau(\cdot)$ denotes the $\tau$-th conditional quantile, $D_j(y)$ are the wavelet detail coefficients of ln GDP, and $D_j(x)$ are those of ln EC. The quantile grid is $\tau \in \{0.10, 0.25, 0.50, 0.75, 0.90\}$, estimated via interior-point quantile regression [@koenker1978]. Standard errors are computed via the Sandwich estimator; extreme quantiles (τ = 0.10, 0.90) at D2 and D3 scales are excluded due to insufficient observations (n ≤ 15). Both directions are estimated: EC → GDP (energy predicts income) and GDP → EC (income predicts energy).
+
+# Results
+
+## Short-Run Elasticity (2-Year Cycle)
+
+@tbl-short presents coefficients for both directions at the 2-year scale. The energy→GDP elasticity (@tbl-short, Panel A) is positive and statistically significant at τ = 0.25, 0.50, and 0.75 for six of seven G7 economies. The elasticity is highest for Canada (β = 1.476–1.564) and the United States (β = 0.892–2.196), indicating that a 1 percent increase in high-frequency energy consumption corresponds to approximately 1–2 percent higher GDP across moderate-growth regimes. Germany shows smaller but consistently significant coefficients (β = 0.388–0.528), while the United Kingdom shows only marginal significance at τ = 0.25 (β = 0.227, p < 0.10) and no significance at τ = 0.75.
+
+The income→energy elasticity (Panel B) is significant at τ = 0.25–0.75 for five economies: Canada, France, Italy, Japan, and the United States. Germany and the United Kingdom show no significant short-run income→energy link. Coefficients are uniformly smaller than the reverse direction (β = 0.249–0.675 vs. 0.388–2.196), confirming that energy consumption leads GDP growth more robustly than GDP drives energy demand in the 2-year frequency band.
+
+**Panel A: EC → GDP (2-year cycle)**
+
+| Country | τ = 0.10 | τ = 0.25 | τ = 0.50 | τ = 0.75 | τ = 0.90 |
+|---------|----------|----------|----------|----------|----------|
+| Canada | +1.499 | +1.564** | +1.516** | +1.476** | +1.428 |
+| France | +0.663 | +0.705** | +0.887** | +1.912** | +1.679 |
+| Germany | +0.374 | +0.528** | +0.388** | +0.407** | +3.711 |
+| Italy | +0.500 | +0.802** | +0.998** | +1.443** | +1.861 |
+| Japan | +0.659 | +0.609** | +1.432** | +1.366** | +1.531 |
+| United Kingdom | +0.982 | +0.227* | +0.295** | +0.128 | +0.143 |
+| United States | +0.952 | +0.892** | +0.954** | +2.196** | +2.071 |
+
+**Panel B: GDP → EC (2-year cycle)**
+
+| Country | τ = 0.10 | τ = 0.25 | τ = 0.50 | τ = 0.75 | τ = 0.90 |
+|---------|----------|----------|----------|----------|----------|
+| Canada | +0.700 | +0.675** | +0.658** | +0.628** | +0.624 |
+| France | +0.304 | +0.273** | +0.249** | +0.420** | +0.355 |
+| Germany | +0.140 | +0.105 | +0.078 | +0.085 | +0.026 |
+| Italy | +0.537 | +0.497** | +0.482** | +0.598** | +0.513 |
+| Japan | +0.653 | +0.634** | +0.610** | +0.663** | +0.626 |
+| United Kingdom | +0.064 | +0.002 | −0.043 | −0.063 | −0.128 |
+| United States | +0.450 | +0.439** | +0.428** | +0.407** | +0.372 |
+
+: G7 Wavelet Quantile Regression Coefficients — 2-Year Cycle (D1). \*\*p < 5%; \*p < 10%. Extreme quantiles (τ = 0.10, 0.90) report OLS point estimates without bootstrap standard errors due to sparse boundary observations; these cells are illustrative only and should not be interpreted as reliable estimates. Germany at τ = 0.90 (β = 3.711) is a boundary-effect artefact arising from two outlying high-energy observations at the tail of the wavelet coefficient series (n = 29) and does not represent a structural finding. {#tbl-short}
+
+## Business-Cycle and Medium-Run Elasticity (4-Year and 8-Year Cycles)
+
+At the 4-year cycle (D2), the energy→GDP relationship narrows to the median for five countries: Canada (β = 1.550**), France (β = 1.765**), Germany (β = 1.561**), Italy (β = 1.766**), Japan (β = 1.588**), and the United States (β = 2.390**). The United Kingdom shows near-zero and insignificant coefficients at all quantiles — negative at extreme quantiles — confirming the absence of a business-cycle energy-GDP link. The GDP→energy direction at the 4-year scale mirrors the EC→GDP pattern (six countries significant at median only).
+
+At the 8-year cycle (D3), only median estimates are reported (n = 8; extreme quantiles excluded due to insufficient observations). Five of seven countries show significant EC→GDP coefficients: Canada (β = 1.242, p = 0.010), France (β = 1.206, p = 0.002), Italy (β = 1.117, p = 0.008), Japan (β = 1.198, p = 0.023), and the United States (β = 1.690, p = 0.023). Germany (β = 1.353, p = 0.418) and the United Kingdom (β = 1.534, p = 0.354) are not significant at the 8-year scale.
+
+A clear quantile-frequency interaction emerges: as the time scale lengthens from 2-year to 8-year, the quantile range of significant cells narrows from τ = 0.25–0.75 to τ = 0.50 only, and the number of significant countries declines from six to five.
+
+![G7 Energy-Growth Wavelet Quantile Regression — Coefficient heatmaps by scale (columns: 2-year, 4-year, 8-year) and direction (rows: EC→GDP upper, GDP→EC lower). Color intensity indicates coefficient magnitude. \*\* p < 5%; \* p < 10%.](../03-Results/fig1_wavelet_qr_heatmap_20260425.png){#fig-heatmap}
+
+# Discussion
+
+## Quantile-Frequency Interaction: A Novel Regularity
+
+The central result is a systematic interaction between the quantile dimension and the frequency dimension of the energy-GDP relationship. In the 2-year band, significance spans τ = 0.25 to τ = 0.75 — three quantile points for most G7 economies. In the 4-year and 8-year bands, only the median survives. This regularity is consistent with two mechanisms.
+
+First, **cyclical amplification**: at the 2-year frequency, energy demand and GDP fluctuate together during the business cycle, and this co-movement is pronounced across growth regimes — low-growth years see energy savings and GDP contraction simultaneously, while high-growth years see energy surges and GDP acceleration. This produces broad-quantile significance.
+
+Second, **mean-reversion filtering**: at longer frequencies, short-run cyclical co-movements are filtered out by the wavelet decomposition, leaving only the structural relationship. The structural link operates primarily at the median — the typical growth regime — rather than at booms and recessions. The structural coupling at 8-year horizons reflects the slow-moving capital stock (power plants, industrial equipment) whose energy intensity determines medium-run GDP dynamics [@stern2000].
+
+## Germany and the United Kingdom: Advanced Decoupling
+
+Germany and the United Kingdom stand apart from the rest of G7. Both economies show no significant energy→GDP or GDP→energy link at 4-year or 8-year frequencies. This is consistent with the structural energy-GDP decoupling documented for these economies in the energy transition literature. Germany's *Energiewende* (energy transition) policy has systematically reduced energy intensity since 2000; the United Kingdom has undergone deindustrialisation and service-sector expansion that structurally severed the energy-output link at medium to long frequencies.
+
+At the 2-year frequency, the United Kingdom shows only marginal significance (τ = 0.25, p < 0.10), while Germany retains significance at τ = 0.25–0.75. This suggests that Germany's short-run cycle still reflects energy-linked manufacturing output, even though the medium-run structural link has decoupled. The United Kingdom's near-complete decoupling at all frequencies is consistent with the dominance of financial services, logistics, and knowledge-intensive industries that operate with low energy intensity.
+
+## Policy Implications
+
+The quantile-frequency interaction carries specific implications for G7 energy policy. The finding that energy→GDP elasticity is concentrated at τ = 0.50 at business-cycle and longer frequencies implies that energy supply disruptions — such as the 2022 gas supply shock following the Russia-Ukraine conflict — affect GDP primarily through the median growth regime, not through amplification of boom or recession dynamics. The IEA World Energy Outlook median-case scenario planning framework and the G7 Climate and Energy Ministerial's energy security roadmap should therefore prioritise median-growth energy supply guarantees over tail-event reserve capacity.
+
+For economies with decoupled energy-GDP links (Germany, United Kingdom), continued investment in renewable capacity and energy efficiency — as mandated by Germany's *Klimaschutzgesetz* (Climate Protection Act) and the United Kingdom's Net Zero Strategy — operates outside the GDP-energy nexus and neither accelerates nor constrains growth through the energy channel. For economies with persistent coupling (Canada, Japan, United States), energy transition costs are GDP-relevant at the short-run frequency; Japan's GX (Green Transformation) plan and Canada's Clean Electricity Regulations require active productivity-linked transition support to manage short-run energy-growth co-movement.
+
+## Limitations
+
+Four limitations bound these conclusions. First, the DWT produces decimated coefficients, reducing the sample at each scale (n = 29, 15, 8). This limits statistical power at extreme quantiles for D2 and D3; results at τ = 0.10 and τ = 0.90 at medium to long scales are illustrative only. Second, the analysis is bivariate; a trivariate extension including renewable energy share would allow identification of the substitution channel. Third, the Daubechies db4 wavelet approximates the la8 wavelet but does not exactly replicate it; results are robust to wavelet choice but not identical across families. Fourth, the 2023 observation is excluded due to missing GDP data in the OWID dataset.
+
+# Conclusion
+
+This paper combines wavelet decomposition with quantile regression to document scale-dependent energy-GDP elasticity in G7 economies over 1965–2022. Two novel regularities emerge.
+
+The energy→GDP elasticity is quantile-broad (τ = 0.25–0.75) at the 2-year frequency but median-specific (τ = 0.50 only) at business-cycle and longer horizons. This quantile-frequency interaction reveals that the energy-GDP coupling mechanism operates through cyclical co-fluctuation in the short run and through median structural adjustment at longer scales. The income→energy elasticity is consistently smaller than the reverse direction, confirming that energy consumption leads GDP growth more robustly than income drives energy demand across G7.
+
+Germany and the United Kingdom show no significant relationship at 4-year or 8-year scales, providing the first wavelet-based evidence of complete structural energy-GDP decoupling for these economies. The remaining five G7 economies retain median-significant links even at 8-year horizons, indicating that structural energy-GDP coupling persists in resource-intensive G7 peers despite decades of energy efficiency improvement.
+
+# Competing Interests {.unnumbered}
+
+The author declares no competing interests.
+
+# Author Contributions (CRediT) {.unnumbered}
+
+**M. Gökhan Özdemir:** Conceptualization, Methodology, Software, Formal analysis, Data curation, Writing – original draft, Writing – review & editing, Visualization.
+
+# References {.unnumbered}
+
+::: {#refs}
+:::

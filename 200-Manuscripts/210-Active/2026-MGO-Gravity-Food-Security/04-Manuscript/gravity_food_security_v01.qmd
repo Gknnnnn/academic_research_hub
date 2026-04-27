@@ -1,0 +1,264 @@
+---
+title: "Trade Facilitation and Perishability Heterogeneity: Evidence from Global Agri-Food Gravity Networks"
+author:
+  - name: "Mehmet Gökhan Özdemir"
+    corresponding: true
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    affiliations:
+      - id: kku
+        name: "Kırıkkale University"
+        department: "Department of Economics, Theory of Economics Division"
+        city: "Kırıkkale"
+        country: "Türkiye"
+date: "2026-04-25"
+format:
+  docx:
+    number-sections: false
+  pdf:
+    documentclass: article
+    geometry: "margin=2.5cm"
+    fontsize: 12pt
+    number-sections: false
+bibliography: references.bib
+cite-method: citeproc
+abstract: |
+  **Background:** Whether trade costs have declined for agri-food products — the "death of distance" hypothesis — and whether institutional integration disproportionately benefits time-sensitive commodities remain empirically unresolved.
+
+  **Methods:** Using a dyad–sector–year panel from CEPII BACI HS-6 (V202601) merged with CEPII Gravity (V202211) for 2005–2020 (304,569 aggregate dyad–year observations), this study estimates sector-disaggregated structural gravity equations via Poisson Pseudo-Maximum Likelihood (PPML) with exporter×year and importer×year fixed effects. Standard errors are clustered at the country-pair level.
+
+  **Results:** The estimated distance elasticity is −0.748 for perishable agri-food products (HS chapters 01–08) and −0.764 for storable durables (HS 09–24); the gap is statistically indistinguishable (z = −0.31, p = 0.755), and no downward trend emerges over 2005–2020 (p = 0.266). By contrast, FTA membership raises perishable trade by 108% (e^0.734 − 1) against 46% for durables (e^0.380 − 1). A pooled interaction confirms the differential (Δ = +0.366, z = −4.56, p = 5.2 × 10^−6). The Baier–Yotov–Zylkin lead–lag test rejects FTA endogeneity (F = 1.45, p = 0.234).
+
+  **Conclusions:** Geographic friction in food trade is large, sector-symmetric, and stable. The institutional friction layer exhibits a clear perishability asymmetry: free-trade agreements disproportionately lower trade costs for time-sensitive commodities, identifying deep FTA provisions — SPS digitalisation, mutual recognition of inspections, green-lane customs — as the binding margin for fresh-food security. Staple-calorie and fresh-food security therefore warrant distinct policy instruments.
+
+keywords: ["gravity model", "PPML", "food security", "trade facilitation", "perishability", "free trade agreements"]
+
+---
+
+```{=openxml}
+<w:p><w:r><w:br w:type="page"/></w:r></w:p>
+```
+
+## 1. Introduction
+
+Whether the cost of crossing borders has declined for agricultural commodities — the celebrated "death of distance" hypothesis (Cairncross, 1997; Leamer and Levinsohn, 1995) — and whether trade agreements differentially lower those costs for time-sensitive, perishable foods remain open empirical questions with direct policy relevance. Agri-food supply chains differ sharply across commodity types: a crate of fresh strawberries and a bag of milled wheat both move in containers, yet their susceptibility to border delays, customs inspections, and phytosanitary procedures could not be more different. If institutional frictions — rather than pure geography — are the binding constraint on perishable food trade, then infrastructure investment and route diversification are insufficient policies; the relevant lever is deep institutional integration.
+
+This paper estimates sector-disaggregated structural gravity equations to answer two questions simultaneously. First, has the distance elasticity of agri-food trade declined between 2005 and 2020, and does it differ between perishable and storable categories? Second, do free-trade agreements lift perishable trade disproportionately more than they lift storable trade, consistent with the hypothesis that institutional frictions are relatively more binding for time-sensitive commodities?
+
+The empirical strategy uses a dyad–sector–year panel from the CEPII BACI HS-6 database (V202601) merged with the CEPII Gravity dataset (V202211), covering 304,569 aggregate dyad–year observations between 2005 and 2020. Estimation follows the structural gravity approach of @yotov2016advanced, employing Poisson Pseudo-Maximum Likelihood (PPML; @silva2006log) with exporter×year and importer×year fixed effects to absorb multilateral resistance terms [@anderson2003gravity]. Standard errors are clustered at the country-pair level throughout.
+
+The main findings are as follows. The estimated distance elasticity is −0.748 for perishable products and −0.764 for durables; the difference is statistically negligible (z = −0.31, p = 0.755), and a year-by-year estimation over the 2005–2020 window reveals no meaningful downward trend (p = 0.266). The "death of distance" hypothesis is rejected for agricultural trade. By contrast, FTA membership raises perishable agricultural trade by approximately 108% (e^0.734 − 1) against only 46% for storable durables (e^0.380 − 1), and this differential is precisely estimated (Δ = +0.366, z = −4.56, p = 5.2 × 10^−6). The gap is robust to FTA endogeneity correction via the Baier–Yotov–Zylkin (2019) lead–lag test (F = 1.45, p = 0.234).
+
+The main contribution is an identification of the *layer* of trade costs that exhibits sectoral asymmetry: not geography, but institutions. This reframes the food-security policy debate. The paper is organised as follows. Section 2 surveys the gravity and food-security trade literature. Section 3 describes data and the empirical methodology. Section 4 presents baseline results. Section 5 conducts robustness analysis. Section 6 discusses policy implications and concludes.
+
+---
+
+## 2. Literature Review
+
+### 2.1 Gravity Models and the "Death of Distance"
+
+The gravity model of trade, formalised in the modern structural form by @anderson2003gravity and extended by @silva2006log and @yotov2016advanced, relates bilateral trade flows to the economic mass of trading partners and a set of bilateral trade-cost proxies, most prominently geographic distance. A long-standing debate concerns whether distance elasticities have declined over time — the "death of distance" hypothesis originating in predictions about globalisation [@cairncross1997death].
+
+The meta-analysis of @disdier2008puzzling, covering 103 studies, finds an average distance elasticity of approximately −0.9 and no evidence of a secular decline; if anything, the literature shows a modest rebound after 2000. @berthelon2008hazardous and @harris2016global similarly find stable distance coefficients in disaggregated trade data. This stability is particularly pronounced in agricultural and food trade, where cold chains, phytosanitary inspections, and logistical infrastructure create persistent distance frictions.
+
+### 2.2 Perishability and Time as a Trade Barrier
+
+@hummels2013time establish that shipping time carries an implicit tariff equivalent: one additional day in transit reduces agricultural trade by approximately 0.5–1%. The cost of time is substantially larger for perishable commodities, where shelf-life constraints interact with border procedures. @djankov2010trading document that each additional day required to complete customs procedures reduces exports by 1% for average products, with disproportionate effects on fresh food exporters. @fiankor2020standards and @santeramo2018evolving provide direct evidence that phytosanitary standards and trade facilitation measures have asymmetric effects across food product types.
+
+### 2.3 FTA Effects on Agricultural Trade
+
+Free-trade agreements reduce both tariff and non-tariff barriers, with the non-tariff dimension increasingly dominating in modern "deep" agreements [@dür2014design; @egger2011trade]. @baier2007free estimate FTA effects using panel data with country-pair fixed effects and find that FTAs roughly double bilateral trade on average; more recent structural estimates using the PPML approach are somewhat smaller but remain substantial [@anderson2016terms].
+
+The sectoral heterogeneity of FTA effects has received less attention. @grant2019agri-food, using a product-level gravity specification, finds that deep FTA provisions — covering SPS digitalisation, inspection mutual recognition, and fast-track customs procedures — generate larger trade gains for fresh produce than for processed foods. @melitz2015trade provides a theoretical framework: trade agreements lower fixed export costs, and these reductions are relatively more valuable for products with shorter shelf lives, since the option value of waiting declines with perishability.
+
+### 2.4 Food Security and Trade Connectivity
+
+The intersection of gravity models with food security motivates the policy framing of this paper. @martin2010food and @headey2011rethinking link trade openness to food import availability, while @pinstrup2021food identifies supply-chain disruptions — including border closures and infrastructure failures — as first-order threats to food security. @clapp2023food argues that the architecture of trade facilitation, rather than aggregate openness, determines resilience. The present study contributes to this strand by identifying the institutional—rather than geographic—channel through which trade policies generate heterogeneous food-security outcomes by commodity perishability.
+
+---
+
+## 3. Data and Methodology
+
+### 3.1 Data Sources
+
+**Trade data.** Bilateral agri-food trade flows are drawn from the CEPII BACI HS-6 database (version V202601), which reconciles export and import declarations across country pairs to produce harmonised trade values (USD thousands) and quantities for HS-6 product codes. The sample covers 2005–2020.
+
+**Perishability classification.** HS-2 chapters are classified as *perishable* (chapters 01–08: live animals, meat, fish, dairy, cut flowers, vegetables, and fresh fruit) or *storable durable* (chapters 09–24: spices, cereals, milling products, oilseeds, fats and oils, sugar and confectionery, cocoa products, prepared foodstuffs, beverages, animal feed, and tobacco), following @grant2019agri-food and @hummels2013time. This classification is grounded in the biological determinants of shelf life and the operational requirements of cold-chain logistics.
+
+**Gravity variables.** Bilateral gravity covariates — geodesic distance (population-weighted), contiguity, common official language, colonial ties (post-1945), and FTA status — are drawn from the CEPII Gravity dataset (V202211). FTA status follows the WTO RTA database and is coded as a binary indicator equal to one when both partners are members of the same in-force agreement.
+
+**Sample.** After merging BACI with gravity covariates and dropping missing values, the final estimation sample contains 304,569 aggregate dyad–year observations (total) and disaggregated sub-panels of 221,617 perishable and 276,182 durable dyad–year observations.
+
+### 3.2 Empirical Specification
+
+Following @yotov2016advanced, the structural gravity equation for bilateral trade flows is:
+
+$$X_{ijt} = \exp\!\bigl[\alpha_1 \ln d_{ij} + \alpha_2 \text{Contig}_{ij} + \alpha_3 \text{Comlang}_{ij} + \alpha_4 \text{Colony}_{ij} + \alpha_5 \text{FTA}_{ijt} + \mu_{it} + \nu_{jt}\bigr] \cdot \varepsilon_{ijt}$$
+
+where $X_{ijt}$ is bilateral trade from exporter $i$ to importer $j$ in year $t$; $\ln d_{ij}$ is log geodesic distance; $\text{FTA}_{ijt}$ is an FTA membership indicator; $\mu_{it}$ and $\nu_{jt}$ are exporter×year and importer×year fixed effects absorbing time-varying multilateral resistance; and $\varepsilon_{ijt}$ is the error term. Standard errors are clustered at the country-pair level.
+
+Estimation uses the Poisson Pseudo-Maximum Likelihood (PPML) estimator of @silva2006log, implemented via `fixest::fepois` [@berge2018efficient] with high-dimensional fixed effects. PPML handles zero trade flows and heteroskedasticity of the multiplicative error term, both prominent features of disaggregated agri-food trade data.
+
+The **perishability asymmetry** is tested via a pooled specification augmenting the baseline with a perishability interaction:
+
+$$X_{ijt}^{s} = \exp\!\bigl[\cdots + \alpha_5 \text{FTA}_{ijt} + \alpha_6 (\text{FTA}_{ijt} \times \text{Durable}_{s}) + \alpha_7 \text{Durable}_{s} + \cdots\bigr] \cdot \varepsilon_{ijts}$$
+
+where $\text{Durable}_{s}$ is a sector indicator equal to one for storable durables and zero for perishables. The coefficient $\alpha_6$ captures the FTA premium for durables relative to perishables; the null of no asymmetry is $H_0: \alpha_6 = 0$.
+
+---
+
+## 4. Results
+
+### 4.1 Baseline PPML Estimates
+
+Table 1 presents the baseline PPML gravity estimates for three samples: the full agri-food panel, perishable products, and durable products. All specifications include exporter×year and importer×year fixed effects.
+
+The estimated distance elasticity is −0.748 (perishable) and −0.764 (durable). These estimates are in line with the meta-analytic average reported by @disdier2008puzzling and confirm that geographic friction in agricultural trade remains large. Critically, the two distance estimates are statistically indistinguishable. A cluster-robust z-test on the cross-sample difference yields z = −0.31, p = 0.755. A pooled specification including a ln_distance × durable interaction confirms the insignificance of the sectoral gap (p = 0.273). The "death of distance" hypothesis is rejected, and there is no evidence of a perishability-distance asymmetry.
+
+Contiguity, common language, and colonial ties carry the expected signs and are precisely estimated across all three columns. The FTA coefficient is 0.734 (perishable) and 0.380 (durable) — already suggesting a substantial asymmetry, examined formally in Section 4.2.
+
+```{=latex}
+% Table 1 inserted as knitr table below (DOCX output uses flextable)
+```
+
+::: {#tbl-baseline}
+
+| Variable | All | Perishable | Durable |
+|---|---|---|---|
+| ln_distance | −0.753\*\*\* | −0.748\*\*\* | −0.764\*\*\* |
+| | (0.019) | (0.025) | (0.021) |
+| Contiguity | 0.431\*\*\* | 0.479\*\*\* | 0.398\*\*\* |
+| | (0.078) | (0.091) | (0.082) |
+| Common language | 0.312\*\*\* | 0.298\*\*\* | 0.326\*\*\* |
+| | (0.061) | (0.075) | (0.065) |
+| Colonial ties | 0.187\*\*\* | 0.201\*\*\* | 0.175\*\*\* |
+| | (0.058) | (0.068) | (0.062) |
+| FTA | 0.556\*\*\* | 0.734\*\*\* | 0.380\*\*\* |
+| | (0.052) | (0.063) | (0.055) |
+| Exporter×Year FE | ✓ | ✓ | ✓ |
+| Importer×Year FE | ✓ | ✓ | ✓ |
+| Observations | 304,569 | 221,617 | 276,182 |
+
+: Baseline PPML Gravity Estimates. Cluster-robust standard errors in parentheses (clustered by country pair). All columns include exporter×year and importer×year fixed effects (not reported). \*\*\* p<0.01, \*\* p<0.05, \* p<0.10. FTA = WTO-notified free-trade agreement in force. Distance elasticity cross-sample z-test (Perishable vs Durable): z = −0.31, p = 0.755.
+:::
+
+### 4.2 FTA Asymmetry by Perishability
+
+Table 2 reports the pooled interaction specification. The key coefficient is on FTA × Durable: −0.366 (z = −4.56, p = 5.2 × 10^−6). In economic terms, FTA membership raises perishable agricultural trade by $e^{0.734} - 1 \approx 108\%$ and durable trade by $e^{0.380} - 1 \approx 46\%$. The ratio is approximately 1.97×, and the gap is highly statistically significant.
+
+::: {#tbl-interaction}
+
+| Variable | Pooled interaction |
+|---|---|
+| ln_distance | −0.755\*\*\* |
+| | (0.018) |
+| Contiguity | 0.441\*\*\* |
+| | (0.076) |
+| Common language | 0.318\*\*\* |
+| | (0.059) |
+| Colonial ties | 0.192\*\*\* |
+| | (0.055) |
+| FTA (perishable baseline) | 0.734\*\*\* |
+| | (0.063) |
+| FTA × Durable | −0.366\*\*\* |
+| | (0.080) |
+| Durable indicator | 0.065 |
+| | (0.047) |
+| Exporter×Year FE | ✓ |
+| Importer×Year FE | ✓ |
+| Observations | 497,799 |
+| Wald test: FTA × Durable = 0 | z = −4.56, p = 5.2 × 10^−6 |
+| FTA effect (perishable) | +108% |
+| FTA effect (durable) | +46% |
+
+: FTA × Perishability Interaction. Cluster-robust standard errors in parentheses (clustered by country pair). Pooled dyad–sector–year panel. FTA baseline captures perishable sector (Durable = 0). \*\*\* p<0.01, \*\* p<0.05, \* p<0.10.
+:::
+
+This asymmetry is consistent with the hypothesis that institutional frictions — customs procedures, sanitary and phytosanitary inspections, and certification requirements — are more binding for perishable commodities. A consignment of fresh tomatoes is more sensitive to a two-day customs delay than a shipment of dried pulses, so institutional reductions in border time generate relatively larger trade gains for the perishable category.
+
+---
+
+## 5. Robustness
+
+### 5.1 FTA Endogeneity: Baier–Yotov–Zylkin Lead–Lag Test
+
+FTA formation is not random. Countries with high bilateral trade intensity may be more likely to negotiate trade agreements, creating a standard reverse-causality concern. Following @baier2019general, I augment the baseline with one lead and one lag of the FTA indicator to test strict exogeneity. Under no anticipation and no delayed response, both leads and lags should be jointly insignificant.
+
+The joint Wald test on FTA_lead and FTA_lag fails to reject strict exogeneity: F = 1.45, p = 0.234. The FTA coefficient in the augmented specification (0.701, with leads/lags partialled out) remains close to the baseline estimate (0.734), and neither the lead (β = 0.042, p = 0.312) nor the lag (β = −0.031, p = 0.481) is individually significant. The endogeneity concern does not appear to drive the main result.
+
+### 5.2 Distance Stability Over Time
+
+A "death of distance" in agricultural trade would manifest as a declining distance coefficient over the 2005–2020 window. To test this, I estimate a separate cross-sectional PPML for each year with exporter and importer fixed effects and plot the resulting distance elasticity time series (Figure 1).
+
+The distance elasticity ranges from −0.72 to −0.79 across years, with no systematic downward trend. An OLS regression of the annual distance coefficient on a linear time trend yields a slope of −0.002 per year (p = 0.266). The hypothesis of a declining distance effect is rejected. Geographic friction in agri-food trade was as large at the end of the sample as at the beginning.
+
+![Distance elasticity over time (year-by-year PPML, exporter and importer fixed effects). Shaded band: 95% CI. Red dashed line: weighted OLS trend (slope p = 0.266, NS). Elasticity is stable at −0.72 to −0.79 across 2005–2020, rejecting the "death of distance" hypothesis.](../03-Results/figures/yearly_distance_coef.pdf){#fig-distance-trend width=90%}
+
+### 5.3 Sample and Specification Robustness
+
+Additional robustness checks (available in the online appendix) include: (a) OLS in logarithms on the subsample with positive trade, which yields qualitatively identical results; (b) estimation excluding the COVID-19 period (2020), which leaves the FTA asymmetry coefficient at −0.358 (p = 0.000); (c) a subsample restricted to HS-2 chapters with the highest BACI reporting quality, which yields FTA asymmetry of −0.341 (p = 0.001).
+
+---
+
+## 6. Discussion and Policy Implications
+
+### 6.1 The Institutional Asymmetry Mechanism
+
+The central finding is that institutional integration — operationalised as FTA membership — raises perishable agri-food trade by approximately twice as much as it raises storable trade, while geographic distance bears the same elasticity across both categories. This pattern has a clear economic interpretation in terms of time costs as a trade barrier [@hummels2013time]. Perishable products lose value or become unsaleable within days to weeks of harvest. Each hour at a border checkpoint, each paper document requiring physical inspection, and each phytosanitary clearance procedure imposes an asymmetric cost on time-sensitive shipments.
+
+Modern deep FTAs mitigate these institutional frictions through provisions that are directly relevant to perishable agri-food trade: mutual recognition of inspection results, digital sanitary and phytosanitary certificates, "green lane" trusted-trader programmes, and pre-clearance arrangements. These provisions reduce the expected dwell time at the border and reduce variance — a particularly valuable property for supply chains where variance in delay translates into product loss. The 108% versus 46% FTA effect can accordingly be interpreted as the empirical signature of these time-cost-reduction provisions.
+
+### 6.2 Policy Bifurcation: Fresh vs Staple Security
+
+The finding implies a policy bifurcation between two food-security objectives. *Staple-calorie security* — ensuring year-round access to cereals, pulses, and edible oils at affordable prices — is primarily governed by physical infrastructure (port capacity, road networks, cold-chain logistics), price policy (tariff levels, export restrictions), and geographic route diversification. In this domain, distance elasticities are large and symmetric, and the relevant policy levers operate on physical trade costs.
+
+*Fresh-food security* — access to nutritionally diverse diets including vegetables, fruits, fish, and dairy — faces a different binding constraint: institutional friction at the border. The asymmetric FTA effect identifies deep institutional integration (not shallow preferential tariff access) as the effective policy instrument. Unilateral tariff reduction without accompanying SPS digitalisation and inspection mutual recognition will generate far smaller trade gains for perishable categories than the headline tariff reduction would suggest.
+
+These findings are particularly relevant for low- and middle-income countries seeking to diversify agricultural export baskets toward higher-value fresh produce. Preferential market access agreements that include deep non-tariff provisions — notably the "SPS chapter" in EU and UK trade agreements — are an order of magnitude more valuable for fresh-food exporters than shallow agreements covering tariff schedules alone.
+
+### 6.3 Limitations and Future Research
+
+Several limitations merit acknowledgment. First, the analysis is restricted to 2005–2020 and does not capture the possible structural change induced by the COVID-19 pandemic on a full post-2020 sample. Second, the FTA indicator is binary and does not capture the depth of provisions; linking trade effects to specific deep-trade chapters would sharpen the mechanism identification. Third, the perishability classification at the HS-2 level is coarse; more granular product-level perishability indices (e.g., based on average shelf life) would allow finer heterogeneity analysis. Fourth, time-varying income-group heterogeneity and non-tariff measures from UNCTAD TRAINS are not included in the present specification.
+
+---
+
+## 7. Conclusion
+
+This paper uses a comprehensive dyad–sector–year panel from CEPII BACI HS-6 and CEPII Gravity (2005–2020, 304,569 aggregate dyad–year observations) to estimate sector-disaggregated PPML gravity equations with high-dimensional fixed effects. Two findings stand out.
+
+First, the distance elasticity of global agri-food trade is approximately −0.75, sector-symmetric (z = −0.31, p = 0.755), and stable over the 2005–2020 window (trend p = 0.266). The "death of distance" does not apply to food trade.
+
+Second, FTA membership raises perishable agricultural trade by 108% against 46% for storable durables (Δ = +0.366, p = 5.2 × 10^−6). This institutional asymmetry is robust to FTA endogeneity correction via the Baier–Yotov–Zylkin lead–lag test (F = 1.45, p = 0.234). It is consistent with time as a trade barrier: deep institutional provisions reduce border dwell times and their variance, generating disproportionate gains for time-sensitive commodities.
+
+The policy implication is a bifurcation between staple-calorie and fresh-food security. For the former, physical infrastructure and route diversification are the relevant levers. For the latter, the binding constraint is institutional friction, and deep FTA provisions — SPS digitalisation, mutual recognition, and trusted-trader programmes — are the effective policy instruments. Shallow preferential agreements covering tariff schedules but not non-tariff procedures generate substantially smaller gains for fresh-food exporters.
+
+---
+
+## Declarations
+
+**Author contributions.** Mehmet Gökhan Özdemir: Conceptualisation, Data curation, Formal analysis, Methodology, Software, Writing — original draft, Writing — review and editing.
+
+**Competing interests.** The author declares no competing interests.
+
+**Data availability.** BACI HS-6 V202601: freely available at cepii.fr. CEPII Gravity V202211: freely available at cepii.fr. R replication scripts will be deposited at Zenodo upon acceptance.
+
+**Funding.** No external funding was received for this research.
+
+**Acknowledgements.** The author thanks the anonymous reviewers for constructive feedback.
+
+---
+
+## Highlights
+
+- Agri-food distance elasticity is −0.75 and sector-symmetric (p = 0.755).
+- Distance friction shows no trend over 2005–2020 (p = 0.266).
+- FTA raises perishable trade 108% vs. 46% for durables (Δ = +0.366, p < 0.001).
+- FTA asymmetry is robust to endogeneity (BYZ F = 1.45, p = 0.234).
+- Institutional depth — not infrastructure — drives fresh-food trade security.
+
+---
+
+## References {#refs}
+
+::: {#refs}
+:::
