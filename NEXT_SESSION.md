@@ -1,4 +1,4 @@
-# NEXT SESSION — 2026-04-28 (Updated — Session 4)
+# NEXT SESSION — 2026-04-28 (Updated — Session 5)
 
 ## Session Startup (30 seconds)
 
@@ -10,6 +10,40 @@
 ```
 
 > All 60+ active manuscript folders have `HANDOFF.md` ✅
+
+---
+
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — CBAM GREEN FINANCE GAP INCUBATOR (Session 6)
+
+- ✅ **Research gap identified** at CU2.0 × CBAM × Yeşil Mutabakat × Climate Adaptation nexus
+  - Gap: No paper causally estimates CBAM revenue-for-adaptation asymmetry using CU-duality as ID
+  - Gap: No bilateral net finance gap quantification (CBAM outflows → EU minus IPA III green inflows)
+  - Gap: No three-group comparative DiD: Türkiye vs Western Balkans (JTM-eligible) vs pure 3rd countries
+- ✅ **New incubator PROJECT.md** created: `290-Idea-Incubator/CBAM_GreenFinanceGap_ClimatePolicy/`
+  - Three-group staggered DiD; treatment waves: 2021/2026/2028
+  - Revenue gap = first bilateral CBAM outflow vs IPA III green inflow estimate
+  - Plan A: *Climate Policy* (SSCI Q1, $0, EÜYM ~0.75); Energy Policy ($100 NR) excluded per ANAYASA
+  - Data collection 2026-07 (after TR ETS pilot); sub target 2027-Q1
+- ✅ **Memory saved**: `memory/project_cbam_greenfinancegap.md` + MEMORY.md index updated
+- ⚠️ PROJECT.md git-ignored (290-Idea-Incubator/ in .gitignore) — file on disk, memory is canonical
+
+---
+
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — CHRONIC INFLATION TRILEMMA IREF SUBMISSION (Session 5)
+
+- ✅ **v02.qmd GMM+IV additions** — System-GMM paragraph + Table 5 (IV) added to v02; re-rendered 73KB
+  - ⚠️ NOTE: **v03 is the authoritative submission version** — v02's GMM claims (AR(2) p=0.578) are superseded by v03's diagnostic (AR(2) p=0.051, AR(3) p=0.045 — GMM invalid)
+  - v03 reports IV in Limitations §7: FS-F=905.95, b=−1.110*** (corroboration only, no full IV table)
+- ✅ **IREF submission package confirmed complete** (all in `05-Submission/`):
+  - `chronic_inf_trilemma_v03_anonymous.docx` — 78KB, blinded ✅ (committed dae55ec)
+  - `Cover_Letter_IREF.md` — enriched with IREF gap positioning ✅
+  - `Highlights_IREF.md` — 5 bullets ≤85 chars ✅ (FS-F=905.95 confirmed)
+  - `PORTAL_COPYPASTE_IREF.md` — 12-step workflow, references v03_anonymous.docx ✅
+  - `HANDOFF.md` ✅
+- ⚠️ **Git staging unstable** — OneDrive hook clears index between add and commit
+  - v03.qmd (04-Manuscript), v02.qmd (modified), 03-Code/*.R (modified), 02-Data/raw/shambaugh_peg/ — **NOT YET COMMITTED**
+  - Fix: `git add --intent-to-add` then immediately `git commit` in one shell command, or use `git commit -m "..." -- file1 file2` syntax
+- 🔴 **IMMEDIATE ACTION**: MGO login → `editorialmanager.com/iref` → Submit New Manuscript → upload `chronic_inf_trilemma_v03_anonymous.docx` → follow `PORTAL_COPYPASTE_IREF.md`
 
 ---
 
