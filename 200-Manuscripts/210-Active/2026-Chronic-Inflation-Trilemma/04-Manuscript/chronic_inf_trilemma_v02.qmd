@@ -5,7 +5,7 @@ author:
     affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics, Economic Theory Division"
     email: "mgozdemirera@kku.edu.tr"
     orcid: "0000-0002-6756-7285"
-date: today
+date: "2026-04-28"
 format:
   docx:
     number-sections: true
@@ -171,7 +171,7 @@ kable(desc_tbl,
       digits = 2)
 ```
 
-*Note:* CPI inflation Winsorised at 99th percentile for descriptive statistics. Trilemma indices (MII, ERS, KAOPEN) from Aizenman-Chinn-Ito (2010, 2013), updated 2020 release (641KB, 199 countries): MII mean = 0.466 (SD = 0.174), ERS mean = 0.582 (SD = 0.309), KAOPEN mean = 0.357 (SD = 0.303); final estimation sample N = 3,780 obs, 105 countries (T = 1985–2020). Country-name to ISO3C conversion via @countrycode package; 4 unmatched entries excluded (Euro Area, Netherlands Antilles, São Tomé encoding, Czechoslovakia).
+*Note:* CPI inflation Winsorised at 99th percentile for descriptive statistics. Trilemma indices (MII, ERS, KAOPEN) from Aizenman-Chinn-Ito (2010, 2013): MII mean = 0.467 (SD = 0.173), ERS mean = 0.583 (SD = 0.312), KAOPEN mean = 0.352 (SD = 0.303); merged sample N = 3,816 obs, 106 countries. Fiscal balance sourced from IMF WEO (GGXCNL_NGDP); merged into `panel_chronic_inf_trilemma_v2.csv`.
 
 ```{r fig-incidence}
 #| fig-cap: "Share of Countries in Chronic Inflation by Year (CPI > 10%, ≥3 consecutive years)"
