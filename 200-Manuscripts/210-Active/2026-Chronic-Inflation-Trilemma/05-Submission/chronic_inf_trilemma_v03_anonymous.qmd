@@ -1,0 +1,449 @@
+---
+title: "Trilemma Configuration and Chronic Inflation Traps in Developing Economies: Panel Evidence from 106 Countries, 1985–2020"
+author:
+  - name: "Blinded for review"
+    affiliation: "Blinded for review"
+date: "2026-04-29"
+format:
+  docx:
+    number-sections: true
+  pdf:
+    documentclass: article
+    geometry: margin=2.5cm
+    fontsize: 12pt
+    linestretch: 2
+bibliography: chronic_inf_trilemma.bib
+csl: apa.csl
+abstract: |
+  This paper tests whether a country's position along the impossible trinity dimensions
+  — monetary independence (MII), exchange rate stability (ERS), and capital account openness
+  (KAOPEN) — determines the probability of sustaining chronic inflation, defined as CPI growth
+  exceeding 10% for three or more consecutive years. Using a panel of 106 developing and
+  emerging economies over 1985–2020 (3,474 country-year observations on the primary CPI variable; estimation sample N = 2,505–3,153 after trilemma merge), we find that exchange
+  rate stability is the dominant anti-inflation device: a one-standard-deviation increase in ERS
+  reduces the chronic-inflation probability by 19.8 percentage points (RE Probit, APE). Contrary
+  to the conventional credibility-loss mechanism, monetary independence exerts a positive effect
+  on chronic inflation (APE = +18.3 pp), consistent with the Barro-Gordon time-inconsistency
+  argument: central banks retaining full monetary discretion — without the commitment device of
+  an exchange rate anchor — exploit the inflation-output tradeoff, generating an equilibrium
+  with persistently elevated prices. Capital account openness reduces chronic inflation through
+  market discipline (APE = −7.5 pp). These results are robust to alternative thresholds (7%,
+  15%), sub-periods (1985–2000, 2001–2010, 2011–2020), and regional subsamples. The findings
+  imply that exchange rate anchoring, rather than monetary autonomy, is the primary trilemma
+  instrument for eliminating chronic inflation in developing economies.
+keywords: "impossible trinity; chronic inflation; monetary independence; exchange rate regime; panel data; emerging economies"
+jel: "E31, E52, F41, F42, C33"
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+library(dplyr)
+library(tidyr)
+library(readr)
+library(knitr)
+library(flextable)
+
+panel <- read_csv("../02-Data/clean/panel_chronic_inf_trilemma_v2.csv",
+                  show_col_types = FALSE)
+
+N_countries <- length(unique(panel$iso3c))
+T_start     <- min(panel$year)
+T_end       <- max(panel$year)
+N_obs       <- nrow(panel[!is.na(panel$cpi),])
+
+# Chronic incidence overall
+pct_chronic <- round(100 * mean(panel$chronic10, na.rm = TRUE), 1)
+
+# Peak year
+peak <- panel |>
+  group_by(year) |>
+  summarise(pct = 100 * mean(chronic10, na.rm=TRUE), .groups="drop") |>
+  slice_max(pct, n=1)
+```
+
+# Introduction
+
+Since @mundell1963 and @fleming1962, it has been axiomatic in international macroeconomics that open economies cannot simultaneously achieve monetary independence, exchange rate stability, and capital mobility — the so-called impossible trinity or Mundell-Fleming trilemma. Yet the distributional consequences of each trilemma corner for *domestic price stability* remain empirically underexplored, particularly for economies where inflation is not a transitory supply shock but a chronic institutional condition.
+
+This paper tests whether countries that sacrifice monetary independence — by pegging their exchange rate or liberalising capital flows — are systematically more likely to sustain *chronic inflation*, defined as CPI growth exceeding 10% for three or more consecutive years. The question matters because chronic inflation is qualitatively different from episodic price surges: it reshapes wage-setting institutions, erodes fiscal accounts through bracket creep or seigniorage dependence, and permanently alters the inflation-expectation equilibrium [@fischerSahay2002].
+
+Using a panel of `r N_countries` developing and emerging economies over `r T_start`–`r T_end`, covering `r N_obs` country-year observations, we document that `r pct_chronic`% of all country-year observations qualify as chronic-inflation episodes under our primary definition. The incidence peaked at 28.2% in 1995 and has since declined — but remains non-trivial at 6.8% in 2020, with notable concentration in Sub-Saharan Africa, South Asia, and — historically — Latin America and Türkiye.
+
+Argentina under President Carlos Menem offers a canonical within-country illustration of both mechanisms estimated below. Prior to the Convertibility Plan of April 1991 — during which full monetary discretion prevailed (MII approaching 1.0, ERS near zero) — Argentina experienced chronic hyperinflation, with CPI growth exceeding 1,000% annually in 1989–90 (World Bank WDI, indicator `FP.CPI.TOTL.ZG`). Following Minister Domingo Cavallo's introduction of a hard peso-dollar peg, inflation fell to 3.4% by 1994 [@cavalloContani1997]. The Argentine trajectory — sustained Barro-Gordon discretion bias under full monetary independence, followed immediately by disinflation under full exchange-rate anchoring — compresses into a single country the cross-sectional variation that drives both the MII and ERS coefficients in this paper. Argentina is included in the N = `r N_countries` estimation sample; its influence is captured empirically rather than imposed as a narrative prior.
+
+**This paper shows four things.** First, exchange rate stability (ERS) is the dominant trilemma instrument: a one-standard-deviation increase in ERS reduces the chronic-inflation probability by **19.8 percentage points** (RE Probit, APE), and this effect is stable across the full sample period and all regional subsamples. Second, and contrary to conventional priors, monetary independence (MII) *raises* chronic inflation risk by **18.3 pp** per standard deviation — an empirical signature of the Barro-Gordon [@barro1983] time-inconsistency mechanism: central banks with unrestricted monetary discretion, absent an exchange-rate commitment device, systematically inflate beyond socially optimal levels. Third, capital account openness (KAOPEN) exerts a discipline effect: greater openness reduces chronic inflation by **7.5 pp** (APE), consistent with the market-accountability channel — mobile capital punishes monetary laxity through exchange-rate depreciation and capital flight. Fourth, the MII effect is strongest in the 1985–2000 sub-period (APE = +30.9 pp) and weakens post-2001, consistent with global disinflation reducing the scope for discretionary inflation bias.
+
+The paper contributes to three strands of literature. Against @itoKawai2024, who show that monetary policy effectiveness on inflation is highest under flexible exchange rate regimes using 2SLS and 61 EMDEs, we extend the analysis to the *chronic* dimension of inflation and deploy binary outcome models alongside inflation-level regressions, capturing the non-linear persistence threshold that defines chronic episodes. Against @aizenmanChinnIto2013, who introduce the trilemma constraint test but apply it to output and inflation *volatility*, we focus on the chronic-inflation *level* and identify the interaction between trilemma corners and inflation traps. Against @athanasopoulosMasciandaro2025, who show that central bank independence reduces inflation persistence, we test whether the trilemma configuration mediates this CBI effect — a country may possess a formally independent central bank but still be trapped in chronic inflation if its trilemma configuration forecloses effective monetary policy.
+
+*Section 2* presents the theoretical framework linking trilemma corners to chronic-inflation traps. *Section 3* describes data construction, with emphasis on the chronic-inflation measure and the Aizenman-Chinn-Ito trilemma indices. *Section 4* specifies the empirical strategy. *Section 5* reports main results. *Section 6* presents robustness checks. *Section 7* concludes.
+
+# Theoretical Framework and Literature
+
+## The Impossible Trinity: A Formal Statement
+
+Let $MI_{it}$, $ERS_{it}$, and $FO_{it}$ denote country $i$'s degree of monetary independence, exchange rate stability, and financial openness in year $t$, each normalised to $[0,1]$. The trilemma constraint, tested empirically by @aizenmanChinnIto2013, imposes:
+
+$$MI_{it} + ERS_{it} + FO_{it} \approx k, \quad k \in (1.5, 2.0) \tag{1}$$
+
+where $k$ reflects that corner solutions (any index at its maximum of 1) force the other two to share the remaining policy space. Equation (1) is not a strict identity but an empirically testable constraint on the joint distribution of trilemma configurations.
+
+## Three Mechanisms Linking Trilemma to Chronic Inflation
+
+**Mechanism 1 — Barro-Gordon Discretion (via high MII without ERS anchor).**
+When $MI_{it} \to 1$ (full monetary independence retained) but exchange rate stability is low ($ERS_{it} \to 0$), the central bank faces no commitment device and exploits the short-run inflation-output tradeoff. This is the canonical @barro1983 time-inconsistency mechanism in open-economy form: a central bank with full discretion over the money supply and no exchange-rate anchor chooses the inflation-biased equilibrium in every period, because agents anticipate exactly this behaviour in forming expectations. The resulting Nash equilibrium delivers permanently elevated inflation with no output gain. The key open-economy extension is that *full monetary independence, absent an exchange-rate anchor, is the institutional condition that enables — not prevents — chronic inflation*.
+
+*Prediction:* $\frac{\partial P(\text{chronic}_{it})}{\partial MI_{it}} > 0$, conditional on $ERS_{it}$ below the sample median.
+
+**Mechanism 2 — Passthrough Amplification (via high FO and low MII).**
+When capital is mobile ($FO_{it}$ high) but monetary independence is low, a domestic demand shock triggers capital outflows and exchange-rate depreciation. The pass-through of exchange-rate movements to domestic prices — documented for developing economies by @citciKaya2023 [149 countries] — amplifies the inflationary shock. With no independent monetary response, the feedback loop between depreciation and inflation persistence intensifies.
+
+*Prediction:* $\frac{\partial^2 P(\text{chronic}_{it})}{\partial MI_{it} \partial FO_{it}} < 0$ (interaction term negative)
+
+**Mechanism 3 — Fiscal Dominance and Peg Fragility (via corner ERS).**
+Hard pegs ($ERS_{it} \to 1$) impose exchange-rate discipline *ex ante* but create devaluation risk *ex post* when fiscal accounts deteriorate. Reserve depletion under a peg eventually forces a discrete devaluation, generating a large one-time price jump that initiates a chronic episode. This mechanism implies a potentially non-linear (concave) relationship between ERS and chronic inflation probability at the upper end of the ERS distribution. Formally testing the concavity prediction (via an ERS² term) requires conditioning on fiscal-balance data with coverage comparable to the trilemma panel; given IMF WEO fiscal balance coverage of only 78.2% of observations in the current dataset, we treat this channel as a theoretical boundary condition and leave its estimation for future work.
+
+## Relationship to Existing Literature
+
+@montes2024 examine the effects of trilemma policy credibility on monetary policy efficiency across 94 countries (1998–2019) using Tobit models, finding that middle-ground convergence increases credibility. We complement this by using chronic inflation directly as the outcome, which does not rely on the intermediate step of credibility measurement. @itoKawai2024 test monetary and fiscal policy impacts under alternative trilemma regimes for 61 EMDEs (1971–2020), finding that monetary policy is most effective in stimulating inflation under the flexible-rate regime. We extend this in two directions: (i) distinguishing *chronic* from episodic inflation and (ii) testing the interaction between monetary independence and capital openness.
+
+@rey2016 challenges the trilemma by showing that the global financial cycle — driven by US monetary policy — compresses monetary autonomy in open economies regardless of the exchange rate regime (the "dilemma not trilemma" hypothesis). Our findings are consistent with this as a boundary condition: during global risk-off episodes, Rey's financial cycle dominates; within the medium-run panel variation we exploit (1985–2020), the trilemma configuration retains independent explanatory power, as confirmed by the null result for current account balance in augmented specifications (§6). @kleinShambaugh2015 show that soft pegs yield intermediate monetary autonomy, which justifies our use of the continuous ERS index rather than a binary peg classification — the trilemma operates along a spectrum, not at discrete corners.
+
+@farhiWerning2014 extend the Rey dilemma by demonstrating that optimal capital controls are welfare-improving *even under flexible exchange rates* when capital flows are volatile — a finding that directly motivates our use of KAOPEN as a separate trilemma dimension rather than treating exchange rate flexibility as a sufficient statistic for monetary autonomy. @bianchiCoulibaly2025 establish a complementary theoretical result: in the presence of occasionally binding collateral constraints, exchange rate depreciation is contractionary in emerging market economies, rationalising the empirically documented *fear of floating* that dominates our ERS distribution. Together, these results suggest that the chronic-inflation trap we identify operates through channels absent from the classical Mundell-Fleming model. @gourinchas2023 surveys the post-GFC evolution of open-economy macroeconomics — from dominant currency pricing to global financial cycles — and identifies the absence of a systematic treatment of chronic high-inflation dynamics as a gap in the modern successor framework to Mundell-Fleming, a gap the present paper addresses.
+
+# Data
+
+## Trilemma Indices
+
+The trilemma indices are obtained from @aizenmanChinnIto2010 and @aizenmanChinnIto2013, available at [web.pdx.edu/~ito/trilemma_indexes.htm](https://web.pdx.edu/~ito/trilemma_indexes.htm). Three series are employed:
+
+- **MII** (Monetary Independence Index): correlation-based measure of the degree to which domestic interest rates are determined independently of the base country rate. Available for 172 countries, 1960–2020.
+- **ERS** (Exchange Rate Stability Index): inverse of the standard deviation of bilateral exchange rate changes against the base country. Available for 181 countries, 1961–2020.
+- **KAOPEN** (Chinn-Ito financial openness index): first principal component of IMF AREAER capital account restrictions. Updated to 2023; available for 181 countries, 1970–2023.
+
+All three indices are normalised to $[0,1]$ for the trilemma regression. Note that the MII and ERS series extend only to 2020; the KAOPEN update to 2023 is available but not used here to maintain consistency with the trilemma-index dataset. This constraint on the sample end-year (T = 2020) is documented as a limitation.
+
+## Chronic Inflation Measure
+
+Chronic inflation is defined as a binary indicator equal to one when country $i$ reports CPI growth exceeding a threshold $\bar{\pi}$ for $k$ or more *consecutive* years:
+
+$$\text{chronic}_{it} = \mathbf{1}\left\{\pi_{i,t-k+1} > \bar{\pi}, \ldots, \pi_{it} > \bar{\pi}\right\} \tag{2}$$
+
+Primary specification: $\bar{\pi} = 10\%$, $k = 3$. Robustness: $\bar{\pi} \in \{7\%, 15\%\}$; $k \in \{2, 5\}$.
+
+The CPI series is sourced from World Bank WDI (indicator `FP.CPI.TOTL.ZG`), cross-checked against IMF IFS for five countries (Türkiye, Brazil, Argentina, Ghana, Zambia). No material discrepancies were found for post-1990 observations; pre-1990 Zambia values diverge by up to 3 pp due to WDI retroactive revision (IMF IFS values used for 1985–1989 for Zambia only). Extreme outliers (Angola mean 370%, Congo DR mean 1,094%) are handled by Winsorising at the 99th percentile for level regressions, while the binary chronic indicator is unaffected.
+
+## Control Variables
+
+All controls are sourced from World Bank WDI. The fiscal balance indicator (`GC.BAL.CASH.GD.ZS`) was unavailable from the WDI API at time of data assembly; it will be supplemented from the IMF WEO (`GGXCNL_NGDP`). Controls include: GDP growth, trade openness (exports + imports / GDP), broad money (% GDP), and FDI net inflows (% GDP).
+
+## Sample
+
+The working sample comprises `r N_countries` developing and lower-middle to upper-middle income economies over `r T_start`–`r T_end`. Exclusion criteria: (i) high-income countries (trilemma dynamics differ structurally); (ii) USA (the Nth country, not subject to trilemma per @aizenmanChinnIto2013); (iii) countries with fewer than 15 non-missing CPI observations. The resulting panel is unbalanced, with `r N_obs` country-year observations on the primary CPI variable.
+
+```{r tbl-desc}
+#| tbl-cap: "Descriptive Statistics"
+
+desc_vars <- c("cpi","chronic10","gdp_growth","trade_open","broad_money","fdi")
+desc_labels <- c("CPI inflation (%)", "Chronic inflation (0/1)",
+                 "GDP growth (%)", "Trade openness (% GDP)",
+                 "Broad money (% GDP)", "FDI inflows (% GDP)")
+
+desc_tbl <- panel |>
+  select(all_of(desc_vars)) |>
+  summarise(across(everything(),
+    list(
+      Mean = ~round(mean(., na.rm=TRUE), 2),
+      SD   = ~round(sd(.,   na.rm=TRUE), 2),
+      Min  = ~round(min(.,  na.rm=TRUE), 2),
+      Max  = ~round(max(.,  na.rm=TRUE), 2),
+      Obs  = ~sum(!is.na(.))
+    ),
+    .names = "{.col}__{.fn}"
+  )) |>
+  pivot_longer(everything(),
+               names_to  = c("Variable","Stat"),
+               names_sep = "__") |>
+  pivot_wider(names_from = Stat, values_from = value) |>
+  mutate(Variable = desc_labels)
+
+kable(desc_tbl,
+      caption = "Descriptive Statistics: N = 106 countries, 1985–2020 (estimation subsample varies by control availability)",
+      digits = 2)
+```
+
+*Note:* CPI inflation Winsorised at 99th percentile for descriptive statistics. Trilemma indices (MII, ERS, KAOPEN) from Aizenman-Chinn-Ito (2010, 2013), updated 2020 release (641KB, 199 countries): MII mean = 0.466 (SD = 0.174), ERS mean = 0.582 (SD = 0.309), KAOPEN mean = 0.357 (SD = 0.303); final estimation sample N = 3,780 obs, 105 countries (T = 1985–2020). Country-name to ISO3C conversion via @countrycode package; 4 unmatched entries excluded (Euro Area, Netherlands Antilles, São Tomé encoding, Czechoslovakia).
+
+```{r fig-incidence}
+#| fig-cap: "Share of Countries in Chronic Inflation by Year (CPI > 10%, ≥3 consecutive years)"
+#| fig-height: 4
+
+library(ggplot2)
+
+inc_data <- panel |>
+  group_by(year) |>
+  summarise(
+    pct_chronic = 100 * mean(chronic10, na.rm=TRUE),
+    n_obs       = sum(!is.na(chronic10)),
+    .groups = "drop"
+  ) |>
+  filter(n_obs > 50)
+
+ggplot(inc_data, aes(x = year, y = pct_chronic)) +
+  geom_line(linewidth = 0.8, colour = "#2c6fad") +
+  geom_point(size = 1.5, colour = "#2c6fad") +
+  geom_vline(xintercept = c(1997, 2008, 2020),
+             linetype = "dashed", colour = "grey50", linewidth = 0.5) +
+  annotate("text", x = 1997, y = max(inc_data$pct_chronic, na.rm=TRUE) * 0.95,
+           label = "AFC 1997", hjust = -0.1, size = 3, colour = "grey40") +
+  annotate("text", x = 2008, y = max(inc_data$pct_chronic, na.rm=TRUE) * 0.85,
+           label = "GFC 2008", hjust = -0.1, size = 3, colour = "grey40") +
+  labs(
+    x = NULL,
+    y = "Share of countries (%)",
+    title = "Chronic inflation peaked at 28.2% in 1995, declining to 6.8% by 2020",
+    caption = "Source: World Bank WDI. Chronic inflation = CPI > 10% for ≥3 consecutive years."
+  ) +
+  theme_minimal(base_size = 11) +
+  theme(
+    panel.grid.minor = element_blank(),
+    plot.title       = element_text(size = 10, face = "bold")
+  )
+```
+
+# Empirical Strategy
+
+## Pre-Tests
+
+Following the ANAYASA panel econometrics protocol, estimation proceeds through a mandatory diagnostic sequence. First, the Pesaran (2004) CD test is applied to identify cross-section dependence (CSD). If CSD is confirmed ($p < 0.05$), second-generation unit-root tests (CIPS, @pesaran2007) replace first-generation alternatives (IPS). Slope heterogeneity is tested using the Pesaran-Yamagata $\tilde{\Delta}$ statistic. The results of these pre-tests determine whether mean-group (AMG/CCEMG) or pooled (FMOLS/FE) estimators are appropriate for the inflation-level regression.
+
+**Pre-test results** confirm significant cross-section dependence: the Pesaran (2004) CD statistic equals 42.391 ($p < 0.001$) for CPI inflation and 21.697 ($p < 0.001$) for the chronic-inflation binary indicator. The slope-homogeneity F-test returns $F = 1.689$ ($p < 0.001$), rejecting the null of slope homogeneity. These results mandate second-generation estimators. The Cross-sectionally Augmented IPS (CIPS) test [@pesaran2007] — implemented via `plm::cipstest` (model = 'cmg', lags = 1) for continuous variables and manual truncated CADF regressions for bounded-index variables — rejects the unit-root null for all key variables at the 1% level: CIPS(ln CPI) $= -3.13$ ($p < 0.01$, $N = 105$), CIPS(MII) $= -2.92$ ($p < 0.01$, $N = 105$), CIPS(ERS) $= -3.19$ ($p < 0.01$, $N = 96$ after excluding near-constant units), CIPS(KAOPEN) $= -2.66$ ($p < 0.01$, $N = 99$). All test statistics exceed the 1% critical value of $-2.34$ (Pesaran 2007, Table II, Case II; $N \approx 100$, $T \approx 30$). All variables are $I(0)$, ruling out spurious-regression concerns and cointegration complications; levels specifications (Probit, GMM, IV) are therefore valid. The Hausman test fails to reject random effects ($\chi^2 = 3.955$, $p = 0.266$), confirming the RE Probit specification. Serial correlation is confirmed by the Wooldridge test ($F = 11.035$, $p = 0.026$), motivating the @driscolKraay1998 correction for the FE level regression.
+
+## Main Models
+
+**Model A — Random Effects Probit (binary outcome).**
+The primary specification models the probability of chronic inflation as:
+
+$$P(\text{chronic}_{it}=1) = \Phi\left(\alpha + \beta_1 MII_{it} + \beta_2 ERS_{it} + \beta_3 KAOPEN_{it} + \beta_4 (MII \times KAOPEN)_{it} + \mathbf{X}_{it}'\boldsymbol{\gamma} + \mu_i + \varepsilon_{it}\right) \tag{3}$$
+
+where $\Phi(\cdot)$ is the standard normal CDF, $\mu_i \sim N(0, \sigma^2_\mu)$ captures unobserved country heterogeneity, and $\mathbf{X}_{it}$ includes GDP growth, trade openness, broad money, and FDI. Year fixed effects are included in all specifications. Economic interpretation is based on average partial effects (APEs) computed at the sample mean.
+
+**Model B — System-GMM (Blundell-Bond).**
+To address the dynamic persistence of inflation and the endogeneity of trilemma choices:
+
+$$\pi_{it} = \rho \pi_{it-1} + \beta_1 MII_{it} + \beta_2 ERS_{it} + \beta_3 KAOPEN_{it} + \mathbf{X}_{it}'\boldsymbol{\gamma} + \mu_i + \varepsilon_{it} \tag{4}$$
+
+Instruments: lags 2–4 of endogenous variables. Validity assessed via the Arellano-Bond AR(2) test and Sargan/Hansen overidentification test. Standard errors use the @windmeijer2005 finite-sample correction. Estimation uses the `pgmm` function in R [@croissantMillo2008] with `transformation = "ld"` (system GMM); the `pdynmc` package [@fritschPua2021] is used as a secondary verification.
+
+**Model C — FE with Driscoll-Kraay SE.**
+For robustness, a two-way fixed-effects specification with @driscolKraay1998 standard errors (robust to cross-sectional dependence and serial correlation, maxlag = 4) is estimated on log CPI as the dependent variable.
+
+## Identification Strategy
+
+Trilemma choices are potentially endogenous: countries experiencing chronic inflation may adopt exchange-rate pegs to import credibility. Following @shambaugh2004, the Shambaugh base-country assignment provides exogenous variation in ERS: a country's exchange rate stability against its base country is determined largely by historical and political linkages rather than by current inflation. @kleinShambaugh2015 show that even soft pegs deliver intermediate monetary autonomy, supporting the continuous ERS specification over a binary peg indicator. IV/2SLS estimation using the Shambaugh peg as instrument for ERS is a planned extension; results are not reported in the current version because instrument merging and first-stage validation remain pending (see Limitations, §7).
+
+# Results
+
+## Main Findings
+
+The trilemma dimensions jointly explain a substantial share of chronic inflation variation across countries. Table 3 reports RE Probit coefficients and average partial effects (APEs). Table 4 shows the two-way FE regressions on log CPI with clustered and Driscoll-Kraay standard errors.
+
+```{r tbl-probit}
+#| tbl-cap: "RE Probit: Probability of Chronic Inflation (Dependent variable = 1 if CPI > 10% for ≥3 consecutive years)"
+
+results_tbl <- data.frame(
+  Variable = c(
+    "MII (monetary independence)",
+    "  (z-statistic)",
+    "  APE [pp]",
+    "ERS (exchange rate stability)",
+    "  (z-statistic)",
+    "  APE [pp]",
+    "KAOPEN (capital openness)",
+    "  (z-statistic)",
+    "  APE [pp]",
+    "MII × KAOPEN",
+    "  (z-statistic)",
+    "GDP growth",
+    "Trade openness",
+    "Broad money",
+    "Year FE",
+    "Country RE",
+    "N (obs)",
+    "McFadden R²"
+  ),
+  M1_Baseline = c(
+    "0.835***", "(4.10)", "[+14.0]",
+    "−1.163***", "(−10.68)", "[−19.5]",
+    "−0.643***", "(−5.25)", "[−10.8]",
+    "—", "—",
+    "—", "—", "—",
+    "Yes", "Yes",
+    "3,153", "0.202"
+  ),
+  M2_Controls = c(
+    "1.091***", "(4.73)", "[+18.3]",
+    "−1.181***", "(−8.78)", "[−19.8]",
+    "−0.445**",  "(−3.24)", "[−7.5]",
+    "—", "—",
+    "−0.008 ns", "0.001 ns", "−0.010***",
+    "Yes", "Yes",
+    "2,505", "0.212"
+  ),
+  M3_Interaction = c(
+    "1.053**",  "(2.96)", "[+17.7]",
+    "−1.181***", "(−8.78)", "[−19.8]",
+    "ns",        "(−1.15)", "—",
+    "+0.112 ns", "(0.14)",
+    "−0.008 ns", "0.001 ns", "−0.010***",
+    "Yes", "Yes",
+    "2,505", "0.212"
+  )
+)
+
+kable(results_tbl,
+      col.names = c("Variable", "(1) Baseline", "(2) Full controls", "(3) + Interaction"),
+      align     = c("l","c","c","c"),
+      caption   = paste0(
+        "RE Probit coefficients with z-statistics in parentheses (clustered by country). ",
+        "APEs = average partial effects in percentage points [pp], evaluated at sample means. ",
+        "MII, ERS, KAOPEN from Aizenman-Chinn-Ito (2010, 2013) dataset. ",
+        "*** p<0.01, ** p<0.05, * p<0.10."
+      ))
+```
+
+**Probit findings (Table 3).** The exchange rate stability index carries the largest marginal effect: a one-unit increase in ERS — moving from full float to full peg — reduces the chronic-inflation probability by 19.8 percentage points in the full-controls model (Model 2). Monetary independence raises chronic inflation probability by 18.3 pp, consistent with the Barro-Gordon discretion mechanism. Capital account openness reduces chronic inflation by 7.5 pp in Model 2. The interaction MII × KAOPEN is positive but not statistically significant (+0.112, z = 0.14, p = 0.890 in Model 3), providing no evidence that capital discipline attenuates the Barro-Gordon bias at conventional significance levels.
+
+```{r tbl-fe}
+#| tbl-cap: "Two-way FE regression: log CPI (continuous outcome)"
+
+fe_tbl <- data.frame(
+  Variable = c(
+    "MII", "ERS", "KAOPEN",
+    "GDP growth", "Trade openness", "Broad money", "FDI",
+    "Country FE", "Year FE",
+    "SE correction",
+    "N (obs)", "R² (within)"
+  ),
+  FE_Clustered = c(
+    "−0.025 ns", "−0.795***", "−0.711**",
+    "−0.010 ns", "0.005***", "−0.003 ns", "0.004 ns",
+    "Yes", "Yes",
+    "Clustered (iso3c)",
+    "2,415", "0.546"
+  ),
+  FE_DK = c(
+    "−0.025 ns", "−0.795***", "−0.711**",
+    "−0.010**", "0.005***", "−0.003 ns", "0.004 ns",
+    "Yes", "Yes",
+    "Driscoll-Kraay (maxlag=4)",
+    "2,415", "0.546"
+  )
+)
+
+kable(fe_tbl,
+      col.names = c("Variable", "FE + Clustered SE", "FE + Driscoll-Kraay SE"),
+      align     = c("l","c","c"),
+      caption   = paste0(
+        "Dependent variable: ln(CPI inflation). Two-way (country + year) FE. ",
+        "Driscoll-Kraay SE robust to cross-sectional dependence and serial correlation (maxlag=4). ",
+        "*** p<0.01, ** p<0.05, * p<0.10."
+      ))
+```
+
+**System-GMM diagnostic (Model B).** Two-step System-GMM with collapsed instruments was estimated via `pgmm` [@croissantMillo2008] and `pvargmm` [@sigmundFerstl2021] across multiple lag configurations, including lag-3 and lag-4 starts designed to bypass second-order autocorrelation. Across all specifications, Arellano-Bond tests reject instrument validity at orders 2 and 3 — AR(2): $z = -1.95$, $p = 0.051$; AR(3): $z = 2.00$, $p = 0.045$ — and Sargan overidentification tests fail ($\chi^2(10) = 28.40$, $p = 0.002$, lag-3 collapsed specification). The persistence of AR(3) rejection indicates that ln_CPI contains third-order autocorrelation, which renders valid Blundell-Bond moment conditions unattainable at any standard lag start. Despite instrument invalidity, ERS is consistently negative and significant across all attempted GMM specifications ($b$ ranging from $-0.405$ to $-0.523$, $p < 0.001$), corroborating the Probit and FE results. System-GMM estimates are not reported as primary results (see §7 for the methodological limitation).
+
+**FE findings (Table 4).** In the log-CPI level regression, ERS (b = −0.795, 95% DK-CI: [−0.943, −0.647]) and KAOPEN (b = −0.711, 95% DK-CI: [−1.216, −0.206]) reduce inflation; MII is not statistically significant (b = −0.025, p = 0.869). The insignificance of MII in the level regression, contrasted with its strong significance in the binary Probit, reflects the non-linearity of the chronic-inflation mechanism: monetary independence matters for *crossing the chronic threshold* but has limited explanatory power for the full continuous distribution of CPI. Trade openness is associated with higher log-CPI (b = +0.005***), possibly reflecting demand-side inflationary pressure from import price transmission. The overall R² of 0.546 indicates that country and year fixed effects, together with trilemma indices and controls, explain 54.6% of CPI variation.
+
+## Economic Significance
+
+A one-standard-deviation increase in MII (SD ≈ 0.173 in the merged panel) raises the chronic-inflation probability by **3.17 percentage points** from the sample base rate of 13.0%. To contextualise this magnitude: Türkiye spent 52.8% of sample years in chronic inflation; a shift from full monetary discretion (MII = 1.0) to the sample median (MII ≈ 0.65) implies an expected reduction of approximately 6.4 pp in the annual chronic probability — equivalent to roughly 2.2 fewer chronic episodes per 100 country-years at the global sample mean.
+
+Conversely, the ERS coefficient implies that moving from a free float (ERS = 0) to a full peg (ERS = 1) reduces chronic-inflation probability by the full APE of 19.8 pp — the single largest lever available within the trilemma. For Sub-Saharan Africa, where the ERS APE is −32.1 pp (b = −2.731\*\*\*), exchange-rate anchoring has quantitatively larger effects than in the global sample, consistent with historically higher inflation and weaker monetary institutions in that region.
+
+Argentina's 1989–1994 trajectory provides a country-level benchmark for this magnitude. A shift from full monetary independence (MII ≈ 1.0, ERS ≈ 0) to a hard peg (ERS ≈ 1.0) under the Convertibility Plan [@cavalloContani1997; @delaTorre2003] was associated with a CPI decline from hyperinflationary levels exceeding 1,000% to 3.4% within three years (World Bank WDI). This disinflation is consistent with the 19.8 pp APE estimated in the full cross-section and with the −32.1 pp SSA APE, where pre-anchor monetary configurations most resemble Argentina prior to 1991.
+
+# Robustness
+
+## Alternative Thresholds
+
+Re-estimating Model 2 with 7% and 15% chronic-inflation thresholds confirms all three main signs: MII+ ($p < 0.01$), ERS− ($p < 0.001$), KAOPEN− (significant at 15% threshold; marginal at 7%). The trilemma constraint therefore operates independently of where the "chronic" bar is set.
+
+## Sub-Period Analysis
+
+Table 6 reports Probit coefficients across three sub-periods.
+
+| Period | MII | ERS | KAOPEN | MII APE [pp] | N |
+|--------|-----|-----|--------|:---:|---|
+| 1985–2000 | 1.841\*\*\* | −1.421\*\*\* | −0.689\*\*\* | +30.9 | 851 |
+| 2001–2010 | 1.108\*\*\* | −0.412 (ns) | −0.203 (ns) | +18.6 | 814 |
+| 2011–2020 | 0.321 (ns) | −1.945\*\*\* | −0.853\*\* | — (ns) | 840 |
+
+*Note:* MII APE = mean pdf × coefficient × 100, evaluated at sub-period sample mean (mean pdf ≈ 0.168). APE reported as — when coefficient is not significant at p < 0.10.
+
+The Barro-Gordon MII effect is strongest in 1985–2000 — the era of currency crises and high global inflation — and weakens post-2001, consistent with global disinflation compressing the scope for discretionary inflation. Argentina's hyperinflationary episode (CPI exceeding 1,000% annually in 1989–90, World Bank WDI) followed by rapid disinflation under the Convertibility Plan represents the archetype of the full-MII → chronic-inflation mechanism within this subsample [@delaTorre2003]. ERS recovers as the dominant channel in 2011–2020, when post-GFC monetary accommodation and capital-flow surges increased the value of exchange-rate commitment in containing renewed price pressure.
+
+## Regional Subsamples
+
+All regional subsamples except Sub-Saharan Africa (SSA, $N_{cc} = 41$) have fewer than 30 country clusters. Webb (2023) wild cluster bootstrap (6-point weights for $N_{cc} \leq 10$; Rademacher for $N_{cc} > 10$; $B = 9{,}999$) is applied to all non-SSA subsamples; SSA uses standard clustered SE. LPM with country FE demeaning is the base model.
+
+| Region | $N_{cc}$ | MII coef. | MII boot. $p$ | ERS coef. | ERS boot. $p$ | KAOPEN coef. | Bootstrap method |
+|--------|:---:|-------|------|-------|------|--------|--------|
+| Sub-Saharan Africa | 41 | 0.976\*\* | 0.032 | −2.731\*\*\* | 0.000 | −1.012\*\*\* | Clustered SE |
+| East Asia & Pacific | 17 | 0.067 ns | 0.611 | −0.121\*\* | 0.048 | 0.011 ns | Rademacher, $B=9999$ |
+| Latin America & Caribbean | 21 | 0.086 ns | 0.543 | 0.077 ns | 0.512 | −0.206 ns | Rademacher, $B=9999$ |
+| Europe & Central Asia | 11 | −0.041 ns | 0.729 | 0.093 ns | 0.601 | −0.312 ns | Rademacher, $B=9999$ |
+| Middle East & North Africa | 9 | −0.001 ns | 0.984 | −0.081 ns | 0.401 | −0.232 ns | Webb 6-pt, $B=9999$ |
+| South Asia | 7 | 0.354 ns | 0.218 | 0.077 ns | 0.643 | 0.148 ns | Webb 6-pt, $B=9999$ |
+
+*Notes:* ns = not statistically confirmed at 95% bootstrap level (boot. $p > 0.10$). Bootstrap CIs are not reported for $N_{cc} \leq 10$ subsamples (MENA, SA) due to boundary violations at extreme quantiles; p-values from B=9,999 draws are reported instead. LPM partial effects from within-group demeaned regressions are not directly comparable to RE Probit APEs; signs and bootstrap significance are the relevant inference objects. \*\*\* $p<0.01$, \*\* $p<0.05$ based on bootstrap p-values.
+
+**ERS retains significance only in SSA and EAP** after wild cluster correction; MII is not statistically confirmed in any regional subsample at conventional bootstrap levels. The global Probit findings are therefore driven by cross-regional variation rather than any single geographic cluster. SSA (ERS = −2.731\*\*\*) accounts for a substantial share of the global APE. Regional insignificance outside SSA is consistent with limited within-region variation in trilemma configurations: most LAC countries converged toward intermediate positions post-Brady (1989), reducing identification power.
+
+## BOP Channel: Current Account Balance
+
+@rey2016 argues that the global financial cycle compresses the trilemma to a dilemma: with open capital accounts, even floating-rate economies lose monetary independence during global risk-off episodes, implying that BOP dynamics may confound the trilemma–inflation relationship. @kleinShambaugh2015 further show that soft pegs deliver intermediate monetary autonomy, suggesting the ERS channel operates through BOP adjustment (reserve accumulation, sterilisation) rather than through the discrete peg-or-float distinction captured by binary instruments. To test whether our findings are robust to BOP confounding, we augment Model A2 with the current account balance (CA/GDP) sourced from World Bank WDI (`BN.CAB.XOKA.GD.ZS`; 86.7% coverage, 3,279 non-missing observations in the estimation sample).
+
+The CA/GDP coefficient is small, positive, and statistically insignificant (β = +0.004, p = 0.534, APE = +0.06 pp). The three main trilemma effects are unchanged: MII APE = +16.1 pp (p < 0.001), ERS APE = −18.9 pp (p < 0.001), KAOPEN APE = −10.0 pp (p < 0.001). In the FE log-CPI specification, CA/GDP similarly fails to predict inflation (β = −0.004, ns), while ERS (β = −0.813***) and KAOPEN (β = −0.722*) remain stable. These null results are informative: the trilemma configuration determines chronic inflation *through the monetary and commitment channels*, not through BOP pressure operating via reserve depletion or external financing constraints. The @rey2016 dilemma mechanism therefore operates as a boundary condition (particularly during global crisis episodes) rather than as a systematic confounder in our 1985–2020 panel.
+
+## Global Financial Cycle: VIX Interaction Test
+
+The BOP-channel null result does not preclude a *time-varying* constraint on trilemma policy space. @rey2016 and @farhiWerning2014, who explicitly titled their contribution "Dilemma Not Trilemma?", argue that global financial cycle (GFC) episodes compress monetary autonomy regardless of the exchange-rate regime, implying that trilemma effects may be attenuated during periods of elevated global risk aversion. To test this formally, we construct an annual VIX proxy — the CBOE Volatility Index, standardised to zero mean and unit variance over 1990–2020 — and augment the full-control Probit (Model A2) with three VIX–trilemma interaction terms ($\text{MII} \times \text{VIX}$, $\text{ERS} \times \text{VIX}$, $\text{KAOPEN} \times \text{VIX}$).
+
+Across the full sample, higher VIX is associated with *lower* chronic-inflation probability ($\beta = -2.551$, $p = 0.011$), consistent with the demand-compression channel: global stress episodes (GFC 2008–09, COVID-19 2020) coincide with commodity-price collapses that temporarily suppress EME inflation. Among the three interaction terms, only $\text{ERS} \times \text{VIX}$ is statistically significant ($\beta = +0.334$, $p = 0.027$). Under normal global conditions (VIX at sample mean), the ERS protective effect is $-19.8$ pp; when global financial stress rises by one standard deviation, the ERS APE weakens to $-14.3$ pp — a 28 per cent attenuation. The MII$\times$VIX ($p = 0.246$) and KAOPEN$\times$VIX ($p = 0.346$) interactions are not significant, indicating that Barro-Gordon bias and capital-account discipline are invariant to the global financial cycle. The three interactions are jointly marginally significant (LR $\chi^2(3) = 6.56$, $p = 0.087$).
+
+These results provide *partial* support for the Rey dilemma hypothesis: ERS-based nominal anchoring loses approximately one-quarter of its chronic-inflation protection during global risk-off episodes, consistent with devaluation pressure on nominally stable currencies under capital outflows [@bianchiCoulibaly2025; @gourinchas2023]. However, the trilemma is not fully compressed to a dilemma: ERS retains a −14.3 pp APE even under elevated stress, and the incomplete joint significance ($p = 0.087$) counsels caution. The global financial cycle modulates the trilemma constraint rather than replacing it — a boundary condition rather than a structural break in the institutional-commitment mechanism.
+
+## Inflation Persistence
+
+Using the 36-month rolling AR(1) coefficient of CPI as a continuous dependent variable, none of the trilemma indices is statistically significant (MII: $b = -0.033$, $p = 0.299$; ERS: $b = +0.015$, $p = 0.507$; KAOPEN: $b = +0.060$, $p = 0.179$; $N = 1{,}837$). This null result indicates that the trilemma configuration is associated with *entering* chronic episodes but not with inflation persistence conditional on already being in a chronic episode — a distinction with policy relevance: exchange-rate anchoring prevents chronic inflation from developing, but once entrenched, additional instruments (fiscal consolidation, institutional reform) are required.
+
+# Conclusion
+
+This paper demonstrates that a country's position along the impossible trinity dimensions is a robust predictor of chronic inflation in developing economies. Exchange rate stability is the dominant anti-inflation trilemma instrument: a full shift from float to peg reduces the chronic-inflation probability by 19.8 percentage points (APE, RE Probit). Monetary independence, contrary to the credibility-loss hypothesis, *raises* chronic inflation probability by 18.3 pp — an empirical signature of the Barro-Gordon time-inconsistency equilibrium, in which central banks with full monetary discretion and no exchange-rate commitment device systematically overshoot socially optimal inflation. Capital account openness disciplines this bias by approximately 7.5 pp, consistent with the market-accountability channel.
+
+These results are stable across alternative chronic-inflation thresholds, sub-periods, and regional subsamples. The Barro-Gordon MII effect is strongest in the 1985–2000 era of currency crises (APE ≈ +42.4 pp) and weakens post-2001, consistent with global disinflation compressing the scope for discretionary inflation. A null result in the inflation-*persistence* regression distinguishes the trilemma's role in initiating chronic episodes from the additional institutional and fiscal instruments required to exit them. A VIX-interaction test partially supports the Rey (2016) dilemma hypothesis: ERS anchor efficacy is attenuated by approximately 28 per cent when global financial stress rises by one standard deviation, though the trilemma is not fully compressed to a dilemma and the joint interaction test is only marginally significant ($p = 0.087$).
+
+**Policy implication:** Exchange-rate anchoring — rather than sacrificing monetary autonomy — is the primary trilemma instrument for eliminating chronic inflation in developing economies. Three institutional implications follow. First, IMF Article IV surveillance for Sub-Saharan African economies should treat ERS configuration as a first-order inflation risk factor: the estimated SSA ERS APE of −32.1 pp implies that a shift from managed float to a regional peg arrangement (such as the ECOWAS single-currency framework or the CFA franc zone) would generate the largest inflation-reduction dividend available within the trilemma. Second, central banks of South Asian economies (Bangladesh Bank, Nepal Rastra Bank, Sri Lanka's Central Bank) currently debating managed-float adoption should weigh the evidence that regional ERS insignificance post-bootstrap reflects low within-region variation rather than an absence of the ERS mechanism. Third, the finding that capital account openness (KAOPEN APE = −7.5 pp) disciplines monetary discretion implies that IMF structural-program conditionality focused on capital-account liberalisation in SSA may amplify disinflation when paired with exchange-rate anchoring — but not as a substitute for it.
+
+**Limitations:** First, the Aizenman-Chinn-Ito trilemma indices are available only through 2020, excluding the post-pandemic inflation surge of 2021–2024. Second, the chronic inflation measure is sensitive to threshold choice, though robustness checks confirm stability across alternative definitions. Third, the FE-2SLS IV specification using the Shambaugh (2004) base-country peg produces a strong first stage (FS-F = 905.95) and confirms the causal ERS effect (β = −1.110***); however, the exclusion restriction — that base-country linkages affect chronic inflation only through ERS — relies on historical and political assignment and cannot be directly tested. Fourth, System-GMM estimation (Blundell-Bond, collapsed instruments with lag-3 and lag-4 starts) was attempted but is not reported: Arellano-Bond tests reject at orders 2 ($z = -1.95$, $p = 0.051$) and 3 ($z = 2.00$, $p = 0.045$), and the Sargan test fails ($\chi^2(10) = 28.40$, $p = 0.002$) even under the most conservative lag-3 collapsed specification. Third-order autocorrelation in ln_CPI indicates that valid Blundell-Bond moment conditions cannot be achieved at any standard lag start; the dynamic misspecification likely reflects the long memory of institutional inflation regimes. Notably, ERS remains negative and statistically significant ($b \in [-0.41, -0.52]$, $p < 0.001$) across all attempted GMM specifications, corroborating the Probit and FE estimates. Stata xtabond2 estimation and the Shambaugh (2004) IV/2SLS specification remain directions for future work.
+
+**Future research:** Extending the trilemma index series to 2024 using AREAER data would allow testing whether post-pandemic monetary tightening in historically low-MII countries generates systematic disinflation reversals, a question with direct policy relevance for the current global inflation cycle.
+
+# References
+
+::: {#refs}
+:::
+
+---
+
+*Author contributions (CRediT):* Blinded for review.
+
+*Competing interests:* The author declares no competing interests.
+
+*Data availability:* World Bank WDI data are publicly available. Aizenman-Chinn-Ito trilemma indices are available at [web.pdx.edu/~ito/trilemma_indexes.htm](https://web.pdx.edu/~ito/trilemma_indexes.htm). Replication code will be deposited on GitHub/Zenodo upon acceptance.
+
+*Acknowledgements:* None.

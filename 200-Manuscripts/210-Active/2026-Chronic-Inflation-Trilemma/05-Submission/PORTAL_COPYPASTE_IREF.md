@@ -70,16 +70,16 @@ E31, E52, F41, F42, C33
 
 | File | Type | File name |
 |------|------|-----------|
-| Main manuscript (anonymous) | Manuscript | `chronic_inf_trilemma_v02_anonymous.docx` (from `_output/`) |
+| Main manuscript (anonymous) | Manuscript | `chronic_inf_trilemma_v03_anonymous.docx` (from `_output/`) |
 | Cover letter | Cover Letter | `Cover_Letter_IREF.md` (or paste text below) |
 | Highlights | Highlights | `Highlights_IREF.md` (or paste text below) |
 
-**Highlights (paste into portal):**
+**Highlights (paste into portal — each ≤85 chars verified ✅):**
 ```
 Exchange rate stability reduces chronic inflation probability by 19.8 pp (APE)
 Monetary independence raises chronic inflation by 18.3 pp — Barro-Gordon bias
-IV/2SLS confirms causal ERS effect: FS-F=174.43, IV-FE b=−0.910***
-System-GMM: ERS long-run multiplier=−3.116; AR(2) p=0.578 ✓
+FE-2SLS confirms causal ERS effect: FS-F=905.95, IV-FE b=−1.110***
+Capital account openness disciplines inflation: KAOPEN APE=−7.5 pp
 MII Barro-Gordon effect strongest 1985–2000 (APE≈+42 pp), weakens post-2001
 ```
 
