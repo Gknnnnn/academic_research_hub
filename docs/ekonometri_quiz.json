@@ -1,0 +1,117 @@
+{
+  "title": "Ekonometri — KKÜ İktisadi ve İdari Bilimler",
+  "course": "İKT301",
+  "semester": "2025-2026 Bahar",
+  "questions": [
+    {
+      "question": "OLS (En Küçük Kareler) tahmincisinin BLUE (Best Linear Unbiased Estimator) olması için Gauss-Markov koşullarından hangisi ZORUNLU değildir?",
+      "answerOptions": [
+        { "text": "Hata terimlerinin sıfır ortalamaya sahip olması", "isCorrect": false, "rationale": "E(u_i) = 0 Gauss-Markov'un temel koşullarından biridir; bu olmadan OLS sapmalı olur." },
+        { "text": "Hata terimlerinin normal dağılması", "isCorrect": true, "rationale": "Normal dağılım Gauss-Markov için zorunlu değildir — hipotez testleri için gereklidir. Gauss-Markov: doğrusallık, sıfır ortalama, homoscedasticity, seri bağımsızlık, bağımsız değişken ve hata kovaryansının sıfır olması." },
+        { "text": "Hata varyansının sabit olması (homoscedasticity)", "isCorrect": false, "rationale": "Var(u_i) = σ² ≠ f(X) koşulu Gauss-Markov'un üçüncü koşuludur; ihlalinde OLS BLUE özelliğini yitirir." },
+        { "text": "Hata terimlerinin birbirleriyle korelasyonsuz olması", "isCorrect": false, "rationale": "Cov(u_i, u_j) = 0 (i ≠ j) dördüncü Gauss-Markov koşuludur; panel veya zaman serisinde sıklıkla ihlal edilir." }
+      ],
+      "hint": "BLUE için beş Gauss-Markov koşulu vardır. İstatistiksel çıkarım için ek varsayım gerekir ama BLUE için değil.",
+      "socratic": "Örneklem büyüklüğü n=1000 olduğunda hata terimleri normal dağılmasa bile t-istatistiği kullanabilir miyiz? Büyük örneklem teorisi burada ne rol oynar?"
+    },
+    {
+      "question": "Bir regresyonda omitted variable bias (atlanmış değişken yanlılığı) ne zaman oluşur?",
+      "answerOptions": [
+        { "text": "Modele çok fazla değişken eklendiğinde", "isCorrect": false, "rationale": "Fazla değişken eklenmesi çoklu doğrusallık ve verimlilik kaybına yol açar; omitted variable bias bunun tersidir." },
+        { "text": "Dışarıda bırakılan değişken hem bağımlı değişkenle hem bağımsız değişkenle korelasyonlu olduğunda", "isCorrect": true, "rationale": "OVB = (korelasyon(X, Z)) × (β_Z). Atlanmış değişken Z hem Y ile hem X ile ilişkiliyse OLS tahmincisi sapmalı ve tutarsız olur — büyük örneklem bile düzeltmez." },
+        { "text": "Bağımsız değişkenler birbiriyle yüksek korelasyonlu olduğunda", "isCorrect": false, "rationale": "Bu çoklu doğrusallık (multicollinearity) sorunudur; standart hatalar şişer ama OLS sapmasız kalır." },
+        { "text": "Hata terimi heteroskedastik olduğunda", "isCorrect": false, "rationale": "Heteroskedastisite OLS'nin verimliliğini bozar ve standart hataları yanıltır ama tahmincinin kendisi sapmasız kalabilir." }
+      ],
+      "hint": "Formül: E[β̂_1] = β_1 + β_2 × (kovaryans(X,Z)/Var(X)). Z'nin her iki Y ve X ile ilişkisi şart.",
+      "socratic": "Eğitim düzeyi ve deneyim dahil ücret regresyonunda 'yetenek' değişkenini dışarıda bıraktığınızı düşünün. Yeteneğin eğitimle pozitif, ücretle pozitif korelasyonu varsa eğitim katsayısı ne yönde sapmalı olur?"
+    },
+    {
+      "question": "Bir zaman serisinin durağan (stationary) olup olmadığını test etmek için en yaygın kullanılan test hangisidir?",
+      "answerOptions": [
+        { "text": "White testi", "isCorrect": false, "rationale": "White testi heteroskedastisite için kullanılır; birim kök testi değildir." },
+        { "text": "Augmented Dickey-Fuller (ADF) testi", "isCorrect": true, "rationale": "ADF testi, H₀: birim kök var (serisi I(1) veya daha fazla), H₁: durağan. AIC/SIC ile gecikme uzunluğu seçilir. Serilerin I(d) mertebesini belirlemek için standart başlangıç noktasıdır." },
+        { "text": "Breusch-Godfrey testi", "isCorrect": false, "rationale": "BG testi otokorelasyon için; birim kök ile değil." },
+        { "text": "Ramsey RESET testi", "isCorrect": false, "rationale": "RESET testi model yanlış kurgusu (misspecification) için kullanılır." }
+      ],
+      "hint": "H₀: birim kök var. Hangi koşulda seriyi fark alarak durağanlaştırabilirsiniz?",
+      "socratic": "ADF testi %5 anlamlılıkta H₀'ı reddedemedi. Bir sonraki adım ne olmalıdır? KPSS testi burada nasıl tamamlayıcı bir rol üstlenir?"
+    },
+    {
+      "question": "Engle-Granger eşbütünleşme testinin temel mantığı nedir?",
+      "answerOptions": [
+        { "text": "İki değişken arasındaki nedensellik yönünü belirler", "isCorrect": false, "rationale": "Nedensellik Granger nedensellik testi ile sınanır; eşbütünleşme uzun dönem denge ilişkisini test eder." },
+        { "text": "İki I(1) serisi arasındaki doğrusal kombinasyonun I(0) olup olmadığını sınar", "isCorrect": true, "rationale": "Engle-Granger (1987): Y_t ve X_t her ikisi I(1) ise ve artıklar û_t ~ I(0) ise değişkenler eşbütünleşiktir — uzun dönem dengeden geçici sapmalar mevcuttur." },
+        { "text": "Serinin mevsimsel bileşenini tespit eder", "isCorrect": false, "rationale": "Mevsimsel ayrıştırma X-13ARIMA-SEATS gibi tekniklerle yapılır; eşbütünleşme farklı bir kavramdır." },
+        { "text": "Regresyon modelinin doğrusal olmayan uyumunu değerlendirir", "isCorrect": false, "rationale": "Bu Ramsey RESET veya kernel regresyon gibi araçların görevidir." }
+      ],
+      "hint": "Eşbütünleşme varsa hata düzeltme modeli (ECM) kurulabilir. Hata düzeltme terimi (ECT) ne anlama gelir?",
+      "socratic": "Türkiye'de GSYH ve CO₂ emisyonu her ikisi de I(1). Eşbütünleşik olduklarını buldunuz. Bu EKC hipotezi için ne anlama gelir? Uzun dönem denge ilişkisi hangi politika çıkarımlarını destekler?"
+    },
+    {
+      "question": "Panel veri analizinde Hausman testi hangi seçim için kullanılır?",
+      "answerOptions": [
+        { "text": "Sabit etkiler (FE) ile rassal etkiler (RE) arasında seçim", "isCorrect": true, "rationale": "Hausman (1978): H₀ — RE tutarlı ve etkin (bireysel etkiler X ile korelasyonsuz); H₁ — yalnızca FE tutarlı. Küçük p → FE tercih edilir." },
+        { "text": "OLS ile GLS arasında seçim", "isCorrect": false, "rationale": "OLS vs GLS seçimi heteroskedastisite veya otokorelasyon varlığında yapılır; Hausman bu seçim için değildir." },
+        { "text": "Optimal gecikme uzunluğunu belirlemek için", "isCorrect": false, "rationale": "Gecikme seçimi AIC, SIC, HQIC gibi bilgi kriterleriyle yapılır." },
+        { "text": "Zaman ve birey etkilerinin birleşik anlamlılığını sınamak için", "isCorrect": false, "rationale": "Bu iki yönlü sabit etkiler modelinde F-testi veya Breusch-Pagan LM testiyle yapılır." }
+      ],
+      "hint": "FE her zaman tutarlıdır ama RE etkin. Hausman farkını istatistiksel olarak değerlendirir.",
+      "socratic": "Hausman testi p = 0.02 verdi ve FE tercih ettiniz. Ancak N=8 ülke ve T=30 yıl. Sabit etkiler bu durumda sorunsuz mu? Driscoll-Kraay standart hatalarının rolü nedir?"
+    },
+    {
+      "question": "Araç değişkeni (IV) yaklaşımında 'zayıf araç' (weak instrument) sorunu ne anlama gelir?",
+      "answerOptions": [
+        { "text": "Araç değişkeni hata terimiyle korelasyonludur", "isCorrect": false, "rationale": "Bu 'geçersiz araç' (invalid instrument) sorunudur — dışsallık ihlali. Zayıf araç sorunsuz farklı bir meseledir." },
+        { "text": "Araç değişkeninin endojen değişkeni yeterince açıklayamaması", "isCorrect": true, "rationale": "Zayıf araç: Corr(Z, X) ≈ 0 → 2SLS sapmalı ve tutarsız; hatta OLS'den kötü. Birinci aşama F-istatistiği < 10 olduğunda zayıf araç riski yüksektir (Staiger-Stock eşiği)." },
+        { "text": "Araç değişkeninin bağımlı değişkenle doğrudan ilişkili olması", "isCorrect": false, "rationale": "Bu dışsallık koşulunun (exclusion restriction) ihlalidir — bağımlı değişkene yalnızca endojen X üzerinden etki etmelidir." },
+        { "text": "Araç sayısının endojen değişken sayısından az olması", "isCorrect": false, "rationale": "Bu 'yetersiz tanımlama' (under-identification) sorunudur; sistemin çözümü imkânsızlaşır." }
+      ],
+      "hint": "Birinci aşama regresyonun F-istatistiğini kontrol edin. Stock-Yogo eşiği nedir?",
+      "socratic": "Eğitimin ücret üzerine etkisini tahmin etmek istiyorsunuz ve doğum çeyreği (quarter of birth) araç değişkeni olarak kullanıyorsunuz (Angrist-Krueger 1991). Bu araç geçerli midir? İki koşulu değerlendirin."
+    },
+    {
+      "question": "Fark-fark (Difference-in-Differences — DiD) tahmincisinin geçerliliği için kritik varsayım hangisidir?",
+      "answerOptions": [
+        { "text": "Tedavi ve kontrol grubu aynı boyutlarda olmalıdır", "isCorrect": false, "rationale": "Grup boyutları DiD geçerliliğini belirlemez; paralel eğilim her iki grup için aynı boyut gerektirmez." },
+        { "text": "Paralel eğilimler (parallel trends) — müdahale olmaksızın her iki grup aynı eğilimi izlerdi", "isCorrect": true, "rationale": "DiD = (Ȳ_tedavi_sonra − Ȳ_tedavi_önce) − (Ȳ_kontrol_sonra − Ȳ_kontrol_önce). Paralel eğilim ihlal edilirse nedensellik yorumu geçersizleşir; olay öncesi paralel eğilim testleri ile kontrol edilir." },
+        { "text": "Tedavi grubunun rastgele seçilmesi", "isCorrect": false, "rationale": "DiD zaten rastgele olmayan tedavi atamalarını (quasi-experiment) ele almak için geliştirilmiştir; randomizasyon zorunlu değildir." },
+        { "text": "Örneklem büyüklüğünün 1000'i aşması", "isCorrect": false, "rationale": "Yeterli güç için örneklem büyüklüğü önemlidir; ama paralel eğilim varsayımı DiD'in tanımsal gerekliliğidir." }
+      ],
+      "hint": "Olay öncesi dönemde tedavi ve kontrol grubu için aynı trendin geçerli olduğunu grafik ve test ile göstermeniz beklenir.",
+      "socratic": "2020 pandemi kapanmalarının küçük işletme gelirleri üzerine etkisini DiD ile tahmin etmek istiyorsunuz. Tedavi grubu kapanan iller, kontrol grubu açık kalan iller. Paralel eğilim varsayımını nasıl test edersiniz? Hangi tehdit en önemlidir?"
+    },
+    {
+      "question": "Lojistik regresyonda katsayının yorumu nasıldır?",
+      "answerOptions": [
+        { "text": "Bağımlı değişkenin olasılığındaki mutlak değişim", "isCorrect": false, "rationale": "Olasılıktaki mutlak değişim marjinal etki (dy/dx) ile hesaplanır; lojistik katsayısı doğrudan olasılık değil log-odds değişimidir." },
+        { "text": "Bağımsız değişken bir birim arttığında log-odds oranındaki değişim", "isCorrect": true, "rationale": "Lojistik regresyonda β: log(p/(1−p)) = α + βX. e^β ise odds oranıdır (OR). Katsayı yorumu: X bir birim artarken log-odds β kadar değişir." },
+        { "text": "Bağımlı değişkenin ortalama değerindeki değişim", "isCorrect": false, "rationale": "Bu OLS katsayısının yorumudur; lojistik regresyonda doğrusal ilişki varsayılmaz." },
+        { "text": "Hata teriminin varyansındaki değişim", "isCorrect": false, "rationale": "Bu heteroskedastisite ile ilgilidir; lojistik regresyon katsayısıyla doğrudan ilişkisi yoktur." }
+      ],
+      "hint": "e^β odds oranıdır. OR > 1 bağımsız değişkenin olayı artırdığını, OR < 1 azalttığını gösterir.",
+      "socratic": "Ekonomi dersinde başarıyı (1/0) tahmin eden lojistik regresyonda 'haftalık çalışma saati' katsayısı 0.15 bulundu. e^0.15 ≈ 1.16. Bu nasıl yorumlanır? Olasılık yorumu için ne hesaplamanız gerekir?"
+    },
+    {
+      "question": "Pesaran'ın (2007) CIPS (Cross-sectionally Augmented IPS) birim kök testi neden ikinci nesil testler arasında sayılır?",
+      "answerOptions": [
+        { "text": "Daha büyük örneklem gerektirdiği için", "isCorrect": false, "rationale": "Örneklem büyüklüğü nesil sınıflandırmasını belirlemez; kesitler arası bağımlılık varsayımı belirleyicidir." },
+        { "text": "Kesitler arası bağımlılığı (cross-section dependence — CSD) hesaba kattığı için", "isCorrect": true, "rationale": "IPS, LLC gibi birinci nesil testler CSD'yi görmezden gelir; CIPS her birim için regresyona yatay kesit ortalamalarını ekleyerek ortak faktörleri kontrol altına alır. CSD görmezden gelinirse birim kök testleri ciddi ölçüde aşırı reddeder." },
+        { "text": "Yapısal kırılmaları tespit ettiği için", "isCorrect": false, "rationale": "Yapısal kırılma içeren testler Zivot-Andrews veya Panel KPSS varyantlarıdır; CIPS CSD odaklıdır." },
+        { "text": "Yalnızca dengeli panel veri için çalıştığı için", "isCorrect": false, "rationale": "Dengeli/dengesiz panel CIPS'in nesil sınıflandırmasıyla ilgili değildir." }
+      ],
+      "hint": "Pesaran (2004) CD testi önce CSD'yi sınar, ardından CIPS uygulanır. Bu sıra neden önemlidir?",
+      "socratic": "36 OECD ülkesi için CO₂ verisini analiz ediyorsunuz. IPS testi serinin I(0) olduğunu söylüyor, CIPS ise I(1) buluyor. Hangisine güvenirsiniz ve neden? Bu fark sonuçlarınızı nasıl etkiler?"
+    },
+    {
+      "question": "Regresyon analizinde heteroskedastisite varlığında OLS tahmincisi için doğru olan ifade hangisidir?",
+      "answerOptions": [
+        { "text": "OLS tahmincisi sapmalı ve tutarsız olur", "isCorrect": false, "rationale": "Heteroskedastisite sapmasızlığı bozmaz; E(β̂) = β koşulu heteroskedastisiteden bağımsızdır." },
+        { "text": "OLS sapmasız kalır ancak standart hatalar hatalı hesaplanır", "isCorrect": true, "rationale": "Heteroskedastisite: OLS hâlâ sapmasız ve tutarlıdır (β̂ değerleri doğru), ancak White (1980) standart hataları olmadan t ve F istatistikleri geçersizleşir — yanlış çıkarım yapılır." },
+        { "text": "OLS tahmincisi tutarsız olur; büyük örneklem bile düzeltmez", "isCorrect": false, "rationale": "Tutarsızlık endojenlik sorununda ortaya çıkar; heteroskedastisite OLS tutarlılığını bozmaz." },
+        { "text": "Regresyon tamamen geçersiz hale gelir; tekrar tahmin edilmeli", "isCorrect": false, "rationale": "Heteroskedastisitenin çözümü yeniden tahmin değil; robust (White/HC) standart hataların kullanılmasıdır." }
+      ],
+      "hint": "White (1980) robust standart hatalar bu sorunu nasıl çözer? Driscoll-Kraay panelde ne ekler?",
+      "socratic": "Bir çapraz kesit regresyonunda zengin hanelerin harcama varyansının fakir hanelere kıyasla çok daha büyük olduğunu gördünüz. Bu heteroskedastisite şüphesini nasıl doğrularsınız ve nasıl düzeltirsiniz?"
+    }
+  ]
+}

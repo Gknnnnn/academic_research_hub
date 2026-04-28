@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>M. Gökhan Özdemir — Research & Teaching Tools</title>
+<style>
+  :root {
+    --bg: #0d1117;
+    --card: #161b22;
+    --border: #30363d;
+    --accent: #58a6ff;
+    --green: #3fb950;
+    --yellow: #d29922;
+    --purple: #bc8cff;
+    --text: #e6edf3;
+    --muted: #8b949e;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2rem 1rem;
+  }
+  header {
+    text-align: center;
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { font-size: 1.8rem; font-weight: 700; margin-bottom: .5rem; }
+  header p { color: var(--muted); font-size: .95rem; }
+  header .badge {
+    display: inline-block;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: .25rem .75rem;
+    font-size: .8rem;
+    color: var(--accent);
+    margin: .25rem .2rem;
+  }
+  .section-title {
+    font-size: .75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--muted);
+    margin: 2.5rem 0 1rem;
+    padding-bottom: .4rem;
+    border-bottom: 1px solid var(--border);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1rem;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.25rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color .15s, transform .1s;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+  }
+  .card-icon { font-size: 1.6rem; }
+  .card-title { font-weight: 700; font-size: 1rem; }
+  .card-desc { font-size: .85rem; color: var(--muted); line-height: 1.5; }
+  .tag {
+    display: inline-block;
+    font-size: .7rem;
+    padding: .15rem .5rem;
+    border-radius: 4px;
+    font-weight: 600;
+    margin-top: .25rem;
+    align-self: flex-start;
+  }
+  .tag.research { background: #1f3d5c; color: var(--accent); }
+  .tag.teaching { background: #1f3b2a; color: var(--green); }
+  .tag.econ     { background: #2d2433; color: var(--purple); }
+  footer {
+    text-align: center;
+    margin-top: 4rem;
+    color: var(--muted);
+    font-size: .8rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+  .max-w { max-width: 1100px; margin: 0 auto; }
+</style>
+</head>
+<body>
+
+<div class="max-w">
+
+<header>
+  <h1>M. Gökhan Özdemir</h1>
+  <p>Res. Asst. Dr. · Kırıkkale University · Department of Economics</p>
+  <br>
+  <span class="badge">Econometrics</span>
+  <span class="badge">Energy &amp; Environment</span>
+  <span class="badge">Panel Data</span>
+  <span class="badge">Eurasian Economies</span>
+  <span class="badge">ORCID: 0000-0002-6756-7285</span>
+</header>
+
+<div class="section-title">🔬 Research Tools</div>
+<div class="grid">
+
+  <a href="research_rpg_dashboard.html" class="card">
+    <span class="card-icon">⚔️</span>
+    <div class="card-title">Research RPG Dashboard</div>
+    <div class="card-desc">Quest board for 24 active papers, deadline timers, ÜAK XP bar, achievement system. Gamified academic workflow tracker.</div>
+    <span class="tag research">Research</span>
+  </a>
+
+  <a href="research_concept_map.html" class="card">
+    <span class="card-icon">🗺️</span>
+    <div class="card-title">Paper Concept Map</div>
+    <div class="card-desc">Interactive canvas network of 30 paper nodes across 6 research clusters. Pan, zoom, click to explore connections.</div>
+    <span class="tag research">Research</span>
+  </a>
+
+  <a href="research_skill_tree.html" class="card">
+    <span class="card-icon">🌳</span>
+    <div class="card-title">Econometrics Skill Tree</div>
+    <div class="card-desc">SVG skill tree: Tier 1 (foundations) → Tier 4 (doçentlik boss). ALP-GMM zone of proximal development panel. OSSU milestones.</div>
+    <span class="tag research">Research</span>
+  </a>
+
+</div>
+
+<div class="section-title">📚 Teaching Tools</div>
+<div class="grid">
+
+  <a href="econ_quiz_socratic.html" class="card">
+    <span class="card-icon">🧠</span>
+    <div class="card-title">Econometrics Quiz Engine</div>
+    <div class="card-desc">4 modes: Socratic (guided discovery) · Scaffold · Classic · Strict. Loads external JSON question banks. 8 built-in panel econometrics questions.</div>
+    <span class="tag teaching">Teaching</span>
+  </a>
+
+  <a href="classroom_dashboard.html" class="card">
+    <span class="card-icon">🏫</span>
+    <div class="card-title">Classroom Dashboard</div>
+    <div class="card-desc">Student roster, XP awards, 14-block LearnHouse lesson builder, feedback ladders, attendance &amp; analytics. Mobile-friendly.</div>
+    <span class="tag teaching">Teaching</span>
+  </a>
+
+</div>
+
+<div class="section-title">📊 Quiz Question Banks</div>
+<div class="grid">
+
+  <a href="econ_quiz_socratic.html?bank=ekonometri_quiz.json" class="card">
+    <span class="card-icon">📈</span>
+    <div class="card-title">Ekonometri Quiz</div>
+    <div class="card-desc">Panel data, unit root tests, cointegration, GMM, fixed/random effects. Panel econometrics question bank.</div>
+    <span class="tag econ">Econometrics</span>
+  </a>
+
+  <a href="econ_quiz_socratic.html?bank=makroekonomi_quiz.json" class="card">
+    <span class="card-icon">🌍</span>
+    <div class="card-title">Makroekonomi Quiz</div>
+    <div class="card-desc">IS-LM, Mundell-Fleming, monetary policy, inflation, open economy macroeconomics question bank.</div>
+    <span class="tag econ">Macro</span>
+  </a>
+
+  <a href="econ_quiz_socratic.html?bank=mikroekonomi_quiz.json" class="card">
+    <span class="card-icon">⚖️</span>
+    <div class="card-title">Mikroekonomi Quiz</div>
+    <div class="card-desc">Consumer theory, production, market structures, game theory, welfare economics question bank.</div>
+    <span class="tag econ">Micro</span>
+  </a>
+
+  <a href="econ_quiz_socratic.html?bank=iktisat_politikasi_quiz.json" class="card">
+    <span class="card-icon">🏛️</span>
+    <div class="card-title">İktisat Politikası Quiz</div>
+    <div class="card-desc">Monetary &amp; fiscal policy, exchange rate regimes, inflation targeting, central bank independence question bank.</div>
+    <span class="tag econ">Policy</span>
+  </a>
+
+  <a href="econ_quiz_socratic.html?bank=TurkiyeEkonomi_quiz_20260422.json" class="card">
+    <span class="card-icon">🇹🇷</span>
+    <div class="card-title">Türkiye Ekonomisi Quiz</div>
+    <div class="card-desc">Turkish economy: heterodox monetary policy, currency crises, inflation dynamics, growth patterns, structural transformation.</div>
+    <span class="tag econ">Türkiye</span>
+  </a>
+
+</div>
+
+<footer>
+  <p>
+    M. Gökhan Özdemir · Kırıkkale University ·
+    <a href="mailto:mgozdemirera@kku.edu.tr">mgozdemirera@kku.edu.tr</a> ·
+    <a href="https://orcid.org/0000-0002-6756-7285" target="_blank">ORCID</a> ·
+    <a href="https://github.com/Gknnnnn" target="_blank">GitHub</a>
+  </p>
+  <p style="margin-top:.5rem; opacity:.5">Tools built with vanilla HTML/CSS/JS · No framework · No server required</p>
+</footer>
+
+</div>
+</body>
+</html>

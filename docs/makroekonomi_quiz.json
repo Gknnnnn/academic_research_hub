@@ -1,0 +1,117 @@
+{
+  "title": "Makroekonomi I — KKÜ İktisadi ve İdari Bilimler",
+  "course": "İKT102",
+  "semester": "2025-2026 Bahar",
+  "questions": [
+    {
+      "question": "Gayri Safi Yurt İçi Hasıla (GSYİH) hesaplanırken aşağıdakilerden hangisi dahil edilmez?",
+      "answerOptions": [
+        { "text": "Hane halkının tüketim harcamaları", "isCorrect": false, "rationale": "C (tüketim), GSYİH = C + I + G + (X−M) formülünün en büyük bileşenidir; dahil edilir." },
+        { "text": "Kullanılmış bir araba satışı", "isCorrect": true, "rationale": "Kullanılmış mal satışları mevcut üretimi değil yalnızca mülkiyet transferini ifade eder; cari dönem GSYİH'ye katkı yapmaz." },
+        { "text": "Devletin altyapı harcamaları", "isCorrect": false, "rationale": "G (devlet harcamaları) transfer ödemeleri hariç GSYİH'ye dahildir." },
+        { "text": "Yeni makine ve ekipman yatırımları", "isCorrect": false, "rationale": "I (yatırım) GSYİH bileşenlerinden biridir; gayri safi sabit sermaye oluşumunu kapsar." }
+      ],
+      "hint": "GSYİH yalnızca belirli bir dönemde üretilen nihai mal ve hizmetlerin piyasa değerini ölçer.",
+      "socratic": "İkinci el bir telefon 5.000₺'ye alınıp 6.000₺'ye satıldığında GSYİH ne kadar artar? Neden sadece 1.000₺ değil de sıfır?"
+    },
+    {
+      "question": "Toplam talep eğrisi (AD) sola kayarken toplam arz eğrisi (AS) değişmiyorsa ekonomide ne beklenir?",
+      "answerOptions": [
+        { "text": "Fiyat düzeyi yükselir, reel GSYİH düşer", "isCorrect": false, "rationale": "Bu durum AD sağa kayarken oluşur; talep artışı hem fiyat hem çıktıyı yükseltir." },
+        { "text": "Fiyat düzeyi düşer, reel GSYİH düşer", "isCorrect": true, "rationale": "AD sola kayması deflasyonist bir boşluk yaratır: denge fiyatı ve çıktı birlikte düşer — resesyon ve deflasyon riski." },
+        { "text": "Fiyat düzeyi değişmez, reel GSYİH artar", "isCorrect": false, "rationale": "Bu durum keynesyen bölgede AS sağa kayarken AS tamamen yatay olduğunda gerçekleşir." },
+        { "text": "Fiyat düzeyi artar, reel GSYİH değişmez", "isCorrect": false, "rationale": "Bu durum uzun dönem AS (LRAS) üzerindeyken maliyet kaynaklı bir şok söz konusu olduğunda görülür." }
+      ],
+      "hint": "AD-AS modelinde kesişim noktasını düşünün; AD sola kayarsa denge noktası nereye gider?",
+      "socratic": "2008 küresel kriziyle birlikte hane halklarının harcamaları keskin biçimde düştü. Bu AD-AS diyagramında nasıl gösterilir ve politika yapıcılar ne yapabilir?"
+    },
+    {
+      "question": "Para çarpanı (money multiplier) formülü m = 1 / rr ile ifade edildiğinde, zorunlu karşılık oranı (rr) %20 ise para çarpanı kaçtır?",
+      "answerOptions": [
+        { "text": "2", "isCorrect": false, "rationale": "m = 1/0.20 değil; 1/0.50 = 2 olur ancak rr = 0.50 gerekir." },
+        { "text": "4", "isCorrect": false, "rationale": "m = 4 için rr = 0.25 gerekir; sorudaki rr = 0.20 farklı bir sonuç verir." },
+        { "text": "5", "isCorrect": true, "rationale": "m = 1 / 0.20 = 5. Merkez bankası 1₺ baz para yarattığında bankacılık sistemi teorik olarak 5₺'ye kadar para arzı oluşturabilir." },
+        { "text": "20", "isCorrect": false, "rationale": "m = 20 için rr = 0.05 gerekir; %20 karşılık oranıyla bu değere ulaşılamaz." }
+      ],
+      "hint": "Para çarpanı = 1 ÷ zorunlu karşılık oranı. Oranı ondalığa çevirin.",
+      "socratic": "Merkez bankası zorunlu karşılık oranını %10'dan %20'ye yükseltirse piyasadaki para miktarı ne yönde değişir? Bu hangi para politikası aracıdır?"
+    },
+    {
+      "question": "Phillips Eğrisi kısa dönemde hangi iki değişken arasındaki ters ilişkiyi gösterir?",
+      "answerOptions": [
+        { "text": "Enflasyon ve faiz oranı", "isCorrect": false, "rationale": "Bu ilişki Fisher denklemine atfedilir: nominal faiz = reel faiz + beklenen enflasyon." },
+        { "text": "Enflasyon ve işsizlik", "isCorrect": true, "rationale": "A.W. Phillips (1958), enflasyon ile işsizlik arasında kısa dönemde negatif bir ilişki bulmuştur; ekonomi ısınırken işsizlik düşer ve enflasyon yükselir." },
+        { "text": "GSYİH büyümesi ve faiz oranı", "isCorrect": false, "rationale": "Bu IS-LM ilişkisidir; Phillips Eğrisi işgücü piyasasına odaklanır." },
+        { "text": "İhracat ve döviz kuru", "isCorrect": false, "rationale": "Bu, döviz kurlarının dış ticarete etkisini inceleyen Marshall-Lerner koşuluyla ilgilidir." }
+      ],
+      "hint": "İngiliz iktisat tarihçisi A.W. Phillips 1958'de Birleşik Krallık verileriyle bu ilişkiyi ampirik olarak gösterdi.",
+      "socratic": "1970'lerde hem yüksek enflasyon hem yüksek işsizlik (stagflasyon) yaşandı. Bu durum klasik Phillips Eğrisi'ni nasıl çürütür ve Friedman ne önerdi?"
+    },
+    {
+      "question": "IS-LM modelinde genişletici maliye politikası (devlet harcamalarının artırılması) kısa dönemde denge faiz oranını nasıl etkiler?",
+      "answerOptions": [
+        { "text": "Faiz oranı düşer", "isCorrect": false, "rationale": "Bu para politikasının genişletici etkisidir; maliye politikasında IS sağa kayar." },
+        { "text": "Faiz oranı değişmez", "isCorrect": false, "rationale": "IS kayması ile LM sabitken yeni denge noktasında faiz değişir." },
+        { "text": "Faiz oranı yükselir", "isCorrect": true, "rationale": "G ↑ → IS sağa → daha yüksek denge geliri + daha yüksek faiz. Crowding-out etkisi: yüksek faiz özel yatırımı kısmen iter." },
+        { "text": "Faiz oranı belirsizdir; eğime bağlıdır", "isCorrect": false, "rationale": "Standart IS-LM'de LM eğimi pozitif, IS sağa kayması faizi yukarı iter; belirsizlik LM yatay/dikey uç durumlarıyla sınırlıdır." }
+      ],
+      "hint": "IS eğrisi mal piyasasını, LM eğrisi para piyasasını gösterir. IS sağa kayarken LM sabitken kesişim nereye gider?",
+      "socratic": "Crowding-out etkisi tam olduğunda (LM dikey) devlet harcamaları artırılırsa net GSYİH değişimi sıfır olur. Bu hangi koşulda gerçekleşir ve politika olarak ne anlama gelir?"
+    },
+    {
+      "question": "Solow Büyüme Modeli'nde 'altın kural' (golden rule) tasarruf oranı neyi maksimize eder?",
+      "answerOptions": [
+        { "text": "Uzun dönem çıktı düzeyini", "isCorrect": false, "rationale": "Maksimum uzun dönem çıktısı sonsuz tasarruf oranıyla elde edilir; ancak bu tüketimi sıfırlar." },
+        { "text": "Uzun dönem kişi başına tüketimi", "isCorrect": true, "rationale": "Altın kural: MPK = δ (amortismanı) koşulunda denge tüketimi maksimize edilir; c* = f(k*) − δk*." },
+        { "text": "İşgücü büyüme hızını", "isCorrect": false, "rationale": "İşgücü büyümesi n Solow'da dışsal kabul edilir; tasarruf oranı n'yi etkilemez." },
+        { "text": "Teknolojik ilerleme hızını", "isCorrect": false, "rationale": "Teknoloji A da dışsal; Solow modeli neden A büyüdüğünü açıklamaz (içsel büyüme teorisinin motivasyonu budur)." }
+      ],
+      "hint": "Tüketim = Çıktı − Yatırım. Denge tüketimi maksimize edilmek istendiğinde marjinal ürün koşulu nedir?",
+      "socratic": "Bir ülkede tasarruf oranı altın kural değerinin üzerindeyse politika yapıcı ne yapmalı? Karar vermek neden etik boyut taşır?"
+    },
+    {
+      "question": "Açık ekonomide Mundell-Fleming modeline göre tam sermaye hareketliliği altında sabit döviz kuru rejiminde genişletici para politikasının etkisi nedir?",
+      "answerOptions": [
+        { "text": "Çıktı artar, döviz kuru değişmez", "isCorrect": false, "rationale": "Para arzı artışı faizi düşürür → sermaye çıkışı → döviz kurunu korumak için merkez bankası döviz satmak zorunda → para arzı daralır → denge başlangıç noktasına döner." },
+        { "text": "Para politikası etkisizdir; çıktı değişmez", "isCorrect": true, "rationale": "Sabit kur + tam sermaye hareketi: merkez bankası bağımsız para politikası yürütemez (impossible trinity). LM kaymasını sterilizasyon sıfırlar." },
+        { "text": "Çıktı düşer, döviz değer kazanır", "isCorrect": false, "rationale": "Sabit kur altında kur değişmez; kuruyorsa müdahale zorunludur." },
+        { "text": "Çıktı artar, döviz değer kaybeder", "isCorrect": false, "rationale": "Bu esnek kur rejimindeki para politikası etkisidir; sabit kurda bu mekanizma işlemez." }
+      ],
+      "hint": "Mundell-Fleming'de kur rejimi para politikasının etkinliğini belirler. 'İmkânsız üçlü' kısıtını hatırlayın.",
+      "socratic": "Arjantin 2001 krizinde dolara sabit kur rejimini korurken faizleri düşüremedi. Mundell-Fleming bunu nasıl açıklar? Alternatif politika seçenekleri nelerdi?"
+    },
+    {
+      "question": "Keynes'in 'likidite tuzağı' (liquidity trap) kavramı hangi durumu tanımlar?",
+      "answerOptions": [
+        { "text": "Faiz oranları çok yüksek olduğundan bireylerin borçlanamadığı durum", "isCorrect": false, "rationale": "Bu kredi kısıtlaması veya finansal baskı kavramıyla ilgilidir; likidite tuzağı faizin sıfıra yakın olduğu durumu tanımlar." },
+        { "text": "Nominal faiz sıfıra yaklaştığında para politikasının etkisiz kaldığı durum", "isCorrect": true, "rationale": "Faiz ≈ 0 iken tahvil fiyatları maksimumda; bireyler gelecekte faiz artışını bekleyerek nakit tutmayı tercih eder. Para arzı artışı harcamayı uyarmaz — para politikası etkisizleşir." },
+        { "text": "Bankacılık sisteminin kredileri piyasaya aktaramadığı durum", "isCorrect": false, "rationale": "Bu kredi kanalının çökmesidir; Keynes'in orijinal kavramından farklı." },
+        { "text": "Hane halklarının tüm geliri tasarruf ettiği durum", "isCorrect": false, "rationale": "Marjinal tasarruf eğiliminin 1 olması farklı bir kavramdır; likidite tuzağında portföy tercihi (nakit tutma) merkezi rolü oynar." }
+      ],
+      "hint": "Japon ekonomisi 1990'larda ve 2000'lerde sıfır faiz politikasına rağmen canlanamadı. Bu paradoks neyi gösterir?",
+      "socratic": "Merkez bankası faizi sıfıra indirdi ama ekonomi canlanmıyor. Keynes bu durumda ne önerir? Neden maliye politikası ön plana geçer?"
+    },
+    {
+      "question": "Satın Alma Gücü Paritesi (SGP/PPP) teorisine göre uzun dönemde döviz kuru nasıl belirlenir?",
+      "answerOptions": [
+        { "text": "İki ülke arasındaki faiz farklılıklarıyla", "isCorrect": false, "rationale": "Bu Faiz Paritesi Koşulu (UIP/CIP)'dur; SGP fiyat düzeylerini karşılaştırır." },
+        { "text": "İki ülkedeki fiyat düzeylerinin oranına eşitlenir", "isCorrect": true, "rationale": "SGP: E = P_yurt içi / P_yabancı. Bir malın dünyanın her yerinde aynı fiyattan satılması gerekir (tek fiyat yasası). Uzun dönemde kur sapmaları arbitrajla kapanır." },
+        { "text": "Merkez bankasının döviz rezervleriyle", "isCorrect": false, "rationale": "Rezervler sabit kur rejimlerinde kuru savunmak için kullanılır; SGP teorisi esnekdöviz kurunu açıklar." },
+        { "text": "Cari açık ve sermaye hareketleri dengesiyle", "isCorrect": false, "rationale": "Bu ödemeler dengesi yaklaşımıdır; SGP reel değerleme/değer kaybını açıklar." }
+      ],
+      "hint": "Big Mac Index SGP'nin popüler uygulamasıdır. Eğer Türkiye'de Big Mac ABD'dekinden ucuzsa TL değeri hakkında ne söylenebilir?",
+      "socratic": "TL/USD kuru 2010'da ~1.5, 2024'te ~32 oldu. SGP teorisi bu hareketi nasıl açıklar? Hangi ülkede enflasyon daha yüksekti?"
+    },
+    {
+      "question": "Reel konjonktür teorisine (Real Business Cycle — RBC) göre ekonomik dalgalanmaların temel kaynağı nedir?",
+      "answerOptions": [
+        { "text": "Yetersiz toplam talep", "isCorrect": false, "rationale": "Bu Keynesyen açıklamadır; talep yetersizliği RBC teorisinin dışındadır." },
+        { "text": "Para arzındaki öngörülmemiş değişimler", "isCorrect": false, "rationale": "Bu Monetarist (Friedman) görüşüdür; RBC'de para nötr kabul edilir." },
+        { "text": "Teknoloji ve üretkenlik şokları", "isCorrect": true, "rationale": "Kydland-Prescott (1982) Nobel: RBC'de dalgalanmalar teknolojik şoklara optimal tepkilerdir — istihdam ve çıktı değişimleri rasyonel bireyler tarafından denge yolunda gerçekleştirilir." },
+        { "text": "Sendikaların ücret katılıkları", "isCorrect": false, "rationale": "Ücret katılıkları Yeni Keynesyen modellerin özelliğidir; RBC tam esnek fiyat ve ücret varsayar." }
+      ],
+      "hint": "Finn Kydland ve Edward Prescott 2004 Nobel Ödülü'nü RBC katkıları için aldı. 'Reel' kelimesi teoride neyi vurgular?",
+      "socratic": "RBC modelinde bir resesyon optimal mı yoksa piyasa başarısızlığı mı? Hükümetin müdahalesi bu görüşe göre ne sağlar?"
+    }
+  ]
+}

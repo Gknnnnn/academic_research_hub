@@ -1,0 +1,827 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Quest Board — Res. Asst. Dr. M.G. Özdemir</title>
+<style>
+  :root {
+    --bg: #0d0d1a;
+    --panel: #13132b;
+    --border: #2a2a5a;
+    --gold: #f5c842;
+    --silver: #a8b8c8;
+    --green: #3dffa0;
+    --red: #ff4a6e;
+    --blue: #4a8fff;
+    --purple: #b04aff;
+    --orange: #ff8c42;
+    --text: #e0e0f0;
+    --muted: #6a6a9a;
+    --q1: #f5c842;
+    --q2: #a8b8c8;
+    --q3: #cd7f32;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-size: 13px;
+    min-height: 100vh;
+  }
+  /* Starfield bg */
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: radial-gradient(ellipse at 20% 30%, rgba(74,143,255,0.04) 0%, transparent 60%),
+                radial-gradient(ellipse at 80% 70%, rgba(176,74,255,0.04) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #0a0a1f 0%, #13132b 100%);
+    border-bottom: 2px solid var(--gold);
+    padding: 16px 24px;
+    display: flex; align-items: center; gap: 16px;
+  }
+  .header-icon { font-size: 32px; }
+  .header h1 { font-size: 18px; color: var(--gold); letter-spacing: 1px; }
+  .header p { font-size: 11px; color: var(--muted); margin-top: 2px; }
+  .header-right { margin-left: auto; text-align: right; }
+  .live-date { font-size: 11px; color: var(--muted); }
+  .live-date span { color: var(--green); font-weight: bold; }
+
+  /* LAYOUT */
+  .main { display: grid; grid-template-columns: 280px 1fr; gap: 16px; padding: 16px 24px; }
+  .sidebar { display: flex; flex-direction: column; gap: 12px; }
+  .content { display: flex; flex-direction: column; gap: 12px; }
+
+  /* PANELS */
+  .panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  .panel-header {
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid var(--border);
+    padding: 10px 14px;
+    display: flex; align-items: center; gap: 8px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+    color: var(--muted); text-transform: uppercase;
+  }
+  .panel-header .icon { font-size: 14px; }
+  .panel-body { padding: 14px; }
+
+  /* CHARACTER CARD */
+  .char-avatar {
+    width: 72px; height: 72px;
+    background: linear-gradient(135deg, #1a1a3a, #2a2a5a);
+    border: 3px solid var(--gold);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 30px; margin: 0 auto 10px;
+    box-shadow: 0 0 20px rgba(245,200,66,0.3);
+    animation: glow 3s ease-in-out infinite alternate;
+  }
+  @keyframes glow {
+    from { box-shadow: 0 0 10px rgba(245,200,66,0.2); }
+    to   { box-shadow: 0 0 30px rgba(245,200,66,0.5); }
+  }
+  .char-name { text-align: center; font-size: 13px; font-weight: 700; color: var(--gold); }
+  .char-title { text-align: center; font-size: 10px; color: var(--muted); margin-bottom: 12px; }
+  .char-class {
+    text-align: center;
+    background: rgba(74,143,255,0.1);
+    border: 1px solid var(--blue);
+    border-radius: 20px;
+    padding: 4px 12px;
+    font-size: 11px; color: var(--blue);
+    margin-bottom: 14px; display: inline-block;
+    width: 100%;
+  }
+
+  /* STAT BARS */
+  .stat-row { margin-bottom: 10px; }
+  .stat-label { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 4px; }
+  .stat-label span:first-child { color: var(--muted); }
+  .stat-label span:last-child { color: var(--text); font-weight: 600; }
+  .stat-bar { height: 6px; background: rgba(255,255,255,0.08); border-radius: 3px; overflow: hidden; }
+  .stat-fill { height: 100%; border-radius: 3px; transition: width 1s ease; }
+  .fill-gold { background: linear-gradient(90deg, var(--gold), #ffdd88); }
+  .fill-blue { background: linear-gradient(90deg, var(--blue), #88bbff); }
+  .fill-green { background: linear-gradient(90deg, var(--green), #88ffcc); }
+  .fill-purple { background: linear-gradient(90deg, var(--purple), #dd88ff); }
+
+  /* LEVEL BADGE */
+  .level-badge {
+    display: flex; align-items: center; justify-content: center; gap: 8px;
+    background: rgba(245,200,66,0.08);
+    border: 1px solid rgba(245,200,66,0.3);
+    border-radius: 8px; padding: 8px; margin-bottom: 12px;
+  }
+  .level-num { font-size: 28px; font-weight: 900; color: var(--gold); line-height: 1; }
+  .level-info { font-size: 10px; color: var(--muted); }
+  .level-info strong { color: var(--text); display: block; font-size: 12px; }
+
+  /* STATS GRID */
+  .stats-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .stat-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px;
+    text-align: center;
+  }
+  .stat-card .val { font-size: 22px; font-weight: 800; }
+  .stat-card .lbl { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+  .val-gold { color: var(--gold); }
+  .val-green { color: var(--green); }
+  .val-blue { color: var(--blue); }
+  .val-orange { color: var(--orange); }
+
+  /* QUESTS */
+  .quest-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+  .quest-card {
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 12px;
+    cursor: pointer; transition: all 0.2s;
+    position: relative; overflow: hidden;
+  }
+  .quest-card:hover { transform: translateY(-2px); border-color: rgba(255,255,255,0.2); }
+  .quest-card::before {
+    content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+    width: 3px;
+  }
+  .quest-ready::before { background: var(--green); }
+  .quest-review::before { background: var(--blue); }
+  .quest-waiting::before { background: var(--orange); }
+  .quest-progress::before { background: var(--purple); }
+
+  .quest-header { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 8px; }
+  .quest-status-icon { font-size: 18px; flex-shrink: 0; }
+  .quest-title { font-size: 11px; font-weight: 700; line-height: 1.3; flex: 1; }
+  .quest-journal { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .quest-tags { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 8px; }
+  .tag {
+    font-size: 9px; padding: 2px 6px; border-radius: 10px;
+    font-weight: 600; letter-spacing: 0.5px;
+  }
+  .tag-q1 { background: rgba(245,200,66,0.15); color: var(--q1); border: 1px solid rgba(245,200,66,0.3); }
+  .tag-q2 { background: rgba(168,184,200,0.15); color: var(--q2); border: 1px solid rgba(168,184,200,0.3); }
+  .tag-ssci { background: rgba(61,255,160,0.1); color: var(--green); border: 1px solid rgba(61,255,160,0.3); }
+  .tag-solo { background: rgba(176,74,255,0.1); color: var(--purple); border: 1px solid rgba(176,74,255,0.3); }
+  .tag-blocked { background: rgba(255,74,110,0.1); color: var(--red); border: 1px solid rgba(255,74,110,0.3); }
+  .tag-collab { background: rgba(74,143,255,0.1); color: var(--blue); border: 1px solid rgba(74,143,255,0.3); }
+
+  .quest-status-badge {
+    font-size: 9px; font-weight: 700; letter-spacing: 1px;
+    padding: 2px 8px; border-radius: 4px; text-transform: uppercase;
+  }
+  .badge-ready { background: rgba(61,255,160,0.15); color: var(--green); }
+  .badge-review { background: rgba(74,143,255,0.15); color: var(--blue); }
+  .badge-waiting { background: rgba(255,140,66,0.15); color: var(--orange); }
+  .badge-progress { background: rgba(176,74,255,0.15); color: var(--purple); }
+
+  /* DEADLINES */
+  .deadline-list { display: flex; flex-direction: column; gap: 8px; }
+  .deadline-item {
+    display: flex; align-items: center; gap: 10px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px;
+  }
+  .deadline-icon { font-size: 20px; flex-shrink: 0; }
+  .deadline-info { flex: 1; }
+  .deadline-title { font-size: 11px; font-weight: 600; }
+  .deadline-sub { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .deadline-days {
+    font-size: 18px; font-weight: 900; text-align: right; flex-shrink: 0;
+  }
+  .deadline-label { font-size: 8px; color: var(--muted); text-align: right; }
+  .days-critical { color: var(--red); }
+  .days-warning { color: var(--orange); }
+  .days-ok { color: var(--green); }
+  .days-far { color: var(--muted); }
+
+  /* ACHIEVEMENTS */
+  .achievements-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(70px,1fr)); gap: 8px; }
+  .achievement {
+    text-align: center; padding: 10px 6px;
+    background: rgba(255,255,255,0.02);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    transition: all 0.2s;
+    cursor: default;
+  }
+  .achievement:hover { transform: scale(1.05); }
+  .achievement.locked { opacity: 0.3; filter: grayscale(1); }
+  .achievement .ach-icon { font-size: 22px; margin-bottom: 4px; }
+  .achievement .ach-name { font-size: 8px; color: var(--muted); line-height: 1.2; }
+  .achievement.unlocked .ach-name { color: var(--gold); }
+
+  /* TABS */
+  .tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--border); padding: 0 14px; }
+  .tab {
+    padding: 8px 16px; font-size: 11px; font-weight: 600;
+    color: var(--muted); cursor: pointer; border-bottom: 2px solid transparent;
+    transition: all 0.2s;
+  }
+  .tab.active { color: var(--gold); border-bottom-color: var(--gold); }
+  .tab:hover:not(.active) { color: var(--text); }
+  .tab-content { display: none; padding: 14px; }
+  .tab-content.active { display: block; }
+
+  /* SECTION HEADERS */
+  .section-title {
+    font-size: 10px; font-weight: 700; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-bottom: 10px; display: flex; align-items: center; gap: 6px;
+  }
+  .section-title::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+
+  /* TOOLTIP */
+  [title] { position: relative; }
+
+  /* PROGRESS */
+  .xp-section { margin-bottom: 14px; }
+  .xp-header { display: flex; justify-content: space-between; margin-bottom: 6px; font-size: 11px; }
+  .xp-header .xp-label { color: var(--gold); font-weight: 700; }
+  .xp-bar { height: 12px; background: rgba(255,255,255,0.06); border-radius: 6px; overflow: hidden; position: relative; }
+  .xp-fill { height: 100%; background: linear-gradient(90deg, var(--gold), #ffdd66); border-radius: 6px; position: relative; }
+  .xp-fill::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+  }
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  .xp-milestones { display: flex; justify-content: space-between; font-size: 9px; color: var(--muted); margin-top: 4px; }
+
+  /* MODAL */
+  .modal-overlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.8);
+    z-index: 100; align-items: center; justify-content: center;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px; max-width: 480px; width: 90%;
+    position: relative;
+  }
+  .modal-close {
+    position: absolute; top: 12px; right: 16px;
+    cursor: pointer; color: var(--muted); font-size: 18px;
+  }
+  .modal-title { font-size: 15px; font-weight: 700; color: var(--gold); margin-bottom: 6px; }
+  .modal-sub { font-size: 11px; color: var(--muted); margin-bottom: 14px; }
+  .modal-row { display: flex; gap: 8px; align-items: center; margin-bottom: 8px; font-size: 11px; }
+  .modal-row .label { color: var(--muted); min-width: 80px; }
+  .checklist { list-style: none; font-size: 11px; }
+  .checklist li { padding: 4px 0; border-bottom: 1px solid rgba(255,255,255,0.04); }
+  .checklist li::before { content: '☐ '; color: var(--muted); }
+  .checklist li.done::before { content: '✅ '; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .main { grid-template-columns: 1fr; }
+    .quest-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Scroll */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-icon">🗡️</div>
+  <div>
+    <h1>RESEARCH QUEST BOARD</h1>
+    <p>Academic Portfolio RPG — Kırıkkale University, Department of Economics</p>
+  </div>
+  <div class="header-right">
+    <div class="live-date">Session: <span id="live-date"></span></div>
+    <div class="live-date" style="margin-top:4px">Active Quests: <span style="color:var(--gold)">24</span> | Pipeline: <span style="color:var(--green)">6 READY</span></div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="main">
+
+  <!-- SIDEBAR -->
+  <div class="sidebar">
+
+    <!-- CHARACTER CARD -->
+    <div class="panel">
+      <div class="panel-header"><span class="icon">⚔️</span> Character</div>
+      <div class="panel-body">
+        <div class="char-avatar">🧙</div>
+        <div class="char-name">M. Gökhan Özdemir</div>
+        <div class="char-title">Res. Asst. Dr. · Kırıkkale University</div>
+        <div class="char-class">⚡ Panel Econometrician</div>
+
+        <div class="level-badge">
+          <div class="level-num" id="char-level">—</div>
+          <div class="level-info">
+            <strong id="char-rank">Loading...</strong>
+            Toward Doçentlik
+          </div>
+        </div>
+
+        <!-- XP Bar -->
+        <div class="xp-section">
+          <div class="xp-header">
+            <span class="xp-label">📊 ÜAK Progress</span>
+            <span id="xp-text" style="color:var(--muted)">—</span>
+          </div>
+          <div class="xp-bar">
+            <div class="xp-fill" id="xp-fill" style="width:0%"></div>
+          </div>
+          <div class="xp-milestones">
+            <span>0</span><span>30🥉</span><span>60🥈</span><span>90🥇</span><span>120👑</span>
+          </div>
+          <div id="xp-next-hint" style="font-size:9px;color:var(--purple);margin-top:4px;text-align:center"></div>
+        </div>
+
+        <div class="section-title" style="margin-top:6px">Skills</div>
+        <div class="stat-row">
+          <div class="stat-label"><span>Panel Econometrics</span><span>★★★★★</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-gold" style="width:95%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label"><span>Energy & Climate</span><span>★★★★☆</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-green" style="width:80%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label"><span>ML / AI Methods</span><span>★★★☆☆</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-blue" style="width:65%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label"><span>Financial Economics</span><span>★★★★☆</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-purple" style="width:78%"></div></div>
+        </div>
+        <div class="stat-row">
+          <div class="stat-label"><span>Food & Agriculture</span><span>★★★☆☆</span></div>
+          <div class="stat-bar"><div class="stat-fill fill-gold" style="width:60%"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PORTFOLIO STATS -->
+    <div class="panel">
+      <div class="panel-header"><span class="icon">📈</span> Portfolio Stats</div>
+      <div class="panel-body">
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="val val-gold">6</div>
+            <div class="lbl">Submit Ready</div>
+          </div>
+          <div class="stat-card">
+            <div class="val val-blue">3</div>
+            <div class="lbl">In Review</div>
+          </div>
+          <div class="stat-card">
+            <div class="val val-orange">5</div>
+            <div class="lbl">Co-Author Q</div>
+          </div>
+          <div class="stat-card">
+            <div class="val val-green">24</div>
+            <div class="lbl">Active Quests</div>
+          </div>
+        </div>
+        <div style="margin-top:10px; padding-top:10px; border-top:1px solid var(--border)">
+          <div class="stat-row">
+            <div class="stat-label"><span>Q1 SSCI Pipeline</span><span style="color:var(--gold)">8 papers</span></div>
+            <div class="stat-bar"><div class="stat-fill fill-gold" style="width:73%"></div></div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-label"><span>Q2 SSCI Pipeline</span><span style="color:var(--silver)">5 papers</span></div>
+            <div class="stat-bar"><div class="stat-fill fill-blue" style="width:45%"></div></div>
+          </div>
+          <div class="stat-row">
+            <div class="stat-label"><span>Collaborators Active</span><span>9</span></div>
+            <div class="stat-bar"><div class="stat-fill fill-purple" style="width:60%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS -->
+    <div class="panel">
+      <div class="panel-header"><span class="icon">🏆</span> Achievements</div>
+      <div class="panel-body">
+        <div class="achievements-grid">
+          <div class="achievement unlocked" title="First ISR publication">
+            <div class="ach-icon">📜</div>
+            <div class="ach-name">First Scroll</div>
+          </div>
+          <div class="achievement unlocked" title="20+ papers in pipeline">
+            <div class="ach-icon">⚔️</div>
+            <div class="ach-name">War Chief</div>
+          </div>
+          <div class="achievement unlocked" title="International collaboration">
+            <div class="ach-icon">🌍</div>
+            <div class="ach-name">Globe Trotter</div>
+          </div>
+          <div class="achievement unlocked" title="Panel econometrics master">
+            <div class="ach-icon">📊</div>
+            <div class="ach-name">Data Mage</div>
+          </div>
+          <div class="achievement unlocked" title="RSEP Barcelona">
+            <div class="ach-icon">✈️</div>
+            <div class="ach-name">Wanderer</div>
+          </div>
+          <div class="achievement locked" title="Publish Q1 paper">
+            <div class="ach-icon">⭐</div>
+            <div class="ach-name">Q1 Slayer</div>
+          </div>
+          <div class="achievement locked" title="3 Q1 publications">
+            <div class="ach-icon">👑</div>
+            <div class="ach-name">Doçent</div>
+          </div>
+          <div class="achievement locked" title="Solo Q1 paper">
+            <div class="ach-icon">🗡️</div>
+            <div class="ach-name">Solo Hero</div>
+          </div>
+          <div class="achievement locked" title="TÜBİTAK grant">
+            <div class="ach-icon">🏛️</div>
+            <div class="ach-name">Grant Lord</div>
+          </div>
+          <div class="achievement locked" title="100+ citations">
+            <div class="ach-icon">💎</div>
+            <div class="ach-name">Cited Sage</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MULTI-GOAL ACHIEVEMENTS -->
+    <div class="panel">
+      <div class="panel-header"><span class="icon">🎯</span> Multi-Goal Missions</div>
+      <div class="panel-body">
+        <div id="multi-goals-container"></div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- MAIN CONTENT -->
+  <div class="content">
+
+    <!-- URGENT DEADLINES -->
+    <div class="panel">
+      <div class="panel-header"><span class="icon">⏰</span> Active Dungeons (Deadlines)</div>
+      <div class="panel-body">
+        <div class="deadline-list" id="deadline-list"></div>
+      </div>
+    </div>
+
+    <!-- QUEST BOARD -->
+    <div class="panel">
+      <div class="panel-header"><span class="icon">📋</span> Quest Board</div>
+      <div class="tabs">
+        <div class="tab active" onclick="switchTab(this,'ready')">⚔️ Submit Ready <span style="color:var(--green)">(6)</span></div>
+        <div class="tab" onclick="switchTab(this,'review')">🛡️ In Review <span style="color:var(--blue)">(3)</span></div>
+        <div class="tab" onclick="switchTab(this,'waiting')">⏳ Co-Author Q <span style="color:var(--orange)">(5)</span></div>
+        <div class="tab" onclick="switchTab(this,'progress')">🔨 In Progress <span style="color:var(--purple)">(10)</span></div>
+      </div>
+
+      <!-- SUBMIT READY -->
+      <div class="tab-content active" id="tab-ready">
+        <div class="quest-grid" id="quests-ready"></div>
+      </div>
+
+      <!-- IN REVIEW -->
+      <div class="tab-content" id="tab-review">
+        <div class="quest-grid" id="quests-review"></div>
+      </div>
+
+      <!-- WAITING -->
+      <div class="tab-content" id="tab-waiting">
+        <div class="quest-grid" id="quests-waiting"></div>
+      </div>
+
+      <!-- IN PROGRESS -->
+      <div class="tab-content" id="tab-progress">
+        <div class="quest-grid" id="quests-progress"></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- QUEST MODAL -->
+<div class="modal-overlay" id="modal" onclick="closeModal(event)">
+  <div class="modal">
+    <span class="modal-close" onclick="document.getElementById('modal').classList.remove('open')">✕</span>
+    <div class="modal-title" id="modal-title">Quest Title</div>
+    <div class="modal-sub" id="modal-sub">Journal · Status</div>
+    <div id="modal-body"></div>
+  </div>
+</div>
+
+<script>
+// ─── DATA ──────────────────────────────────────────
+const TODAY = new Date('2026-04-25');
+
+const deadlines = [
+  { icon:'🎸', title:'RSEP Barcelona', sub:'Conference presentation', date:'2026-05-14', days:null },
+  { icon:'📝', title:'BCRP Abstract', sub:'Conference abstract deadline', date:'2026-05-25', days:null },
+  { icon:'📖', title:'IGI Chapter Upload', sub:'Step 3 upload deadline', date:'2026-05-29', days:null },
+  { icon:'🌾', title:'AgEc Special Issue', sub:'Agricultural Economics SI — 30 Nov 2026', date:'2026-11-30', days:null },
+  { icon:'🔬', title:'scite.ai Retraction Audit', sub:'Periodic retraction watch (6-monthly)', date:'2026-10-19', days:null },
+];
+
+const quests = {
+  ready: [
+    { title:'P3 Gold & Policy Uncertainty', journal:'Journal of Resources Policy (Q1 SSCI)', tags:['q1','solo'], method:'QQR', note:'Package 606KB verified. 5 highlights ≤85 ✅. No blockers.', checklist:[{t:'Highlights 3-5 items ≤85 chars',d:true},{t:'Cover letter written',d:true},{t:'6 figures attached',d:true},{t:'Competing interests declared',d:true},{t:'Submit editorialmanager.com/jresourpol',d:false}] },
+    { title:'SSA-ML Food Security', journal:'British Food Journal (Q2 Emerald)', tags:['q2'], method:'XGBoost / RF', note:'v06_BFJ structured abstract complete. No blockers.', checklist:[{t:'Structured abstract written',d:true},{t:'Highlights ready',d:true},{t:'Submit mc.manuscriptcentral.com/bfj',d:false}] },
+    { title:'Eurasian Energy XGBoost', journal:'International Affairs (Q1 SSCI)', tags:['q1'], method:'XGBoost + Hormuz §Discussion', note:'v08 audit ✅. Re-rendered 2026-04-25. No blockers.', checklist:[{t:'Hormuz discussion section updated',d:true},{t:'Audit complete',d:true},{t:'Submit editorialmanager.com/inta',d:false}] },
+    { title:'AI Strategy Carbon DiD', journal:'Energy Research & Social Science (Q1)', tags:['q1'], method:'DiD / ATT', note:'v11.pdf + Cover Letter ERSS ready. ATT corrected, Highlights+CompInt added.', checklist:[{t:'ATT corrected',d:true},{t:'Highlights added',d:true},{t:'Competing interests added',d:true},{t:'Submit editorialmanager.com/erss',d:false}] },
+    { title:'EKC-BRICST', journal:'Journal of Environmental Policy (Q1)', tags:['q1'], method:'CS-ARDL + Webb bootstrap', note:'v38 ✅. Title_Page Türkiye fixed. Need to upload updated title page on EM.', checklist:[{t:'Title_Page Türkiye fixed',d:true},{t:'Upload to "Sent Back to Author" queue',d:false}] },
+    { title:'WQR P1 — EPU→INR', journal:'IRFA (Q2 SSCI)', tags:['q2','solo'], method:'QQR (222/361 sig)', note:'Full results ready. QMD to write → IRFA.', checklist:[{t:'QMD manuscript written',d:false},{t:'Tables/figures generated',d:false},{t:'Submit IRFA',d:false}] },
+    { title:'Gold Forecasting (SOLO)', journal:'IRFA (Q2 SSCI)', tags:['q2','solo'], method:'ML forecasting', note:'v07 ✅ (37KB, 2026-04-09). SOLO MGO. IRFA-READY.', checklist:[{t:'v07 complete',d:true},{t:'Submit mc.manuscriptcentral.com/irfa',d:false}] },
+    { title:'Multipolar World & Basel (SOLO)', journal:'FIQ (Wsiz)', tags:['solo'], method:'Panel analysis', note:'v03 ✅ SOLO MGO. Submit journals.wsiz.edu.pl/fiq (manual).', checklist:[{t:'v03 complete',d:true},{t:'Submit FIQ (manual)',d:false}] },
+  ],
+  review: [
+    { title:'Scopus-MGK-MGO', journal:'Economic Education & Research (EER)', tags:['collab'], method:'Bibliometric', note:'EER peer review ID:14045615. Awaiting decision.', checklist:[] },
+    { title:'UY-MGO', journal:'MAKÜ SOBED (TRD)', tags:[],method:'Panel','note':'🔒 Locked. Under review.', checklist:[] },
+    { title:'Currency Wars P1', journal:'Finance Research Letters (Q1)', tags:['q1','collab'], method:'FRL format', note:'FRL Q1. Co-author review ongoing.', checklist:[] },
+  ],
+  waiting: [
+    { title:'Currency Misalignment IERFM', journal:'IERFM (Bilgin onayı)', tags:['collab'], method:'NARDL/Misalignment', note:'v11.pdf ✅. Email to Bilgin sent 2026-04-25. Deadline: 1 May upload.', checklist:[{t:'Email sent to Bilgin ✅',d:true},{t:'Bilgin approval',d:false},{t:'Upload by 1 May',d:false}] },
+    { title:'P6 Digital Assets', journal:'JIMF (Q1 SSCI) — $250 fee', tags:['q1','collab'], method:'NARDL crypto', note:'v18. Bilgin approval pending.', checklist:[{t:'Bilgin approval',d:false},{t:'Pay $250 submission fee (MGO approval)',d:false}] },
+    { title:'Currency Misalignment EconMod', journal:'Economic Modelling (Q1) — $125 fee', tags:['q1','collab'], method:'EconMod format', note:'v02. Bilgin approval pending.', checklist:[{t:'Bilgin approval',d:false},{t:'Biography + photo each author',d:false}] },
+    { title:'P2 Regime Volatility Gold', journal:'Finance Research Letters (Q1)', tags:['q1','collab'], method:'MS-GARCH', note:'Co-author approval pending.', checklist:[] },
+    { title:'Green Innovation Structural', journal:'Journal of Cleaner Production (Q1)', tags:['q1','collab'], method:'CS-ARDL + MMQR + NK2024', note:'v05_JCP ✅. NK2024 pair 7 (ln_ci↔ln_gdp) pending Yusuf.', checklist:[{t:'NK2024 pair 7 confirm',d:false},{t:'Submit jclepro',d:false}] },
+    { title:'Gold Crypto Safe Haven', journal:'Finance Research Letters (Q1)', tags:['q1','collab'], method:'NARDL + stablecoin β=0.000402**', note:'Co-author review ongoing.', checklist:[{t:'Co-author review',d:false},{t:'Submit FRL',d:false}] },
+    { title:'UY Sustainability Nexus', journal:'EMFT (SSCI Q2)', tags:['q2','collab'], method:'CS-ARDL + Webb p_Webb=0.040', note:'v4 ✅ EN+DOCX 21KB. webb2023 DOI unconfirmed. Uğur review pending.', checklist:[{t:'Uğur review',d:false},{t:'Verify webb2023 DOI',d:false},{t:'Submit EMFT',d:false}] },
+  ],
+  progress: [
+    { title:'Climate-Agri-Turkey ARDL', journal:'Journal of Environmental Modelling (Q1)', tags:['q1'], method:'ARDL F=8.706***', note:'Co-author sign-off needed → JEM.', checklist:[] },
+    { title:'PSE-AgTFP OECD', journal:'Food Policy (Q1)', tags:['q1','collab'], method:'DML + PS Clubs', note:'v06 ✅ 39KB. Appendix B done. Scripts 08+09 → HBI approval → Food Policy.', checklist:[{t:'Run script 08',d:false},{t:'Run script 09',d:false},{t:'HBI approval',d:false}] },
+    { title:'Food Regime Decoupling', journal:'JCP / Global Food Security', tags:['q1'], method:'PPML 138 countries', note:'138 ülke v02. EcolEcon DOLU → JCP/Global Food Security.', checklist:[] },
+    { title:'Gravity Food Security', journal:'Food Policy (Q1)', tags:['q1','collab'], method:'PPML FTA×perishability', note:'§1-§6 complete. BACI 1995-2024.', checklist:[] },
+    { title:'MGO-SO-UY (Uğur)', journal:'EMFT (SSCI Q2)', tags:['q2','collab'], method:'Multiple', note:'v18 ✅ 2026-04-25. Sparring done P1-P8. Journal decision + sparring pending.', checklist:[] },
+    { title:'CE Cognitive Econometrics', journal:'TBD (EU-27)', tags:[], method:'Webb CMG + ATT', note:'v03 ✅ 2026-04-25. ATE=−0.099 CF confirmed. M3/M4 tables placeholder. GESIS awaiting.', checklist:[{t:'M3/M4 tables complete',d:false},{t:'Esra & Suat role matrix',d:false}] },
+    { title:'Stagflation ML', journal:'International Journal of Forecasting (Q1)', tags:['q1'], method:'RF+SHAP R²=0.60', note:'IJF Q1 target.', checklist:[] },
+    { title:'Dincer Migration Carbon', journal:'TBD', tags:['collab'], method:'AMG lnMIG=−0.368**', note:'ORCID+robustness+§6 pending.', checklist:[{t:'ORCID added',d:false},{t:'Robustness checks',d:false},{t:'§6 written',d:false}] },
+    { title:'Dedolarizasyon EPFAD', journal:'EPFAD (ESCI+TRD)', tags:[], method:'GPR×COFER', note:'v03 written after hallucination audit. Ghost citation fix complete.', checklist:[] },
+    { title:'IL-AZ Gravity', journal:'TBD', tags:['collab'], method:'PPML gravity', note:'BACI 1995-2024. Journal selection pending.', checklist:[] },
+    { title:'Automation & Labor Share — Eurasian', journal:'Economic Modelling (Q1) — $125 fee', tags:['q1','solo'], method:'CCEMG β=+0.121* | CIPS I(0)✓', note:'QMD✓. ECI manual data needed.', checklist:[{t:'ECI data manual',d:false},{t:'Submit EconMod (after Bilgin queue clears)',d:false}] },
+    { title:'GPR & Export Diversification', journal:"International Economics", tags:['solo'], method:'NARDL — NULL RESULT ✅', note:'L⁺=0.006 L⁻=−0.010 NS; KAZ D-H p=0.015*. QMD✓ DOCX 25KB.', checklist:[{t:'QMD complete ✅',d:true},{t:'Submit Int\'l Economics',d:false}] },
+    { title:'MonPol Asymmetry Turkey', journal:'EMFT', tags:['solo'], method:'LP asymmetry: tight β=+0.381*', note:'QMD✓. REER data needed.', checklist:[{t:'REER data',d:false},{t:'Submit EMFT',d:false}] },
+    { title:'FinStress NARDL Turkey', journal:'Economic Modelling (Q1) — $125 fee', tags:['solo'], method:'NARDL ρ=−0.343✓', note:'BLOCKED — BIST/CDS/EMBI/BDDK real FSI data.', checklist:[{t:'FSI real data (BIST/CDS/EMBI/BDDK)',d:false}] },
+    { title:'YK Büyüme & Finansal Kalkınma', journal:'TBD (G7)', tags:['collab'], method:'NK2024 PANICCA Pm=5.954***', note:'QMD✓ Gamma✓. Veri dönemi + lnfd tanımı eksik (Yusuf).', checklist:[{t:'Yusuf: data period & lnfd definition',d:false}] },
+    { title:'Seda Welfare Panel', journal:'TBD', tags:['collab'], method:'PMG 4 regimes', note:'Muhafazakâr T=13 ⚠️. Deadline ~2026-08.', checklist:[] },
+    { title:'Hexahelix Women Food Future', journal:'Food Policy (Q1)', tags:['collab'], method:'PLS-SEM', note:'Sundari+MGO. Early stage.', checklist:[] },
+    { title:'Populism Book Chapter', journal:'Merve Özcan ed. © 2027', tags:['collab'], method:'Eurasian energy + geoecon', note:'Full text planned. Long-term.', checklist:[] },
+    { title:'WQR P2 — EKC NP Causality', journal:'TBD', tags:['solo'], method:'NP Causality PoC ✅', note:'PoC done. G7 wavelet-qr data needed.', checklist:[{t:'G7 wavelet-qr data',d:false},{t:'QMD write',d:false}] },
+    { title:'AGEC Umalele Special Issue', journal:'Agricultural Economics (SSCI Q1) — deadline 30 Nov 2026', tags:['q1'], method:'TBD', note:'⭐⭐⭐ Special issue. Deadline 2026-11-30.', checklist:[] },
+    { title:'Hormuz Chokepoints IL-AZ Trilogy', journal:'TBD', tags:['collab'], method:'BTC β=+1.12** ↔ GPR β=+1.158***', note:'Recep Yücel role TBD.', checklist:[{t:'Recep Yücel role clarified',d:false}] },
+  ]
+};
+
+// ─── RENDER DEADLINES ──────────────────────────────
+function renderDeadlines() {
+  const el = document.getElementById('deadline-list');
+  deadlines.forEach(d => {
+    const date = new Date(d.date);
+    const diff = Math.ceil((date - TODAY) / (1000*60*60*24));
+    let cls = 'days-far', urgency = '';
+    if (diff <= 7) { cls = 'days-critical'; urgency = '🔥'; }
+    else if (diff <= 21) { cls = 'days-warning'; urgency = '⚠️'; }
+    else if (diff <= 60) { cls = 'days-ok'; }
+    el.innerHTML += `
+      <div class="deadline-item">
+        <div class="deadline-icon">${d.icon}</div>
+        <div class="deadline-info">
+          <div class="deadline-title">${urgency} ${d.title}</div>
+          <div class="deadline-sub">${d.sub}</div>
+        </div>
+        <div>
+          <div class="deadline-days ${cls}">${diff}</div>
+          <div class="deadline-label">days left</div>
+        </div>
+      </div>`;
+  });
+}
+
+// ─── RENDER QUESTS ─────────────────────────────────
+const statusMap = {
+  ready:   { icon:'⚔️', badge:'badge-ready',   cls:'quest-ready',    label:'SUBMIT READY' },
+  review:  { icon:'🛡️', badge:'badge-review',  cls:'quest-review',   label:'IN REVIEW' },
+  waiting: { icon:'⏳', badge:'badge-waiting', cls:'quest-waiting',  label:'CO-AUTHOR Q' },
+  progress:{ icon:'🔨', badge:'badge-progress',cls:'quest-progress', label:'CRAFTING' },
+};
+
+function renderQuests() {
+  Object.entries(quests).forEach(([status, list]) => {
+    const el = document.getElementById('quests-' + status);
+    const sm = statusMap[status];
+    list.forEach((q, i) => {
+      const tagHtml = (q.tags||[]).map(t => `<span class="tag tag-${t}">${t.toUpperCase()}</span>`).join('');
+      el.innerHTML += `
+        <div class="quest-card ${sm.cls}" onclick="openQuest('${status}',${i})">
+          <div class="quest-header">
+            <div class="quest-status-icon">${sm.icon}</div>
+            <div style="flex:1">
+              <div class="quest-title">${q.title}</div>
+              <div class="quest-journal">${q.journal}</div>
+            </div>
+            <span class="quest-status-badge ${sm.badge}">${sm.label}</span>
+          </div>
+          <div style="font-size:10px;color:var(--muted);margin-bottom:6px">
+            📐 <em>${q.method}</em>
+          </div>
+          <div class="quest-tags">${tagHtml}</div>
+        </div>`;
+    });
+  });
+}
+
+// ─── MODAL ─────────────────────────────────────────
+function openQuest(status, index) {
+  const q = quests[status][index];
+  document.getElementById('modal-title').textContent = q.title;
+  document.getElementById('modal-sub').textContent = q.journal;
+  const cl = (q.checklist||[]).map(item =>
+    `<li class="${item.d?'done':''}">${item.t}</li>`
+  ).join('');
+  document.getElementById('modal-body').innerHTML = `
+    <div class="modal-row"><span class="label">Method:</span> ${q.method}</div>
+    <div class="modal-row"><span class="label">Note:</span> ${q.note}</div>
+    ${cl ? `<div style="margin-top:12px;font-size:10px;color:var(--muted);font-weight:700;letter-spacing:1px;text-transform:uppercase;margin-bottom:6px">Checklist</div><ul class="checklist">${cl}</ul>` : ''}
+  `;
+  document.getElementById('modal').classList.add('open');
+}
+function closeModal(e) {
+  if (e.target.id === 'modal') document.getElementById('modal').classList.remove('open');
+}
+
+// ─── TABS ──────────────────────────────────────────
+function switchTab(el, name) {
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('tab-' + name).classList.add('active');
+}
+
+// ─── CHARACTER XP + ÜAK BREAKPOINTS ────────────────
+const UAK_BREAKPOINTS = [
+  { at: 30,  icon: '🥉', label: 'Tier 1 — Research Active',    color: '#cd7f32' },
+  { at: 60,  icon: '🥈', label: 'Tier 2 — Senior Researcher',  color: '#a8b8c8' },
+  { at: 90,  icon: '🥇', label: 'Tier 3 — Doçent Candidate',   color: '#f5c842' },
+  { at: 120, icon: '👑', label: 'Tier 4 — DOÇENT UNLOCKED',    color: '#b04aff' },
+];
+
+function initCharacter() {
+  const xp = 25; // confirmed published ÜAK pts (ISR ~10pt + Akd.Birikim ~10pt + MAKÜ ~5pt)
+  const target = 120;
+  const pct = Math.min((xp / target) * 100, 100);
+  const level = Math.floor(xp / 10) + 1;
+  const ranks = ['Novice Scholar','Junior Researcher','Researcher','Senior Researcher','Associate Expert','Principal Investigator','Doçent Candidate','Doçent','Associate Professor','Full Professor'];
+  const rank = ranks[Math.min(level-1, ranks.length-1)];
+
+  document.getElementById('char-level').textContent = level;
+  document.getElementById('char-rank').textContent = rank;
+  document.getElementById('xp-text').textContent = `${xp} / ${target} pts`;
+  setTimeout(() => { document.getElementById('xp-fill').style.width = pct + '%'; }, 300);
+
+  // ÜAK Breakpoint markers on the XP bar
+  const barEl = document.getElementById('xp-bar');
+  UAK_BREAKPOINTS.forEach(bp => {
+    const markerPct = (bp.at / target) * 100;
+    const reached = xp >= bp.at;
+    const marker = document.createElement('div');
+    marker.title = bp.label + ' (' + bp.at + ' pts)';
+    marker.style.cssText = `position:absolute;left:${markerPct}%;top:0;bottom:0;width:2px;
+      background:${reached ? bp.color : 'rgba(255,255,255,0.15)'};z-index:2;cursor:help`;
+    barEl.appendChild(marker);
+    const labelEl = document.createElement('div');
+    labelEl.style.cssText = `position:absolute;left:${markerPct}%;top:-16px;
+      font-size:9px;transform:translateX(-50%);
+      color:${reached ? bp.color : 'var(--muted)'};white-space:nowrap`;
+    labelEl.textContent = bp.icon;
+    barEl.parentElement.style.position = 'relative';
+    barEl.parentElement.insertBefore(labelEl, barEl);
+  });
+
+  // Next breakpoint hint
+  const next = UAK_BREAKPOINTS.find(bp => xp < bp.at);
+  if (next) {
+    const gap = next.at - xp;
+    document.getElementById('xp-next-hint').textContent =
+      `${next.icon} ${gap} pts to ${next.label}`;
+  }
+}
+
+// ─── MULTI-GOAL ACHIEVEMENTS ────────────────────────
+const MULTI_GOALS = [
+  {
+    id: 'q1_trio',
+    icon: '⭐', name: 'Q1 Trio', tier: '🥇',
+    desc: 'Publish 3 Q1 SSCI papers',
+    levels: [
+      { label: 'Bronze — 1 Q1',  target: 1,  current: 0 },
+      { label: 'Silver — 2 Q1',  target: 2,  current: 0 },
+      { label: 'Gold — 3 Q1',    target: 3,  current: 0 },
+    ],
+    note: 'Current: 0 Q1 published (targeting Energy Policy, EKC_BRICST, P3)'
+  },
+  {
+    id: 'submit_streak',
+    icon: '🚀', name: 'Submit Streak', tier: '🥈',
+    desc: '5 consecutive no-blocker submissions',
+    levels: [
+      { label: 'Bronze — 2 in row', target: 2, current: 2 },
+      { label: 'Silver — 3 in row', target: 3, current: 2 },
+      { label: 'Gold — 5 in row',   target: 5, current: 2 },
+    ],
+    note: 'Last 2: ERSS (v11✅) + JCE (v03✅) — 3rd: SSA/BFJ pending'
+  },
+  {
+    id: 'solo_empire',
+    icon: '🗡️', name: 'Solo Empire', tier: '🥇',
+    desc: 'Solo-author Q1/Q2 pipeline',
+    levels: [
+      { label: 'Bronze — 3 solo',  target: 3, current: 4 },
+      { label: 'Silver — 5 solo',  target: 5, current: 4 },
+      { label: 'Gold — 8 solo',    target: 8, current: 4 },
+    ],
+    note: 'Current solo: P3, Multipolar Basel, ZRY-SO-UY, MonPol Asymmetry'
+  },
+  {
+    id: 'conference_circuit',
+    icon: '✈️', name: 'Conference Circuit', tier: '🥈',
+    desc: 'Present at 3 international conferences',
+    levels: [
+      { label: 'Bronze — 1 conf',  target: 1, current: 1 },
+      { label: 'Silver — 2 conf',  target: 2, current: 1 },
+      { label: 'Gold — 3 conf',    target: 3, current: 1 },
+    ],
+    note: 'RSEP Barcelona (May 2026) = 2nd if accepted'
+  },
+];
+
+function renderMultiGoals() {
+  let html = '';
+  MULTI_GOALS.forEach(g => {
+    const levelHtml = g.levels.map(lv => {
+      const pct = Math.min((lv.current / lv.target) * 100, 100);
+      const done = lv.current >= lv.target;
+      return `
+        <div style="margin-bottom:6px">
+          <div style="display:flex;justify-content:space-between;font-size:9px;margin-bottom:2px">
+            <span style="color:${done ? 'var(--gold)' : 'var(--muted)'}">${done ? '✅ ' : ''}${lv.label}</span>
+            <span style="color:${done ? 'var(--green)' : 'var(--muted)'}">${Math.min(lv.current,lv.target)}/${lv.target}</span>
+          </div>
+          <div style="height:4px;background:rgba(255,255,255,0.06);border-radius:2px;overflow:hidden">
+            <div style="width:${pct}%;height:100%;background:${done ? 'var(--gold)' : 'var(--blue)'};border-radius:2px;transition:width 0.5s"></div>
+          </div>
+        </div>`;
+    }).join('');
+    html += `
+      <div style="background:rgba(255,255,255,0.02);border:1px solid var(--border);border-radius:10px;padding:12px;margin-bottom:10px">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+          <span style="font-size:20px">${g.icon}</span>
+          <div>
+            <div style="font-size:11px;font-weight:700;color:var(--gold)">${g.name} ${g.tier}</div>
+            <div style="font-size:9px;color:var(--muted)">${g.desc}</div>
+          </div>
+        </div>
+        ${levelHtml}
+        <div style="font-size:9px;color:var(--muted);margin-top:4px;font-style:italic">${g.note}</div>
+      </div>`;
+  });
+  document.getElementById('multi-goals-container').innerHTML = html;
+}
+
+// ─── DATE ──────────────────────────────────────────
+function initDate() {
+  document.getElementById('live-date').textContent = TODAY.toLocaleDateString('en-GB', {day:'numeric',month:'short',year:'numeric'});
+}
+
+// ─── INIT ──────────────────────────────────────────
+renderDeadlines();
+renderQuests();
+initCharacter();
+initDate();
+renderMultiGoals();
+</script>
+</body>
+</html>

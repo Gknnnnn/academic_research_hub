@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Skill Tree — Doçentlik Roadmap</title>
+<style>
+  :root {
+    --bg: #07071a;
+    --panel: #0f0f28;
+    --border: #202048;
+    --gold: #f0c030;
+    --green: #30d070;
+    --blue: #3880f0;
+    --purple: #9830e8;
+    --red: #e03060;
+    --orange: #e08030;
+    --text: #d8d8f0;
+    --muted: #484878;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh; display: flex; flex-direction: column;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(to right, #050510, #0f0f28);
+    border-bottom: 2px solid var(--gold);
+    padding: 12px 24px;
+    display: flex; align-items: center; gap: 12px; flex-shrink: 0;
+  }
+  .header h1 { font-size: 15px; color: var(--gold); letter-spacing: 1px; }
+  .header p { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .header-right { margin-left: auto; text-align: right; font-size: 10px; color: var(--muted); }
+
+  /* LAYOUT */
+  .layout { display: grid; grid-template-columns: 240px 1fr 240px; flex: 1; gap: 0; }
+
+  /* SIDEBAR */
+  .sidebar {
+    border-right: 1px solid var(--border);
+    padding: 16px; background: rgba(15,15,40,0.5);
+    overflow-y: auto;
+  }
+  .sidebar-right { border-left: 1px solid var(--border); border-right: none; }
+  .section { margin-bottom: 20px; }
+  .section-title {
+    font-size: 9px; font-weight: 700; color: var(--muted);
+    text-transform: uppercase; letter-spacing: 1.5px;
+    margin-bottom: 10px; padding-bottom: 6px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  /* TREE CANVAS AREA */
+  .tree-area { overflow: auto; padding: 30px; position: relative; }
+  .tree-svg { width: 100%; min-height: 700px; }
+
+  /* SKILL NODES */
+  .skill-node { cursor: pointer; }
+  .skill-node:hover { filter: brightness(1.3); }
+
+  /* MILESTONE CARDS */
+  .milestone {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px;
+    margin-bottom: 8px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .milestone:hover { border-color: rgba(255,255,255,0.2); }
+  .milestone-title { font-size: 11px; font-weight: 700; margin-bottom: 4px; }
+  .milestone-sub { font-size: 9px; color: var(--muted); }
+  .milestone-xp { font-size: 10px; color: var(--gold); font-weight: 700; margin-top: 4px; }
+  .milestone.done { border-color: var(--green); background: rgba(48,208,112,0.06); }
+  .milestone.active { border-color: var(--gold); background: rgba(240,192,48,0.06); }
+  .milestone.locked { opacity: 0.5; cursor: default; }
+  .milestone.done .milestone-title::before { content: '✅ '; }
+  .milestone.active .milestone-title::before { content: '⚡ '; }
+  .milestone.locked .milestone-title::before { content: '🔒 '; }
+
+  /* SKILL BARS */
+  .skill-item { margin-bottom: 10px; }
+  .skill-header { display: flex; justify-content: space-between; font-size: 10px; margin-bottom: 4px; }
+  .skill-header .name { color: var(--text); }
+  .skill-header .lvl { color: var(--muted); }
+  .skill-bar { height: 5px; background: rgba(255,255,255,0.07); border-radius: 3px; overflow: hidden; }
+  .skill-fill { height: 100%; border-radius: 3px; }
+
+  /* XP TRACKER */
+  .xp-tracker { background: rgba(240,192,48,0.08); border: 1px solid rgba(240,192,48,0.2); border-radius: 10px; padding: 12px; margin-bottom: 16px; }
+  .xp-title { font-size: 10px; color: var(--gold); font-weight: 700; margin-bottom: 8px; }
+  .xp-row { display: flex; justify-content: space-between; font-size: 11px; margin-bottom: 4px; }
+  .xp-row .val { font-weight: 700; }
+  .xp-bar { height: 8px; background: rgba(255,255,255,0.07); border-radius: 4px; overflow: hidden; margin-top: 6px; }
+  .xp-fill-main { height: 100%; background: linear-gradient(90deg, var(--gold), #ffe060); border-radius: 4px; transition: width 1s ease; }
+
+  /* ALP INDICATOR (TeachDeepRL-inspired) */
+  .alp-box { background: rgba(152,48,232,0.08); border: 1px solid rgba(152,48,232,0.2); border-radius: 10px; padding: 12px; margin-bottom: 16px; }
+  .alp-title { font-size: 10px; color: var(--purple); font-weight: 700; margin-bottom: 6px; }
+  .alp-item { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; font-size: 10px; }
+  .alp-dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; }
+  .alp-label { flex: 1; }
+  .alp-score { font-weight: 700; color: var(--purple); }
+
+  /* ZPD indicator */
+  .zpd-badge {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 9px; font-weight: 700;
+    background: rgba(240,192,48,0.15); color: var(--gold);
+    border: 1px solid rgba(240,192,48,0.3);
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div style="font-size:22px">🌳</div>
+  <div>
+    <h1>RESEARCH SKILL TREE — Doçentlik Roadmap</h1>
+    <p>Adaptive curriculum inspired by TeachDeepRL (ALP-GMM) · Zone of Proximal Development tracking · OSSU-style structured path</p>
+  </div>
+  <div class="header-right">
+    <div>Model: <span style="color:var(--purple)">Adaptive Learning Progress</span></div>
+    <div style="margin-top:2px">Target: <span style="color:var(--gold)">Doçentlik (120 ÜAK pts)</span></div>
+  </div>
+</div>
+
+<div class="layout">
+
+  <!-- LEFT SIDEBAR: Skills & ALP -->
+  <div class="sidebar">
+
+    <div class="section">
+      <div class="section-title">🧠 Skill Levels</div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Panel Econometrics</span><span class="lvl">Lv.9/10</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:90%;background:linear-gradient(90deg,#f0c030,#ffe060)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Energy & Climate Econ</span><span class="lvl">Lv.8/10</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:80%;background:linear-gradient(90deg,#30d070,#88ffcc)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Financial Econometrics</span><span class="lvl">Lv.7/10</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:70%;background:linear-gradient(90deg,#3880f0,#88bbff)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Machine Learning</span><span class="lvl">Lv.6/10</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:60%;background:linear-gradient(90deg,#e03060,#ff8888)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Food & Agricultural Econ</span><span class="lvl">Lv.6/10</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:60%;background:linear-gradient(90deg,#3880f0,#88bbff)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Causal Inference (DiD)</span><span class="lvl">Lv.5/10</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:50%;background:linear-gradient(90deg,#9830e8,#cc88ff)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Academic Writing (EN)</span><span class="lvl">Lv.8/10</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:82%;background:linear-gradient(90deg,#f0c030,#ffe060)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Local Projections (LP/IRF)</span><span class="lvl">Lv.5/10 🆕</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:50%;background:linear-gradient(90deg,#e08030,#ffcc88)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">NK2024 PANICCA Panel</span><span class="lvl">Lv.4/10 🆕</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:40%;background:linear-gradient(90deg,#9830e8,#cc88ff)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">EK2011 Panel Granger (R✓)</span><span class="lvl">Lv.5/10 🆕</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:50%;background:linear-gradient(90deg,#30a830,#88ffcc)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">JKS2021 xtgrangert</span><span class="lvl">Lv.3/10 🆕</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:30%;background:linear-gradient(90deg,#30a830,#88ffcc)"></div></div>
+      </div>
+      <div class="skill-item">
+        <div class="skill-header"><span class="name">Static Hetero Panel (EYS25)</span><span class="lvl">Lv.6/10 🆕</span></div>
+        <div class="skill-bar"><div class="skill-fill" style="width:60%;background:linear-gradient(90deg,#e08030,#ffcc88)"></div></div>
+      </div>
+    </div>
+
+    <!-- ALP-GMM Zone of Proximal Development -->
+    <div class="section">
+      <div class="section-title">🎯 ALP-GMM: Zone of Proximal Development</div>
+      <div class="alp-box">
+        <div class="alp-title">🔬 TeachDeepRL Adaptive Priority</div>
+        <div style="font-size:9px;color:var(--muted);margin-bottom:8px">High ALP = high learning progress potential</div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#f0c030"></div>
+          <div class="alp-label">P3 Gold (QQR)</div>
+          <div class="alp-score">ALP: 0.92 ⚡</div>
+        </div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#30d070"></div>
+          <div class="alp-label">AI-Carbon DiD</div>
+          <div class="alp-score">ALP: 0.88 ⚡</div>
+        </div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#30d070"></div>
+          <div class="alp-label">EKC-BRICST</div>
+          <div class="alp-score">ALP: 0.85 ⚡</div>
+        </div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#9830e8"></div>
+          <div class="alp-label">Stagflation ML</div>
+          <div class="alp-score">ALP: 0.74</div>
+        </div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#e08030"></div>
+          <div class="alp-label">HonestDiD Extension</div>
+          <div class="alp-score">ALP: 0.68</div>
+        </div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#e08030"></div>
+          <div class="alp-label">GPR Export Divers. (NULL ✅)</div>
+          <div class="alp-score">ALP: 0.65</div>
+        </div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#505080"></div>
+          <div class="alp-label">MonPol Asymmetry LP</div>
+          <div class="alp-score">ALP: 0.62</div>
+        </div>
+        <div class="alp-item">
+          <div class="alp-dot" style="background:#505080"></div>
+          <div class="alp-label">Automation CCEMG β=+0.121*</div>
+          <div class="alp-score">ALP: 0.60</div>
+        </div>
+        <div style="margin-top:8px;font-size:9px;color:var(--muted)">
+          ALP = post-submission publication probability × ÜAK yield × readiness
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">📅 Immediate Deadlines</div>
+      <div class="milestone active">
+        <div class="milestone-title">RSEP Barcelona</div>
+        <div class="milestone-sub">14-16 May 2026 · Conference presentation</div>
+        <div class="milestone-xp">+5 XP · 19 days</div>
+      </div>
+      <div class="milestone active">
+        <div class="milestone-title">BCRP Abstract Deadline</div>
+        <div class="milestone-sub">25 May 2026 · Bilgin onay gerekli</div>
+        <div class="milestone-xp">+5 XP · 30 days</div>
+      </div>
+      <div class="milestone active">
+        <div class="milestone-title">IGI Chapter Upload</div>
+        <div class="milestone-sub">29 May 2026 · Step 3 upload</div>
+        <div class="milestone-xp">+10 XP · 34 days</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTER: SKILL TREE SVG -->
+  <div class="tree-area">
+    <svg class="tree-svg" viewBox="0 0 900 800" xmlns="http://www.w3.org/2000/svg" id="skill-svg">
+
+      <!-- BACKGROUND LAYERS -->
+      <defs>
+        <radialGradient id="nodeGold" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#f0c030" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#c09020" stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="nodeGreen" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#30d070" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#20a050" stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="nodeBlue" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#3880f0" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#2060c0" stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="nodePurple" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#9830e8" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#6820b0" stop-opacity="1"/>
+        </radialGradient>
+        <radialGradient id="nodeGray" cx="40%" cy="40%" r="60%">
+          <stop offset="0%" stop-color="#404070" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#202040" stop-opacity="1"/>
+        </radialGradient>
+        <filter id="glow">
+          <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+        <filter id="glow-soft">
+          <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+          <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+
+      <!-- LEVEL ZONES -->
+      <rect x="0" y="0" width="900" height="130" fill="rgba(240,192,48,0.03)" rx="0"/>
+      <text x="20" y="20" fill="rgba(240,192,48,0.4)" font-size="10" font-family="'Segoe UI', sans-serif" font-weight="700" letter-spacing="2">TIER 1 — FOUNDATIONS (PUBLISHED / SUBMITTED)</text>
+
+      <rect x="0" y="135" width="900" height="180" fill="rgba(48,208,112,0.02)" rx="0"/>
+      <text x="20" y="155" fill="rgba(48,208,112,0.4)" font-size="10" font-family="'Segoe UI', sans-serif" font-weight="700" letter-spacing="2">TIER 2 — ACTIVE PIPELINE (SUBMIT READY)</text>
+
+      <rect x="0" y="320" width="900" height="200" fill="rgba(56,128,240,0.02)" rx="0"/>
+      <text x="20" y="340" fill="rgba(56,128,240,0.4)" font-size="10" font-family="'Segoe UI', sans-serif" font-weight="700" letter-spacing="2">TIER 3 — IN DEVELOPMENT (Q1 TARGETS)</text>
+
+      <rect x="0" y="525" width="900" height="160" fill="rgba(152,48,232,0.02)" rx="0"/>
+      <text x="20" y="545" fill="rgba(152,48,232,0.4)" font-size="10" font-family="'Segoe UI', sans-serif" font-weight="700" letter-spacing="2">TIER 4 — ADVANCED METHODS (LONG-TERM)</text>
+
+      <rect x="0" y="690" width="900" height="110" fill="rgba(240,192,48,0.05)" rx="0"/>
+      <text x="20" y="710" fill="rgba(240,192,48,0.6)" font-size="10" font-family="'Segoe UI', sans-serif" font-weight="700" letter-spacing="2">🏆 DOÇENT UNLOCK</text>
+
+      <!-- ══ CONNECTIONS (branches) ══ -->
+      <!-- Tier 1 → Tier 2 -->
+      <g stroke="rgba(240,192,48,0.2)" stroke-width="1.5" fill="none" stroke-dasharray="4,3">
+        <line x1="150" y1="100" x2="150" y2="170"/>
+        <line x1="350" y1="100" x2="220" y2="170"/>
+        <line x1="350" y1="100" x2="420" y2="170"/>
+        <line x1="550" y1="100" x2="550" y2="170"/>
+        <line x1="750" y1="100" x2="680" y2="170"/>
+        <line x1="750" y1="100" x2="750" y2="170"/>
+      </g>
+      <!-- Tier 2 → Tier 3 -->
+      <g stroke="rgba(48,208,112,0.2)" stroke-width="1.5" fill="none" stroke-dasharray="4,3">
+        <line x1="150" y1="235" x2="120" y2="360"/>
+        <line x1="150" y1="235" x2="280" y2="360"/>
+        <line x1="420" y1="235" x2="420" y2="360"/>
+        <line x1="550" y1="235" x2="550" y2="360"/>
+        <line x1="680" y1="235" x2="680" y2="360"/>
+        <line x1="750" y1="235" x2="820" y2="360"/>
+      </g>
+      <!-- Tier 3 → Tier 4 -->
+      <g stroke="rgba(56,128,240,0.2)" stroke-width="1.5" fill="none" stroke-dasharray="4,3">
+        <line x1="280" y1="430" x2="200" y2="570"/>
+        <line x1="420" y1="430" x2="420" y2="570"/>
+        <line x1="550" y1="430" x2="550" y2="570"/>
+        <line x1="680" y1="430" x2="750" y2="570"/>
+      </g>
+      <!-- Tier 4 → Doçent -->
+      <g stroke="rgba(240,192,48,0.4)" stroke-width="2" fill="none">
+        <line x1="200" y1="625" x2="450" y2="740"/>
+        <line x1="420" y1="625" x2="450" y2="740"/>
+        <line x1="550" y1="625" x2="450" y2="740"/>
+        <line x1="750" y1="625" x2="450" y2="740"/>
+      </g>
+
+      <!-- ══ TIER 1: FOUNDATIONS ══ -->
+      <!-- Turkey CBI (published) -->
+      <g class="skill-node" filter="url(#glow-soft)" onclick="showNodeInfo('Turkey CBI (ISR)', 'Published ✅', 'NARDL', 'ISR DergiPark', '~10 ÜAK pts')">
+        <circle cx="150" cy="80" r="30" fill="url(#nodeGold)"/>
+        <circle cx="150" cy="80" r="32" fill="none" stroke="#f0c030" stroke-width="2"/>
+        <text x="150" y="76" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">Turkey</text>
+        <text x="150" y="88" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">CBI ✅</text>
+      </g>
+
+      <!-- GovSize EKC (published) -->
+      <g class="skill-node" filter="url(#glow-soft)" onclick="showNodeInfo('GovSize EKC', 'Published ✅', 'BARS N=71', 'Akd. Birikim', '~10 ÜAK pts')">
+        <circle cx="350" cy="80" r="30" fill="url(#nodeGold)"/>
+        <circle cx="350" cy="80" r="32" fill="none" stroke="#f0c030" stroke-width="2"/>
+        <text x="350" y="76" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">GovSize</text>
+        <text x="350" y="88" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">EKC ✅</text>
+      </g>
+
+      <!-- DATAMACLEA (accepted) -->
+      <g class="skill-node" filter="url(#glow-soft)" onclick="showNodeInfo('DATAMACLEA Jevons AI', 'Accepted ✅', 'AI+Jevons', 'DATAMACLEA\'26', 'Conference')">
+        <circle cx="550" cy="80" r="28" fill="url(#nodeGold)"/>
+        <circle cx="550" cy="80" r="30" fill="none" stroke="#f0c030" stroke-width="1.5"/>
+        <text x="550" y="76" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">Jevons</text>
+        <text x="550" y="88" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">AI ✅</text>
+      </g>
+
+      <!-- Scopus MGK (in review) -->
+      <g class="skill-node" filter="url(#glow-soft)" onclick="showNodeInfo('Scopus-MGK-MGO', 'In Review 🛡️', 'Bibliometric', 'EER (Scopus)', '~10 pts')">
+        <circle cx="750" cy="80" r="28" fill="url(#nodeGreen)"/>
+        <circle cx="750" cy="80" r="30" fill="none" stroke="#30d070" stroke-width="2"/>
+        <text x="750" y="76" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">Scopus</text>
+        <text x="750" y="88" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">MGK 🛡️</text>
+      </g>
+
+      <!-- ══ TIER 2: SUBMIT READY ══ -->
+      <!-- P3 Gold (ready) -->
+      <g class="skill-node" filter="url(#glow)" onclick="showNodeInfo('P3 Gold & Policy Unc.', 'SUBMIT READY ⚔️', 'QQR Solo', 'J. Resources Policy Q1', '30 ÜAK pts')">
+        <circle cx="150" cy="200" r="32" fill="url(#nodeGreen)"/>
+        <circle cx="150" cy="200" r="34" fill="none" stroke="#30d070" stroke-width="2.5"/>
+        <circle cx="150" cy="200" r="38" fill="none" stroke="rgba(48,208,112,0.3)" stroke-width="1"/>
+        <text x="150" y="196" text-anchor="middle" fill="#000" font-size="9" font-weight="800" font-family="'Segoe UI',sans-serif">P3 Gold</text>
+        <text x="150" y="208" text-anchor="middle" fill="#000" font-size="9" font-weight="800" font-family="'Segoe UI',sans-serif">Q1 ⚔️</text>
+      </g>
+
+      <!-- EKC-BRICST (ready) -->
+      <g class="skill-node" filter="url(#glow)" onclick="showNodeInfo('EKC-BRICST', 'SUBMIT READY ⚔️', 'CS-ARDL+Webb', 'JEPO Q1', '30 ÜAK pts')">
+        <circle cx="420" cy="200" r="32" fill="url(#nodeGreen)"/>
+        <circle cx="420" cy="200" r="34" fill="none" stroke="#30d070" stroke-width="2.5"/>
+        <circle cx="420" cy="200" r="38" fill="none" stroke="rgba(48,208,112,0.3)" stroke-width="1"/>
+        <text x="420" y="196" text-anchor="middle" fill="#000" font-size="9" font-weight="800" font-family="'Segoe UI',sans-serif">EKC</text>
+        <text x="420" y="208" text-anchor="middle" fill="#000" font-size="9" font-weight="800" font-family="'Segoe UI',sans-serif">BRICST ⚔️</text>
+      </g>
+
+      <!-- AI Carbon DiD (ready) -->
+      <g class="skill-node" filter="url(#glow)" onclick="showNodeInfo('AI-Carbon DiD', 'SUBMIT READY ⚔️', 'DiD / ATT', 'ERSS Q1', '30 ÜAK pts')">
+        <circle cx="550" cy="200" r="32" fill="url(#nodeGreen)"/>
+        <circle cx="550" cy="200" r="34" fill="none" stroke="#30d070" stroke-width="2.5"/>
+        <text x="550" y="196" text-anchor="middle" fill="#000" font-size="9" font-weight="800" font-family="'Segoe UI',sans-serif">AI Carbon</text>
+        <text x="550" y="208" text-anchor="middle" fill="#000" font-size="9" font-weight="800" font-family="'Segoe UI',sans-serif">DiD ⚔️</text>
+      </g>
+
+      <!-- XGBoost Eurasian (ready) -->
+      <g class="skill-node" filter="url(#glow)" onclick="showNodeInfo('Eurasian Energy XGBoost', 'SUBMIT READY ⚔️', 'XGBoost+SHAP', 'Int\'l Affairs Q1', '30 ÜAK pts')">
+        <circle cx="680" cy="200" r="30" fill="url(#nodeGreen)"/>
+        <circle cx="680" cy="200" r="32" fill="none" stroke="#30d070" stroke-width="2"/>
+        <text x="680" y="196" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">XGBoost</text>
+        <text x="680" y="208" text-anchor="middle" fill="#000" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">Energy ⚔️</text>
+      </g>
+
+      <!-- SSA-ML (ready) -->
+      <g class="skill-node" filter="url(#glow-soft)" onclick="showNodeInfo('SSA-ML Food Security', 'SUBMIT READY ⚔️', 'RF+XGBoost', 'BFJ Q2', '20 ÜAK pts')">
+        <circle cx="750" cy="200" r="26" fill="url(#nodeBlue)"/>
+        <circle cx="750" cy="200" r="28" fill="none" stroke="#3880f0" stroke-width="2"/>
+        <text x="750" y="196" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">SSA</text>
+        <text x="750" y="208" text-anchor="middle" fill="#fff" font-size="9" font-weight="700" font-family="'Segoe UI',sans-serif">ML ⚔️</text>
+      </g>
+
+      <!-- ══ TIER 3: DEVELOPMENT ══ -->
+      <!-- Currency Wars -->
+      <g class="skill-node" onclick="showNodeInfo('Currency Wars Portfolio', 'In Progress 🔨', 'QQR/NARDL', 'FRL Q1 + EconMod', '30+20 ÜAK pts')">
+        <circle cx="120" cy="395" r="26" fill="url(#nodeBlue)"/>
+        <circle cx="120" cy="395" r="28" fill="none" stroke="#3880f0" stroke-width="1.5"/>
+        <text x="120" y="391" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Currency</text>
+        <text x="120" y="402" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Wars 🔨</text>
+      </g>
+
+      <!-- Food Regime -->
+      <g class="skill-node" onclick="showNodeInfo('Food Regime Decoupling', 'In Progress 🔨', 'PPML 138 ctry', 'JCP Q1', '30 ÜAK pts')">
+        <circle cx="280" cy="395" r="26" fill="url(#nodeBlue)"/>
+        <circle cx="280" cy="395" r="28" fill="none" stroke="#3880f0" stroke-width="1.5"/>
+        <text x="280" y="391" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Food</text>
+        <text x="280" y="402" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Regime 🔨</text>
+      </g>
+
+      <!-- Stagflation ML -->
+      <g class="skill-node" onclick="showNodeInfo('Stagflation ML', 'In Progress 🔨', 'RF+SHAP R²=0.60', 'IJF Q1', '30 ÜAK pts')">
+        <circle cx="420" cy="395" r="26" fill="url(#nodeBlue)"/>
+        <circle cx="420" cy="395" r="28" fill="none" stroke="#3880f0" stroke-width="1.5"/>
+        <text x="420" y="391" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Stagflation</text>
+        <text x="420" y="402" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">ML 🔨</text>
+      </g>
+
+      <!-- PSE AgTFP -->
+      <g class="skill-node" onclick="showNodeInfo('PSE-AgTFP OECD', 'Active 🔨', 'DML + PS Clubs', 'Food Policy Q1', '30 ÜAK pts')">
+        <circle cx="550" cy="395" r="26" fill="url(#nodeBlue)"/>
+        <circle cx="550" cy="395" r="28" fill="none" stroke="#3880f0" stroke-width="1.5"/>
+        <text x="550" y="391" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">PSE</text>
+        <text x="550" y="402" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">AgTFP 🔨</text>
+      </g>
+
+      <!-- CE Cognitive Econ -->
+      <g class="skill-node" onclick="showNodeInfo('CE Cognitive Econometrics', 'Active 🔨', 'Webb CMG EU-27', 'TBD Q1', '30 ÜAK pts')">
+        <circle cx="680" cy="395" r="26" fill="url(#nodeBlue)"/>
+        <circle cx="680" cy="395" r="28" fill="none" stroke="#3880f0" stroke-width="1.5"/>
+        <text x="680" y="391" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Cognitive</text>
+        <text x="680" y="402" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Econ 🔨</text>
+      </g>
+
+      <!-- Gravity Food -->
+      <g class="skill-node" onclick="showNodeInfo('Gravity Food Security', 'Active 🔨', 'PPML FTA×perishability', 'Food Policy Q1', '30 ÜAK pts')">
+        <circle cx="820" cy="395" r="26" fill="url(#nodeBlue)"/>
+        <circle cx="820" cy="395" r="28" fill="none" stroke="#3880f0" stroke-width="1.5"/>
+        <text x="820" y="391" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Gravity</text>
+        <text x="820" y="402" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Food 🔨</text>
+      </g>
+
+      <!-- ══ TIER 4: ADVANCED ══ -->
+      <!-- HonestDiD -->
+      <g class="skill-node" onclick="showNodeInfo('HonestDiD Extension', 'Planned 🔒', 'Callaway-Sant\'Anna + HonestDiD', 'Energy Policy Q1', '30 ÜAK pts · Unlock: AI-Carbon accepted')">
+        <circle cx="200" cy="590" r="24" fill="url(#nodePurple)"/>
+        <circle cx="200" cy="590" r="26" fill="none" stroke="#9830e8" stroke-width="1.5"/>
+        <text x="200" y="586" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Honest</text>
+        <text x="200" y="597" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">DiD 🔒</text>
+      </g>
+
+      <!-- Karul Collaboration -->
+      <g class="skill-node" onclick="showNodeInfo('Karul-MGO Collaboration', 'Planned 🔒', 'Fourier-LM GAUSS', 'Q1 Panel Methods', '30 ÜAK pts · License needed')">
+        <circle cx="420" cy="590" r="24" fill="url(#nodePurple)"/>
+        <circle cx="420" cy="590" r="26" fill="none" stroke="#9830e8" stroke-width="1.5"/>
+        <text x="420" y="586" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Karul</text>
+        <text x="420" y="597" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">GAUSS 🔒</text>
+      </g>
+
+      <!-- TÜBİTAK 1001 -->
+      <g class="skill-node" onclick="showNodeInfo('TÜBİTAK 1001 Grant', 'Planned 🔒', 'Panel EKC + ML', 'TÜBİTAK', 'Funding unlock · Doçent prerequisite')">
+        <circle cx="550" cy="590" r="24" fill="url(#nodePurple)"/>
+        <circle cx="550" cy="590" r="26" fill="none" stroke="#9830e8" stroke-width="1.5"/>
+        <text x="550" y="586" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">TÜBİTAK</text>
+        <text x="550" y="597" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">1001 🔒</text>
+      </g>
+
+      <!-- Backman Collaboration -->
+      <g class="skill-node" onclick="showNodeInfo('Bäckman Collaboration', 'Long-term 🔒', 'Housing/Mortgage Panel', 'RFS/JUE Q1', '30 ÜAK pts · Leibniz SAFE')">
+        <circle cx="750" cy="590" r="24" fill="url(#nodePurple)"/>
+        <circle cx="750" cy="590" r="26" fill="none" stroke="#9830e8" stroke-width="1.5"/>
+        <text x="750" y="586" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">Bäckman</text>
+        <text x="750" y="597" text-anchor="middle" fill="#fff" font-size="8.5" font-weight="700" font-family="'Segoe UI',sans-serif">RFS/JUE 🔒</text>
+      </g>
+
+      <!-- ══ BOSS NODE: DOÇENT ══ -->
+      <g class="skill-node" filter="url(#glow)" onclick="showNodeInfo('DOÇENT UNLOCK 🏆', '120 ÜAK pts required', '3× Q1 SSCI + Portfolio', 'ÜAK / YÖK', 'Final Boss — Career Milestone')">
+        <circle cx="450" cy="755" r="42" fill="rgba(240,192,48,0.15)"/>
+        <circle cx="450" cy="755" r="40" fill="url(#nodeGold)"/>
+        <circle cx="450" cy="755" r="43" fill="none" stroke="#f0c030" stroke-width="3"/>
+        <circle cx="450" cy="755" r="50" fill="none" stroke="rgba(240,192,48,0.3)" stroke-width="1.5"/>
+        <circle cx="450" cy="755" r="58" fill="none" stroke="rgba(240,192,48,0.15)" stroke-width="1"/>
+        <text x="450" y="749" text-anchor="middle" fill="#000" font-size="12" font-weight="900" font-family="'Segoe UI',sans-serif">DOÇENT</text>
+        <text x="450" y="763" text-anchor="middle" fill="#000" font-size="10" font-weight="900" font-family="'Segoe UI',sans-serif">120 pts 🏆</text>
+      </g>
+
+      <!-- ÜAK pts labels on ready nodes -->
+      <g font-size="8" font-family="'Segoe UI',sans-serif" text-anchor="middle" fill="rgba(240,192,48,0.8)">
+        <text x="150" y="240">+30 pts</text>
+        <text x="420" y="240">+30 pts</text>
+        <text x="550" y="240">+30 pts</text>
+        <text x="680" y="240">+30 pts</text>
+        <text x="750" y="234">+20 pts</text>
+      </g>
+
+    </svg>
+  </div>
+
+  <!-- RIGHT SIDEBAR: Milestones & XP -->
+  <div class="sidebar sidebar-right">
+
+    <!-- ÜAK XP Tracker -->
+    <div class="section">
+      <div class="section-title">📊 ÜAK Progress Tracker</div>
+      <div class="xp-tracker">
+        <div class="xp-title">🎓 Doçentlik XP</div>
+        <div class="xp-row">
+          <span>Confirmed Published</span>
+          <span class="val" style="color:var(--gold)">~20 pts</span>
+        </div>
+        <div class="xp-row">
+          <span>In Review / Accepted</span>
+          <span class="val" style="color:var(--blue)">~10 pts</span>
+        </div>
+        <div class="xp-row">
+          <span>Pipeline (if accepted)</span>
+          <span class="val" style="color:var(--muted)">+240 pts</span>
+        </div>
+        <div class="xp-bar">
+          <div class="xp-fill-main" id="uak-bar" style="width:25%"></div>
+        </div>
+        <div style="font-size:9px;color:var(--muted);margin-top:6px;text-align:center">
+          ~30 / 120 pts confirmed · Target: 3 × Q1 minimum
+        </div>
+      </div>
+    </div>
+
+    <!-- OSSU-style curriculum -->
+    <div class="section">
+      <div class="section-title">📚 OSSU-Style Roadmap</div>
+      <div class="milestone done">
+        <div class="milestone-title">Foundations Complete</div>
+        <div class="milestone-sub">NARDL, ARDL, panel FE/RE mastered</div>
+        <div class="milestone-xp">20 ÜAK pts earned</div>
+      </div>
+      <div class="milestone active">
+        <div class="milestone-title">Submit 3 Q1 Papers</div>
+        <div class="milestone-sub">P3 Gold + AI-Carbon + EKC-BRICST ready</div>
+        <div class="milestone-xp">+90 pts if accepted <span class="zpd-badge">ZPD ✓</span></div>
+      </div>
+      <div class="milestone active">
+        <div class="milestone-title">Master CS-ARDL + Webb</div>
+        <div class="milestone-sub">Already applied in EKC-BRICST</div>
+        <div class="milestone-xp">Unlocks AMG / CCEMG track</div>
+      </div>
+      <div class="milestone locked">
+        <div class="milestone-title">GAUSS License (Karul)</div>
+        <div class="milestone-sub">Unlock Fourier-LM panel unit root track</div>
+        <div class="milestone-xp">+30 pts per Karul paper</div>
+      </div>
+      <div class="milestone locked">
+        <div class="milestone-title">Causal Inference Advanced</div>
+        <div class="milestone-sub">HonestDiD + Synthetic Control</div>
+        <div class="milestone-xp">Unlocks RFS/JUE track</div>
+      </div>
+      <div class="milestone locked">
+        <div class="milestone-title">TÜBİTAK 1001 Submission</div>
+        <div class="milestone-sub">Requires 3 Q1 publications first</div>
+        <div class="milestone-xp">Funding + prestige unlock</div>
+      </div>
+      <div class="milestone locked">
+        <div class="milestone-title">🏆 DOÇENT APPLICATION</div>
+        <div class="milestone-sub">120+ ÜAK pts · 3× Q1 SSCI</div>
+        <div class="milestone-xp">Final Boss</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- NODE INFO PANEL -->
+<div id="node-info" style="display:none;position:fixed;bottom:20px;right:260px;background:rgba(15,15,40,0.97);border:1px solid rgba(240,192,48,0.4);border-radius:10px;padding:14px;min-width:240px;max-width:280px;z-index:20">
+  <div style="display:flex;justify-content:space-between;margin-bottom:8px">
+    <span id="ni-title" style="font-size:13px;font-weight:700;color:#f0c030"></span>
+    <span onclick="document.getElementById('node-info').style.display='none'" style="cursor:pointer;color:#484878">✕</span>
+  </div>
+  <div style="font-size:10px;color:#484878;margin-bottom:4px">Status: <span id="ni-status" style="color:#d8d8f0"></span></div>
+  <div style="font-size:10px;color:#484878;margin-bottom:4px">Method: <span id="ni-method" style="color:#d8d8f0"></span></div>
+  <div style="font-size:10px;color:#484878;margin-bottom:4px">Journal: <span id="ni-journal" style="color:#d8d8f0"></span></div>
+  <div style="font-size:10px;color:#484878">XP: <span id="ni-xp" style="color:#f0c030;font-weight:700"></span></div>
+</div>
+
+<script>
+function showNodeInfo(title, status, method, journal, xp) {
+  document.getElementById('ni-title').textContent = title;
+  document.getElementById('ni-status').textContent = status;
+  document.getElementById('ni-method').textContent = method;
+  document.getElementById('ni-journal').textContent = journal;
+  document.getElementById('ni-xp').textContent = xp;
+  document.getElementById('node-info').style.display = 'block';
+}
+
+// Animate XP bar
+setTimeout(() => {
+  document.getElementById('uak-bar').style.width = '25%';
+}, 500);
+</script>
+</body>
+</html>

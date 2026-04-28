@@ -1,0 +1,317 @@
+{
+  "title": "Innovation Quiz",
+  "questions": [
+    {
+      "question": "Which specific group of emerging markets is the focus of Bayar's (2022) study regarding the relationship between economic complexity and growth?",
+      "answerOptions": [
+        {
+          "text": "BRICS",
+          "isCorrect": false,
+          "rationale": "While BRICS includes some similar countries like South Africa, it does not include the specific combination of Colombia, Vietnam, and Egypt used in this study."
+        },
+        {
+          "text": "MINT",
+          "isCorrect": false,
+          "rationale": "MINT shares Mexico, Indonesia, Nigeria, and Turkey, but it lacks the South American and Southeast Asian components highlighted in the CIVETS group."
+        },
+        {
+          "text": "CIVETS",
+          "isCorrect": true,
+          "rationale": "The study specifically investigates Colombia, Indonesia, Vietnam, Egypt, Turkey, and South Africa, which comprise the CIVETS acronym."
+        },
+        {
+          "text": "E-7",
+          "isCorrect": false,
+          "rationale": "E-7 refers to a different set of emerging economies, such as China and India, which were not the primary focus of the panel data analysis in this specific paper."
+        }
+      ],
+      "hint": "The name is an acronym for Colombia, Indonesia, Vietnam, Egypt, Turkey, and South Africa."
+    },
+    {
+      "question": "In the empirical model $InGDP_{it} = \\alpha_{it} + \\beta_{1i}ECI_{it} + \\epsilon_{it}$, what does the independent variable $ECI$ represent?",
+      "answerOptions": [
+        {
+          "text": "Energy Consumption Index",
+          "isCorrect": false,
+          "rationale": "While energy consumption is mentioned in related literature, the core focus of the Bayar (2022) study is on productive knowledge and diversity."
+        },
+        {
+          "text": "Economic Complexity Index",
+          "isCorrect": true,
+          "rationale": "The model uses the Economic Complexity Index to assess the capacity and productive knowledge of a country's economy."
+        },
+        {
+          "text": "Environmental Carbon Impact",
+          "isCorrect": false,
+          "rationale": "Although environmental sustainability is discussed in the literature review, the specific variable $ECI$ in the growth model refers to economic structure."
+        },
+        {
+          "text": "Export Capability Indicator",
+          "isCorrect": false,
+          "rationale": "This is a plausible distractor because complexity is calculated via exports, but the formal term used by Hidalgo and Hausmann is Economic Complexity Index."
+        }
+      ],
+      "hint": "This index measures the 'productive knowledge' a society can mobilize to create complex goods."
+    },
+    {
+      "question": "According to Bayar (2022), why were 'second-generation' unit root tests utilized in the panel data analysis?",
+      "answerOptions": [
+        {
+          "text": "To account for cross-sectional dependence among countries",
+          "isCorrect": true,
+          "rationale": "Second-generation tests are specifically designed to be robust when shocks in one country affect other units in the panel."
+        },
+        {
+          "text": "To handle short time-series dimensions ($T < N$)",
+          "isCorrect": false,
+          "rationale": "The study utilized a period from 1995 to 2019, where $T$ is larger than the number of countries, making small-sample bias less of a primary driver for test generation choice."
+        },
+        {
+          "text": "Because they are the only tests that support the AMG estimator",
+          "isCorrect": false,
+          "rationale": "While the AMG estimator handles heterogeneity, it is not the reason why unit root tests must be of a specific generation; rather, dependence is the driver."
+        },
+        {
+          "text": "To ensure the variables are integrated of order $I(2)$",
+          "isCorrect": false,
+          "rationale": "Econometric models typically aim for $I(0)$ or $I(1)$ to avoid explosive series or non-standard distributions; $I(2)$ is rarely a target."
+        }
+      ],
+      "hint": "This choice is necessary when a shock to one economy, such as a global crisis, impacts all others in the group."
+    },
+    {
+      "question": "Based on the Emirmahmutoğlu and Köse (2011) causality test, which country demonstrated a bidirectional relationship between economic complexity and economic growth?",
+      "answerOptions": [
+        {
+          "text": "Turkey",
+          "isCorrect": false,
+          "rationale": "For Turkey, the study found a one-way causality relationship specifically moving from economic growth to the complexity index."
+        },
+        {
+          "text": "Egypt",
+          "isCorrect": true,
+          "rationale": "The causality analysis revealed that for Egypt, growth drives complexity and complexity concurrently drives growth."
+        },
+        {
+          "text": "South Africa",
+          "isCorrect": false,
+          "rationale": "The causality test results for South Africa indicated no significant causal relationship between the two variables during the study period."
+        },
+        {
+          "text": "Indonesia",
+          "isCorrect": false,
+          "rationale": "Indonesia showed a one-way causality, but it moved from the complexity index to economic growth, rather than being mutual."
+        }
+      ],
+      "hint": "This country was the only individual unit in the CIVETS group to show a two-way causal link, matching the result for the entire panel."
+    },
+    {
+      "question": "According to the RECICLOS case study, what is the 'stagnation chasm' in the context of social innovation?",
+      "answerOptions": [
+        {
+          "text": "The point between pilot/prototype stages and broad scaling/diffusion",
+          "isCorrect": true,
+          "rationale": "Social innovations often fail here due to a lack of resources, specialized skills, or ecosystem support required to move beyond a local pilot."
+        },
+        {
+          "text": "The period where citizens lose interest in recycling rewards",
+          "isCorrect": false,
+          "rationale": "While user engagement can fluctuate, the chasm specifically refers to the structural and strategic difficulty of expanding the project's impact."
+        },
+        {
+          "text": "The time delay between recycling a product and receiving a digital token",
+          "isCorrect": false,
+          "rationale": "This is a technical latency issue rather than a strategic 'chasm' that threatens the long-term scalability of the innovation."
+        },
+        {
+          "text": "A failure in the blockchain ledger to record transactions",
+          "isCorrect": false,
+          "rationale": "Blockchain integrity is a technical requirement, but the stagnation chasm focuses on the broader organizational and social ability to scale."
+        }
+      ],
+      "hint": "It represents a critical transition point where a project must move from initial testing to widespread adoption."
+    },
+    {
+      "question": "Within the Technology Acceptance Model (TAM), what are the two primary factors that shape a user's attitude toward adopting a technology like RECICLOS?",
+      "answerOptions": [
+        {
+          "text": "Social proof and Peer influence",
+          "isCorrect": false,
+          "rationale": "These factors are part of social psychology and Diffusion of Innovation Theory, but they are not the two core pillars of the original TAM."
+        },
+        {
+          "text": "Perceived usefulness and Perceived ease of use",
+          "isCorrect": true,
+          "rationale": "TAM posits that users adopt technology based on the belief that it improves performance and can be used with minimal effort."
+        },
+        {
+          "text": "Technical transparency and Blockchain security",
+          "isCorrect": false,
+          "rationale": "While these enhance trust in the RECICLOS project, the TAM framework focuses on the individual's subjective perception of utility and effort."
+        },
+        {
+          "text": "Economic gain and Environmental awareness",
+          "isCorrect": false,
+          "rationale": "These are motivators for recycling, but the model used to study technology adoption specifically categorizes beliefs into usefulness and ease."
+        }
+      ],
+      "hint": "One factor relates to the belief that the system helps achieve a goal, while the other relates to the effort required to use it."
+    },
+    {
+      "question": "Which characteristic of the Diffusion of Innovation Theory (DIT) refers to the degree to which an innovation is perceived as being consistent with existing values and needs?",
+      "answerOptions": [
+        {
+          "text": "Complexity",
+          "isCorrect": false,
+          "rationale": "Complexity refers to how difficult an innovation is to understand or use, not its alignment with cultural or personal values."
+        },
+        {
+          "text": "Trialability",
+          "isCorrect": false,
+          "rationale": "Trialability is the degree to which an innovation can be experimented with on a limited basis before full adoption."
+        },
+        {
+          "text": "Compatibility",
+          "isCorrect": true,
+          "rationale": "Compatibility measures how well the new solution fits with the potential adopter's current lifestyle, beliefs, and past experiences."
+        },
+        {
+          "text": "Relative Advantage",
+          "isCorrect": false,
+          "rationale": "Relative advantage is the perception that the new innovation is better than the idea or tool it supersedes."
+        }
+      ],
+      "hint": "This term describes the 'fit' between the new technology and the user's current sociocultural context."
+    },
+    {
+      "question": "What is the primary function of blockchain technology in the RECICLOS social innovation project?",
+      "answerOptions": [
+        {
+          "text": "To increase the speed of the mobile application's interface",
+          "isCorrect": false,
+          "rationale": "Blockchain is generally slower than centralized databases for UI operations; its benefit lies in data integrity rather than interface speed."
+        },
+        {
+          "text": "To create a transparent, tamper-proof record of rewards and transactions",
+          "isCorrect": true,
+          "rationale": "Blockchain ensures the integrity and traceability of the smart contracts that manage token storage and price assignation."
+        },
+        {
+          "text": "To replace the need for physical recycling bins",
+          "isCorrect": false,
+          "rationale": "The project digitizes the reward system but maintains the physical recycling infrastructure like yellow bins and kiosks."
+        },
+        {
+          "text": "To provide high-interest financial returns for users",
+          "isCorrect": false,
+          "rationale": "The 'reciclos' earned are tokens for sustainable incentives rather than high-yield speculative financial investments."
+        }
+      ],
+      "hint": "Focus on the need for 'traceability' and 'trust' among the multiple stakeholders in the recycling ecosystem."
+    },
+    {
+      "question": "How does the RECICLOS initiative utilize 'behavioral nudges' to influence citizen habits?",
+      "answerOptions": [
+        {
+          "text": "By imposing heavy fines for failing to recycle plastic",
+          "isCorrect": false,
+          "rationale": "Nudges are subtle and non-coercive; penalties are a direct regulatory measure rather than a behavioral nudge."
+        },
+        {
+          "text": "By using gamification and rewards to guide users toward sustainable actions",
+          "isCorrect": true,
+          "rationale": "Nudging involves applying principles from behavioral psychology to gently encourage better choices without forbidding alternatives."
+        },
+        {
+          "text": "By making plastic usage illegal in urban centers",
+          "isCorrect": false,
+          "rationale": "Prohibition is a mandate, whereas a nudge preserves freedom of choice while subtly steering the user's preference."
+        },
+        {
+          "text": "By manually sorting every waste bag at a centralized facility",
+          "isCorrect": false,
+          "rationale": "The initiative relies on citizens to perform the sorting, guided by the app's rewards and educational interface."
+        }
+      ],
+      "hint": "This involves a 'choice architecture' that makes the desired action more appealing or interactive."
+    },
+    {
+      "question": "As described in the lit4 data, what does the Complexity Outlook Index (COI) measure that distinguishes it from the basic Economic Complexity Index (ECI)?",
+      "answerOptions": [
+        {
+          "text": "The total volume of high-tech exports in the current year",
+          "isCorrect": false,
+          "rationale": "This is a measure of current performance, whereas the 'outlook' focuses on future potential and connectivity to other sectors."
+        },
+        {
+          "text": "The distance to new products and the potential to diversify further",
+          "isCorrect": true,
+          "rationale": "The COI captures how 'connected' a country is to more complex products it does not currently produce, indicating diversification ease."
+        },
+        {
+          "text": "The rate of inflation caused by complex industrial production",
+          "isCorrect": false,
+          "rationale": "Complexity research focuses on structural transformation and knowledge, not directly on macroeconomic indicators like consumer price indices."
+        },
+        {
+          "text": "The number of patents a country holds in green energy sectors",
+          "isCorrect": false,
+          "rationale": "While related, COI specifically calculates the 'product space' distance rather than simply counting raw patent data."
+        }
+      ],
+      "hint": "It looks at the 'proximity' of existing production to potential new, highly sophisticated industries."
+    },
+    {
+      "question": "In the context of scaling social innovation, what is 'Scaling Out'?",
+      "answerOptions": [
+        {
+          "text": "Changing laws and policies to support the innovation",
+          "isCorrect": false,
+          "rationale": "Changing policies is usually referred to as 'Scaling Up,' whereas replication is horizontal."
+        },
+        {
+          "text": "Replicating a model in different geographical areas to increase impact",
+          "isCorrect": true,
+          "rationale": "Scaling out involves disseminating principles and adapting the innovation to new environments and populations."
+        },
+        {
+          "text": "Ending a project once it achieves its initial pilot goals",
+          "isCorrect": false,
+          "rationale": "This describes project closure rather than the expansion of impact meant by scaling terms."
+        },
+        {
+          "text": "Focusing solely on technological upgrades rather than social change",
+          "isCorrect": false,
+          "rationale": "Scaling social innovation must maintain a balance between technical efficiency and social transformation."
+        }
+      ],
+      "hint": "This model focuses on expanding 'geographically' to reach a wider audience."
+    },
+    {
+      "question": "Which organization acted as the 'linchpin' in the RECICLOS project by orchestrating cooperative efforts between towns and tech developers?",
+      "answerOptions": [
+        {
+          "text": "The United Nations",
+          "isCorrect": false,
+          "rationale": "While the project aligns with UN goals, the case study names a specific Spanish private-sector entity as the lead organization."
+        },
+        {
+          "text": "Alastria",
+          "isCorrect": false,
+          "rationale": "Alastria is the blockchain infrastructure provider, but it did not orchestrate the entire social and municipal ecosystem of the project."
+        },
+        {
+          "text": "Ecoembes",
+          "isCorrect": true,
+          "rationale": "Ecoembes assumed the centralized role of positioning the collaborative model and managing stakeholders to ensure collective success."
+        },
+        {
+          "text": "Amazon AWS",
+          "isCorrect": false,
+          "rationale": "Amazon AWS provided the cloud storage services, which is a technical support role rather than a strategic leadership role."
+        }
+      ],
+      "hint": "This entity has been a trailblazer in private-sector environmental stewardship initiatives since 1997."
+    }
+  ]
+}

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research Concept Map — MGO Portfolio</title>
+<style>
+  :root {
+    --bg: #060612;
+    --panel: #0e0e24;
+    --border: #1e1e44;
+    --gold: #f0c030;
+    --text: #d8d8f0;
+    --muted: #505080;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: 'Segoe UI', system-ui, sans-serif; overflow: hidden; }
+
+  canvas { display: block; }
+
+  .header {
+    position: fixed; top: 0; left: 0; right: 0;
+    background: linear-gradient(to right, rgba(6,6,18,0.95), rgba(14,14,36,0.95));
+    border-bottom: 1px solid var(--border);
+    padding: 10px 20px;
+    display: flex; align-items: center; gap: 12px;
+    z-index: 10;
+  }
+  .header h1 { font-size: 14px; color: var(--gold); letter-spacing: 1px; }
+  .header p { font-size: 10px; color: var(--muted); }
+
+  .legend {
+    position: fixed; bottom: 20px; left: 20px;
+    background: rgba(14,14,36,0.9);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 12px;
+    z-index: 10; min-width: 180px;
+  }
+  .legend-title { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .legend-item { display: flex; align-items: center; gap: 8px; margin-bottom: 6px; font-size: 11px; }
+  .legend-dot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+
+  .tooltip {
+    position: fixed;
+    background: rgba(14,14,36,0.95);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 14px;
+    font-size: 11px; pointer-events: none;
+    z-index: 20; max-width: 240px;
+    display: none;
+  }
+  .tooltip-title { font-size: 13px; font-weight: 700; margin-bottom: 4px; }
+  .tooltip-sub { color: var(--muted); font-size: 10px; margin-bottom: 4px; }
+
+  .controls {
+    position: fixed; top: 60px; right: 20px;
+    display: flex; flex-direction: column; gap: 6px;
+    z-index: 10;
+  }
+  .ctrl-btn {
+    background: rgba(14,14,36,0.9);
+    border: 1px solid var(--border);
+    color: var(--text); border-radius: 6px;
+    padding: 6px 12px; font-size: 11px; cursor: pointer;
+    transition: all 0.2s;
+  }
+  .ctrl-btn:hover { border-color: var(--gold); color: var(--gold); }
+
+  .info-panel {
+    position: fixed; top: 60px; left: 20px;
+    background: rgba(14,14,36,0.9);
+    border: 1px solid var(--border);
+    border-radius: 10px; padding: 14px;
+    z-index: 10; width: 220px; display: none;
+  }
+  .info-panel.visible { display: block; }
+  .info-close { float: right; cursor: pointer; color: var(--muted); font-size: 14px; }
+  .info-title { font-size: 13px; font-weight: 700; margin-bottom: 6px; }
+  .info-row { font-size: 10px; color: var(--muted); margin-bottom: 4px; }
+  .info-row span { color: var(--text); }
+  .info-status {
+    display: inline-block; padding: 2px 8px; border-radius: 10px;
+    font-size: 9px; font-weight: 700; margin-top: 6px;
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div style="font-size:20px">🕸️</div>
+  <div>
+    <h1>RESEARCH CONCEPT MAP — Portfolio Topology</h1>
+    <p>DeepTutor concept graph pattern · Click nodes to explore · Drag to pan · Scroll to zoom</p>
+  </div>
+  <div style="margin-left:auto;font-size:10px;color:var(--muted)">
+    <span style="color:var(--gold)">24</span> papers · <span style="color:#30d060">6</span> clusters · <span style="color:#9030e0">8</span> methods
+  </div>
+</div>
+
+<canvas id="canvas"></canvas>
+
+<div class="controls">
+  <button class="ctrl-btn" onclick="resetView()">🔄 Reset</button>
+  <button class="ctrl-btn" onclick="toggleLabels()">🏷️ Labels</button>
+  <button class="ctrl-btn" onclick="filterReady()">⚔️ Ready Only</button>
+  <button class="ctrl-btn" onclick="showAll()">📋 Show All</button>
+</div>
+
+<div class="legend">
+  <div class="legend-title">Clusters</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#f0c030"></div> Financial / Currency</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#30d060"></div> Energy / Climate</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#3080f0"></div> Food / Agriculture</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e03050"></div> Methods / ML</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#9030e0"></div> Growth / Macro</div>
+  <div class="legend-item"><div class="legend-dot" style="background:#e08030"></div> Geopolitics / Trade</div>
+  <div class="legend-title" style="margin-top:10px">Status</div>
+  <div class="legend-item"><div style="width:12px;height:12px;border:2px solid #30d060;border-radius:50%;flex-shrink:0"></div> Submit Ready</div>
+  <div class="legend-item"><div style="width:12px;height:12px;border:2px solid #3080f0;border-radius:50%;flex-shrink:0"></div> In Review</div>
+  <div class="legend-item"><div style="width:12px;height:12px;border:2px solid #e08030;border-radius:50%;flex-shrink:0"></div> Awaiting</div>
+  <div class="legend-item"><div style="width:12px;height:12px;border:2px solid #505080;border-radius:50%;flex-shrink:0"></div> In Progress</div>
+</div>
+
+<div class="tooltip" id="tooltip">
+  <div class="tooltip-title" id="tt-title"></div>
+  <div class="tooltip-sub" id="tt-sub"></div>
+  <div id="tt-method" style="font-size:10px;color:#9030e0"></div>
+</div>
+
+<div class="info-panel" id="info-panel">
+  <span class="info-close" onclick="document.getElementById('info-panel').classList.remove('visible')">✕</span>
+  <div class="info-title" id="info-title"></div>
+  <div class="info-row">Journal: <span id="info-journal"></span></div>
+  <div class="info-row">Method: <span id="info-method"></span></div>
+  <div class="info-row">Target: <span id="info-target"></span></div>
+  <div><span class="info-status" id="info-status"></span></div>
+</div>
+
+<script>
+const canvas = document.getElementById('canvas');
+const ctx = canvas.getContext('2d');
+
+// Viewport state
+let vp = { x: 0, y: 0, scale: 1, dragging: false, lastX: 0, lastY: 0 };
+let showLabels = true;
+let filterActive = false;
+
+// NODES
+const CLUSTERS = {
+  financial: { color: '#f0c030', label: 'Financial/Currency' },
+  energy:    { color: '#30d060', label: 'Energy/Climate' },
+  food:      { color: '#3080f0', label: 'Food/Agriculture' },
+  methods:   { color: '#e03050', label: 'Methods/ML' },
+  growth:    { color: '#9030e0', label: 'Growth/Macro' },
+  geo:       { color: '#e08030', label: 'Geopolitics/Trade' },
+};
+
+const STATUS_BORDER = {
+  ready:    '#30d060',
+  review:   '#3080f0',
+  waiting:  '#e08030',
+  progress: '#505080',
+};
+
+const nodes = [
+  // FINANCIAL cluster (center-right)
+  { id:'p3_gold',      label:'P3 Gold & Policy Unc.',    x:700, y:200, r:16, cluster:'financial', status:'ready',    journal:'J.Resources Policy Q1', method:'QQR', target:'SSCI Q1' },
+  { id:'p2_gold_vol',  label:'P2 Regime Volatility Gold', x:800, y:280, r:13, cluster:'financial', status:'waiting',  journal:'FRL Q1', method:'MS-GARCH', target:'SSCI Q1' },
+  { id:'p6_crypto',    label:'P6 Digital Assets',         x:760, y:360, r:14, cluster:'financial', status:'waiting',  journal:'JIMF Q1', method:'NARDL', target:'SSCI Q1' },
+  { id:'cur_mis',      label:'Currency Misalignment CA',   x:640, y:310, r:15, cluster:'financial', status:'waiting',  journal:'IERFM/EconMod', method:'NARDL/OCA', target:'Q1+Q2' },
+  { id:'cur_wars',     label:'Currency Wars P1',           x:680, y:400, r:13, cluster:'financial', status:'review',   journal:'FRL Q1', method:'QQR', target:'SSCI Q1' },
+  { id:'dedolar',      label:'Dedolarizasyon EPFAD',       x:580, y:380, r:11, cluster:'financial', status:'progress', journal:'EPFAD ESCI', method:'GPR×COFER', target:'ESCI' },
+  { id:'gold_crypto',  label:'Gold & Crypto Safe Haven',   x:820, y:160, r:12, cluster:'financial', status:'waiting',  journal:'FRL Q1', method:'DCC-GARCH', target:'SSCI Q1' },
+  { id:'oksuzkaya',    label:'Gold Forecasting (SOLO)',    x:700, y:120, r:11, cluster:'financial', status:'ready',    journal:'IRFA Q2', method:'LSTM+Hybrid', target:'SSCI Q2' },
+
+  // ENERGY cluster (top-left)
+  { id:'ekc_bricst',   label:'EKC-BRICST',                x:200, y:180, r:16, cluster:'energy', status:'ready',    journal:'JEPO Q1', method:'CS-ARDL+Webb', target:'SSCI Q1' },
+  { id:'ai_carbon',    label:'AI Strategy Carbon DiD',     x:120, y:280, r:15, cluster:'energy', status:'ready',    journal:'ERSS Q1', method:'DiD/ATT', target:'SSCI Q1' },
+  { id:'xgboost',      label:'Eurasian Energy XGBoost',    x:260, y:300, r:14, cluster:'energy', status:'ready',    journal:'Int\'l Affairs Q1', method:'XGBoost+SHAP', target:'SSCI Q1' },
+  { id:'clim_agri',    label:'Climate-Agri-Turkey ARDL',   x:180, y:120, r:13, cluster:'energy', status:'progress', journal:'JEM Q1', method:'ARDL bounds', target:'SSCI Q1' },
+  { id:'green_innov',  label:'Green Innovation Structural', x:320, y:200, r:13, cluster:'energy', status:'waiting',  journal:'JCP Q1', method:'CS-ARDL+MMQR', target:'SSCI Q1' },
+
+  // FOOD cluster (bottom-left)
+  { id:'ssa_ml',       label:'SSA-ML Food Security',       x:180, y:520, r:14, cluster:'food', status:'ready',    journal:'BFJ Q2', method:'XGBoost/RF', target:'ESCI Q2' },
+  { id:'food_regime',  label:'Food Regime Decoupling',     x:300, y:560, r:13, cluster:'food', status:'progress', journal:'JCP/Global Food Sec', method:'PPML 138 countries', target:'SSCI Q1' },
+  { id:'gravity_food', label:'Gravity Food Security',      x:220, y:460, r:13, cluster:'food', status:'progress', journal:'Food Policy Q1', method:'PPML FTA×perishability', target:'SSCI Q1' },
+  { id:'pse_agtfp',    label:'PSE-AgTFP OECD',             x:340, y:480, r:13, cluster:'food', status:'progress', journal:'Food Policy Q1', method:'DML+PS Clubs', target:'SSCI Q1' },
+  { id:'hexahelix',    label:'Hexahelix Women Food',        x:140, y:430, r:10, cluster:'food', status:'progress', journal:'Food Policy Q1', method:'PLS-SEM', target:'SSCI Q1' },
+
+  // METHODS cluster (center)
+  { id:'stagflation',  label:'Stagflation ML',             x:430, y:340, r:13, cluster:'methods', status:'progress', journal:'IJF Q1', method:'RF+SHAP R²=0.60', target:'SSCI Q1' },
+  { id:'ce_cog',       label:'CE Cognitive Econometrics',  x:480, y:260, r:12, cluster:'methods', status:'progress', journal:'TBD', method:'Webb CMG', target:'Q1' },
+  { id:'wqr_p1',       label:'WQR P1 EPU→INR',            x:530, y:200, r:12, cluster:'methods', status:'ready',    journal:'IRFA Q2', method:'QQR 222/361 sig', target:'SSCI Q2' },
+  { id:'scopus_mgk',   label:'Scopus-MGK',                 x:460, y:180, r:11, cluster:'methods', status:'review',   journal:'EER', method:'Bibliometric', target:'Scopus' },
+
+  // GROWTH/MACRO cluster (top-center)
+  { id:'automation',   label:'Automation Labor Share',     x:430, y:80,  r:12, cluster:'growth', status:'progress', journal:'EconMod', method:'CCEMG β=+0.121*', target:'SSCI Q2' },
+  { id:'gpr_export',   label:'GPR Export Diversification', x:350, y:100, r:12, cluster:'growth', status:'progress', journal:'Int\'l Economics', method:'NARDL NULL', target:'Q2' },
+  { id:'monpol',       label:'MonPol Asymmetry Türkiye',   x:500, y:100, r:12, cluster:'growth', status:'progress', journal:'EMFT Q2', method:'LP asymmetry', target:'SSCI Q2' },
+  { id:'finstress',    label:'FinStress NARDL Türkiye',    x:570, y:130, r:11, cluster:'growth', status:'progress', journal:'EconMod Q2', method:'NARDL ρ=−0.343', target:'SSCI Q2' },
+
+  // GEO/TRADE cluster (right)
+  { id:'zry_so_uy',    label:'MGO-SO-UY (Uğur)',          x:700, y:480, r:13, cluster:'geo', status:'waiting',  journal:'EMFT Q2', method:'Multiple', target:'SSCI Q2' },
+  { id:'nimet_fiq',    label:'Multipolar Basel (SOLO)',    x:920, y:240, r:10, cluster:'geo', status:'ready',    journal:'FIQ (Wsiz)', method:'Panel', target:'ESCI' },
+  { id:'il_az',        label:'IL-AZ Gravity',             x:820, y:420, r:12, cluster:'geo', status:'progress', journal:'TBD', method:'PPML gravity', target:'Q1' },
+  { id:'dincer',       label:'Dincer Migration Carbon',   x:820, y:520, r:12, cluster:'geo', status:'progress', journal:'TBD', method:'AMG lnMIG=−0.368**', target:'Q1' },
+  { id:'hormuz_tri',   label:'Hormuz Chokepoints Trilogy', x:900, y:340, r:11, cluster:'geo', status:'progress', journal:'TBD', method:'BTC/GPR β+', target:'Q1' },
+  { id:'uy_sust',      label:'UY Sustainability Nexus',   x:640, y:560, r:11, cluster:'geo', status:'waiting',  journal:'EMFT Q2', method:'CS-ARDL Webb p=0.040', target:'SSCI Q2' },
+  { id:'seda_welfare', label:'Seda Welfare Panel',         x:760, y:580, r:10, cluster:'geo', status:'progress', journal:'TBD', method:'PMG 4 regimes', target:'Q2' },
+  { id:'yk_fin',       label:'YK Büyüme-Finansal Kalk.',  x:620, y:80,  r:10, cluster:'growth', status:'progress', journal:'TBD (G7)', method:'NK2024 PANICCA', target:'Q2' },
+  { id:'wqr_p2',       label:'WQR P2 EKC NP Causality',  x:320, y:260, r:10, cluster:'methods', status:'progress', journal:'TBD', method:'NP Causality', target:'Q2' },
+  { id:'agec_si',      label:'AGEC Special Issue',         x:140, y:560, r:10, cluster:'food', status:'progress', journal:'Agricultural Economics Q1', method:'TBD', target:'SSCI Q1' },
+  { id:'populism_ch',  label:'Populism Book Chapter',      x:900, y:460, r:9,  cluster:'geo', status:'progress', journal:'Merve Özcan ed. ©2027', method:'Eurasian energy+geo', target:'Book' },
+];
+
+// EDGES (shared methods/topics)
+const edges = [
+  ['ekc_bricst','ai_carbon'], ['ekc_bricst','green_innov'], ['ai_carbon','green_innov'],
+  ['xgboost','stagflation'], ['xgboost','ssa_ml'],
+  ['p3_gold','p2_gold_vol'], ['p3_gold','gold_crypto'], ['p3_gold','cur_wars'],
+  ['p6_crypto','gold_crypto'], ['p6_crypto','cur_mis'], ['cur_mis','cur_wars'],
+  ['ssa_ml','food_regime'], ['ssa_ml','gravity_food'], ['food_regime','pse_agtfp'],
+  ['gravity_food','il_az'],
+  ['ce_cog','automation'], ['ce_cog','monpol'], ['stagflation','wqr_p1'],
+  ['wqr_p1','cur_wars'], ['gpr_export','automation'],
+  ['dincer','il_az'], ['zry_so_uy','il_az'], ['zry_so_uy','dedolar'],
+  ['clim_agri','pse_agtfp'], ['clim_agri','food_regime'],
+  ['finstress','monpol'], ['finstress','p6_crypto'],
+  ['hormuz_tri','il_az'], ['hormuz_tri','xgboost'], ['hormuz_tri','p6_crypto'],
+  ['uy_sust','zry_so_uy'], ['uy_sust','dincer'],
+  ['seda_welfare','uy_sust'],
+  ['yk_fin','automation'], ['yk_fin','monpol'],
+  ['wqr_p2','wqr_p1'], ['wqr_p2','ekc_bricst'],
+  ['agec_si','pse_agtfp'], ['agec_si','food_regime'], ['agec_si','hexahelix'],
+  ['populism_ch','il_az'], ['populism_ch','hormuz_tri'],
+  ['nimet_fiq','cur_mis'], ['nimet_fiq','dedolar'],
+];
+
+// ─── RESIZE ──────────────────────────────────────────
+function resize() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  draw();
+  startAnimate(); // ensure only one loop runs after resize
+}
+window.addEventListener('resize', resize);
+
+// ─── VIEWPORT HELPERS ────────────────────────────────
+function toScreen(wx, wy) {
+  return {
+    x: (wx + vp.x) * vp.scale + canvas.width / 2,
+    y: (wy + vp.y) * vp.scale + canvas.height / 2
+  };
+}
+function toWorld(sx, sy) {
+  return {
+    x: (sx - canvas.width / 2) / vp.scale - vp.x,
+    y: (sy - canvas.height / 2) / vp.scale - vp.y
+  };
+}
+
+// Center the graph initially
+function centerGraph() {
+  const xs = nodes.map(n => n.x), ys = nodes.map(n => n.y);
+  const cx = (Math.min(...xs) + Math.max(...xs)) / 2;
+  const cy = (Math.min(...ys) + Math.max(...ys)) / 2;
+  vp.x = -cx;
+  vp.y = -cy - 20;
+  vp.scale = 0.95;
+}
+
+// ─── DRAW ────────────────────────────────────────────
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Background grid
+  ctx.strokeStyle = 'rgba(30,30,68,0.4)';
+  ctx.lineWidth = 0.5;
+  const gridSize = 60 * vp.scale;
+  const offsetX = ((vp.x * vp.scale) + canvas.width / 2) % gridSize;
+  const offsetY = ((vp.y * vp.scale) + canvas.height / 2) % gridSize;
+  for (let x = offsetX; x < canvas.width; x += gridSize) { ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, canvas.height); ctx.stroke(); }
+  for (let y = offsetY; y < canvas.height; y += gridSize) { ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(canvas.width, y); ctx.stroke(); }
+
+  const activeNodes = filterActive ? nodes.filter(n => n.status === 'ready') : nodes;
+  const activeIds = new Set(activeNodes.map(n => n.id));
+
+  // Edges
+  edges.forEach(([a, b]) => {
+    if (!activeIds.has(a) || !activeIds.has(b)) return;
+    const na = nodes.find(n => n.id === a), nb = nodes.find(n => n.id === b);
+    if (!na || !nb) return;
+    const sa = toScreen(na.x, na.y), sb = toScreen(nb.x, nb.y);
+    ctx.beginPath();
+    ctx.moveTo(sa.x, sa.y);
+    ctx.lineTo(sb.x, sb.y);
+    ctx.strokeStyle = 'rgba(80,80,128,0.25)';
+    ctx.lineWidth = 1;
+    ctx.stroke();
+  });
+
+  // Nodes
+  activeNodes.forEach(node => {
+    const { x: sx, y: sy } = toScreen(node.x, node.y);
+    const r = node.r * vp.scale;
+    const clr = CLUSTERS[node.cluster].color;
+    const border = STATUS_BORDER[node.status];
+
+    // Glow
+    const grd = ctx.createRadialGradient(sx, sy, 0, sx, sy, r * 2.5);
+    grd.addColorStop(0, clr + '22');
+    grd.addColorStop(1, 'transparent');
+    ctx.fillStyle = grd;
+    ctx.beginPath();
+    ctx.arc(sx, sy, r * 2.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Fill
+    const fillGrd = ctx.createRadialGradient(sx - r*0.3, sy - r*0.3, 0, sx, sy, r);
+    fillGrd.addColorStop(0, clr + 'cc');
+    fillGrd.addColorStop(1, clr + '44');
+    ctx.fillStyle = fillGrd;
+    ctx.beginPath();
+    ctx.arc(sx, sy, r, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Border (status indicator)
+    ctx.strokeStyle = border;
+    ctx.lineWidth = 2 * vp.scale;
+    ctx.beginPath();
+    ctx.arc(sx, sy, r + 1.5 * vp.scale, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Status icon
+    const icons = { ready:'⚔', review:'🛡', waiting:'⏳', progress:'🔨' };
+    if (r > 10) {
+      ctx.font = `${Math.max(8, r * 0.8)}px sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillStyle = 'rgba(255,255,255,0.9)';
+      ctx.fillText(icons[node.status] || '●', sx, sy);
+    }
+
+    // Label
+    if (showLabels && vp.scale > 0.55) {
+      ctx.font = `${Math.max(8, 10 * vp.scale)}px 'Segoe UI', sans-serif`;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'top';
+      ctx.fillStyle = 'rgba(220,220,240,0.85)';
+      const maxW = node.label.length > 18 ? node.label.substring(0, 16) + '…' : node.label;
+      ctx.fillText(maxW, sx, sy + r + 4 * vp.scale);
+    }
+  });
+}
+
+// ─── INTERACTION ─────────────────────────────────────
+let hoveredNode = null;
+
+canvas.addEventListener('mousemove', e => {
+  const world = toWorld(e.clientX, e.clientY);
+  hoveredNode = null;
+  for (const node of nodes) {
+    const dx = world.x - node.x, dy = world.y - node.y;
+    if (Math.sqrt(dx*dx + dy*dy) < node.r + 4) {
+      hoveredNode = node; break;
+    }
+  }
+
+  if (hoveredNode) {
+    canvas.style.cursor = 'pointer';
+    const tt = document.getElementById('tooltip');
+    tt.style.display = 'block';
+    tt.style.left = (e.clientX + 14) + 'px';
+    tt.style.top = (e.clientY - 10) + 'px';
+    document.getElementById('tt-title').textContent = hoveredNode.label;
+    document.getElementById('tt-title').style.color = CLUSTERS[hoveredNode.cluster].color;
+    document.getElementById('tt-sub').textContent = hoveredNode.journal;
+    document.getElementById('tt-method').textContent = '📐 ' + hoveredNode.method;
+  } else {
+    canvas.style.cursor = vp.dragging ? 'grabbing' : 'grab';
+    document.getElementById('tooltip').style.display = 'none';
+  }
+
+  if (vp.dragging) {
+    vp.x += (e.clientX - vp.lastX) / vp.scale;
+    vp.y += (e.clientY - vp.lastY) / vp.scale;
+    vp.lastX = e.clientX;
+    vp.lastY = e.clientY;
+    draw();
+  }
+});
+
+canvas.addEventListener('mousedown', e => {
+  vp.dragging = true;
+  vp.lastX = e.clientX; vp.lastY = e.clientY;
+  canvas.style.cursor = 'grabbing';
+});
+canvas.addEventListener('mouseup', () => { vp.dragging = false; canvas.style.cursor = 'grab'; });
+canvas.addEventListener('mouseleave', () => { vp.dragging = false; document.getElementById('tooltip').style.display = 'none'; });
+
+canvas.addEventListener('click', e => {
+  if (!hoveredNode) return;
+  const panel = document.getElementById('info-panel');
+  document.getElementById('info-title').textContent = hoveredNode.label;
+  document.getElementById('info-title').style.color = CLUSTERS[hoveredNode.cluster].color;
+  document.getElementById('info-journal').textContent = hoveredNode.journal;
+  document.getElementById('info-method').textContent = hoveredNode.method;
+  document.getElementById('info-target').textContent = hoveredNode.target;
+  const statusBadge = document.getElementById('info-status');
+  const statusLabels = { ready:'⚔️ SUBMIT READY', review:'🛡️ IN REVIEW', waiting:'⏳ CO-AUTHOR', progress:'🔨 IN PROGRESS' };
+  const statusColors = { ready:'rgba(48,208,96,0.15)', review:'rgba(48,128,240,0.15)', waiting:'rgba(224,128,48,0.15)', progress:'rgba(80,80,128,0.2)' };
+  const statusText = { ready:'#30d060', review:'#3080f0', waiting:'#e08030', progress:'#808080' };
+  statusBadge.textContent = statusLabels[hoveredNode.status] || hoveredNode.status;
+  statusBadge.style.background = statusColors[hoveredNode.status];
+  statusBadge.style.color = statusText[hoveredNode.status];
+  panel.classList.add('visible');
+});
+
+canvas.addEventListener('wheel', e => {
+  e.preventDefault();
+  const factor = e.deltaY > 0 ? 0.9 : 1.1;
+  const world = toWorld(e.clientX, e.clientY);
+  vp.scale *= factor;
+  vp.scale = Math.max(0.2, Math.min(3, vp.scale));
+  // Zoom toward cursor
+  const newScreen = toScreen(world.x, world.y);
+  vp.x += (e.clientX - newScreen.x) / vp.scale;
+  vp.y += (e.clientY - newScreen.y) / vp.scale;
+  draw();
+}, { passive: false });
+
+// Touch support
+let lastTouchDist = null;
+canvas.addEventListener('touchstart', e => {
+  if (e.touches.length === 1) {
+    vp.dragging = true;
+    vp.lastX = e.touches[0].clientX; vp.lastY = e.touches[0].clientY;
+  }
+  if (e.touches.length === 2) {
+    lastTouchDist = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+  }
+}, { passive: true });
+canvas.addEventListener('touchmove', e => {
+  e.preventDefault();
+  if (e.touches.length === 1 && vp.dragging) {
+    vp.x += (e.touches[0].clientX - vp.lastX) / vp.scale;
+    vp.y += (e.touches[0].clientY - vp.lastY) / vp.scale;
+    vp.lastX = e.touches[0].clientX; vp.lastY = e.touches[0].clientY;
+    draw();
+  }
+  if (e.touches.length === 2 && lastTouchDist) {
+    const d = Math.hypot(e.touches[0].clientX - e.touches[1].clientX, e.touches[0].clientY - e.touches[1].clientY);
+    vp.scale *= d / lastTouchDist;
+    vp.scale = Math.max(0.2, Math.min(3, vp.scale));
+    lastTouchDist = d;
+    draw();
+  }
+}, { passive: false });
+canvas.addEventListener('touchend', () => { vp.dragging = false; lastTouchDist = null; });
+
+// ─── CONTROLS ────────────────────────────────────────
+function resetView() { centerGraph(); draw(); }
+function toggleLabels() { showLabels = !showLabels; draw(); }
+function filterReady() { filterActive = true; draw(); }
+function showAll() { filterActive = false; draw(); }
+
+// ─── ANIMATE (pulse effect) ───────────────────────────
+let frame = 0;
+let rafId = null;
+
+function animate() {
+  if (document.hidden) { rafId = null; return; } // pause when tab not visible
+  frame++;
+  if (frame % 60 === 0) draw();
+  rafId = requestAnimationFrame(animate);
+}
+
+function startAnimate() {
+  if (!rafId) rafId = requestAnimationFrame(animate);
+}
+
+// Resume animation when tab becomes visible again
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden) startAnimate();
+});
+
+// ─── INIT ────────────────────────────────────────────
+resize();
+centerGraph();
+draw();
+startAnimate();
+</script>
+</body>
+</html>

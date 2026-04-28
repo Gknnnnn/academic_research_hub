@@ -1,0 +1,117 @@
+{
+  "title": "Mikroekonomi I — KKÜ İktisadi ve İdari Bilimler",
+  "course": "İKT101",
+  "semester": "2025-2026 Bahar",
+  "questions": [
+    {
+      "question": "Bir malın fiyatı arttığında talep edilen miktar azalıyorsa, bu mal hangi talebin özelliğini göstermektedir?",
+      "answerOptions": [
+        { "text": "Giffen malı", "isCorrect": false, "rationale": "Giffen mallarında fiyat arttığında talep de artar — bu durum ters eğimli talep eğrisi anlamına gelir." },
+        { "text": "Talep yasasına uygun normal bir mal", "isCorrect": true, "rationale": "Fiyat-miktar arasındaki ters ilişki talep yasasının tanımıdır. Fiyat ↑ → talep ↓, ceteris paribus." },
+        { "text": "Veblen malı", "isCorrect": false, "rationale": "Veblen mallarında fiyat prestij göstergesi olarak işlev görür — yüksek fiyat daha yüksek talep yaratır." },
+        { "text": "İkame malı", "isCorrect": false, "rationale": "İkame malı, başka bir malın fiyatıyla ilişkilidir; sorudaki mekanizma o malın kendi fiyatıyla ilgilidir." }
+      ],
+      "hint": "Talep eğrisinin eğimi neden negatiftir?",
+      "socratic": "Bir malın fiyatı 10₺'den 15₺'ye çıktığında daha az satın alıyorsunuz. Bu davranışı hangi iki etki açıklar? (İkame ve gelir etkisini düşünün.)"
+    },
+    {
+      "question": "Fiyat esnekliği katsayısının mutlak değeri 1'den büyük olduğunda talep nasıl tanımlanır?",
+      "answerOptions": [
+        { "text": "Esnek olmayan talep (inelastic)", "isCorrect": false, "rationale": "|Ed| < 1 olduğunda talep esnek değildir. Fiyat değişimlerine miktar değişimi görece küçük tepki verir." },
+        { "text": "Birim esnek talep", "isCorrect": false, "rationale": "Birim esneklikte |Ed| = 1; toplam hâsılat fiyattan bağımsızdır." },
+        { "text": "Esnek talep (elastic)", "isCorrect": true, "rationale": "|Ed| > 1 olduğunda talep esnektir. %1'lik fiyat artışı %1'den fazla miktar azalmasına yol açar; toplam hâsılat düşer." },
+        { "text": "Tamamen esnek talep", "isCorrect": false, "rationale": "Tamamen esnek talepte |Ed| = ∞; yatay bir talep eğrisi söz konusudur." }
+      ],
+      "hint": "Ed = (% ΔQ) / (% ΔP). Mutlak değer 1'den büyükse miktar değişimi fiyat değişiminden oransal olarak daha büyük demektir.",
+      "socratic": "Bir ürünün fiyatını %10 artırdığınızda satışlar %20 düşüyor. Bu durumda toplam gelirinize ne olur? Neden?"
+    },
+    {
+      "question": "Marjinal fayda azalma yasasına göre, bir tüketici belirli bir malı tüketmeye devam ettikçe ne olur?",
+      "answerOptions": [
+        { "text": "Toplam fayda artar, marjinal fayda da artar", "isCorrect": false, "rationale": "Toplam fayda başlangıçta artar, ancak marjinal fayda azalır — her ek birim daha az ek tatmin sağlar." },
+        { "text": "Toplam fayda azalır, marjinal fayda sabit kalır", "isCorrect": false, "rationale": "Bu tanım ne toplam ne de marjinal faydanın davranışını doğru yansıtmaz." },
+        { "text": "Her ek birimin sağladığı marjinal fayda azalır", "isCorrect": true, "rationale": "Azalan marjinal fayda yasası: aynı malın ek birimleri giderek daha az ek tatmin (marjinal fayda) sağlar. Toplam fayda artmaya devam edebilir ama giderek yavaşlayan bir hızla." },
+        { "text": "Marjinal fayda sıfırlanınca toplam fayda maksimuma ulaşır", "isCorrect": false, "rationale": "Bu doğrudur ama yasanın kendisini tam olarak tanımlamaz — soru yasanın içeriğini soruyor." }
+      ],
+      "hint": "Aç olan birisine birinci dilim pizza ile beşinci dilim pizza aynı tatmini verir mi?",
+      "socratic": "Bir müşteri kasada 5. bardak su yerine 1. bardak suya daha fazla para ödemek ister mi? Bu davranış ekonomide hangi kavramı destekler?"
+    },
+    {
+      "question": "Tam rekabet piyasasında uzun dönem denge koşulu hangisidir?",
+      "answerOptions": [
+        { "text": "P > LAC (uzun dönem ortalama maliyet)", "isCorrect": false, "rationale": "P > LAC durumu pozitif ekonomik kâr anlamına gelir; bu uzun dönemde yeni girişleri çeker ve fiyatı düşürür." },
+        { "text": "P = LAC = minimum LAC", "isCorrect": true, "rationale": "Uzun dönem dengede: (1) P = LAC (sıfır ekonomik kâr), (2) P = LMC (optimum üretim), (3) LAC minimum (etkinlik). Tüm bu koşullar eş zamanlı sağlanır." },
+        { "text": "P < LMC (uzun dönem marjinal maliyet)", "isCorrect": false, "rationale": "P < LMC durumunda firma zarar eder ve piyasadan çıkar; bu denge değil, geçici bir koşuldur." },
+        { "text": "TR = TC fakat ekonomik kâr pozitiftir", "isCorrect": false, "rationale": "TR = TC muhasebe kârı sıfır değil, ekonomik kâr sıfır anlamına gelir. Fırsat maliyeti dahil edildiğinde muhasebe kârı pozitif olabilir." }
+      ],
+      "hint": "Uzun dönemde piyasaya giriş-çıkış serbesttir. Pozitif kâr varsa ne olur?",
+      "socratic": "Bir fırın 2024'te 500.000₺ muhasebe kârı elde etti. Ancak sahibi, bu parayı başka bir işe yatırsaydı 600.000₺ kazanabilirdi. Ekonomik kâr ne kadardır ve uzun dönemde bu fırın piyasada kalır mı?"
+    },
+    {
+      "question": "Bir malın çapraz fiyat esnekliği pozitifse bu iki mal arasındaki ilişki nedir?",
+      "answerOptions": [
+        { "text": "Tamamlayıcı mallar (complementary goods)", "isCorrect": false, "rationale": "Tamamlayıcı mallarda çapraz esneklik negatiftir: X'in fiyatı artarsa Y'ye talep de düşer (birlikte tüketilirler)." },
+        { "text": "İkame mallar (substitute goods)", "isCorrect": true, "rationale": "İkame mallarda EXY = (% ΔQX) / (% ΔPY) > 0. Y'nin fiyatı artınca tüketiciler X'e yönelir. Örnek: çay ve kahve." },
+        { "text": "Bağımsız mallar", "isCorrect": false, "rationale": "Bağımsız mallarda çapraz esneklik sıfıra yakındır; birinin fiyatı diğerinin talebini etkilemez." },
+        { "text": "Giffen malları", "isCorrect": false, "rationale": "Giffen malı kendi fiyat esnekliğiyle tanımlanır, çapraz esneklikle değil." }
+      ],
+      "hint": "EXY > 0: Y'nin fiyatı artınca X'e talep artıyor. Tüketici neden bunu yapıyor?",
+      "socratic": "Benzin fiyatı arttığında elektrikli araç satışları yükseliyor. Bu iki ürün arasındaki ilişki nedir ve çapraz fiyat esnekliği nasıl yorumlanır?"
+    },
+    {
+      "question": "Tekelci piyasada firma kâr maksimizasyonu için hangi koşulu sağlar?",
+      "answerOptions": [
+        { "text": "P = MC", "isCorrect": false, "rationale": "P = MC tam rekabet koşuludur. Tekelci fiyatı marjinal maliyetin üzerinde belirler çünkü talep eğrisi aşağı eğimlidir." },
+        { "text": "MR = MC, P > MC", "isCorrect": true, "rationale": "Tekelci MR = MC noktasında üretim miktarını belirler, ancak bu miktara karşılık gelen fiyatı talep eğrisinden okur. Talep eğrisi MR'nin üzerinde olduğu için P > MC her zaman sağlanır — bu tekel gücünün ölçütüdür." },
+        { "text": "TR = TC", "isCorrect": false, "rationale": "TR = TC kârsızlık koşuludur (başabaş); kâr maksimizasyonu değil." },
+        { "text": "MR = 0", "isCorrect": false, "rationale": "MR = 0 toplam hasılatın maksimize edildiği noktadır; kâr maksimizasyonu için MC de sıfır olmalıdır ki bu nadir bir durumdur." }
+      ],
+      "hint": "Tam rekabette fiyat = MR. Tekelde talep eğrisi aşağı eğimli olduğunda MR ile fiyat aynı mıdır?",
+      "socratic": "Bir ilaç şirketi patent sahibi olarak tek üretici. Bir birimi üretmenin maliyeti 10₺, fakat satış fiyatı 80₺. Bu fiyat farkını yaratan piyasa yapısı nedir ve bu durumun refah maliyeti nedir?"
+    },
+    {
+      "question": "Tüketici dengesi, bütçe kısıtı ve kayıtsızlık eğrisi çerçevesinde hangi koşulda sağlanır?",
+      "answerOptions": [
+        { "text": "MUx/MUy = Px/Py (ikame oranı = fiyat oranı)", "isCorrect": true, "rationale": "Denge: marjinal ikame oranı (MRS = MUx/MUy) fiyat oranına (Px/Py) eşit olduğunda bütçe kısıtı kayıtsızlık eğrisine teğet gelir. Bu noktada tüketici maksimum faydaya ulaşır." },
+        { "text": "MUx = MUy", "isCorrect": false, "rationale": "Fiyatlar eşitse bu koşul geçerli olur, ancak genel denge için fiyat oranı da hesaba katılmalıdır." },
+        { "text": "Px × X = Py × Y", "isCorrect": false, "rationale": "Bu bütçe kısıtının özel bir halidir; dengeyi değil harcama dağılımını ifade eder." },
+        { "text": "Toplam fayda maksimize edilir", "isCorrect": false, "rationale": "Bu sonucu doğru tanımlar ama mekanizmayı açıklamaz. Soru denge koşulunu soruyor." }
+      ],
+      "hint": "Bütçe kısıtı doğrusunun eğimi nedir? Kayıtsızlık eğrisinin eğimi nedir? Dengede bu iki eğim ne olmalı?",
+      "socratic": "Elmanın fiyatı 5₺, armudu 10₺. Son elma 20 util, son armut 30 util sağlıyor. Tüketici dengeye ulaşmış mı? Değilse ne yapmalı?"
+    },
+    {
+      "question": "Bir firmanın kısa dönem arz eğrisi hangi maliyetin üzerindeki kısmını kapsar?",
+      "answerOptions": [
+        { "text": "Ortalama toplam maliyetin (ATC) üzeri", "isCorrect": false, "rationale": "ATC üzerinde faaliyet normal kârlılığı gösterir, ancak kısa dönem arz için ATC değil AVC referans alınır." },
+        { "text": "Marjinal maliyetin (MC) minimum AVC'nin üzerindeki kısmı", "isCorrect": true, "rationale": "Firma, fiyat ≥ minimum AVC olduğu sürece üretim yapar (değişken maliyetleri karşılayabilmek için). Kısa dönem arz eğrisi, MC eğrisinin minimum AVC noktasının üzerindeki kısmıdır." },
+        { "text": "Sabit maliyet eğrisinin tamamı", "isCorrect": false, "rationale": "Sabit maliyetler kısa dönemde batık maliyettir ve üretim kararını etkilemez." },
+        { "text": "Marjinal maliyetin tamamı", "isCorrect": false, "rationale": "Fiyat < minimum AVC olduğunda firma üretimi durdurmayı tercih eder — kapatma noktasının altında MC eğrisi arz eğrisi değildir." }
+      ],
+      "hint": "Firma ne zaman üretmeyi bırakmayı tercih eder? Değişken maliyetleri karşılayamadığında mı yoksa toplam maliyetleri karşılayamadığında mı?",
+      "socratic": "Bir kafe sahibi, her müşteriden 50₺ alıyor. Kira (sabit maliyet) 10.000₺/ay, malzeme maliyeti (değişken) müşteri başına 55₺. Kafe açık kalmalı mı? Neden?"
+    },
+    {
+      "question": "Dışsallıklar (externalities) piyasada neden kaynak dağılımı bozukluğuna yol açar?",
+      "answerOptions": [
+        { "text": "Devlet müdahalesinin fiyatları yapay şekilde yükseltmesi nedeniyle", "isCorrect": false, "rationale": "Dışsallıklar devlet müdahalesinden bağımsız olarak piyasa başarısızlığı yaratır." },
+        { "text": "Özel maliyetler/faydaların sosyal maliyetlerden/faydalardan farklılaşması nedeniyle", "isCorrect": true, "rationale": "Negatif dışsallıkta (örn. kirlilik) MSC > MPC; piyasa denge miktarı sosyal optimumun üzerindedir. Pozitif dışsallıkta (örn. eğitim) MSB > MPB; piyasa denge miktarı sosyal optimumun altındadır." },
+        { "text": "Tam bilginin mevcut olması nedeniyle", "isCorrect": false, "rationale": "Tam bilgi aksak bilgi değil; dışsallık sorunu bilgi asimetrisiyle değil, maliyet/fayda içselleştirilememesiyle ilgilidir." },
+        { "text": "Monopol piyasa yapısının ortaya çıkması nedeniyle", "isCorrect": false, "rationale": "Monopol ayrı bir piyasa başarısızlığı türüdür; dışsallıklar hem rekabetçi hem monopolcü piyasalarda ortaya çıkabilir." }
+      ],
+      "hint": "Bir fabrika üretirken çevreye zarar veriyor ama bu maliyeti ödemek zorunda kalmıyor. Üretim miktarı sosyal olarak optimal mi?",
+      "socratic": "Bir çelik fabrikası ton başına 100₺ üretim maliyetiyle 500 ton üretiyor. Ancak çevre kirliliği nedeniyle topluma 40₺/ton ek maliyet yüklendiğinde sosyal optimum nerede ve piyasa çıktısı ne kadar fazla?"
+    },
+    {
+      "question": "Coase Teoremi hangi koşulda dışsallıkları özel müzakereyle çözebileceğini öne sürer?",
+      "answerOptions": [
+        { "text": "Devlet her zaman müdahale ettiğinde", "isCorrect": false, "rationale": "Coase Teoremi devlet müdahalesine alternatif olarak özel çözümü savunur." },
+        { "text": "İşlem maliyetleri düşük ve mülkiyet hakları net tanımlandığında", "isCorrect": true, "rationale": "Coase (1960): Mülkiyet hakları net biçimde tanımlandığında ve işlem maliyetleri düşük olduğunda, taraflar devlet müdahalesi olmaksızın Pareto etkin sonuca ulaşmak için pazarlık yapabilir." },
+        { "text": "Sadece pozitif dışsallıklarda", "isCorrect": false, "rationale": "Coase Teoremi hem negatif hem pozitif dışsallıklar için geçerlidir." },
+        { "text": "Piyasa monopol yapısında olduğunda", "isCorrect": false, "rationale": "Monopol yapısı Coase Teoremi'nin bir ön koşulu değildir." }
+      ],
+      "hint": "İki komşudan biri gürültülü müzik çalıyor. Teoreme göre bu sorunu çözmek için mahkemeye gitmeleri gerekiyor mu?",
+      "socratic": "Fabrika kirletiyor, balıkçı zarar görüyor. Fabrika hakkı kime verilirse verilsin sosyal optimum üretim miktarı değişir mi? Coase ne diyor?"
+    }
+  ]
+}

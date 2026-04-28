@@ -1,0 +1,117 @@
+{
+  "title": "İktisat Politikası — KKÜ İktisadi ve İdari Bilimler",
+  "course": "İKT401",
+  "semester": "2025-2026 Bahar",
+  "questions": [
+    {
+      "question": "Merkez bankası bağımsızlığının (central bank independence — CBI) enflasyon üzerindeki etkisine ilişkin literatürde öne çıkan temel bulgu nedir?",
+      "answerOptions": [
+        { "text": "CBI yüksek olduğunda enflasyon da yükselir çünkü para arzı denetim dışına çıkar", "isCorrect": false, "rationale": "Tarihsel veriler tam tersini göstermektedir; bağımsız merkez bankaları uzun vadeli fiyat istikrarını ön plana almaktadır." },
+        { "text": "CBI yüksek olduğunda enflasyon düşer çünkü siyasi baskı azalır", "isCorrect": true, "rationale": "Alesina-Summers (1993), Cukierman (1992): operasyonel bağımsızlık arttıkça kısa dönemli siyasi konjonktür hedeflerine olan maruz kalış azalır; enflasyon beklentileri çıpalanır ve fiyat istikrarı güçlenir." },
+        { "text": "CBI büyüme üzerinde negatif etkilidir; enflasyonla ilişkisi yoktur", "isCorrect": false, "rationale": "CBI-büyüme ilişkisi tartışmalı olsa da CBI-enflasyon ilişkisi geniş panel kanıtlarıyla desteklenmektedir." },
+        { "text": "CBI yalnızca dolarizasyon oranı yüksek ekonomilerde anlamlı etki yapar", "isCorrect": false, "rationale": "CBI literatürü geniş ülke örneklemi içermektedir; dolarizasyon koşuluna özgü değildir." }
+      ],
+      "hint": "Kydland-Prescott (1977) zaman tutarsızlığı problemi merkez bankası bağımsızlığının neden önemli olduğunu teorik olarak açıklar.",
+      "socratic": "Hükümet merkez bankasına 'faizi düşür' baskısı yapıyor. Kısa dönemde büyüme artabilir. Peki bu politikaya güvenilirlik açısından ne olur? Bağımsızlık neden uzun dönemde daha iyi çıktı verir?"
+    },
+    {
+      "question": "Wagner Yasası (Wagner's Law) iktisat politikası açısından ne öngörür?",
+      "answerOptions": [
+        { "text": "Devlet harcamaları arttıkça ekonomik büyüme yavaşlar", "isCorrect": false, "rationale": "Bu Armey eğrisi ve kamu harcamalarının optimal boyutu tartışmasıyla ilgilidir; Wagner farklı bir hipotez sunar." },
+        { "text": "Gelir arttıkça kamu sektörünün GSYİH içindeki payı artar", "isCorrect": true, "rationale": "Adolph Wagner (1883): ekonomik kalkınmayla birlikte artan kentleşme, sanayileşme ve sosyal talep kamu hizmetlerine olan talebi artırır. Devlet harcamaları lüks bir mal gibi davranır: gelir esnekliği > 1." },
+        { "text": "Devlet harcamaları yalnızca güvenlik ve adalet alanlarında artmalıdır", "isCorrect": false, "rationale": "Bu klasik liberal (laissez-faire) görüştür; Wagner'in ampirik gözleminden farklıdır." },
+        { "text": "Vergi gelirleri ekonomik büyümeyi engeller", "isCorrect": false, "rationale": "Bu Laffer eğrisi çerçevesidir; Wagner Yasası'nın içeriği değildir." }
+      ],
+      "hint": "Wagner hipotezi talep yönlüdür: gelişen ekonomilerde eğitim, sağlık ve altyapıya kamusal talep artar.",
+      "socratic": "Türkiye'de 2000-2024 arası kamu harcamalarının GSYİH'ye oranı nasıl değişti? Wagner Yasası ile uyumlu mu? Ampirik test için hangi ekonometrik yaklaşım kullanılır?"
+    },
+    {
+      "question": "Crowding-out etkisi (dışlama etkisi) hangi mekanizma üzerinden çalışır?",
+      "answerOptions": [
+        { "text": "Devlet harcamaları artışı → para arzı düşüşü → deflasyon", "isCorrect": false, "rationale": "Para arzı doğrudan kamu harcamalarından değil merkez bankası politikasından etkilenir." },
+        { "text": "Devlet borçlanması → faiz artışı → özel yatırım düşüşü", "isCorrect": true, "rationale": "IS-LM: G↑ → IS sağa → denge faizi yükselir → özel yatırım baskı altına girer. Tam crowding-out: dikey LM'de ΔY = 0; kısmi crowding-out: IS eğimi yatık olduğunda." },
+        { "text": "Vergi artışı → tüketim düşüşü → GSYİH azalışı", "isCorrect": false, "rationale": "Bu vergi çarpanının negatif etkisidir; crowding-out farklı bir mekanizma — borçlanma yoluyla çalışır." },
+        { "text": "Kamu harcamaları → enflasyon → reel ücret düşüşü", "isCorrect": false, "rationale": "Bu talep çekişli enflasyon kanalıdır; crowding-out finansman maliyeti üzerinden faiz kanalıyla işler." }
+      ],
+      "hint": "Tam crowding-out klasiksel (dikey LM) durumda gerçekleşir. Keynesyen bölgede (yatay LM) neden gerçekleşmez?",
+      "socratic": "COVID sonrası Türkiye'de kamu borçlanması arttı ve faizler yükseldi. Bu crowding-out kanıtı mıdır? Nedenselliği nasıl test edersiniz? Faizi başka ne yükseltmiş olabilir?"
+    },
+    {
+      "question": "Optimum Para Alanı (Optimum Currency Area — OCA) teorisine göre ülkeler ortak para birimi benimsemeden önce hangi koşulu sağlamalıdır?",
+      "answerOptions": [
+        { "text": "Benzer vergi sistemlerine sahip olmaları", "isCorrect": false, "rationale": "Vergi harmonizasyonu OCA'nın geleneksel kriterlerinden değildir; Mundell, McKinnon ve Kenen farklı kriterler öne sürmüştür." },
+        { "text": "Yüksek faktör hareketliliği ve/veya senkronize konjonktür döngüleri", "isCorrect": true, "rationale": "Mundell (1961): Asimetrik şokları kur yerine emek mobilitesiyle absorbe edebilirsiniz. McKinnon (1963): açıklık; Kenen (1969): ürün çeşitliliği. AB/Euro alanı bu kriterleri kısmen karşılar — güney krizi bunu sınadı." },
+        { "text": "Nüfus büyüklüklerinin benzer olması", "isCorrect": false, "rationale": "Nüfus OCA kriterlerinin hiçbirinde yer almaz." },
+        { "text": "Ortak ticaret anlaşmalarının uygulanmakta olması", "isCorrect": false, "rationale": "Ticaret entegrasyonu kolaylaştırıcıdır ancak OCA için yeterli ya da zorunlu koşul değildir." }
+      ],
+      "hint": "Euro krizi (2010-2012) Yunanistan için kur ayarlamasının neden kritik olduğunu ortaya koydu.",
+      "socratic": "Yunanistan 2010'da kendi para birimi olsaydı ne yapardı? Euro bölgesinde kalmak ne maliyete yol açtı? Bu OCA teorisiyle nasıl örtüşür?"
+    },
+    {
+      "question": "Arz yönlü iktisatta (supply-side economics) vergi indirimlerinin büyümeyi nasıl artıracağı öngörülür?",
+      "answerOptions": [
+        { "text": "Daha düşük vergiler → daha fazla tüketim harcaması → talep artışı", "isCorrect": false, "rationale": "Bu talep yönlü (Keynesyen) mekanizmadır; arz yönlü iktisat verimliliği ve üretim kapasitesini ön plana alır." },
+        { "text": "Daha düşük vergi oranları → daha fazla çalışma ve yatırım teşviki → potansiyel çıktı artışı", "isCorrect": true, "rationale": "Laffer eğrisi: belirli bir vergi oranının üzerinde gelir düşer. Reagan dönemi 'trickle-down': marjinal vergi indirimi → iş insanı teşvik → yatırım → verimlilik → büyüme. Ampirik kanıtlar tartışmalıdır." },
+        { "text": "Daha düşük vergiler → para arzı artışı → faiz düşüşü", "isCorrect": false, "rationale": "Para arzı merkez bankasının kontrolündedir; vergi politikası parasal kanalla doğrudan çalışmaz." },
+        { "text": "Daha düşük vergiler → ithalat azalışı → cari fazla", "isCorrect": false, "rationale": "Dış ticaret dengesine bu kadar dolaysız bir aktarım mekanizması arz yönlü teorinin iddiası değildir." }
+      ],
+      "hint": "Laffer eğrisi vergi oranı ile vergi geliri arasındaki ilişkiyi gösterir. %0 ve %100 vergi oranında gelir kaçtır?",
+      "socratic": "ABD'de 2017 Vergi Kesintileri ve İşler Yasası kurumlar vergisini %35'ten %21'e indirdi. Arz yönlü beklenti neydi? Gerçekleşen yatırım ve büyüme verileri beklentiyi doğruladı mı?"
+    },
+    {
+      "question": "Enflasyon hedeflemesi (inflation targeting) para politikası çerçevesinin temel unsuru nedir?",
+      "answerOptions": [
+        { "text": "Para arzı büyüme oranının sabit tutulması", "isCorrect": false, "rationale": "Bu Monetarist k-kural politikasıdır (Friedman); enflasyon hedeflemesi sonuç odaklıdır, ara hedef olarak para arzını değil çıktı açığını kullanır." },
+        { "text": "Kamuya açık ve sayısal bir enflasyon hedefi + merkez bankası hesap verebilirliği", "isCorrect": true, "rationale": "Bernanke-Mishkin (1997): şeffaf hedef + operasyonel bağımsızlık + iletişim (forward guidance) + hesap verebilirlik. Yeni Zelanda 1990'da ilk uygulamayı başlattı; TCMB de bu çerçeveyi benimser." },
+        { "text": "Döviz kurunun belirli bir bandda tutulması", "isCorrect": false, "rationale": "Bu kur çıpasıdır; enflasyon hedeflemesiyle çelişir — impossible trinity nedeniyle ikisi aynı anda uygulanamaz." },
+        { "text": "Hükümetin bütçe dengesini zorunlu tutması", "isCorrect": false, "rationale": "Maliye kuralı (fiscal rule) farklı bir politika çerçevesidir; enflasyon hedeflemesi merkez bankası araçlarıyla para politikasını ilgilendirir." }
+      ],
+      "hint": "İletişim politikası (forward guidance) neden enflasyon hedeflemesinin kritik bileşenidir?",
+      "socratic": "TCMB 2021-2022 döneminde enflasyon hedeflemesi çerçevesini sürdürürken faizi düşürdü. Hedefleme güvenilirliğine ne oldu? Enflasyon beklentileri nasıl tepki verdi?"
+    },
+    {
+      "question": "Kuznets eğrisi hipotezi (Environmental Kuznets Curve — EKC) çevre politikası açısından ne ima eder?",
+      "answerOptions": [
+        { "text": "Çevre kirliliği gelir düzeyinden bağımsızdır; yalnızca endüstriyel yapıya bağlıdır", "isCorrect": false, "rationale": "EKC tam olarak gelir-çevre ilişkisini modelleyen bir hipotezdir; geliri dışarıda bırakmaz." },
+        { "text": "Gelir belirli bir eşiği aştıktan sonra ekonomik büyüme çevre kalitesini iyileştirir", "isCorrect": true, "rationale": "EKC (Grossman-Krueger 1991/1995): ters-U ilişkisi — düşük gelirde kirlilik büyümeyle artar; dönüm noktasından sonra temiz teknoloji talebi + sıkı düzenlemeler + hizmet sektörüne geçiş kirliliği düşürür." },
+        { "text": "Yoksul ülkelerde çevre politikası gereksizdir", "isCorrect": false, "rationale": "EKC hipotezi politika müdahalesini dışlamaz; aksine dönüm noktasını hızlandırmak için çevre politikası gerekebilir." },
+        { "text": "Sanayileşme hiçbir zaman çevre kirliliğini düşürmez", "isCorrect": false, "rationale": "EKC bunun tam tersini öngörür; empirik bulgular değişken olmakla birlikte bazı kirleticiler için ters-U ilişkisi desteklenir." }
+      ],
+      "hint": "EKC'nin politika çıkarımı tartışmalıdır: 'büyüyün, temizleyin' söylemi mi doğru, yoksa erken müdahale mi?",
+      "socratic": "Türkiye için CO₂-gelir EKC tahmin ettiniz ve dönüm noktası kişi başı 25,000 $ bulundu. Türkiye 2024 itibarıyla bu eşiği geçti mi? Geçmediyse politika öneriniz ne olur?"
+    },
+    {
+      "question": "Yapısal uyum programlarında (SAP) IMF'nin genel reçetesi hangi politika bileşenlerini içerir?",
+      "answerOptions": [
+        { "text": "Kamu harcaması artışı, ticaret korumacılığı ve kur değer artışı", "isCorrect": false, "rationale": "Bu tam tersidir; IMF programları genellikle kamu harcama kısıtlaması, serbest ticaret ve kur esnekliğini önerir." },
+        { "text": "Mali konsolidasyon, döviz devalüasyonu/esnekliği, yapısal reformlar ve liberalizasyon", "isCorrect": true, "rationale": "Washington Konsensüsü (Williamson 1989): mali disiplin, vergi reformu, finansal liberalizasyon, dış yatırıma açılma, özelleştirme, deregülasyon. Eleştiriler: sosyal maliyetler, deflasyon tuzağı, sıralama sorunları." },
+        { "text": "Yüksek faiz politikası + sermaye kontrolü + döviz sabitlemesi", "isCorrect": false, "rationale": "Sermaye kontrolü geleneksel IMF çerçevesinde önerilmez; sermaye hesabı liberalizasyonu tercih edilir." },
+        { "text": "Kamu yatırımlarının artırılması ve devlet işletmelerinin genişletilmesi", "isCorrect": false, "rationale": "IMF programları genellikle özelleştirme ve kamu sektörünün küçültülmesini öngörür." }
+      ],
+      "hint": "1998 Asya krizi ve 2001 Türkiye krizi IMF programlarının hem başarı hem başarısızlıklarını ortaya koydu.",
+      "socratic": "Türkiye 2001 krizinde IMF ile stand-by anlaşması yaptı. Hangi koşullara uymak zorunda kaldı? Programın kısa ve uzun vadeli sonuçlarını nasıl değerlendirirsiniz?"
+    },
+    {
+      "question": "Sürdürülebilir kalkınma çerçevesinde 'yeşil ekonomi' geçişinde piyasa başarısızlıklarının temel kaynağı nedir?",
+      "answerOptions": [
+        { "text": "Hükümetlerin çevre düzenlemesi yapmaması", "isCorrect": false, "rationale": "Hükümet eylemi veya eylemsizliği politika tercihtir; piyasa başarısızlığının kaynağı dışsallıklar ve kamusal maldır." },
+        { "text": "Karbon emisyonlarının negatif dışsallık (externality) niteliği taşıması", "isCorrect": true, "rationale": "Sosyal maliyet > özel maliyet → aşırı üretim. Coase teoremi işlem maliyeti = 0 iken özel müzakereyi önerir; gerçekte Pigou vergisi (karbon fiyatlandırması) veya cap-and-trade gereklidir. Paris Anlaşması bu boşluğu doldurmaya çalışır." },
+        { "text": "Firmaların temiz teknolojiye ilgi duymaması", "isCorrect": false, "rationale": "Firmalar kâr güdümlüdür; piyasa başarısızlığının kaynağı fiyat sinyallerindeki çarpıklıktır, firmaların tercihi değil." },
+        { "text": "Yenilenebilir enerji maliyetlerinin çok yüksek olması", "isCorrect": false, "rationale": "Maliyet sorunu piyasa başarısızlığı değil teknoloji sorunudur; yenilenebilir maliyetler 2024 itibarıyla pek çok piyasada fosil yakıtlarla rekabetçi hale geldi." }
+      ],
+      "hint": "Pigou vergisi ve cap-and-trade neden alternatifleri arasında? Etkinlik ve siyasi ekonomi açısından karşılaştırın.",
+      "socratic": "AB Emisyon Ticaret Sistemi (ETS) 2005'te başladı. İlk fazda neden karbon fiyatı sıfıra yaklaştı? Piyasa tasarımı açısından neye dikkat edilmesi gerekir?"
+    },
+    {
+      "question": "Ticaret politikasında gümrük tarifelerinin refahı nasıl etkilediği analiz edildiğinde, büyük (price-maker) bir ülke için net refah etkisi neden belirsizdir?",
+      "answerOptions": [
+        { "text": "Tarife her zaman üreticilere zarar verir", "isCorrect": false, "rationale": "Üreticiler yurt içi fiyat artışından yararlanır; ürün fazlası artar. Zarar gören tüketiciler ve verimlilik kayıplarıdır." },
+        { "text": "Büyük ülke tarifesi dış ticaret hadlerini iyileştirebilir; bu kazanım deadweight loss ile karşılaştırılmalıdır", "isCorrect": true, "rationale": "Küçük ülke: tarife her zaman net refah kaybı. Büyük ülke: tarife dünya fiyatını düşürebilir (ticaret haddi kazancı) → optimal tarife mevcuttur. Ancak misilleme riski: ticaret savaşı tüm ülkeleri zararlı çıkarır." },
+        { "text": "Tarife hiçbir zaman pozitif refah etkisi yaratamaz", "isCorrect": false, "rationale": "Optimal tarife teorisi büyük ülke için belirli koşullarda pozitif net etkiyi gösterir." },
+        { "text": "Büyük ülkeler için tarife her zaman serbest ticaretten iyidir", "isCorrect": false, "rationale": "Optimal tarife teorisi varlığı kesin net kazanç garantisi değildir; misilleme ve ölü ağırlık kaybı dikkate alınmalıdır." }
+      ],
+      "hint": "Tüketici artığı + üretici artığı + tarife geliri - verimlilik kayıpları. Büyük ülkede dünya fiyatı da değişir.",
+      "socratic": "ABD 2018'de Çin'e ek tarifeler uyguladı. Büyük ülke optimal tarife teorisi bunu meşrulaştırabilir mi? Çin'in misilleme tepkisi bu analizi nasıl değiştirir? Kim kazandı, kim kaybetti?"
+    }
+  ]
+}

@@ -1,0 +1,1146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Economics Knowledge Dungeon — Socratic Quiz Engine</title>
+<style>
+  :root {
+    --bg: #080818;
+    --panel: #10102a;
+    --border: #252550;
+    --gold: #f0c030;
+    --green: #30d060;
+    --red: #e03050;
+    --blue: #3080f0;
+    --purple: #9030e0;
+    --orange: #e08030;
+    --text: #d8d8f0;
+    --muted: #505080;
+    --hp-color: #e03050;
+    --xp-color: #f0c030;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+  }
+  body::before {
+    content: '';
+    position: fixed; inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(144,48,224,0.08) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* HEADER */
+  .header {
+    background: linear-gradient(135deg, #050514, #10102a);
+    border-bottom: 2px solid var(--gold);
+    padding: 14px 24px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .header-icon { font-size: 28px; }
+  .header h1 { font-size: 16px; color: var(--gold); letter-spacing: 1px; }
+  .header p { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .header-right { margin-left: auto; display: flex; align-items: center; gap: 12px; }
+
+  /* HUD BARS */
+  .hud { display: flex; gap: 16px; }
+  .hud-item { text-align: center; min-width: 70px; }
+  .hud-label { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 3px; }
+  .hud-bar { height: 8px; background: rgba(255,255,255,0.08); border-radius: 4px; overflow: hidden; }
+  .hud-fill { height: 100%; border-radius: 4px; transition: width 0.5s ease; }
+  .hp-fill { background: linear-gradient(90deg, #e03050, #ff6080); }
+  .xp-fill { background: linear-gradient(90deg, var(--gold), #ffe060); }
+  .hud-val { font-size: 11px; font-weight: 700; margin-top: 2px; }
+
+  /* MAIN */
+  .main { flex: 1; max-width: 760px; margin: 0 auto; width: 100%; padding: 20px 16px; }
+
+  /* SCREEN STATES */
+  .screen { display: none; }
+  .screen.active { display: block; }
+
+  /* START SCREEN */
+  .start-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 32px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .start-icon { font-size: 64px; margin-bottom: 16px; }
+  .start-title { font-size: 22px; font-weight: 800; color: var(--gold); margin-bottom: 8px; }
+  .start-sub { font-size: 13px; color: var(--muted); max-width: 420px; margin: 0 auto 24px; line-height: 1.6; }
+  .mode-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; max-width: 420px; margin-left: auto; margin-right: auto; }
+  .mode-card {
+    background: rgba(255,255,255,0.03);
+    border: 2px solid var(--border);
+    border-radius: 10px; padding: 14px;
+    cursor: pointer; transition: all 0.2s;
+  }
+  .mode-card:hover { border-color: var(--gold); transform: translateY(-2px); }
+  .mode-card.selected { border-color: var(--gold); background: rgba(240,192,48,0.08); }
+  .mode-icon { font-size: 24px; margin-bottom: 6px; }
+  .mode-name { font-size: 12px; font-weight: 700; color: var(--text); }
+  .mode-desc { font-size: 10px; color: var(--muted); margin-top: 2px; }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-block; padding: 10px 24px;
+    border: none; border-radius: 8px;
+    font-size: 13px; font-weight: 700;
+    cursor: pointer; transition: all 0.2s;
+    letter-spacing: 0.5px;
+  }
+  .btn-primary { background: linear-gradient(135deg, var(--gold), #e0a020); color: #000; }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(240,192,48,0.3); }
+  .btn-secondary { background: rgba(255,255,255,0.06); color: var(--text); border: 1px solid var(--border); }
+  .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+  .btn-hint { background: rgba(144,48,224,0.15); color: var(--purple); border: 1px solid rgba(144,48,224,0.3); }
+  .btn-hint:hover { background: rgba(144,48,224,0.25); }
+  .btn:disabled { opacity: 0.4; cursor: not-allowed; transform: none; }
+
+  /* FILE LOADER */
+  .file-zone {
+    border: 2px dashed var(--border);
+    border-radius: 10px; padding: 20px;
+    text-align: center; cursor: pointer;
+    margin: 16px auto; max-width: 420px;
+    transition: border-color 0.2s;
+  }
+  .file-zone:hover { border-color: var(--gold); }
+  .file-zone input { display: none; }
+
+  /* QUIZ SCREEN */
+  .quiz-layout { display: flex; flex-direction: column; gap: 14px; }
+
+  .question-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+  }
+  .question-meta {
+    display: flex; align-items: center; gap: 8px;
+    margin-bottom: 12px;
+  }
+  .q-num {
+    background: rgba(240,192,48,0.15); color: var(--gold);
+    border: 1px solid rgba(240,192,48,0.3);
+    border-radius: 20px; padding: 3px 12px;
+    font-size: 11px; font-weight: 700;
+  }
+  .q-timer {
+    margin-left: auto;
+    font-size: 13px; font-weight: 700;
+  }
+  .timer-ok { color: var(--green); }
+  .timer-warn { color: var(--orange); }
+  .timer-crit { color: var(--red); animation: pulse 0.5s infinite alternate; }
+  @keyframes pulse { from { opacity:1; } to { opacity:0.4; } }
+
+  .question-text {
+    font-size: 14px; line-height: 1.6; font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+  /* ANSWER OPTIONS */
+  .options { display: flex; flex-direction: column; gap: 8px; }
+  .option {
+    background: rgba(255,255,255,0.03);
+    border: 2px solid var(--border);
+    border-radius: 8px; padding: 12px 14px;
+    cursor: pointer; transition: all 0.2s;
+    display: flex; align-items: flex-start; gap: 10px;
+    font-size: 12px; line-height: 1.4;
+  }
+  .option:hover:not(.disabled) { border-color: var(--blue); background: rgba(48,128,240,0.08); }
+  .option.selected { border-color: var(--blue); background: rgba(48,128,240,0.1); }
+  .option.correct { border-color: var(--green); background: rgba(48,208,96,0.1); }
+  .option.wrong { border-color: var(--red); background: rgba(224,48,80,0.1); }
+  .option.disabled { cursor: default; }
+  .option-letter {
+    width: 22px; height: 22px; flex-shrink: 0;
+    border: 1px solid var(--border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 10px; font-weight: 700; color: var(--muted);
+  }
+  .option.correct .option-letter { border-color: var(--green); color: var(--green); }
+  .option.wrong .option-letter { border-color: var(--red); color: var(--red); }
+
+  /* SOCRATIC SCAFFOLD */
+  .scaffold {
+    background: rgba(144,48,224,0.08);
+    border: 1px solid rgba(144,48,224,0.2);
+    border-radius: 10px; padding: 14px;
+    display: none;
+  }
+  .scaffold.visible { display: block; }
+  .scaffold-header {
+    font-size: 11px; font-weight: 700; color: var(--purple);
+    margin-bottom: 8px; display: flex; align-items: center; gap: 6px;
+  }
+  .scaffold-text { font-size: 12px; color: var(--text); line-height: 1.5; }
+
+  /* RATIONALE */
+  .rationale {
+    background: rgba(255,255,255,0.03);
+    border-left: 3px solid var(--green);
+    border-radius: 0 8px 8px 0;
+    padding: 12px;
+    font-size: 11px; line-height: 1.5;
+    display: none;
+  }
+  .rationale.visible { display: block; }
+  .rationale.wrong-rat { border-left-color: var(--red); }
+
+  /* ACTION ROW */
+  .action-row { display: flex; gap: 8px; align-items: center; }
+  .streak-badge {
+    margin-left: auto;
+    display: flex; align-items: center; gap: 4px;
+    font-size: 12px; font-weight: 700; color: var(--orange);
+  }
+
+  /* RESULT SCREEN */
+  .result-card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px; padding: 32px;
+    text-align: center; margin-top: 20px;
+  }
+  .result-grade { font-size: 56px; margin-bottom: 12px; }
+  .result-score { font-size: 28px; font-weight: 900; color: var(--gold); }
+  .result-sub { font-size: 13px; color: var(--muted); margin: 8px 0 20px; }
+  .result-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 12px; max-width: 360px; margin: 0 auto 24px; }
+  .rstat { background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 8px; padding: 12px; }
+  .rstat-val { font-size: 22px; font-weight: 800; }
+  .rstat-lbl { font-size: 9px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 2px; }
+  .rstat-green { color: var(--green); }
+  .rstat-red { color: var(--red); }
+  .rstat-orange { color: var(--orange); }
+
+  /* LIVES */
+  .lives { display: flex; gap: 4px; }
+  .life { font-size: 16px; }
+  .life.lost { filter: grayscale(1); opacity: 0.3; }
+
+  /* PROGRESS BAR */
+  .progress-bar-outer {
+    background: rgba(255,255,255,0.06); border-radius: 4px;
+    height: 4px; margin-bottom: 14px;
+  }
+  .progress-bar-inner { height: 100%; background: var(--gold); border-radius: 4px; transition: width 0.4s; }
+
+  /* SOCRATIC MODES */
+  .mode-hint .scaffold { border-color: rgba(144,48,224,0.3); background: rgba(144,48,224,0.06); }
+  .mode-strict .scaffold { border-color: rgba(224,128,48,0.3); background: rgba(224,128,48,0.06); }
+
+  /* TOAST */
+  .toast {
+    position: fixed; top: 80px; right: 20px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 8px; padding: 10px 16px;
+    font-size: 12px;
+    transform: translateX(120%); transition: transform 0.3s;
+    z-index: 999;
+  }
+  .toast.show { transform: translateX(0); }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 5px; }
+  ::-webkit-scrollbar-track { background: var(--bg); }
+  ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+</style>
+</head>
+<body>
+
+<!-- HEADER HUD -->
+<div class="header">
+  <div class="header-icon">🏰</div>
+  <div>
+    <h1>ECONOMICS KNOWLEDGE DUNGEON</h1>
+    <p>Socratic Scaffold Engine — Inspired by PedagogicalRL (ETH-LRE)</p>
+  </div>
+  <div class="header-right">
+    <div class="hud" id="hud" style="display:none">
+      <!-- HP -->
+      <div class="hud-item">
+        <div class="hud-label">HP</div>
+        <div class="hud-bar"><div class="hud-fill hp-fill" id="hp-bar" style="width:100%"></div></div>
+        <div class="hud-val" id="hp-val" style="color:var(--red)">❤️ 3</div>
+      </div>
+      <!-- STARS (unspendable achievement metric) -->
+      <div class="hud-item">
+        <div class="hud-label">Stars</div>
+        <div class="hud-bar"><div class="hud-fill xp-fill" id="xp-bar" style="width:0%"></div></div>
+        <div class="hud-val" id="xp-val" style="color:var(--gold)">⭐ 0</div>
+      </div>
+      <!-- AMETHYSTS (spendable currency) -->
+      <div class="hud-item">
+        <div class="hud-label">Gems</div>
+        <div class="hud-bar"><div class="hud-fill" id="gem-bar" style="width:0%;background:linear-gradient(90deg,#9030e8,#c060ff)"></div></div>
+        <div class="hud-val" id="gem-val" style="color:#c060ff">💎 0</div>
+      </div>
+      <!-- STREAK -->
+      <div class="hud-item">
+        <div class="hud-label">Streak</div>
+        <div class="hud-val" id="streak-val" style="color:var(--orange)">🔥 0</div>
+      </div>
+    </div>
+    <div class="lives" id="lives-hud" style="display:none"></div>
+  </div>
+</div>
+
+<!-- MILESTONE POPUP -->
+<div id="milestone-popup" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%,-50%) scale(0.8);
+  background:var(--panel);border:2px solid #9030e8;border-radius:16px;padding:24px 32px;text-align:center;z-index:9999;
+  box-shadow:0 0 40px rgba(144,48,232,0.5);transition:transform 0.3s,opacity 0.3s;opacity:0">
+  <div id="milestone-icon" style="font-size:40px;margin-bottom:8px">💎</div>
+  <div id="milestone-title" style="font-size:18px;font-weight:700;color:#c060ff;margin-bottom:4px">Gem Milestone!</div>
+  <div id="milestone-sub" style="font-size:13px;color:var(--muted)"></div>
+</div>
+
+<div class="main">
+
+  <!-- ── START SCREEN ── -->
+  <div class="screen active" id="screen-start">
+    <div class="start-card">
+      <div class="start-icon">⚔️</div>
+      <div class="start-title">KNOWLEDGE DUNGEON</div>
+      <div class="start-sub">
+        A Socratic-scaffolded quiz engine for economics students.<br>
+        Wrong answers trigger guided questions — not just "incorrect".<br>
+        <em style="color:var(--purple)">Inspired by PedagogicalRL (ETH-LRE) scaffolding approach.</em>
+      </div>
+
+      <!-- Quiz Source -->
+      <div style="margin-bottom:16px">
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">KKÜ Courses</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:8px">
+          <button class="btn btn-secondary" style="font-size:11px;border-left:3px solid #30d070" onclick="loadCourse('mikroekonomi_quiz.json','Mikroekonomi I')">🟢 Mikroekonomi I</button>
+          <button class="btn btn-secondary" style="font-size:11px;border-left:3px solid #3880f0" onclick="loadCourse('makroekonomi_quiz.json','Makroekonomi I')">🔵 Makroekonomi I</button>
+          <button class="btn btn-secondary" style="font-size:11px;border-left:3px solid #9830e8" onclick="loadCourse('ekonometri_quiz.json','Ekonometri')">🟣 Ekonometri</button>
+          <button class="btn btn-secondary" style="font-size:11px;border-left:3px solid #e08030" onclick="loadCourse('iktisat_politikasi_quiz.json','İkt. Politikası')">🟠 İkt. Politikası</button>
+        </div>
+        <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Other Sources</div>
+        <div style="display:flex;gap:8px;justify-content:center;flex-wrap:wrap">
+          <button class="btn btn-secondary" onclick="loadBuiltIn()">📚 Built-in (Innovation Quiz)</button>
+          <label class="btn btn-secondary" style="cursor:pointer">
+            📁 Load JSON File
+            <input type="file" id="file-input" accept=".json" onchange="loadFile(this)" style="display:none">
+          </label>
+        </div>
+        <div id="quiz-loaded-label" style="font-size:11px;color:var(--green);margin-top:8px"></div>
+      </div>
+
+      <!-- Pedagogy Mode -->
+      <div style="font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Pedagogy Mode</div>
+      <div class="mode-grid">
+        <div class="mode-card selected" id="mode-socratic" onclick="selectMode('socratic')">
+          <div class="mode-icon">🦉</div>
+          <div class="mode-name">Socratic</div>
+          <div class="mode-desc">Guiding questions before reveal</div>
+        </div>
+        <div class="mode-card" id="mode-classic" onclick="selectMode('classic')">
+          <div class="mode-icon">⚡</div>
+          <div class="mode-name">Classic</div>
+          <div class="mode-desc">Immediate right/wrong feedback</div>
+        </div>
+        <div class="mode-card" id="mode-scaffold" onclick="selectMode('scaffold')">
+          <div class="mode-icon">🪜</div>
+          <div class="mode-name">Scaffold</div>
+          <div class="mode-desc">Progressive hints, 3 attempts</div>
+        </div>
+        <div class="mode-card" id="mode-strict" onclick="selectMode('strict')">
+          <div class="mode-icon">⚔️</div>
+          <div class="mode-name">Strict</div>
+          <div class="mode-desc">No hints, one chance, timer</div>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" onclick="startQuiz()" id="start-btn" disabled>Enter Dungeon ⚔️</button>
+    </div>
+  </div>
+
+  <!-- ── QUIZ SCREEN ── -->
+  <div class="screen" id="screen-quiz">
+    <div class="progress-bar-outer">
+      <div class="progress-bar-inner" id="progress-bar"></div>
+    </div>
+
+    <div class="quiz-layout">
+
+      <!-- QUESTION CARD -->
+      <div class="question-card">
+        <div class="question-meta">
+          <span class="q-num" id="q-num">Q1/10</span>
+          <span id="attempts-label" style="font-size:10px;color:var(--muted)"></span>
+          <span class="q-timer" id="q-timer"></span>
+        </div>
+        <div class="question-text" id="q-text">Loading question...</div>
+        <div class="options" id="q-options"></div>
+      </div>
+
+      <!-- SOCRATIC SCAFFOLD BOX -->
+      <div class="scaffold" id="scaffold-box">
+        <div class="scaffold-header">
+          <span id="scaffold-icon">🦉</span>
+          <span id="scaffold-title">Socratic Guide</span>
+        </div>
+        <div class="scaffold-text" id="scaffold-text"></div>
+      </div>
+
+      <!-- RATIONALE -->
+      <div class="rationale" id="rationale-box">
+        <strong id="rationale-verdict"></strong>
+        <div id="rationale-text" style="margin-top:6px"></div>
+      </div>
+
+      <!-- ACTION ROW -->
+      <div class="action-row">
+        <button class="btn btn-hint" id="hint-btn" onclick="showHint()">💡 Hint</button>
+        <button class="btn btn-secondary" id="skip-btn" onclick="skipQuestion()">⏭ Skip</button>
+        <button class="btn btn-primary" id="next-btn" onclick="nextQuestion()" style="display:none">Next ▶</button>
+        <div class="streak-badge" id="streak-display">🔥 0</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ── RESULT SCREEN ── -->
+  <div class="screen" id="screen-result">
+    <div class="result-card">
+      <div class="result-grade" id="result-grade">🏆</div>
+      <div id="result-badge" style="font-size:22px;margin:-8px 0 6px;letter-spacing:4px"></div>
+      <div class="result-score" id="result-score">0 / 0</div>
+      <div class="result-sub" id="result-sub">Quest Complete</div>
+      <div class="result-stats">
+        <div class="rstat"><div class="rstat-val rstat-green" id="r-correct">0</div><div class="rstat-lbl">Correct</div></div>
+        <div class="rstat"><div class="rstat-val rstat-red" id="r-wrong">0</div><div class="rstat-lbl">Wrong</div></div>
+        <div class="rstat"><div class="rstat-val rstat-orange" id="r-hints">0</div><div class="rstat-lbl">Hints Used</div></div>
+      </div>
+      <!-- Rewards summary -->
+      <div id="result-rewards" style="background:rgba(144,48,232,0.08);border:1px solid rgba(144,48,232,0.25);border-radius:10px;
+        padding:10px 16px;margin:12px 0;display:flex;justify-content:center;gap:24px;font-size:13px">
+        <span>⭐ <strong id="r-stars">0</strong> Stars</span>
+        <span>💎 <strong id="r-gems">0</strong> Gems</span>
+        <span>🔥 Best ×<strong id="r-streak">0</strong></span>
+      </div>
+      <div style="display:flex;gap:10px;justify-content:center">
+        <button class="btn btn-primary" onclick="restartQuiz()">🔄 Play Again</button>
+        <button class="btn btn-secondary" onclick="goHome()">🏠 Home</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+// ─── BUILT-IN QUESTIONS ─────────────────────────────────────────────
+const builtInQuiz = {
+  title: "Innovation & Panel Econometrics",
+  questions: [
+    {
+      question: "Which group of emerging markets does Bayar (2022) study for economic complexity and growth?",
+      answerOptions: [
+        { text: "BRICS", isCorrect: false, rationale: "BRICS includes China, Russia, India, Brazil, South Africa — not the CIVETS combination." },
+        { text: "MINT", isCorrect: false, rationale: "MINT = Mexico, Indonesia, Nigeria, Türkiye — different from the study's sample." },
+        { text: "CIVETS", isCorrect: true, rationale: "CIVETS = Colombia, Indonesia, Vietnam, Egypt, Türkiye, South Africa. Correct!" },
+        { text: "E-7", isCorrect: false, rationale: "E-7 is a different set of emerging economies including China and India." }
+      ],
+      hint: "The acronym spells out Colombia, Indonesia, Vietnam, Egypt, Türkiye, South Africa.",
+      socratic: "Before checking: what acronym groups Colombia, Indonesia, Vietnam, Egypt, Türkiye, and South Africa? Can you spell it out?"
+    },
+    {
+      question: "In panel econometrics, why are 'second-generation' unit root tests preferred when analyzing country panels?",
+      answerOptions: [
+        { text: "They are faster to compute", isCorrect: false, rationale: "Computational speed is not the reason — cross-sectional dependence is." },
+        { text: "They account for cross-sectional dependence among countries", isCorrect: true, rationale: "Second-generation tests (CIPS, CADF) handle cross-sectional dependence — when a shock in one country affects others." },
+        { text: "They require smaller sample sizes", isCorrect: false, rationale: "Sample requirements are not the distinguishing feature." },
+        { text: "They only work with balanced panels", isCorrect: false, rationale: "Both generations can work with unbalanced panels." }
+      ],
+      hint: "Think about what happens during a global financial crisis — if one economy is hit, do others stay independent?",
+      socratic: "Imagine the 2008 financial crisis. If the US economy crashes, do European economies remain unaffected? What does this imply for testing unit roots in country panels?"
+    },
+    {
+      question: "What does the Economic Complexity Index (ECI) measure?",
+      answerOptions: [
+        { text: "The total value of a country's exports", isCorrect: false, rationale: "ECI is not about export value but about the diversity and sophistication of exports." },
+        { text: "Energy consumption per unit of GDP", isCorrect: false, rationale: "That would be energy intensity — unrelated to ECI." },
+        { text: "The productive knowledge embedded in a country's export basket", isCorrect: true, rationale: "ECI (Hidalgo & Hausmann) captures the diversity and ubiquity of a country's exports as a proxy for embedded productive knowledge." },
+        { text: "The exchange rate competitiveness index", isCorrect: false, rationale: "ECI = Economic Complexity Index, not exchange rate." }
+      ],
+      hint: "It was developed by Hidalgo & Hausmann. Think 'diversity × sophistication of exports'.",
+      socratic: "Two countries both export $10B worth of goods. Country A mainly exports oil; Country B exports 200 different high-tech products. Which is more 'complex' and why?"
+    },
+    {
+      question: "When should you use the Webb (2023) wild cluster bootstrap instead of standard cluster-robust SEs?",
+      answerOptions: [
+        { text: "When N > 10,000 observations", isCorrect: false, rationale: "Sample size is not the trigger — cluster count is." },
+        { text: "When the number of clusters is small (G < 30)", isCorrect: true, rationale: "Webb (2023) bootstrap is mandatory when G < 30 to avoid under-rejection with cluster-robust SEs. Standard asymptotic theory breaks down." },
+        { text: "When variables are non-stationary", isCorrect: false, rationale: "Non-stationarity calls for cointegration tests, not bootstrap SE methods." },
+        { text: "Only for time-series models", isCorrect: false, rationale: "Webb bootstrap applies to cross-section and panel settings with few clusters." }
+      ],
+      hint: "Think about BRICS (5 countries) or EU-27 subsamples. How many 'clusters' do they provide?",
+      socratic: "You're running a panel model on G = 9 BRICS-T countries with cluster-robust standard errors. The asymptotic theory for cluster SEs assumes G → ∞. What's the problem, and what's the fix?"
+    },
+    {
+      question: "What is the Pesaran CD test used for in panel econometrics?",
+      answerOptions: [
+        { text: "Testing for cointegration between variables", isCorrect: false, rationale: "CD test is not a cointegration test — that's Westerlund or Pedroni." },
+        { text: "Detecting cross-sectional dependence in panel residuals", isCorrect: true, rationale: "Pesaran (2004) CD test checks whether panel residuals are correlated across units — a pre-condition before selecting unit root tests." },
+        { text: "Measuring the Hausman specification test", isCorrect: false, rationale: "The Hausman test compares FE vs RE — different purpose." },
+        { text: "Identifying structural breaks in the panel", isCorrect: false, rationale: "Structural breaks are tested with Bai-Perron or xtbreak." }
+      ],
+      hint: "Before choosing first or second-generation unit root tests, what must you check about your panel?",
+      socratic: "Before running CIPS or IPS, what fundamental assumption must you check — and which test specifically evaluates that assumption?"
+    },
+    {
+      question: "In a CS-ARDL model, what does 'CS' stand for and why does it matter?",
+      answerOptions: [
+        { text: "Cross-Section — accounts for heterogeneous country responses", isCorrect: false, rationale: "Close, but incomplete — CS specifically refers to cross-section augmentation for dependence." },
+        { text: "Cross-Sectionally Augmented — controls for unobserved common factors", isCorrect: true, rationale: "CS-ARDL (Chudik & Pesaran 2015) augments with cross-section means to proxy unobserved common factors, handling CSD in ARDL bounds testing." },
+        { text: "Cluster-Specific — adjusts for within-cluster variation", isCorrect: false, rationale: "That describes cluster-robust methods, not CS augmentation." },
+        { text: "Cointegration-Structural — for long-run structural models", isCorrect: false, rationale: "CS does not stand for cointegration-structural." }
+      ],
+      hint: "Think about common global shocks (oil prices, pandemics) that affect all countries simultaneously.",
+      socratic: "A global pandemic hits all countries simultaneously. This creates correlated residuals across your panel. How would you modify an ARDL model to account for this unobserved common factor?"
+    },
+    {
+      question: "What is the key difference between PMG and MG estimators?",
+      answerOptions: [
+        { text: "PMG uses instrumental variables; MG does not", isCorrect: false, rationale: "Neither is primarily an IV estimator — the distinction is about pooling constraints." },
+        { text: "PMG pools long-run coefficients but allows heterogeneous short-run dynamics; MG allows full heterogeneity", isCorrect: true, rationale: "Pesaran, Shin, Smith (1999): PMG imposes homogeneous long-run coefficients (efficient if correct) while MG allows full country-specific estimates." },
+        { text: "PMG works for balanced panels only; MG for unbalanced", isCorrect: false, rationale: "Both can handle unbalanced panels." },
+        { text: "MG stands for 'Maximum Generalized' estimation", isCorrect: false, rationale: "MG = Mean Group, the simple average of country-specific ARDL estimates." }
+      ],
+      hint: "PMG = Pooled Mean Group; MG = Mean Group. One constrains long-run parameters, the other does not.",
+      socratic: "You believe that in the long run, the effect of FDI on GDP growth is the same across countries, but short-run dynamics differ. Which estimator is more efficient — and what test would you use to validate this pooling assumption?"
+    },
+    {
+      question: "The Bai-Perron (1998) test is used for which purpose?",
+      answerOptions: [
+        { text: "Testing for random effects vs fixed effects", isCorrect: false, rationale: "That is the Hausman test." },
+        { text: "Detecting multiple structural breaks at unknown dates", isCorrect: true, rationale: "Bai-Perron (1998) supF test identifies multiple structural breaks at unknown locations — essential for time series with potential regime changes." },
+        { text: "Correcting for heteroskedasticity in OLS residuals", isCorrect: false, rationale: "Heteroskedasticity correction uses White or HC standard errors." },
+        { text: "Testing Granger causality in panel data", isCorrect: false, rationale: "Granger causality panels use Dumitrescu-Hurlin or Konya tests." }
+      ],
+      hint: "Think: What if the relationship between inflation and growth changed after the 2008 financial crisis? How would you test for it?",
+      socratic: "You suspect the relationship between inflation and output changed around 2008 and again around 2020. You don't know the exact dates. What statistical test would you use, and what is the null hypothesis?"
+    }
+  ]
+};
+
+// ─── KKÜ COURSE QUIZZES (embedded — works offline, no server needed) ─────
+const courseQuizzes = {
+  'mikroekonomi_quiz.json': {
+    title: "Mikroekonomi I — KKÜ İktisadi ve İdari Bilimler",
+    course: "İKT101",
+    questions: [
+      { question:"Bir malın fiyatı arttığında talep edilen miktar azalıyorsa, bu mal hangi talebin özelliğini göstermektedir?", answerOptions:[{text:"Giffen malı",isCorrect:false,rationale:"Giffen mallarında fiyat arttığında talep de artar — bu durum ters eğimli talep eğrisi anlamına gelir."},{text:"Talep yasasına uygun normal bir mal",isCorrect:true,rationale:"Fiyat-miktar arasındaki ters ilişki talep yasasının tanımıdır. Fiyat ↑ → talep ↓, ceteris paribus."},{text:"Veblen malı",isCorrect:false,rationale:"Veblen mallarında fiyat prestij göstergesi olarak işlev görür — yüksek fiyat daha yüksek talep yaratır."},{text:"İkame malı",isCorrect:false,rationale:"İkame malı, başka bir malın fiyatıyla ilgilidir; sorudaki mekanizma o malın kendi fiyatıyla ilgilidir."}], hint:"Talep eğrisinin eğimi neden negatiftir?", socratic:"Bir malın fiyatı 10₺'den 15₺'ye çıktığında daha az satın alıyorsunuz. Bu davranışı hangi iki etki açıklar? (İkame ve gelir etkisini düşünün.)" },
+      { question:"Fiyat esnekliği katsayısının mutlak değeri 1'den büyük olduğunda talep nasıl tanımlanır?", answerOptions:[{text:"Esnek olmayan talep (inelastic)",isCorrect:false,rationale:"|Ed| < 1 olduğunda talep esnek değildir."},{text:"Birim esnek talep",isCorrect:false,rationale:"Birim esneklikte |Ed| = 1; toplam hâsılat fiyattan bağımsızdır."},{text:"Esnek talep (elastic)",isCorrect:true,rationale:"|Ed| > 1 olduğunda talep esnektir. %1'lik fiyat artışı %1'den fazla miktar azalmasına yol açar; toplam hâsılat düşer."},{text:"Tamamen esnek talep",isCorrect:false,rationale:"Tamamen esnek talepte |Ed| = ∞; yatay bir talep eğrisi söz konusudur."}], hint:"Ed = (% ΔQ) / (% ΔP). Mutlak değer 1'den büyükse miktar değişimi fiyat değişiminden oransal olarak daha büyük demektir.", socratic:"Bir ürünün fiyatını %10 artırdığınızda satışlar %20 düşüyor. Bu durumda toplam gelirinize ne olur? Neden?" },
+      { question:"Marjinal fayda azalma yasasına göre, bir tüketici belirli bir malı tüketmeye devam ettikçe ne olur?", answerOptions:[{text:"Her birimin sağladığı ek fayda artar",isCorrect:false,rationale:"Bu marjinal faydanın arttığı durumdur — azalan marjinal fayda yasasının tam tersidir."},{text:"Her birimin sağladığı ek fayda azalır",isCorrect:true,rationale:"Gossen'in birinci yasası: tüketim arttıkça ek birimden elde edilen fayda giderek düşer. Bu, indi rim talebinin temel açıklamasıdır."},{text:"Toplam fayda sıfıra düşer",isCorrect:false,rationale:"Toplam fayda azalmaz; marjinal fayda azalır. Toplam fayda yalnızca marjinal fayda negatif olduğunda düşer."},{text:"Fiyat eşit oranda düşer",isCorrect:false,rationale:"Fiyat piyasada belirlenir; bireysel tüketim kararı piyasa fiyatını değiştirmez."}], hint:"Birinci dilim pizza çok lezzetli; altıncı dilim zorlama. Hangi yasadır bu?", socratic:"Bir öğrenci sabah açken 5 adet simit yerken akşam tok olduğunda yalnızca 1 adet yiyebiliyor. Marjinal fayda ve talep eğrisi bu durumu nasıl açıklar?" },
+      { question:"Tam rekabet piyasasında uzun dönem dengesinde ekonomik kâr neden sıfıra eşittir?", answerOptions:[{text:"Hükümet vergi koyduğu için",isCorrect:false,rationale:"Hükümet müdahalesi tam rekabet modelinin varsayımlarıyla çelişir; kâr sıfırlanması farklı bir mekanizmadan kaynaklanır."},{text:"Pozitif kâr yeni firmaları çeker; arz artar ve fiyat düşer",isCorrect:true,rationale:"Tam rekabette giriş-çıkış serbesttir. Pozitif ekonomik kâr → yeni firmalar girer → piyasa arzı artar → fiyat P=LAC minimum'a düşer → ekonomik kâr = 0."},{text:"Firmalar birbirleriyle anlaşarak fiyatı sabit tutar",isCorrect:false,rationale:"Fiyat sabitleme tam rekabette değil oligopol/kartelde görülür."},{text:"Tüketiciler daha düşük fiyat talep eder",isCorrect:false,rationale:"Tüketici talebi tek başına piyasa fiyatını uzun dönem dengesine getirmez; firma girişi mekanizması belirleyicidir."}], hint:"Giriş-çıkış serbestisi tam rekabetin tanımlayıcı özelliğidir. Yeni firmalar neden girer?", socratic:"Bir şehirde yeni bir pizza restoranı açılıyor ve büyük kâr ediyor. Tam rekabet modelinde 5 yıl sonra o restoran hâlâ kâr edebilir mi? Neden?" },
+      { question:"Çapraz fiyat esnekliği pozitif ise iki mal arasındaki ilişki nedir?", answerOptions:[{text:"Tamamlayıcı mallar",isCorrect:false,rationale:"Tamamlayıcı mallarda çapraz fiyat esnekliği negatiftir: X'in fiyatı artarsa Y'ye talep de düşer (örn. araba ve benzin)."},{text:"İkame mallar",isCorrect:true,rationale:"İkame mallarda EXY > 0: X'in fiyatı artarsa tüketiciler Y'ye yönelir ve Y'ye talep artar. Örn: tereyağı ↑ fiyat → margarinе talep ↑."},{text:"Bağımsız mallar",isCorrect:false,rationale:"Bağımsız mallarda çapraz fiyat esnekliği sıfıra yakındır; birinin fiyatı diğerinin talebini etkilemez."},{text:"Giffen malları",isCorrect:false,rationale:"Giffen malları kendi fiyat esnekliğiyle tanımlanır; çapraz esneklik ayrı bir kavramdır."}], hint:"EXY = (% ΔQY) / (% ΔPX). İşaret yönü ilişki türünü belirler.", socratic:"Çay fiyatı arttığında kahve satışları artıyor. Bunu çapraz fiyat esnekliği ile formüle edin ve sonucun işaretini yorumlayın." },
+      { question:"Monopolde fiyat ve marjinal hasılat arasındaki ilişki nasıldır?", answerOptions:[{text:"Fiyat marjinal hasılatın altındadır",isCorrect:false,rationale:"Monopolde talep eğrisi aşağı eğimlidir; ek birim satmak için fiyat düşürülmek zorundadır — bu MR'ı P'nin altına iter."},{text:"Fiyat her zaman marjinal hasılata eşittir",isCorrect:false,rationale:"Bu tam rekabet durumudur: yatay talep eğrisinde P=MR. Monopolde bu eşitlik geçerli değildir."},{text:"Fiyat marjinal hasılatın üzerindedir",isCorrect:true,rationale:"Monopolde P > MR her zaman. Ek birim satmak için tüm birimlerin fiyatı düşürülmesi gerekir; bu nedenle MR, talep eğrisinin altında ve daha dik seyreder."},{text:"İlişki talep esnekliğine bağlıdır; kesin söylenemez",isCorrect:false,rationale:"Esneklik MR'ın büyüklüğünü etkiler ancak monopolde P>MR her zaman geçerlidir."}], hint:"Doğrusal talep eğrisinde MR eğrisi talebin iki katı eğimliyle çizilir.", socratic:"Monopol firma neden P=MC'de üretmez? MC=MR koşulu nasıl yorumlanır ve neden bu noktada refah kaybı oluşur?" },
+      { question:"Tüketici dengesi hangi koşulda sağlanır?", answerOptions:[{text:"Toplam harcamanın toplam faydayı maksimize etmesi",isCorrect:false,rationale:"Toplam harcama bütçe kısıtını ifade eder; denge maksimal toplam fayda koşuluyla tanımlanır ancak bu ifade yanlış formüle edilmiştir."},{text:"Her maldan harcanan son liranın marjinal faydası eşit olduğunda",isCorrect:true,rationale:"Optimum: MUA/PA = MUB/PB. Eğer mal A'dan harcanan son liranın faydası B'den büyükse kaynak A'ya kaydırılmalıdır — ta ki eşitlik sağlanana dek."},{text:"Fiyatların birbirine eşit olması",isCorrect:false,rationale:"Fiyat eşitliği tüketici tercihlerini ve marjinal faydaları hesaba katmaz; denge koşulu değildir."},{text:"Toplam faydanın marjinal faydaya eşit olması",isCorrect:false,rationale:"Bu matematiksel olarak anlamsızdır; toplam ve marjinal fayda farklı büyüklüklerdir."}], hint:"Bütçeyi mallar arasında nasıl dağıtırsınız? 'Son lira' prensibi.", socratic:"100₺ bütçenizle elma ve kitap alıyorsunuz. Elmadan son harcanan 10₺ 8 birim fayda, kitaptan 12 birim fayda sağlıyor. Ne yapmalısınız?" },
+      { question:"Kısa dönemde bir firmanın arzı hangi koşulda piyasaya sunmayı bırakmasına yol açar?", answerOptions:[{text:"Fiyat ortalama toplam maliyetin altına düştüğünde",isCorrect:false,rationale:"Fiyat ATC'nin altında olsa bile firma kısa dönemde üretmeye devam edebilir — değişken maliyetleri karşılayabildiği sürece."},{text:"Fiyat ortalama değişken maliyetin altına düştüğünde",isCorrect:true,rationale:"Kapatma noktası: P < AVC. Bu durumda firma üretmek yerine fabrikayı kapatmak daha az zarar verir — en azından sabit maliyetleri karşılamak için değişken maliyetleri bile geri kazanamıyordur."},{text:"Fiyat marjinal maliyetin altına düştüğünde",isCorrect:false,rationale:"P < MC iken firma zaten MC=P'yi aşan birimi üretmemeli; ama kapatma kararı AVC eşiğiyle belirlenir."},{text:"Fiyat sabit maliyetlerin altına düştüğünde",isCorrect:false,rationale:"Sabit maliyetler kısa dönemde batık maliyettir; kapatma kararında dikkate alınmaz."}], hint:"Kapatma noktası (shutdown point) = P = AVC minimum. Neden AVC belirleyicidir?", socratic:"Bir fabrika sabit kira 5.000₺, değişken maliyetler 3.000₺ olan 1.000 birim üretirken fiyat 2.8₺'ye düştü. Fabrika çalışmaya devam etmeli mi?" },
+      { question:"Dışsal negatif bir dışsallık (negative externality) varlığında piyasa dengesi refah açısından nasıl değerlendirilir?", answerOptions:[{text:"Piyasa denge miktarı sosyal optimumun altındadır",isCorrect:false,rationale:"Negatif dışsallıkta özel maliyet < sosyal maliyet; özel arz sosyal arzın altında. Bu nedenle denge fiyatı çok düşük, miktar çok yüksektir."},{text:"Piyasa denge miktarı sosyal optimumun üzerindedir",isCorrect:true,rationale:"Kirlilik örneği: fabrika sosyal maliyeti (SMC) görmezden gelir, yalnızca PMC'yi hesaba katar. SMC > PMC olduğunda denge üretim sosyal optimumun üzerinde → refah kaybı (dead weight loss)."},{text:"Piyasa her zaman sosyal optimumu bulur",isCorrect:false,rationale:"Bu etkin piyasa sonucudur; dışsallıklar piyasa başarısızlığı yaratır."},{text:"Denge miktarı ve fiyat değişmez",isCorrect:false,rationale:"Dışsallık varlığında denge, sosyal değerlerden sapan fiyat sinyalleri üretir."}], hint:"SMC = PMC + Marginal External Cost. Denge nerede oluşur?", socratic:"Bir çimento fabrikası hava kirliliği yaratıyor. Pigou vergisi nasıl hesaplanır ve piyasaya ne kadar etkisi olur? Coase teoremi alternatif olarak işler mi?" },
+      { question:"Coase Teoremi'ne göre dışsallık sorunu nasıl çözülebilir?", answerOptions:[{text:"Yalnızca devlet vergisi ve sübvansiyonlarıyla",isCorrect:false,rationale:"Bu Pigou yaklaşımıdır; Coase hükümet müdahalesi yerine özel müzakereyi önerir."},{text:"Mülkiyet hakları iyi tanımlanmış ve işlem maliyetleri düşükse özel müzakereyle",isCorrect:true,rationale:"Coase (1960): İşlem maliyeti = 0 ve mülkiyet hakları net ise dışsallık taraflar arasında gönüllü pazarlıkla sosyal optimuma ulaşır — mülkiyet hakkının kime ait olduğundan bağımsız olarak."},{text:"Piyasayı kapatarak",isCorrect:false,rationale:"Piyasayı kapatmak sosyal faydayı da sıfırlar; sosyal optimum bulmak hedeflenir."},{text:"Tüketicilere yanlı fiyat uygulanarak",isCorrect:false,rationale:"Bu fiyat ayrımcılığıdır; Coase Teoremi tamamen farklı bir mekanizmayı tanımlar."}], hint:"Coase iki koşul öngörür: net mülkiyet hakkı + düşük işlem maliyeti.", socratic:"Bir fabrika ile balıkçı köyü arasında kirlilik sorunu var. Coase Teoremi'ne göre hangi koşullarda hükümet müdahalesine gerek kalmaz? Gerçek dünyada bu koşullar neden nadiren sağlanır?" }
+    ]
+  },
+  'makroekonomi_quiz.json': {
+    title: "Makroekonomi I — KKÜ İktisadi ve İdari Bilimler",
+    course: "İKT102",
+    questions: [
+      { question:"Gayri Safi Yurt İçi Hasıla (GSYİH) hesaplanırken aşağıdakilerden hangisi dahil edilmez?", answerOptions:[{text:"Hane halkının tüketim harcamaları",isCorrect:false,rationale:"C (tüketim), GSYİH = C + I + G + (X−M) formülünün en büyük bileşenidir; dahil edilir."},{text:"Kullanılmış bir araba satışı",isCorrect:true,rationale:"Kullanılmış mal satışları mevcut üretimi değil yalnızca mülkiyet transferini ifade eder; cari dönem GSYİH'ye katkı yapmaz."},{text:"Devletin altyapı harcamaları",isCorrect:false,rationale:"G (devlet harcamaları) transfer ödemeleri hariç GSYİH'ye dahildir."},{text:"Yeni makine ve ekipman yatırımları",isCorrect:false,rationale:"I (yatırım) GSYİH bileşenlerinden biridir; gayri safi sabit sermaye oluşumunu kapsar."}], hint:"GSYİH yalnızca belirli bir dönemde üretilen nihai mal ve hizmetlerin piyasa değerini ölçer.", socratic:"İkinci el bir telefon 5.000₺'ye alınıp 6.000₺'ye satıldığında GSYİH ne kadar artar? Neden sadece 1.000₺ değil de sıfır?" },
+      { question:"Toplam talep eğrisi (AD) sola kayarken toplam arz eğrisi (AS) değişmiyorsa ekonomide ne beklenir?", answerOptions:[{text:"Fiyat düzeyi yükselir, reel GSYİH düşer",isCorrect:false,rationale:"Bu durum AD sağa kayarken oluşur; talep artışı hem fiyat hem çıktıyı yükseltir."},{text:"Fiyat düzeyi düşer, reel GSYİH düşer",isCorrect:true,rationale:"AD sola kayması deflasyonist bir boşluk yaratır: denge fiyatı ve çıktı birlikte düşer — resesyon ve deflasyon riski."},{text:"Fiyat düzeyi değişmez, reel GSYİH artar",isCorrect:false,rationale:"Bu durum keynesyen bölgede AS sağa kayarken gerçekleşir."},{text:"Fiyat düzeyi artar, reel GSYİH değişmez",isCorrect:false,rationale:"Bu durum uzun dönem AS (LRAS) üzerindeyken maliyet kaynaklı şokta görülür."}], hint:"AD-AS modelinde kesişim noktasını düşünün; AD sola kayarsa denge noktası nereye gider?", socratic:"2008 küresel kriziyle birlikte hane halklarının harcamaları keskin biçimde düştü. Bu AD-AS diyagramında nasıl gösterilir ve politika yapıcılar ne yapabilir?" },
+      { question:"Para çarpanı m = 1/rr ile ifade edildiğinde, zorunlu karşılık oranı %20 ise para çarpanı kaçtır?", answerOptions:[{text:"2",isCorrect:false,rationale:"m = 1/0.20 değil; 1/0.50 = 2 olur ancak rr = 0.50 gerekir."},{text:"4",isCorrect:false,rationale:"m = 4 için rr = 0.25 gerekir."},{text:"5",isCorrect:true,rationale:"m = 1 / 0.20 = 5. Merkez bankası 1₺ baz para yarattığında bankacılık sistemi teorik olarak 5₺'ye kadar para arzı oluşturabilir."},{text:"20",isCorrect:false,rationale:"m = 20 için rr = 0.05 gerekir; %20 karşılık oranıyla bu değere ulaşılamaz."}], hint:"Para çarpanı = 1 ÷ zorunlu karşılık oranı. Oranı ondalığa çevirin.", socratic:"Merkez bankası zorunlu karşılık oranını %10'dan %20'ye yükseltirse piyasadaki para miktarı ne yönde değişir? Bu hangi para politikası aracıdır?" },
+      { question:"Phillips Eğrisi kısa dönemde hangi iki değişken arasındaki ters ilişkiyi gösterir?", answerOptions:[{text:"Enflasyon ve faiz oranı",isCorrect:false,rationale:"Bu ilişki Fisher denklemine atfedilir."},{text:"Enflasyon ve işsizlik",isCorrect:true,rationale:"A.W. Phillips (1958): enflasyon ile işsizlik arasında kısa dönemde negatif bir ilişki bulmuştur."},{text:"GSYİH büyümesi ve faiz oranı",isCorrect:false,rationale:"Bu IS-LM ilişkisidir."},{text:"İhracat ve döviz kuru",isCorrect:false,rationale:"Bu Marshall-Lerner koşuluyla ilgilidir."}], hint:"İngiliz iktisat tarihçisi A.W. Phillips 1958'de Birleşik Krallık verileriyle bu ilişkiyi ampirik olarak gösterdi.", socratic:"1970'lerde hem yüksek enflasyon hem yüksek işsizlik (stagflasyon) yaşandı. Bu durum klasik Phillips Eğrisi'ni nasıl çürütür ve Friedman ne önerdi?" },
+      { question:"IS-LM modelinde genişletici maliye politikası kısa dönemde denge faiz oranını nasıl etkiler?", answerOptions:[{text:"Faiz oranı düşer",isCorrect:false,rationale:"Bu para politikasının genişletici etkisidir."},{text:"Faiz oranı değişmez",isCorrect:false,rationale:"IS kayması ile LM sabitken yeni denge noktasında faiz değişir."},{text:"Faiz oranı yükselir",isCorrect:true,rationale:"G ↑ → IS sağa → daha yüksek denge geliri + daha yüksek faiz. Crowding-out etkisi."},{text:"Faiz oranı belirsizdir",isCorrect:false,rationale:"Standart IS-LM'de IS sağa kayması faizi yukarı iter."}], hint:"IS eğrisi mal piyasasını, LM eğrisi para piyasasını gösterir.", socratic:"Crowding-out etkisi tam olduğunda (LM dikey) devlet harcamaları artırılırsa net GSYİH değişimi sıfır olur. Bu hangi koşulda gerçekleşir?" },
+      { question:"Solow Büyüme Modeli'nde 'altın kural' tasarruf oranı neyi maksimize eder?", answerOptions:[{text:"Uzun dönem çıktı düzeyini",isCorrect:false,rationale:"Maksimum uzun dönem çıktısı sonsuz tasarruf oranıyla elde edilir; ama bu tüketimi sıfırlar."},{text:"Uzun dönem kişi başına tüketimi",isCorrect:true,rationale:"Altın kural: MPK = δ (amortisman) koşulunda denge tüketimi maksimize edilir; c* = f(k*) − δk*."},{text:"İşgücü büyüme hızını",isCorrect:false,rationale:"İşgücü büyümesi n Solow'da dışsal kabul edilir."},{text:"Teknolojik ilerleme hızını",isCorrect:false,rationale:"Teknoloji A da dışsal; Solow modeli neden A büyüdüğünü açıklamaz."}], hint:"Tüketim = Çıktı − Yatırım. Denge tüketimi maksimize edilmek istendiğinde marjinal ürün koşulu nedir?", socratic:"Bir ülkede tasarruf oranı altın kural değerinin üzerindeyse politika yapıcı ne yapmalı? Karar vermek neden etik boyut taşır?" },
+      { question:"Mundell-Fleming modelinde tam sermaye hareketliliği altında sabit döviz kuru rejiminde genişletici para politikasının etkisi nedir?", answerOptions:[{text:"Çıktı artar, döviz kuru değişmez",isCorrect:false,rationale:"Para arzı artışı faizi düşürür → sermaye çıkışı → döviz kurunu korumak için MB döviz satar → para arzı daralır → başlangıç noktasına döner."},{text:"Para politikası etkisizdir; çıktı değişmez",isCorrect:true,rationale:"Sabit kur + tam sermaye hareketi: merkez bankası bağımsız para politikası yürütemez (impossible trinity)."},{text:"Çıktı düşer, döviz değer kazanır",isCorrect:false,rationale:"Sabit kur altında kur değişmez; müdahale zorunludur."},{text:"Çıktı artar, döviz değer kaybeder",isCorrect:false,rationale:"Bu esnek kur rejimindeki para politikası etkisidir."}], hint:"Mundell-Fleming'de kur rejimi para politikasının etkinliğini belirler. 'İmkânsız üçlü' kısıtını hatırlayın.", socratic:"Arjantin 2001 krizinde dolara sabit kur rejimini korurken faizleri düşüremedi. Mundell-Fleming bunu nasıl açıklar?" },
+      { question:"Keynes'in 'likidite tuzağı' kavramı hangi durumu tanımlar?", answerOptions:[{text:"Faiz oranları çok yüksek olduğundan bireylerin borçlanamadığı durum",isCorrect:false,rationale:"Bu kredi kısıtlamasıdır; likidite tuzağı faizin sıfıra yakın olduğu durumu tanımlar."},{text:"Nominal faiz sıfıra yaklaştığında para politikasının etkisiz kaldığı durum",isCorrect:true,rationale:"Faiz ≈ 0 iken tahvil fiyatları maksimumda; bireyler nakit tutmayı tercih eder. Para arzı artışı harcamayı uyarmaz — para politikası etkisizleşir."},{text:"Bankacılık sisteminin kredileri piyasaya aktaramadığı durum",isCorrect:false,rationale:"Bu kredi kanalının çökmesidir; Keynes'in orijinal kavramından farklı."},{text:"Hane halklarının tüm geliri tasarruf ettiği durum",isCorrect:false,rationale:"Marjinal tasarruf eğiliminin 1 olması farklı bir kavramdır."}], hint:"Japon ekonomisi 1990'larda sıfır faiz politikasına rağmen canlanamadı.", socratic:"Merkez bankası faizi sıfıra indirdi ama ekonomi canlanmıyor. Keynes bu durumda ne önerir? Neden maliye politikası ön plana geçer?" },
+      { question:"Satın Alma Gücü Paritesi (SGP/PPP) teorisine göre uzun dönemde döviz kuru nasıl belirlenir?", answerOptions:[{text:"İki ülke arasındaki faiz farklılıklarıyla",isCorrect:false,rationale:"Bu Faiz Paritesi Koşulu (UIP/CIP)'dur."},{text:"İki ülkedeki fiyat düzeylerinin oranına eşitlenir",isCorrect:true,rationale:"SGP: E = P_yurt içi / P_yabancı. Tek fiyat yasası. Uzun dönemde kur sapmaları arbitrajla kapanır."},{text:"Merkez bankasının döviz rezervleriyle",isCorrect:false,rationale:"Rezervler sabit kur rejimlerinde kuru savunmak için kullanılır."},{text:"Cari açık ve sermaye hareketleri dengesiyle",isCorrect:false,rationale:"Bu ödemeler dengesi yaklaşımıdır."}], hint:"Big Mac Index SGP'nin popüler uygulamasıdır.", socratic:"TL/USD kuru 2010'da ~1.5, 2024'te ~32 oldu. SGP teorisi bu hareketi nasıl açıklar? Hangi ülkede enflasyon daha yüksekti?" },
+      { question:"Reel konjonktür teorisine (RBC) göre ekonomik dalgalanmaların temel kaynağı nedir?", answerOptions:[{text:"Yetersiz toplam talep",isCorrect:false,rationale:"Bu Keynesyen açıklamadır."},{text:"Para arzındaki öngörülmemiş değişimler",isCorrect:false,rationale:"Bu Monetarist (Friedman) görüşüdür."},{text:"Teknoloji ve üretkenlik şokları",isCorrect:true,rationale:"Kydland-Prescott (1982) Nobel: RBC'de dalgalanmalar teknolojik şoklara optimal tepkilerdir."},{text:"Sendikaların ücret katılıkları",isCorrect:false,rationale:"Ücret katılıkları Yeni Keynesyen modellerin özelliğidir."}], hint:"Finn Kydland ve Edward Prescott 2004 Nobel Ödülü'nü RBC katkıları için aldı.", socratic:"RBC modelinde bir resesyon optimal mı yoksa piyasa başarısızlığı mı? Hükümetin müdahalesi bu görüşe göre ne sağlar?" }
+    ]
+  },
+  'ekonometri_quiz.json': {
+    title: "Ekonometri — KKÜ İktisadi ve İdari Bilimler",
+    course: "İKT301",
+    questions: [
+      { question:"OLS tahmincisinin BLUE olması için Gauss-Markov koşullarından hangisi ZORUNLU değildir?", answerOptions:[{text:"Hata terimlerinin sıfır ortalamaya sahip olması",isCorrect:false,rationale:"E(u_i) = 0 Gauss-Markov'un temel koşullarından biridir."},{text:"Hata terimlerinin normal dağılması",isCorrect:true,rationale:"Normal dağılım Gauss-Markov için zorunlu değildir — hipotez testleri için gereklidir. Gauss-Markov: doğrusallık, sıfır ortalama, homoscedasticity, seri bağımsızlık."},{text:"Hata varyansının sabit olması (homoscedasticity)",isCorrect:false,rationale:"Var(u_i) = σ² Gauss-Markov'un üçüncü koşuludur."},{text:"Hata terimlerinin birbirleriyle korelasyonsuz olması",isCorrect:false,rationale:"Cov(u_i, u_j) = 0 (i ≠ j) dördüncü Gauss-Markov koşuludur."}], hint:"BLUE için beş Gauss-Markov koşulu vardır. İstatistiksel çıkarım için ek varsayım gerekir ama BLUE için değil.", socratic:"Örneklem büyüklüğü n=1000 olduğunda hata terimleri normal dağılmasa bile t-istatistiği kullanabilir miyiz? Büyük örneklem teorisi burada ne rol oynar?" },
+      { question:"Bir regresyonda omitted variable bias ne zaman oluşur?", answerOptions:[{text:"Modele çok fazla değişken eklendiğinde",isCorrect:false,rationale:"Fazla değişken çoklu doğrusallık ve verimlilik kaybına yol açar; OVB bunun tersidir."},{text:"Dışarıda bırakılan değişken hem bağımlı değişkenle hem bağımsız değişkenle korelasyonlu olduğunda",isCorrect:true,rationale:"OVB = (korelasyon(X, Z)) × (β_Z). Atlanmış değişken Z hem Y ile hem X ile ilişkiliyse OLS tahmincisi sapmalı ve tutarsız olur."},{text:"Bağımsız değişkenler birbiriyle yüksek korelasyonlu olduğunda",isCorrect:false,rationale:"Bu çoklu doğrusallık (multicollinearity) sorunudur; standart hatalar şişer ama OLS sapmasız kalır."},{text:"Hata terimi heteroskedastik olduğunda",isCorrect:false,rationale:"Heteroskedastisite OLS'nin verimliliğini bozar ama tahmincinin kendisi sapmasız kalabilir."}], hint:"Formül: E[β̂_1] = β_1 + β_2 × (kovaryans(X,Z)/Var(X)).", socratic:"Eğitim düzeyi ve deneyim dahil ücret regresyonunda 'yetenek' değişkenini dışarıda bıraktığınızı düşünün. Yeteneğin eğitimle pozitif, ücretle pozitif korelasyonu varsa eğitim katsayısı ne yönde sapmalı olur?" },
+      { question:"Bir zaman serisinin durağan olup olmadığını test etmek için en yaygın kullanılan test hangisidir?", answerOptions:[{text:"White testi",isCorrect:false,rationale:"White testi heteroskedastisite için kullanılır."},{text:"Augmented Dickey-Fuller (ADF) testi",isCorrect:true,rationale:"ADF testi, H₀: birim kök var (I(1)), H₁: durağan. Serilerin entegrasyon mertebesini belirlemek için standart başlangıç noktasıdır."},{text:"Breusch-Godfrey testi",isCorrect:false,rationale:"BG testi otokorelasyon için."},{text:"Ramsey RESET testi",isCorrect:false,rationale:"RESET testi model yanlış kurgusu için kullanılır."}], hint:"H₀: birim kök var. Hangi koşulda seriyi fark alarak durağanlaştırabilirsiniz?", socratic:"ADF testi %5 anlamlılıkta H₀'ı reddedemedi. Bir sonraki adım ne olmalıdır? KPSS testi burada nasıl tamamlayıcı bir rol üstlenir?" },
+      { question:"Engle-Granger eşbütünleşme testinin temel mantığı nedir?", answerOptions:[{text:"İki değişken arasındaki nedensellik yönünü belirler",isCorrect:false,rationale:"Nedensellik Granger nedensellik testi ile sınanır."},{text:"İki I(1) serisi arasındaki doğrusal kombinasyonun I(0) olup olmadığını sınar",isCorrect:true,rationale:"Engle-Granger (1987): Y_t ve X_t her ikisi I(1) ise ve artıklar û_t ~ I(0) ise değişkenler eşbütünleşiktir."},{text:"Serinin mevsimsel bileşenini tespit eder",isCorrect:false,rationale:"Mevsimsel ayrıştırma X-13ARIMA-SEATS gibi tekniklerle yapılır."},{text:"Regresyon modelinin doğrusal olmayan uyumunu değerlendirir",isCorrect:false,rationale:"Bu Ramsey RESET veya kernel regresyon gibi araçların görevidir."}], hint:"Eşbütünleşme varsa hata düzeltme modeli (ECM) kurulabilir.", socratic:"Türkiye'de GSYİH ve CO₂ emisyonu her ikisi de I(1). Eşbütünleşik olduklarını buldunuz. Bu EKC hipotezi için ne anlama gelir?" },
+      { question:"Panel veri analizinde Hausman testi hangi seçim için kullanılır?", answerOptions:[{text:"Sabit etkiler (FE) ile rassal etkiler (RE) arasında seçim",isCorrect:true,rationale:"Hausman (1978): H₀ — RE tutarlı ve etkin; H₁ — yalnızca FE tutarlı. Küçük p → FE tercih edilir."},{text:"OLS ile GLS arasında seçim",isCorrect:false,rationale:"OLS vs GLS seçimi heteroskedastisite veya otokorelasyon varlığında yapılır."},{text:"Optimal gecikme uzunluğunu belirlemek için",isCorrect:false,rationale:"Gecikme seçimi AIC, SIC, HQIC gibi bilgi kriterleriyle yapılır."},{text:"Zaman ve birey etkilerinin birleşik anlamlılığını sınamak için",isCorrect:false,rationale:"Bu iki yönlü sabit etkiler modelinde F-testi ile yapılır."}], hint:"FE her zaman tutarlıdır ama RE etkin. Hausman farkını istatistiksel olarak değerlendirir.", socratic:"Hausman testi p = 0.02 verdi ve FE tercih ettiniz. Ancak N=8 ülke ve T=30 yıl. Driscoll-Kraay standart hatalarının rolü nedir?" },
+      { question:"Araç değişkeni (IV) yaklaşımında 'zayıf araç' (weak instrument) sorunu ne anlama gelir?", answerOptions:[{text:"Araç değişkeni hata terimiyle korelasyonludur",isCorrect:false,rationale:"Bu 'geçersiz araç' sorunudur — dışsallık ihlali."},{text:"Araç değişkeninin endojen değişkeni yeterince açıklayamaması",isCorrect:true,rationale:"Zayıf araç: Corr(Z, X) ≈ 0 → 2SLS sapmalı ve tutarsız. Birinci aşama F-istatistiği < 10 olduğunda zayıf araç riski yüksektir (Staiger-Stock eşiği)."},{text:"Araç değişkeninin bağımlı değişkenle doğrudan ilişkili olması",isCorrect:false,rationale:"Bu dışsallık koşulunun (exclusion restriction) ihlalidir."},{text:"Araç sayısının endojen değişken sayısından az olması",isCorrect:false,rationale:"Bu 'yetersiz tanımlama' (under-identification) sorunudur."}], hint:"Birinci aşama regresyonun F-istatistiğini kontrol edin. Stock-Yogo eşiği nedir?", socratic:"Eğitimin ücret üzerine etkisini tahmin etmek istiyorsunuz ve doğum çeyreği araç değişkeni olarak kullanıyorsunuz (Angrist-Krueger 1991). Bu araç geçerli midir?" },
+      { question:"Fark-fark (DiD) tahmincisinin geçerliliği için kritik varsayım hangisidir?", answerOptions:[{text:"Tedavi ve kontrol grubu aynı boyutlarda olmalıdır",isCorrect:false,rationale:"Grup boyutları DiD geçerliliğini belirlemez."},{text:"Paralel eğilimler — müdahale olmaksızın her iki grup aynı eğilimi izlerdi",isCorrect:true,rationale:"Paralel eğilim ihlal edilirse nedensellik yorumu geçersizleşir; olay öncesi paralel eğilim testleri ile kontrol edilir."},{text:"Tedavi grubunun rastgele seçilmesi",isCorrect:false,rationale:"DiD zaten rastgele olmayan tedavi atamalarını ele almak için geliştirilmiştir."},{text:"Örneklem büyüklüğünün 1000'i aşması",isCorrect:false,rationale:"Paralel eğilim varsayımı DiD'in tanımsal gerekliliğidir."}], hint:"Olay öncesi dönemde tedavi ve kontrol grubu için aynı trendin geçerli olduğunu grafik ve test ile göstermeniz beklenir.", socratic:"2020 pandemi kapanmalarının küçük işletme gelirleri üzerine etkisini DiD ile tahmin etmek istiyorsunuz. Paralel eğilim varsayımını nasıl test edersiniz?" },
+      { question:"Lojistik regresyonda katsayının yorumu nasıldır?", answerOptions:[{text:"Bağımlı değişkenin olasılığındaki mutlak değişim",isCorrect:false,rationale:"Olasılıktaki mutlak değişim marjinal etki (dy/dx) ile hesaplanır."},{text:"Bağımsız değişken bir birim arttığında log-odds oranındaki değişim",isCorrect:true,rationale:"Lojistik regresyonda β: log(p/(1−p)) = α + βX. e^β ise odds oranıdır (OR)."},{text:"Bağımlı değişkenin ortalama değerindeki değişim",isCorrect:false,rationale:"Bu OLS katsayısının yorumudur."},{text:"Hata teriminin varyansındaki değişim",isCorrect:false,rationale:"Bu heteroskedastisite ile ilgilidir."}], hint:"e^β odds oranıdır. OR > 1 bağımsız değişkenin olayı artırdığını, OR < 1 azalttığını gösterir.", socratic:"Lojistik regresyonda 'haftalık çalışma saati' katsayısı 0.15 bulundu. e^0.15 ≈ 1.16. Bu nasıl yorumlanır?" },
+      { question:"Pesaran'ın (2007) CIPS birim kök testi neden ikinci nesil testler arasında sayılır?", answerOptions:[{text:"Daha büyük örneklem gerektirdiği için",isCorrect:false,rationale:"Örneklem büyüklüğü nesil sınıflandırmasını belirlemez."},{text:"Kesitler arası bağımlılığı (CSD) hesaba kattığı için",isCorrect:true,rationale:"IPS, LLC gibi birinci nesil testler CSD'yi görmezden gelir; CIPS her birim için regresyona yatay kesit ortalamalarını ekleyerek ortak faktörleri kontrol altına alır."},{text:"Yapısal kırılmaları tespit ettiği için",isCorrect:false,rationale:"Yapısal kırılma içeren testler Zivot-Andrews veya Panel KPSS varyantlarıdır."},{text:"Yalnızca dengeli panel veri için çalıştığı için",isCorrect:false,rationale:"Dengeli/dengesiz panel CIPS'in nesil sınıflandırmasıyla ilgili değildir."}], hint:"Pesaran (2004) CD testi önce CSD'yi sınar, ardından CIPS uygulanır.", socratic:"36 OECD ülkesi için CO₂ verisini analiz ediyorsunuz. IPS testi I(0), CIPS ise I(1) buluyor. Hangisine güvenirsiniz ve neden?" },
+      { question:"Heteroskedastisite varlığında OLS tahmincisi için doğru olan ifade hangisidir?", answerOptions:[{text:"OLS tahmincisi sapmalı ve tutarsız olur",isCorrect:false,rationale:"Heteroskedastisite sapmasızlığı bozmaz."},{text:"OLS sapmasız kalır ancak standart hatalar hatalı hesaplanır",isCorrect:true,rationale:"Heteroskedastisite: OLS hâlâ sapmasız ve tutarlıdır, ancak White (1980) standart hataları olmadan t ve F istatistikleri geçersizleşir."},{text:"OLS tahmincisi tutarsız olur; büyük örneklem bile düzeltmez",isCorrect:false,rationale:"Tutarsızlık endojenlik sorununda ortaya çıkar."},{text:"Regresyon tamamen geçersiz hale gelir",isCorrect:false,rationale:"Heteroskedastisitenin çözümü robust standart hataların kullanılmasıdır."}], hint:"White (1980) robust standart hatalar bu sorunu nasıl çözer?", socratic:"Bir çapraz kesit regresyonunda zengin hanelerin harcama varyansının fakir hanelere kıyasla çok daha büyük olduğunu gördünüz. Bu heteroskedastisite şüphesini nasıl doğrularsınız?" }
+    ]
+  },
+  'iktisat_politikasi_quiz.json': {
+    title: "İktisat Politikası — KKÜ İktisadi ve İdari Bilimler",
+    course: "İKT401",
+    questions: [
+      { question:"Merkez bankası bağımsızlığının (CBI) enflasyon üzerindeki etkisine ilişkin literatürde öne çıkan temel bulgu nedir?", answerOptions:[{text:"CBI yüksek olduğunda enflasyon da yükselir",isCorrect:false,rationale:"Tarihsel veriler tam tersini göstermektedir."},{text:"CBI yüksek olduğunda enflasyon düşer çünkü siyasi baskı azalır",isCorrect:true,rationale:"Alesina-Summers (1993), Cukierman (1992): operasyonel bağımsızlık arttıkça kısa dönemli siyasi konjonktür hedeflerine maruz kalış azalır; enflasyon beklentileri çıpalanır."},{text:"CBI büyüme üzerinde negatif etkilidir; enflasyonla ilişkisi yoktur",isCorrect:false,rationale:"CBI-enflasyon ilişkisi geniş panel kanıtlarıyla desteklenmektedir."},{text:"CBI yalnızca dolarizasyon oranı yüksek ekonomilerde anlamlı etki yapar",isCorrect:false,rationale:"CBI literatürü geniş ülke örneklemi içermektedir."}], hint:"Kydland-Prescott (1977) zaman tutarsızlığı problemi CBI'nın neden önemli olduğunu teorik olarak açıklar.", socratic:"Hükümet merkez bankasına 'faizi düşür' baskısı yapıyor. Kısa dönemde büyüme artabilir. Peki bu politikaya güvenilirlik açısından ne olur?" },
+      { question:"Wagner Yasası iktisat politikası açısından ne öngörür?", answerOptions:[{text:"Devlet harcamaları arttıkça ekonomik büyüme yavaşlar",isCorrect:false,rationale:"Bu Armey eğrisi ile ilgilidir; Wagner farklı bir hipotez sunar."},{text:"Gelir arttıkça kamu sektörünün GSYİH içindeki payı artar",isCorrect:true,rationale:"Adolph Wagner (1883): ekonomik kalkınmayla birlikte artan kentleşme ve sosyal talep kamu hizmetlerine olan talebi artırır. Devlet harcamaları lüks bir mal gibi davranır: gelir esnekliği > 1."},{text:"Devlet harcamaları yalnızca güvenlik ve adalet alanlarında artmalıdır",isCorrect:false,rationale:"Bu klasik liberal görüştür; Wagner'in ampirik gözleminden farklıdır."},{text:"Vergi gelirleri ekonomik büyümeyi engeller",isCorrect:false,rationale:"Bu Laffer eğrisi çerçevesidir."}], hint:"Wagner hipotezi talep yönlüdür: gelişen ekonomilerde eğitim, sağlık ve altyapıya kamusal talep artar.", socratic:"Türkiye'de 2000-2024 arası kamu harcamalarının GSYİH'ye oranı nasıl değişti? Wagner Yasası ile uyumlu mu?" },
+      { question:"Crowding-out etkisi hangi mekanizma üzerinden çalışır?", answerOptions:[{text:"Devlet harcamaları artışı → para arzı düşüşü → deflasyon",isCorrect:false,rationale:"Para arzı doğrudan kamu harcamalarından değil merkez bankası politikasından etkilenir."},{text:"Devlet borçlanması → faiz artışı → özel yatırım düşüşü",isCorrect:true,rationale:"IS-LM: G↑ → IS sağa → denge faizi yükselir → özel yatırım baskı altına girer."},{text:"Vergi artışı → tüketim düşüşü → GSYİH azalışı",isCorrect:false,rationale:"Bu vergi çarpanının negatif etkisidir."},{text:"Kamu harcamaları → enflasyon → reel ücret düşüşü",isCorrect:false,rationale:"Bu talep çekişli enflasyon kanalıdır."}], hint:"Tam crowding-out klasiksel (dikey LM) durumda gerçekleşir.", socratic:"COVID sonrası Türkiye'de kamu borçlanması arttı ve faizler yükseldi. Bu crowding-out kanıtı mıdır? Nedenselliği nasıl test edersiniz?" },
+      { question:"Optimum Para Alanı (OCA) teorisine göre ülkeler ortak para birimi benimsemeden önce hangi koşulu sağlamalıdır?", answerOptions:[{text:"Benzer vergi sistemlerine sahip olmaları",isCorrect:false,rationale:"Vergi harmonizasyonu OCA'nın geleneksel kriterlerinden değildir."},{text:"Yüksek faktör hareketliliği ve/veya senkronize konjonktür döngüleri",isCorrect:true,rationale:"Mundell (1961): Asimetrik şokları kur yerine emek mobilitesiyle absorbe edebilirsiniz. McKinnon (1963): açıklık; Kenen (1969): ürün çeşitliliği."},{text:"Nüfus büyüklüklerinin benzer olması",isCorrect:false,rationale:"Nüfus OCA kriterlerinin hiçbirinde yer almaz."},{text:"Ortak ticaret anlaşmalarının uygulanmakta olması",isCorrect:false,rationale:"Ticaret entegrasyonu kolaylaştırıcıdır ancak OCA için yeterli koşul değildir."}], hint:"Euro krizi (2010-2012) Yunanistan için kur ayarlamasının neden kritik olduğunu ortaya koydu.", socratic:"Yunanistan 2010'da kendi para birimi olsaydı ne yapardı? Euro bölgesinde kalmak ne maliyete yol açtı?" },
+      { question:"Arz yönlü iktisatta vergi indirimlerinin büyümeyi nasıl artıracağı öngörülür?", answerOptions:[{text:"Daha düşük vergiler → daha fazla tüketim harcaması → talep artışı",isCorrect:false,rationale:"Bu talep yönlü (Keynesyen) mekanizmadır."},{text:"Daha düşük vergi oranları → daha fazla çalışma ve yatırım teşviki → potansiyel çıktı artışı",isCorrect:true,rationale:"Laffer eğrisi: belirli bir vergi oranının üzerinde gelir düşer. Marjinal vergi indirimi → iş insanı teşvik → yatırım → verimlilik → büyüme."},{text:"Daha düşük vergiler → para arzı artışı → faiz düşüşü",isCorrect:false,rationale:"Para arzı merkez bankasının kontrolündedir."},{text:"Daha düşük vergiler → ithalat azalışı → cari fazla",isCorrect:false,rationale:"Bu kadar dolaysız bir aktarım mekanizması arz yönlü teorinin iddiası değildir."}], hint:"Laffer eğrisi vergi oranı ile vergi geliri arasındaki ilişkiyi gösterir.", socratic:"ABD'de 2017 Vergi Kesintileri ve İşler Yasası kurumlar vergisini %35'ten %21'e indirdi. Gerçekleşen yatırım ve büyüme verileri beklentiyi doğruladı mı?" },
+      { question:"Enflasyon hedeflemesi para politikası çerçevesinin temel unsuru nedir?", answerOptions:[{text:"Para arzı büyüme oranının sabit tutulması",isCorrect:false,rationale:"Bu Monetarist k-kural politikasıdır."},{text:"Kamuya açık ve sayısal bir enflasyon hedefi + merkez bankası hesap verebilirliği",isCorrect:true,rationale:"Bernanke-Mishkin (1997): şeffaf hedef + operasyonel bağımsızlık + iletişim (forward guidance) + hesap verebilirlik."},{text:"Döviz kurunun belirli bir bandda tutulması",isCorrect:false,rationale:"Bu kur çıpasıdır; enflasyon hedeflemesiyle çelişir — impossible trinity."},{text:"Hükümetin bütçe dengesini zorunlu tutması",isCorrect:false,rationale:"Maliye kuralı farklı bir politika çerçevesidir."}], hint:"İletişim politikası (forward guidance) neden enflasyon hedeflemesinin kritik bileşenidir?", socratic:"TCMB 2021-2022 döneminde enflasyon hedeflemesi çerçevesini sürdürürken faizi düşürdü. Enflasyon beklentileri nasıl tepki verdi?" },
+      { question:"Kuznets eğrisi hipotezi (EKC) çevre politikası açısından ne ima eder?", answerOptions:[{text:"Çevre kirliliği gelir düzeyinden bağımsızdır",isCorrect:false,rationale:"EKC tam olarak gelir-çevre ilişkisini modelleyen bir hipotezdir."},{text:"Gelir belirli bir eşiği aştıktan sonra ekonomik büyüme çevre kalitesini iyileştirir",isCorrect:true,rationale:"Grossman-Krueger (1991/1995): ters-U ilişkisi — düşük gelirde kirlilik büyümeyle artar; dönüm noktasından sonra temiz teknoloji talebi kirliliği düşürür."},{text:"Yoksul ülkelerde çevre politikası gereksizdir",isCorrect:false,rationale:"EKC hipotezi politika müdahalesini dışlamaz."},{text:"Sanayileşme hiçbir zaman çevre kirliliğini düşürmez",isCorrect:false,rationale:"EKC bunun tam tersini öngörür."}], hint:"EKC'nin politika çıkarımı tartışmalıdır: 'büyüyün, temizleyin' söylemi mi doğru?", socratic:"Türkiye için CO₂-gelir EKC tahmin ettiniz ve dönüm noktası kişi başı 25,000$ bulundu. Türkiye 2024 itibarıyla bu eşiği geçti mi?" },
+      { question:"Yapısal uyum programlarında (SAP) IMF'nin genel reçetesi hangi politika bileşenlerini içerir?", answerOptions:[{text:"Kamu harcaması artışı, ticaret korumacılığı ve kur değer artışı",isCorrect:false,rationale:"IMF programları genellikle kamu harcama kısıtlaması, serbest ticaret ve kur esnekliğini önerir."},{text:"Mali konsolidasyon, döviz devalüasyonu/esnekliği, yapısal reformlar ve liberalizasyon",isCorrect:true,rationale:"Washington Konsensüsü (Williamson 1989): mali disiplin, vergi reformu, finansal liberalizasyon, dış yatırıma açılma, özelleştirme, deregülasyon."},{text:"Yüksek faiz politikası + sermaye kontrolü + döviz sabitlemesi",isCorrect:false,rationale:"Sermaye kontrolü geleneksel IMF çerçevesinde önerilmez."},{text:"Kamu yatırımlarının artırılması ve devlet işletmelerinin genişletilmesi",isCorrect:false,rationale:"IMF programları genellikle özelleştirme ve kamu sektörünün küçültülmesini öngörür."}], hint:"1998 Asya krizi ve 2001 Türkiye krizi IMF programlarının hem başarı hem başarısızlıklarını ortaya koydu.", socratic:"Türkiye 2001 krizinde IMF ile stand-by anlaşması yaptı. Hangi koşullara uymak zorunda kaldı?" },
+      { question:"Sürdürülebilir kalkınmada 'yeşil ekonomi' geçişinde piyasa başarısızlıklarının temel kaynağı nedir?", answerOptions:[{text:"Hükümetlerin çevre düzenlemesi yapmaması",isCorrect:false,rationale:"Hükümet eylemi politika tercihtir; piyasa başarısızlığının kaynağı dışsallıklar ve kamusal maldır."},{text:"Karbon emisyonlarının negatif dışsallık niteliği taşıması",isCorrect:true,rationale:"Sosyal maliyet > özel maliyet → aşırı üretim. Pigou vergisi (karbon fiyatlandırması) veya cap-and-trade gereklidir."},{text:"Firmaların temiz teknolojiye ilgi duymaması",isCorrect:false,rationale:"Piyasa başarısızlığının kaynağı fiyat sinyallerindeki çarpıklıktır."},{text:"Yenilenebilir enerji maliyetlerinin çok yüksek olması",isCorrect:false,rationale:"Maliyet sorunu piyasa başarısızlığı değil teknoloji sorunudur."}], hint:"Pigou vergisi ve cap-and-trade alternatifleri arasında nasıl seçim yapılır?", socratic:"AB Emisyon Ticaret Sistemi (ETS) 2005'te başladı. İlk fazda neden karbon fiyatı sıfıra yaklaştı?" },
+      { question:"Ticaret politikasında büyük (price-maker) bir ülke için gümrük tarifesinin net refah etkisi neden belirsizdir?", answerOptions:[{text:"Tarife her zaman üreticilere zarar verir",isCorrect:false,rationale:"Üreticiler yurt içi fiyat artışından yararlanır."},{text:"Büyük ülke tarifesi dış ticaret hadlerini iyileştirebilir; bu kazanım deadweight loss ile karşılaştırılmalıdır",isCorrect:true,rationale:"Büyük ülke: tarife dünya fiyatını düşürebilir (ticaret haddi kazancı) → optimal tarife mevcuttur. Ancak misilleme riski: ticaret savaşı tüm ülkeleri zararlı çıkarır."},{text:"Tarife hiçbir zaman pozitif refah etkisi yaratamaz",isCorrect:false,rationale:"Optimal tarife teorisi büyük ülke için belirli koşullarda pozitif net etkiyi gösterir."},{text:"Büyük ülkeler için tarife her zaman serbest ticaretten iyidir",isCorrect:false,rationale:"Misilleme ve ölü ağırlık kaybı dikkate alınmalıdır."}], hint:"Tüketici artığı + üretici artığı + tarife geliri - verimlilik kayıpları.", socratic:"ABD 2018'de Çin'e ek tarifeler uyguladı. Büyük ülke optimal tarife teorisi bunu meşrulaştırabilir mi? Çin'in misilleme tepkisi bu analizi nasıl değiştirir?" }
+    ]
+  }
+};
+
+// ─── AUDIO ───────────────────────────────────────────
+let _audioCtx = null;
+function _getAudioCtx() {
+  if (!_audioCtx) _audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+  return _audioCtx;
+}
+function playTone(freq = 523, type = 'sine', dur = 0.25, vol = 0.18) {
+  try {
+    const ctx = _getAudioCtx();
+    const osc = ctx.createOscillator();
+    const gain = ctx.createGain();
+    osc.type = type;
+    osc.frequency.setValueAtTime(freq, ctx.currentTime);
+    gain.gain.setValueAtTime(vol, ctx.currentTime);
+    gain.gain.exponentialRampToValueAtTime(0.001, ctx.currentTime + dur);
+    osc.connect(gain);
+    gain.connect(ctx.destination);
+    osc.start(ctx.currentTime);
+    osc.stop(ctx.currentTime + dur);
+  } catch(e) {}
+}
+function playCorrect() {
+  playTone(523, 'sine', 0.15, 0.15);
+  setTimeout(() => playTone(659, 'sine', 0.15, 0.12), 120);
+  setTimeout(() => playTone(784, 'sine', 0.25, 0.10), 240);
+}
+function playWrong() {
+  playTone(180, 'sawtooth', 0.08, 0.12);
+  setTimeout(() => playTone(140, 'sawtooth', 0.2, 0.10), 80);
+}
+
+// ─── MILESTONE POPUP ──────────────────────────────────
+const GEM_BREAKPOINTS = [
+  { at: 50,  icon: '💎', title: '50 Gems!',  sub: 'Deep Thinker — you\'ve earned your first milestone!' },
+  { at: 100, icon: '🔮', title: '100 Gems!', sub: 'Gem Hoarder — exceptional engagement!' },
+  { at: 200, icon: '👑', title: '200 Gems!', sub: 'Amethyst Master — legendary status!' },
+];
+let _triggeredBreakpoints = new Set();
+function checkBreakpoints(gems) {
+  for (const bp of GEM_BREAKPOINTS) {
+    if (gems >= bp.at && !_triggeredBreakpoints.has(bp.at)) {
+      _triggeredBreakpoints.add(bp.at);
+      showMilestone(bp.icon, bp.title, bp.sub);
+      return;
+    }
+  }
+}
+function showMilestone(icon, title, sub) {
+  const pop = document.getElementById('milestone-popup');
+  document.getElementById('milestone-icon').textContent = icon;
+  document.getElementById('milestone-title').textContent = title;
+  document.getElementById('milestone-sub').textContent = sub;
+  pop.style.display = 'block';
+  requestAnimationFrame(() => {
+    pop.style.opacity = '1';
+    pop.style.transform = 'translate(-50%,-50%) scale(1)';
+  });
+  playTone(880, 'sine', 0.4, 0.12);
+  setTimeout(() => playTone(1100, 'sine', 0.3, 0.08), 200);
+  setTimeout(() => {
+    pop.style.opacity = '0';
+    pop.style.transform = 'translate(-50%,-50%) scale(0.8)';
+    setTimeout(() => { pop.style.display = 'none'; }, 350);
+  }, 2800);
+}
+
+// ─── STATE ──────────────────────────────────────────
+let state = {
+  quiz: null,
+  questions: [],
+  current: 0,
+  score: 0,
+  hp: 3,
+  maxHp: 3,
+  xp: 0,           // Stars — unspendable achievement metric
+  amethysts: 0,     // Gems — earned spendable currency
+  streak: 0,
+  maxStreak: 0,
+  hintsUsed: 0,
+  wrong: 0,
+  attempts: 0,
+  maxAttempts: 3,
+  answered: false,
+  gameOver: false,
+  mode: 'socratic',
+  timerInterval: null,
+  timeLeft: 0,
+  skipped: 0,
+  questionStartTime: 0,  // TimeMission: timestamp when question was shown
+};
+
+// ─── MODE ────────────────────────────────────────────
+function selectMode(m) {
+  state.mode = m;
+  document.querySelectorAll('.mode-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('mode-' + m).classList.add('selected');
+}
+
+// ─── LOAD QUIZ ───────────────────────────────────────
+function loadBuiltIn() {
+  state.quiz = builtInQuiz;
+  document.getElementById('quiz-loaded-label').textContent = '✅ Loaded: ' + builtInQuiz.title;
+  document.getElementById('start-btn').disabled = false;
+}
+
+function loadCourse(filename, label) {
+  const lbl = document.getElementById('quiz-loaded-label');
+  // Use embedded data (works offline / file:// — no server needed)
+  if (courseQuizzes[filename]) {
+    const data = courseQuizzes[filename];
+    state.quiz = data;
+    lbl.style.color = 'var(--green)';
+    lbl.textContent = '✅ Loaded: ' + data.title + ' (' + data.questions.length + ' questions)';
+    document.getElementById('start-btn').disabled = false;
+    return;
+  }
+  // Fallback: fetch from disk (only works when served via http://)
+  lbl.style.color = 'var(--muted)';
+  lbl.textContent = '⏳ Loading ' + label + '…';
+  fetch(filename)
+    .then(r => { if (!r.ok) throw new Error('Not found'); return r.json(); })
+    .then(data => {
+      state.quiz = data;
+      lbl.style.color = 'var(--green)';
+      lbl.textContent = '✅ Loaded: ' + (data.title || filename) + ' (' + data.questions.length + ' questions)';
+      document.getElementById('start-btn').disabled = false;
+    })
+    .catch(() => {
+      lbl.style.color = 'var(--red)';
+      lbl.textContent = '❌ Embedded data missing — use 📁 Load JSON File';
+    });
+}
+
+function loadFile(input) {
+  const file = input.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const data = JSON.parse(e.target.result);
+      if (!data.questions || !data.questions.length) throw new Error('No questions found');
+      state.quiz = data;
+      document.getElementById('quiz-loaded-label').textContent = '✅ Loaded: ' + (data.title || file.name) + ' (' + data.questions.length + ' questions)';
+      document.getElementById('start-btn').disabled = false;
+    } catch(err) {
+      document.getElementById('quiz-loaded-label').textContent = '❌ Error: ' + err.message;
+      document.getElementById('quiz-loaded-label').style.color = 'var(--red)';
+    }
+  };
+  reader.readAsText(file);
+}
+
+// ─── START ───────────────────────────────────────────
+function startQuiz() {
+  if (!state.quiz) return;
+  // Shuffle questions (take up to 10)
+  state.questions = shuffle([...state.quiz.questions]).slice(0, 10);
+  state.current = 0;
+  state.score = 0;
+  state.hp = 3;
+  state.xp = 0;
+  state.amethysts = 0;
+  state.streak = 0;
+  state.maxStreak = 0;
+  state.hintsUsed = 0;
+  state.wrong = 0;
+  state.skipped = 0;
+  state.gameOver = false;
+  state.questionStartTime = 0;
+  _triggeredBreakpoints.clear();
+
+  showScreen('quiz');
+  document.getElementById('hud').style.display = 'flex';
+  document.getElementById('lives-hud').style.display = 'flex';
+  updateHud();
+  renderQuestion();
+}
+
+// ─── RENDER QUESTION ─────────────────────────────────
+function renderQuestion() {
+  if (state.current >= state.questions.length) { endQuiz(); return; }
+
+  const q = state.questions[state.current];
+  state.answered = false;
+  state.attempts = 0;
+  state.questionStartTime = Date.now(); // TimeMission: start thinking timer
+
+  // Progress
+  const pct = (state.current / state.questions.length) * 100;
+  document.getElementById('progress-bar').style.width = pct + '%';
+  document.getElementById('q-num').textContent = 'Q' + (state.current+1) + '/' + state.questions.length;
+  document.getElementById('q-text').textContent = q.question;
+  document.getElementById('attempts-label').textContent = '';
+
+  // Hide scaffolding/rationale
+  document.getElementById('scaffold-box').classList.remove('visible');
+  document.getElementById('rationale-box').classList.remove('visible');
+  document.getElementById('next-btn').style.display = 'none';
+  document.getElementById('hint-btn').disabled = false;
+  document.getElementById('skip-btn').disabled = false;
+
+  // Options
+  const opts = document.getElementById('q-options');
+  opts.innerHTML = '';
+  const letters = ['A','B','C','D'];
+  const shuffled = shuffle([...q.answerOptions]);
+  q._shuffled = shuffled; // store for checking
+
+  shuffled.forEach((opt, i) => {
+    const div = document.createElement('div');
+    div.className = 'option';
+    div.dataset.idx = i;
+    div.innerHTML = `<span class="option-letter">${letters[i]}</span><span>${opt.text}</span>`;
+    div.onclick = () => selectAnswer(div, i);
+    opts.appendChild(div);
+  });
+
+  // Timer (strict mode only)
+  clearInterval(state.timerInterval);
+  if (state.mode === 'strict') {
+    state.timeLeft = 30;
+    updateTimer();
+    state.timerInterval = setInterval(() => {
+      state.timeLeft--;
+      updateTimer();
+      if (state.timeLeft <= 0) {
+        clearInterval(state.timerInterval);
+        if (!state.answered) timeUp();
+      }
+    }, 1000);
+  } else {
+    document.getElementById('q-timer').textContent = '';
+  }
+}
+
+function updateTimer() {
+  const el = document.getElementById('q-timer');
+  el.textContent = '⏱ ' + state.timeLeft + 's';
+  el.className = 'q-timer ' + (state.timeLeft > 15 ? 'timer-ok' : state.timeLeft > 7 ? 'timer-warn' : 'timer-crit');
+}
+
+function timeUp() {
+  if (state.answered) return;
+  state.answered = true;
+  revealAnswer(false, -1);
+  showToast('⏰ Time\'s up!');
+}
+
+// ─── ANSWER SELECTION ────────────────────────────────
+function selectAnswer(div, idx) {
+  if (state.answered) return;
+
+  const q = state.questions[state.current];
+  const opt = q._shuffled[idx];
+  const isCorrect = opt.isCorrect;
+
+  // In scaffold mode with attempts remaining
+  if (state.mode === 'scaffold' && !isCorrect && state.attempts < state.maxAttempts - 1) {
+    state.attempts++;
+    document.querySelectorAll('.option').forEach(o => o.classList.remove('selected'));
+    div.classList.add('selected');
+    document.getElementById('attempts-label').textContent = `Attempt ${state.attempts}/${state.maxAttempts}`;
+
+    // Show Socratic scaffold
+    showScaffold(q, state.attempts);
+    return;
+  }
+
+  state.answered = true;
+  clearInterval(state.timerInterval);
+
+  // Mark all options
+  document.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
+  div.classList.add(isCorrect ? 'correct' : 'wrong');
+
+  // Reveal correct
+  document.querySelectorAll('.option').forEach((o, i) => {
+    if (q._shuffled[i].isCorrect) o.classList.add('correct');
+  });
+
+  revealAnswer(isCorrect, idx);
+}
+
+function revealAnswer(isCorrect, idx) {
+  const q = state.questions[state.current];
+  document.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
+
+  const rationale = document.getElementById('rationale-box');
+  const rVerdict = document.getElementById('rationale-verdict');
+  const rText = document.getElementById('rationale-text');
+
+  if (isCorrect) {
+    playCorrect();
+    // Stars (XP) — unspendable achievement metric
+    const xpGain = state.hintsUsed > 0 ? 8 : (state.attempts === 0 ? 15 : 10);
+    state.xp += xpGain;
+    state.score++;
+    state.streak++;
+    if (state.streak > state.maxStreak) state.maxStreak = state.streak;
+
+    // Gems (Amethysts) — spendable earned currency
+    let gemGain = 10; // base
+    // Streak bonus: +2 per streak level (max +10)
+    if (state.streak >= 2) gemGain += Math.min((state.streak - 1) * 2, 10);
+    // TimeMission bonus: +5 if student thought > 20s
+    const thinkSecs = (Date.now() - state.questionStartTime) / 1000;
+    let timeBonusMsg = '';
+    if (thinkSecs > 20 && state.hintsUsed === 0) {
+      gemGain += 5;
+      timeBonusMsg = ' ⏳+5 deep thinker!';
+    }
+    state.amethysts += gemGain;
+    checkBreakpoints(state.amethysts);
+
+    rVerdict.innerHTML = `✅ Correct! +${xpGain}⭐ +${gemGain}💎${timeBonusMsg}`;
+    rVerdict.style.color = 'var(--green)';
+    rationale.className = 'rationale visible';
+
+    // Socratic follow-up in socratic mode
+    if (state.mode === 'socratic' && idx >= 0) {
+      const opt = q._shuffled[idx];
+      rText.textContent = opt.rationale || 'Well reasoned!';
+    } else {
+      const correctOpt = (q._shuffled || q.answerOptions).find(o => o.isCorrect);
+      rText.textContent = correctOpt ? correctOpt.rationale : '';
+    }
+    showToast('🔥 +' + xpGain + '⭐ +' + gemGain + '💎' + (timeBonusMsg ? ' ⏳' : ''));
+  } else {
+    playWrong();
+    state.hp = Math.max(0, state.hp - 1);
+    state.wrong++;
+    state.streak = 0;
+
+    rVerdict.innerHTML = '❌ Incorrect';
+    rVerdict.style.color = 'var(--red)';
+    rationale.className = 'rationale visible wrong-rat';
+
+    // Show correct option rationale
+    const correctOpt = (q._shuffled || q.answerOptions).find(o => o.isCorrect);
+    rText.textContent = correctOpt ? correctOpt.rationale : 'Study this concept further.';
+
+    // Socratic explanation on wrong
+    if (state.mode === 'socratic' && q.socratic) {
+      document.getElementById('scaffold-icon').textContent = '🦉';
+      document.getElementById('scaffold-title').textContent = 'Let\'s Think Through This';
+      document.getElementById('scaffold-text').textContent = q.socratic;
+      document.getElementById('scaffold-box').classList.add('visible');
+    }
+  }
+
+  updateHud();
+  document.getElementById('next-btn').style.display = 'inline-block';
+  document.getElementById('hint-btn').disabled = true;
+  document.getElementById('skip-btn').disabled = true;
+  document.getElementById('streak-display').textContent = '🔥 ' + state.streak;
+
+  // Game over if HP = 0
+  if (state.hp <= 0 && state.mode !== 'classic') {
+    state.gameOver = true;
+    document.getElementById('next-btn').style.display = 'none';
+    // Replace next button with game-over message
+    const actionRow = document.querySelector('.action-row');
+    const goMsg = document.createElement('span');
+    goMsg.id = 'game-over-msg';
+    goMsg.style.cssText = 'color:var(--red);font-weight:700;font-size:13px;margin-left:8px;animation:pulse 0.6s infinite alternate';
+    goMsg.textContent = '💀 Game Over…';
+    actionRow.appendChild(goMsg);
+    setTimeout(() => endQuiz(), 1500);
+  }
+}
+
+// ─── SCAFFOLD ────────────────────────────────────────
+function showScaffold(q, attempt) {
+  const box = document.getElementById('scaffold-box');
+  const text = document.getElementById('scaffold-text');
+  const icon = document.getElementById('scaffold-icon');
+  const title = document.getElementById('scaffold-title');
+
+  const scaffolds = [
+    { icon:'🦉', title:'Think Again...', msg: q.socratic || q.hint || 'Consider the underlying economic mechanism. What does theory predict?' },
+    { icon:'💡', title:'Socratic Nudge', msg: q.hint || 'Think about the key concepts involved. Review the definitions before re-attempting.' },
+    { icon:'📖', title:'Final Hint', msg: 'Review: ' + (q.hint || 'Focus on the exact definition and context of each option.') },
+  ];
+
+  const s = scaffolds[Math.min(attempt-1, scaffolds.length-1)];
+  icon.textContent = s.icon;
+  title.textContent = s.title;
+  text.textContent = s.msg;
+  box.classList.add('visible');
+}
+
+function showHint() {
+  const q = state.questions[state.current];
+  if (!q || state.answered) return;
+  state.hintsUsed++;
+  document.getElementById('scaffold-icon').textContent = '💡';
+  document.getElementById('scaffold-title').textContent = 'Hint (−5💎 penalty)';
+  document.getElementById('scaffold-text').textContent = q.hint || q.socratic || 'Consider the definitions and context carefully.';
+  document.getElementById('scaffold-box').classList.add('visible');
+  document.getElementById('hint-btn').disabled = true;
+  state.amethysts = Math.max(0, state.amethysts - 5);
+  updateHud();
+}
+
+function skipQuestion() {
+  if (state.answered) return;
+  state.skipped++;
+  state.streak = 0;
+  clearInterval(state.timerInterval);
+  state.answered = true;
+  document.querySelectorAll('.option').forEach(o => o.classList.add('disabled'));
+  // Reveal correct
+  const q = state.questions[state.current];
+  document.querySelectorAll('.option').forEach((o, i) => {
+    if (q._shuffled[i].isCorrect) o.classList.add('correct');
+  });
+  document.getElementById('next-btn').style.display = 'inline-block';
+  showToast('⏭ Skipped');
+}
+
+// ─── NEXT ────────────────────────────────────────────
+function nextQuestion() {
+  if (state.gameOver) return; // block Next during game-over countdown
+  const goMsg = document.getElementById('game-over-msg');
+  if (goMsg) goMsg.remove();
+  state.current++;
+  document.getElementById('scaffold-box').classList.remove('visible');
+  document.getElementById('rationale-box').classList.remove('visible');
+  renderQuestion();
+}
+
+// ─── HUD ─────────────────────────────────────────────
+function updateHud() {
+  const hpPct = (state.hp / state.maxHp) * 100;
+  const xpPct = Math.min((state.xp / 100) * 100, 100);
+  const gemPct = Math.min((state.amethysts / 200) * 100, 100);
+  document.getElementById('hp-bar').style.width = hpPct + '%';
+  document.getElementById('xp-bar').style.width = xpPct + '%';
+  document.getElementById('gem-bar').style.width = gemPct + '%';
+  document.getElementById('hp-val').textContent = '❤️ ' + state.hp;
+  document.getElementById('xp-val').textContent = '⭐ ' + state.xp;
+  document.getElementById('gem-val').textContent = '💎 ' + state.amethysts;
+  document.getElementById('streak-val').textContent = '🔥 ' + state.streak;
+  document.getElementById('streak-display').textContent = '🔥 ' + state.streak;
+
+  // Lives display
+  const livesEl = document.getElementById('lives-hud');
+  livesEl.innerHTML = '';
+  for (let i = 0; i < state.maxHp; i++) {
+    const span = document.createElement('span');
+    span.className = 'life' + (i >= state.hp ? ' lost' : '');
+    span.textContent = '❤️';
+    livesEl.appendChild(span);
+  }
+}
+
+// ─── END QUIZ ────────────────────────────────────────
+function endQuiz() {
+  clearInterval(state.timerInterval);
+  showScreen('result');
+
+  const total = state.questions.length;
+  const pct = Math.round((state.score / total) * 100);
+
+  let grade = '💀', msg = 'Dungeon Defeated You';
+  if (pct >= 90) { grade = '🏆'; msg = 'Legendary Scholar!'; }
+  else if (pct >= 75) { grade = '⭐'; msg = 'Excellent Command!'; }
+  else if (pct >= 60) { grade = '🥈'; msg = 'Solid Understanding'; }
+  else if (pct >= 40) { grade = '🥉'; msg = 'Keep Practicing'; }
+
+  // Multi-tier achievement badge (Memory Boost / ActiDoo pattern)
+  let badge = '';
+  if (pct === 100) {
+    badge = '🥇 GOLD PERFECT';
+    playTone(880, 'sine', 0.3, 0.12);
+    setTimeout(() => playTone(1100, 'sine', 0.3, 0.10), 200);
+    setTimeout(() => playTone(1320, 'sine', 0.5, 0.08), 400);
+  } else if (pct >= 80) {
+    badge = '🥈 SILVER';
+    playTone(659, 'sine', 0.25, 0.12);
+    setTimeout(() => playTone(784, 'sine', 0.35, 0.10), 200);
+  } else if (pct >= 60) {
+    badge = '🥉 BRONZE';
+    playTone(523, 'sine', 0.4, 0.10);
+  }
+
+  document.getElementById('result-grade').textContent = grade;
+  document.getElementById('result-badge').textContent = badge;
+  document.getElementById('result-score').textContent = pct + '%  (' + state.score + '/' + total + ')';
+  document.getElementById('result-sub').textContent = msg;
+  document.getElementById('r-correct').textContent = state.score;
+  document.getElementById('r-wrong').textContent = state.wrong;
+  document.getElementById('r-hints').textContent = state.hintsUsed;
+  // Rewards panel
+  document.getElementById('r-stars').textContent = state.xp;
+  document.getElementById('r-gems').textContent = state.amethysts;
+  document.getElementById('r-streak').textContent = state.maxStreak;
+}
+
+// ─── SCREENS ─────────────────────────────────────────
+function showScreen(name) {
+  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  document.getElementById('screen-' + name).classList.add('active');
+}
+function restartQuiz() {
+  document.getElementById('hud').style.display = 'none';
+  document.getElementById('lives-hud').style.display = 'none';
+  startQuiz();
+}
+function goHome() {
+  document.getElementById('hud').style.display = 'none';
+  document.getElementById('lives-hud').style.display = 'none';
+  showScreen('start');
+}
+
+// ─── TOAST ───────────────────────────────────────────
+function showToast(msg) {
+  const el = document.getElementById('toast');
+  el.textContent = msg;
+  el.classList.add('show');
+  setTimeout(() => el.classList.remove('show'), 2000);
+}
+
+// ─── UTILS ───────────────────────────────────────────
+function shuffle(arr) {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+</script>
+</body>
+</html>
