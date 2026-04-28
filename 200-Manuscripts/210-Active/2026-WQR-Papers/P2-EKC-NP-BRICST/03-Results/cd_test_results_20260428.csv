@@ -1,0 +1,3 @@
+"test","z_stat","p_value","conclusion","date_run"
+"Pesaran CD (baseline EKC)",-3.132368400515,0.00173402144217309,"CSD PRESENT","2026-04-28"
+"Pesaran CD (full controls)",-3.27783694369168,0.00104605802307299,"CSD PRESENT","2026-04-28"

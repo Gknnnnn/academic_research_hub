@@ -81,6 +81,10 @@ Annual data cover 1995–2021 (T = 27 per country), yielding a balanced panel of
 
 Unit root tests reveal predominantly I(1) series across the BRICS-T sample. Two exceptions: Mexico shows both ln EF and ln GDP as I(0), and Türkiye's ln GDP rejects the unit root (p = 0.019). The nonparametric causality-in-quantile framework does not require equal integration orders — unlike the Toda-Yamamoto extension for VAR, the test evaluates predictive precedence in the quantile dimension independently of the integration structure [@jeong2012]. The mixed orders reinforce the choice of the nonparametric approach over standard linear Granger tests.
 
+**Cross-section dependence.** To assess whether the BRICS-T sample exhibits cross-sectional dependence — a key concern given trade links, common global shocks, and commodity co-movements — we apply the Pesaran (2004) CD test to two-way FE residuals from the baseline EKC specification ($\ln\text{EF}_{it} = f(\ln\text{GDP}, \ln\text{GDP}^2, \ln\text{Trade})$). The test yields $Z = -3.13$ ($p = 0.0017$), rejecting the null of cross-sectional independence at the 0.1% level. This confirms that common global and regional shocks induce correlated movements across BRICS-T ecological footprints — plausible given the shared exposure to global commodity price cycles and the 2008 global financial crisis.
+
+The country-specific analysis is robust to this finding by construction: each country's test is conducted separately, so the inference does not pool across correlated units. For the pooled panel test, the country-level p-value combination implies that the CSD induces upward size distortion in standard panel causality frameworks that assume cross-sectional independence — providing additional justification for the country-level disaggregation [@pesaran2004].
+
 # Methodology
 
 ## Nonparametric Causality-in-Quantile
