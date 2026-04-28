@@ -13,6 +13,31 @@
 
 ---
 
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — SUBMISSION PIPELINE AUDIT (Session 3)
+
+- ✅ **All 20 submission packages confirmed complete** — PORTAL_COPYPASTE files verified
+  - XGBoost/inta, SSA/BFJ, Gold P3, LCF: PORTAL files in `04-Manuscript/` (not `05-Submission/`) — all confirmed ✅
+  - Full pipeline: 19 packages = zero blockers; TRE = Yücel sign-off only
+- ✅ **Dedolarizasyon TR → EN GFJ upgrade** (10pt EPFAD → 20pt SSCI Q2)
+  - `06-EN-GFJ/dedolarizasyon_gfj_v01.qmd` + `v01.docx` (23KB) + `v01_anonymous.docx` ✅
+  - `PORTAL_COPYPASTE_GFJ.md` + `dedolorizasyon_gfj_submission_v01.zip` (25KB) ✅
+  - Portal: editorialmanager.com/gfj | $0 | ÜAK 20pt
+- ✅ **CIVETS PORTAL_COPYPASTE updated** — old ECI/goveff spec → trade/growth spec; ZIP rebuilt (28KB)
+- ✅ **Email to Uğur** prepared: MAKÜ SOBED telif + CIVETS onayı (deadline 2026-04-30)
+
+---
+
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — SUDDEN STOPS NEW PAPER (Session 2)
+
+- ✅ **SuddenStops Panel EM — Bibliography fully enriched (18 entries, 15 DOIs verified)**
+  - `hakhverdyan2026sudden` (IMFI 23(1):318-330) = closest predecessor — VIX→0.39pp AME; MPP×credit result; DOI:10.21511/imfi.23(1).2026.24 ✅
+  - Key correction: `businessperspectives2025` was 2026 paper — cite key updated in both bib + QMD
+  - `04_merge_panel.R` written — full panel merge (BOP+WDI+trilemma+GPR+iMaPP+IRR)
+  - `NEXT_SESSION.md` at project level with step-by-step pipeline
+  - **BLOCKER: 4 manual browser downloads required** (BOP gross flows + GPR + iMaPP + IRR) before episode ID can run
+
+---
+
 ## 🆕 THIS SESSION COMPLETED (2026-04-28) — CE + YK MANUSCRIPTS
 
 - ✅ **CE Cognitive Econometrics — MANUSCRIPT COMPLETE**
@@ -120,7 +145,7 @@ Do these yourself — all packages ready, no blockers:
 | 17 | **IGI Chapter** | Step 3 upload | IGI eEditorial | $0 |
 | 18 | **Multipolar Basel (FIQ)** | Verify ESCI, then submit | journals.wsiz.edu.pl/fiq | $0 |
 | 19 | **Gold Deposit Bank** | Word count ≤2500 check → FRL | editorialmanager.com/frl | $0 |
-| 20 | **Dedolarizasyon EPFAD** | Submit | dergipark.org.tr/tr/pub/epfad | $0 |
+| 20 | **Dedolarizasyon GFJ (EN)** | Submit — anonymous DOCX ready | editorialmanager.com/gfj | $0 |
 
 ---
 
@@ -140,6 +165,7 @@ Do these yourself — all packages ready, no blockers:
 
 | To | Subject | Status |
 |----|---------|--------|
+| **uyildirim@kku.edu.tr** | **MAKÜ SOBED telif + CIVETS onayı** — **DEADLINE 30 Nisan** | 🔴 EMAIL HAZIR |
 | recepyucel@kku.edu.tr | Chokepoints sign-off + İKB eleştirisi ilet | ⏳ Bekliyor |
 | ZRY / UY | TrendBusEcon telif formu 3 imza | ⏳ Bekliyor |
 | erdemyontem@kku.edu.tr | KKU Erasmus factsheet PDF talep | ⏳ Bekliyor |
