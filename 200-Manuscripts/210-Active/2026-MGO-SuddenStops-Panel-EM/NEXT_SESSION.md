@@ -1,5 +1,5 @@
 # Next Session Handoff — Sudden Stops Panel EM
-**Last updated:** 2026-04-28  
+**Last updated:** 2026-04-28 (Session 2 — code infrastructure complete)  
 **Paper:** "Global Uncertainty, Domestic Credit, and Sudden Stops: Panel Evidence with Cross-Sectional Dependence Correction"  
 **Target:** IREF (Plan A, $0, Q2) | JPM (Plan B) | EMFT (Plan C)
 
@@ -43,17 +43,19 @@
 - `03-Code/02_data_collection_imf_bop.R` — all API downloads except BOP/GPR/iMaPP ✅
 - `03-Code/03_panel_probit_estimation.R` — M1–M5, DK-SE, AME, robustness battery ✅
 - `03-Code/04_merge_panel.R` — full panel merge, audit function ✅
+- `03-Code/05_tables_figures.R` — Table 1–7 kableExtra + Figure 1–3 ggplot2 functions ✅
+- `03-Code/06_eurasian_subsample.R` — Webb wild bootstrap (fwildclusterboot), AME, heterogeneity ✅
 
 ### Manuscript
 - `04-Manuscript/sudden_stops_v01.qmd` — full skeleton (intro + lit review + methods written) ✅
-- `04-Manuscript/sudden_stops.bib` — 17 entries, 15 DOIs verified ✅
+- `04-Manuscript/sudden_stops.bib` — 18 entries, ALL DOIs verified ✅
 
-### Bibliography DOI Status (all 17 entries)
+### Bibliography DOI Status (all 18 entries — ALL COMPLETE)
 | Key | DOI | Status |
 |-----|-----|--------|
-| calvo1998capital | none | pre-DOI era |
+| calvo1998capital | none | pre-DOI era (1998) |
 | calvo2004empirics | 10.3386/w10520 | ✅ |
-| edwards2004financial | — | [UNVERIFIED] |
+| edwards2004financial | 10.1257/0002828041302217 | ✅ verified 2026-04-28 |
 | forbes2012capital | 10.1016/j.jinteco.2012.03.006 | ✅ |
 | eichengreen2016sudden | 10.1596/1813-9450-7639 | ✅ |
 | emter2023leverage | 10.1016/j.iref.2022.11.029 | ✅ |
@@ -67,7 +69,7 @@
 | calvo1993leiderman | 10.2307/3867379 | ✅ |
 | fernandez1996new | 10.1016/0304-3878(95)00041-0 | ✅ |
 | chuhan1998cross | 10.1016/S0304-3878(98)00044-3 | ✅ |
-| pesaran2004cd | — | [UNVERIFIED — consider citing Econometrics 2021 DOI:10.3390/econometrics9030028] |
+| pesaran2004cd | 10.3390/econometrics9030028 | ✅ (cite as 2004 WP; DOI = published 2021 version) |
 | driscoll1998consistent | 10.1162/003465398557825 | ✅ |
 
 ---
@@ -91,10 +93,30 @@ Step 3: source("03-Code/03_panel_probit_estimation.R")
         # → M1–M5 baseline results → Table 4
         # → AME table → Table 5
         # → Robustness → Table 6
-        # → Eurasian subsample → Table 7
 
-Step 4: Fill in manuscript placeholders (Tables 1–7 + abstract + conclusion)
+Step 3b: source("03-Code/06_eurasian_subsample.R")
+        # run_eurasian_analysis("02-Data/clean/panel_sudden_stops_YYYYMMDD.csv", B=9999)
+        # → Webb bootstrap p-values for M3/M4/M5
+        # → AME comparison: VIX effect vs Hakhverdyan (2026) 0.39pp benchmark
+        # → Heterogeneity: oil exporters vs importers; peg vs float; pre/post GFC
+        # → Table 7 (Eurasian) + Figure 4
+
+Step 4: source("03-Code/05_tables_figures.R")
+        # format_table1_desc_stats()  → tables/table1_descriptive.tex
+        # format_table4_probit()      → tables/table4_probit_baseline.tex
+        # make_figure1_timeline()     → figures/figure1_ss_timeline.pdf/png
+        # make_figure2_coefplot()     → figures/figure2_ame_coefplot.pdf/png
+        # make_figure3_structural()   → figures/figure3_structural_break.pdf/png
+
+Step 5: Fill in manuscript placeholders (Tables 1–7 + abstract + conclusion)
+        # Paste .tex table contents into sudden_stops_v01.qmd or link via \input{}
 ```
+
+## 🔍 LITERATURE GAPS TO FILL (next session)
+- CSD in capital flow panels: papers justifying DK-SE specifically for international flow data
+- Eurasian/CIS-specific sudden stops: GFC 2008-09 impact on transition economies  
+- 2024-2025 sudden stop papers: check 110-Literature/ for any new entries not in bib
+- Consider adding: Calderon & Kubota (2019) JIFMIM — sudden stops in small open economies
 
 ---
 

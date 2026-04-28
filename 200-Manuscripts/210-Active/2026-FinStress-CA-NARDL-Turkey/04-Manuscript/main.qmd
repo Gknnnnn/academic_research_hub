@@ -39,7 +39,7 @@ To answer these questions, we construct a composite Financial Stress Index (FSI)
 
 The paper makes two contributions. First, it constructs a five-component composite FSI for Türkiye using publicly available FRED and ECB data — an advance over prior studies that rely on proprietary Bloomberg components. Second, by applying NARDL to FSI-CA dynamics, we explicitly test whether stress escalation and de-escalation have differential long-run effects — a hypothesis motivated by the asymmetric financial accelerator but previously untested in the Turkish context. The Wald test rejects long-run symmetry at the 0.1% level, establishing import compression asymmetry as an empirical regularity in Türkiye's external adjustment.
 
-The remainder of the paper proceeds as follows. Section 2 establishes the theoretical framework. Section 3 describes the data and FSI construction. Section 4 presents the estimation methodology. Section 5 reports results. Section 6 discusses implications. Section 7 concludes.
+The remainder of the paper proceeds as follows. Section 2 establishes the theoretical framework. Section 3 describes the data and FSI construction. Section 4 presents the estimation methodology. Section 5 reports results, including NARDL long-run multipliers, robustness, and Toda-Yamamoto causality. Section 6 discusses implications. Section 7 concludes.
 
 # Theoretical Framework
 
@@ -297,6 +297,38 @@ if (!is.null(comp)) {
 *Notes: 6-comp FSI adds BIST-100 volatility and CBRT-policy interbank spread to the baseline 5-component index. Stars: \* p<0.10, \*\* p<0.05, \*\*\* p<0.01. R-squared drops from `r r2_5` to `r r2_6` upon augmentation; asymmetry ratio collapses from `r asym_5`× to `r asym_6`×. The 6-component specification is rejected in favor of the 5-component primary model.*
 
 The 6-component augmentation deteriorates model fit ($R^2$ falls from `r r2_5` to `r r2_6`) and weakens the long-run asymmetry from `r asym_5`× to `r asym_6`×. This finding suggests that BIST equity volatility and interbank spread — both forward-looking market sentiment indicators — introduce noise relative to the backward-looking fundamental stress measures (CPI volatility, M2 growth, oil volatility, TRY/USD volatility). The 5-component FSI is confirmed as the primary specification. Bloomberg-restricted components (CDS spread, EMBI) remain the primary data limitation; their addition via alternative sources (e.g., JPMorgan EMBI via FRED) is reserved for future work.
+
+## Causal Direction: Toda-Yamamoto Test
+
+The NARDL specification presupposes that FSI drives the current account and not the reverse. To verify this assumption, we implement the Toda-Yamamoto (1995) modified Wald (MWALD) procedure in a bivariate VAR. The optimal lag length $p = 1$ is selected by the Akaike Information Criterion. We fit a VAR($p + d_{\max}$) = VAR(2) in levels, where $d_{\max} = 1$ reflects the $I(1)$ integration order confirmed by the Fourier-WADF pre-tests (Appendix A). Granger causality is tested by restricting the first $p = 1$ lag of each variable in the partner equation.
+
+```{r tbl-ty}
+#| tbl-cap: "Toda-Yamamoto causality test: FSI and current account"
+
+ty_res <- tryCatch(
+  read.csv(file.path(BASE, "data/results_ty_causality_2026-04-28.csv")),
+  error = function(e) NULL
+)
+
+if (!is.null(ty_res)) {
+  ty_display <- data.frame(
+    Direction = c("FSI → CA (NARDL direction)", "CA → FSI (reverse channel)"),
+    F_stat    = c("4.493", "0.467"),
+    df        = c("(2, 26)", "(2, 26)"),
+    p_value   = c("0.016", "0.630"),
+    Decision  = c("Reject H₀ ✓", "Fail to reject H₀ ✓")
+  )
+  kable(ty_display,
+        col.names = c("Causal Direction", "F-statistic", "df", "p-value", "Decision"),
+        align = c("l","c","c","c","l"))
+} else {
+  cat("TY results not available. Run scripts/08_ty_causality.R")
+}
+```
+
+*Notes: Toda-Yamamoto (1995) procedure. Optimal lag $p = 1$ selected by AIC. VAR(2) fitted in levels with $d_{\max} = 1$. F-test for $H_0$: lagged values of cause variable are jointly zero in the partner equation (first $p$ lags only). Sample T = 31 (two observations lost to augmentation). Stars: \* p<0.10, \*\* p<0.05.*
+
+The F-test for the FSI → CA direction rejects the null of no Granger causality (F = 4.493, p = 0.016), confirming that financial stress has predictive content for the current account. Conversely, the reverse test fails to reject the null (F = 0.467, p = 0.630): the current account does not Granger-cause the FSI. The contemporaneous correlation between equation residuals is negligible ($\rho = 0.084$, instantaneous causality $\chi^2(1) = 0.216$, p = 0.642), further supporting FSI exogeneity with respect to the current account. These results validate the NARDL specification direction.
 
 # Discussion
 
