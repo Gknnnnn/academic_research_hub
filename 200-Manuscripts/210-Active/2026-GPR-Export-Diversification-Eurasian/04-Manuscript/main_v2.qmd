@@ -7,7 +7,7 @@ author:
     orcid: 0000-0002-6756-7285
     corresponding: true
 abstract: |
-  This paper tests whether geopolitical risk (GPR) drives export destination concentration in 14 Eurasian economies over 1995–2022. Using country-level Herfindahl-Hirschman Indices constructed from BACI HS-92 bilateral trade data and a panel Nonlinear ARDL framework with mean-group aggregation, we find no robust systematic effect of GPR on export concentration at the panel level (MG L⁺ = 0.006, L⁻ = −0.010, both insignificant). Granger causality tests confirm the null at the panel level (Z-bar = −0.45, p = 0.65). Country-level analysis reveals substantial heterogeneity: Turkmenistan exhibits structurally concentrated exports (mean HHI = 0.43) driven by energy export dependence, while Kazakhstan is the only economy for which GPR Granger-causes destination HHI (p = 0.015). These results suggest that geopolitical risk shapes the structure of bilateral trade channels idiosyncratically across Eurasia, with no uniform concentration or diversification response to aggregate geopolitical shocks.
+  This paper tests whether geopolitical risk (GPR) drives export destination concentration in 14 Eurasian economies over 1995–2022. The Pesaran (2004) cross-section dependence test on panel residuals yields Z = −3.38 (p < 0.001), confirming strong cross-section dependence and motivating the Augmented Mean Group (AMG) estimator as the primary method. Using country-level Herfindahl-Hirschman Indices constructed from BACI HS-92 bilateral trade data, AMG estimates find no systematic panel-level GPR effect on export concentration (β = 0.076, SE = 0.097, p = 0.450). Country-level analysis reveals substantial heterogeneity: Russia exhibits a precisely estimated negative effect (β = −0.295, p < 0.001) — GPR escalation is associated with export diversification, consistent with import-substitution policy responses — while Azerbaijan and Georgia show positive associations. These results suggest that geopolitical risk shapes export channel structure idiosyncratically across Eurasia, with no uniform panel-level concentration or diversification response to aggregate geopolitical shocks.
 keywords: [geopolitical risk, export diversification, Herfindahl-Hirschman Index, panel NARDL, Eurasia, asymmetry]
 date: today
 format:
@@ -129,10 +129,10 @@ The World Uncertainty Index [WUI; @ahir2022world] is included as a control to se
 
 ## Pre-estimation Tests
 
-Before estimation, we test for:
+Before estimation, we conduct four diagnostic tests:
 
-1. **Cross-section dependence (CSD)**: CSD is assumed a priori given common geopolitical shocks affecting all post-Soviet economies simultaneously. The Mean Group estimator is consistent under CSD.
-2. **Slope homogeneity**: @pesaran2008testing $\tilde{\Delta}$ test ($H_0$: homogeneous slopes). With heterogeneous export structures, rejection is expected.
+1. **Cross-section dependence (CSD)**: Formally tested using the Pesaran (2004) CD statistic on fixed-effects residuals. The test yields $Z = -3.38$ ($p = 0.0007$), rejecting the null of cross-section independence. This is corroborated by the Breusch-Pagan LM statistic ($\chi^2 = 272.94$, $p < 0.001$). Variable-level pairwise correlations confirm strong CSD in the GPR index ($\bar{\rho} = 1.000$, as expected for a country-invariant series) and GDP per capita ($\bar{\rho} = 0.942$), while HHI exhibits moderate dependence ($\bar{\rho} = 0.269$). Given confirmed CSD, we employ the Augmented Mean Group (AMG) estimator [@eberhardt2009; @bond2010] as the primary estimator, which augments individual country regressions with a common dynamic process estimated from the pooled first-differenced model. The AMG is consistent and efficient under CSD and slope heterogeneity. The standard Mean Group (MG) estimator is retained as a secondary check.
+2. **Slope homogeneity**: @pesaran2008testing $\tilde{\Delta}$ test ($H_0$: homogeneous slopes). With heterogeneous export structures, rejection is expected. Cross-country EC speed dispersion (range: −1.74 to −0.06) corroborates heterogeneity.
 3. **Panel unit root**: Pesaran [-@pesaran2007simple] CIPS test, allowing for CSD. Tests applied to levels and first differences to determine integration order.
 4. **Panel cointegration**: @westerlund2007testing panel cointegration tests after confirming I(1) series.
 
@@ -156,13 +156,13 @@ $$L_i^+ = -\frac{\theta_i^+}{\rho_i}, \quad L_i^- = -\frac{\theta_i^-}{\rho_i}$$
 
 The Wald symmetry test evaluates $H_0: \theta_i^+ = \theta_i^-$ for each country.
 
-## Mean-Group Panel NARDL
+## Augmented Mean Group (AMG) Panel Estimation
 
-Panel-level inference uses Mean Group (MG) aggregation:
+Given confirmed CSD ($Z = -3.38$, $p < 0.001$), the primary panel-level inference uses the Augmented Mean Group (AMG) estimator [@eberhardt2009; @bond2010]. AMG proceeds in two stages. First, the common dynamic process (CDP) — capturing unobserved common factors — is estimated from the pooled first-differenced model with year fixed effects. Second, country-level regressions are augmented with the estimated CDP, and panel estimates are obtained by averaging cross-country coefficients:
 
-$$\bar{L}^+ = \frac{1}{N} \sum_{i=1}^N L_i^+, \quad \bar{L}^- = \frac{1}{N} \sum_{i=1}^N L_i^-$$
+$$\hat{\beta}^{\text{AMG}} = \frac{1}{N} \sum_{i=1}^N \hat{\beta}_i^{\text{AMG}}$$
 
-Standard errors are computed via the delta method from the cross-country distribution of country estimates. The panel-level Wald symmetry test evaluates $H_0: \bar{L}^+ = \bar{L}^-$.
+Standard errors reflect the cross-sectional dispersion: $\widehat{SE} = \hat{\sigma}_{\hat{\beta}} / \sqrt{N}$, where $\hat{\sigma}_{\hat{\beta}}$ is the cross-country standard deviation of individual estimates. The standard Mean Group (MG) specification without CDP augmentation is retained as a robustness check. The panel-level Wald symmetry test evaluates $H_0: \bar{L}^+ = \bar{L}^-$.
 
 # Results
 
@@ -183,25 +183,26 @@ if (!baci_ready) {
 
 preest <- data.frame(
   Test = c(
+    "Pesaran (2004) CD — FE residuals",
+    "Breusch-Pagan LM — FE residuals",
     "CIPS: ln(HHI) — levels",
     "CIPS: ln(HHI) — first differences",
     "CIPS: ln(GPR) — levels",
     "CIPS: ln(GPR) — first differences",
-    "Slope heterogeneity (EC speed inspection)",
-    "Cross-section dependence (a priori)",
+    "Slope heterogeneity (EC speed range)",
     "Integration order: ln(HHI)",
     "Integration order: ln(GPR)"
   ),
-  Statistic = c("−2.503","−5.416","−2.306","—","EC speed range: −1.74 to −0.06","Expected (common GPR shocks)","—","—"),
-  CV_5pct   = c("−2.44","−2.44","−2.44","—","—","—","—","—"),
-  Decision  = c("Borderline I(1)","I(0) ✓","I(1)","I(0) assumed","Heterogeneous slopes","CSD assumed; MG estimator consistent","I(1)","I(1)")
+  Statistic = c("Z = −3.378","χ² = 272.94","−2.503","−5.416","−2.306","—","−1.74 to −0.06","—","—"),
+  CV_5pct   = c("±1.960","χ²(91) = 113.1","−2.44","−2.44","−2.44","—","—","—","—"),
+  Decision  = c("CSD present*** → AMG primary","CSD present***","Borderline I(1)","I(0) ✓","I(1)","I(0) assumed","Heterogeneous → MG/AMG","I(1)","I(1)")
 )
 
 kable(preest, col.names = c("Test", "Statistic", "5% CV", "Decision"),
       align = c("l","c","c","l"))
 ```
 
-*Notes: CIPS = Pesaran (2007) panel unit root test allowing for cross-section dependence. Critical values for T=28, N=14: −2.29 (10%), −2.44 (5%), −2.74 (1%). ln(HHI) in levels is borderline I(1): CIPS statistic (−2.503) falls just below the 5% critical value, while first differences are clearly I(0) (CIPS = −5.416). Slope heterogeneity is evidenced by the wide cross-country dispersion in error-correction coefficients (range: −1.74 to −0.06), motivating the Mean Group estimator [@pesaran2008testing]. Cross-section dependence is expected a priori: all 14 economies share exposure to common geopolitical shocks (post-Soviet institutional legacy, Russia-Ukraine conflict, global commodity cycles). Formal Pesaran CD estimation was not carried out given the unbalanced convergence structure of country-level NARDL models; CSD is instead assumed and addressed through MG aggregation, which remains consistent under CSD [@pesaran2008testing].*
+*Notes: CD = Pesaran (2004) cross-section dependence test on two-way FE residuals; significant at 0.1% level, confirming CSD — the primary estimator is therefore AMG. BP-LM = Breusch-Pagan LM test, df = N(N−1)/2 = 91. CIPS = Pesaran (2007) panel unit root test allowing for CSD. Critical values for T=28, N=14: −2.29 (10%), −2.44 (5%), −2.74 (1%). ln(HHI) in levels is borderline I(1) (CIPS = −2.503, below the 5% CV of −2.44), while first differences are clearly I(0) (CIPS = −5.416). Slope heterogeneity is confirmed by the wide cross-country dispersion in error-correction coefficients (range: −1.74 to −0.06), motivating mean-group aggregation [@pesaran2008testing]. *** p < 0.001.*
 
 ## Country-Level NARDL
 
