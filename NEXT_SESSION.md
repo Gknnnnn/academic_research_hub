@@ -1,4 +1,4 @@
-# NEXT SESSION — 2026-04-28 (Updated — Session 5)
+# NEXT SESSION — 2026-04-28 (Updated — Session 7)
 
 ## Session Startup (30 seconds)
 
@@ -10,6 +10,22 @@
 ```
 
 > All 60+ active manuscript folders have `HANDOFF.md` ✅
+
+---
+
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — CHRONIC INFLATION SPARRING R2 + FINAL SUBMISSION (Session 7)
+
+- ✅ **Webb bootstrap API fixed** (`03-Code/05_webb_bootstrap.R`) — `fwildclusterboot 0.14.3` broke `data=` arg + accessors; regional results now verified: SSA b=−0.154 ns, EAP b=−0.121 p=0.047**
+- ✅ **k-robustness analysis added** (`03-Code/09_k_robustness.R`) — k=2/3/5 all highly significant; §6.1 paragraph added both QMDs
+- ✅ **Sparring R2 deep fixes (D1/D6/D8/D9)** applied to both QMDs + PORTAL_COPYPASTE:
+  - **D1**: "RE Probit" → "Pooled Probit (year FE)" throughout; Mundlak CRE footnote added; Hausman note corrected
+  - **D8**: Abstract/intro APE framing: "one-standard-deviation" → "full shift from float to peg (ERS: 0→1)"
+  - **D9**: Argentina paragraph — joint APE ~38 pp added (ERS −19.8 pp + MII reversal −18.3 pp simultaneously)
+  - **D6**: DCP footnote added (Gopinath DCP invoicing test reserved for future work)
+- ✅ **Final package v02** rendered clean: `chronic_inf_trilemma_v02_anonymous.docx` (80KB) + ZIP (90KB)
+- ✅ **Git commits**: `729b38f` (4 QMD/script fixes) + `97a403d` (DOCX + ZIP)
+- ✅ **MEMORY.md updated** via Bash (avoids hook reversion); IREF added to pending submissions TIER 1
+- 🔴 **MGO ACTION**: editorialmanager.com/iref → Submit → upload `chronic_inf_trilemma_v02_anonymous.docx` → follow `05-Submission/PORTAL_COPYPASTE_IREF.md`
 
 ---
 
@@ -176,7 +192,9 @@ Do these yourself — all packages ready, no blockers:
 
 | Priority | Paper | Action | Portal | APC |
 |----------|-------|--------|--------|-----|
-| 🔴 URGENT | **EKC_BRICST** | "Sent Back to Author" — upload v39 | editorialmanager.com/JEPO | $0 |
+| 🔴 1 MAY | **IERFM DergiPark** | Upload `IERFM_Full_Metin_v13_kongre.pdf` (116KB) — SOLO (Bilgin deadline 30 Apr EOD) | dergipark.org.tr | $0 |
+| 🔴 NOW | **Chronic Inflation IREF** | Submit `chronic_inf_trilemma_v02_anonymous.docx` | editorialmanager.com/iref | $0 |
+| 🔴 URGENT | **EKC_BRICST** | "Sent Back to Author" — upload v39; also WITHDRAW from JEPO first → submit Resources Policy | editorialmanager.com/jresourpol | $0 |
 | 1 | **LCF Turkey** | Submit | editorialmanager.com/jresourpol | $0 |
 | 2 | **P3 Gold Policy** | Submit | editorialmanager.com/jresourpol | $0 |
 | 3 | **Green Innovation** | Submit | editorialmanager.com/jclepro | $0 |
@@ -204,10 +222,12 @@ Do these yourself — all packages ready, no blockers:
 
 | Deadline | Task |
 |----------|------|
-| **NOW** | EKC_BRICST "Sent Back to Author" upload |
-| **1 May 2026** | IERFM/EconMod — Bilgin approval → upload |
-| **11-13 May 2026** | DATAMACLEA'26 full paper (ERA yanıtı bekleniyor) |
-| **14-16 May 2026** | RSEP Barcelona presentation |
+| **NOW** | Chronic Inflation → editorialmanager.com/iref upload |
+| **NOW** | EKC_BRICST — WITHDRAW JEPO + submit Resources Policy |
+| **1 May 2026** | 🔴 IERFM DergiPark — v13 PDF solo upload (Bilgin deadline 30 Apr EOD) |
+| **11-13 May 2026** | DATAMACLEA'26 → dergipark.org.tr/en/pub/ier (v04_EN.docx 53KB ✅ PORTAL_COPYPASTE ✅) |
+| **14-16 May 2026** | RSEP Barcelona — email Işık Hoca (Slides.html + DOCX) |
+| **25 May 2026** | BCRP Lima — Bilgin onay → cmt3.research.microsoft.com |
 | **29 May 2026** | IGI chapter eEditorial Step 3 |
 
 ---
