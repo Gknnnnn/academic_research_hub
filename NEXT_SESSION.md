@@ -13,6 +13,22 @@
 
 ---
 
+## 🆕 THIS SESSION COMPLETED (2026-04-28) — CE + YK MANUSCRIPTS
+
+- ✅ **CE Cognitive Econometrics — MANUSCRIPT COMPLETE**
+  - fig_M9 TE asymmetry (infoxtr 0.3, N=27 EU-27 country means, 999 permutations) generated + embedded in §4 (p.19)
+  - 2 ghost DOIs corrected in `references.bib`: MartinezSanchez→NatComms DOI:10.1038/s41467-024-53373-4; ZhangChen→SciAdv DOI:10.1126/sciadv.adu6464
+  - PDF re-rendered: **00_main.pdf 25pp 879KB** ✅
+  - Remaining external blockers: co-author review (Esra+Suat) + hedef dergi
+
+- ✅ **YK Büyüme Finansal Kalkınma — v01 DOCX rendered**
+  - All data placeholders filled (1980–2022, WDI FD.DOM.CRED.GFS.ZS domestic credit % GDP)
+  - `_quarto.yml` (local override) created to fix book-project conflict
+  - **yk_finance_growth_nk2024_v01.docx 25KB** ✅
+  - Only blocker: Yusuf Çelik affiliation + email + target journal (EMAIL draft in /tmp/)
+
+---
+
 ## 🆕 THIS SESSION COMPLETED (2026-04-28) — CI PIPELINE + HOOKS + MEMORY
 
 - ✅ **4 Claude Code hooks fixed** (`~/.claude/hooks/`)
