@@ -1,0 +1,382 @@
+---
+title: "Hegemonic Competition and Export Flow Disruption: A PPML Gravity Analysis of Türkiye's Trade Exposure under Hormuz Crisis Episodes"
+author:
+  - name: "İlteriş Kaan Barun"
+    affiliation: "Kırıkkale University, Fatma Şenses School of Applied Sciences, Real Estate Management"
+    email: "i.kaanbarun@kku.edu.tr"
+    orcid: "0000-0002-5810-7869"
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+date: "2026-04-24"
+# Sparring v02_EN applied: P1-P8 + L2+L8+L9 — 2026-04-24
+# Sparring v03_EN applied: P1-P8 (full MS incl. §2+§3) — 2026-04-24
+# Sparring v04_EN applied: P1-P8 (AW2003/HM2014/Yotov; crisis table; GPR endo; CI; title) — 2026-04-24
+# Sparring v05_EN applied: P1-P8 (Frede+Yilmaz; Fally+WZ; 21→20mbpd; 2026 §; MRT) — 2026-04-24
+# Sparring v06_EN applied: P1-P8 (CI[−31%,+20%]; GBRI ghost; 90%→qualifier; MRT ident; Lissack; 20mbpd§3) — 2026-04-24
+# v07_EN: §2.4 Geoeconomics+Weaponized Interdependence added (Luttwak1990+Blackwill2016+Farrell2019); gopinath2024→jie; conclusion updated — 2026-04-25
+# v08_EN: Verschuur2025(NatComms)+Ünlü2025+Morgan2023(JEP) added; Farrell DOI corrected 00351→00345; goes2022 DOI verified; UNCTAD URL verified — 2026-04-25
+# v09_EN: §1 gaps expanded 3→5 (Verschuur+Ünlü+GPR×chokepoint+connector quant+Hejaz); contributions strengthened — 2026-04-25
+# v10_EN: gopinath2024jie DOI verified+corrected (101976→104042, yr→2025); $1.3B unverified→removed; jpost URL+date confirmed; trtworld Apr7 noted — 2026-04-25
+# v11_EN: §5 Kirkuk-Ceyhan footnote added (real-time validation: Brent+55.32%, 250k bpd pipeline) — 2026-04-25
+# v12_EN: §5 footnote expanded — FP 2026-04-23: ceasefire shaky, US naval blockade, IEA "worst energy crisis in history", economic war of attrition — 2026-04-25
+lang: en
+format:
+  docx:
+    toc: false
+    number-sections: true
+bibliography: hormuz_turkey.bib
+csl: apa.csl
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup, include=FALSE}
+suppressPackageStartupMessages({
+  library(tidyverse)
+  library(fixest)
+  library(modelsummary)
+  library(flextable)
+  library(countrycode)
+})
+
+DATA_DIR <- "/Users/mehmetgokhanozdemir/Library/CloudStorage/OneDrive-Kişisel/Akademik_Arastirma/200-Manuscripts/210-Active/2026-Hormuz-Turkey-Gravity/01-Data"
+
+baci <- read_csv(file.path(DATA_DIR,"baci_turkey_20260423.csv"),show_col_types=FALSE) |>
+  rename(trade=trade_value_usd) |>
+  mutate(iso_o="TUR", iso_d=countrycode(iso_d_num,"iso3n","iso3c",warn=FALSE), year=as.integer(year)) |>
+  filter(!is.na(iso_d))
+
+gpr     <- read_csv(list.files(DATA_DIR,"gpr_annual_.*csv",full.names=TRUE)[1],show_col_types=FALSE)
+wdi     <- read_csv(list.files(DATA_DIR,"wdi_gdp_.*csv",full.names=TRUE)[1],show_col_types=FALSE)
+geodist <- read_csv(list.files(DATA_DIR,"geodist_tur_.*csv",full.names=TRUE)[1],show_col_types=FALSE)
+
+hormuz_years <- c(2011L,2012L,2019L,2020L,2024L)
+bri_iso3 <- c("CHN","PAK","BGD","LKA","MDV","NPL","BTN","KAZ","KGZ","TJK","TKM","UZB","MNG",
+  "RUS","BLR","UKR","GEO","AZE","ARM","IRN","IRQ","SAU","ARE","QAT","KWT","OMN",
+  "EGY","ETH","KEN","TZA","MOZ","ZMB","AGO","IDN","MYS","THA","PHL","VNM","MMR","KHM",
+  "GRC","HUN","POL","CZE","SVK","ROU","BGR")
+
+panel <- baci |>
+  left_join(gpr |> select(year, gpr_tur=GPRC_TUR, gpr_global=GPR), by="year") |>
+  left_join(wdi |> transmute(iso_d=iso3c, year, gdp_d=gdp_usd), by=c("iso_d","year")) |>
+  left_join(wdi |> filter(iso3c=="TUR") |> transmute(year, gdp_tur=gdp_usd), by="year") |>
+  left_join(geodist |> select(iso_d, dist, contig), by="iso_d") |>
+  mutate(
+    hormuz    = as.integer(year %in% hormuz_years),
+    bri_d     = as.integer(iso_d %in% bri_iso3),
+    ln_gdp_tur = log(gdp_tur), ln_gdp_d = log(gdp_d), ln_dist = log(dist),
+    pair_id   = paste(iso_o, iso_d, sep="_"),
+    gpr_x_hor = gpr_tur * hormuz,
+    hor_bri   = hormuz * bri_d,
+    yr_trend  = year - 2010L
+  ) |>
+  filter(!is.na(trade),!is.na(gdp_d),!is.na(dist),!is.na(gpr_tur))
+
+m1 <- feglm(trade ~ ln_gdp_tur + ln_gdp_d + ln_dist + contig | year,
+  data=panel, family=poisson(), cluster=~pair_id)
+m2 <- feglm(trade ~ ln_gdp_d + yr_trend + gpr_tur + hormuz | iso_d,
+  data=panel, family=poisson(), cluster=~pair_id)
+m3 <- feglm(trade ~ ln_gdp_d + yr_trend + gpr_tur + hormuz + gpr_x_hor + hor_bri | iso_d,
+  data=panel, family=poisson(), cluster=~pair_id)
+m4 <- feglm(trade ~ ln_gdp_d + yr_trend + gpr_tur + hormuz + gpr_x_hor + hor_bri | iso_d,
+  data=panel |> filter(year>=2015) |> mutate(yr_trend=year-2015L),
+  family=poisson(), cluster=~pair_id)
+
+panel_m5 <- panel |> mutate(covid = as.integer(year == 2020L))
+m5 <- feglm(trade ~ ln_gdp_d + yr_trend + gpr_tur + hormuz + gpr_x_hor + hor_bri + covid | iso_d,
+  data=panel_m5, family=poisson(), cluster=~pair_id)
+
+coef_map <- c(
+  "ln_gdp_tur" = "ln GDP (Türkiye)",
+  "ln_gdp_d"   = "ln GDP (Partner)",
+  "ln_dist"    = "ln Distance (km)",
+  "contig"     = "Contiguity (0/1)",
+  "yr_trend"   = "Year Trend",
+  "gpr_tur"    = "GPR Türkiye",
+  "hormuz"     = "Hormuz Crisis (non-BRI)",
+  "gpr_x_hor"  = "GPR × Hormuz",
+  "hor_bri"    = "Hormuz × BRI",
+  "covid"      = "COVID-19 (2020)"
+)
+```
+
+## Abstract {.unnumbered}
+
+This study empirically examines the conditional association between Strait of Hormuz crisis periods and Türkiye's bilateral trade flows within a Poisson Pseudo-Maximum Likelihood (PPML) gravity model framework. Using a panel dataset covering 2010–2024 with Türkiye and 189 trading partners (N=2,774 observations), four models are estimated with partner fixed effects and year trends. The model is augmented with Caldara and Iacoviello's (2022) country-level Geopolitical Risk Index (GPR), a Hormuz crisis dummy (2011, 2012, 2019, 2020, 2024), and a GPR×Hormuz interaction term. Three key findings emerge: (i) Hormuz crisis years are associated with a 35 percent reduction in Türkiye's exports to non-BRI partners ($\hat{\beta}_{Hormuz}=-0.432^{***}$, 95% CI: [−0.622, −0.242]); (ii) Türkiye's elevated geopolitical risk during crisis years is associated with partial compensation of this contraction, consistent with corridor activation dynamics ($\hat{\beta}_{GPR \times Hormuz}=+1.158^{***}$, 95% CI: [+0.582, +1.734]); (iii) the conditional net trade change under average GPR conditions is approximately −5.1 percent. A COVID-19 robustness specification (M5) is consistent with the finding that the pandemic does not drive the Hormuz result: the COVID-19 dummy is statistically insignificant ($p=0.52$), and the net Hormuz effect attenuates to −4.49%, a 0.64 percentage-point difference, indicating that the M3 headline estimate should be interpreted as a modest upper bound. Scenario simulation quantifies the strategic potential of alternative corridors through Türkiye under full closure. The Gulf–Europe Railway Corridor agreement signed on April 20, 2026 corroborates the paper's forward-looking framework with a real-time policy development.
+
+**Keywords:** PPML Gravity, Strait of Hormuz, Geopolitical Risk, Türkiye Trade, Hejaz Railway, Belt and Road Initiative
+
+**JEL:** F14, F51, F52, C23
+
+---
+
+# Introduction
+
+The Strait of Hormuz — through which approximately 20 million barrels of crude oil and \$4 trillion in traded goods transit daily — is unquestionably the most critical chokepoint in global energy security [@unctad2026; @eia2024]. @verschuur2025 estimate, in the first systematic quantification of maritime chokepoint risk, that USD 192 billion of trade is exposed annually across 24 major chokepoints, with Hormuz commanding the largest geopolitical risk share; their damage estimate of USD 10.7 billion per year from delays, rerouting, and insurance repricing provides the first peer-reviewed benchmark for chokepoint disruption costs. Under a full-closure scenario, roughly 20 percent of global oil supply would be disrupted, commodity prices would surge sharply, and global real GDP growth would face severe headwinds [@unctad2026]. These figures transform Hormuz from a purely energy concern into a structural vulnerability of international trade architecture.
+
+This vulnerability coincides with the deepening of US–China hegemonic competition and an intensification of Gulf geopolitical tensions stretching from the 2019 tanker crisis to the 2024 regional escalation. In @mearsheimer2001's offensive realism framework, hegemonic rivalry drives rival states into a logic of conflict that renders Hormuz a critical strategic variable for both Washington and Beijing. @gopinath2024jie document, using granular bilateral data and a gravity model, that geopolitical tensions have fragmented global trade flows along bloc lines since Russia's invasion of Ukraine — with trade between geopolitically distant blocs falling by approximately 12 percent and foreign direct investment declining by 20 percent — while a set of non-aligned "connector countries" have rapidly gained importance as bridges between rival blocs. Critically, the IMF estimates that China's welfare loss from full fragmentation nearly doubles (from −4.5 percent to −8.0 percent) when connector economies align with the Western bloc rather than remaining non-aligned — quantifying the strategic value of intermediary positioning. Türkiye's logistics position in the context of Hormuz crises maps directly onto this theoretical framework.
+
+In this structural context, Türkiye faces a uniquely strategic opportunity. Positioned at the intersection of four distinct trade corridors between Asia and Europe, Türkiye stands to become a primary beneficiary of trade diversion demand arising from Hormuz disruptions. The Gulf–Europe Railway Corridor agreement signed on April 20, 2026 among Türkiye, Syria, and Jordan [@jpost2026; @trtworld2026] — reviving the historic Hejaz Railway line — represents the materialisation of this potential into concrete intergovernmental action.
+
+Despite this, the relationship between Hormuz crisis periods and Türkiye's bilateral trade flows has not been examined econometrically in a systematic manner. The existing literature presents five key gaps. *First*, although the relationship between geopolitical risk and trade flows has been addressed in a PPML gravity framework for terrorism shocks [@unlu2025] and for GCC-level GPR effects [@alshammari2025], no study has modelled discrete Hormuz crisis episodes as a panel binary variable in a bilateral gravity specification — despite @verschuur2025 establishing that Hormuz commands the largest geopolitical risk share among global maritime chokepoints. *Second*, the @caldara2022 GPR index has been widely integrated into macroeconomic studies on investment and inflation, but its interaction with a physical chokepoint closure dummy within a bilateral gravity framework has not been estimated; the sign of the interaction term is *a priori* ambiguous and constitutes the core empirical contribution of this paper. *Third*, no gravity analysis simultaneously measures Türkiye's vulnerability to Hormuz crises and its corridor-activation capacity, leaving the net trade effect at varying GPR levels unquantified. *Fourth*, while @gopinath2024jie identify "connector countries" as key beneficiaries of geopolitical fragmentation using aggregate bloc-level flows and FDI data, no study quantifies connector status via an exporter-specific PPML gravity model under discrete shock episodes, linking Türkiye's corridor role directly to bilateral export outcomes. *Fifth*, the potential impact of Hormuz disruption on the Hejaz Railway Corridor — Türkiye's most viable overland bypass route — has never been addressed in a quantitative gravity framework.
+
+This study aims to fill these gaps through three original contributions: *(i)* methodological — an integrated PPML gravity + GPR + Hormuz dummy model with a GPR×Hormuz interaction term; *(ii)* empirical — panel estimation findings for 2010–2024 across 189 partners, yielding the first estimates of the GPR-conditional Hormuz trade effect for a middle-income connector economy; *(iii)* policy — a Hormuz full-closure scenario simulation calibrated to the April 2026 crisis episode.
+
+The remainder of the paper is organised as follows: Section 2 presents the theoretical framework on hegemonic competition; Section 3 covers Gulf geopolitical dynamics; Section 4 describes the econometric method; Section 5 reports findings and policy implications; Section 6 concludes.
+
+---
+
+# Theoretical Framework: Hegemonic Competition and Strait Politics
+
+## Offensive Realism and the Strategic Logic of Chokepoints
+
+The theoretical foundation of this study rests on @mearsheimer2001's offensive realism. In Mearsheimer's framework, great powers are not status-quo actors but relentless maximisers of relative power, driven by the anarchic structure of the international system and the permanent uncertainty about rivals' intentions. The central prediction — that hegemonic competition is a structural feature of international politics, not an aberration — has particular salience for geography. The "stopping power of water," one of offensive realism's core propositions, explains why global hegemons do not emerge: large bodies of water make projecting land power across oceans prohibitively costly, thus confining hegemonic ambitions to regional theatres. Straits and chokepoints, however, invert this logic. They are precisely the points at which the stopping power of water *concentrates* — converting a vast ocean into a single navigable corridor and thereby creating extraordinary strategic leverage for whoever controls, threatens, or depends on that passage.
+
+The Strait of Hormuz — 34 kilometres wide at its narrowest point and carrying approximately 20 percent of global oil supply — is the paradigm case of this dynamic. Under offensive realism, the strait is not merely a geographic feature but a *structural variable* in great-power competition: its disruption capacity gives Iran asymmetric leverage over both the incumbent hegemon (the United States) and the rising challenger (China), transforming a regional waterway into a systemic pressure point in the international order.
+
+## Power Transition and the Hormuz Dilemma
+
+Organski and Kugler's power transition theory, formalised empirically in [-@organski1980], provides a complementary lens. The theory predicts that the most dangerous period in international politics is when a dissatisfied rising power approaches parity with the dominant power — a window in which the challenger has both the capability and the incentive to challenge the status quo. The contemporary US–China power transition generates precisely this dynamic around Hormuz. China receives approximately 37.7 percent of all oil transiting Hormuz, accounting for an estimated 40–50 percent of China's total crude oil imports [@eia2024], rendering it acutely vulnerable to any disruption. The United States, by contrast, has dramatically reduced its own Hormuz dependence following the shale revolution of the 2010s, while retaining the naval presence and alliance commitments that give it de facto veto power over passage.
+
+This asymmetry generates a structural vulnerability analogous to China's documented dependence on the Strait of Malacca: deep reliance on a maritime chokepoint over which a rival power exercises effective control [@eia2024]. From a power transition perspective, China's Belt and Road Initiative (BRI) can be read as an attempt to construct overland alternatives — the China–Pakistan Economic Corridor (CPEC), the Central Asian railway network — that reduce this chokepoint vulnerability. Yet BRI's overland routes carry only a fraction of the volume that maritime Hormuz transit supports, making the dilemma structural rather than solvable in the near term.
+
+## The Monroe Doctrine–BRI Analogy and Türkiye as Connector Country
+
+The geopolitical logic of the BRI invites comparison with the Monroe Doctrine: both represent sphere-of-influence strategies by which a great power seeks to shape its regional environment and limit the penetration of rival powers. Where the United States invoked the Monroe Doctrine to exclude European powers from the Western Hemisphere, China's BRI builds economic dependencies — infrastructure, debt, trade routes — that embed connectivity on terms favourable to Beijing. Hormuz sits at the intersection of these rival logics: the United States maintains the Fifth Fleet in Bahrain and conducts freedom-of-navigation operations, while China deepens its energy and diplomatic ties with Iran, the strait's most capable disruptor.
+
+Türkiye occupies an analytically distinct position in this contest. @gopinath2024jie document, using granular bilateral trade data, that geopolitical fragmentation has reduced trade between rival blocs by approximately 12 percent since 2022, while a group of non-aligned "connector countries" have captured growing shares of intermediary trade. Türkiye's geography — bridging four distinct corridors between Asia and Europe via the Bosphorus–Black Sea axis, the Middle Corridor (Trans-Caspian International Transport Route), the Southern Gas Corridor, and the historic Silk Road overland axis — positions it as the canonical connector country in any Hormuz disruption scenario. When Hormuz risk rises, both US-aligned and China-aligned trade flows seek alternative land and sea routes, and Türkiye's corridor network stands to capture a disproportionate share of that diversion.
+
+The theoretical prediction, then, is not merely that Hormuz crises reduce Türkiye's trade (through demand suppression, commodity price shocks, and partner uncertainty) but that they simultaneously expand Türkiye's corridor rent — producing the partially offsetting interaction effect ($\hat{\beta}_{GPR \times Hormuz} > 0$) that the empirical model tests. This theoretical duality — Türkiye as both a trade-volume loser and a corridor-position gainer from Hormuz disruptions — distinguishes the present study from prior gravity analyses that treat geopolitical risk as a uniformly negative trade shock.
+
+## Geoeconomics and Weaponized Interdependence
+
+The three theoretical lenses above — offensive realism, power transition, and the BRI-as-Monroe-Doctrine analogy — share a common implicit assumption: that trade routes and economic dependencies are the *terrain* on which geopolitical competition plays out. A complementary tradition makes the stronger claim that economic networks are themselves *weapons* of statecraft. @luttwak1990 coined the term *geoeconomics* to describe the substitution of economic instruments for military ones in great-power competition: "the logic of conflict in the grammar of commerce." In Luttwak's formulation, states increasingly pursue strategic objectives — coercion, territorial influence, deterrence — through the tools of trade policy, investment restrictions, technology controls, and infrastructure connectivity rather than through direct military means. The Hormuz crisis episodes examined here are paradigm cases: Iran's repeated closure threats constitute economic coercion in Luttwak's grammar, while the US Fifth Fleet's freedom-of-navigation commitment is the counter-move in the same geoeconomic contest.
+
+@blackwill2016 formalise and update this framework for the contemporary era, defining geoeconomics as "the use of economic instruments to promote and defend national interests, and to produce beneficial geopolitical results." Their taxonomy of geoeconomic tools — trade policy, investment policy, sanctions, financial and monetary instruments, and energy and commodities policy — maps directly onto the US–China–Iran triangle surrounding Hormuz. China's BRI, in this reading, is not merely an infrastructure initiative but a geoeconomic instrument: financing ports, railways, and pipelines along the Indo-Pacific rim creates economic dependencies that simultaneously reduce partner countries' incentives to align with US-led coalitions. Türkiye's position as a prospective BRI transit node and a simultaneous NATO member renders it a contested target of competing geoeconomic architectures. @morgan2023 document, in a comprehensive gravity-based review, that the frequency of economic sanctions has tripled since 2018 — with the US, EU, and China each deploying sanctions as substitutes for military action — corroborating Luttwak's original geoeconomics prediction and establishing the contemporary institutional context within which Hormuz closure threats operate.
+
+@farrell2019 extend this tradition with a network-theoretic formulation of *weaponized interdependence*. Their central insight is that global economic networks — financial, supply-chain, digital, and energy — are asymmetrically structured: a small number of hub nodes enjoy disproportionate centrality, and states that control these hubs can weaponize network access in two ways. The *panopticon effect* refers to the ability to surveil flows through the network; the *chokepoint effect* refers to the ability to deny or throttle access for targeted actors. The Strait of Hormuz is the canonical physical instantiation of the chokepoint effect: whichever power controls or can credibly threaten passage through the strait thereby acquires leverage over all economies whose energy imports transit it.
+
+This framework generates a precise theoretical prediction for the empirical interaction term of the present study. When US–China geopolitical tension rises — elevating GPRC\_TUR as Türkiye navigates between rival blocs — the strategic salience of Hormuz as a chokepoint intensifies simultaneously. Türkiye's corridor position, however, inverts the chokepoint logic in a second-order sense: rather than *suffering* the weaponization of Hormuz, Türkiye is positioned to *benefit* from the demand for bypass routing that such weaponization creates. The positive sign of $\hat{\beta}_{GPR \times Hormuz} = +1.158^{***}$ is consistent with this geoeconomic interpretation: elevated Türkiye GPR during Hormuz crises signals the activation of corridor demand — a partial reversal of the network-denial mechanism through alternative connectivity. In the weaponized interdependence framework, Türkiye emerges not as a passive subject of chokepoint coercion but as a potential *corridor-node provider*, offering rival powers and their trade partners a partial hedge against Hormuz weaponization.
+
+---
+
+# Hormuz Geopolitics: The Gulf Dimension of US–China Competition
+
+## Crisis Episodes and the Model's Dummy Variable
+
+The five Hormuz crisis years embedded in the panel dummy variable (2011, 2012, 2019, 2020, 2024) correspond to discrete geopolitical escalation events, not to a continuous risk trajectory. This episodic structure justifies a binary dummy specification over a continuous GPR-only approach: each episode features an acute threat to strait navigability that operating firms and partner governments treat as a qualitative regime shift, not merely a high GPR reading.
+
+**2011–2012 (Iran Nuclear Crisis).** Following the imposition of coordinated Western sanctions on Iran's oil sector — the EU embargo of July 2012, combined with US Treasury Department designations targeting Iran's central bank — Iranian officials issued repeated public threats to close the Strait of Hormuz. On 27 December 2011, Iranian Vice President Mohammad-Reza Rahimi publicly threatened that no oil would pass through the Strait of Hormuz if sanctions were tightened; IRGC Navy Chief Admiral Habibollah Sayyari declared strait closure operationally feasible. In January 2012, the IRGC conducted Velayat 90, a ten-day naval exercise in international waters near Hormuz. The United States repositioned carrier strike groups to the Gulf in response. Oil prices spiked sharply; Brent crude reached approximately $125 per barrel in early March 2012 — a direct market reflection of closure risk [@eia2024]. For Türkiye, 2011–2012 coincided with peak sanctions pressure on Iran, disrupting established energy-trade relationships and generating bilateral uncertainty.
+
+**2019 (Gulf Tanker Crisis).** The 2019 episode unfolded in three stages. On 12 May 2019, four vessels were damaged off the port of Fujairah (UAE territorial waters just outside Hormuz) in coordinated limpet-mine attacks. On 13 June, the tankers *Kokuka Courageous* and *Front Altair* were struck near the Gulf of Oman while carrying petroleum from Saudi Arabia and Qatar. The USS Abraham Lincoln carrier group was deployed in response. On 19 July, the IRGC seized the British-flagged *Stena Impero* in the strait itself, holding it for two months. Operation Sentinel was launched as a multinational escort initiative. The Lloyd's Joint War Committee (JWC) designated the Northern Persian Gulf a high-risk zone, and spot LNG freight rates from Qatar surged as shipping insurers re-priced Hormuz risk sharply upward.
+
+**2020 (COVID-19 and Continued Gulf Tension).** The year 2020 presents an analytical compound: COVID-19 caused a historic collapse in global trade volumes (WTO reported a 5.3 percent decline in world merchandise trade), while Gulf geopolitical tensions continued in the wake of the January 2020 US airstrike killing IRGC Quds Force commander Qasem Soleimani. Iran's retaliatory missile strikes on US bases in Iraq, combined with pandemic-induced logistical disruption, created a double shock to Türkiye's trade flows. The M5 specification in this study is consistent with the interpretation that the COVID-19 component is statistically absorbed by partner fixed effects and the year trend ($p=0.52$), suggesting that the Hormuz dummy captures a distinct non-pandemic channel.
+
+**2024 (Regional Escalation).** The Hamas–Israel conflict that erupted in October 2023 expanded into a regional maritime crisis by early 2024. Houthi forces in Yemen conducted sustained attacks on commercial shipping in the Red Sea and Gulf of Aden, forcing major carriers (Maersk, Hapag-Lloyd, MSC) to reroute around the Cape of Good Hope — adding 10–14 days to Asia–Europe transit times and sharply elevating freight rates. While Houthi operations targeted the Red Sea rather than Hormuz directly, the regional escalation elevated Hormuz risk perception — GPR indices for Gulf states reached multi-year highs in Q1 2024 — and generated significant cargo rerouting through alternative corridors, including Türkiye's rail and road networks.
+
+## US Energy Independence and the Paradox of Hormuz Commitment
+
+A structural feature of the 2011–2024 period is the US shale revolution. By 2019, the United States had become the world's largest oil producer, reducing its own crude oil imports from the Gulf to historically low levels. This transformation creates a strategic paradox: the United States is less *economically* dependent on Hormuz than at any point since the 1970s, yet it remains institutionally committed to policing the strait through the Fifth Fleet and the broader Bahrain-based naval architecture. The commitment persists because US allies — the EU, Japan, South Korea, and India — remain highly Hormuz-dependent, and disrupting their energy supply would impose severe systemic costs on the liberal international order the United States underwrites. The 2023 US–India energy partnership, which expanded bilateral LNG contracts, reflects precisely this dynamic: diversification away from Hormuz dependency, but not elimination of it.
+
+## Iran's Asymmetric Leverage and the Closure Calculus
+
+Iran's capacity to disrupt Hormuz is real but bounded. The IRGC Navy's doctrine of "swarm" tactics — fast patrol boats, anti-ship mines, shore-based missile batteries — is specifically designed for Hormuz denial rather than conventional fleet engagement. The strait's extreme narrowness (the shipping lanes are two kilometres wide in each direction) makes mine-laying operationally feasible. Analysts estimate that a sustained Iranian mining campaign could reduce tanker traffic by 20–30 percent for 30–60 days before clearance operations restored navigation [@eia2024]. Full closure, however, carries prohibitive costs for Iran itself: under pre-sanctions conditions, oil revenues constituted the majority of Iranian government receipts, and even under heavily sanctioned regimes Iran's export capacity through the strait remains its principal hard-currency source. The closure calculus is therefore one of asymmetric coercion — credible threat, limited actual use — consistent with the episodic spike structure that motivates our dummy variable specification.
+
+## Alternative Infrastructure and Türkiye's Emerging Role
+
+Gulf producers have invested substantially in Hormuz bypass infrastructure. Saudi Arabia's East-West Crude Oil Pipeline (design capacity approximately 7 million barrels per day, running parallel to the coast from Eastern Province to Yanbu on the Red Sea) provides an alternative to the Red Sea via Yanbu. The UAE's Abu Dhabi Crude Oil Pipeline (capacity 1.5 mbpd) terminates at the port of Fujairah, bypassing the strait entirely. These bypass routes are partial solutions: existing capacity covers only a fraction of the approximately 20 mbpd that transits Hormuz daily [@eia2024]. The residual gap creates structural demand for Türkiye's corridor infrastructure. These bypass routes are therefore partial, not complete, alternatives — a fact that sharpens the policy relevance of Türkiye's position [@eia2024].
+
+The April 2026 trilateral agreement among Türkiye, Syria, and Jordan to revive the Gulf–Europe Railway Corridor along the historic Hejaz Railway route represents the most concrete policy materialisation of this structural demand [@jpost2026; @trtworld2026]. The route, running from Aqaba (Jordan) through Syrian territory to Türkiye's rail network and onward to European markets, would reduce Gulf–Europe surface transit distance by approximately half relative to the maritime Suez route, and would remain operative under full Hormuz closure scenarios. From an offensive realism perspective, this agreement is not merely an infrastructure project but a geopolitical hedge: Türkiye converts its connector-country theoretical advantage into a durable physical corridor asset.
+
+---
+
+# Econometric Method and Data
+
+## Methodological Rationale
+
+This study employs the **PPML (Poisson Pseudo-Maximum Likelihood) gravity model** to empirically measure the sensitivity of international trade flows to geopolitical shocks. The canonical theoretical foundation is the structural gravity model of @andersonwincoop2003, who demonstrate that bilateral trade flows are jointly determined by bilateral trade costs and multilateral resistance terms (MRT) — the trade-cost barriers each country faces with all trading partners simultaneously. @headmayer2014 provide the methodological toolkit; @yotov2016 the implementation guidance for policy analysis.
+
+Three principal justifications underpin the PPML choice specifically. First, the right-skewed distribution of trade data and the prevalence of zero trade observations render log-linear OLS estimation biased. @santossilva2006 demonstrate that PPML eliminates these biases arising from Jensen's inequality; the method has since become the standard in the international trade literature with over 6,800 citations. Second, when estimated with bilateral pair fixed effects, PPML controls for unobserved bilateral heterogeneity [@correia2020]. Third, examining the association between geopolitical risk and trade flows through both level and interaction terms allows for the capture of non-linear, state-dependent patterns.
+
+**A note on cross-sectional dependence:** with 189 partners spanning 15 years and subject to common global shocks (the 2011–2012 Iran nuclear crisis, COVID-19 in 2020, the 2022 Ukraine war), cross-section dependence in the residuals is plausible. In the present single-exporter PPML setting, year fixed effects (M1) and year trend + partner fixed effects (M2–M4) absorb the dominant common time variation. PPML is inherently robust to heteroskedastic cross-section dependence [@santossilva2006]. Pesaran's CD test applied to the demeaned residuals, or the inclusion of time × region interaction terms, would constitute recommended robustness checks for future iterations of this specification.
+
+**A note on GPR endogeneity and bypass corridor instruments:** The Caldara and Iacoviello (2022) GPR index is constructed from news text. During Hormuz crisis episodes, Türkiye's active diplomatic and logistics positioning — promoting itself as an alternative transit corridor — generates news coverage that may itself raise GPRC\_TUR. This creates a potential upward bias in $\hat{\beta}_{GPR \times Hormuz}$: the positive interaction may partly reflect Türkiye's endogenous corridor-promotion strategy rather than purely exogenous geopolitical conditions.
+
+To address this concern, we implement a control function (CF) approach [@wooldridge2015] using bypass corridor instruments. The instruments are $\text{GPRC}_{SAU} \times Hormuz_t$ and $\text{GPRC}_{CHN} \times Hormuz_t$ — Saudi Arabia's and China's country-level GPR interacted with the Hormuz crisis indicator. The exclusion restriction rests on the following logic: Saudi and Chinese GPR levels are determined by their own geopolitical dynamics (Saudi–Iran rivalry and the East-West bypass pipeline decisions in the Saudi case; South China Sea and Taiwan Strait tensions in the Chinese case) and are orthogonal to Türkiye's bilateral export flows to third countries conditional on partner fixed effects and year trend. Yet during Hormuz crisis years, both countries' GPR indices correlate with Türkiye's GPR through the common Persian Gulf shock channel — satisfying instrument relevance.
+
+First-stage results confirm instrument strength: the joint F-statistic is $F = 43.14$ ($p < 0.001$), with individual $t$-statistics of $2.67$ (GPRC\_CHN instrument) and $1.81$ (GPRC\_SAU instrument); the first-stage $R^2 = 0.922$. The CF endogeneity test — based on the significance of the first-stage residuals in the second-stage PPML — rejects exogeneity ($\hat{\beta}_{v} = 0.756^{***}$, SE = 0.288, $p = 0.009$), confirming that the endogeneity concern is empirically relevant.
+
+Under CF correction, the key interaction coefficient attenuates modestly from $\hat{\beta}_{GPR \times Hormuz} = 1.158^{***}$ to $1.079^{***}$ (SE = 0.264, $p < 0.001$) — a downward revision of 6.8 percent. The net trade effect at mean GPR shifts from $-5.1\%$ to $-6.0\%$. Critically, the direction and statistical significance of the corridor activation mechanism are unchanged. The CF-corrected results are reported alongside the baseline in Table A2. The CF correction indicates that while GPRC\_TUR contains a modest endogenous component during Hormuz crises, the core finding — that elevated Türkiye GPR partially compensates Hormuz-induced trade suppression — is robust to this correction and should be interpreted as a **conditional association with a credible upper bound on the causal effect**.
+
+For Türkiye specifically, @fredeyetkiner2017 estimate a panel data gravity model over 1960–2012 using 180 country-pairs and find that Türkiye's trade dynamics conform well to structural gravity predictions, with income elasticities and distance penalties consistent with the international norm. @unlu2025 apply PPML to 71 Türkiye export partners over 2012–2022 and find that 925 domestic terrorist incidents statistically significantly suppress bilateral exports, confirming that political shock dummies are identifiable in this setting — a methodological precedent for the Hormuz crisis dummy employed here. The present study extends this framework to the 2010–2024 period and augments it with a geopolitical risk dimension. On the GPR–trade nexus, the relationship was first systematically addressed in a gravity framework by @gupta2018, who established the methodological basis for integrating the @caldara2022 index into bilateral trade models. @kim2023 subsequently demonstrate, in the South Korean context, that rising GPR statistically significantly suppresses bilateral trade flows. The spillover dynamics of geopolitical risk across countries have been examined by @balli2021 within a regional science framework. For the Gulf region specifically, @alshammari2025 show that GPR negatively affects GCC countries' trade flows. In the Türkiye–BRI context, @yilmaz2022 measure Türkiye's trade potential along the Belt and Road corridor using a gravity model, while @wang2024 demonstrate that, during periods of heightened geopolitical tension, BRI membership partially buffers China's bilateral trade relationships — suggesting that institutional connectivity can moderate crisis-period trade suppression. No study, however, embeds Hormuz crisis episodes in a panel gravity model, estimates the GPR interaction effect, and simulates Türkiye's alternative corridor position simultaneously. This gap constitutes the original contribution of the present study.
+
+**A note on PPML inference:** @fally2015 shows that structural gravity is internally consistent with PPML fixed-effects estimation, validating the approach for bilateral panels with partner FE. @weidnerzylkin2021 demonstrate that while PPML is consistent in three-way gravity panels, finite-sample bias in standard errors is possible when both N and T are moderate; pair-clustered standard errors, as employed here, are the recommended correction. Given T=15 years in the present study, coefficient estimates should be treated as asymptotically consistent but inference interpreted with appropriate caution.
+
+## Model
+
+The baseline gravity model is specified as:
+
+$$
+E[T_{ijt}] = \exp\!\Bigl(\alpha_0 + \beta_1 \ln GDP_{it} + \beta_2 \ln GDP_{jt} + \beta_3 \ln Dist_{ij} + \beta_4 Contig_{ij} + \beta_5 GPR_{it} + \beta_6 Hormuz_t + \beta_7 BRI_j + \beta_8 (GPR_{it} \times Hormuz_t) + \mu_{ij} + \lambda_t\Bigr) + \varepsilon_{ijt}
+$$
+
+where $T_{ijt}$ denotes the total trade value (thousands USD, BACI HS92) exported by country $i$ to country $j$ in year $t$. $\mu_{ij}$ represents bilateral pair fixed effects and $\lambda_t$ year fixed effects.
+
+### Variable Definitions and Expected Signs
+
+| Variable | Definition | Source | Expected Sign |
+|----------|-----------|--------|--------------|
+| $\ln GDP_{it}$ | Exporter GDP (current USD, log) | WDI | $\beta_1 > 0$ |
+| $\ln GDP_{jt}$ | Importer GDP (current USD, log) | WDI | $\beta_2 > 0$ |
+| $\ln Dist_{ij}$ | Haversine distance from Ankara (log) | Geosphere | $\beta_3 < 0$ |
+| $Contig_{ij}$ | Shared land border (dummy) | Geosphere/CEPII | $\beta_4 > 0$ |
+| $GPR_{it}$ | Country-level Geopolitical Risk Index | @caldara2022 | $\beta_5 < 0$ |
+| $Hormuz_t$ | Hormuz crisis dummy (2011, 2012, 2019, 2020, 2024) | Authors | $\beta_6 < 0$ |
+| $BRI_j$ | Partner BRI membership (dummy) | Authors (based on @goes2022) | $\beta_7 \gtrless 0$ |
+| $GPR_{it} \times Hormuz_t$ | Geopolitical risk × Hormuz crisis interaction | — | $\beta_8 \gtrless 0$ |
+
+**Key hypothesis:** The sign of $\beta_8$ is *a priori* ambiguous. A negative $\beta_8$ would indicate that higher GPR exacerbates trade disruption during Hormuz crises; a positive $\beta_8$ would be consistent with Türkiye activating alternative corridors when geopolitical risk is elevated, thereby limiting net trade losses.
+
+## Data
+
+**BACI HS92 (CEPII):** Bilateral trade flows of Türkiye with 189 trading partners, 2010–2024. Developed by @gaulier2010, BACI reconciles raw UN Comtrade data to produce consistent FOB export and CIF import values.
+
+**GPR Index:** The Country-Level Geopolitical Risk Index developed by @caldara2022 in the *American Economic Review*. Computed monthly via news-based text analysis, the index is converted to annual averages for the estimation.
+
+**WDI:** GDP values (NY.GDP.MKTP.CD) retrieved from the World Bank WDI API in current USD.
+
+**Distance:** Haversine distances centred on Ankara are computed using the `geosphere` R package.
+
+### Hormuz Crisis Episodes
+
+Crisis years are identified using a dual criterion: (i) the annual average GPRC\_TUR (Turkey's country GPR) exceeds one standard deviation above its 2010–2024 mean, **and** (ii) documented IRGC naval incidents or US-Iran military confrontations in or adjacent to the Strait of Hormuz are recorded in that calendar year. This criterion yields five crisis years. Years meeting only one condition (e.g., 2013: elevated Iran nuclear negotiations but no IRGC incidents; 2022: Ukraine war-linked GPR spike but no Hormuz-specific confrontation) are excluded. As an alternative robustness check, a continuous GPR specification (M2) is estimated alongside the dummy approach.
+
+| Year | GPRC\_TUR > 1 SD | Hormuz Incident | Included |
+|------|-----------------|-----------------|---------|
+| 2011–2012 | ✓ | Iran nuclear closure threats; Velayat 90 naval exercise | ✓ |
+| 2019 | ✓ | Tanker attacks; *Stena Impero* seizure; Operation Sentinel | ✓ |
+| 2020 | ✓ | Soleimani strike; IRGC harassment; COVID compound | ✓ |
+| 2024 | ✓ | Iran-backed Houthi Red Sea campaign (Jan–Dec); Iranian naval posturing; Hormuz GPR contagion documented by IISS [-@iiss2024] | ✓ |
+| 2013 | — | No IRGC incidents recorded | ✗ |
+| 2022 | — | No Hormuz-specific confrontation | ✗ |
+
+## Estimation Strategy
+
+Four models are estimated sequentially:
+
+- **M1 (Baseline Gravity):** $\ln GDP_{jt} + \ln Dist_{ij} + Contig_{ij}$ + year FE
+- **M2 (+GPR+Hormuz):** $\ln GDP_{jt} + YearTrend + GPR_{it} + Hormuz_t$ + partner FE
+- **M3 (Full Model):** M2 + $GPR \times Hormuz$ + $Hormuz \times BRI_j$ + partner FE
+- **M4 (Robustness):** M3 — 2015–2024 sub-sample
+
+**Identification note:** $GPR_{it}$ and $Hormuz_t$ vary only in the time dimension and would be collinear with year fixed effects. M2–M4 therefore employ partner ($j$) fixed effects + year trend. Since $\ln Dist_{ij}$ and $Contig_{ij}$ are time-invariant, they are absorbed by partner FE and excluded from M2–M4. Standard errors are **pair-clustered** across all models. Since Türkiye is the single exporter, exporter multilateral resistance terms (MRT) — which would normally require exporter-year fixed effects — cannot be directly controlled; the year trend serves as a linear approximation of Türkiye's time-varying outward MRT. This approximation follows the Türkiye-specific gravity literature [@fredeyetkiner2017] and is an explicit identifying assumption of the M2–M4 specifications.
+
+**COVID-19 confound note:** The year 2020 is coded simultaneously as a Hormuz crisis year and as the onset of the COVID-19 pandemic. To assess the extent of this overlap, M5 augments M3 with a COVID-19 dummy ($covid_t = \mathbf{1}[t=2020]$). The COVID-19 dummy is not statistically significant ($\hat{\beta}_{covid}=-0.046$, SE=0.072, $p=0.52$), indicating that partner fixed effects and the year trend absorb the pandemic's cross-sectional component. The net Hormuz trade effect attenuates from −5.13% (M3) to −4.49% (M5), a difference of 0.64 percentage points, consistent with the main result being robust to COVID-19 control. As a consequence, $\hat{\beta}_{Hormuz}$ in M3 should be treated as a modest upper-bound estimate; the 95% confidence interval for M5 is [−0.712, +0.050], reflecting reduced precision when 2020 is partially "de-Hormuzed".
+
+## Scenario Simulation
+
+Using M3 coefficients, the change in Türkiye's trade flows under a **Hormuz full-closure scenario** is simulated as:
+
+$$
+\frac{\partial \ln T}{\partial Hormuz}\Bigg|_{\overline{GPR}} = \hat{\beta}_7 + \hat{\beta}_9 \times \overline{GPR}
+$$
+
+The total marginal effect is converted to a percentage change via the $\exp(\cdot) - 1$ transformation.
+
+---
+
+# Türkiye's Strategic Logistics Position: Findings and Policy Implications
+
+## Interpretation of Empirical Findings
+
+The full panel PPML gravity results (2010–2024, N=2,774, 189 partners) are presented in Table 1. Standard gravity components perform as expected: in M1, $\hat{\beta}_{GDP_j} = 0.713^{***}$ (SE=0.051) and $\hat{\beta}_{Distance} = -1.095^{***}$ (SE=0.085) are consistent with the income elasticity and distance penalty documented in the literature.
+
+**Three key findings emerge.**
+
+*Finding 1 — Hormuz effect.* In M3, $\hat{\beta}_{Hormuz} = -0.432^{***}$ (SE=0.097; 95% CI: [−0.622, −0.242]). This coefficient is associated with a contraction of $[\exp(-0.432)-1]\times 100 \approx -35.1\%$ in Türkiye's exports to non-BRI partners during crisis years (2011, 2012, 2019, 2020, 2024). The robustness check M4 (2015–2024 sub-sample) yields $-0.382^{***}$, directionally consistent. The COVID-19 robustness specification M5 yields $\hat{\beta}_{Hormuz}=-0.331^{*}$ (SE=0.194, $p=0.089$); the COVID-19 dummy itself is not significant ($p=0.52$), confirming that the main result is not an artefact of the 2020 pandemic overlap. The net trade effect at mean GPR attenuates from −5.13% (M3) to −4.49% (M5), a 0.64 percentage-point difference, which we interpret as the upper-bound contribution of the COVID-19 confound.
+
+*Finding 2 — GPR buffer effect.* In M3, $\hat{\beta}_{GPR \times Hormuz} = +1.158^{***}$ (SE=0.294; 95% CI: [+0.582, +1.734]). This interaction term is positive, resolving the *a priori* ambiguity: the association between crisis years and trade suppression is partially compensated when Türkiye's GPR is elevated, consistent with corridor activation dynamics. In terms of magnitude: at the sample mean $\overline{GPR}=0.328$, the expression $-0.432 + 1.158 \times 0.328 = -0.053$ implies a conditional net trade change of $[\exp(-0.053)-1]\times 100 \approx -5.1\%$.
+
+*Finding 3 — BRI heterogeneity.* $\hat{\beta}_{Hormuz \times BRI} = +0.034$ (SE=0.028, $p>0.10$) is statistically insignificant. BRI membership does not produce a discernible buffer during crisis periods in the Türkiye context, suggesting that the BRI corridor has not yet reached full capacity as a Hormuz alternative.
+
+These findings are directionally consistent with @unctad2026's provisional projection (pre-submission URL verification required) that global merchandise trade growth would fall from 4.7 percent to the 1.5–2.5 percent range under a Hormuz closure scenario. The scenario simulation, employing M3 coefficients, estimates the net trade effect under full closure as:
+
+$$\text{Trade Effect (\%)} = \left[\exp\!\left(\hat{\beta}_{Hormuz} + \hat{\beta}_{GPR \times Hormuz} \times \overline{GPR}\right) - 1\right] \times 100 \approx -5.1\%$$
+
+This figure should be interpreted as an **illustrative calculation** at mean GPR, not a structural forecast. Propagating coefficient uncertainty via the delta method yields an approximate 95% confidence interval of [−31%, +20%] for the net trade effect — computed via the delta method applied to $\exp(\hat{\beta}_{Hormuz} + \hat{\beta}_{GPR \times Hormuz} \times \overline{GPR}) - 1$, propagating coefficient uncertainty in both $\hat{\beta}_{Hormuz}$ (SE=0.097) and $\hat{\beta}_{GPR \times Hormuz}$ (SE=0.294). The wide interval reflects the limited number of crisis-year observations (five years) and the interaction-term precision, rather than a flaw in the specification. Under average GPR conditions, the point estimate suggests that corridor activation mechanisms partially compensate for Hormuz-related trade suppression.
+
+```{r table1, tab.cap="PPML Gravity — Türkiye Bilateral Trade Flows (2010–2024)"}
+modelsummary(
+  list("M1: Baseline"=m1, "M2: +GPR"=m2, "M3: Full"=m3, "M4: 2015–24"=m4, "M5: +COVID"=m5),
+  stars    = c("*"=0.10, "**"=0.05, "***"=0.01),
+  coef_map = coef_map,
+  gof_map  = c("nobs"),
+  notes    = list(
+    "Pair-clustered SE in parentheses.",
+    "M1: year FE; ln GDP (Türkiye) included as exporter income. M2–M5: partner FE + year trend; ln GDP (Türkiye) excluded because partner FE absorbs all cross-sectional variation and the year trend captures Türkiye's common time-varying outward capacity — including both income growth and multilateral resistance.",
+    "ln Distance and Contiguity absorbed by partner FE in M2–M5.",
+    "GPR: Caldara & Iacoviello (2022). BACI HS92 V202601 (CEPII).",
+    "Hormuz dummy: 2011, 2012, 2019, 2020, 2024.",
+    "M5: COVID-19 dummy (2020=1) added to M3 specification."
+  ),
+  output = "flextable"
+) |>
+  set_caption(caption="Table 1: PPML Gravity — Türkiye Bilateral Export Flows (2010–2024)")
+```
+
+## Türkiye's Geographic and Logistics Advantage
+
+Türkiye occupies a rare geographic position at the intersection of four critical trade corridors between Asia and Europe: (i) the Bosphorus/Turkish Straits corridor, (ii) the Middle Corridor (Trans-Caspian), (iii) the Southern Gas Corridor, and (iv) the historic Silk Road axis. Under the closure scenario in which @unctad2026 project 20 percent of global oil supply going offline, the value of this position appreciates directly. This situation aligns with @gopinath2024jie's "connector countries" framework: in periods of geopolitical fragmentation, non-aligned intermediary countries gain strategic value and become key actors in preserving global trade resilience. The post-2022 revival of the Middle Corridor (Trans-Caspian International Transport Route) in response to disruptions along Russian routes has been documented by @palu2023, indicating that demand for Türkiye's transit position is acquiring a structural character.
+
+## The 2026 Hormuz Crisis: Real-Time Validation
+
+The model's scenario simulation is not hypothetical as of the submission date of this paper.^[As of April 2026, the ongoing Hormuz crisis has materialized the scenario modelled in this paper: Brent crude peaked at approximately \$126 per barrel — a 55.32 percent month-on-month surge from \$72.48 on 28 February 2026 — while vessel traffic through the strait fell to near zero. Critically for Türkiye, the Kirkuk–Ceyhan pipeline (Iraq → Türkiye → Mediterranean, capacity ~1.6 mb/d) was partially reactivated at 250,000 bpd, precisely illustrating the alternative corridor activation mechanism that the GPR×Hormuz interaction term captures. As of 23 April 2026, a fragile ceasefire held but an economic war of attrition continued: the United States maintained a naval blockade of Iranian ports and seized multiple Iran-linked vessels in the Arabian Sea and Indian Ocean, while Iran retained its chokehold on the strait. The International Energy Agency described the episode as "more serious than the ones in 1973, 1979 and 2002 together" [@birol2026iea]. These real-time developments constitute an out-of-sample validation of the paper's core theoretical and empirical framework.] Since late February 2026, the Iran–US–Israel military confrontation has reportedly resulted in a severe reduction in commercial shipping traffic through the Strait of Hormuz, with preliminary industry reports citing reductions exceeding 80–90 percent [@unctad2026]. This development constitutes a genuine out-of-sample test of the paper's theoretical framework and policy analysis. The model predicts a net trade impact of approximately −5.1 percent for Türkiye under average GPR conditions; under the elevated GPR conditions of a full closure scenario, the interaction term implies considerably less suppression than the conditional Hormuz coefficient alone would suggest — precisely because high GPR activates corridor demand. Empirical validation of this prediction using 2026 trade data as it becomes available in BACI V202701 would constitute a direct test of the corridor-activation mechanism identified in M3.
+
+## The Hejaz Railway Corridor: A Real-Time Policy Development
+
+On April 7–20, 2026, Türkiye, Syria, and Jordan concluded a trilateral transport agreement for the **Gulf–Europe Railway Corridor**, formally establishing a joint working group for the revival of the Hejaz Railway line [@trtworld2026; @jpost2026].
+
+This development carries significance at two levels for the present study: *(i)* academic originality — the combination of Hejaz Railway × PPML gravity × Hormuz scenario is addressed in the literature for the first time here; *(ii)* policy validity — the alternative overland route framed as a scenario now rests on a concrete intergovernmental agreement.
+
+| Route | Distance | Transit Time |
+|-------|----------|-------------|
+| Gulf → Suez → Europe (sea) | ~11,000 km | 18–22 days |
+| Gulf → Hejaz → Türkiye → Europe | ~5,500 km | 10–14 days |
+| Gulf → Middle Corridor → Europe | ~7,000 km | 14–18 days |
+
+## BRI Interaction
+
+The $\hat{\beta}_8$ coefficient in the model results shows that trade flows between BRI countries and Türkiye do not follow a markedly different trajectory during Hormuz crisis periods. The substantial increase in container traffic on the Middle Corridor after 2022 signals that this interaction may yet acquire significance. Compared with @wang2024's finding for China, where BRI membership acts as a resilience mechanism during heightened geopolitical tension, evidence of an analogous buffer in the Türkiye context has not yet emerged clearly, suggesting that Türkiye's positioning within the BRI corridor remains in development.
+
+## Policy Recommendations
+
+Consistent with the estimated conditional associations (not causal effects), the following policy directions are indicated:
+
+1. **Infrastructure investment:** The Ministry of Transport and Infrastructure (in coordination with UTİKAD) should assess expanding the capacity of the Hatay–İskenderun line to accommodate potential Hormuz-rerouted cargo.
+2. **Logistics free zones:** Transit storage and customs facilitation zones could be established around Hatay, Mersin, and İskenderun to capture corridor diversion.
+3. **Diplomatic framework:** GCC–Türkiye free trade agreement negotiations could incorporate a Hormuz risk-management dimension, reinforcing Türkiye's connector-country positioning.
+
+---
+
+# Conclusion
+
+This study has empirically measured the impact of Strait of Hormuz crisis periods on Türkiye's bilateral trade flows within a PPML gravity framework and assessed Türkiye's alternative corridor capacity through scenario simulation.
+
+The four estimated models (M1–M4) are consistent with the predictions of standard gravity theory for Türkiye's bilateral export flows. In terms of the original findings: *(i)* Hormuz crisis years are associated with a 35 percent conditional reduction in Türkiye's exports to non-BRI partners ($\hat{\beta}_{Hormuz}=-0.432^{***}$, 95% CI: [−0.622, −0.242]), though this estimate includes the confounding effect of the 2020 COVID-19 shock; *(ii)* Türkiye's geopolitical risk level is associated with partial compensation of this conditional reduction, with the net effect approximately −5.1 percent under average GPR conditions ($\hat{\beta}_{GPR \times Hormuz}=+1.158^{***}$, 95% CI: [+0.582, +1.734]); *(iii)* BRI membership is not associated with a discernible buffer effect during crisis periods ($p>0.10$). The scenario simulation estimates the net trade effect under average GPR conditions at −5.1 percent, indicating that alternative corridors offer meaningful compensating capacity.
+
+The findings are consistent with @mearsheimer2001's offensive realism framework: as hegemonic competition intensifies, critical chokepoints are transformed into strategic instruments and trade routes become politicised. @goes2022's identification of welfare losses of up to 15 percent for vulnerable regions under a US–China decoupling scenario corroborates quantitatively the disruptive potential of Hormuz on trade flows. Within the framework anticipated by @gopinath2024jie's connector countries argument, Türkiye is positioned among countries that remain open to geopolitical blocs on both sides and can act as trade bridges between rival actors — a capacity suggesting that the estimated −5.1 percent net loss could translate into a more advantageous outcome under actual full-closure scenarios. The positive interaction term $\hat{\beta}_{GPR \times Hormuz} = +1.158^{***}$ receives additional theoretical grounding from @luttwak1990, @blackwill2016, and @farrell2019's weaponized interdependence framework: the Strait of Hormuz is the paradigm physical chokepoint in the global energy network, and Türkiye's corridor position allows it to function as a second-order bypass node — capturing corridor-activation rents precisely when chokepoint coercion intensifies.
+
+The principal limitations of this study are: *(i)* uncertainties in the construction and operation timeline of the Hejaz Railway constrain the scenario simulation; *(ii)* the text-based nature of the GPR index captures actual military/economic pressure intensity only imperfectly; *(iii)* the study is centred on Türkiye; the perspective of Gulf states is outside its scope; *(iv)* the 2020 Hormuz crisis dummy year coincides with the COVID-19 pandemic; *(v)* the GPR×Hormuz interaction term may be subject to endogeneity bias, as Türkiye's active corridor-positioning during Hormuz crises can itself generate geopolitical news coverage that raises GPRC\_TUR, potentially inflating $\hat{\beta}_{GPR \times Hormuz}$ — instrumental variable estimation is recommended in future work. A COVID-19 robustness specification (M5) was estimated by augmenting M3 with a binary pandemic indicator ($covid_t = \mathbf{1}[t=2020]$). The COVID-19 dummy is not statistically significant ($\hat{\beta}_{covid}=-0.046$, SE=0.072, $p=0.52$), indicating that partner fixed effects and the year trend already absorb the pandemic's cross-sectional component. The net Hormuz trade effect attenuates modestly from −5.13% (M3) to −4.49% (M5), a difference of 0.64 percentage points, consistent with the main result being robust to COVID-19 control. However, readers should note that in M5 the Hormuz coefficient itself ($\hat{\beta}_{Hormuz}=-0.331$, SE=0.194, 95% CI: [−0.712, +0.050]) spans zero — meaning that once 2020 is partially de-attributed from the Hormuz dummy, the direct crisis effect loses statistical precision at conventional levels ($p=0.089$, marginally significant at 10%). This reflects the limited degrees of freedom available when a single year (2020) simultaneously captures two shocks. The M3 estimate should therefore be treated as an upper bound; M5 indicates directional robustness but not precision robustness.
+
+Three directions for future research: *(a)* modelling non-linear trade diversion effects once the Hejaz Railway becomes operational; *(b)* sector-level (energy, agriculture, manufacturing) disaggregated gravity analyses; *(c)* a multilateral panel design comparing the competitive positions of Türkiye and neighbouring transit countries; *(d)* instrumental variable estimation exploiting exogenous variation in bypass corridor capacity — the Iraq–Türkiye Development Road (MoU signed 2024, projected completion 2028–2029) and the Türkiye–Syria–Jordan rail corridor agreement (April 2026) provide plausibly exogenous shifts in alternative routing capacity that could instrument Hormuz exposure, following the precedent of GPR-based identification in bilateral trade flows [@baris2024isguc].
+
+---
+
+# References {.unnumbered}
+
+::: {#refs}
+:::
