@@ -1,4 +1,4 @@
-# NEXT SESSION — 2026-04-28 (Updated — Session 7)
+# NEXT SESSION — 2026-04-30 (Updated — Session 8)
 
 ## Session Startup (30 seconds)
 
@@ -10,6 +10,39 @@
 ```
 
 > All 60+ active manuscript folders have `HANDOFF.md` ✅
+
+---
+
+## 🆕 THIS SESSION COMPLETED (2026-04-30) — INBOX DEEP RESEARCH SWEEP (Session 8)
+
+### Summary
+Full sweep of `100-Inbox/` and `100-Inbox/Needs-Review/` — all emails, PDFs, DOCXs processed.
+
+### Key Findings
+
+**⚠️ URGENT ACTIONS (today/tomorrow):**
+- 🔴 **IERFM DEADLINE 2026-05-01** — Currency Misalignment CA paper 116KB → DergiPark; Bilgin no response → submit SOLO. Guide: `project_currency_misalignment_ca.md`
+- ⚠️ **Peer Review R2 DUE** — Nişantaşı SBD Art.1814466; author R1 received Apr 2 → MGO needs to submit R2 review. Read `AUTHOR-R1-V1-20260402220747.doc` first.
+- ⚠️ **UNWE IIA counter-signature** — EWP ID 53523125; UNWE waiting on KKÜ → notify erdemyontem@kku.edu.tr
+
+**References saved to memory:**
+- `reference_fornaro_wolf_ai_slump_2026.md` — Fornaro+Wolf WP Apr 2026; AI slump thesis; JEL E32/E43/E52/O31/O42
+- `reference_mckibben_solar_energy_geopolitics_2025.md` — McKibben *Here Comes the Sun* + FP Live Nov 2025 (saved in previous session)
+- `reference_reinhart_horn_trebesch_international_lending.md` — Horn-Reinhart-Trebesch (2024 WP, no DOI)
+
+**New inbox assets:**
+- `100-Inbox/GDT-Full-Year-2025-Exec-Summary.pdf` — World Gold Council FY2025: demand >5,000t (record), 53 ATH, value US$555bn (+45% y/y) → gold papers
+- `100-Inbox/s00181-024-02589-w.pdf` — **NK2024 published paper**: Nazlıoğlu & Karul (2024), *Empirical Economics* 67:1541-1579, DOI:10.1007/s00181-024-02589-w → cite in all NK2024 papers
+- `100-Inbox/Smooth structural changes...pdf` — Nazlioglu, Lee, Tieslau, **Karul** & You (2023), *Econometric Reviews* 42(1):78-97, DOI:10.1080/07474938.2022.2156740 → smooth structural changes + common factors
+- `100-Inbox/Needs-Review/IK_MGO_TARIŞ_Taslak.docx` — TARİŞ Grape Union price stability draft (co-author IK, TARİŞ Üzüm Birliği) — new incubator candidate
+
+**Confirmed NO issues:**
+- SSA BFJ paper: **NO BLOCKER** (Senapathy affiliation updated in v06 Apr 24) — session summary was wrong
+- Energy Economics Letters CFP: NOT SSCI/SCIE → ÜAK=0 → ignore
+- AAU 2026 Conference (Al Ain University): likely paid → per ANAYASA, skip
+
+### Portal/Email files committed (previous session commit 095bf78):
+6 files: AgTFP FoodPolicy portal, IGI portal, FIQ portal, YK portal, Barcelona email, PSE review email
 
 ---
 
