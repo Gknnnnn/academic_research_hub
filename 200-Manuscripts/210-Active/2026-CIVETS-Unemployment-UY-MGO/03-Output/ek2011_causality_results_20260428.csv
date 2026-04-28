@@ -1,0 +1,6 @@
+direction,fisher_chi2,fisher_df,fisher_p,sig,country_pvals,country_lags,date_run
+gdp_growth → unemp,46.2305,12,0,***,COL=0.32; EGY=0.92; IDN=0.797; TUR=0.361; VNM=0.596; ZAF=0,COL=1; EGY=1; IDN=1; TUR=1; VNM=1; ZAF=1,2026-04-28
+inflation → unemp,12.9112,12,0.3755,,COL=0.306; EGY=0.865; IDN=0.13; TUR=0.936; VNM=0.059; ZAF=0.821,COL=2; EGY=1; IDN=1; TUR=2; VNM=3; ZAF=2,2026-04-28
+fdi → unemp,7.3061,12,0.8367,,COL=0.81; EGY=0.547; IDN=0.697; TUR=0.613; VNM=0.64; ZAF=0.214,COL=1; EGY=2; IDN=1; TUR=2; VNM=2; ZAF=1,2026-04-28
+trade → unemp,14.2297,12,0.2863,,COL=0.54; EGY=0.384; IDN=0.166; TUR=0.509; VNM=0.194; ZAF=0.24,COL=3; EGY=3; IDN=3; TUR=2; VNM=3; ZAF=1,2026-04-28
+unemp → gdp_growth,11.1275,12,0.518,,COL=0.092; EGY=0.885; IDN=0.359; TUR=0.494; VNM=0.925; ZAF=0.287,COL=1; EGY=1; IDN=1; TUR=1; VNM=1; ZAF=1,2026-04-28

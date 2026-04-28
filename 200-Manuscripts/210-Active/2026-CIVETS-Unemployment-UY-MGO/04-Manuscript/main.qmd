@@ -38,6 +38,10 @@ ped_res   <- read_csv("../03-Output/pedroni_coint_results_20260428.csv", show_co
 amg_c     <- read_csv("../03-Output/amg_country_coefs_20260428.csv", show_col_types = FALSE)
 ccemg_c   <- read_csv("../03-Output/ccemg_country_coefs_20260428.csv", show_col_types = FALSE)
 panel_df  <- read_csv("../01-Data/raw/civets_panel_full_20260428.csv", show_col_types = FALSE)
+ek_res    <- tryCatch(
+  read_csv("../03-Output/ek2011_causality_results_20260428.csv", show_col_types = FALSE),
+  error = function(e) NULL
+)
 ```
 
 # Introduction
@@ -298,6 +302,43 @@ kable(konya_wide,
 
 Konya (2006) causality tests yield three findings. First, GDP growth predicts unemployment only in South Africa (χ² = 38.33, p < 0.001), where the strong Granger precedence of growth over unemployment is consistent with the economy's persistent and large unemployment gap — cyclical output movements translate rapidly into employment changes given the structural sensitivity of South Africa's labour market. Second, no economy exhibits reverse causality from unemployment to GDP growth, suggesting that — at annual frequency — labour market conditions do not predict output, consistent with a model where unemployment is determined by output rather than vice versa. Third, no causal precedence is detected from inflation, FDI, or trade openness to unemployment in any country. The absence of short-run Granger causality for GDP growth (except in South Africa) is not inconsistent with the long-run AMG finding: persistent structural rigidities and lagged labour-market adjustment mechanisms in CIVETS imply that GDP growth affects unemployment through slower structural channels rather than the immediate demand-side absorption captured by Granger tests at one-year lags [@ball_et_al_2019].
 
+## Emirmahmutoğlu-Köse (2011) Panel Causality Robustness
+
+The Konya (2006) framework provides country-specific inference but lacks a formal panel-level statistic. As robustness, we apply the Emirmahmutoğlu and Köse (2011, hereafter EK2011) heterogeneous panel Granger causality test, which aggregates country-specific Toda-Yamamoto modified Wald statistics via Fisher's meta-statistic: $\lambda = -2\sum_{i=1}^{N} \ln p_i \sim \chi^2(2N)$ under the joint null of no causality across all units [@emirmahmutoglu_kose_2011]. Optimal country-level lag orders are selected by AIC with $d_{\max} = 1$.
+
+```{r}
+#| label: tbl-ek2011
+#| tbl-cap: "Emirmahmutoğlu-Köse (2011) Panel Causality Robustness"
+#| echo: false
+
+if (!is.null(ek_res)) {
+  dir_map <- c(
+    "gdp_growth → unemp"  = "GDP growth → Unemployment",
+    "inflation → unemp"   = "Inflation → Unemployment",
+    "fdi → unemp"         = "FDI → Unemployment",
+    "trade → unemp"       = "Trade → Unemployment",
+    "unemp → gdp_growth"  = "Unemployment → GDP growth"
+  )
+  ek_display <- ek_res %>%
+    mutate(
+      Direction = dplyr::recode(direction, !!!dir_map),
+      Fisher = sprintf("%.3f%s", fisher_chi2, sig),
+      p_value = sprintf("%.3f", fisher_p)
+    ) %>%
+    dplyr::select(Direction, Fisher, p_value)
+
+  kable(ek_display,
+        col.names = c("Causal Direction", "Fisher χ²(12)", "p-value"),
+        align = c("l","c","c"))
+} else {
+  cat("EK2011 results not available. Run 02-Scripts/08_ek2011_causality_20260428.R")
+}
+```
+
+*Notes: H₀: No Granger causality in any CIVETS unit. Fisher statistic: $\lambda = -2\sum_{i=1}^{6} \ln p_i \sim \chi^2(12)$. Country-level lag orders selected by AIC; integration order $d_{\max} = 1$. \*\*\* p<0.01.*
+
+The EK2011 panel Fisher statistic corroborates the Konya findings. GDP growth Granger-causes unemployment at the panel level (χ²(12) = 46.23, p < 0.001), driven by the strong country-level signal in South Africa. All other causal directions remain statistically imprecise at conventional levels (Fisher p > 0.28), including the reverse direction from unemployment to GDP growth (χ²(12) = 11.13, p = 0.518). The consistency between the Konya country-specific bootstrap approach and the EK2011 Fisher aggregation confirms that the short-run causality finding is robust to the choice of panel causality framework.
+
 # Discussion
 
 ## Okun's Law in CIVETS
@@ -311,6 +352,10 @@ The positive trade–unemployment relationship (AMG: β = 1.52) reflects displac
 ## Absence of Short-Run Causality
 
 The Konya (2006) causality results — with significant predictive precedence only in South Africa — are consistent with the literature on labour market rigidity and adjustment lags in emerging markets. In economies like Colombia, Egypt, Indonesia, and Türkiye, institutional barriers to labour mobility, large informal sectors, and weak active labour market policies dampen the short-run responsiveness of unemployment to macroeconomic shocks, even when long-run cointegration is present.
+
+## Robustness: Governance Control
+
+To assess whether the GDP growth result reflects omitted institutional quality, we augment the baseline AMG specification with the World Bank Government Effectiveness index (goveff), re-estimated on the overlapping sample (N = 138 observations). The main finding is preserved: GDP growth remains negative and significant (β = −0.172, p = 0.001), though attenuated relative to the baseline (β = −0.297) — consistent with governance partially mediating the growth–unemployment channel. Governance effectiveness itself enters with a large and highly significant negative coefficient (β = −7.161, p < 0.001), indicating that better institutional quality is associated with substantially lower structural unemployment, independent of the business cycle. This result is consistent with theoretical mechanisms linking government effectiveness to labour market efficiency: improved job matching, reduced informality, and higher-quality active labour market programmes [@raies_benmimoun_2025]. Inflation acquires marginal significance in the augmented specification (β = −0.074, p = 0.017), likely reflecting the correlation between price stability and institutional quality rather than a causal monetary channel. Trade openness and FDI remain statistically imprecise. These robustness results confirm that the Okun coefficient in CIVETS is not an artefact of omitted institutional heterogeneity.
 
 # Conclusion
 
