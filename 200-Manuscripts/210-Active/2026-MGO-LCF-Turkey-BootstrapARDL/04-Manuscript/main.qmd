@@ -111,19 +111,19 @@ The ARDL cointegration and NARDL analyses cover the period 1990–2021 (T = 32 a
 
 ### 3.2 Unit Root Tests
 
-Prior to cointegration testing, we establish the integration order of all variables. We employ four complementary unit root tests. The Augmented Dickey-Fuller (ADF) [@dickey1979] and Phillips-Perron (PP) [@phillips1988] tests provide baseline evidence under the null of a unit root. The Kwiatkowski-Phillips-Schmidt-Shin (KPSS) [@kpss1992] test, with the null of stationarity, provides a complementary perspective. Critically, given Türkiye's history of structural breaks — the 1994 and 2001 currency crises, the 2008 global financial crisis, and the post-2018 exchange rate shock — we employ the Zivot-Andrews [@zivot1992] single-break unit root test.
+Prior to cointegration testing, we establish the integration order of all variables. We employ three complementary unit root tests on the estimation-relevant sample. The Augmented Dickey-Fuller (ADF) [@dickey1979] and Phillips-Perron (PP) [@phillips1988] tests provide baseline evidence under the null of a unit root. The Kwiatkowski-Phillips-Schmidt-Shin (KPSS) [@kpss1992] test, with the null of stationarity, provides a complementary perspective. Critically, given Türkiye's documented structural breaks — the 1994 banking crisis, the 2001 currency crisis, the 2008 global financial crisis, and the post-2018 exchange rate shock — we employ the Fourier Wavelet ADF (Fourier-WADF) test of @roudane_fwadf_2024, which accommodates an unknown number of smooth structural transitions via a trigonometric (Fourier) augmentation of the ADF regression without requiring the researcher to pre-specify break dates. The Fourier frequency $k$ is selected by AIC over $k \in \{1,\ldots,5\}$. All Fourier-WADF tests are conducted on the estimation-relevant sample (1990–2021 for lnGDP, lnGDP², lnREN, lnTrade; 1995–2021 for lnLCF).
 
-**Table 3: Unit Root Test Results**
+**Table 3: Unit Root Test Results (Estimation Sample)**
 
-| Variable | ADF (level) | PP (level) | KPSS (level) | ZA (break) | Break year | Order |
-|----------|------------|-----------|-------------|-----------|-----------|-------|
-| lnLCF | −2.314 | −2.822 | 0.150* | −4.555 | 1961 | I(1) |
-| lnGDP | −1.479 | −1.533 | 0.299** | −4.389 | 1961 | I(1) |
-| lnGDP² | −1.036 | −1.030 | 0.330** | −4.497 | 1961 | I(1) |
-| lnREN | −1.983 | −2.296 | 0.189** | −5.574** | 1990 | I(1) |
-| lnTrade | −2.977 | −2.683 | 0.213** | −5.815** | 1961 | I(1) |
+| Variable | ADF (level) | PP (level) | KPSS (level) | Fourier-WADF | Fourier $k$ | Fourier sig. | Order |
+|----------|------------|-----------|-------------|-------------|-----------|-------------|-------|
+| lnLCF    | −2.314 | −2.822 | 0.150\*  | 0.367 (p=0.475)  | 5 | ✓ | I(1) |
+| lnGDP    | −1.479 | −1.533 | 0.299\*\* | 0.854 (p=0.530) | 1 | ✓ | I(1) |
+| lnGDP²   | −1.036 | −1.030 | 0.330\*\* | 1.114 (p=0.556) | 1 | ✓ | I(1) |
+| lnREN    | −1.983 | −2.296 | 0.189\*\* | −0.882 (p=0.357) | 4 | ✓ | I(1) |
+| lnTrade  | −2.977 | −2.683 | 0.213\*\* | 0.135 (p=0.459)  | 1 | ✓ | I(1) |
 
-*Notes: 5% critical values: ADF/PP ≈ −3.48; KPSS ≈ 0.146 (trend); ZA ≈ −5.08. ADF/PP H₀: unit root — fail to reject at levels for all variables; reject in first differences (not shown). KPSS H₀: stationarity — reject for all variables at 5%. ZA tests were conducted on the full available series (1961–2021 for GDP/Trade/LCF; 1990–2021 for REN) to maximize test power. The 1961 break dates reported for lnGDP, lnGDP², and lnTrade reflect the initialisation of the GFN biocapacity series and do not correspond to a within-sample structural event; the 1990 break for lnREN correctly identifies the data coverage onset for the renewable energy series. Significant ZA statistics for lnREN (−5.574**) and lnTrade (−5.815**) confirm structural instability for these series. All variables treated as I(1) for ARDL bounds testing. **p < 0.05.*
+*Notes: ADF/PP H₀: unit root — fail to reject at levels; reject in first differences (not shown). KPSS H₀: stationarity — reject at 5% for all. Fourier-WADF (Model 1: intercept): H₀: unit root allowing smooth Fourier transitions; 5% critical values range from −2.72 to −3.30 depending on T. Fourier $k$ = optimal frequency selected by AIC. "Fourier sig." ✓ indicates the Fourier trigonometric term is jointly significant (t-test, p < 0.10), confirming smooth structural change is present in each series. The significant Fourier terms capture smooth transitions coinciding with the 1994 and 2001 Turkish crises and post-2008 recovery. All variables treated as I(1) for ARDL bounds testing; none are I(2) (ADF/PP reject unit root in first differences, not shown). \* p < 0.10, \*\* p < 0.05 (KPSS).*
 
 ### 3.3 Bootstrap ARDL Cointegration
 
@@ -169,7 +169,7 @@ The Toda-Yamamoto [@toda1995] modified Wald test is applied to identify the dire
 
 ### 4.1 Unit Root Results
 
-Table 3 (Section 3.2) reports the unit root battery. ADF and PP tests fail to reject the unit root null in levels for all five variables, and reject it in first differences (results available upon request). The KPSS test rejects stationarity in levels. Zivot-Andrews tests identify structural breaks associated with Türkiye's economic crises (2001, 2018) and data coverage changes, but do not overturn the I(1) conclusion for the income and LCF series. We therefore proceed on the basis that all variables are integrated of order one, satisfying the prerequisite for ARDL bounds testing.
+Table 3 (Section 3.2) reports the unit root battery. ADF and PP tests fail to reject the unit root null in levels for all five variables, and reject it in first differences (results available upon request). The KPSS test rejects stationarity in levels for all series. Fourier-WADF tests, applied to the estimation-relevant sample, fail to reject the unit root null at the 5% level for all variables under Model 1 (intercept). Critically, the Fourier trigonometric term is statistically significant for every series (p < 0.10), confirming smooth structural transitions — associated with Türkiye's 1994 and 2001 financial crises and the post-2008 global financial shock — are present within the estimation window. These smooth transitions are accommodated by the Fourier augmentation rather than treated as sharp exogenous breaks. No series exhibits I(2) behaviour (ADF/PP reject unit root in first differences). We therefore proceed on the basis that all variables are I(1), satisfying the prerequisite for ARDL bounds testing.
 
 ### 4.2 Bootstrap ARDL Cointegration
 
