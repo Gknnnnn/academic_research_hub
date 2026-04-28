@@ -1,0 +1,258 @@
+---
+title: "Artificial Intelligence and the Ecological Productivity Paradox"
+subtitle: "Jevons Rebound Effect and the Efficiency Threshold in OECD Economies (2010–2022)"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Department of Economics"
+  - name: "Assoc. Prof. Dr. Mustafa Göktuğ Kaya"
+    affiliation: "KTO Karatay University"
+date: "12 May 2026"
+format:
+  pptx:
+    slide-level: 2
+    toc: false
+---
+
+## Agenda
+
+1. Motivation: The AI-Green Promise
+2. Theory: Jevons Paradox
+3. Data & Estimation Strategy
+4. Pre-Test Results
+5. Main Findings (DK-FE + EKC)
+6. Robustness (GMM + IV)
+7. Causality
+8. Policy Implications
+9. Conclusions
+
+---
+
+## Motivation: Does AI Green the Economy?
+
+**The promise:**
+AI and digital technologies → efficiency gains → lower energy per unit of output → reduced ecological footprint
+
+**The paradox (Jevons 1865):**
+> "The economical use of fuel is not equivalent to a diminished consumption. The very contrary is the truth."
+
+**The AI energy fact:**
+- Each AI query: ~10× energy of a Google search *(Goldman Sachs 2024)*
+- Global data centre electricity: set to double by 2026 *(IEA 2024)*
+- NVIDIA GPU demand surging while renewables lag
+
+**Research question:** Does ICT/AI adoption reduce ecological footprint in OECD economies — or does the Jevons rebound dominate?
+
+---
+
+## Theory: Environmental Kuznets Curve × Jevons
+
+**EKC hypothesis:** Pollution rises with income, then falls beyond a threshold
+
+**AI-Jevons extension:**
+
+$$EF_{it} = \alpha + \theta_1 \cdot ICT_{it} + \theta_2 \cdot ICT_{it}^2 + \gamma \cdot \mathbf{X}_{it} + \mu_i + \varepsilon_{it}$$
+
+- $\theta_1 > 0, \theta_2 < 0$: Inverted-U in ICT adoption (Jevons rebound then efficiency)
+- Turning point: $ICT^* = -\theta_1 / (2\theta_2)$
+
+**Income threshold hypothesis:**
+
+$$EF_{it} = \alpha + \beta_1 \cdot ICT_{it} + \beta_2 \cdot \ln GDP_{it} + \beta_3 \cdot (ICT \times \ln GDP)_{it} + \varepsilon_{it}$$
+
+- $\beta_3 < 0$: Green ICT effect stronger at higher income levels
+
+---
+
+## Data
+
+**Panel:** N = 30 OECD economies, T = 2010–2022 (balanced)
+
+| Variable | Source | Unit |
+|----------|--------|------|
+| Ecological footprint | Global Footprint Network | gha per capita |
+| ICT adoption | World Bank WDI | Internet users (% pop.) |
+| GDP per capita | World Bank WDI | PPP, constant 2015 USD |
+| Trade openness | World Bank WDI | % GDP |
+| FDI net inflows | World Bank WDI | % GDP |
+| Renewable energy share | World Bank WDI | % total final energy |
+| Urban population | World Bank WDI | % total |
+
+**Estimation sequence:** CD test → CIPS → Westerlund ECM → DK-FE → EKC → System-GMM → Hausman-Taylor IV → DH causality
+
+---
+
+## Pre-Test Results
+
+| Test | Statistic | Decision |
+|------|-----------|----------|
+| Pesaran CD — Ecological Footprint | z = 18.37*** | Cross-section dependence ✓ |
+| Pesaran CD — ICT | z = 24.15*** | CSD confirmed ✓ |
+| CIPS — all variables (levels) | > −2.34 | I(1) |
+| CIPS — all variables (differences) | < −2.34 | I(0) ✓ |
+| Westerlund ECM (Gt) | −2.11** | Cointegration ✓ |
+| P-Y Slope heterogeneity | 156.25*** | Heterogeneous slopes ✓ |
+
+**Implication:** CSD + I(1) + heterogeneous slopes → Driscoll-Kraay FE is the appropriate primary estimator (2nd-generation, robust to CSD and serial correlation)
+
+---
+
+## Main Result 1: Direct ICT Effect
+
+**Driscoll-Kraay Fixed Effects — Baseline:**
+
+$$\hat{\beta}_{ICT} = -0.0604 \quad (SE = 0.033, \; p = 0.068)$$
+
+- Borderline significant at 10% level
+- ICT reduces ecological footprint — but the effect is weak
+- Suggests efficiency gains are **largely offset by rebound demand**
+
+**With income interaction:**
+
+$$\hat{\beta}_{ICT \times \ln GDP} = -0.2709^{***} \quad (p < 0.001)$$
+
+$$\Rightarrow \text{Income threshold} = \mathbf{\$31{,}725 \text{ GDP per capita (PPP)}}$$
+
+- **Below threshold:** ICT adoption increases footprint (Jevons dominates)
+- **Above threshold:** ICT adoption decreases footprint (efficiency wins)
+- ~60% of OECD sample is **above** threshold
+
+---
+
+## Main Result 2: AI-EKC Turning Point
+
+**Quadratic ICT Specification:**
+
+| Parameter | Estimate | Significance |
+|-----------|----------|-------------|
+| $\theta_1$ (ICT level) | +0.1046 | ** (p = 0.012) |
+| $\theta_2$ (ICT squared) | −0.0551 | *** (p = 0.004) |
+| GDP per capita | +0.388 | *** |
+| Renewable share | −0.071 | ** |
+
+**→ AI-EKC turning point: ICT penetration = 2.584%**
+
+**Interpretation:**
+
+- Phase 1 (ICT < 2.58%): Rising ICT → rising footprint (Jevons rebound)
+- Phase 2 (ICT > 2.58%): Rising ICT → falling footprint (efficiency effect)
+- Most OECD economies are in the **transition zone** (1.5%–4.5% ICT intensity)
+
+---
+
+## Robustness: System-GMM
+
+**Blundell-Bond System-GMM (lags 2–3, Windmeijer-corrected SE):**
+
+| Variable | Coefficient | Sig. |
+|----------|-------------|------|
+| Footprint (t−1) | 0.892 | *** |
+| ICT adoption | −0.0018 | n.s. |
+| GDP per capita | 0.431 | *** |
+| Trade openness | −0.089 | * |
+
+**Specification tests:**
+
+- AR(2) test: p = 0.412 ✓ (no second-order serial correlation)
+- Sargan J-test: p = 0.183 ✓ (instruments valid)
+
+**Finding:** ICT effect disappears in dynamic specification → short-run rebound dominates; long-run cointegration path required for green transition
+
+---
+
+## Robustness: Hausman-Taylor IV
+
+**Addressing endogeneity of ICT adoption:**
+
+$$\hat{\beta}_{ICT} \text{ (Hausman-Taylor)} = +0.0852 \quad (p = 0.11, \text{ n.s.})$$
+
+**Sign reversal** from DK (−0.060) to HT (+0.085) reveals **proxy sensitivity:**
+
+- Internet penetration is an imperfect AI proxy
+- Richer countries adopt more ICT AND have larger footprints (endogeneity)
+- AI-specific data (GPU clusters, data centre shares) needed for clean identification
+
+**Honest reporting:** We document this sensitivity rather than suppressing it — it motivates better AI measurement in macro panels.
+
+---
+
+## Dumitrescu-Hurlin Causality
+
+*⚠ Pre-diagnostic under CSD — reported with caveat (1st-generation test)*
+
+| Direction | W̃-statistic | p-value |
+|-----------|-------------|---------|
+| ICT → Ecological Footprint | 3.87 | *** |
+| Ecological Footprint → ICT | 2.94 | *** |
+
+**Bidirectional feedback confirmed:**
+
+- ICT adoption precedes footprint changes (AI → environment)
+- Environmental pressure spurs ICT investment (environment → AI)
+
+**Implication:** ICT and ecological outcomes are **dynamically co-evolving** — not a simple unidirectional green solution
+
+*(NK2024 PANIC-VAR causality recommended for CSD-robust inference — future work)*
+
+---
+
+## Results Summary
+
+| Finding | Magnitude | Confidence |
+|---------|-----------|-----------|
+| Direct ICT effect (DK-FE) | β = −0.060 | 10% (borderline) |
+| **Income threshold** | **$31,725 per capita** | *** |
+| **AI-EKC turning point** | **ICT = 2.58%** | *** |
+| Short-run dynamic (GMM) | n.s. | — |
+| Long-run cointegration | Confirmed | ** |
+| Causality | Bidirectional | *** |
+
+**The Jevons verdict:** AI reduces ecological footprint **only conditionally** — above income and adoption thresholds. Below these, rebound dominates.
+
+---
+
+## Policy Implications
+
+**1. Threshold-aware AI policy**
+Countries below $31,725 GDP/capita should not assume AI auto-greenifies the economy. Direct regulation of data centre energy intensity is needed.
+
+**2. AI-specific energy accounting**
+Macro panels need AI compute intensity data (GPU-hours, FLOP/joule), not just internet penetration. Eurostat and OECD should standardise reporting.
+
+**3. Above-threshold OECD leaders**
+For Scandinavia, Switzerland, USA: accelerate ICT–renewable energy co-investment. The green payoff is within reach but not guaranteed without clean energy infrastructure.
+
+**4. Rebound management**
+Energy efficiency standards for AI hardware (EU AI Act energy annex) can compress the Jevons rebound phase.
+
+---
+
+## Conclusions
+
+**Main findings:**
+
+✓ AI reduces ecological footprint — but **conditionally only**
+
+✓ **Income threshold:** $31,725 per capita — below this, Jevons rebound dominates
+
+✓ **AI-EKC turning point:** 2.58% ICT intensity — inverted-U confirmed
+
+✓ Short-run rebound, long-run cointegration — ICT is a slow green technology
+
+✓ Proxy sensitivity (Hausman-Taylor): better AI-specific data urgently needed
+
+**Policy warning:** Automatic optimism about AI as a green technology is empirically unjustified for lower-income OECD members.
+
+---
+
+**Thank you**
+
+**Res. Asst. Dr. M. Gökhan Özdemir**
+Kırıkkale University, Department of Economics (Economic Theory Division)
+mgozdemirera@kku.edu.tr | ORCID: 0000-0002-6756-7285
+
+**Assoc. Prof. Dr. Mustafa Göktuğ Kaya**
+KTO Karatay University
+mustafa.kaya@karatay.edu.tr | ORCID: 0000-0003-4124-4733
+
+*Data and code available upon request.*
+*DATAMACLEA'26 · Session 4: Sustainability, Energy & Green Economy · 12 May 2026*
