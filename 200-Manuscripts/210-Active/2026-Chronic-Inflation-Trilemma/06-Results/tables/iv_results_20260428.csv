@@ -1,0 +1,13 @@
+model,variable,estimate,se,pval
+IV-FE-lnCPI,fit_ERS,-0.9101,0.2238,1e-4
+IV-FE-lnCPI,MII,-0.0996,0.1446,0.4927
+IV-FE-lnCPI,KAOPEN,-0.721,0.2922,0.0155
+IV-FE-lnCPI,gdp_growth,-0.0103,0.0052,0.0479
+IV-FE-lnCPI,trade_open,0.0049,0.0017,0.0043
+IV-FE-lnCPI,broad_money,-0.0033,0.0028,0.2308
+IV-LPM-chronic10,fit_ERS,-0.1731,0.0863,0.0478
+IV-LPM-chronic10,MII,0.0474,0.0512,0.3573
+IV-LPM-chronic10,KAOPEN,-0.3027,0.0752,1e-4
+IV-LPM-chronic10,gdp_growth,-0.0015,0.0013,0.2567
+IV-LPM-chronic10,trade_open,0.0013,7e-4,0.0571
+IV-LPM-chronic10,broad_money,-6e-4,0.0011,0.5785

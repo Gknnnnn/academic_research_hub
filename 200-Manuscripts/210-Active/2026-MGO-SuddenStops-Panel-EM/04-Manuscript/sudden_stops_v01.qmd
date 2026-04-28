@@ -1,0 +1,337 @@
+---
+title: "Global Uncertainty, Domestic Credit, and Sudden Stops: Panel Evidence with Cross-Sectional Dependence Correction"
+author:
+  - name: "M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: mgozdemirera@kku.edu.tr
+    orcid: 0000-0002-6756-7285
+date: "`r format(Sys.Date(), '%B %d, %Y')`"
+abstract: |
+  **[PLACEHOLDER — write after results]**
+  This paper examines the determinants of sudden stops in gross capital inflows
+  for a panel of XX advanced and emerging economies over XXXX–XXXX.
+  Employing the Forbes and Warnock (2012) episode identification methodology,
+  we construct a binary sudden stop indicator at quarterly frequency and estimate
+  its probability using panel probit models with Driscoll–Kraay standard errors
+  that account for cross-sectional dependence — a correction absent from all
+  prior sudden stop studies despite near-universal significance of Pesaran's (2004)
+  CD test in international capital flow panels.
+  We find that global risk (VIX) and domestic credit expansion are the dominant
+  drivers, while macroprudential tightening mitigates sudden stop risk only when
+  enacted during domestic credit booms.
+  Eurasian and CIS economies exhibit structurally higher baseline probabilities,
+  even after controlling for global and domestic fundamentals.
+  **Keywords:** sudden stops, capital flows, panel probit, cross-sectional dependence,
+  macroprudential policy, Eurasian economies
+  **JEL:** F32, F41, F38, G15, E44
+format:
+  docx:
+    reference-doc: "../../../000-System/reference.docx"
+    number-sections: true
+  pdf:
+    documentclass: article
+    fontsize: 12pt
+    geometry: margin=1in
+bibliography: sudden_stops.bib
+csl: apa7.csl
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r setup}
+#| include: false
+library(dplyr)
+library(readr)
+library(knitr)
+library(kableExtra)
+```
+
+# Introduction
+
+International capital flows are a double-edged sword for emerging and developing
+economies. While capital inflows finance investment and smooth consumption, abrupt
+reversals — so-called *sudden stops* — trigger severe contractions in output,
+sharp exchange rate depreciations, and financial crises
+[@calvo1998capital; @edwards2004financial].
+
+Since @forbes2012capital re-defined sudden stops using gross rather than net flow
+data, a growing literature has documented their determinants using panel probit
+models. These studies consistently identify global risk appetite — proxied by the
+CBOE Volatility Index (VIX) — as the dominant push factor
+[@emter2023leverage; @du2025us]. Yet a critical econometric issue remains unaddressed:
+*cross-sectional dependence* (CSD). In integrated global capital markets, sudden
+stops in one country are systematically correlated with those in others — most
+visibly during the Global Financial Crisis (2008–09) and the COVID-19 shock (2020).
+When CSD is present, conventional clustered standard errors are inconsistent, and
+inference from existing panel probits may be unreliable.
+
+This paper addresses this gap. We make three contributions.
+*First*, we apply Pesaran's (2004) CD test to all panel regressors and document
+near-universal cross-sectional dependence, motivating the use of Driscoll–Kraay
+(1998) standard errors — a correction absent from every prior sudden stop study.
+*Second*, we construct a dedicated Eurasian and CIS subsample (XX countries) that
+has been excluded from the major datasets despite representing a structurally
+distinct capital flow environment.
+*Third*, we test whether macroprudential policy tightening mitigates sudden stop
+risk conditional on the credit cycle, extending @hakhverdyan2026sudden to
+transition economies.
+
+Our main findings are: (i) a one-point increase in the VIX raises sudden stop
+probability by approximately X percentage points (AME); (ii) domestic credit
+expansion significantly amplifies this risk, confirming @emter2023leverage;
+(iii) macroprudential tightening reduces sudden stop probability only during credit
+booms; and (iv) Eurasian economies face a structural premium of X–X percentage
+points relative to advanced economies, even after controlling for observables.
+
+The remainder of the paper is organized as follows.
+Section 2 reviews the literature.
+Section 3 describes data and episode identification.
+Section 4 presents the econometric framework.
+Section 5 reports baseline results and robustness checks.
+Section 6 concludes with policy implications.
+
+# Literature Review
+
+## Concept and Episode Identification
+
+The sudden stop concept originates with @calvo1998capital, who defined it as a
+sharp reduction in gross capital inflows and showed that sudden stops can trigger
+balance-of-payments crises even when the current account deficit is fully financed
+by foreign direct investment. The transmission mechanism operates through the
+balance-sheet channel: as capital inflows contract, the real exchange rate depreciates,
+raising the domestic-currency value of foreign-currency liabilities and compressing
+net worth [@calvo2004empirics].
+
+The dominant episode identification approach in the modern literature follows
+@forbes2012capital. A *sudden stop* occurs when the four-quarter rolling sum of
+the year-on-year change in gross inflows falls at least one standard deviation
+below the country's five-year rolling mean, and in at least one quarter the change
+is two or more standard deviations below that mean. This two-condition rule
+distinguishes sustained episodes from transitory fluctuations and is now standard
+in the empirical literature [@eichengreen2016sudden; @emter2023leverage; @du2025us].
+
+## Push vs. Pull Factors
+
+The seminal literature — @calvo1993leiderman, @fernandez1996new, and @chuhan1998cross —
+establishes that global push factors dominate domestic pull factors in driving
+capital flows. @forbes2012capital confirm this result specifically for extreme
+episodes: global risk, measured by the VIX, is the single most robust predictor
+of sudden stops, while domestic macroeconomic fundamentals have limited independent
+predictive power once global conditions are controlled.
+
+More recent work qualifies this picture. @emter2023leverage shows that negative
+growth shocks interacted with high domestic leverage — a pull factor — are
+significant predictors of sudden stops in a 98-country quarterly panel spanning
+1990–2017. @du2025us find that US economic uncertainty shocks increase the
+probability of gross sudden stops in 71 emerging and developing economies over
+1998–2022, with floating exchange rate regimes providing no buffer — a result
+that challenges the conventional insulation hypothesis.
+
+@hakhverdyan2026sudden demonstrate that macroprudential policy tightening
+reduces sudden stop probability only when implemented amid domestic credit
+expansion. Their point estimate implies that a one-point increase in VIX raises
+sudden stop probability by 0.39 percentage points (average marginal effect).
+
+## Sudden Stops and Financial Stability
+
+[PLACEHOLDER — 3-4 sentences on Wang et al. 2025 + systemic risk channel;
+to be filled after results confirm focus]
+
+## Gap Identified
+
+Despite this progress, three methodological issues persist in the literature.
+
+*First*, no study applies CSD diagnostics before estimation. With financial
+globalization, the Pesaran (2004) CD statistic is near-certainly significant in
+capital flow panels, rendering conventional panel probit inference potentially
+inconsistent.
+
+*Second*, the Eurasian and CIS region is systematically absent from major samples.
+Studies tend to rely on IMF or World Bank membership datasets that include few
+transition economies before 2000, creating a selection bias toward countries with
+mature capital markets.
+
+*Third*, the exchange rate regime result of @du2025us — that floating rates do not
+buffer against sudden stops — has not been replicated in transition economy contexts
+where managed floats and currency substitution interact.
+
+# Data and Methodology
+
+## 3.1 Episode Identification
+
+Following @forbes2012capital, we identify sudden stop episodes using quarterly
+gross capital inflow data from the IMF Balance of Payments Statistics (BOP, Sixth
+Manual). Let $\Delta F_{it}$ denote the four-quarter rolling sum of the year-on-year
+change in gross inflows for country $i$ in quarter $t$. Define:
+
+$$\mu_{it}^{20} = \frac{1}{20}\sum_{s=1}^{20}\Delta F_{i,t-s}, \quad
+\sigma_{it}^{20} = \left[\frac{1}{19}\sum_{s=1}^{20}(\Delta F_{i,t-s} - \mu_{it}^{20})^2\right]^{1/2}$$
+
+A sudden stop episode $SS_{it} = 1$ if:
+$$\Delta F_{it} < \mu_{it}^{20} - \sigma_{it}^{20} \quad (\text{sustained}) \quad
+\text{AND} \quad \exists\, t^* \in \text{episode}: \Delta F_{it^*} < \mu_{it^*}^{20} - 2\sigma_{it^*}^{20}$$
+
+This two-condition rule — sustained (≥1 SD below mean) and extreme (≥2 SD in at
+least one quarter) — is precisely the Forbes-Warnock (2012) definition and is
+implemented in `03-Code/01_episode_identification_FW2012.R`.
+
+## 3.2 Variables
+
+**Dependent variable.** $SS_{it} \in \{0,1\}$: quarterly binary sudden stop indicator.
+
+**Global push factors** ($\boldsymbol{G}_t$, exogenous to individual countries):
+the CBOE VIX as the standard proxy for global risk appetite
+[@forbes2012capital; @emter2023leverage]; the US Federal Funds Rate (FFR) as
+the global monetary policy stance; global real GDP growth; and the US 10-year
+Treasury yield as the long-term funding cost proxy.
+All push factors sourced from FRED (St. Louis Fed).
+
+**Domestic pull factors** ($\boldsymbol{D}_{it}$, lagged one quarter):
+current account balance as share of GDP (WB WDI: `BN.CAB.XOKA.GD.ZS`);
+domestic credit to private sector as share of GDP (WB WDI: `FS.AST.PRVT.GD.ZS`);
+log international reserves (WB WDI: `FI.RES.TOTL.CD`);
+trade openness — exports plus imports as share of GDP (WB WDI: `NE.TRD.GNFS.ZS`);
+capital account openness — Chinn-Ito (ACI) index
+[@chinn2006ito]; and exchange rate stability index (ACI).
+
+**Macroprudential policy** ($MPP_{it}$, lagged one quarter):
+the IMF iMaPP tightening index [@alam2019macroprudential], measuring the
+cumulative sum of macroprudential tightening actions.
+
+**Geopolitical risk** ($GPR_t$): the global Caldara-Iacoviello (2022) index,
+included as an additional push factor to capture non-financial global uncertainty.
+
+Table 1 presents descriptive statistics. [PLACEHOLDER — insert after data merged]
+
+## 3.3 Econometric Framework
+
+The baseline model is:
+
+$$\Pr(SS_{it} = 1) = \Phi\!\left(\alpha + \boldsymbol{\beta}_G'\boldsymbol{G}_t +
+\boldsymbol{\beta}_D'\boldsymbol{D}_{it-1} + \beta_{MPP}MPP_{it-1} + \gamma_i + \varepsilon_{it}\right)$$
+
+where $\Phi(\cdot)$ denotes the standard normal CDF (probit link), and $\gamma_i$
+are country fixed effects.
+
+**Cross-sectional dependence correction.** We first test all panel regressors
+for CSD using Pesaran's (2004) CD statistic:
+$$CD = \sqrt{\frac{2T}{N(N-1)}} \sum_{i=1}^{N-1}\sum_{j=i+1}^{N}\hat{\rho}_{ij}
+\xrightarrow{d} \mathcal{N}(0,1)$$
+
+Given the near-certain significance of this test in capital flow panels, we report
+Driscoll-Kraay (1998) standard errors throughout, which are robust to arbitrary
+forms of cross-sectional and temporal dependence with lag order $\ell = 4$ quarters.
+This is the paper's core methodological contribution: no prior sudden stop study
+employs this correction.
+
+**Model sequence.** We estimate five nested specifications:
+
+- M1: Push factors only
+- M2: Pull factors only
+- M3: Push + Pull (baseline)
+- M4: M3 + Macroprudential
+- M5: M4 + $MPP \times \text{credit}$ interaction (main result)
+
+**Robustness.** We re-estimate M5 using logit, complementary log-log (cloglog)
+for rare-events correction [@eichengreen2016sudden], and alternative episode
+definitions (net flows; 2-SD sustained threshold). We exclude GFC (2008Q3–2009Q4)
+and COVID-19 (2020Q1–2020Q4) quarters separately. For the Eurasian subsample
+where $N_{\text{cluster}} < 30$, we apply Webb wild cluster bootstrap.
+
+## 3.4 Identification
+
+Push factors (VIX, FFR, global growth) are exogenous to individual country
+outcomes by construction — an individual country cannot affect global risk appetite.
+For domestic pull factors, we lag all variables by one quarter to address reverse
+causality: a country experiencing a sudden stop in $t$ cannot have caused its
+lagged fundamentals.
+
+For macroprudential policy, endogeneity remains a concern: policymakers may tighten
+MPP in anticipation of capital flow risks. We address this through two-quarter
+lagging and, as a robustness check, restricting the MPP variable to pre-announced
+tightening cycles using the iMaPP narrative indicator.
+
+# Results
+
+[PLACEHOLDER — complete after estimation]
+
+## 4.1 Descriptive Statistics and Episode Frequency
+
+Table 1: Descriptive Statistics [PLACEHOLDER]
+
+Table 2: Sudden Stop Episode Frequency [PLACEHOLDER]
+- Overall frequency: XX% of country-quarters
+- GFC 2008-09: XX%
+- COVID 2020: XX%
+- Advanced vs. Emerging vs. Eurasian
+
+## 4.2 Cross-Sectional Dependence Pre-Tests
+
+Table 3: Pesaran CD Test Results [PLACEHOLDER]
+- Expected: CD significant for all regressors
+- Implication: motivates Driscoll-Kraay SE throughout
+
+## 4.3 Baseline Panel Probit Results
+
+Table 4: Panel Probit — Determinants of Sudden Stops (M1–M5) [PLACEHOLDER]
+
+Key expected results (to be confirmed):
+- VIX: positive, significant (~0.39pp per 1pt, AME)
+- Credit/GDP: positive, significant
+- MPP × Credit: negative interaction (mitigating effect)
+- Eurasian dummy: positive structural premium
+
+## 4.4 Average Marginal Effects
+
+Table 5: AME — Economic Interpretation [PLACEHOLDER]
+- All coefficients translated to percentage-point changes
+
+## 4.5 Robustness
+
+Table 6: Robustness Battery [PLACEHOLDER]
+- Logit / cloglog / no-GFC / no-COVID / net flows
+
+## 4.6 Heterogeneity: Eurasian vs. Advanced vs. Emerging
+
+Table 7: Subsample Results [PLACEHOLDER]
+
+# Conclusion
+
+[PLACEHOLDER — write after results]
+
+This paper provides the first CSD-robust panel analysis of sudden stop determinants,
+combining the Forbes-Warnock episode identification with Driscoll-Kraay inference.
+Our results confirm the primacy of global risk (VIX) and domestic credit expansion
+as drivers of sudden stops, while documenting that Eurasian and CIS economies
+face a structural vulnerability premium unaccounted for in the existing literature.
+The finding that macroprudential policy is effective only during credit booms offers
+a clear policy prescription: MPP should be tightened pre-emptively when domestic
+credit is expanding, not reactively after a sudden stop has begun.
+
+**Limitations and future research.**
+Our quarterly BOP data may understate gross flow volatility relative to monthly
+frequency. Future work could exploit the Aizenman-Chinn-Ito trilemma framework
+to examine whether monetary policy independence — not just exchange rate flexibility —
+modulates sudden stop vulnerability. The Türkiye case, where trilemma constraints
+have been repeatedly violated since 2021, offers a natural case study.
+
+# References
+
+::: {#refs}
+:::
+
+# Appendix
+
+## A. Countries in Sample
+
+[PLACEHOLDER — list of N countries by income group and region]
+
+## B. Episode List
+
+[PLACEHOLDER — Table B1: Country-quarter SS episodes, sorted by date]
+
+## C. Alternative Episode Definitions
+
+[PLACEHOLDER — comparison of FW2012 gross vs. net flow definitions]
