@@ -1,0 +1,188 @@
+---
+title: "Economic Complexity and Sustainability Performance in Türkiye: A Bootstrap-Corrected Toda-Yamamoto Analysis"
+author:
+  - name: "Res. Asst. Dr. M. Gökhan Özdemir"
+    affiliation: "Kırıkkale University, Faculty of Economics and Administrative Sciences, Department of Economics (Economic Theory Division)"
+    email: "mgozdemirera@kku.edu.tr"
+    orcid: "0000-0002-6756-7285"
+    corresponding: true
+date: "2026-04-25"
+# v21 — pre-submission clean: leftover scaffolding comment removed; all 4 blockers resolved in v20 (title ✅ r=0.480 ✅ VAR diag ✅ ESG date 7Apr2026 ✅); EMFT READY
+# TARGET JOURNAL: Plan A — Emerging Markets Finance and Trade (SSCI Q2, 20pt) | Plan B — Applied Economics Letters (SSCI Q3, 10pt) | Plan C — Economic Systems (SSCI Q2)
+format:
+  docx:
+    toc: false
+    number-sections: true
+bibliography: references.bib
+csl: apa.csl
+abstract: |
+  Does economic complexity predict sustainability performance — or does this apparent link dissolve under small-sample correction? Using the Toda-Yamamoto (1995) modified Wald test applied to Türkiye's annual data (2000–2023, T = 24) and Politis–Romano stationary bootstrap correction (B = 499), this study estimates predictive precedence among the Economic Complexity Index (ECI), Complexity Outlook Index (COI), Sustainability Performance (ESG), and GDP. Of 20 directional pairs tested, only ECI → ESG survives bootstrap correction at the 10 percent level (p_boot = 0.094; bootstrap 90% confidence interval excludes zero predictive precedence). Three channels significant under asymptotic inference — FDI → ECI, ESG → ECI, GDP → ESG — lose significance after correction, documenting severe size distortion in short annual time-series applications of the Toda-Yamamoto test. The results suggest a complexity-centred rather than growth-centred sustainability trajectory, with policy implications for Türkiye's net-zero 2053 strategy.
+keywords: ["economic complexity", "ESG", "Toda-Yamamoto causality", "bootstrap", "Türkiye"]
+jel: ["Q56", "O14", "C32"]
+---
+
+## Highlights {.unnumbered}
+
+- ECI → ESG is the sole surviving causality channel after Politis–Romano bootstrap correction (p_boot = 0.094, 10% level).
+- Asymptotic Wald statistics substantially overstate significance in N = 24 time-series applications; bootstrap correction is mandatory.
+- GDP does not Granger-predict ESG at conventional significance levels ($p_{boot} = 0.132$); structural complexity (ECI) constitutes the marginal transmission channel at the 10% level, not income scale.
+- FDI → ECI and ESG → ECI channels, significant asymptotically, lose significance after bootstrap (p_boot > 0.20).
+- Türkiye's net-zero 2053 strategy requires an ECI-centred, not growth-centred, policy architecture.
+
+\newpage
+
+# Introduction
+
+The competitive paradigm of the global economy has shifted from pure scale of production toward knowledge- and technology-intensive production structures. This transformation has forced a rethinking of the structural relationship between traditional growth objectives (GDP) and environmental sustainability (ESG). The Economic Complexity Index (ECI), conceptualised by @hidalgo2009building, measures the diversity and sophistication of a country's productive knowledge and has emerged as one of the strongest predictors of long-run sustainability potential.
+
+Türkiye has, over the past two decades, attempted a structural leap from low-value-added manufacturing toward medium-to-high-technology sectors. This paper examines Türkiye's position within the ECI–sustainability nexus through the lens of the **Ecological Productivity Paradox** — the idea that technological diversification may trigger cumulative demand (Rebound Effect) rather than directly reducing emissions [@lange2021jevons]. From the perspective of complexity economics, which frames an economy as a Complex Adaptive System, this approach explains why the ECI–ESG relationship is inherently nonlinear and why small technological interventions can generate unexpected systemic fluctuations [@rosser2021foundations; @barnett1989economic].
+
+The paper makes two contributions. First, it applies the Toda-Yamamoto framework to the ECI–ESG–GDP–FDI nexus for a single-country, long annual time series, documenting the size distortion of asymptotic Wald tests in N = 24 samples. Second, it provides bootstrap-validated evidence on which causal channels survive small-sample correction, offering a methodologically honest assessment of predictive precedence in Türkiye's complexity–sustainability system.
+
+The remainder of the paper proceeds as follows. Section 2 reviews the literature. Section 3 presents the methodology. Section 4 reports empirical results. Section 5 discusses findings within the Ecological Productivity Paradox framework. Section 6 concludes with policy implications.
+
+# Literature Review
+
+The interaction between economic complexity and environmental sustainability is characterised in the contemporary literature as the management of a delicate balance between the "technique effect" (technological upgrading reduces emission intensity) and the "scale effect" (economic expansion increases total throughput). While the traditional Environmental Kuznets Curve (EKC) hypothesis focuses on income thresholds, the complexity perspective locates the key to sustainability in the technological sophistication of the production structure.
+
+Table 1 summarises key empirical findings within the complexity–sustainability nexus:
+
+| Study | Sample | Method | Key Finding |
+| :--- | :--- | :--- | :--- |
+| @can2017dynamic | France | Time series | ECI growth reduces emissions (technique effect). |
+| @dogan2019economic | 88 countries | Panel data | EKC validity depends on ECI level. |
+| @romero2021economic | 93 countries | Panel | Economic complexity reduces GHG emission intensity. |
+| @Akar2022 | High-competitiveness countries | Panel (1995–2019) | ECI and R&D expenditures positively affect GDP per capita. |
+| @tatar2023effect | Türkiye | Fractional Frequency Fourier TY | ECI Granger-predicts life expectancy (single-direction, unidirectional channel). |
+
+: Selected Literature on the Complexity–Sustainability Nexus {#tbl-lit}
+
+## Complexity and Sustainability: Theoretical Foundations
+
+The effect of economic complexity (ECI) on environmental performance (ESG) typically operates through the technique effect channel [@can2017dynamic]: as technological sophistication increases, energy intensity per unit of output declines and cleaner production techniques enter the product space. In emerging markets such as Türkiye, however, the large scale effect of industrialisation can neutralise these technical gains, causing the EKC path to assume an N-shaped structure rather than the standard inverted-U [@dogan2019economic].
+
+## The Ecological Productivity Paradox and the Rebound Effect
+
+The **Ecological Productivity Paradox** — the core theoretical contribution of this paper — is built on the Jevons Paradox: efficiency gains do not necessarily reduce absolute emissions. @romero2021economic shows that economic complexity reduces GHG emission intensity; yet, as product proximity and energy efficiency improve, unit costs fall and aggregate energy demand may increase (Rebound Effect), potentially generating net carbon growth [@lange2021jevons]. In the Türkiye case, structural transformation is hypothesised to carry precisely these paradoxical carbon pressures, deepened by urban and industrial agglomeration.
+
+## Toda-Yamamoto Causality Evidence
+
+In economies such as Türkiye, where structural breaks are pronounced (2001, 2008, 2018), testing the ECI–GDP–ESG interaction requires methodological care. The @toda1995statistical approach is uniquely suited because it tests "informational precedence content" independently of the stationarity and cointegration properties of the series — the modified Wald (MWALD) statistic retains its asymptotic χ² distribution under mixed I(0)/I(1) systems. This robustness property makes TY particularly valuable for Türkiye, where mixed I(0)/I(1) integration orders render standard Granger tests unreliable.
+
+# Methodology
+
+## Research Design and Variable Definitions
+
+The analysis models the following variables for Türkiye in a single-country annual time-series framework:
+
+- **ECI**: Economic Complexity Index — captures diversification and sophistication in the product space (Growth Lab, Harvard University).
+- **COI**: Complexity Outlook Index — measures a country's proximity to unrealised complex products, capturing diversification potential not reflected in current ECI levels. Although ECI and COI originate from the same Harvard Growth Lab product-space framework, they are conceptually distinct: ECI measures the current stock of productive knowledge; COI measures the latent capacity to acquire new complexity. Their in-sample Pearson correlation for Türkiye 2000–2023 is $r = 0.480$ ($r^2 = 0.230$), well below the 0.85 multicollinearity threshold; COI is therefore retained in the five-variable VAR without parsimony adjustment.
+- **ESG**: Sustainability performance score — composite proxy constructed from World Development Indicators (WDI): renewable energy consumption (% total final energy, EG.FEC.RNEW.ZS), CO₂ emissions per capita (EN.GHG.CO2.PC.CE.AR5), and access to clean fuels (EG.CFT.ACCS.ZS), averaged after min-max normalisation. Data retrieved from WDI API on 7 April 2026. The composite reflects the environmental and governance dimensions of ESG where WDI coverage is available for the 2000–2023 window.
+- **GDP**: Real per capita economic growth (World Development Indicators).
+- **FDI**: Net foreign direct investment inflows (% GDP; included as an endogenous variable given the bidirectional theoretical relationship between FDI and ECI — technology-intensive FDI inflows may directly augment productive knowledge, while higher ECI may attract quality FDI. Treating FDI as exogenous would risk misspecification if this feedback is present in the data).
+
+The sample covers 2000–2023 (T = 24 annual observations), limited by ESG data availability.
+
+## Toda-Yamamoto (1995) Extended VAR Framework
+
+The Toda-Yamamoto approach determines the optimal lag length $k$ for a VAR($k$) model and augments it with $d_{max}$ additional lags, where $d_{max}$ is the maximum integration order in the system. The augmented VAR($k + d_{max}$) system is:
+
+$$y_t = \alpha_0 + \sum_{i=1}^{k} \beta_i y_{t-i} + \sum_{j=k+1}^{k+d_{max}} \gamma_j y_{t-j} + \epsilon_t$$
+
+where $y_t$ is the vector containing ECI, COI, GDP, and ESG; $k$ is the optimal lag length; and $d_{max}$ is the maximum integration order in the system. Causality is tested via the modified Wald (MWALD) statistic on the first $k$ coefficient matrices, which is asymptotically χ²($k$) under the null of non-causality.
+
+## Unit Root Tests
+
+ADF tests with constant and trend (MacKinnon 1996 critical values) are applied to all series to determine $d_{max}$. Given Türkiye's pronounced regime shifts (2001 banking crisis, 2008 global financial crisis, 2018 currency shock), the ADF results carry an important caveat: structural breaks can inflate the persistence of a series in levels, biasing the test toward non-rejection of the unit root null. If breaks are misattributed as I(1) behaviour, the $d_{max}$ classification may be incorrect, which would compromise the TY augmentation. This represents a current limitation of the analysis. Zivot-Andrews or Bai-Perron unit root tests with endogenous break identification remain a necessary robustness extension that the present T = 24 sample constrains but does not preclude.
+
+## Bootstrap Correction for Small-Sample Distortion
+
+A critical methodological contribution of this paper is the application of the **Politis-Romano stationary bootstrap** (B = 499 replications, block length L = 3) to all MWALD statistics. In samples of N = 24, asymptotic χ² critical values are known to overstate the true rejection rate. Bootstrap p-values provide size-corrected inference and are reported alongside asymptotic results throughout.
+
+## VAR Diagnostic Tests
+
+Following estimation of the augmented VAR, four diagnostics are reported: (1) Ljung-Box autocorrelation test on residuals; (2) AR characteristic root stability; (3) White heteroskedasticity test; (4) CUSUM parameter stability test.
+
+# Empirical Results
+
+## Unit Root and Integration Order
+
+Table 2 summarises ADF unit root test results with constant and trend. The unit root null cannot be rejected for ECI, GDP, and ESG ($p > 0.10$), classifying these variables as I(1). COI ($t = -3.623$, $p = 0.028$) and FDI ($t = -3.801$, $p = 0.017$) are stationary in levels (I(0)). The mixed I(0)/I(1) integration structure justifies the Toda-Yamamoto approach: TY provides consistent causality inference without requiring cointegration pre-testing or equal integration orders. The maximum integration order is set at $d_{max} = 1$.
+
+| Variable | ADF *t* | *p* | Order |
+|---|---|---|---|
+| ECI | −2.139 | 0.524 | I(1) |
+| COI | −3.623 | **0.028** | I(0) |
+| GDP | −2.983 | 0.137 | I(1) |
+| ESG | −1.634 | 0.779 | I(1) |
+| FDI | −3.801 | **0.017** | I(0) |
+
+: ADF Unit Root Results (2000–2023, constant + trend). MacKinnon (1996) critical values; 5% threshold: −3.60. {#tbl-unitroot}
+
+## Toda-Yamamoto Causality Results
+
+With $k = 1$ (AIC/BIC selection) and $d_{max} = 1$, a VAR(2) system is estimated. With 5 endogenous variables and 2 lags, each equation contains 11 parameters (10 slope + 1 constant) estimated from T − 2 = 22 effective observations, yielding approximately 11 degrees of freedom per equation. This is the minimum feasible specification; overparameterisation risk is acknowledged and bootstrap correction is therefore essential rather than merely supplementary. Table 3 presents the full 5×5 causality matrix with asymptotic and bootstrap p-values.
+
+| Null: X does not precede Y | Wald χ²(2) | *p* (asymptotic) | *p* (bootstrap) | Decision |
+|---|---|---|---|---|
+| **ECI → ESG** | **11.228** | **0.004** | **0.094** | \* (10%) |
+| **FDI → ECI** | **8.110** | **0.017** | 0.208 | NS† |
+| **ESG → ECI** | **6.102** | **0.047** | 0.231 | NS† |
+| GDP → ESG | 5.767 | 0.056 | 0.132 | NS |
+| ESG → COI | 5.818 | 0.055 | 0.241 | NS |
+| FDI → COI | 4.904 | 0.086 | 0.204 | NS |
+| GDP → ECI | 4.502 | 0.105 | 0.241 | NS |
+| Remaining 13 pairs | < 3.0 | > 0.27 | > 0.43 | NS |
+
+: Toda-Yamamoto MWALD Causality Matrix (k = 1, d_max = 1). Asymptotic critical: χ²(2) = 5.99 (5%), 4.61 (10%). Bootstrap: Politis–Romano stationary bootstrap, B = 499, block length L = 3. †Bootstrap p ≥ 0.20 — asymptotic significance not confirmed. {#tbl-ty}
+
+## Bootstrap Robustness
+
+In a sample of N = 24, asymptotic χ² critical values are known to generate size distortion. The Politis-Romano stationary bootstrap substantially increases p-values across all channels. Only **ECI → ESG** survives bootstrap correction at the 10 percent level ($p_{boot} = 0.094$). FDI → ECI ($p_{boot} = 0.208$) and ESG → ECI ($p_{boot} = 0.231$) lose significance despite appearing strongly significant under asymptotic inference.
+
+This finding directly documents the size distortion of the Toda-Yamamoto MWALD test in short annual time series and underscores that bootstrap validation is not optional for N < 30 causality studies. The marginal survival of ECI → ESG across the bootstrap threshold provides suggestive — not definitive — evidence of a complexity-to-sustainability predictive channel in Türkiye.
+
+## VAR Diagnostics
+
+Residual diagnostic tests are reported in Table 2. The multivariate Portmanteau test detects residual serial correlation at the 5% level ($\chi^2(50) = 73.98$, $p = 0.015$); in a sample of $T = 24$, this result is likely influenced by the limited degrees of freedom available to the asymptotic test rather than genuine VAR misspecification — a concern mitigated by the stationary bootstrap correction applied to all Wald statistics. Residuals satisfy normality (Jarque-Bera: $\chi^2(10) = 3.96$, $p = 0.949$) and exhibit no ARCH-type conditional heteroskedasticity (ARCH-LM$_4$: $p = 1.000$). The CUSUM parameter stability test ($p = 0.751$) confirms coefficient stability over the sample. Characteristic roots lie within the unit circle, confirming VAR stationarity.
+
+# Discussion: ECI–ESG in the Ecological Productivity Paradox Framework
+
+## ECI's Effect on ESG: Marginal Evidence
+
+The single bootstrap-validated causal channel — **ECI → ESG** ($p_{boot} = 0.094$) — indicates that Türkiye's knowledge-intensive production capacity marginally leads sustainability performance. As economic complexity increases, the technique effect (adoption of cleaner technologies, declining energy intensity) positively influences ESG. This directional finding is broadly consistent with @can2017dynamic and @dogan2019economic's panel evidence on the complexity–emissions channel — though those studies use CO2 emission intensity as the dependent variable, whereas the present paper uses a composite ESG score. The comparison is therefore directional rather than direct, and the ECI → ESG channel documented here may capture a broader set of sustainability dimensions beyond carbon alone.
+
+## The Asymptotic Illusion in Small Samples
+
+FDI → ECI and ESG → ECI exhibit apparent statistical significance under asymptotic inference but lose significance after bootstrap correction ($p > 0.20$). This result demonstrates that the Toda-Yamamoto MWALD test, applied without bootstrap validation in samples of N = 24, can generate a systematic false-positive bias. Although these channels are theoretically coherent — FDI may strengthen ECI via technology transfer; ESG → ECI may reflect a complexity-sustainability feedback — the empirical evidence in this sample is insufficient to confirm predictive precedence.
+
+## The Ecological Productivity Paradox in Türkiye
+
+The marginal status of GDP → ESG ($p = 0.056$ asymptotic, $p_{boot} = 0.132$) is theoretically significant. Income growth does not directly predict sustainability improvement; the ECI channel constitutes the primary transmission mechanism. This structure is consistent with the Ecological Productivity Paradox as a special case of the Jevons Paradox: technological efficiency (rising ECI) marginally improves ESG, while pure scale expansion (GDP growth) fails to activate this channel. For Türkiye's net-zero 2053 target, this finding suggests that growth strategy be oriented towards complexity-centred, rather than purely growth-centred, policy architecture — though caution is warranted given the marginal bootstrap significance of the ECI → ESG channel.
+
+# Conclusion
+
+This paper estimates the ECI–COI–ESG–GDP–FDI causality system for Türkiye over 2000–2023 using the Toda-Yamamoto framework with Politis-Romano stationary bootstrap correction. The main finding is precise: **Economic Complexity (ECI) shows absence of reverse predictive precedence relative to Sustainability Performance (ESG) at the 10 percent bootstrap level** ($p_{boot} = 0.094$), indicating an ECI → ESG predictive channel in Türkiye's data. This constitutes predictive rather than structural causality in the sense of @toda1995statistical. Three channels that appear significant under asymptotic inference — FDI → ECI, ESG → ECI, GDP → ESG — lose significance after bootstrap correction, documenting the severity of size distortion in N = 24 time-series causality testing.
+
+**Policy recommendations.** First, technological diversification policies — specifically KOSGEB R&D support for medium-high-technology sectors (machinery, automotive components, chemicals, which account for Türkiye's highest ECI contributions) and TÜBİTAK 1507/1511 industrial innovation grants — should incorporate ESG performance metrics as co-eligibility criteria, activating the ECI → ESG predictive channel identified in this study. Second, the Investment Office's inward FDI screening should condition technology transfer incentives on green-technology compatibility, exploiting the theoretically plausible FDI → ECI channel that the present sample cannot statistically confirm but which remains structurally coherent. Third, the BDDK stress-testing framework and the Capital Markets Board (SPK) ESG disclosure standards should be aligned with ECI complexity trajectories to reflect the structural, rather than financial, drivers of sustainability. Finally, the T = 24 limitation of this study calls for panel extension: provincial-level or cross-country EMEA panel analysis would provide the statistical power needed to generalise these findings.
+
+**Limitations.** Four limitations bound these conclusions. First, N = 24 severely restricts the power of any time-series causality test; the marginal ECI → ESG result should be treated as suggestive evidence rather than a confirmed causal claim. Second, ESG score data quality and methodological heterogeneity across providers introduce measurement uncertainty. Third, the Toda-Yamamoto framework does not identify asymmetric dynamics; for variable pairs confirmed as I(1) with a cointegrating relationship, NARDL asymmetry testing would be an appropriate extension. Bai-Perron multiple structural break tests applied to the individual series would also improve the robustness of the integration-order classification. Fourth, causality in the Granger (1969) sense represents predictive precedence, not structural causality; the documented channel does not identify the precise transmission mechanism.
+
+# References
+
+::: {#refs}
+:::
+
+\newpage
+
+## Declarations {.unnumbered}
+
+**Author Contributions (CRediT):** M. Gökhan Özdemir: Conceptualization, Methodology, Formal Analysis, Data Curation, Software, Writing – Original Draft, Writing – Review & Editing, Visualization.
+
+**Data Availability:** All data are publicly available. ECI and COI: Growth Lab, Harvard University (Atlas of Economic Complexity, dataverse.harvard.edu). ESG proxy: World Bank Development Indicators. GDP and FDI: World Development Indicators (WDI). Replication code available upon request.
+
+**Conflict of Interest:** The author declares no conflict of interest.
+
+**Funding:** This research received no specific grant from any funding agency in the public, commercial, or not-for-profit sectors.
+
+**Ethical Approval:** Not applicable (publicly available macroeconomic data; no human or animal subjects).

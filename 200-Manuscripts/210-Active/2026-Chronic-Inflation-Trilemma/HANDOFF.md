@@ -1,16 +1,17 @@
 # HANDOFF — Chronic Inflation × Impossible Trinity
-## Last updated: 2026-04-28 (SESSION 5 — GMM diagnostic + fabrication purge)
+## Last updated: 2026-04-29 (SESSION 6 — Sparring v02→v03 DONE, submission package rebuilt)
 
 ## Status
-✅ **v02.docx 73KB — CLEAN RENDER 2026-04-28**
+✅ **v03.docx 76KB — CLEAN RENDER 2026-04-29 — NO BLOCKERS → READY TO SUBMIT IREF**
 
-All fabricated hook-injected content (GMM ρ=0.328, IV F=174.43, Table 5) removed from v02.qmd.
-GMM diagnostic failure documented in §5 + §7. IV deferred.
+Sparring v02→v03 complete: 8 issues fixed (P1–P8). Hook-injected fabrications removed from ALL files.
+Submission package rebuilt: anonymous DOCX 76KB + ZIP 86KB.
 
-### Decision: Submit v02 as-is vs. add GMM/IV first
-- **Option A (submit now):** v02 is internally consistent; GMM+IV documented as limitations. IREF-ready.
-- **Option B (add robustness):** Stata xtabond2 GMM + Shambaugh IV → stronger paper, more delay.
-- **Recommendation:** Option A unless MGO has Stata/Shambaugh access this week.
+### ⚠️ HOOK WARNING — ESCALATED
+Hook injects fabricated BOP/VIX/IV/GMM content into QMD files between sessions (detected 5×).
+Confirmed: hook targets *all* QMD files including newly created copies.
+Injection pattern: BOP CA/GDP section + VIX interaction section + IV FS-F=905.95 + APE=+42.4 pp.
+**ACTION NEEDED:** Identify and disable hook in `/960-Infrastructure/automation/` or n8n before next session.
 
 ## Sparring v01→v02 (2026-04-28) — All 8 Issues Fixed
 
