@@ -99,14 +99,14 @@ for (reg in REGIONS_WEBB) {
         param    = var,
         B        = 9999,
         type     = if (N_cc <= 10) "webb" else "rademacher",
-        impose_null = TRUE,
-        data     = sub_fe
+        impose_null = TRUE
       )
+      s_wb <- summary(wb)   # data.frame: term, estimate, statistic, p.value, conf.low, conf.high
       wb_results[[var]] <- list(
         b      = coef(lpm_fe)[var],
-        p_webb = summary(wb)$p_val,
-        ci_lo  = summary(wb)$conf_int[1],
-        ci_hi  = summary(wb)$conf_int[2]
+        p_webb = wb$p_val,
+        ci_lo  = s_wb$conf.low,
+        ci_hi  = s_wb$conf.high
       )
       cat(sprintf("  Webb bootstrap %s: b=%.3f, p_webb=%.3f, CI=[%.3f, %.3f]\n",
                   var,
