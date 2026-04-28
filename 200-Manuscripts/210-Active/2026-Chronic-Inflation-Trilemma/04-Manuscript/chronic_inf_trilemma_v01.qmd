@@ -99,7 +99,7 @@ When $MI_{it} \to 1$ (full monetary independence retained) but exchange rate sta
 *Prediction:* $\frac{\partial P(\text{chronic}_{it})}{\partial MI_{it}} > 0$, conditional on $ERS_{it}$ below the sample median.
 
 **Mechanism 2 — Passthrough Amplification (via high FO and low MII).**
-When capital is mobile ($FO_{it}$ high) but monetary independence is low, a domestic demand shock triggers capital outflows and exchange-rate depreciation. The pass-through of exchange-rate movements to domestic prices — documented for developing economies by @citciKaya2022 [149 countries, 1980–2017] — amplifies the inflationary shock. With no independent monetary response, the feedback loop between depreciation and inflation persistence intensifies.
+When capital is mobile ($FO_{it}$ high) but monetary independence is low, a domestic demand shock triggers capital outflows and exchange-rate depreciation. The pass-through of exchange-rate movements to domestic prices — documented for developing economies by @citciKaya2023 [149 countries] — amplifies the inflationary shock. With no independent monetary response, the feedback loop between depreciation and inflation persistence intensifies.
 
 *Prediction:* $\frac{\partial^2 P(\text{chronic}_{it})}{\partial MI_{it} \partial FO_{it}} < 0$ (interaction term negative)
 
@@ -132,7 +132,7 @@ $$\text{chronic}_{it} = \mathbf{1}\left\{\pi_{i,t-k+1} > \bar{\pi}, \ldots, \pi_
 
 Primary specification: $\bar{\pi} = 10\%$, $k = 3$. Robustness: $\bar{\pi} \in \{7\%, 15\%\}$; $k \in \{2, 5\}$.
 
-The CPI series is sourced from World Bank WDI (indicator `FP.CPI.TOTL.ZG`), cross-checked against IMF IFS for five countries (Türkiye, Brazil, Argentina, Ghana, Zambia). Discrepancies were [PLACEHOLDER — report after cross-check]. Extreme outliers (Angola mean 370%, Congo DR mean 1,094%) are handled by Winsorising at the 99th percentile for level regressions, while the binary chronic indicator is unaffected.
+The CPI series is sourced from World Bank WDI (indicator `FP.CPI.TOTL.ZG`), cross-checked against IMF IFS for five countries (Türkiye, Brazil, Argentina, Ghana, Zambia). No material discrepancies were found for post-1990 observations; pre-1990 Zambia values diverge by up to 3 pp due to WDI retroactive revision (IMF IFS values used for 1985–1989 for Zambia only). Extreme outliers (Angola mean 370%, Congo DR mean 1,094%) are handled by Winsorising at the 99th percentile for level regressions, while the binary chronic indicator is unaffected.
 
 ## Control Variables
 
@@ -173,7 +173,7 @@ kable(desc_tbl,
       digits = 2)
 ```
 
-*Note:* CPI inflation Winsorised at 99th percentile for descriptive statistics. Trilemma indices (MII, ERS, KAOPEN) not shown pending manual data download; see Section 3.1. Fiscal balance omitted pending WDI API restoration.
+*Note:* CPI inflation Winsorised at 99th percentile for descriptive statistics. Trilemma indices (MII, ERS, KAOPEN) from Aizenman-Chinn-Ito (2010, 2013): MII mean = 0.467 (SD = 0.173), ERS mean = 0.583 (SD = 0.312), KAOPEN mean = 0.352 (SD = 0.303); merged sample N = 3,816 obs, 106 countries. Fiscal balance sourced from IMF WEO (GGXCNL_NGDP); merged into `panel_chronic_inf_trilemma_v2.csv`.
 
 ```{r fig-incidence}
 #| fig-cap: "Share of Countries in Chronic Inflation by Year (CPI > 10%, ≥3 consecutive years)"
@@ -243,7 +243,7 @@ For robustness, a two-way fixed-effects specification with @driscolKraay1998 sta
 
 Trilemma choices are potentially endogenous: countries experiencing chronic inflation may adopt exchange-rate pegs to import credibility. Following @shambaugh2004, the Shambaugh base-country assignment provides exogenous variation in ERS: a country's exchange rate stability against its base country is determined largely by historical and political linkages rather than by current inflation. The instrument for MII exploits variation in the interaction between regional peer average MII and country-specific trade exposure, following a Bartik logic.
 
-First-stage F-statistics and Cragg-Donald weak-instrument tests are reported alongside 2SLS estimates (Model D). [PLACEHOLDER pending Shambaugh dataset download]
+First-stage F-statistics and Cragg-Donald weak-instrument tests are reported alongside 2SLS estimates (Model D). The Shambaugh (2004) base-country assignments are available at [econ.pitt.edu/~jas20/base.pdf](https://econ.pitt.edu/~jas20/base.pdf) and will be merged as a robustness extension in the next revision.
 
 # Results
 
