@@ -1,0 +1,20 @@
+[project]
+name = "gravity-food-security"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = ["pytask>=0.5", "pytask-r>=0.4"]
+
+[tool.pytask.ini_options]
+# Run from project root: pytask pipeline/
+# Or from pipeline/ folder: pytask .
+paths = ["."]
+
+# Stop on first failure during analysis phase
+# Set to false for robustness sweep
+stop_after_first_failure = false
+
+# R executable — change if Rscript not on PATH
+r = "Rscript"
+
+[tool.pytask.live_logging]
+level = "info"
