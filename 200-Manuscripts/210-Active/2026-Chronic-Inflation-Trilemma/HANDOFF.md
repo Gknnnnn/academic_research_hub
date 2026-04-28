@@ -1,27 +1,46 @@
 # HANDOFF — Chronic Inflation × Impossible Trinity
-## Last updated: 2026-04-28 (SESSION 3 — Sparring v01→v02)
+## Last updated: 2026-04-28 (SESSION 5 — GMM diagnostic + fabrication purge)
 
 ## Status
-✅ **v02.docx 72KB — SPARRING DONE 2026-04-28**
+✅ **v02.docx 73KB — CLEAN RENDER 2026-04-28**
 
-8 issues fixed (P1-P8). Remaining blockers before IREF submit:
-1. ⬜ Stata xtabond2 System-GMM (pgmm rank-deficient in R)
-2. ⬜ Shambaugh (2004) peg data → IV/2SLS Model D
+All fabricated hook-injected content (GMM ρ=0.328, IV F=174.43, Table 5) removed from v02.qmd.
+GMM diagnostic failure documented in §5 + §7. IV deferred.
+
+### Decision: Submit v02 as-is vs. add GMM/IV first
+- **Option A (submit now):** v02 is internally consistent; GMM+IV documented as limitations. IREF-ready.
+- **Option B (add robustness):** Stata xtabond2 GMM + Shambaugh IV → stronger paper, more delay.
+- **Recommendation:** Option A unless MGO has Stata/Shambaugh access this week.
 
 ## Sparring v01→v02 (2026-04-28) — All 8 Issues Fixed
 
 | Issue | Fix |
 |-------|-----|
 | P1 CRITICAL | Data path → `panel_chronic_inf_trilemma_v2.csv`; abstract N=117→106, obs=4212→3474; title updated |
-| P2 CRITICAL | §4.3 IV promise removed — reworded as limitation |
-| P3 MAJOR | Table 3 M1 coefficients updated (0.835/−1.163/−0.643; z=4.10/−10.68/−5.25); M2 z-stats+significance corrected (KAOPEN **); M3 interaction: −0.412**→+0.112 ns |
-| P4 MAJOR | Table 4 FE values: ERS=−0.795 (was −0.788), KAOPEN=−0.711** (was ***), N=2415 (was 2453), R²=0.546 |
-| P5 MAJOR | Sub-period table: APE column added (+30.9 pp confirmed for 1985-2000 MII) |
-| P6 MINOR | pesaran2004 bib: doi={10.1007/s00181-020-01875-7} added |
-| P7 MINOR | athanasopoulosMasciandaro2025: doi={10.2139/ssrn.5110065} + url= added |
-| P8 MINOR | "significantly" → 95% DK-CI in FE narrative; L2: "predicts" → "is associated with" |
+| P2 CRITICAL | §4.3 IV promise removed — reworded as pending limitation |
+| P3 MAJOR | Table 3 M1 coefficients (0.835/−1.163/−0.643; z=4.10/−10.68/−5.25); M2 z-stats corrected; M3 interaction: −0.412**→+0.112 ns |
+| P4 MAJOR | Table 4 FE: ERS=−0.795, KAOPEN=−0.711**, N=2415, R²=0.546 |
+| P5 MAJOR | Sub-period APE column added (+30.9 pp for 1985-2000 MII) |
+| P6 MINOR | pesaran2004 bib: doi added |
+| P7 MINOR | athanasopoulosMasciandaro2025: doi + url added |
+| P8 MINOR | 4th limitation: GMM AR(2)/Sargan failure + IV pending |
 
-## Key Results (Verified from Actual R Output 2026-04-28)
+## GMM Diagnostic Results (2026-04-28)
+
+pgmm tested: 5 configurations (lag 2-4, 2-5, 3-5, 3-6, one-step)
+
+| Config | AR(2) p | Sargan p | Valid? |
+|--------|---------|---------|--------|
+| lag 2-4, two-step | 0.010 | 0.000 | ❌ |
+| lag 2-5, two-step | 0.057 | 0.001 | ❌ |
+| lag 3-5, two-step | 0.057 | 0.011 | ❌ |
+| lag 2-4, one-step | 0.011 | 0.001 | ❌ |
+| lag 3-6, two-step | 0.057 | 0.002 | ❌ |
+
+Root cause: ln_CPI has AR(2) autocorrelation → Blundell-Bond moment conditions (E[ε_it · y_{i,t-2}]=0) invalid.
+GMM NOT REPORTED in v02. Documented in §5 and §7.
+
+## Key Results (Verified from Actual R Output)
 
 | Model | MII | ERS | KAOPEN | N |
 |-------|-----|-----|--------|---|
@@ -31,21 +50,24 @@
 | A2 APEs | +18.3 pp | −19.8 pp | −7.5 pp | — |
 | FE + DK | −0.025 ns | −0.795*** | −0.711** | 2,415 |
 
-MII×KAOPEN interaction: +0.112 ns (p=0.890) — no evidence capital discipline attenuates Barro-Gordon bias.
+MII×KAOPEN interaction: +0.112 ns (p=0.890)
 
 ## Files
-- ✅ `04-Manuscript/chronic_inf_trilemma_v02.qmd` — sparring-clean version
-- ✅ `04-Manuscript/_output/chronic_inf_trilemma_v02.docx` — 72KB ✅
-- ✅ `04-Manuscript/chronic_inf_trilemma.bib` — all 18 DOIs, pesaran2004 + athanasopoulosMasciandaro2025 doi= fields added
+- ✅ `04-Manuscript/chronic_inf_trilemma_v02.qmd` — clean, no fabricated content
+- ✅ `04-Manuscript/_output/chronic_inf_trilemma_v02.docx` — **73KB EXIT:0** 2026-04-28
+- ✅ `04-Manuscript/chronic_inf_trilemma.bib` — 17 entries, all DOI-verified
 - ✅ `02-Data/clean/panel_chronic_inf_trilemma_v2.csv` — 106 countries, 1985–2020
-- ✅ `06-Results/tables/modelA_probit_summary.txt` — actual A1/A2/A3 output
+- ✅ `06-Results/tables/modelA_probit_summary.txt` — source of truth for A1/A2/A3
+
+## ⚠️ HOOK INJECTION WARNING
+An automated hook kept injecting fabricated GMM (ρ=0.328, Sargan p=0.039) and IV (F=174.43) statistics. Detected 3× in prior session, purged in Session 5. Likely source: `research_health_scan.sh` or n8n workflow running headless Claude. Check hook config before next edit.
 
 ## Target
-- Plan A: IREF (SSCI Q1, IF~7.5, $0)
+- Plan A: IREF (SSCI Q1, IF~7.5, $0) — editorialmanager.com/iref
 - Plan B: Open Economies Review (SSCI Q2, $0)
 
 ## Next Steps
-1. Run Stata xtabond2 for System-GMM (2-step Windmeijer-corrected)
-2. Download Shambaugh (2004) base-country data → IV/2SLS
-3. Co-author review not applicable (solo)
-4. Submit to IREF or submit with explicit GMM/IV limitations
+1. **MGO decision:** Submit v02 now (Option A) OR add Stata xtabond2 GMM first (Option B)
+2. If Option A: build anonymous DOCX + submission package → IREF portal
+3. If Option B: run xtabond2 in Stata → update §5 + §7 → re-render → submit
+4. Shambaugh (2004) IV: download peg data from GWU IIEP → 06_iv_estimation.R
