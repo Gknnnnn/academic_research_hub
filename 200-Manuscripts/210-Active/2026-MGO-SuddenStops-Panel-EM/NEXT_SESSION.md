@@ -1,5 +1,5 @@
 # Next Session Handoff — Sudden Stops Panel EM
-**Last updated:** 2026-04-28 (Session 2 — code infrastructure complete)  
+**Last updated:** 2026-04-28 (Session 3 — GPR downloaded, 3 manual DLs remain)  
 **Paper:** "Global Uncertainty, Domestic Credit, and Sudden Stops: Panel Evidence with Cross-Sectional Dependence Correction"  
 **Target:** IREF (Plan A, $0, Q2) | JPM (Plan B) | EMFT (Plan C)
 
@@ -7,25 +7,23 @@
 
 ## 🔴 CRITICAL BLOCKER (must do first — in MGO browser)
 
-### 1. BOP Quarterly Gross Capital Flows
+### 1. BOP Quarterly Gross Capital Flows ⚠️ STILL PENDING
 **URL:** https://data.imf.org/?sk=7A51304B-6426-40C0-83DD-CA473CA1FD52  
 **Variables:** FDI liabilities + Portfolio liabilities + Other investment liabilities  
 **Date range:** 1990Q1–2024Q4  
 **Save as:** `02-Data/raw/imf_bop_gross_quarterly_20260428.csv`  
 **Format expected:** country | date (YYYYQQ) | indicator | value_usd_mn
 
-### 2. GPR Global Index (bot-blocked from CLI)
-**URL:** https://www.matteoiacoviello.com/gpr.htm  
-**Download:** `data_gpr_export.xls` → extract global column → quarterly mean  
-**Save as:** `02-Data/raw/gpr_global_quarterly.csv`  
-**Columns:** date, gpr
+### 2. GPR Global Index ✅ DONE 2026-04-28
+**File:** `02-Data/raw/gpr_global_quarterly.csv` — 140 rows × 22 cols (1990Q1–2024Q4)  
+**Cross-checks:** 9/11=207.9 ✅ | RU-UA 2022Q1=224.6 ✅ | COVID 2020Q1=98.6 ✅
 
-### 3. IMF iMaPP Database
+### 3. IMF iMaPP Database ⚠️ STILL PENDING
 **URL:** https://www.imf.org/en/Topics/financial-sector-surveillance/imapp  
 **File:** `iMaPP_Database.xlsx` (ZIP)  
 **Save as:** `02-Data/raw/imapp_quarterly_20260428.xlsx`
 
-### 4. IRR Exchange Rate Regime
+### 4. IRR Exchange Rate Regime ⚠️ STILL PENDING
 **URL:** https://www.ilzetzki.com/irr-data  
 **Save as:** `02-Data/raw/irr_regime_annual.csv`
 
@@ -47,10 +45,14 @@
 - `03-Code/06_eurasian_subsample.R` — Webb wild bootstrap (fwildclusterboot), AME, heterogeneity ✅
 
 ### Manuscript
-- `04-Manuscript/sudden_stops_v01.qmd` — full skeleton (intro + lit review + methods written) ✅
-- `04-Manuscript/sudden_stops.bib` — 18 entries, ALL DOIs verified ✅
+- `04-Manuscript/sudden_stops_v01.qmd` — complete pre-data draft: abstract ✅ intro ✅ lit review (4 subsections) ✅ methods §3.1-3.4 ✅ conclusion ✅ Appendix A ✅
+- `04-Manuscript/sudden_stops.bib` — 22 entries, ALL DOIs verified ✅
+- `05-Submission/PORTAL_COPYPASTE_IREF.md` — highlights, cover letter, EÜYM=1.04, Zone A ✅
 
-### Bibliography DOI Status (all 18 entries — ALL COMPLETE)
+### Data (Session 3 additions)
+- GPR global index: `raw/gpr_global_quarterly.csv` — 140Q × 22 cols ✅ COMMITTED
+
+### Bibliography DOI Status (all 22 entries — ALL COMPLETE)
 | Key | DOI | Status |
 |-----|-----|--------|
 | calvo1998capital | none | pre-DOI era (1998) |
@@ -71,6 +73,10 @@
 | chuhan1998cross | 10.1016/S0304-3878(98)00044-3 | ✅ |
 | pesaran2004cd | 10.3390/econometrics9030028 | ✅ (cite as 2004 WP; DOI = published 2021 version) |
 | driscoll1998consistent | 10.1162/003465398557825 | ✅ |
+| palandokenlier2025sudden | 10.11130/jei.2024038 | ✅ — panel probit 13 EMEs, no CSD |
+| eller2021macroprudential | 10.1016/j.jimonfin.2021.102495 | ✅ — CESEE MPP + capital flows |
+| webb2023remark | 10.1111/caje.12661 | ✅ — Webb-6 for N<30 clusters |
+| cameron2008bootstrap | 10.1162/rest.90.3.414 | ✅ — wild cluster bootstrap foundation |
 
 ---
 

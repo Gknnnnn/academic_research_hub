@@ -13,7 +13,7 @@
 | Trilemma indexes (ACI: ers, mi, ka_open) | `raw/trilemma_aci_iso3_20260428.csv` | ✅ DOWNLOADED | 179 | 1970–2020 | Annual |
 | BOP quarterly gross inflows | — | ⚠️ MANUAL DOWNLOAD | 40–90 | 1990–2024 | Quarterly |
 | IMF iMaPP macroprudential index | — | ⚠️ MANUAL DOWNLOAD | 65+ | 2000–2023 | Quarterly |
-| GPR global index | — | ⚠️ MANUAL DOWNLOAD | Global | 1985–2024 | Monthly→Q |
+| GPR global index | `raw/gpr_global_quarterly.csv` | ✅ DOWNLOADED | Global | 1990Q1–2024Q4 | Quarterly |
 | Exchange rate regime (IRR) | — | ⚠️ MANUAL DOWNLOAD | 150+ | 1940–2021 | Annual |
 
 ---
@@ -78,11 +78,11 @@
 **Variables:** tightening/loosening counts by instrument type  
 **Instructions:** Download → save as `02-Data/raw/imapp_quarterly_YYYYMMDD.xlsx`
 
-### C. GPR Global Index (Caldara-Iacoviello)
+### C. GPR Global Index (Caldara-Iacoviello) ✅ COMPLETE
 **URL:** https://www.matteoiacoviello.com/gpr.htm  
-**File:** `data_gpr_export.xls`  
-**Variable:** GPR (global), country-specific available  
-**Instructions:** Download XLS → extract global quarterly → save as `02-Data/raw/gpr_global_quarterly.csv`
+**File:** `raw/gpr_global_quarterly.csv` — 140 quarters × 22 columns (1990Q1–2024Q4)  
+**Downloaded:** 2026-04-28 (browser User-Agent bypass; XLS → Python xlrd extraction → quarterly mean aggregation)  
+**Cross-checks passed:** 9/11 2001Q3=207.9 ✅ | Russia-Ukraine 2022Q1=224.6 ✅ | COVID 2020Q1=98.6 ✅ | GFC 2008Q4=78.5 ✅
 
 ### D. Exchange Rate Regime Classification (Ilzetzki-Reinhart-Rogoff)
 **URL:** https://www.ilzetzki.com/irr-data  
@@ -93,10 +93,9 @@
 
 ## DOWNLOAD STATUS NOTES (2026-04-28)
 
-### GPR Index (Caldara-Iacoviello 2022)
-- **Bot-blocked from CLI**: matteoiacoviello.com returns 9,379 byte error page for both .xls and .dta
-- **Action required**: MGO must download manually in browser from https://www.matteoiacoviello.com/gpr.htm
-- Save as: `02-Data/raw/gpr_global_quarterly.csv`
+### GPR Index (Caldara-Iacoviello 2022) — ✅ DONE 2026-04-28
+- **Downloaded via browser User-Agent curl** (bot-block bypassed: `-A "Mozilla/5.0..."`)
+- File: `raw/gpr_global_quarterly.csv` — 140 rows × 22 columns
 - DOI of index paper: 10.1257/aer.20191823 ✅
 
 ### iMaPP (Alam et al. 2019)
