@@ -83,18 +83,18 @@ risk conditional on the credit cycle, extending @hakhverdyan2026sudden to
 transition economies.
 
 Our main findings are: (i) a one-point increase in the VIX raises sudden stop
-probability by approximately X percentage points (AME); (ii) domestic credit
-expansion significantly amplifies this risk, confirming @emter2023leverage;
+probability by approximately [XX] percentage points (AME); (ii) a [10]-percentage-point
+increase in domestic credit-to-GDP raises sudden stop probability by [XX] percentage
+points, confirming @emter2023leverage;
 (iii) macroprudential tightening reduces sudden stop probability only during credit
 booms; and (iv) Eurasian economies face a structural premium of X–X percentage
 points relative to advanced economies, even after controlling for observables.
 
 The remainder of the paper is organized as follows.
 Section 2 reviews the literature.
-Section 3 describes data and episode identification.
-Section 4 presents the econometric framework.
-Section 5 reports baseline results and robustness checks.
-Section 6 concludes with policy implications.
+Section 3 describes the data, episode identification, and econometric framework.
+Section 4 reports baseline results, robustness checks, and the Eurasian subsample analysis.
+Section 5 concludes with policy implications.
 
 # Literature Review
 
@@ -125,10 +125,10 @@ episodes: global risk, measured by the VIX, is the single most robust predictor
 of sudden stops, while domestic macroeconomic fundamentals have limited independent
 predictive power once global conditions are controlled.
 
-More recent work qualifies this picture. @emter2023leverage shows that negative
+More recent work qualifies this picture. @emter2023leverage finds that negative
 growth shocks interacted with high domestic leverage — a pull factor — are
-significant predictors of sudden stops in a 98-country quarterly panel spanning
-1990–2017. @du2025us find that US economic uncertainty shocks increase the
+statistically and economically significant predictors of sudden stops in a
+98-country quarterly panel spanning 1990–2017. @du2025us find that US economic uncertainty shocks increase the
 probability of gross sudden stops in 71 emerging and developing economies over
 1998–2022, with floating exchange rate regimes providing no buffer — a result
 that challenges the conventional insulation hypothesis.
@@ -147,7 +147,7 @@ apply CSD-robust inference — the gap our paper addresses.
 
 Recent work connects the sudden stop literature to financial system stability.
 @wang2025sudden examine 1,724 listed banks across 43 nations and find that sudden
-stops significantly elevate bank systemic risk through two channels: asset quality
+stops raise bank systemic risk through two channels: asset quality
 deterioration, as banks hold cross-border claims that devalue during sudden stops,
 and a bubble-collapse mechanism, as asset prices fall sharply when foreign financing
 dries up. Macroprudential policies — particularly capital buffers and loan-to-value
@@ -156,9 +156,8 @@ complementary micro-evidence: using a regression discontinuity design around cre
 line thresholds in seven emerging economies, they show that government credit
 substitution during sudden stops reduces firm-level financing gaps by approximately
 40%, but is less effective for small and medium enterprises without prior formal
-credit relationships. Taken together, these findings imply that the macroeconomic
-costs of sudden stops operate substantially through the financial intermediation
-channel — a mechanism our aggregate panel probit framework does not identify but
+credit relationships. These findings imply that the macroeconomic costs of sudden
+stops operate substantially through the financial intermediation channel — a mechanism our aggregate panel probit framework does not identify but
 that motivates the inclusion of domestic credit as a key pull factor.
 
 ## Gap Identified
@@ -222,7 +221,7 @@ capital account openness — Chinn-Ito (ACI) index
 the IMF iMaPP tightening index [@alam2019macroprudential], measuring the
 cumulative sum of macroprudential tightening actions.
 
-**Geopolitical risk** ($GPR_t$): the global Caldara-Iacoviello (2022) index,
+**Geopolitical risk** ($GPR_t$): the global @caldara2022measuring index,
 included as an additional push factor to capture non-financial global uncertainty.
 
 **Sample construction.** We include all emerging market and developing economies
@@ -249,12 +248,12 @@ where $\Phi(\cdot)$ denotes the standard normal CDF (probit link), and $\gamma_i
 are country fixed effects.
 
 **Cross-sectional dependence correction.** We first test all panel regressors
-for CSD using Pesaran's (2004) CD statistic:
+for CSD using @pesaran2004cd CD statistic:
 $$CD = \sqrt{\frac{2T}{N(N-1)}} \sum_{i=1}^{N-1}\sum_{j=i+1}^{N}\hat{\rho}_{ij}
 \xrightarrow{d} \mathcal{N}(0,1)$$
 
 Given the near-certain significance of this test in capital flow panels, we report
-Driscoll-Kraay (1998) standard errors throughout, which are robust to arbitrary
+@driscoll1998consistent standard errors throughout, which are robust to arbitrary
 forms of cross-sectional and temporal dependence with lag order $\ell = 4$ quarters.
 This is the paper's core methodological contribution: no prior sudden stop study
 employs this correction.
@@ -340,7 +339,7 @@ Table 7: Subsample Results [PLACEHOLDER]
 This paper provides the first cross-sectional dependence-robust panel analysis of
 sudden stop determinants across emerging and developing economies. Using the
 Forbes-Warnock (2012) two-condition episode identification on quarterly gross capital
-inflows, and estimating panel probit models with Driscoll-Kraay (1998) standard
+inflows, and estimating panel probit models with @driscoll1998consistent standard
 errors that account for arbitrary cross-sectional and temporal dependence, we
 establish three substantive results.
 
